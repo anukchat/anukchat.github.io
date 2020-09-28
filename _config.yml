@@ -1,202 +1,60 @@
-# The Site Settings
-# v2.0
-# https://github.com/cotes2020/jekyll-theme-chirpy
-# © 2017-2019 Cotes Chung
-# MIT licensed
+# Site
+repository: anukchat/face-watcher
+favicon: images/favicon.ico
 
+# Personal info
+name: Anukool Chaturvedi
+title: Machine Learning Engineer
+email: chaturvedianukool@gmail.com
+website: https://www.github.com/anukchat/face-watcher
 
-# jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
-#--------------------------
+# Social links
+twitter_username: anukool_chatur
+github_username:  anukchat
+# dribbble_username: jekyll
+# facebook_username: jekyll
+# flickr_username: jekyll
+instagram_username: chillwildlife
+linkedin_username: anukool-chaturvedi-46358b62
+# pinterest_username: jekyll
+# youtube_username: globalmtb
+# googleplus_username: +jekyll
 
-title: Anukool Chaturvedi                          # the main title
+# About Section
+# about_title: About Me
+about_profile_image: images/profile.jpg
+about_content: | # this will include new lines to allow paragraphs
+  Hi, my name's Anukool and I'm a Machine Learning Engineer, have specifically worked on Computer Vision but have also explored other domains, I am also a skilled and experienced Test Automation Architect, worked with many companies and have also lead some QA Automation projects. 
 
-tagline: My Personal Blog.  # it will display as the sub-title
+  I am most skilled in: <mark>PyTorch</mark>, <mark>Keras</mark> and <mark>Selenium/mark>
 
-description: >-                        # used by seo meta and the atom feed
-  A minimal, portfolio, sidebar,
-  bootstrap Jekyll theme with responsive web design
-  and focuses on text presentation.
+# Projects Section
+# projects_title: Projects
 
-# Replace with the website url, e.g. 'https://username.github.io'
-url: 'https://anukchat.github.io/'
+# Experience Section
+# experience_title: Experience
 
-author: Anukool Chaturvedi                  # change to your full name
+# Education Section
+# educaton_title: Education
 
-avatar: /assets/img/profile/profile.jpg   # support internet resources
+# More Section
+# more_title: A Little More About Me
+more_content: | # this will include new lines to allow paragraphs
+  Alongside my interests in networks and software engineering some of my other interests and hobbies are:
+   - Rock climbing
+   - Gaming
+   - Knitting
+   - [Becoming a ninja](https://www.youtube.com/watch?v=vtg4o__aRMg)
 
-github:
-  username: anukchat            # change to your github username
+# Footer
+footer_show_references: true
 
-twitter:
-  username: anukool_chatur            # change to your twitter username
-
-social:
-  name: Anukool Chaturvedi                # it will shows as the copyright owner in Footer
-  email: chaturvedianukool@gmail.com             # change to your email address
-  links:
-    # The first element serves as the copyright owner's link
-    - https://twitter.com/anukool_chatur     # change to your twitter homepage
-    - https://github.com/anukchat      # change to your github homepage
-    # Uncomment below to add more social links
-    # - https://www.facebook.com/username
-    # - https://www.linkedin.com/in/username
-
-google_site_verification: google-site-verification=lBB3IhmPHx1iTkpVYwC96TaKXhqByIOKZaAIDv_qito # change to your verification string
-
-#--------------------------
-
-
-# Only if your site type is GitHub Project sites and doesn't have a custom domain,
-# change below value to '/projectname'.
-baseurl: '/anukchat.github.io'
-
-# Change to your timezone › http://www.timezoneconverter.com/cgi-bin/findzone/findzone
-timezone: Asia/Kolkata
-
-google_analytics:
-  id: 'UA-179188505-1'          # Fill with your Google Analytics ID
-  pv:
-    # The Google Analytics pageviews switch.
-    # DO NOT enable it unless you know how to deploy the Google Analytics superProxy.
-    enabled: false
-    # the next options only valid when `google_analytics.pv` is enabled.
-    proxy_url: ''
-    proxy_endpoint: ''
-    cache: false  # pv data local cache, good for the users from GFW area.
-
-disqus:
-  comments: false  # boolean type, the global switch for posts comments.
-  shortname: ''    # Fill with your Disqus shortname. › https://help.disqus.com/en/articles/1717111-what-s-a-shortname
-
-
-# Prefer color scheme setting, available values:
-#
-#     dual   - Follow the system prefer color by default, and a toggle will display
-#              in the left bottom of Sidebar, which used for switch the theme between dark and light.
-#
-#     light  - Use the light color scheme
-#
-#     dark   - Use the dark color scheme
-#
-theme_mode: light
-
-# boolean type, global switch for ToC in posts.
-toc: true
-
-paginate: 10
-
-markdown: kramdown
-
-highlighter: rouge
-
-kramdown:
-  input: GFM
-  syntax_highlighter: rouge
-  syntax_highlighter_opts: # Rouge Options › https://github.com/jneen/rouge#full-options
-    css_class: 'highlight'
-    # default_lang: console
-    span:
-      line_numbers: false
-    block:
-      line_numbers: true
-      start_line: 1
-
-# DO NOT change this unless you're a Pro user on Jekyll and Web development,
-# or you think you're smart enough to change other relevant URLs within this template.
-permalink: /posts/:title/
-
-defaults:
-  -
-    scope:
-      path: ""          # An empty string here means all files in the project
-      type: posts
-    values:
-      layout: post
-      comments: true    # Enable comments in posts.
-      toc: true         # Display TOC column in posts.
-      location: Post
-      breadcrumb:
-        -
-          label: Posts
-          url: /
-  -
-    scope:
-      path: _drafts
-    values:
-      comments: false
-  -
-    scope:
-      path: tags
-    values:
-      tab_active: Tags
-      location: Tag
-      breadcrumb:
-        -
-          label: Home
-          url: /
-        -
-          label: Tags
-          url: /tabs/tags/
-  -
-    scope:
-      path: categories
-    values:
-      tab_active: Categories
-      location: Category
-      breadcrumb:
-        -
-          label: Home
-          url: /
-        -
-          label: Categories
-          url: /tabs/categories/
-  -
-    scope:
-      path: tabs
-    values:
-      layout: page
-      dynamic_title: true    # Hide title in mobile screens.
-      breadcrumb:
-        -
-          label: Home
-          url: /
-
-
+# Build settings
+remote_theme: sproogen/resume-theme
+darkmode: true
 sass:
-  sass_dir: /assets/css
+  sass_dir: _sass
   style: compressed
 
-compress_html:
-  clippings: all
-  comments: ["<!-- ", " -->"]
-  endings: [html, head, body, dt, dd, rt, rp,
-            optgroup, option, colgroup, caption,
-            thead, tbody, tfoot, tr, td, th]
-  profile: false
-  blanklines: false
-  ignore:
-    envs: []
-
-exclude:
-  - vendor        # Avoid Jekyll mistakenly read the vendor directory on Travis-CI's VM .
-  - Gemfile.lock
-  - Gemfile
-  - tools
-  - docs
-  - README.md
-  - LICENSE
-
-sitemap_exclude:  # Sitemap will exclude the following items.
-  fuzzy:
-    - /assets/
-  accurate:
-    - /norobots/
-    - /tabs/
-    - /categories/
-    - /tags/
-    - /posts/
-    - 404.html
-    - feed.xml
-    - sitemap.xml
-    - robots.txt
-    - redirects.json
+plugins:
+ - jekyll-seo-tag
