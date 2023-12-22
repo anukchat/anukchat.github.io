@@ -3,8 +3,11 @@
 
 format: jb-book
 root: intro
-chapters:
-- file: content/markdown
+options:
+  numbered: true
+sections:
+  - file: content/markdown
+  title: Markdown
 - file: content/notebooks
 - file: content/markdown-notebooks
 - file: content/mymarkdown
