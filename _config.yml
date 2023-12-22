@@ -17,7 +17,7 @@ only_build_toc_files        : false
 #######################################################################################
 # Execution settings
 execute:
-  execute_notebooks         : auto  # Whether to execute notebooks at build time. Must be one of ("auto", "force", "cache", "off")
+  execute_notebooks         : off  # Whether to execute notebooks at build time. Must be one of ("auto", "force", "cache", "off")
   cache                     : "cache"    # A path to the jupyter cache that will be used to store execution artifacts. Defaults to `_build/.jupyter_cache/`
   exclude_patterns          : []    # A list of patterns to *skip* in execution (e.g. a notebook that takes a really long time)
   timeout                   : 120    # The maximum time (in seconds) each notebook cell is allowed to run.
@@ -88,15 +88,24 @@ repository:
 sphinx:
   extra_extensions          :   # A list of extra extensions to load by Sphinx (added to those already used by JB).
   local_extensions          :   # A list of local extensions to load by sphinx specified by "name: path" items
-  recursive_update          : false # A boolean indicating whether to overwrite the Sphinx config (true) or recursively update (false)
+  recursive_update          : true # A boolean indicating whether to overwrite the Sphinx config (true) or recursively update (false)
   config:
-    html_theme: quantecon_book_theme
+    html_theme: sphinx_book_theme
+    # html_sidebars:
+    #   "**": ["search-field.html", "sidebar-nav-bs.html", "sidebar-ethical-ads.html"]
+    #   authors:
+    #     - name: Anukool Chaturvedi
+    #       url: http://www.intelloom.com/
+    #   header_organisation_url: https://intelloom.com
+    #   header_organisation: Intelloom
+    #   repository_url: https://github.com/intelloom/ai-notes
+    #   twitter: chaturanukool
+    #   twitter_logo_url: https://intelloom.com/wp-content/uploads/2023/08/cropped-9021326_circle_notch_bold_icon-300x300.png
+    #   og_logo_url: https://intelloom.com/wp-content/uploads/2023/08/cropped-9021326_circle_notch_bold_icon-300x300.png
+    #   description: This website presents a set of notes on AI ML and data science
+    #   keywords: Python, LLM, Deep Learning, AI, ML, Data Science
+    
     default_mode: "light"
     show_toc_level: 2
     icon_links:
         - {name: "intelloom",url: "https://intelloom.com",icon: "intelloom.png",type: "local" } 
-    html_sidebars:
-      navbar_end:
-        - "navbar-icon-links.html"
-        - "search-field.html"
-        
