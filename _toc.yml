@@ -5,9 +5,14 @@ format: jb-book
 root: intro
 options:
   numbered: true
-sections:
-  - file: content/markdown
-    title: Markdown
-- file: content/notebooks
-- file: content/markdown-notebooks
-- file: content/mymarkdown
+parts:
+  - caption: Introduction
+    chapters:
+      - file: content/markdown
+      - file: content/notebooks
+      sections:
+        - file: content/notebooks
+  - caption: Markdown Notebooks
+    chapters:
+      - file: content/markdown-notebooks
+      - file: content/mymarkdown
