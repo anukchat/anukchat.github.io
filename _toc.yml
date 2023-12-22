@@ -7,7 +7,7 @@ options:
   numbered: true
 sections:
   - file: content/markdown
-  title: Markdown
+    title: Markdown
 - file: content/notebooks
 - file: content/markdown-notebooks
 - file: content/mymarkdown
