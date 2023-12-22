@@ -99,7 +99,6 @@ sphinx:
         icon: "intelloom.png"
         type: "local"
     html_sidebars:
-      '**':
+      navbar_end:
+        -"navbar-icon-links.html"
         -"search-field.html"
-        -"sidebar-nav-bs.html"
-        -"sidebar-ethical-ads.html"
