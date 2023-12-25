@@ -101,8 +101,8 @@ sphinx:
     ]
     github_url: "https://github.com/anukchat/anukchat.github.io"
     twitter_url: "https://twitter.com/chaturanukool"
-    twitter_site: "typlog",
-    twitter_creator: "chaturanukool",
+    twitter_site: "typlog"
+    twitter_creator: "chaturanukool"
     # html_theme: sphinx_book_theme
     # html_sidebars:
     #   "**": ["search-field.html", "sidebar-nav-bs.html", "sidebar-ethical-ads.html"]
