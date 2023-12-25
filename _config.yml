@@ -91,6 +91,18 @@ sphinx:
   local_extensions          :   # A list of local extensions to load by sphinx specified by "name: path" items
   config:
     html_theme: "shibuya"
+    dark_code: False
+    nav_links: [
+        {
+            "title": "Intelloom",
+            "url": "https://intelloom.com",
+            "summary": "Learn about latest AI trends"
+        }
+    ]
+    github_url: "https://github.com/anukchat/anukchat.github.io"
+    twitter_url: "https://twitter.com/chaturanukool"
+    twitter_site: "typlog",
+    twitter_creator: "chaturanukool",
     # html_theme: sphinx_book_theme
     # html_sidebars:
     #   "**": ["search-field.html", "sidebar-nav-bs.html", "sidebar-ethical-ads.html"]
