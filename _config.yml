@@ -89,9 +89,11 @@ repository:
 sphinx:
   extra_extensions          :  # A list of extra extensions to load by Sphinx (added to those already used by JB).
   local_extensions          :   # A list of local extensions to load by sphinx specified by "name: path" items
-  # config:
+  config:
+    icon_links:
+          - {"name": "intelloom","url": "https://intelloom.com","icon": "intelloom.png","type": "local" } 
   #   html_theme: "shibuya"
-  #   dark_code: False
+    dark_code: False
   #   nav_links: [
   #       {
   #           "title": "Intelloom",
@@ -120,5 +122,5 @@ sphinx:
     
     # default_mode: "light"
     # show_toc_level: 2
-    icon_links:
-        - {"name": "intelloom","url": "https://intelloom.com","icon": "intelloom.png","type": "local" } 
+    # icon_links:
+    #     - {"name": "intelloom","url": "https://intelloom.com","icon": "intelloom.png","type": "local" } 
