@@ -89,15 +89,16 @@ sphinx:
   local_extensions          :   # A list of local extensions to load by sphinx specified by "name: path" items
   config:
     html_theme_options:
-      navbar_start: ["navbar-logo"]
-      navbar_center: ["navbar-nav"]
+      # navbar_start: ["navbar-logo"]
+      # navbar_center: "navbar-nav"
       navbar_end: ["navbar-icon-links"]
       navbar_persistent: ["search-button"]
-
+      search_bar_position: sidebar
+      search_bar_text: Search the docs ...
       icon_links:
             - {"name": "intelloom: Learn latest AI trends","url": "https://intelloom.com","icon": "https://intelloom.com/wp-content/uploads/2023/08/cropped-9021326_circle_notch_bold_icon-300x300.png","type": "url" } 
   #   html_theme: "shibuya"
-    default_mode: "light"
+    # default_mode: "light"
   #   nav_links: [
   #       {
   #           "title": "Intelloom",
