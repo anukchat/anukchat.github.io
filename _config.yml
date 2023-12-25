@@ -8,7 +8,7 @@
 title                       : Mindmesh # The title of the book. Will be placed in the left navbar.
 author                      : "Anukool Chaturvedi"  # The author of the book
 copyright                   : "2023"  # Copyright year to be placed in the footer
-logo                        : "mesh-small.png"  # A path to the book logo
+logo                        : "mindmesh.png"  # A path to the book logo
 # Patterns to skip when building the book. Can be glob-style (e.g. "*skip.ipynb")
 exclude_patterns            : [_build, Thumbs.db, .DS_Store, "**.ipynb_checkpoints"]
 # Auto-exclude files not in the toc
@@ -91,12 +91,12 @@ sphinx:
     html_theme_options:
       # navbar_start: ["navbar-logo"]
       # navbar_center: "navbar-nav"
-      navbar_end: ["navbar-icon-links"]
-      navbar_persistent: ["search-button"]
+      # navbar_end: ["navbar-icon-links"]
+      # navbar_persistent: ["search-button"]
       search_bar_position: sidebar
-      search_bar_text: Search the docs ...
-      icon_links:
-            - {"name": "intelloom: Learn latest AI trends","url": "https://intelloom.com","icon": "https://intelloom.com/wp-content/uploads/2023/08/cropped-9021326_circle_notch_bold_icon-300x300.png","type": "url" } 
+      # search_bar_text: Search the docs ...
+      # icon_links:
+      #       - {"name": "intelloom: Learn latest AI trends","url": "https://intelloom.com","icon": "https://intelloom.com/wp-content/uploads/2023/08/cropped-9021326_circle_notch_bold_icon-300x300.png","type": "url" } 
   #   html_theme: "shibuya"
     # default_mode: "light"
   #   nav_links: [
