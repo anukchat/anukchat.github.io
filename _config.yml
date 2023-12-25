@@ -5,10 +5,10 @@
 
 #######################################################################################
 # Book settings
-title                       : "Mindmesh" # The title of the book. Will be placed in the left navbar.
+title                       : Mindmesh # The title of the book. Will be placed in the left navbar.
 author                      : "Anukool Chaturvedi"  # The author of the book
 copyright                   : "2023"  # Copyright year to be placed in the footer
-logo                        : "mesh-smallest.png"  # A path to the book logo
+logo                        : "mesh-small.png"  # A path to the book logo
 # Patterns to skip when building the book. Can be glob-style (e.g. "*skip.ipynb")
 exclude_patterns            : [_build, Thumbs.db, .DS_Store, "**.ipynb_checkpoints"]
 # Auto-exclude files not in the toc
@@ -34,22 +34,20 @@ parse:
     - html_image
     - dollarmath
     - colon-fence
-    # - deflist
-    # - dollarmath
     - html_admonition
-    # - html_image
+    - html_image
     - linkify
-    # - replacements
-    # - smartquotes
-    # - substitution
-    # - tasklist
+    - replacements
+    - smartquotes
+    - substitution
+    - tasklist
   myst_url_schemes: [mailto, http, https] # URI schemes that will be recognised as external URLs in Markdown links
   myst_dmath_double_inline: true  # Allow display math ($$) within an inline context
 
 #######################################################################################
 # HTML-specific settings
 html:
-  favicon                   : ""  # A path to a favicon image
+  favicon                   : "mesh-smallest.png"  # A path to a favicon image
   use_edit_page_button      : false  # Whether to add an "edit this page" button to pages. If `true`, repository information in repository: must be filled in
   use_repository_button     : true  # Whether to add a link to your repository button
   use_issues_button         : false  # Whether to add an "open an issue" button
@@ -81,7 +79,7 @@ launch_buttons:
 
 repository:
   url                       : "https://github.com/anukchat/anukchat.github.io" # The URL to your book's repository
-  path_to_book              : ""  # A path to your book's folder, relative to the repository root.
+  path_to_book              : "content"  # A path to your book's folder, relative to the repository root.
   branch                    : "main"  # Which branch of the repository should be used when creating links
 
 #######################################################################################
@@ -90,10 +88,11 @@ sphinx:
   extra_extensions          :  # A list of extra extensions to load by Sphinx (added to those already used by JB).
   local_extensions          :   # A list of local extensions to load by sphinx specified by "name: path" items
   config:
-    icon_links:
-          - {"name": "intelloom","url": "https://intelloom.com","icon": "intelloom.png","type": "local" } 
+    html_theme_options:
+      icon_links:
+            - {"name": "intelloom","url": "https://intelloom.com","icon": "intelloom.png","type": "local" } 
   #   html_theme: "shibuya"
-    dark_code: False
+    default_mode: "light"
   #   nav_links: [
   #       {
   #           "title": "Intelloom",
