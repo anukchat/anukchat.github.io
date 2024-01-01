@@ -1,11 +1,21 @@
-# Welcome to your Jupyter Book
+![mindmesh](mesh-smallest.png) 
+# Welcome to mindmesh :blue_heart:
 
-This is a small sample book to give you a feel for how book content is
-structured.
-It shows off a few of the major file types, as well as some sample content.
-It does not go in-depth into any particular topic - check out [the Jupyter Book documentation](https://jupyterbook.org) for more information.
+Mindmesh project is an initiative to give a bare minimum practical course using executable jupyter notebooks which can immediately get you started on AI/ML. 
 
-Check out the content pages bundled with this sample book to see more.
+## Target Audience :raising_hand:
+This course is designed for beginners who **DO NOT WANT** to waste time on watching many hours long AI/ML course videos and still dont get to do the actual implementation.
 
-```{tableofcontents}
-```
+**GO THROUGH THIS FREE COURSE** :
+- If you want to know how AI/ML works in real world :earth_asia:
+- If you want to learn by implementing it first :ferris_wheel:
+- If you want to learn and remember for long :alarm_clock:
+- If you want to learn in the fastest way possible :rocket:
+
+## COURSE STRUCTURE
+This course is divided into 4 parts
+
+### ESSENTIALS
+### TOOLBOX
+### CONCEPTUALS
+### CORE WORK
