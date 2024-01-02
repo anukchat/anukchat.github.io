@@ -13,5 +13,17 @@ parts:
       - file: content/markdown-notebooks
       - file: content/mymarkdown
   - caption: Concepts
+    chapters:
+    - file: content/markdown
+      sections:
+        - file: content/markdown
   - caption: Core engineering
+    chapters:
+      - file: content/markdown
+        sections:
+          - file: content/markdown
   - caption: Real world use cases
+    chapters:
+    - file: content/markdown
+      sections:
+        - file: content/markdown
