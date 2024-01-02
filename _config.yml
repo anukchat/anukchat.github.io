@@ -47,7 +47,7 @@ parse:
 #######################################################################################
 # HTML-specific settings
 html:
-  favicon                   : "mesh-smallest.png"  # A path to a favicon image
+  favicon                   : "logos/mesh-smallest.png"  # A path to a favicon image
   use_edit_page_button      : false  # Whether to add an "edit this page" button to pages. If `true`, repository information in repository: must be filled in
   use_repository_button     : true  # Whether to add a link to your repository button
   use_issues_button         : false  # Whether to add an "open an issue" button
@@ -95,8 +95,8 @@ sphinx:
       # navbar_persistent: ["search-button"]
       search_bar_position: sidebar
       logo:
-        image_light: "mindmesh.png"
-        image_dark: "mindmesh-dark.png"
+        image_light: "logos/mindmesh.png"
+        image_dark: "logos/mindmesh-dark.png"
       # search_bar_text: Search the docs ...
       # icon_links:
       #       - {"name": "intelloom: Learn latest AI trends","url": "https://intelloom.com","icon": "https://intelloom.com/wp-content/uploads/2023/08/cropped-9021326_circle_notch_bold_icon-300x300.png","type": "url" } 

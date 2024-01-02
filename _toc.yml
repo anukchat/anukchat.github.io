@@ -4,11 +4,14 @@
 format: jb-book
 root: intro
 parts:
-  - caption: Introduction
+  - caption: Essentials
     chapters:
       - file: content/markdown
       - file: content/notebooks
-  - caption: Markdown Notebooks
+  - caption: Tools
     chapters:
       - file: content/markdown-notebooks
       - file: content/mymarkdown
+  - caption: Concepts
+  - caption: Core engineering
+  - caption: Real world use cases
