@@ -1,4 +1,4 @@
-![mindmesh](mesh-smallest.png) 
+![mindmesh](logos/mesh-smallest.png) 
 # Welcome to mindmesh 🤯
 
 Mindmesh project is an initiative to give a bare 
