@@ -6,24 +6,37 @@ root: intro
 parts:
   - caption: Essentials
     chapters:
-      - file: content/markdown
-      - file: content/notebooks
+      - file: content/essentials/essentials.ipynb
+        title: Essentials 1
+      - file: content/essentials/essentials1.ipynb
+        title: Essentials 2
+      sections:
+        - file: content/essentials/mathematics/mathematics.ipynb
+          title: Mathematics
+        - file: content/essentials/mathematics/statistics.ipynb
+          title: Statistics
   - caption: Tools
     chapters:
-      - file: content/markdown-notebooks
-      - file: content/mymarkdown
+      - file: content/tools/markdown-notebooks
+      - file: content/tools/mymarkdown
   - caption: Concepts
     chapters:
-    - file: content/markdown
+    - file: content/concepts/mymarkdown
+      title: Concepts at glance
       sections:
-        - file: content/markdown
+        - file: content/concepts/markdown-notebooks
+          title: Sample Machine Learning
   - caption: Core engineering
     chapters:
-      - file: content/markdown
+      - file: content/core/markdown
+        title: Introduction to core
         sections:
-          - file: content/markdown
+          - file: content/core/mymarkdown
+            title: End to End ML usecase
   - caption: Real world use cases
     chapters:
-    - file: content/markdown
+    - file: content/real-world/markdown
+      title: Understand how real world ML works
       sections:
-        - file: content/markdown
+        - file: content/real-world/mymarkdown
+          title: Real world examples
