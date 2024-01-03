@@ -6,19 +6,19 @@ root: intro
 parts:
   - caption: Essentials
     chapters:
-      - file: content/essentials/essentials.ipynb
-        title: Essentials 1
-      - file: content/essentials/essentials1.ipynb
-        title: Essentials 2
+    - file: content/essentials/essentials
+      title: Essentials 1
+    - file: content/essentials/essentials1
+      title: Essentials 2
       sections:
-        - file: content/essentials/mathematics/mathematics.ipynb
+        - file: content/essentials/mathematics/mathematics
           title: Mathematics
-        - file: content/essentials/mathematics/statistics.ipynb
+        - file: content/essentials/mathematics/statistics
           title: Statistics
   - caption: Tools
     chapters:
-      - file: content/tools/markdown-notebooks
-      - file: content/tools/mymarkdown
+    - file: content/tools/markdown-notebooks
+    - file: content/tools/mymarkdown
   - caption: Concepts
     chapters:
     - file: content/concepts/mymarkdown
