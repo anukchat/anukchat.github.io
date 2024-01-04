@@ -6,15 +6,15 @@ root: intro
 parts:
   - caption: Essentials
     chapters:
-    - file: content/essentials/essentials
-      title: Essentials 1
-    - file: content/essentials/essentials1
-      title: Essentials 2
+    - file: content/essentials/intro_mathematics
+      title: Mathematics
       sections:
-        - file: content/essentials/mathematics/mathematics
-          title: Mathematics
-        - file: content/essentials/mathematics/statistics
-          title: Statistics
+        - file: content/essentials/mathematics/1_linear_algebra
+          title: Linear algebra
+    - file: content/essentials/essentials1
+      title: Statistics
+      sections:
+        - file: content/essentials/statistics/statistics
   - caption: Tools
     chapters:
     - file: content/tools/markdown-notebooks
