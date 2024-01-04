@@ -14,7 +14,7 @@ This course is designed for beginners who **DO NOT WANT** to waste time on watch
 - If you want to learn in the fastest way possible ⏰
 
 ## Course Structure
-This course is divided into 4 parts
+This course starts with setting up the essentials ready which would help drive you towards the end goal easily
 
 ### Essentials
 Before starting your journey, you need to know some bare minimum essentials required to understand further. These bare minimum essentials include:
