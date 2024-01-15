@@ -1,7 +1,5 @@
-# Langchain: A Powerful Tool for Large Language Models
 
 # Table of Contents
-- [Langchain: A Powerful Tool for Large Language Models](#langchain-a-powerful-tool-for-large-language-models)
 - [Table of Contents](#table-of-contents)
   - [Introduction](#introduction)
   - [Installation](#installation)
