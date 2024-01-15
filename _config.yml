@@ -93,7 +93,6 @@ sphinx:
       logo:
         image_light: "logos/mindmesh.png"
         image_dark: "logos/mindmesh-dark.png"
-      show_toc_level: 5
       # search_bar_text: Search the docs ...
       # icon_links:
       #       - {"name": "intelloom: Learn latest AI trends","url": "https://intelloom.com","icon": "https://intelloom.com/wp-content/uploads/2023/08/cropped-9021326_circle_notch_bold_icon-300x300.png","type": "url" } 

@@ -38,7 +38,7 @@ parts:
             - file: content/tools/langchain/langgraph
               title: LangGraph
         - file: content/tools/hf/intro
-          title: HiggingFace Introduction and Setup
+          title: HuggingFace Introduction and Setup
  
 
   - caption: Concepts
