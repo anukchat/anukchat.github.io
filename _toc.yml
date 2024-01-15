@@ -17,8 +17,30 @@ parts:
         - file: content/essentials/statistics/statistics
   - caption: Tools
     chapters:
-    - file: content/tools/markdown-notebooks
-    - file: content/tools/mymarkdown
+    - file: content/tools/tools-for-ml
+      title: Tools for DataScience and ML
+    - file: content/tools/tools-for-nn
+      title: Tools for designing Neural Networks
+    - file: content/tools/tools-for-llms
+      title: Tools for LLMs and multimodels
+      sections:
+        - file: content/tools/langchain/intro
+          title: Langchain Introduction and Setup
+          sections:
+            - file: content/tools/langchain/lcel
+              title: Langchain Expression Language
+            - file: content/tools/langchain/langchain-modules
+              title: Langchain Modules
+            - file: content/tools/langchain/langserve
+              title: LangServe
+            - file: content/tools/langchain/langsmith
+              title: LangSmith
+            - file: content/tools/langchain/langgraph
+              title: LangGraph
+        - file: content/tools/hf/intro
+          title: HiggingFace Introduction and Setup
+ 
+
   - caption: Concepts
     chapters:
     - file: content/concepts/mymarkdown
