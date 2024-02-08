@@ -8,9 +8,7 @@
 title                       : Mindmesh # The title of the book. Will be placed in the left navbar.
 author                      : "Anukool Chaturvedi"  # The author of the book
 copyright                   : "2023"  # Copyright year to be placed in the footer
-logo: 
-  image_light: "logos/mindmesh.png"
-  image_dark: "logos/mindmesh-dark.png" # A path to the book logo
+logo                        : # A path to the book logo
 # Patterns to skip when building the book. Can be glob-style (e.g. "*skip.ipynb")
 exclude_patterns            : [_build, Thumbs.db, .DS_Store, "**.ipynb_checkpoints"]
 # Auto-exclude files not in the toc
@@ -86,18 +84,18 @@ repository:
 
 #######################################################################################
 # Advanced and power-user settings
-# sphinx:
+sphinx:
 #   extra_extensions          :   # A list of extra extensions to load by Sphinx (added to those already used by JB).
 #   local_extensions          :   # A list of local extensions to load by sphinx specified by "name: path" items
-#   config:
-#     html_theme_options:
-#       search_bar_position: sidebar
-#       logo:
-#         image_light: "logos/mindmesh.png"
-#         image_dark: "logos/mindmesh-dark.png"
+  config:
+    html_theme_options:
+      # search_bar_position: sidebar
+      logo:
+        image_light: "logos/mindmesh.png"
+        image_dark: "logos/mindmesh-dark.png"
 #       # search_bar_text: Search the docs ...
-      # icon_links:
-      #       - {"name": "intelloom: Learn latest AI trends","url": "https://intelloom.com","icon": "https://intelloom.com/wp-content/uploads/2023/08/cropped-9021326_circle_notch_bold_icon-300x300.png","type": "url" } 
+      icon_links:
+            - {"name": "intelloom: Learn latest AI trends","url": "https://intelloom.com","icon": "https://intelloom.com/wp-content/uploads/2023/08/cropped-9021326_circle_notch_bold_icon-300x300.png","type": "url" } 
   #   html_theme: "shibuya"
     # default_mode: "light"
   #   nav_links: [
