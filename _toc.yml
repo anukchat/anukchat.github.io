@@ -6,6 +6,8 @@ root: intro
 parts:
   - caption: Essentials
     chapters:
+    - file: content/essentials/python/getting_started
+      title: Python
     - file: content/essentials/intro_mathematics
       title: Mathematics
       sections:
