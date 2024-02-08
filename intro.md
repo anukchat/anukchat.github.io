@@ -18,6 +18,11 @@ This course starts with setting up the essentials ready which would help drive y
 
 ### Essentials
 Before starting your journey, you need to know some bare minimum essentials required to understand further. These bare minimum essentials include:
+- Python
+  1. Getting started
+  2. Best practices
+  3. Fundamental concepts 
+  
 - Mathematics
   1. Linear Algebra
   2. Matrices
