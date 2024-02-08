@@ -93,9 +93,20 @@ sphinx:
       logo:
         image_light: "logos/mindmesh.png"
         image_dark: "logos/mindmesh-dark.png"
+      launch_buttons:
+        notebook_interface        : "classic"  # The interface interactive links will activate ["classic", "jupyterlab"]
+        binderhub_url             : https://mybinder.org  # The URL of the BinderHub (e.g., https://mybinder.org)
+  # jupyterhub_url            : ""  # The URL of the JupyterHub (e.g., https://datahub.berkeley.edu)
+        thebe                     : false  # Add a thebe button to pages (requires the repository to run on Binder)
+        colab_url                 : https://colab.research.google.com # The URL of Google Colab (https://colab.research.google.com)
+
+      repository:
+        url                       : https://github.com/anukchat/anukchat.github.io # The URL to your book's repository
+        path_to_book              : content/  # A path to your book's folder, relative to the repository root.
+        branch                    : main  # Which branch of the repository should be used when creating links
 #       # search_bar_text: Search the docs ...
-      icon_links:
-            - {"name": "intelloom: Learn latest AI trends","url": "https://intelloom.com","icon": "https://intelloom.com/wp-content/uploads/2023/08/cropped-9021326_circle_notch_bold_icon-300x300.png","type": "url" } 
+      # icon_links:
+      #       - {"name": "intelloom: Learn latest AI trends","url": "https://intelloom.com","icon": "https://intelloom.com/wp-content/uploads/2023/08/cropped-9021326_circle_notch_bold_icon-300x300.png","type": "url" } 
   #   html_theme: "shibuya"
     # default_mode: "light"
   #   nav_links: [
