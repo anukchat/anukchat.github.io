@@ -8,7 +8,7 @@
 title                       : Mindmesh-Learn to build using AI # The title of the book. Will be placed in the left navbar.
 author                      : "Anukool Chaturvedi"  # The author of the book
 copyright                   : "2023"  # Copyright year to be placed in the footer
-logo                        : # A path to the book logo
+# logo                        : # A path to the book logo
 # Patterns to skip when building the book. Can be glob-style (e.g. "*skip.ipynb")
 exclude_patterns            : [_build, Thumbs.db, .DS_Store, "**.ipynb_checkpoints"]
 # Auto-exclude files not in the toc
@@ -84,7 +84,7 @@ repository:
 
 #######################################################################################
 # Advanced and power-user settings
-sphinx:
+# sphinx:
 #   extra_extensions          :   # A list of extra extensions to load by Sphinx (added to those already used by JB).
 #   local_extensions          :   # A list of local extensions to load by sphinx specified by "name: path" items
   # config:
