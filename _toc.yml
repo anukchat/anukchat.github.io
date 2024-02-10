@@ -8,6 +8,20 @@ parts:
     chapters:
     - file: content/essentials/python/getting_started
       title: Python
+      sections:
+        - file: content/essentials/python/001_Jupyter_Keyboard_Shortcuts_Practice
+        - file: content/essentials/python/002_Hello_World
+        - file: content/essentials/python/003_Python_Keywords_and_Identifiers
+        - file: content/essentials/python/004_Python_Statement_Indentation_Comments
+        - file: content/essentials/python/005_Python_Variables_&_Constants
+        - file: content/essentials/python/006_Python_Literals
+        - file: content/essentials/python/007_Python_Data_Types
+        - file: content/essentials/python/008_Python_Type_Conversion
+        - file: content/essentials/python/009_Python_Input_Output_Import
+        - file: content/essentials/python/010_Python_Operators
+        - file: content/essentials/python/011_Python_Namespace_and_Scope
+        - file: content/essentials/python/Interpreter_Vs_Compiler
+          title: Bonus-Interpreter vs Compiler
     - file: content/essentials/intro_mathematics
       title: Mathematics
       sections:
