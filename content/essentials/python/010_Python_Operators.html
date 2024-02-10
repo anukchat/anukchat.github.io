@@ -63,6 +63,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'content/essentials/python/010_Python_Operators';</script>
     <link rel="canonical" href="https://anukchat.github.io/content/essentials/python/010_Python_Operators.html" />
     <link rel="shortcut icon" href="../../../_static/mesh-smallest.png"/>
@@ -172,32 +174,32 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Tools</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../../tools/tools-for-ml.html">Tools for DataScience and ML</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../tools/tools-for-nn.html">Tools for designing Neural Networks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/tools-for-ml.html">Tools for dataScience and ML</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/tools-for-nn.html">Tools for designing neural networks</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../tools/tools-for-llms.html">Tools for LLMs and multimodels</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../tools/langchain/intro.html">Langchain Introduction and Setup</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../tools/langchain/lcel.html">Langchain Expression Language</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../tools/langchain/langchain-modules.html">Langchain Modules</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../tools/langchain/intro.html">Langchain introduction and setup</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tools/langchain/lcel.html">Langchain expression language</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tools/langchain/langchain-modules.html">Langchain modules</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../tools/langchain/langserve.html">LangServe</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../tools/langchain/langsmith.html">LangSmith</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../tools/langchain/langgraph.html">LangGraph</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../tools/hf/intro.html">HuggingFace Introduction and Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/hf/intro.html">HuggingFace introduction and setup</a></li>
 </ul>
 </li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Concepts</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../concepts/mymarkdown.html">Concepts at glance</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../concepts/markdown-notebooks.html">Sample Machine Learning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../concepts/markdown-notebooks.html">Sample machine learning</a></li>
 </ul>
 </li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Core engineering</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../core/markdown.html">Introduction to core</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../core/mymarkdown.html">End to End ML usecase</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../core/mymarkdown.html">End to 2nd ML usecase</a></li>
 </ul>
 </li>
 </ul>
@@ -419,33 +421,29 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#arithmatic-operators">1. Arithmatic Operators</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-arithmetic-operators-in-python">Example : Arithmetic operators in Python</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Python Operators</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#arithmatic-operators">1. Arithmatic Operators</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-arithmetic-operators-in-python">Example : Arithmetic operators in Python</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#comparison-relational-operators">2. Comparison/Relational operators</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-comparison-operators-in-python">Example : Comparison operators in Python</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#comparison-relational-operators">2. Comparison/Relational operators</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-comparison-operators-in-python">Example : Comparison operators in Python</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#logical-boolean-operators">3. Logical/Boolean operators</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-logical-operators-in-python">Example : Logical operators in Python</a></li>
-</ul>
-</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#logical-boolean-operators">3. Logical/Boolean operators</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-logical-operators-in-python">Example : Logical operators in Python</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bitwise-operators">4. Bitwise operators</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#assignment-operators">5. Assignment operators</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#special-operators">6. Special operators</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#identity-operators">1. Identity operators</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#example-identity-operators-in-python">Example : Identity operators in Python</a></li>
-</ul>
-</li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#membership-operators">2. Membership operators</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#example-membership-operators-in-python">Example : Membership operators in Python</a></li>
-</ul>
-</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#identity-operators">1. Identity operators</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-identity-operators-in-python">Example : Identity operators in Python</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#membership-operators">2. Membership operators</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-membership-operators-in-python">Example : Membership operators in Python</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-span-class-label-label-default-operators-span">💻 Exercises ➞ <span class="label label-default">Operators</span></a></li>
 </ul>
+</li>
+</ul>
+
             </nav>
         </div>
     </div>
@@ -456,10 +454,7 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <p><small><small><i>
-All the IPython Notebooks in <strong>Python Introduction</strong> lecture series by <strong><a class="reference external" href="https://www.linkedin.com/in/milaanparmar/">Dr. Milaan Parmar</a></strong> are available &#64; <strong><a class="reference external" href="https://github.com/milaan9/01_Python_Introduction">GitHub</a></strong>
-</i></small></small></p>
-<section id="python-operators">
+  <section id="python-operators">
 <h1>Python Operators<a class="headerlink" href="#python-operators" title="Permalink to this heading">#</a></h1>
 <p>Python can be used like a calculator. Simply type in expressions to get them evaluated.</p>
 <p><strong>What are operators in python?</strong></p>
@@ -533,8 +528,9 @@ All the IPython Notebooks in <strong>Python Introduction</strong> lecture series
 </tbody>
 </table>
 <p>As expected these operations generally promote to the most general type of any of the numbers involved i.e. int -&gt; float -&gt; complex.</p>
+</section>
 <section id="example-arithmetic-operators-in-python">
-<h3>Example : Arithmetic operators in Python<a class="headerlink" href="#example-arithmetic-operators-in-python" title="Permalink to this heading">#</a></h3>
+<h2>Example : Arithmetic operators in Python<a class="headerlink" href="#example-arithmetic-operators-in-python" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Addition: &#39;</span><span class="p">,</span> <span class="mi">1</span> <span class="o">+</span> <span class="mi">2</span><span class="p">)</span>
@@ -636,7 +632,7 @@ x // y = 5
 </div>
 </div>
 </div>
-<p>In many languages (and older versions of python) $\frac{1}{2}=0$ (truncated division). In Python 3 this behaviour is captured by a separate operator that rounds down: (i.e., <strong>a // b$=\lfloor \frac{a}{b}\rfloor$</strong>)</p>
+<p>In many languages (and older versions of python) <span class="math notranslate nohighlight">\(\frac{1}{2}=0\)</span> (truncated division). In Python 3 this behaviour is captured by a separate operator that rounds down: (i.e., <strong>a // b<span class="math notranslate nohighlight">\(=\lfloor \frac{a}{b}\rfloor\)</span></strong>)</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">5</span><span class="o">//</span><span class="mf">6.0</span>
@@ -704,7 +700,6 @@ x // y = 5
 </div>
 </div>
 </section>
-</section>
 <section id="comparison-relational-operators">
 <h2>2. Comparison/Relational operators<a class="headerlink" href="#comparison-relational-operators" title="Permalink to this heading">#</a></h2>
 <p>Comparison operators are used to <strong>compare values</strong>. It either returns <strong>True</strong> or <strong>False</strong> according to the <strong>condition</strong>.</p>
@@ -750,8 +745,9 @@ x // y = 5
 </tbody>
 </table>
 <p>Note the difference between <strong><code class="docutils literal notranslate"><span class="pre">==</span></code></strong> (equality test) and <strong><code class="docutils literal notranslate"><span class="pre">=</span></code></strong> (assignment)</p>
+</section>
 <section id="example-comparison-operators-in-python">
-<h3>Example : Comparison operators in Python<a class="headerlink" href="#example-comparison-operators-in-python" title="Permalink to this heading">#</a></h3>
+<h2>Example : Comparison operators in Python<a class="headerlink" href="#example-comparison-operators-in-python" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="mi">6</span> <span class="o">&gt;</span> <span class="mi">3</span><span class="p">)</span>                           <span class="c1"># True, because 3 is greater than 2</span>
@@ -852,7 +848,7 @@ x &lt;= y is False
 </section>
 </section>
 <section id="logical-boolean-operators">
-<h2>3. Logical/Boolean operators<a class="headerlink" href="#logical-boolean-operators" title="Permalink to this heading">#</a></h2>
+<h1>3. Logical/Boolean operators<a class="headerlink" href="#logical-boolean-operators" title="Permalink to this heading">#</a></h1>
 <p>Logical operators are the <strong><code class="docutils literal notranslate"><span class="pre">and</span></code></strong>, <strong><code class="docutils literal notranslate"><span class="pre">or</span></code></strong>, <strong><code class="docutils literal notranslate"><span class="pre">not</span></code></strong> operators.</p>
 <table class="table">
 <thead>
@@ -877,7 +873,7 @@ x &lt;= y is False
 </tbody>
 </table>
 <section id="example-logical-operators-in-python">
-<h3>Example : Logical operators in Python<a class="headerlink" href="#example-logical-operators-in-python" title="Permalink to this heading">#</a></h3>
+<h2>Example : Logical operators in Python<a class="headerlink" href="#example-logical-operators-in-python" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;True == True: &#39;</span><span class="p">,</span> <span class="kc">True</span> <span class="o">==</span> <span class="kc">True</span><span class="p">)</span>
@@ -1008,7 +1004,6 @@ not x is False
 </div>
 <p>Here is the <strong><a class="reference external" href="https://github.com/milaan9/01_Python_Introduction/blob/main/Python_Keywords_List.ipynb">truth table (&#64; and, or, not)</a></strong> for these operators.</p>
 </section>
-</section>
 <section id="bitwise-operators">
 <h2>4. Bitwise operators<a class="headerlink" href="#bitwise-operators" title="Permalink to this heading">#</a></h2>
 <p>Bitwise operators act on operands as if they were string of binary digits. It operates <strong>bit by bit</strong>, hence the name.</p>
@@ -1032,7 +1027,7 @@ not x is False
 </tr>
 <tr class="row-odd"><td class="text-center"><p><strong><code class="docutils literal notranslate"><span class="pre">or</span></code></strong></p></td>
 <td class="text-center"><p>Logical or</p></td>
-<td class="text-center"><p><strong>$\mid$</strong></p></td>
+<td class="text-center"><p><strong><span class="math notranslate nohighlight">\(\mid\)</span></strong></p></td>
 <td class="text-center"><p>Bitwise OR</p></td>
 <td class="text-center"><p><strong>x | y</strong> = 14 (<strong><code class="docutils literal notranslate"><span class="pre">0000</span> <span class="pre">1110</span></code></strong>)</p></td>
 </tr>
@@ -1267,8 +1262,9 @@ x is 144
 </tr>
 </tbody>
 </table>
+</section>
 <section id="example-identity-operators-in-python">
-<h4>Example : Identity operators in Python<a class="headerlink" href="#example-identity-operators-in-python" title="Permalink to this heading">#</a></h4>
+<h3>Example : Identity operators in Python<a class="headerlink" href="#example-identity-operators-in-python" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x1</span> <span class="o">=</span> <span class="mi">6</span>
@@ -1301,7 +1297,6 @@ False
 <p>Here, we see that <strong><code class="docutils literal notranslate"><span class="pre">x1</span></code></strong> and <strong><code class="docutils literal notranslate"><span class="pre">y1</span></code></strong> are integers of same values, so they are equal as well as identical. Same is the case with <strong><code class="docutils literal notranslate"><span class="pre">x2</span></code></strong> and <strong><code class="docutils literal notranslate"><span class="pre">y2</span></code></strong> (strings).</p>
 <p>But <strong><code class="docutils literal notranslate"><span class="pre">x3</span></code></strong> and <strong><code class="docutils literal notranslate"><span class="pre">y3</span></code></strong> are list. They are equal but not identical. It is because interpreter locates them <strong>separately in memory</strong> although they are equal.</p>
 </section>
-</section>
 <section id="membership-operators">
 <h3>2. Membership operators<a class="headerlink" href="#membership-operators" title="Permalink to this heading">#</a></h3>
 <p><strong><code class="docutils literal notranslate"><span class="pre">in</span></code></strong> and <strong><code class="docutils literal notranslate"><span class="pre">not</span> <span class="pre">in</span></code></strong> are the membership operators in Python. They are used to test whether a value or variable is found in a <strong>sequence</strong> (<strong><a class="reference external" href="https://github.com/milaan9/02_Python_Datatypes/blob/main/002_Python_String.ipynb">string</a></strong>, <strong><a class="reference external" href="https://github.com/milaan9/02_Python_Datatypes/blob/main/003_Python_List.ipynb">list</a></strong>, <strong><a class="reference external" href="https://github.com/milaan9/02_Python_Datatypes/blob/main/004_Python_Tuple.ipynb">tuple</a></strong>, <strong><a class="reference external" href="https://github.com/milaan9/02_Python_Datatypes/blob/main/006_Python_Sets.ipynb">set</a></strong> and <strong><a class="reference external" href="https://github.com/milaan9/02_Python_Datatypes/blob/main/005_Python_Dictionary.ipynb">dictionary</a></strong>).</p>
@@ -1324,8 +1319,9 @@ False
 </tr>
 </tbody>
 </table>
+</section>
 <section id="example-membership-operators-in-python">
-<h4>Example : Membership operators in Python<a class="headerlink" href="#example-membership-operators-in-python" title="Permalink to this heading">#</a></h4>
+<h3>Example : Membership operators in Python<a class="headerlink" href="#example-membership-operators-in-python" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;Hello world&#39;</span>
@@ -1358,7 +1354,6 @@ False
 <p>Here, <strong>‘<code class="docutils literal notranslate"><span class="pre">H</span></code>’</strong> is in <strong><code class="docutils literal notranslate"><span class="pre">x</span></code></strong> but <strong>‘<code class="docutils literal notranslate"><span class="pre">hello</span></code>’</strong> is not present in <strong><code class="docutils literal notranslate"><span class="pre">x</span></code></strong> (remember, Python is case sensitive). Similary, <strong><code class="docutils literal notranslate"><span class="pre">1</span></code></strong> is key and <strong>‘<code class="docutils literal notranslate"><span class="pre">a</span></code>’</strong> is the value in dictionary y. Hence, <strong><code class="docutils literal notranslate"><span class="pre">'a'in</span> <span class="pre">y</span></code></strong> returns <strong><code class="docutils literal notranslate"><span class="pre">False</span></code></strong>.</p>
 </section>
 </section>
-</section>
 <section id="exercises-span-class-label-label-default-operators-span">
 <h2>💻 Exercises ➞ <span class='label label-default'>Operators</span><a class="headerlink" href="#exercises-span-class-label-label-default-operators-span" title="Permalink to this heading">#</a></h2>
 <ol class="arabic simple">
@@ -1384,10 +1379,10 @@ False
 <ol class="arabic simple" start="6">
 <li><p>Get length and width of a rectangle using prompt. Calculate its area (<strong>area = length x width</strong>) and perimeter (<strong>perimeter = 2 x (length + width)</strong>)</p></li>
 <li><p>Get radius of a circle using prompt. Calculate the area (<strong>area = pi x r x r</strong>) and circumference (<strong>c = 2 x pi x r</strong>) where pi = 3.14.</p></li>
-<li><p>Calculate the slope, x-intercept and y-intercept of $y = 2x -2$</p></li>
-<li><p>Slope is ($m = (y2-y1)/(x2-x1)$). Find the slope and <strong><a class="reference external" href="https://en.wikipedia.org/wiki/Euclidean_distance#:~:text=In%20mathematics%2C%20the%20Euclidean%20distance,being%20called%20the%20Pythagorean%20distance.">Euclidean distance</a></strong> between point (2, 2) and point (6,10)</p></li>
+<li><p>Calculate the slope, x-intercept and y-intercept of <span class="math notranslate nohighlight">\(y = 2x -2\)</span></p></li>
+<li><p>Slope is (<span class="math notranslate nohighlight">\(m = (y2-y1)/(x2-x1)\)</span>). Find the slope and <strong><a class="reference external" href="https://en.wikipedia.org/wiki/Euclidean_distance#:~:text=In%20mathematics%2C%20the%20Euclidean%20distance,being%20called%20the%20Pythagorean%20distance.">Euclidean distance</a></strong> between point (2, 2) and point (6,10)</p></li>
 <li><p>Compare the slopes in tasks 8 and 9.</p></li>
-<li><p>Calculate the value of y ($y = x^2 + 6x + 9$). Try to use different x values and figure out at what x value y is going to be 0.</p></li>
+<li><p>Calculate the value of y (<span class="math notranslate nohighlight">\(y = x^2 + 6x + 9\)</span>). Try to use different x values and figure out at what x value y is going to be 0.</p></li>
 <li><p>Find the length of <strong><code class="docutils literal notranslate"><span class="pre">'python'</span></code></strong> and <strong><code class="docutils literal notranslate"><span class="pre">'datascience'</span></code></strong> and make a falsy comparison statement.</p></li>
 <li><p>Use <strong><code class="docutils literal notranslate"><span class="pre">and</span></code></strong> operator to check if <strong><code class="docutils literal notranslate"><span class="pre">on</span></code></strong> is found in both <strong><code class="docutils literal notranslate"><span class="pre">python</span></code></strong> and <strong><code class="docutils literal notranslate"><span class="pre">cannon</span></code></strong></p></li>
 <li><p><strong><code class="docutils literal notranslate"><span class="pre">I</span> <span class="pre">hope</span> <span class="pre">this</span> <span class="pre">course</span> <span class="pre">is</span> <span class="pre">not</span> <span class="pre">full</span> <span class="pre">of</span> <span class="pre">jargon</span></code></strong>. Use <strong><code class="docutils literal notranslate"><span class="pre">in</span></code></strong> operator to check if <strong><code class="docutils literal notranslate"><span class="pre">jargon</span></code></strong> is in the sentence.</p></li>
@@ -1487,33 +1482,29 @@ False
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#arithmatic-operators">1. Arithmatic Operators</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-arithmetic-operators-in-python">Example : Arithmetic operators in Python</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Python Operators</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#arithmatic-operators">1. Arithmatic Operators</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-arithmetic-operators-in-python">Example : Arithmetic operators in Python</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#comparison-relational-operators">2. Comparison/Relational operators</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-comparison-operators-in-python">Example : Comparison operators in Python</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#comparison-relational-operators">2. Comparison/Relational operators</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-comparison-operators-in-python">Example : Comparison operators in Python</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#logical-boolean-operators">3. Logical/Boolean operators</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-logical-operators-in-python">Example : Logical operators in Python</a></li>
-</ul>
-</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#logical-boolean-operators">3. Logical/Boolean operators</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-logical-operators-in-python">Example : Logical operators in Python</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bitwise-operators">4. Bitwise operators</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#assignment-operators">5. Assignment operators</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#special-operators">6. Special operators</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#identity-operators">1. Identity operators</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#example-identity-operators-in-python">Example : Identity operators in Python</a></li>
-</ul>
-</li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#membership-operators">2. Membership operators</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#example-membership-operators-in-python">Example : Membership operators in Python</a></li>
-</ul>
-</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#identity-operators">1. Identity operators</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-identity-operators-in-python">Example : Identity operators in Python</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#membership-operators">2. Membership operators</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-membership-operators-in-python">Example : Membership operators in Python</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-span-class-label-label-default-operators-span">💻 Exercises ➞ <span class="label label-default">Operators</span></a></li>
 </ul>
+</li>
+</ul>
+
   </nav></div>
 
 </div></div>

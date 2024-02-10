@@ -68,7 +68,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../../_static/mesh-smallest.png"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Keyboard Shortcuts Practice" href="001_Jupyter_Keyboard_Shortcuts_Practice.html" />
+    <link rel="next" title="Python Hello, World" href="002_Hello_World.html" />
     <link rel="prev" title="Welcome to mindmesh 🤯" href="../../../intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -172,32 +172,32 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Tools</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../../tools/tools-for-ml.html">Tools for DataScience and ML</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../tools/tools-for-nn.html">Tools for designing Neural Networks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/tools-for-ml.html">Tools for dataScience and ML</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/tools-for-nn.html">Tools for designing neural networks</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../tools/tools-for-llms.html">Tools for LLMs and multimodels</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../tools/langchain/intro.html">Langchain Introduction and Setup</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../tools/langchain/lcel.html">Langchain Expression Language</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../tools/langchain/langchain-modules.html">Langchain Modules</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../tools/langchain/intro.html">Langchain introduction and setup</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tools/langchain/lcel.html">Langchain expression language</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tools/langchain/langchain-modules.html">Langchain modules</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../tools/langchain/langserve.html">LangServe</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../tools/langchain/langsmith.html">LangSmith</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../tools/langchain/langgraph.html">LangGraph</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../tools/hf/intro.html">HuggingFace Introduction and Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/hf/intro.html">HuggingFace introduction and setup</a></li>
 </ul>
 </li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Concepts</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../concepts/mymarkdown.html">Concepts at glance</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../concepts/markdown-notebooks.html">Sample Machine Learning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../concepts/markdown-notebooks.html">Sample machine learning</a></li>
 </ul>
 </li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Core engineering</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../core/markdown.html">Introduction to core</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../core/mymarkdown.html">End to End ML usecase</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../core/mymarkdown.html">End to 2nd ML usecase</a></li>
 </ul>
 </li>
 </ul>
@@ -429,11 +429,10 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-python-inside-jupyter-notebook">Using Python inside Jupyter notebook</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#python-strings">Python Strings</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#python-lists">Python lists</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#check-python-datatypes">Check python datatypes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#check-python-datatypes">Check python datatypes</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#in-the-upcoming-tutorials-we-will-deep-dive-into-specific-concepts-of-python-hold-on-your-breath-and-start-your-journey">In the upcoming tutorials, we will deep dive into specific concepts of Python, hold on your breath and start your journey</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-built-in-functions">Python built in functions</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#in-the-upcoming-tutorials-we-will-deep-dive-into-specific-concepts-of-python-hold-on-your-breath-and-start-your-journey">In the upcoming tutorials, we will deep dive into specific concepts of Python, hold on your breath and start your journey</a></li>
 </ul>
 </li>
 </ul>
@@ -526,7 +525,7 @@ Python is an interpreted language, which can save you considerable time during p
 </ol>
 <section id="python-installation">
 <h2>Python Installation<a class="headerlink" href="#python-installation" title="Permalink to this heading">#</a></h2>
-<p>To install python, go to the website: https://www.python.org/downloads/ and install latest version, depending on your OS.</p>
+<p>To install python, go to the website: <a class="reference external" href="https://www.python.org/downloads/">https://www.python.org/downloads/</a> and install latest version, depending on your OS.</p>
 <p>** Make sure during installation, to check the checkbox to add the Python reference in Environment variable Path</p>
 <p>Once installation is done, you can check the Python version by running command to check installation is successfull</p>
 <blockquote>
@@ -543,12 +542,12 @@ Python is an interpreted language, which can save you considerable time during p
 </section>
 <section id="using-a-code-editor-of-your-choice">
 <h2>Using a code editor of your choice<a class="headerlink" href="#using-a-code-editor-of-your-choice" title="Permalink to this heading">#</a></h2>
-<p>To write Python code or any code, you could use PyCharm or VSCode, in this tutorial I will use VSCode which has simple and intiuitive UI , you can download from https://code.visualstudio.com/</p>
+<p>To write Python code or any code, you could use PyCharm or VSCode, in this tutorial I will use VSCode which has simple and intiuitive UI , you can download from <a class="reference external" href="https://code.visualstudio.com/">https://code.visualstudio.com/</a></p>
 <p>VSCode offers many features, you can also install many extensions including extensions required to run Jupyter notebooks</p>
 </section>
 <section id="using-python-in-a-jupyter-notebook">
 <h2>Using python in a jupyter notebook<a class="headerlink" href="#using-python-in-a-jupyter-notebook" title="Permalink to this heading">#</a></h2>
-<p>Jupyter notebook is an interactive way to write your code for experimentation purposes, This tutorial is also written in Jupyter Notebook. (Learn more about it https://jupyter.org/)</p>
+<p>Jupyter notebook is an interactive way to write your code for experimentation purposes, This tutorial is also written in Jupyter Notebook. (Learn more about it <a class="reference external" href="https://jupyter.org/">https://jupyter.org/</a>)</p>
 <ul class="simple">
 <li><p>Jupyter notebook has file extension .ipynb (interactive python notebook)</p></li>
 <li><p>You can write markdown content as well as write and execute Python code</p></li>
@@ -557,7 +556,7 @@ Python is an interpreted language, which can save you considerable time during p
 <section id="package-manager-and-virtual-environment">
 <h2>Package manager and virtual environment<a class="headerlink" href="#package-manager-and-virtual-environment" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
-<li><p>To install third party python modules/packages, you can use <strong>pip</strong> as package manager, there are other ways to install python packages like poetry, conda etc..</p></li>
+<li><p>To install third party python modules/packages, you can use <strong>pip</strong> as package manager, there are other ways to install python packages like poetry, conda etc…</p></li>
 </ul>
 <p>Example:</p>
 <blockquote>
@@ -753,12 +752,6 @@ venv<span class="se">\S</span>cripts<span class="se">\a</span>ctivate
 </div>
 </div>
 </div>
-</section>
-</section>
-<section id="python-built-in-functions">
-<h2>Python built in functions<a class="headerlink" href="#python-built-in-functions" title="Permalink to this heading">#</a></h2>
-<p><img alt="image.png" src="content/essentials/python/attachment:image.png" /></p>
-<p>Lets try some of them</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Gives absolute values</span>
@@ -804,7 +797,8 @@ repr(obj, /)
 </div>
 </div>
 <section id="in-the-upcoming-tutorials-we-will-deep-dive-into-specific-concepts-of-python-hold-on-your-breath-and-start-your-journey">
-<h3>In the upcoming tutorials, we will deep dive into specific concepts of Python, hold on your breath and start your journey<a class="headerlink" href="#in-the-upcoming-tutorials-we-will-deep-dive-into-specific-concepts-of-python-hold-on-your-breath-and-start-your-journey" title="Permalink to this heading">#</a></h3>
+<h4>In the upcoming tutorials, we will deep dive into specific concepts of Python, hold on your breath and start your journey<a class="headerlink" href="#in-the-upcoming-tutorials-we-will-deep-dive-into-specific-concepts-of-python-hold-on-your-breath-and-start-your-journey" title="Permalink to this heading">#</a></h4>
+</section>
 </section>
 </section>
 <div class="toctree-wrapper compound">
@@ -851,11 +845,11 @@ repr(obj, /)
       </div>
     </a>
     <a class="right-next"
-       href="001_Jupyter_Keyboard_Shortcuts_Practice.html"
+       href="002_Hello_World.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Keyboard Shortcuts Practice</p>
+        <p class="prev-next-title">Python Hello, World</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -884,11 +878,10 @@ repr(obj, /)
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-python-inside-jupyter-notebook">Using Python inside Jupyter notebook</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#python-strings">Python Strings</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#python-lists">Python lists</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#check-python-datatypes">Check python datatypes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#check-python-datatypes">Check python datatypes</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#in-the-upcoming-tutorials-we-will-deep-dive-into-specific-concepts-of-python-hold-on-your-breath-and-start-your-journey">In the upcoming tutorials, we will deep dive into specific concepts of Python, hold on your breath and start your journey</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-built-in-functions">Python built in functions</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#in-the-upcoming-tutorials-we-will-deep-dive-into-specific-concepts-of-python-hold-on-your-breath-and-start-your-journey">In the upcoming tutorials, we will deep dive into specific concepts of Python, hold on your breath and start your journey</a></li>
 </ul>
 </li>
 </ul>
