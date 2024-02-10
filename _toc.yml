@@ -9,20 +9,28 @@ parts:
     - file: content/essentials/python/getting_started
       title: Python
       sections:
-      - file: content/essentials/python/001_Jupyter_Keyboard_Shortcuts_Practice
-        title: Jupyter Keyboard Shortcuts
-      - file: content/essentials/python/002_Hello_World
-      - file: content/essentials/python/003_Python_Keywords_and_Identifiers
-      - file: content/essentials/python/004_Python_Statement_Indentation_Comments
-      - file: content/essentials/python/005_Python_Variables_&_Constants
-      - file: content/essentials/python/006_Python_Literals
-      - file: content/essentials/python/007_Python_Data_Types
-      - file: content/essentials/python/008_Python_Type_Conversion
-      - file: content/essentials/python/009_Python_Input_Output_Import
-      - file: content/essentials/python/010_Python_Operators
-      - file: content/essentials/python/011_Python_Namespace_and_Scope
-      - file: content/essentials/python/Interpreter_Vs_Compiler
-        title: Bonus-Interpreter vs Compiler
+        - file: content/essentials/python/002_Hello_World
+          title: Hello world
+        - file: content/essentials/python/003_Python_Keywords_and_Identifiers
+          title: Python keywords and identifiers
+        - file: content/essentials/python/004_Python_Statement_Indentation_Comments
+          title: Python statement indentation & comments
+        - file: content/essentials/python/005_Python_Variables_&_Constants
+          title: Python variables & constants
+        - file: content/essentials/python/006_Python_Literals
+          title: Python literals
+        - file: content/essentials/python/007_Python_Data_Types
+          title: Python datatypes
+        - file: content/essentials/python/008_Python_Type_Conversion
+          title: Python type conversion
+        - file: content/essentials/python/009_Python_Input_Output_Import
+          title: Python I/O & imports
+        - file: content/essentials/python/010_Python_Operators
+          title: Python operators
+        - file: content/essentials/python/011_Python_Namespace_and_Scope
+          title: Python namespace & scope
+        - file: content/essentials/python/Interpreter_Vs_Compiler
+          title: Bonus - Interpreter vs compiler
     - file: content/essentials/intro_mathematics
       title: Mathematics
       sections:
@@ -35,19 +43,19 @@ parts:
   - caption: Tools
     chapters:
     - file: content/tools/tools-for-ml
-      title: Tools for DataScience and ML
+      title: Tools for dataScience and ML
     - file: content/tools/tools-for-nn
-      title: Tools for designing Neural Networks
+      title: Tools for designing neural networks
     - file: content/tools/tools-for-llms
       title: Tools for LLMs and multimodels
       sections:
         - file: content/tools/langchain/intro
-          title: Langchain Introduction and Setup
+          title: Langchain introduction and setup
           sections:
             - file: content/tools/langchain/lcel
-              title: Langchain Expression Language
+              title: Langchain expression language
             - file: content/tools/langchain/langchain-modules
-              title: Langchain Modules
+              title: Langchain modules
             - file: content/tools/langchain/langserve
               title: LangServe
             - file: content/tools/langchain/langsmith
@@ -55,23 +63,21 @@ parts:
             - file: content/tools/langchain/langgraph
               title: LangGraph
         - file: content/tools/hf/intro
-          title: HuggingFace Introduction and Setup
- 
-
+          title: HuggingFace introduction and setup
   - caption: Concepts
     chapters:
     - file: content/concepts/mymarkdown
       title: Concepts at glance
       sections:
         - file: content/concepts/markdown-notebooks
-          title: Sample Machine Learning
+          title: Sample machine learning
   - caption: Core engineering
     chapters:
       - file: content/core/markdown
         title: Introduction to core
         sections:
           - file: content/core/mymarkdown
-            title: End to End ML usecase
+            title: End to 2nd ML usecase
   - caption: Real world use cases
     chapters:
     - file: content/real-world/markdown

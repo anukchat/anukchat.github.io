@@ -33,7 +33,6 @@ parse:
     - amsmath
     - html_image
     - dollarmath
-    - colon-fence
     - html_admonition
     - html_image
     - linkify
