@@ -68,7 +68,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../../_static/mesh-smallest.png"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Mathematics for Machine Learning" href="../intro_mathematics.html" />
+    <link rel="next" title="Keyboard Shortcuts Practice" href="001_Jupyter_Keyboard_Shortcuts_Practice.html" />
     <link rel="prev" title="Welcome to mindmesh 🤯" href="../../../intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -159,7 +159,8 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Essentials</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Python</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Getting Started with Python</a></li>
+
 <li class="toctree-l1 has-children"><a class="reference internal" href="../intro_mathematics.html">Mathematics</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../mathematics/1_linear_algebra.html">Linear algebra</a></li>
 </ul>
@@ -418,13 +419,27 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Getting Started with Python</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#python-applications-area">Python Applications Area</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-installation">Python Installation</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-a-code-editor-of-your-choice">Using a code editor of your choice</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-python-in-a-jupyter-notebook">Using python in a jupyter notebook</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#package-manager-and-virtual-environment">Package manager and virtual environment</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#informal-introduction-to-python-using-python-as-calculator">Informal introduction to python: using python as calculator</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-python-inside-jupyter-notebook">Using Python inside Jupyter notebook</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-python-inside-jupyter-notebook">Using Python inside Jupyter notebook</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#python-strings">Python Strings</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#python-lists">Python lists</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#check-python-datatypes">Check python datatypes</a></li>
 </ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-built-in-functions">Python built in functions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#in-the-upcoming-tutorials-we-will-deep-dive-into-specific-concepts-of-python-hold-on-your-breath-and-start-your-journey">In the upcoming tutorials, we will deep dive into specific concepts of Python, hold on your breath and start your journey</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
             </nav>
         </div>
     </div>
@@ -442,10 +457,77 @@ document.write(`
 <p>Python allows you to split your program into modules that can be reused in other Python programs. It comes with a large collection of standard modules that you can use as the basis of your programs — or as examples to start learning to program in Python. Some of these modules provide things like file I/O, system calls, sockets, and even interfaces to graphical user interface toolkits like Tk.
 Python is an interpreted language, which can save you considerable time during program development because no compilation and linking is necessary.</p>
 <p>The interpreter can be used interactively, which makes it easy to experiment with features of the language, to write throw-away programs, or to test functions during bottom-up program development. It is also a handy desk calculator.</p>
+</section>
+<section id="python-applications-area">
+<h1>Python Applications Area<a class="headerlink" href="#python-applications-area" title="Permalink to this heading">#</a></h1>
+<p>Python is known for its <strong>general purpose</strong> nature that makes it applicable in almost each domain of software development. Python as a whole can be used in any sphere of development.</p>
+<p>Here, we are <strong>specifing applications</strong> areas where python can be applied.</p>
+<ol class="arabic simple">
+<li><p><strong>Web Applications</strong></p>
+<ul class="simple">
+<li><p>We can use Python to develop web applications. It provides libraries to handle internet protocols such as HTML and XML, JSON, Email processing, request, beautifulSoup, Feedparser etc. It also provides Frameworks such as Django, Pyramid, Flask etc to design and delelop web based applications. Some important developments are: PythonWikiEngines, Pocoo, PythonBlogSoftware etc.</p></li>
+</ul>
+</li>
+<li><p><strong>AI &amp; Machine Learning</strong></p>
+<ul class="simple">
+<li><p>Python has Prebuilt Libraries like Numpy for scientific computation, Scipy for advanced computing and Pybrain for machine learning (Python Machine Learning) making it one of the best languages For AI.</p></li>
+</ul>
+</li>
+<li><p><strong>Desktop GUI Applications</strong></p>
+<ul class="simple">
+<li><p>Python provides Tk GUI library to develop user interface in python based application. Some other useful toolkits wxWidgets, Kivy, pyqt that are useable on several platforms. The Kivy is popular for writing multitouch applications.</p></li>
+</ul>
+</li>
+<li><p><strong>Software Development</strong></p>
+<ul class="simple">
+<li><p>Python is helpful for software development process. It works as a support language and can be used for build control and management, testing etc.</p></li>
+</ul>
+</li>
+<li><p><strong>Scientific and Numeric</strong></p>
+<ul class="simple">
+<li><p>Python is popular and widely used in scientific and numeric computing. Some useful library and package are SciPy, Pandas, IPython etc. SciPy is group of packages of engineering, science and mathematics.</p></li>
+</ul>
+</li>
+<li><p><strong>Business Applications</strong></p>
+<ul class="simple">
+<li><p>Python is used to build Bussiness applications like ERP and e-commerce systems. Tryton is a high level application platform.</p></li>
+</ul>
+</li>
+<li><p><strong>Console Based Application</strong></p>
+<ul class="simple">
+<li><p>We can use Python to develop console based applications. For example: IPython.</p></li>
+</ul>
+</li>
+<li><p><strong>Audio or Video based Applications</strong></p>
+<ul class="simple">
+<li><p>Python is awesome to perform multiple tasks and can be used to develop multimedia applications. Some of real applications are: TimPlayer, cplay etc.</p></li>
+</ul>
+</li>
+<li><p><strong>3D CAD Applications</strong></p>
+<ul class="simple">
+<li><p>To create CAD application Fandango is a real application which provides full features of CAD.</p></li>
+</ul>
+</li>
+<li><p><strong>Enterprise Applications</strong></p>
+<ul class="simple">
+<li><p>Python can be used to create applications which can be used within an Enterprise or an Organization. Some real time applications are: OpenErp, Tryton, Picalo etc.</p></li>
+</ul>
+</li>
+<li><p><strong>Applications for Images</strong></p>
+<ul class="simple">
+<li><p>Using Python several application can be developed for image. Applications developed are: VPython, Gogh, imgSeek etc.</p></li>
+</ul>
+</li>
+<li><p><strong>Games and 3D Graphics</strong></p>
+<ul class="simple">
+<li><p>PyGame, PyKyra are two frameworks for game-development with Python. Apart from these, we also get a variety of 3D-rendering libraries. If you’re one of those game-developers, you can check out PyWeek, a semi-annual game programming contest.</p></li>
+</ul>
+</li>
+</ol>
 <section id="python-installation">
 <h2>Python Installation<a class="headerlink" href="#python-installation" title="Permalink to this heading">#</a></h2>
 <p>To install python, go to the website: https://www.python.org/downloads/ and install latest version, depending on your OS.</p>
-<p>** Make sure during installation, to check the checkbox to add the Python referenc in Environment variable Path</p>
+<p>** Make sure during installation, to check the checkbox to add the Python reference in Environment variable Path</p>
 <p>Once installation is done, you can check the Python version by running command to check installation is successfull</p>
 <blockquote>
 <div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>--version
@@ -553,24 +635,180 @@ venv<span class="se">\S</span>cripts<span class="se">\a</span>ctivate
 </div></blockquote>
 <p>A new window would be launched in your browser, click on New to create a notebook and rename it for your reference</p>
 <blockquote>
-<div><p>Notebooks in these course are designed to run interactively on binder, click on the Binder icon, to open the notebook for execution in binder</p>
+<div><p>Notebooks in these course are designed to run interactively on google colab (also using binder), click on the rocket icon and select colab, to open the notebook for interactive execution in colab, you can do additional experimentation by adding new cells, and save the copy of notebooks locally.</p>
 </div></blockquote>
+<section id="python-strings">
+<h3>Python Strings<a class="headerlink" href="#python-strings" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 1st Execution</span>
-<span class="n">x</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="o">=</span><span class="s2">&quot;I love python&quot;</span>
+
+<span class="c1"># accessing character by character</span>
+<span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 2, 3, 4]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;I&#39;
 </pre></div>
 </div>
 </div>
 </div>
-<p>!python</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># accessing range of characters x[start_index: end_index]</span>
+<span class="n">x</span><span class="p">[:</span><span class="mi">6</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;I love&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># accessing last 3 characters</span>
+<span class="n">x</span><span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="p">:]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;hon&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># accessing all characters except last 5</span>
+<span class="n">x</span><span class="p">[:</span><span class="o">-</span><span class="mi">5</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;I love p&#39;
+</pre></div>
+</div>
+</div>
+</div>
 </section>
+<section id="python-lists">
+<h3>Python lists<a class="headerlink" href="#python-lists" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Compound list</span>
+<span class="n">p_list</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="mf">5.0</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">p_list</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 2, 3, 4, &#39;a&#39;, 5.0]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Appending list</span>
+<span class="n">p_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;Python&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">p_list</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 2, 3, 4, &#39;a&#39;, 5.0, &#39;Python&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="check-python-datatypes">
+<h3>Check python datatypes<a class="headerlink" href="#check-python-datatypes" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>                  <span class="c1"># Int</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="mf">3.14</span><span class="p">))</span>                <span class="c1"># Float</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="mi">3</span><span class="n">j</span><span class="p">))</span>              <span class="c1"># Complex</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="s1">&#39;Asabeneh&#39;</span><span class="p">))</span>          <span class="c1"># String</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]))</span>           <span class="c1"># List</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">({</span><span class="s1">&#39;name&#39;</span><span class="p">:</span><span class="s1">&#39;Asabeneh&#39;</span><span class="p">}))</span> <span class="c1"># Dictionary</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">({</span><span class="mf">9.8</span><span class="p">,</span> <span class="mf">3.14</span><span class="p">,</span> <span class="mf">2.7</span><span class="p">}))</span>    <span class="c1"># Set</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">((</span><span class="mf">9.8</span><span class="p">,</span> <span class="mf">3.14</span><span class="p">,</span> <span class="mf">2.7</span><span class="p">)))</span>    <span class="c1"># Tuple</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;int&#39;&gt;
+&lt;class &#39;float&#39;&gt;
+&lt;class &#39;complex&#39;&gt;
+&lt;class &#39;str&#39;&gt;
+&lt;class &#39;list&#39;&gt;
+&lt;class &#39;dict&#39;&gt;
+&lt;class &#39;set&#39;&gt;
+&lt;class &#39;tuple&#39;&gt;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="python-built-in-functions">
+<h2>Python built in functions<a class="headerlink" href="#python-built-in-functions" title="Permalink to this heading">#</a></h2>
+<p><img alt="image.png" src="content/essentials/python/attachment:image.png" /></p>
+<p>Lets try some of them</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Gives absolute values</span>
+<span class="nb">abs</span><span class="p">(</span><span class="o">-</span><span class="mf">10.7</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10.7
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Gives max value</span>
+<span class="nb">max</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">8</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>8
+</pre></div>
+</div>
+</div>
+</div>
+<p>To get all the definition , you can call help method</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="nb">repr</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Help on built-in function repr in module builtins:
+
+repr(obj, /)
+    Return the canonical string representation of the object.
+    
+    For many object types, including most builtins, eval(repr(obj)) == obj.
+</pre></div>
+</div>
+</div>
+</div>
+<section id="in-the-upcoming-tutorials-we-will-deep-dive-into-specific-concepts-of-python-hold-on-your-breath-and-start-your-journey">
+<h3>In the upcoming tutorials, we will deep dive into specific concepts of Python, hold on your breath and start your journey<a class="headerlink" href="#in-the-upcoming-tutorials-we-will-deep-dive-into-specific-concepts-of-python-hold-on-your-breath-and-start-your-journey" title="Permalink to this heading">#</a></h3>
+</section>
+</section>
+<div class="toctree-wrapper compound">
+</div>
 </section>
 
     <script type="text/x-thebe-config">
@@ -613,11 +851,11 @@ venv<span class="se">\S</span>cripts<span class="se">\a</span>ctivate
       </div>
     </a>
     <a class="right-next"
-       href="../intro_mathematics.html"
+       href="001_Jupyter_Keyboard_Shortcuts_Practice.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Mathematics for Machine Learning</p>
+        <p class="prev-next-title">Keyboard Shortcuts Practice</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -636,13 +874,27 @@ venv<span class="se">\S</span>cripts<span class="se">\a</span>ctivate
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Getting Started with Python</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#python-applications-area">Python Applications Area</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-installation">Python Installation</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-a-code-editor-of-your-choice">Using a code editor of your choice</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-python-in-a-jupyter-notebook">Using python in a jupyter notebook</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#package-manager-and-virtual-environment">Package manager and virtual environment</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#informal-introduction-to-python-using-python-as-calculator">Informal introduction to python: using python as calculator</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-python-inside-jupyter-notebook">Using Python inside Jupyter notebook</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-python-inside-jupyter-notebook">Using Python inside Jupyter notebook</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#python-strings">Python Strings</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#python-lists">Python lists</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#check-python-datatypes">Check python datatypes</a></li>
 </ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-built-in-functions">Python built in functions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#in-the-upcoming-tutorials-we-will-deep-dive-into-specific-concepts-of-python-hold-on-your-breath-and-start-your-journey">In the upcoming tutorials, we will deep dive into specific concepts of Python, hold on your breath and start your journey</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
   </nav></div>
 
 </div></div>

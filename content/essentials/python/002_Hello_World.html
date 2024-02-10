@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Content with notebooks &#8212; Mindmesh</title>
+    <title>Python Hello, World &#8212; Mindmesh</title>
   
   
   
@@ -63,13 +63,13 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'content/essentials/statistics/statistics';</script>
-    <link rel="canonical" href="https://anukchat.github.io/content/essentials/statistics/statistics.html" />
+    <script>DOCUMENTATION_OPTIONS.pagename = 'content/essentials/python/002_Hello_World';</script>
+    <link rel="canonical" href="https://anukchat.github.io/content/essentials/python/002_Hello_World.html" />
     <link rel="shortcut icon" href="../../../_static/mesh-smallest.png"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Notebooks with MyST Markdown" href="../../tools/tools-for-ml.html" />
-    <link rel="prev" title="Content with notebooks" href="../intro_statistics.html" />
+    <link rel="next" title="Python Keywords and Identifiers" href="003_Python_Keywords_and_Identifiers.html" />
+    <link rel="prev" title="Keyboard Shortcuts Practice" href="001_Jupyter_Keyboard_Shortcuts_Practice.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -159,14 +159,14 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Essentials</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../python/getting_started.html">Getting Started with Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started with Python</a></li>
 
 <li class="toctree-l1 has-children"><a class="reference internal" href="../intro_mathematics.html">Mathematics</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../mathematics/1_linear_algebra.html">Linear algebra</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="../intro_statistics.html">Statistics</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Content with notebooks</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../intro_statistics.html">Statistics</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../statistics/statistics.html">Content with notebooks</a></li>
 </ul>
 </li>
 </ul>
@@ -261,7 +261,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://mybinder.org/v2/gh/anukchat/anukchat.github.io/main?urlpath=tree/content/essentials/statistics/statistics.ipynb" target="_blank"
+      <li><a href="https://mybinder.org/v2/gh/anukchat/anukchat.github.io/main?urlpath=tree/content/essentials/python/002_Hello_World.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch onBinder"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -279,7 +279,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://colab.research.google.com/github/anukchat/anukchat.github.io/blob/main/content/essentials/statistics/statistics.ipynb" target="_blank"
+      <li><a href="https://colab.research.google.com/github/anukchat/anukchat.github.io/blob/main/content/essentials/python/002_Hello_World.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch onColab"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -325,7 +325,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../../../_sources/content/essentials/statistics/statistics.ipynb" target="_blank"
+      <li><a href="../../../_sources/content/essentials/python/002_Hello_World.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -409,7 +409,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Content with notebooks</h1>
+    <h1>Python Hello, World</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -419,9 +419,18 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#markdown-notebooks">Markdown + notebooks</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#myst-markdown">MyST markdown</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#code-blocks-and-outputs">Code blocks and outputs</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#writing-the-hello-world-program">Writing the “Hello, World!” Program</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lets-break-down-the-different-components-of-the-code">Let’s break down the different components of the code.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-the-hello-world-program">Running the “Hello, World!” Program</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-print-blank-lines">How to print blank lines</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example">Example:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#print-end-command">Print end command</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-1">Example 1:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-2">Example 2:</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -433,73 +442,229 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section id="content-with-notebooks">
-<h1>Content with notebooks<a class="headerlink" href="#content-with-notebooks" title="Permalink to this heading">#</a></h1>
-<p>You can also create content with Jupyter Notebooks. This means that you can include
-code blocks and their outputs in your book.</p>
-<section id="markdown-notebooks">
-<h2>Markdown + notebooks<a class="headerlink" href="#markdown-notebooks" title="Permalink to this heading">#</a></h2>
-<p>As it is markdown, you can embed images, HTML, etc into your posts!</p>
-<p><img alt="" src="https://myst-parser.readthedocs.io/en/latest/_static/logo-wide.svg" /></p>
-<p>You can also $add_{math}$ and</p>
-<p>$$
-math^{blocks}
-$$</p>
+  <section id="python-hello-world">
+<h1>Python Hello, World<a class="headerlink" href="#python-hello-world" title="Permalink to this heading">#</a></h1>
+<p><strong>Python</strong> is easy to learn and code and can be execute with python <strong>interpreter</strong>. We can also use Python <strong>interactive shell</strong> to test python code immediately. A simple hello world example is given below. Write below code in a file and save with <strong>.py</strong> extension. Python source file has <strong>.pyextension</strong>.</p>
+<section id="writing-the-hello-world-program">
+<h2>Writing the “Hello, World!” Program<a class="headerlink" href="#writing-the-hello-world-program" title="Permalink to this heading">#</a></h2>
+<p>Now that we have Python up and running, we can write our first Python program.</p>
+<p>Let’s create a very simple program called <strong><code class="docutils literal notranslate"><span class="pre">Hello</span> <span class="pre">World</span></code></strong>. A “<strong>Hello, World!</strong>” is a simple program that outputs <strong><code class="docutils literal notranslate"><span class="pre">Hello,</span> <span class="pre">World!</span></code></strong> on the screen. Since it’s a very simple program, it’s often used to introduce a new programming language to beginners.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello, World!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Congratulations! You just wrote your first program in Python.</p>
+<p>As you can see, this was a pretty easy task. This is the beauty of Python programming language.</p>
+</section>
+<section id="lets-break-down-the-different-components-of-the-code">
+<h2>Let’s break down the different components of the code.<a class="headerlink" href="#lets-break-down-the-different-components-of-the-code" title="Permalink to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">print()</span></code></strong> is a function that tells the computer to perform an action. We know it is a function because it uses parentheses. print() tells Python to display or output whatever we put in the parentheses. By default, this will output to the current terminal window.</p></li>
+<li><p>Some functions, like the <strong><a class="reference external" href="https://github.com/milaan9/04_Python_Functions/blob/main/002_Python_Functions_Built_in/051_Python_print%28%29.ipynb">print()</a></strong> function, are <strong><a class="reference external" href="https://github.com/milaan9/04_Python_Functions/tree/main/002_Python_Functions_Built_in">built-in functions</a></strong> included in Python by default. These built-in functions are always available for us to use in programs that we create. We can also define <strong>our own functions</strong> that we construct ourselves through other elements.</p></li>
+<li><p>Inside the parentheses of the <strong><code class="docutils literal notranslate"><span class="pre">print()</span></code></strong> function is a sequence of characters — <strong>Hello, World!</strong> — that is enclosed in quotation marks <strong><code class="docutils literal notranslate"><span class="pre">'</span></code></strong> or <strong><code class="docutils literal notranslate"><span class="pre">&quot;</span></code></strong>. Any characters that are inside of quotation marks are called a <strong>string</strong>.</p></li>
+<li><p>Once we are done writing our program, <strong>save</strong> the file and we can exit notepad.</p></li>
+</ol>
+<p>Once you exit out of notpad you’ll return to your shell or cmd.</p>
+</section>
+<section id="running-the-hello-world-program">
+<h2>Running the “Hello, World!” Program<a class="headerlink" href="#running-the-hello-world-program" title="Permalink to this heading">#</a></h2>
+<p>The hello.py program that you just created will cause your terminal to produce the following output:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>Hello, World!
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello, World!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hello, World!
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Congratulations!</strong> You have written the “Hello, World!” program in <strong>Python 3</strong>.
+Since the program ran, you can now confirm that <strong>Python 3</strong> is properly installed and that the program is <strong>syntactically correct</strong>.</p>
+</section>
+<section id="how-to-print-blank-lines">
+<h2>How to print blank lines<a class="headerlink" href="#how-to-print-blank-lines" title="Permalink to this heading">#</a></h2>
+<p>Sometimes you need to print one blank line in your Python program. Following are an example to perform this task.</p>
+<section id="example">
+<h3>Example:<a class="headerlink" href="#example" title="Permalink to this heading">#</a></h3>
+<p>Let us print 8 blank lines. You can type:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="go">&gt;&gt;&gt;print (9 * &quot;\n&quot;)</span>
+</pre></div>
+</div>
 <p>or</p>
-<p>$$
-\begin{aligned}
-\mbox{mean} la_{tex} \ \
-math blocks
-\end{aligned}
-$$</p>
-<p>But make sure you $Escape $your $dollar signs $you want to keep!</p>
-</section>
-<section id="myst-markdown">
-<h2>MyST markdown<a class="headerlink" href="#myst-markdown" title="Permalink to this heading">#</a></h2>
-<p>MyST markdown works in Jupyter Notebooks as well. For more information about MyST markdown, check
-out <a class="reference external" href="https://jupyterbook.org/content/myst.html">the MyST guide in Jupyter Book</a>,
-or see <a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/">the MyST markdown documentation</a>.</p>
-</section>
-<section id="code-blocks-and-outputs">
-<h2>Code blocks and outputs<a class="headerlink" href="#code-blocks-and-outputs" title="Permalink to this heading">#</a></h2>
-<p>Jupyter Book will also embed your code blocks and output in your book.
-For example, here’s some sample Matplotlib code:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="go">&gt;&gt;&gt;print (&quot;\n\n\n\n\n\n\n\n\n&quot;)</span>
+</pre></div>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">rcParams</span><span class="p">,</span> <span class="n">cycler</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ion</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;Hello World!&quot;</span><span class="p">)</span>
+<span class="nb">print</span> <span class="p">(</span><span class="mi">9</span> <span class="o">*</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;Hello World!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hello World!
+
+
+
+
+
+
+
+
+
+
+Hello World!
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Fixing random state for reproducibility</span>
-<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">19680801</span><span class="p">)</span>
-
-<span class="n">N</span> <span class="o">=</span> <span class="mi">10</span>
-<span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">logspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span> <span class="o">+</span> <span class="n">ii</span> <span class="k">for</span> <span class="n">ii</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">)]</span>
-<span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="o">.</span><span class="n">T</span>
-<span class="n">cmap</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">coolwarm</span>
-<span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;axes.prop_cycle&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">cycler</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="n">cmap</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">N</span><span class="p">)))</span>
-
-
-<span class="kn">from</span> <span class="nn">matplotlib.lines</span> <span class="kn">import</span> <span class="n">Line2D</span>
-<span class="n">custom_lines</span> <span class="o">=</span> <span class="p">[</span><span class="n">Line2D</span><span class="p">([</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="n">cmap</span><span class="p">(</span><span class="mf">0.</span><span class="p">),</span> <span class="n">lw</span><span class="o">=</span><span class="mi">4</span><span class="p">),</span>
-                <span class="n">Line2D</span><span class="p">([</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="n">cmap</span><span class="p">(</span><span class="mf">.5</span><span class="p">),</span> <span class="n">lw</span><span class="o">=</span><span class="mi">4</span><span class="p">),</span>
-                <span class="n">Line2D</span><span class="p">([</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="n">cmap</span><span class="p">(</span><span class="mf">1.</span><span class="p">),</span> <span class="n">lw</span><span class="o">=</span><span class="mi">4</span><span class="p">)]</span>
-
-<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
-<span class="n">lines</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">custom_lines</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;Cold&#39;</span><span class="p">,</span> <span class="s1">&#39;Medium&#39;</span><span class="p">,</span> <span class="s1">&#39;Hot&#39;</span><span class="p">]);</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;Jan</span><span class="se">\n</span><span class="s2">Feb</span><span class="se">\n</span><span class="s2">Mar</span><span class="se">\n</span><span class="s2">Apr</span><span class="se">\n</span><span class="s2">May</span><span class="se">\n</span><span class="s2">Jun</span><span class="se">\n</span><span class="s2">Jul</span><span class="se">\n</span><span class="s2">Aug</span><span class="se">\n</span><span class="s2">Sep</span><span class="se">\n</span><span class="s2">Oct</span><span class="se">\n</span><span class="s2">Nov</span><span class="se">\n</span><span class="s2">Dec&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Jan
+Feb
+Mar
+Apr
+May
+Jun
+Jul
+Aug
+Sep
+Oct
+Nov
+Dec
 </pre></div>
 </div>
 </div>
 </div>
-<p>There is a lot more that you can do with outputs (such as including interactive outputs)
-with your book. For more information about this, see <a class="reference external" href="https://jupyterbook.org">the Jupyter Book documentation</a></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;I want </span><span class="se">\\</span><span class="s2">n to be printed.&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;I&#39;m very *happy*&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>I want \n to be printed.
+I&#39;m very *happy*
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;Hello</span><span class="se">\t</span><span class="s2">World!&quot;</span><span class="p">)</span> <span class="c1"># \t is equal to 4 spaces</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hello	World!
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">Routine:</span>
+<span class="se">\t</span><span class="s2">- Eat</span>
+<span class="se">\t</span><span class="s2">- Study</span>
+<span class="se">\t</span><span class="s2">- Sleep</span><span class="se">\n\t</span><span class="s2">- Repeat</span>
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Routine:
+	- Eat
+	- Study
+	- Sleep
+	- Repeat
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="print-end-command">
+<h2>Print end command<a class="headerlink" href="#print-end-command" title="Permalink to this heading">#</a></h2>
+<p>By default, python’s <strong><code class="docutils literal notranslate"><span class="pre">print()</span></code></strong> function ends with a newline. This function comes with a parameter called <strong><code class="docutils literal notranslate"><span class="pre">end</span></code></strong>. The default value of this parameter is <strong><code class="docutils literal notranslate"><span class="pre">\n</span></code></strong>, i.e., the new line character. You can end a print statement with any character or string using this parameter. This is available in only in <strong>Python 3+</strong></p>
+<section id="example-1">
+<h3>Example 1:<a class="headerlink" href="#example-1" title="Permalink to this heading">#</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="go">&gt;&gt;&gt;print (&quot;Welcome to&quot;, end = &#39; &#39;) </span>
+<span class="go">&gt;&gt;&gt;print (&quot;Python&quot;, end = &#39;!&#39;)`</span>
+
+<span class="go">Welcome to Python!</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;Welcome to&quot;</span><span class="p">,</span> <span class="n">end</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span><span class="p">)</span> 
+<span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;Python&quot;</span><span class="p">,</span> <span class="n">end</span> <span class="o">=</span> <span class="s1">&#39;!&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Welcome to Python!
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="example-2">
+<h3>Example 2:<a class="headerlink" href="#example-2" title="Permalink to this heading">#</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="go">&gt;&gt;&gt;print(&quot;Python&quot; , end = &#39;@&#39;)</span>
+
+<span class="go">Python@</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Python &quot;</span> <span class="p">,</span> <span class="n">end</span> <span class="o">=</span> <span class="s1">&#39;@&#39;</span><span class="p">)</span> <span class="c1"># ends the output with &#39;@&#39;.</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Python @
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;_M&#39;</span><span class="o">*</span><span class="mi">9</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>_M_M_M_M_M_M_M_M_M
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello &quot;</span> <span class="o">*</span> <span class="mi">6</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hello Hello Hello Hello Hello Hello 
+</pre></div>
+</div>
+</div>
+</div>
+</section>
 </section>
 </section>
 
@@ -516,7 +681,7 @@ with your book. For more information about this, see <a class="reference externa
         },
         kernelOptions: {
             name: "python3",
-            path: "./content/essentials/statistics"
+            path: "./content/essentials/python"
         },
         predefinedOutput: true
     }
@@ -534,20 +699,20 @@ with your book. For more information about this, see <a class="reference externa
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../intro_statistics.html"
+       href="001_Jupyter_Keyboard_Shortcuts_Practice.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Content with notebooks</p>
+        <p class="prev-next-title">Keyboard Shortcuts Practice</p>
       </div>
     </a>
     <a class="right-next"
-       href="../../tools/tools-for-ml.html"
+       href="003_Python_Keywords_and_Identifiers.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Notebooks with MyST Markdown</p>
+        <p class="prev-next-title">Python Keywords and Identifiers</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -566,9 +731,18 @@ with your book. For more information about this, see <a class="reference externa
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#markdown-notebooks">Markdown + notebooks</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#myst-markdown">MyST markdown</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#code-blocks-and-outputs">Code blocks and outputs</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#writing-the-hello-world-program">Writing the “Hello, World!” Program</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lets-break-down-the-different-components-of-the-code">Let’s break down the different components of the code.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-the-hello-world-program">Running the “Hello, World!” Program</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-print-blank-lines">How to print blank lines</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example">Example:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#print-end-command">Print end command</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-1">Example 1:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-2">Example 2:</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
