@@ -1,0 +1,1012 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Python Numbers, Type Conversion and Mathematics &#8212; Mindmesh</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../../../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="../../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../../../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+
+    <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
+    <script src="../../../../_static/jquery.js"></script>
+    <script src="../../../../_static/underscore.js"></script>
+    <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../../../_static/doctools.js"></script>
+    <script src="../../../../_static/clipboard.min.js"></script>
+    <script src="../../../../_static/copybutton.js"></script>
+    <script src="../../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../../_static/togglebutton.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../../../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'content/essentials/python/datatypes/001_Python_Numbers';</script>
+    <link rel="canonical" href="https://anukchat.github.io/content/essentials/python/datatypes/001_Python_Numbers.html" />
+    <link rel="shortcut icon" href="../../../../_static/mesh-smallest.png"/>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="Python Strings" href="002_Python_String.html" />
+    <link rel="prev" title="Python Data Types" href="datatypes_toc.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../../../intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Mindmesh</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Essentials</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../../intro_python.html">Python</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 has-children"><a class="reference internal" href="../introduction/intro_toc.html">Introduction</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../introduction/002_Hello_World.html">Hello World</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../introduction/003_Python_Keywords_and_Identifiers.html">Keywords and identifiers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../introduction/004_Python_Statement_Indentation_Comments.html">Statement indentation &amp; comments</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../introduction/005_Python_Variables_%26_Constants.html">Variables &amp; constants</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../introduction/006_Python_Literals.html">Literals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../introduction/007_Python_Data_Types.html">Datatypes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../introduction/008_Python_Type_Conversion.html">Type conversion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../introduction/009_Python_Input_Output_Import.html">I/O &amp; imports</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../introduction/010_Python_Operators.html">Operators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../introduction/011_Python_Namespace_and_Scope.html">Namespace &amp; scope</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../introduction/Interpreter_Vs_Compiler.html">Interpreter vs compiler</a></li>
+</ul>
+</li>
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="datatypes_toc.html">Datatypes</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">Numbers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="002_Python_String.html">String</a></li>
+<li class="toctree-l3"><a class="reference internal" href="003_Python_List.html">List</a></li>
+<li class="toctree-l3"><a class="reference internal" href="004_Python_Tuple.html">Tuple</a></li>
+<li class="toctree-l3"><a class="reference internal" href="005_Python_Dictionary.html">Dictionary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="006_Python_Sets.html">Sets</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Python_List_Comprehension.html">List comprehension</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../intro_mathematics.html">Mathematics</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../mathematics/1_linear_algebra.html">Linear algebra</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../intro_statistics.html">Statistics</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../statistics/statistics.html">Content with notebooks</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Tools</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../tools/tools-for-ml.html">Tools for dataScience and ML</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../tools/tools-for-nn.html">Tools for designing neural networks</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../tools/tools-for-llms.html">Tools for LLMs and multimodels</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../tools/langchain/intro.html">Langchain introduction and setup</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../tools/langchain/lcel.html">Langchain expression language</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tools/langchain/langchain-modules.html">Langchain modules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tools/langchain/langserve.html">LangServe</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tools/langchain/langsmith.html">LangSmith</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tools/langchain/langgraph.html">LangGraph</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../tools/hf/intro.html">HuggingFace introduction and setup</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Concepts</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../concepts/mymarkdown.html">Concepts at glance</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../concepts/markdown-notebooks.html">Sample machine learning</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Core engineering</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../core/markdown.html">Introduction to core</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../core/mymarkdown.html">End to 2nd ML usecase</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Real world use cases</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../real-world/markdown.html">Understand how real world ML works</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../real-world/mymarkdown.html">Real world examples</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/anukchat/anukchat.github.io/main?urlpath=tree/content/essentials/python/datatypes/001_Python_Numbers.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onBinder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../../../../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/anukchat/anukchat.github.io/blob/main/content/essentials/python/datatypes/001_Python_Numbers.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../../../../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+<a href="https://github.com/anukchat/anukchat.github.io" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Source repository"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../../_sources/content/essentials/python/datatypes/001_Python_Numbers.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Python Numbers, Type Conversion and Mathematics</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#number-data-type-in-python">Number Data Type in Python</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#type-conversion">Type Conversion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-decimal">Python Decimal</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#when-to-use-decimal-instead-of-float">When to use Decimal instead of float?</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-fractions">Python Fractions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-mathematics">Python Mathematics</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <p><small><small><i>
+All the IPython Notebooks in <strong>Python Datatypes</strong> lecture series by <strong><a class="reference external" href="https://www.linkedin.com/in/milaanparmar/">Dr. Milaan Parmar</a></strong> are available &#64; <strong><a class="reference external" href="https://github.com/milaan9/02_Python_Datatypes">GitHub</a></strong>
+</i></small></small></p>
+<section class="tex2jax_ignore mathjax_ignore" id="python-numbers-type-conversion-and-mathematics">
+<h1>Python Numbers, Type Conversion and Mathematics<a class="headerlink" href="#python-numbers-type-conversion-and-mathematics" title="Permalink to this heading">#</a></h1>
+<p>In this class, you’ll learn about the different numbers used in Python, how to convert from one data type to the other, and the mathematical operations supported in Python.</p>
+<section id="number-data-type-in-python">
+<h2>Number Data Type in Python<a class="headerlink" href="#number-data-type-in-python" title="Permalink to this heading">#</a></h2>
+<p>Integers, floating point numbers and complex numbers fall under Python numbers category. They are defined as <strong><code class="docutils literal notranslate"><span class="pre">int</span></code></strong>, <strong><code class="docutils literal notranslate"><span class="pre">float</span></code></strong> and <strong><code class="docutils literal notranslate"><span class="pre">complex</span></code></strong> classes in Python.</p>
+<p>Integers and floating points are separated by the presence or absence of a decimal point. For instance, 5 is an integer whereas 5.0 is a floating-point number.</p>
+<p>Complex numbers are written in the form, <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">+</span> <span class="pre">yj</span></code>, where <code class="docutils literal notranslate"><span class="pre">x</span></code> is the real part and <code class="docutils literal notranslate"><span class="pre">y</span></code> is the imaginary part.</p>
+<p>We can use the <strong><a class="reference external" href="https://github.com/milaan9/04_Python_Functions/blob/main/002_Python_Functions_Built_in/064_Python_type%28%29.ipynb">type()</a></strong> function to know which class a variable or a value belongs to. Similarly, the <strong><a class="reference external" href="https://github.com/milaan9/04_Python_Functions/blob/main/002_Python_Functions_Built_in/034_Python_isinstance%28%29.ipynb">isinstance()</a></strong> function is used to check if an object belongs to a particular class.</p>
+<p>Let’s look at an example:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">6</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">a</span><span class="p">))</span> <span class="c1"># type integer</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="mf">5.0</span><span class="p">))</span>  <span class="c1"># type float</span>
+
+<span class="n">c</span> <span class="o">=</span> <span class="mi">6</span> <span class="o">+</span> <span class="mi">3</span><span class="n">j</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">c</span> <span class="o">+</span> <span class="mi">3</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">isinstance</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="nb">complex</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;int&#39;&gt;
+&lt;class &#39;float&#39;&gt;
+(9+3j)
+True
+</pre></div>
+</div>
+</div>
+</div>
+<p>While integers can be of any length, it is only limited by the memory available.</p>
+<p>The numbers we deal with every day are of the decimal (base 10) number system. But computer programmers (generally embedded programmers) need to work with binary (base 2), hexadecimal (base 16) and octal (base 8) number systems.</p>
+<p>In Python, we can represent these numbers by appropriately placing a prefix before that number. The following table lists these prefixes.</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Number System</p></th>
+<th class="head text-left"><p>Prefix</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p><strong><code class="docutils literal notranslate"><span class="pre">Binary</span></code></strong></p></td>
+<td class="text-left"><p>‘0b’ or ‘0B’</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong><code class="docutils literal notranslate"><span class="pre">Octal</span></code></strong></p></td>
+<td class="text-left"><p>‘0o’ or ‘0O’</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong><code class="docutils literal notranslate"><span class="pre">Hexadecimal</span></code></strong></p></td>
+<td class="text-left"><p>‘0x’ or ‘0X’</p></td>
+</tr>
+</tbody>
+</table>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example 1:</span>
+
+<span class="c1"># Output: 1</span>
+<span class="nb">print</span><span class="p">(</span><span class="mb">0b0001</span><span class="p">)</span>  <span class="c1"># 0001 in binary is 1 in decimal and i have use prefix &#39;0b&#39;</span>
+
+<span class="c1"># Output: 10  </span>
+<span class="nb">print</span><span class="p">(</span><span class="mo">0o12</span><span class="p">)</span>    <span class="c1"># 12 in octadecimal is 10 in decimal and i have use prefix &#39;0o&#39;</span>
+
+<span class="c1"># Output: 10</span>
+<span class="nb">print</span><span class="p">(</span><span class="mh">0x000A</span><span class="p">)</span>  <span class="c1"># 000A in hexadecimal is 10 in decimal and i have use prefix &#39;0x&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
+10
+10
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example 2:</span>
+
+<span class="c1"># Output: 107</span>
+<span class="nb">print</span><span class="p">(</span><span class="mb">0b1101011</span><span class="p">)</span>
+
+<span class="c1"># Output: 253 (251 + 2)</span>
+<span class="nb">print</span><span class="p">(</span><span class="mh">0xFB</span> <span class="o">+</span> <span class="mb">0b10</span><span class="p">)</span> <span class="c1"># adding Hex numbers with binary numbers.</span>
+
+<span class="c1"># Output: 13</span>
+<span class="nb">print</span><span class="p">(</span><span class="mo">0o15</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>107
+253
+13
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="type-conversion">
+<h2>Type Conversion<a class="headerlink" href="#type-conversion" title="Permalink to this heading">#</a></h2>
+<p>We can convert one type of number into another. This is also known as coercion.</p>
+<p>Operations like addition, subtraction coerce integer to float implicitly (automatically), if one of the operands is float.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span> <span class="o">+</span> <span class="mf">3.0</span>  <span class="c1"># adding integer number &#39;1&#39; and a float number &#39;3.0&#39;. The answer will be flaot number &#39;4.0&#39;.</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4.0
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can see above that 1 (integer) is coerced into 1.0 (float) for addition and the result is also a floating point number.</p>
+<p>We can also use built-in functions like <strong><code class="docutils literal notranslate"><span class="pre">int</span></code></strong>, <strong><code class="docutils literal notranslate"><span class="pre">float</span></code></strong> and <strong><code class="docutils literal notranslate"><span class="pre">complex</span></code></strong> to convert between types explicitly. These functions can even convert from <strong><a class="reference external" href="https://github.com/milaan9/02_Python_Datatypes/blob/main/002_Python_String.ipynb">strings</a></strong>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">int</span><span class="p">(</span><span class="mf">6.3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">int</span><span class="p">(</span><span class="o">-</span><span class="mf">2.7</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-2
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">float</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>9.0
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">1234567890123456789</span>
+<span class="nb">print</span> <span class="p">(</span><span class="n">a</span><span class="p">)</span>
+
+<span class="n">b</span> <span class="o">=</span> <span class="mf">0.1234567890123456789</span> <span class="c1"># total of only 17 numbers after decimal can be printed.</span>
+<span class="nb">print</span> <span class="p">(</span><span class="n">b</span><span class="p">)</span>
+
+<span class="n">c</span> <span class="o">=</span> <span class="mi">1</span><span class="o">+</span><span class="mi">2</span><span class="n">j</span>
+<span class="nb">print</span> <span class="p">(</span><span class="n">c</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1234567890123456789
+0.12345678901234568
+(1+2j)
+</pre></div>
+</div>
+</div>
+</div>
+<p>When converting from float to integer, the number gets truncated (decimal parts are removed).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">complex</span><span class="p">(</span><span class="s1">&#39;3+6j&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(3+6j)
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="python-decimal">
+<h2>Python Decimal<a class="headerlink" href="#python-decimal" title="Permalink to this heading">#</a></h2>
+<p>Python built-in class float performs some calculations that might amaze us. We all know that the sum of 1.1 and 2.2 is 3.3, but Python seems to disagree.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="mf">1.1</span> <span class="o">+</span> <span class="mf">2.2</span><span class="p">)</span> <span class="o">==</span> <span class="mf">3.3</span>  <span class="c1"># The answer should be True but...</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>What is going on?</strong></p>
+<p>It turns out that floating-point numbers are implemented in computer hardware as binary fractions as the computer only understands binary (0 and 1). Due to this reason, most of the decimal fractions we know, cannot be accurately stored in our computer.</p>
+<p>Let’s take an example. We cannot represent the fraction 1/3 as a decimal number. This will give 0.33333333… which is infinitely long, and we can only approximate it.</p>
+<p>It turns out that the decimal fraction 0.1 will result in an infinitely long binary fraction of 0.000110011001100110011… and our computer only stores a finite number of it.</p>
+<p>This will only approximate 0.1 but never be equal. Hence, it is the limitation of our computer hardware and not an error in Python.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mf">1.1</span> <span class="o">+</span> <span class="mf">2.2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.3000000000000003
+</pre></div>
+</div>
+</div>
+</div>
+<p>To overcome this issue, we can use the decimal module that comes with Python. While floating-point numbers have precision up to 15 decimal places, the decimal module has user-settable precision.</p>
+<p>Let’s see the difference:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">decimal</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="mf">0.1</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">decimal</span><span class="o">.</span><span class="n">Decimal</span><span class="p">(</span><span class="mf">0.1</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.1
+0.1000000000000000055511151231257827021181583404541015625
+</pre></div>
+</div>
+</div>
+</div>
+<p>This module is used when we want to carry out decimal calculations as we learned in school.</p>
+<p>It also preserves significance. We know 25.50 kg is more accurate than 25.5 kg as it has two significant decimal places compared to one.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">decimal</span> <span class="kn">import</span> <span class="n">Decimal</span> <span class="k">as</span> <span class="n">D</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">D</span><span class="p">(</span><span class="s1">&#39;1.1&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="n">D</span><span class="p">(</span><span class="s1">&#39;2.2&#39;</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">D</span><span class="p">(</span><span class="s1">&#39;1.2&#39;</span><span class="p">)</span> <span class="o">*</span> <span class="n">D</span><span class="p">(</span><span class="s1">&#39;2.50&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.3
+3.000
+</pre></div>
+</div>
+</div>
+</div>
+<p>Notice the trailing zeroes in the above example.</p>
+<p>We might ask, why not implement <strong><code class="docutils literal notranslate"><span class="pre">Decimal</span></code></strong> every time, instead of float? The main reason is efficiency. Floating point operations are carried out must faster than <strong><code class="docutils literal notranslate"><span class="pre">Decimal</span></code></strong> operations.</p>
+<section id="when-to-use-decimal-instead-of-float">
+<h3>When to use Decimal instead of float?<a class="headerlink" href="#when-to-use-decimal-instead-of-float" title="Permalink to this heading">#</a></h3>
+<p>We generally use Decimal in the following cases.</p>
+<ol class="arabic simple">
+<li><p>When we are making financial applications that need exact decimal representation.</p></li>
+<li><p>When we want to control the level of precision required.</p></li>
+<li><p>When we want to implement the notion of significant decimal places.</p></li>
+</ol>
+</section>
+</section>
+<section id="python-fractions">
+<h2>Python Fractions<a class="headerlink" href="#python-fractions" title="Permalink to this heading">#</a></h2>
+<p>Python provides operations involving fractional numbers through its <strong><code class="docutils literal notranslate"><span class="pre">fractions</span></code></strong> module.</p>
+<p>A fraction has a numerator and a denominator, both of which are integers. This module has support for rational number arithmetic.</p>
+<p>We can create Fraction objects in various ways. Let’s have a look at them.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">fractions</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">fractions</span><span class="o">.</span><span class="n">Fraction</span><span class="p">(</span><span class="mf">1.5</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">fractions</span><span class="o">.</span><span class="n">Fraction</span><span class="p">(</span><span class="mi">9</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">fractions</span><span class="o">.</span><span class="n">Fraction</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3/2
+9
+1/6
+</pre></div>
+</div>
+</div>
+</div>
+<p>While creating <strong><code class="docutils literal notranslate"><span class="pre">Fraction</span></code></strong> from <strong><code class="docutils literal notranslate"><span class="pre">float</span></code></strong>, we might get some unusual results. This is due to the imperfect binary floating point number representation as discussed in the previous section.</p>
+<p>Fortunately, <strong><code class="docutils literal notranslate"><span class="pre">Fraction</span></code></strong> allows us to instantiate with string as well. This is the preferred option when using decimal numbers.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">fractions</span>
+
+<span class="c1"># As float</span>
+<span class="c1"># Output: 2476979795053773/2251799813685248</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">fractions</span><span class="o">.</span><span class="n">Fraction</span><span class="p">(</span><span class="mf">1.1</span><span class="p">))</span>  <span class="c1"># 1.1 is a number</span>
+
+<span class="c1"># As string</span>
+<span class="c1"># Output: 11/10</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">fractions</span><span class="o">.</span><span class="n">Fraction</span><span class="p">(</span><span class="s1">&#39;1.1&#39;</span><span class="p">))</span>  <span class="c1">#&#39;1.1&#39; is a string and not a number</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2476979795053773/2251799813685248
+11/10
+</pre></div>
+</div>
+</div>
+</div>
+<p>This data type supports all basic operations. Here are a few examples.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">fractions</span> <span class="kn">import</span> <span class="n">Fraction</span> <span class="k">as</span> <span class="n">F</span>  <span class="c1"># I changed my Fraction module name to &quot;F&quot;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">F</span><span class="p">(</span><span class="mf">1.3</span><span class="p">)</span> <span class="o">+</span> <span class="n">F</span><span class="p">(</span><span class="mf">1.3</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">F</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span> <span class="o">+</span> <span class="n">F</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="mi">1</span> <span class="o">/</span> <span class="n">F</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">F</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">F</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5854679515581645/2251799813685248
+2/3
+6/5
+False
+True
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="python-mathematics">
+<h2>Python Mathematics<a class="headerlink" href="#python-mathematics" title="Permalink to this heading">#</a></h2>
+<p>Python offers modules like <strong><code class="docutils literal notranslate"><span class="pre">math</span></code></strong> and <strong><code class="docutils literal notranslate"><span class="pre">random</span></code></strong> to carry out different mathematics like trigonometry, logarithms, probability and statistics, etc.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">))</span> <span class="c1"># cos(pi) = -1</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="mi">1000</span><span class="p">))</span> <span class="c1"># log10(1000) = 3</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">sinh</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">factorial</span><span class="p">(</span><span class="mi">6</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.141592653589793
+-1.0
+22026.465794806718
+3.0
+1.1752011936438014
+720
+</pre></div>
+</div>
+</div>
+</div>
+<p>Here is the full list of functions and attributes available in the <strong><a class="reference external" href="https://github.com/milaan9/04_Python_Functions/blob/main/009_Python_Function_math_Module.ipynb.ipynb">Python math module</a></strong>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">randrange</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">))</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">,</span> <span class="s1">&#39;e&#39;</span><span class="p">]</span> <span class="c1"># x is a list class of variable and it has 5 elements.</span>
+
+<span class="c1"># Get random choice</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+
+<span class="c1"># Shuffle x</span>
+<span class="n">random</span><span class="o">.</span><span class="n">shuffle</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+<span class="c1"># Print the shuffled x</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+<span class="c1"># Print random element</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>15
+b
+[&#39;d&#39;, &#39;c&#39;, &#39;e&#39;, &#39;a&#39;, &#39;b&#39;]
+0.8036360430009386
+</pre></div>
+</div>
+</div>
+</div>
+<p>When we run the above program we get the output as follows. (Values may be different due to the random behavior)</p>
+<p>Here is the full list of functions and attributes available in the <strong><a class="reference external" href="https://github.com/milaan9/04_Python_Functions/blob/main/008_Python_Function_random_Module.ipynb">Python random module</a></strong>.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./content/essentials/python/datatypes"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="datatypes_toc.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Python Data Types</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="002_Python_String.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Python Strings</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#number-data-type-in-python">Number Data Type in Python</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#type-conversion">Type Conversion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-decimal">Python Decimal</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#when-to-use-decimal-instead-of-float">When to use Decimal instead of float?</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-fractions">Python Fractions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-mathematics">Python Mathematics</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Anukool Chaturvedi
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

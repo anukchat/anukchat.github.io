@@ -1,0 +1,1546 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Python Dictionary &#8212; Mindmesh</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../../../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="../../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../../../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+
+    <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
+    <script src="../../../../_static/jquery.js"></script>
+    <script src="../../../../_static/underscore.js"></script>
+    <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../../../_static/doctools.js"></script>
+    <script src="../../../../_static/clipboard.min.js"></script>
+    <script src="../../../../_static/copybutton.js"></script>
+    <script src="../../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../../_static/togglebutton.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../../../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'content/essentials/python/datatypes/005_Python_Dictionary';</script>
+    <link rel="canonical" href="https://anukchat.github.io/content/essentials/python/datatypes/005_Python_Dictionary.html" />
+    <link rel="shortcut icon" href="../../../../_static/mesh-smallest.png"/>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="Python Sets" href="006_Python_Sets.html" />
+    <link rel="prev" title="Python Tuple" href="004_Python_Tuple.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../../../intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Mindmesh</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Essentials</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../../intro_python.html">Python</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 has-children"><a class="reference internal" href="../introduction/intro_toc.html">Introduction</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../introduction/002_Hello_World.html">Hello World</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../introduction/003_Python_Keywords_and_Identifiers.html">Keywords and identifiers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../introduction/004_Python_Statement_Indentation_Comments.html">Statement indentation &amp; comments</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../introduction/005_Python_Variables_%26_Constants.html">Variables &amp; constants</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../introduction/006_Python_Literals.html">Literals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../introduction/007_Python_Data_Types.html">Datatypes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../introduction/008_Python_Type_Conversion.html">Type conversion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../introduction/009_Python_Input_Output_Import.html">I/O &amp; imports</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../introduction/010_Python_Operators.html">Operators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../introduction/011_Python_Namespace_and_Scope.html">Namespace &amp; scope</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../introduction/Interpreter_Vs_Compiler.html">Interpreter vs compiler</a></li>
+</ul>
+</li>
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="datatypes_toc.html">Datatypes</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="001_Python_Numbers.html">Numbers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="002_Python_String.html">String</a></li>
+<li class="toctree-l3"><a class="reference internal" href="003_Python_List.html">List</a></li>
+<li class="toctree-l3"><a class="reference internal" href="004_Python_Tuple.html">Tuple</a></li>
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">Dictionary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="006_Python_Sets.html">Sets</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Python_List_Comprehension.html">List comprehension</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../intro_mathematics.html">Mathematics</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../mathematics/1_linear_algebra.html">Linear algebra</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../intro_statistics.html">Statistics</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../statistics/statistics.html">Content with notebooks</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Tools</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../tools/tools-for-ml.html">Tools for dataScience and ML</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../tools/tools-for-nn.html">Tools for designing neural networks</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../tools/tools-for-llms.html">Tools for LLMs and multimodels</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../tools/langchain/intro.html">Langchain introduction and setup</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../tools/langchain/lcel.html">Langchain expression language</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tools/langchain/langchain-modules.html">Langchain modules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tools/langchain/langserve.html">LangServe</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tools/langchain/langsmith.html">LangSmith</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tools/langchain/langgraph.html">LangGraph</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../tools/hf/intro.html">HuggingFace introduction and setup</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Concepts</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../concepts/mymarkdown.html">Concepts at glance</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../concepts/markdown-notebooks.html">Sample machine learning</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Core engineering</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../core/markdown.html">Introduction to core</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../core/mymarkdown.html">End to 2nd ML usecase</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Real world use cases</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../real-world/markdown.html">Understand how real world ML works</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../real-world/mymarkdown.html">Real world examples</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/anukchat/anukchat.github.io/main?urlpath=tree/content/essentials/python/datatypes/005_Python_Dictionary.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onBinder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../../../../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/anukchat/anukchat.github.io/blob/main/content/essentials/python/datatypes/005_Python_Dictionary.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../../../../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+<a href="https://github.com/anukchat/anukchat.github.io" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Source repository"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../../_sources/content/essentials/python/datatypes/005_Python_Dictionary.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Python Dictionary</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-dictionary-in-python">What is Dictionary in Python?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-python-dictionary">Creating Python Dictionary</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#accessing-elements-from-dictionary">Accessing Elements from Dictionary</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#changing-and-adding-dictionary-elements">Changing and Adding Dictionary elements</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#removing-elements-from-dictionary">Removing elements from Dictionary</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dictionary-built-in-dictionary-functions">Dictionary Built-in Dictionary Functions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#all-dict-the-all-function-returns-true-when-all-elements-in-the-given-iterable-are-true-if-not-it-returns-false"><code class="docutils literal notranslate"><span class="pre">all(dict)</span></code> - The <code class="docutils literal notranslate"><span class="pre">all()</span></code> function returns True when all elements in the given iterable are true. If not, it returns False.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#any-dict-the-any-function-returns-true-if-any-element-of-an-iterable-is-true-if-not-any-returns-false"><code class="docutils literal notranslate"><span class="pre">any(dict)</span></code> - The <code class="docutils literal notranslate"><span class="pre">any()</span></code> function returns True if any element of an iterable is True. If not, any() returns False.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#len-dict-the-len-function-gives-the-total-length-of-the-dictionary-this-would-be-equal-to-the-number-of-items-in-the-dictionary"><strong><code class="docutils literal notranslate"><span class="pre">len(dict)</span></code></strong> - The <code class="docutils literal notranslate"><span class="pre">len()</span></code> function gives the total length of the dictionary. This would be equal to the number of items in the dictionary.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sorted-dict-the-sorted-function-sorts-the-elements-of-a-given-iterable-in-a-specific-order-either-ascending-or-descending-and-returns-the-sorted-iterable-as-a-list"><strong><code class="docutils literal notranslate"><span class="pre">sorted(dict)</span></code></strong> - The <code class="docutils literal notranslate"><span class="pre">sorted()</span></code> function sorts the elements of a given iterable in a specific order (either <strong>ascending</strong> or <strong>descending</strong>) and returns the sorted iterable as a list.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#str-dict-the-str-function-produces-a-printable-string-representation-of-a-dictionary"><strong><code class="docutils literal notranslate"><span class="pre">str(dict)</span></code></strong> - The <code class="docutils literal notranslate"><span class="pre">str()</span></code> function produces a printable string representation of a dictionary.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#type-the-type-function-returns-the-type-of-the-passed-variable-if-passed-variable-is-dictionary-then-it-would-return-a-dictionary-type"><strong><code class="docutils literal notranslate"><span class="pre">type()</span></code></strong> - The <code class="docutils literal notranslate"><span class="pre">type()</span></code> function returns the type of the passed variable. If passed variable is dictionary then it would return a dictionary type.</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-dictionary-methods">Python Dictionary Methods</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#clear-the-method-clear-removes-all-items-from-the-dictionary"><strong><code class="docutils literal notranslate"><span class="pre">clear()</span></code></strong> - The method <code class="docutils literal notranslate"><span class="pre">clear()</span></code> removes all items from the dictionary.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#copy-the-method-copy-returns-a-shallow-copy-of-the-dictionary"><strong><code class="docutils literal notranslate"><span class="pre">copy()</span></code></strong> - The method <code class="docutils literal notranslate"><span class="pre">copy()</span></code> returns a shallow copy of the dictionary.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#itmes-the-method-items-returns-a-list-of-dicts-key-value-tuple-pairs"><strong><code class="docutils literal notranslate"><span class="pre">itmes()</span></code></strong> - The method <code class="docutils literal notranslate"><span class="pre">items()</span></code> returns a list of dict’s (key, value) tuple pairs.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#keys-the-method-keys-returns-a-list-of-all-the-available-keys-in-the-dictionary"><strong><code class="docutils literal notranslate"><span class="pre">keys()</span></code></strong> - The method <code class="docutils literal notranslate"><span class="pre">keys()</span></code> returns a list of all the available keys in the dictionary.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fromkeys-the-method-fromkeys-creates-a-new-dictionary-with-keys-from-seq-and-values-set-to-value"><strong><code class="docutils literal notranslate"><span class="pre">fromkeys()</span></code></strong> - The method <code class="docutils literal notranslate"><span class="pre">fromkeys()</span></code> creates a new dictionary with keys from seq and values set to value.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#setdefault-the-method-setdefault-is-similar-to-get-but-will-set-dict-key-default-if-key-is-not-already-in-dict"><strong><code class="docutils literal notranslate"><span class="pre">setdefault()</span></code></strong> - The method <code class="docutils literal notranslate"><span class="pre">setdefault()</span></code> is similar to <code class="docutils literal notranslate"><span class="pre">get</span></code> but will set <code class="docutils literal notranslate"><span class="pre">dict[key]</span> <span class="pre">=</span> <span class="pre">default</span></code> if key is not already in dict.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#update-the-method-update-adds-dictionary-dict2s-key-values-pairs-in-to-dict-this-function-does-not-return-anything"><strong><code class="docutils literal notranslate"><span class="pre">update()</span></code></strong> - The method <code class="docutils literal notranslate"><span class="pre">update()</span></code> adds dictionary dict2’s key-values pairs in to dict. This function does not return anything.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#value-the-method-values-returns-a-list-of-all-the-values-available-in-a-given-dictionary"><strong><code class="docutils literal notranslate"><span class="pre">value()</span></code></strong> - The method <code class="docutils literal notranslate"><span class="pre">values()</span></code> returns a list of all the values available in a given dictionary.</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-dictionary-comprehension">Python Dictionary Comprehension</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#other-dictionary-operations">Other Dictionary Operations</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dictionary-membership-test">1. Dictionary Membership Test</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iterating-through-a-dictionary">2. Iterating Through a Dictionary</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-span-class-label-label-default-dictionary-span">💻 Exercises ➞ <span class="label label-default">Dictionary</span></a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <p><small><small><i>
+All the IPython Notebooks in <strong>Python Datatypes</strong> lecture series by <strong><a class="reference external" href="https://www.linkedin.com/in/milaanparmar/">Dr. Milaan Parmar</a></strong> are available &#64; <strong><a class="reference external" href="https://github.com/milaan9/02_Python_Datatypes">GitHub</a></strong>
+</i></small></small></p>
+<section class="tex2jax_ignore mathjax_ignore" id="python-dictionary">
+<h1>Python Dictionary<a class="headerlink" href="#python-dictionary" title="Permalink to this heading">#</a></h1>
+<p>In this class, you’ll learn everything about Python dictionaries; how they are created, accessing, adding, removing elements from them and various built-in methods.</p>
+<section id="what-is-dictionary-in-python">
+<h2>What is Dictionary in Python?<a class="headerlink" href="#what-is-dictionary-in-python" title="Permalink to this heading">#</a></h2>
+<p>Python dictionary is an unordered collection of items. Each item of a dictionary has a <strong><code class="docutils literal notranslate"><span class="pre">key/value</span></code></strong> pair.</p>
+<p>Dictionaries are optimized to retrieve values when the key is known.</p>
+<div>
+<img src="img/d0.png" width="600"/>
+</div>
+<p><strong>Example:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">dict</span> <span class="o">=</span> <span class="p">{</span> <span class="p">}</span>  <span class="c1">#empty dictionary</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">dict</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">:</span><span class="s1">&#39;Python&#39;</span><span class="p">,</span><span class="mi">2</span><span class="p">:</span><span class="s1">&#39;Java&#39;</span><span class="p">,</span><span class="mi">3</span><span class="p">:</span><span class="s1">&#39;C++&#39;</span><span class="p">}</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><strong>Dictionary is mutable</strong> i.e., value can be updated.</p></li>
+<li><p>Key must be unique and immutable. Value is accessed by key. Value can be updated while key cannot be changed.</p></li>
+<li><p>Dictionary is known as Associative array since the Key works as Index and they are decided by the user.</p></li>
+</ul>
+<section id="summary">
+<h3>Summary<a class="headerlink" href="#summary" title="Permalink to this heading">#</a></h3>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-center"><p>Data types</p></th>
+<th class="head text-center"><p>Type</p></th>
+<th class="head text-center"><p></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p><strong>String</strong></p></td>
+<td class="text-center"><p><strong>immutable</strong></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p><strong>List</strong></p></td>
+<td class="text-center"><p><strong>mutable</strong></p></td>
+<td class="text-center"><p>✎</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p><strong>Tuple</strong></p></td>
+<td class="text-center"><p><strong>immutable</strong></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p><strong>Dictionary</strong></p></td>
+<td class="text-center"><p><strong>mutable</strong></p></td>
+<td class="text-center"><p>✎</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="creating-python-dictionary">
+<h2>Creating Python Dictionary<a class="headerlink" href="#creating-python-dictionary" title="Permalink to this heading">#</a></h2>
+<p>Creating a dictionary is as simple as placing items inside curly braces <strong><code class="docutils literal notranslate"><span class="pre">{}</span></code></strong> separated by commas or the <strong><a class="reference external" href="https://github.com/milaan9/04_Python_Functions/blob/main/002_Python_Functions_Built_in/015_Python_dict%28%29.ipynb">dict()</a></strong> built-in function.</p>
+<p>An item has a <strong><code class="docutils literal notranslate"><span class="pre">key</span></code></strong> and a corresponding <strong><code class="docutils literal notranslate"><span class="pre">value</span></code></strong> that is expressed as a pair {<strong>key: value</strong>}.</p>
+<p>The <strong><code class="docutils literal notranslate"><span class="pre">key</span></code></strong> and the <strong><code class="docutils literal notranslate"><span class="pre">value</span></code></strong> is separated by a colon <strong><code class="docutils literal notranslate"><span class="pre">:</span></code></strong>. Items are separated from each other by a comma <strong><code class="docutils literal notranslate"><span class="pre">,</span></code></strong>.</p>
+<p>While the values can be of any data type and can repeat, keys must be of immutable type (<strong><a class="reference external" href="https://github.com/milaan9/02_Python_Datatypes/blob/main/002_Python_String.ipynb">string</a></strong>, <strong><a class="reference external" href="https://github.com/milaan9/02_Python_Datatypes/blob/main/001_Python_Numbers.ipynb">number</a></strong> or <strong><a class="reference external" href="https://github.com/milaan9/02_Python_Datatypes/blob/main/004_Python_Tuple.ipynb">tuple</a></strong> with immutable elements) and must be unique.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example: empty dictionary</span>
+
+<span class="n">d</span> <span class="o">=</span> <span class="p">{};</span> <span class="n">l</span> <span class="o">=</span> <span class="p">[];</span> <span class="n">t</span> <span class="o">=</span> <span class="p">();</span> <span class="n">s</span> <span class="o">=</span> <span class="nb">set</span><span class="p">();</span> <span class="n">st</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">d</span><span class="p">,</span><span class="n">l</span><span class="p">,</span><span class="n">t</span><span class="p">,</span><span class="n">s</span><span class="p">,</span><span class="n">st</span><span class="p">)</span>     <span class="c1"># ▶ {} [] () set() </span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">d</span><span class="p">),</span><span class="nb">type</span><span class="p">(</span><span class="n">l</span><span class="p">),</span><span class="nb">type</span><span class="p">(</span><span class="n">t</span><span class="p">),</span> <span class="nb">type</span><span class="p">(</span><span class="n">s</span><span class="p">),</span> <span class="nb">type</span><span class="p">(</span><span class="n">st</span><span class="p">))</span> 
+<span class="c1"># ▶ &lt;class &#39;dict&#39;&gt; &lt;class &#39;list&#39;&gt; &lt;class &#39;tuple&#39;&gt; &lt;class &#39;set&#39;&gt; &lt;class &#39;str&#39;&gt;</span>
+
+<span class="c1"># dictionary with integer keys</span>
+<span class="n">my_dict1</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">:</span> <span class="s1">&#39;apple&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="s1">&#39;ball&#39;</span><span class="p">}</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_dict1</span><span class="p">)</span>        <span class="c1"># ▶ {1: &#39;apple&#39;, 2: &#39;ball&#39;}</span>
+
+<span class="c1"># dictionary with mixed keys</span>
+<span class="n">my_dict2</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">:</span><span class="s2">&quot;hi&quot;</span><span class="p">,</span> <span class="s2">&quot;name&quot;</span><span class="p">:</span><span class="mi">666</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">:(</span><span class="s2">&quot;yes&quot;</span><span class="p">,</span><span class="s2">&quot;very much&quot;</span><span class="p">),</span> <span class="mi">9</span><span class="p">:</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">9</span><span class="p">]}</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_dict2</span><span class="p">)</span>        <span class="c1"># ▶ {1: &#39;hi&#39;, &#39;name&#39;: 666, 1.5: (&#39;yes&#39;, &#39;very much&#39;), 9: [3, 6, 9]}</span>
+
+<span class="c1"># from sequence having each item as a pair</span>
+<span class="n">my_dict3</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">([(</span><span class="mi">1</span><span class="p">,</span><span class="s1">&#39;apple&#39;</span><span class="p">),</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="s1">&#39;ball&#39;</span><span class="p">)])</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">([(</span><span class="mi">1</span><span class="p">,</span><span class="s1">&#39;apple&#39;</span><span class="p">),</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="s1">&#39;ball&#39;</span><span class="p">)]))</span> <span class="c1"># nested list</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_dict3</span><span class="p">)</span>        <span class="c1"># ▶ {1: &#39;apple&#39;, 2: &#39;ball&#39;}</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">my_dict3</span><span class="p">))</span>   <span class="c1"># ▶ 2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{} [] () set() 
+&lt;class &#39;dict&#39;&gt; &lt;class &#39;list&#39;&gt; &lt;class &#39;tuple&#39;&gt; &lt;class &#39;set&#39;&gt; &lt;class &#39;str&#39;&gt;
+{1: &#39;apple&#39;, 2: &#39;ball&#39;}
+{1: &#39;hi&#39;, &#39;name&#39;: 666, 1.5: (&#39;yes&#39;, &#39;very much&#39;), 9: [3, 6, 9]}
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">42</span><span class="o">-</span><span class="mi">7</span><span class="n">f1fefd4d3f0</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">     </span><span class="mi">15</span> 
+<span class="g g-Whitespace">     </span><span class="mi">16</span> <span class="c1"># from sequence having each item as a pair</span>
+<span class="ne">---&gt; </span><span class="mi">17</span> <span class="n">my_dict3</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">([(</span><span class="mi">1</span><span class="p">,</span><span class="s1">&#39;apple&#39;</span><span class="p">),</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="s1">&#39;ball&#39;</span><span class="p">)])</span>
+
+<span class="ne">TypeError</span>: &#39;dict&#39; object is not callable
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">dict</span><span class="p">([(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;bar&#39;</span><span class="p">,</span> <span class="mi">200</span><span class="p">)]),</span> <span class="nb">dict</span><span class="p">(</span><span class="n">foo</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">bar</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">56</span><span class="o">-</span><span class="n">b312893cfb9a</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="nb">dict</span><span class="p">([(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;bar&#39;</span><span class="p">,</span> <span class="mi">200</span><span class="p">)]),</span> <span class="nb">dict</span><span class="p">(</span><span class="n">foo</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">bar</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span>
+
+<span class="ne">TypeError</span>: &#39;dict&#39; object is not callable
+</pre></div>
+</div>
+</div>
+</div>
+<p>As you can see from above, we can also create a dictionary using the built-in <strong><code class="docutils literal notranslate"><span class="pre">dict()</span></code></strong> function.</p>
+</section>
+<section id="accessing-elements-from-dictionary">
+<h2>Accessing Elements from Dictionary<a class="headerlink" href="#accessing-elements-from-dictionary" title="Permalink to this heading">#</a></h2>
+<p>While indexing is used with other data types to access values, a dictionary uses <strong><code class="docutils literal notranslate"><span class="pre">keys</span></code></strong>. Keys can be used either inside square brackets <strong><code class="docutils literal notranslate"><span class="pre">[]</span></code></strong> or with the <strong><code class="docutils literal notranslate"><span class="pre">get()</span></code></strong> method.</p>
+<p>If we use the square brackets <strong><code class="docutils literal notranslate"><span class="pre">[]</span></code></strong>, <strong><code class="docutils literal notranslate"><span class="pre">KeyError</span></code></strong> is raised in case a key is not found in the dictionary. On the other hand, the <strong><code class="docutils literal notranslate"><span class="pre">get()</span></code></strong> method returns <strong><code class="docutils literal notranslate"><span class="pre">None</span></code></strong> if the key is not found.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example: get vs [] for retrieving elements</span>
+
+<span class="n">my_dict</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">:</span><span class="s1">&#39;Python&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span><span class="s1">&#39;Java&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">:</span><span class="s1">&#39;C++&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">:</span> <span class="s1">&#39;Gods language&#39;</span><span class="p">}</span>
+
+<span class="c1"># method: 1</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_dict</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>         <span class="c1"># ▶ Python</span>
+
+<span class="c1"># method: 2</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_dict</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;c&#39;</span><span class="p">))</span>   <span class="c1"># ▶ Gods language</span>
+
+<span class="c1"># Trying to access keys which doesn&#39;t exist in dictionary:</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_dict</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">4</span><span class="p">))</span>     <span class="c1"># ▶ None</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">my_dict</span><span class="p">[</span><span class="mi">4</span><span class="p">])</span>         <span class="c1"># ▶ KeyError!</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Python
+Gods language
+None
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">KeyError</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">49</span><span class="o">-</span><span class="mi">555108164</span><span class="n">c58</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">     </span><span class="mi">12</span> <span class="nb">print</span><span class="p">(</span><span class="n">my_dict</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">4</span><span class="p">))</span>     <span class="c1"># ▶ None</span>
+<span class="g g-Whitespace">     </span><span class="mi">13</span> 
+<span class="ne">---&gt; </span><span class="mi">14</span> <span class="nb">print</span><span class="p">(</span><span class="n">my_dict</span><span class="p">[</span><span class="mi">4</span><span class="p">])</span>         <span class="c1"># ▶ KeyError!</span>
+
+<span class="ne">KeyError</span>: 4
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>iterate all elemnet using for loop for <strong><code class="docutils literal notranslate"><span class="pre">keys()</span></code></strong> method, <strong><code class="docutils literal notranslate"><span class="pre">keys()</span></code></strong> method return list of all keys in dictionary.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example:</span>
+
+<span class="nb">dict</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">:</span><span class="s1">&#39;Python&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span><span class="s1">&#39;Java&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">:</span><span class="s1">&#39;C++&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">:</span> <span class="s1">&#39;Gods language&#39;</span><span class="p">}</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">dict</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">dict</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="nb">dict</span><span class="p">[</span><span class="n">x</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>dict_keys([1, 2, 3, &#39;c&#39;])
+Python
+Java
+C++
+Gods language
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="changing-and-adding-dictionary-elements">
+<h2>Changing and Adding Dictionary elements<a class="headerlink" href="#changing-and-adding-dictionary-elements" title="Permalink to this heading">#</a></h2>
+<p>Dictionaries are mutable. We can add new items or change the value of existing items using an assignment operator.</p>
+<p>If the key is already present, then the existing value gets updated. In case the key is not present, a new <strong><code class="docutils literal notranslate"><span class="pre">(key:</span> <span class="pre">value)</span></code></strong> pair is added to the dictionary.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example 1: Changing and adding Dictionary Elements</span>
+
+<span class="n">my_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span><span class="s1">&#39;Arthur&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">:</span><span class="mi">24</span><span class="p">}</span>
+
+<span class="n">my_dict</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">25</span>   <span class="c1"># update value</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_dict</span><span class="p">)</span>        <span class="c1"># ▶ {&#39;age&#39;: 25, &#39;name&#39;: &#39;Arthur&#39;}</span>
+
+<span class="n">my_dict</span><span class="p">[</span><span class="s1">&#39;address&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Downtown&#39;</span>  <span class="c1"># add item</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_dict</span><span class="p">)</span>        <span class="c1"># ▶ {&#39;name&#39;: &#39;Arthur&#39;, &#39;age&#39;: 25, &#39;address&#39;: &#39;Downtown&#39;}</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;name&#39;: &#39;Arthur&#39;, &#39;age&#39;: 25}
+{&#39;name&#39;: &#39;Arthur&#39;, &#39;age&#39;: 25, &#39;address&#39;: &#39;Downtown&#39;}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example 2: </span>
+
+<span class="n">my_dict</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">:</span><span class="s1">&#39;Python&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span><span class="s1">&#39;Java&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">:</span><span class="s1">&#39;C++&#39;</span><span class="p">}</span>
+<span class="n">my_dict</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;R&quot;</span>     <span class="c1"># update value</span>
+<span class="n">my_dict</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;PHP&quot;</span>   <span class="c1"># insert new value</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_dict</span><span class="p">)</span>     <span class="c1"># ▶ {1: &#39;Python&#39;, 2: &#39;Java&#39;, 3: &#39;R&#39;, 4: &#39;PHP&#39;}</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{1: &#39;Python&#39;, 2: &#39;Java&#39;, 3: &#39;R&#39;, 4: &#39;PHP&#39;}
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="removing-elements-from-dictionary">
+<h2>Removing elements from Dictionary<a class="headerlink" href="#removing-elements-from-dictionary" title="Permalink to this heading">#</a></h2>
+<p>We can remove a particular item in a dictionary by using the <strong><code class="docutils literal notranslate"><span class="pre">pop()</span></code></strong> method. This method removes an item with the provided <strong><code class="docutils literal notranslate"><span class="pre">key</span></code></strong> and returns the <strong><code class="docutils literal notranslate"><span class="pre">value</span></code></strong>.</p>
+<p>The <strong><code class="docutils literal notranslate"><span class="pre">popitem()</span></code></strong> method can be used to remove and return an arbitrary <strong><code class="docutils literal notranslate"><span class="pre">(key,</span> <span class="pre">value)</span></code></strong> item pair from the dictionary. All the items can be removed at once, using the <strong><code class="docutils literal notranslate"><span class="pre">clear()</span></code></strong> method.</p>
+<p>We can also use the <strong><code class="docutils literal notranslate"><span class="pre">del</span></code></strong> keyword to remove individual items or the entire dictionary itself.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example: Removing elements from a dictionary</span>
+
+
+<span class="n">squares</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span><span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">:</span><span class="mi">9</span><span class="p">,</span> <span class="mi">4</span><span class="p">:</span><span class="mi">16</span><span class="p">,</span> <span class="mi">5</span><span class="p">:</span><span class="mi">25</span><span class="p">}</span>   <span class="c1"># create a dictionary</span>
+
+<span class="c1"># remove a particular item, returns its value</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">squares</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">4</span><span class="p">))</span>    <span class="c1"># ▶ 16</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">squares</span><span class="p">)</span>           <span class="c1"># ▶ {1: 1, 2: 4, 3: 9, 5: 25}</span>
+
+<span class="c1"># remove an arbitrary item, return (key,value)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">squares</span><span class="o">.</span><span class="n">popitem</span><span class="p">())</span> <span class="c1"># ▶ (5, 25)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">squares</span><span class="p">)</span>           <span class="c1"># ▶ {1: 1, 2: 4, 3: 9}</span>
+
+<span class="n">squares</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>          <span class="c1"># remove all items</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">squares</span><span class="p">)</span>           <span class="c1"># ▶ {}</span>
+
+<span class="k">del</span> <span class="n">squares</span>              <span class="c1"># delete the dictionary itself</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">squares</span><span class="p">)</span>           <span class="c1"># ▶ NameError!!!</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>16
+{1: 1, 2: 4, 3: 9, 5: 25}
+(5, 25)
+{1: 1, 2: 4, 3: 9}
+{}
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">53</span><span class="o">-</span><span class="n">bb99b9cebaa8</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">     </span><span class="mi">16</span> 
+<span class="g g-Whitespace">     </span><span class="mi">17</span> <span class="k">del</span> <span class="n">squares</span>              <span class="c1"># delete the dictionary itself</span>
+<span class="ne">---&gt; </span><span class="mi">18</span> <span class="nb">print</span><span class="p">(</span><span class="n">squares</span><span class="p">)</span>           <span class="c1"># ▶ NameError!!!</span>
+
+<span class="ne">NameError</span>: name &#39;squares&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example:</span>
+
+<span class="n">my_dict</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">:</span><span class="s1">&#39;Python&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span><span class="s1">&#39;Java&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">:</span><span class="s1">&#39;C++&#39;</span><span class="p">,</span> <span class="mi">4</span><span class="p">:</span><span class="s1">&#39;PHP&#39;</span><span class="p">}</span>
+<span class="k">del</span> <span class="n">my_dict</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>    <span class="c1"># ▶ {1: &#39;Python&#39;, 2: &#39;Java&#39;, 4: &#39;PHP&#39;} ∵ remove entry with key &#39;3&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_dict</span><span class="p">)</span>    <span class="c1"># ▶ {}</span>
+
+<span class="n">my_dict</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>   <span class="c1"># remove all entries in dict</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;my_dict : &quot;</span><span class="p">,</span><span class="n">my_dict</span><span class="p">)</span>  <span class="c1"># ▶ my_dict :  {}</span>
+
+<span class="k">del</span> <span class="n">my_dict</span>       <span class="c1"># delete entire dictionary</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_dict</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span> <span class="c1"># ▶ NameError!!!</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{1: &#39;Python&#39;, 2: &#39;Java&#39;, 4: &#39;PHP&#39;}
+my_dict :  {}
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">8</span><span class="o">-</span><span class="mi">8138</span><span class="n">b0729954</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">9</span> 
+<span class="g g-Whitespace">     </span><span class="mi">10</span> <span class="k">del</span> <span class="n">my_dict</span>       <span class="c1"># delete entire dictionary</span>
+<span class="ne">---&gt; </span><span class="mi">11</span> <span class="nb">print</span><span class="p">(</span><span class="n">my_dict</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span> <span class="c1"># Error!</span>
+
+<span class="ne">NameError</span>: name &#39;my_dict&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="dictionary-built-in-dictionary-functions">
+<h2>Dictionary Built-in Dictionary Functions<a class="headerlink" href="#dictionary-built-in-dictionary-functions" title="Permalink to this heading">#</a></h2>
+<p>Built-in functions like <strong><code class="docutils literal notranslate"><span class="pre">all()</span></code></strong>, <strong><code class="docutils literal notranslate"><span class="pre">any()</span></code></strong>, <strong><code class="docutils literal notranslate"><span class="pre">len()</span></code></strong>, <strong><code class="docutils literal notranslate"><span class="pre">cmp()</span></code></strong>, <strong><code class="docutils literal notranslate"><span class="pre">sorted()</span></code></strong>, <strong><code class="docutils literal notranslate"><span class="pre">str()</span></code></strong>, <strong><code class="docutils literal notranslate"><span class="pre">typ()</span></code></strong>, etc. are commonly used with dictionaries to perform different tasks.</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Function</p></th>
+<th class="head text-left"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p><strong><a class="reference external" href="https://github.com/milaan9/04_Python_Functions/blob/main/002_Python_Functions_Built_in/003_Python_all%28%29.ipynb">all()</a></strong></p></td>
+<td class="text-left"><p>Returns <strong><code class="docutils literal notranslate"><span class="pre">True</span></code></strong> if all keys of the dictionary are true (or if the dictionary is empty).</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong><a class="reference external" href="https://github.com/milaan9/04_Python_Functions/blob/main/002_Python_Functions_Built_in/002_Python_any%28%29.ipynb">any()</a></strong></p></td>
+<td class="text-left"><p>Returns <strong><code class="docutils literal notranslate"><span class="pre">True</span></code></strong> if any key of the dictionary is true. If the dictionary is empty, return <strong><code class="docutils literal notranslate"><span class="pre">False</span></code></strong>.</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong><a class="reference external" href="https://github.com/milaan9/04_Python_Functions/blob/main/002_Python_Functions_Built_in/040_Python_len%28%29.ipynb">len()</a></strong></p></td>
+<td class="text-left"><p>Returns the length (the number of items) in the dictionary.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>cmp()</strong></p></td>
+<td class="text-left"><p>Compares items of two dictionaries. (Not available in Python 3).</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong><a class="reference external" href="https://github.com/milaan9/04_Python_Functions/blob/main/002_Python_Functions_Built_in/060_Python_sorted%28%29.ipynb">sorted()</a></strong></p></td>
+<td class="text-left"><p>Returns a new sorted list of keys in the dictionary.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong><a class="reference external" href="https://github.com/milaan9/04_Python_Functions/blob/main/002_Python_Functions_Built_in/061_Python_str%28%29.ipynb">str()</a></strong></p></td>
+<td class="text-left"><p>Produces a printable string representation of a dictionary.</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong><a class="reference external" href="https://github.com/milaan9/04_Python_Functions/blob/main/002_Python_Functions_Built_in/064_Python_type%28%29.ipynb">type()</a></strong></p></td>
+<td class="text-left"><p>Returns the type of the passed variable. If passed variable is dictionary,then it would return a dictionary type.</p></td>
+</tr>
+</tbody>
+</table>
+<p>Here are some examples that use built-in functions to work with a dictionary.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example: Dictionary Built-in Functions</span>
+
+<span class="c1"># all will give True if all &quot;Key&quot; is &quot;True&quot;. 0 is also consider as False </span>
+
+<span class="n">squares</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">:</span><span class="mi">9</span><span class="p">,</span> <span class="mi">5</span><span class="p">:</span><span class="mi">25</span><span class="p">,</span> <span class="mi">7</span><span class="p">:</span><span class="mi">49</span><span class="p">,</span> <span class="mi">9</span><span class="p">:</span><span class="mi">81</span><span class="p">}</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">all</span><span class="p">(</span><span class="n">squares</span><span class="p">))</span>     <span class="c1"># ▶ False</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">any</span><span class="p">(</span><span class="n">squares</span><span class="p">))</span>     <span class="c1"># ▶ True</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">squares</span><span class="p">))</span>     <span class="c1"># ▶ 6</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="n">squares</span><span class="p">))</span>  <span class="c1"># ▶ [0, 1, 3, 5, 7, 9]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+True
+6
+[0, 1, 3, 5, 7, 9]
+</pre></div>
+</div>
+</div>
+</div>
+<section id="all-dict-the-all-function-returns-true-when-all-elements-in-the-given-iterable-are-true-if-not-it-returns-false">
+<h3><code class="docutils literal notranslate"><span class="pre">all(dict)</span></code> - The <code class="docutils literal notranslate"><span class="pre">all()</span></code> function returns True when all elements in the given iterable are true. If not, it returns False.<a class="headerlink" href="#all-dict-the-all-function-returns-true-when-all-elements-in-the-given-iterable-are-true-if-not-it-returns-false" title="Permalink to this heading">#</a></h3>
+<p>In case of dictionaries, if all keys (not values) are true or the dictionary is empty, <strong><code class="docutils literal notranslate"><span class="pre">all()</span></code></strong> returns <strong><code class="docutils literal notranslate"><span class="pre">True</span></code></strong>. Else, it returns <strong><code class="docutils literal notranslate"><span class="pre">false</span></code></strong> for all other cases.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example 1: How all() works with Python dictionaries?</span>
+<span class="c1"># In case of dictionaries, if all keys (not values) are true or the dictionary is empty, </span>
+<span class="c1"># all() returns True. Else, it returns false for all other cases.</span>
+
+<span class="n">my_dict</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">:</span><span class="s1">&#39;False&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span><span class="s1">&#39;False&#39;</span><span class="p">}</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">all</span><span class="p">(</span><span class="n">my_dict</span><span class="p">))</span>   <span class="c1"># ▶ False</span>
+
+<span class="n">my_dict</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">:</span><span class="s1">&#39;True&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span><span class="s1">&#39;True&#39;</span><span class="p">}</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">all</span><span class="p">(</span><span class="n">my_dict</span><span class="p">))</span>   <span class="c1"># ▶ True</span>
+
+<span class="n">my_dict</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">:</span><span class="s1">&#39;True&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">:</span><span class="mi">0</span><span class="p">}</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">all</span><span class="p">(</span><span class="n">my_dict</span><span class="p">))</span>   <span class="c1"># ▶ False</span>
+
+<span class="n">my_dict</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">all</span><span class="p">(</span><span class="n">my_dict</span><span class="p">))</span>   <span class="c1"># ▶ True</span>
+
+<span class="c1"># 0 is False</span>
+<span class="c1"># &#39;0&#39; is True</span>
+<span class="n">my_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;0&#39;</span><span class="p">:</span><span class="s1">&#39;True&#39;</span><span class="p">}</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">all</span><span class="p">(</span><span class="n">my_dict</span><span class="p">))</span>   <span class="c1"># ▶ True</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+True
+False
+True
+True
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="any-dict-the-any-function-returns-true-if-any-element-of-an-iterable-is-true-if-not-any-returns-false">
+<h3><code class="docutils literal notranslate"><span class="pre">any(dict)</span></code> - The <code class="docutils literal notranslate"><span class="pre">any()</span></code> function returns True if any element of an iterable is True. If not, any() returns False.<a class="headerlink" href="#any-dict-the-any-function-returns-true-if-any-element-of-an-iterable-is-true-if-not-any-returns-false" title="Permalink to this heading">#</a></h3>
+<p>In the case of dictionaries, if all keys (not values) are false or the dictionary is empty, <strong><code class="docutils literal notranslate"><span class="pre">any()</span></code></strong> returns <strong><code class="docutils literal notranslate"><span class="pre">False</span></code></strong>. If at least one key is true, <strong><code class="docutils literal notranslate"><span class="pre">any()</span></code></strong> returns <strong><code class="docutils literal notranslate"><span class="pre">True</span></code></strong>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example 1: How any() works with Python dictionaries?</span>
+
+<span class="n">my_dict</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">:</span><span class="s1">&#39;False&#39;</span><span class="p">}</span>             
+<span class="nb">print</span><span class="p">(</span><span class="nb">any</span><span class="p">(</span><span class="n">my_dict</span><span class="p">))</span>                <span class="c1"># ▶ False ∵ 0 is False</span>
+
+<span class="n">my_dict</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">:</span><span class="s1">&#39;False&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span><span class="s1">&#39;True&#39;</span><span class="p">}</span>  
+<span class="nb">print</span><span class="p">(</span><span class="nb">any</span><span class="p">(</span><span class="n">my_dict</span><span class="p">))</span>                <span class="c1"># ▶ True ∵ 1 is True</span>
+
+<span class="n">my_dict</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">:</span><span class="s1">&#39;False&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">:</span><span class="mi">0</span><span class="p">}</span>   
+<span class="nb">print</span><span class="p">(</span><span class="nb">any</span><span class="p">(</span><span class="n">my_dict</span><span class="p">))</span>                <span class="c1"># ▶ False ∵ both 0 and False are False</span>
+
+<span class="n">my_dict</span> <span class="o">=</span> <span class="p">{}</span>                       
+<span class="nb">print</span><span class="p">(</span><span class="nb">any</span><span class="p">(</span><span class="n">my_dict</span><span class="p">))</span>                <span class="c1"># ▶ False ∵ iterable is empty</span>
+
+<span class="c1"># 0 is False</span>
+<span class="c1"># &#39;0&#39; is True</span>
+<span class="n">my_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;0&#39;</span><span class="p">:</span><span class="s1">&#39;False&#39;</span><span class="p">}</span>           
+<span class="nb">print</span><span class="p">(</span><span class="nb">any</span><span class="p">(</span><span class="n">my_dict</span><span class="p">))</span>                <span class="c1"># ▶ True</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+True
+False
+False
+True
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="len-dict-the-len-function-gives-the-total-length-of-the-dictionary-this-would-be-equal-to-the-number-of-items-in-the-dictionary">
+<h3><strong><code class="docutils literal notranslate"><span class="pre">len(dict)</span></code></strong> - The <code class="docutils literal notranslate"><span class="pre">len()</span></code> function gives the total length of the dictionary. This would be equal to the number of items in the dictionary.<a class="headerlink" href="#len-dict-the-len-function-gives-the-total-length-of-the-dictionary-this-would-be-equal-to-the-number-of-items-in-the-dictionary" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example:</span>
+
+<span class="n">my_dict</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">:</span><span class="s1">&#39;Python&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span><span class="s1">&#39;Java&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">:</span><span class="s1">&#39;C++&#39;</span><span class="p">,</span> <span class="mi">4</span><span class="p">:</span><span class="s1">&#39;PHP&#39;</span><span class="p">}</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">my_dict</span><span class="p">))</span>  <span class="c1"># ▶ 4</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="sorted-dict-the-sorted-function-sorts-the-elements-of-a-given-iterable-in-a-specific-order-either-ascending-or-descending-and-returns-the-sorted-iterable-as-a-list">
+<h3><strong><code class="docutils literal notranslate"><span class="pre">sorted(dict)</span></code></strong> - The <code class="docutils literal notranslate"><span class="pre">sorted()</span></code> function sorts the elements of a given iterable in a specific order (either <strong>ascending</strong> or <strong>descending</strong>) and returns the sorted iterable as a list.<a class="headerlink" href="#sorted-dict-the-sorted-function-sorts-the-elements-of-a-given-iterable-in-a-specific-order-either-ascending-or-descending-and-returns-the-sorted-iterable-as-a-list" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example:</span>
+
+<span class="n">my_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;e&#39;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;u&#39;</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">:</span><span class="mi">4</span><span class="p">,</span> <span class="s1">&#39;i&#39;</span><span class="p">:</span><span class="mi">5</span><span class="p">}</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="n">my_dict</span><span class="p">))</span>               <span class="c1"># ▶ [&#39;a&#39;, &#39;e&#39;, &#39;i&#39;, &#39;o&#39;, &#39;u&#39;]</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="n">my_dict</span><span class="p">,</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span> <span class="c1"># ▶ [&#39;u&#39;, &#39;o&#39;, &#39;i&#39;, &#39;e&#39;, &#39;a&#39;]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;a&#39;, &#39;e&#39;, &#39;i&#39;, &#39;o&#39;, &#39;u&#39;]
+[&#39;u&#39;, &#39;o&#39;, &#39;i&#39;, &#39;e&#39;, &#39;a&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="str-dict-the-str-function-produces-a-printable-string-representation-of-a-dictionary">
+<h3><strong><code class="docutils literal notranslate"><span class="pre">str(dict)</span></code></strong> - The <code class="docutils literal notranslate"><span class="pre">str()</span></code> function produces a printable string representation of a dictionary.<a class="headerlink" href="#str-dict-the-str-function-produces-a-printable-string-representation-of-a-dictionary" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example:</span>
+
+<span class="n">my_dict</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">:</span><span class="s1">&#39;Python&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span><span class="s1">&#39;Java&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">:</span><span class="s1">&#39;C++&#39;</span><span class="p">,</span> <span class="mi">4</span><span class="p">:</span><span class="s1">&#39;PHP&#39;</span><span class="p">}</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">my_dict</span><span class="p">))</span> <span class="c1"># ▶ {1: &#39;Python&#39;, 2: &#39;Java&#39;, 3: &#39;C++&#39;, 4: &#39;PHP&#39;}</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{1: &#39;Python&#39;, 2: &#39;Java&#39;, 3: &#39;C++&#39;, 4: &#39;PHP&#39;}
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="type-the-type-function-returns-the-type-of-the-passed-variable-if-passed-variable-is-dictionary-then-it-would-return-a-dictionary-type">
+<h3><strong><code class="docutils literal notranslate"><span class="pre">type()</span></code></strong> - The <code class="docutils literal notranslate"><span class="pre">type()</span></code> function returns the type of the passed variable. If passed variable is dictionary then it would return a dictionary type.<a class="headerlink" href="#type-the-type-function-returns-the-type-of-the-passed-variable-if-passed-variable-is-dictionary-then-it-would-return-a-dictionary-type" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example:</span>
+
+<span class="n">my_dict</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">:</span><span class="s1">&#39;Python&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span><span class="s1">&#39;Java&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">:</span><span class="s1">&#39;C++&#39;</span><span class="p">,</span> <span class="mi">4</span><span class="p">:</span><span class="s1">&#39;PHP&#39;</span><span class="p">}</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">my_dict</span><span class="p">))</span>  <span class="c1"># ▶ &lt;class &#39;dict&#39;&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;dict&#39;&gt;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="python-dictionary-methods">
+<h2>Python Dictionary Methods<a class="headerlink" href="#python-dictionary-methods" title="Permalink to this heading">#</a></h2>
+<p>Methods that are available with a dictionary are tabulated below. Some of them have already been used in the above examples.</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Method</p></th>
+<th class="head text-left"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p><strong><a class="reference external" href="https://github.com/milaan9/02_Python_Datatypes/blob/main/005_Python_Dictionary_Methods/001_Python_Dictionary_clear%28%29.ipynb">clear()</a></strong></p></td>
+<td class="text-left"><p>Removes all items from the dictionary.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong><a class="reference external" href="https://github.com/milaan9/02_Python_Datatypes/blob/main/005_Python_Dictionary_Methods/002_Python_Dictionary_copy%28%29.ipynb">copy()</a></strong></p></td>
+<td class="text-left"><p>Returns a shallow copy of the dictionary.</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong><a class="reference external" href="https://github.com/milaan9/02_Python_Datatypes/blob/main/005_Python_Dictionary_Methods/003_Python_Dictionary_fromkeys%28%29.ipynb">fromkeys(seq[, v])</a></strong></p></td>
+<td class="text-left"><p>Returns a new dictionary with keys from <strong><code class="docutils literal notranslate"><span class="pre">seq</span></code></strong> and value equal to <strong><code class="docutils literal notranslate"><span class="pre">v</span></code></strong> (defaults to <strong><code class="docutils literal notranslate"><span class="pre">None</span></code></strong>).</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong><a class="reference external" href="https://github.com/milaan9/02_Python_Datatypes/blob/main/005_Python_Dictionary_Methods/004_Python_Dictionary_get%28%29.ipynb">get(key[,d])</a></strong></p></td>
+<td class="text-left"><p>Returns the value of the <strong><code class="docutils literal notranslate"><span class="pre">key</span></code></strong>. If the <strong><code class="docutils literal notranslate"><span class="pre">key</span></code></strong> does not exist, returns <strong><code class="docutils literal notranslate"><span class="pre">d</span></code></strong> (defaults to <strong><code class="docutils literal notranslate"><span class="pre">None</span></code></strong>).</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong><a class="reference external" href="https://github.com/milaan9/02_Python_Datatypes/blob/main/005_Python_Dictionary_Methods/005_Python_Dictionary_items%28%29.ipynb">items()</a></strong></p></td>
+<td class="text-left"><p>Return a new object of the dictionary’s items in <strong><code class="docutils literal notranslate"><span class="pre">(key,</span> <span class="pre">value)</span></code></strong> format.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong><a class="reference external" href="https://github.com/milaan9/02_Python_Datatypes/blob/main/005_Python_Dictionary_Methods/006_Python_Dictionary_keys%28%29.ipynb">keys()</a></strong></p></td>
+<td class="text-left"><p>Returns a new object of the dictionary’s keys.</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong><a class="reference external" href="https://github.com/milaan9/02_Python_Datatypes/blob/main/005_Python_Dictionary_Methods/007_Python_Dictionary_pop%28%29.ipynb">pop(key[,d])</a></strong></p></td>
+<td class="text-left"><p>Removes the item with the <strong><code class="docutils literal notranslate"><span class="pre">key</span></code></strong> and returns its value or <strong><code class="docutils literal notranslate"><span class="pre">d</span></code></strong> if <strong><code class="docutils literal notranslate"><span class="pre">key</span></code></strong> is not found. If <strong><code class="docutils literal notranslate"><span class="pre">d</span></code></strong> is not provided and the <strong><code class="docutils literal notranslate"><span class="pre">key</span></code></strong> is not found, it raises <strong><code class="docutils literal notranslate"><span class="pre">KeyError</span></code></strong>.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong><a class="reference external" href="https://github.com/milaan9/02_Python_Datatypes/blob/main/005_Python_Dictionary_Methods/008_Python_Dictionary_popitem%28%29.ipynb">popitem()</a></strong></p></td>
+<td class="text-left"><p>Removes and returns an arbitrary item <strong><code class="docutils literal notranslate"><span class="pre">(key,</span> <span class="pre">value)</span></code></strong>. Raises <strong><code class="docutils literal notranslate"><span class="pre">KeyError</span></code></strong> if the dictionary is empty.</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong><a class="reference external" href="https://github.com/milaan9/02_Python_Datatypes/blob/main/005_Python_Dictionary_Methods/009_Python_Dictionary_setdefault%28%29.ipynb">setdefault(key[,d])</a></strong></p></td>
+<td class="text-left"><p>Returns the corresponding value if the <strong><code class="docutils literal notranslate"><span class="pre">key</span></code></strong> is in the dictionary. If not, inserts the <strong><code class="docutils literal notranslate"><span class="pre">key</span></code></strong> with a value of <strong><code class="docutils literal notranslate"><span class="pre">d</span></code></strong> and returns <strong><code class="docutils literal notranslate"><span class="pre">d</span></code></strong> (defaults to <strong><code class="docutils literal notranslate"><span class="pre">None</span></code></strong>).</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong><a class="reference external" href="https://github.com/milaan9/02_Python_Datatypes/blob/main/005_Python_Dictionary_Methods/010_Python_Dictionary_update%28%29.ipynb">update([other])</a></strong></p></td>
+<td class="text-left"><p>Updates the dictionary with the key/value pairs from <strong><code class="docutils literal notranslate"><span class="pre">other</span></code></strong>, overwriting existing keys.</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong><a class="reference external" href="https://github.com/milaan9/02_Python_Datatypes/blob/main/005_Python_Dictionary_Methods/011_Python_Dictionary_values%28%29.ipynb">values()</a></strong></p></td>
+<td class="text-left"><p>Returns a new object of the dictionary’s values.</p></td>
+</tr>
+</tbody>
+</table>
+<p>Here are a few example use cases of these methods.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example: Dictionary Methods</span>
+
+<span class="n">marks</span> <span class="o">=</span> <span class="p">{}</span><span class="o">.</span><span class="n">fromkeys</span><span class="p">([</span><span class="s1">&#39;Math&#39;</span><span class="p">,</span> <span class="s1">&#39;English&#39;</span><span class="p">,</span> <span class="s1">&#39;Science&#39;</span><span class="p">],</span> <span class="mi">0</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">marks</span><span class="p">)</span>                        <span class="c1"># ▶ {&#39;English&#39;: 0, &#39;Math&#39;: 0, &#39;Science&#39;: 0}</span>
+
+<span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">marks</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="n">marks</span><span class="o">.</span><span class="n">keys</span><span class="p">())))</span>   <span class="c1"># ▶ [&#39;English&#39;, &#39;Math&#39;, &#39;Science&#39;]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;Math&#39;: 0, &#39;English&#39;: 0, &#39;Science&#39;: 0}
+(&#39;Math&#39;, 0)
+(&#39;English&#39;, 0)
+(&#39;Science&#39;, 0)
+[&#39;English&#39;, &#39;Math&#39;, &#39;Science&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<section id="clear-the-method-clear-removes-all-items-from-the-dictionary">
+<h3><strong><code class="docutils literal notranslate"><span class="pre">clear()</span></code></strong> - The method <code class="docutils literal notranslate"><span class="pre">clear()</span></code> removes all items from the dictionary.<a class="headerlink" href="#clear-the-method-clear-removes-all-items-from-the-dictionary" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example:</span>
+
+<span class="n">my_dict</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">:</span><span class="s1">&#39;Python&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span><span class="s1">&#39;Java&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">:</span><span class="s1">&#39;C++&#39;</span><span class="p">,</span> <span class="mi">4</span><span class="p">:</span><span class="s1">&#39;PHP&#39;</span><span class="p">}</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">my_dict</span><span class="p">))</span>  <span class="c1"># ▶ {1: &#39;Python&#39;, 2: &#39;Java&#39;, 3: &#39;C++&#39;, 4: &#39;PHP&#39;}</span>
+<span class="nb">dict</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">my_dict</span><span class="p">))</span>  <span class="c1"># ▶ {}</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{1: &#39;Python&#39;, 2: &#39;Java&#39;, 3: &#39;C++&#39;, 4: &#39;PHP&#39;}
+{1: &#39;Python&#39;, 2: &#39;Java&#39;, 3: &#39;C++&#39;, 4: &#39;PHP&#39;}
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="copy-the-method-copy-returns-a-shallow-copy-of-the-dictionary">
+<h3><strong><code class="docutils literal notranslate"><span class="pre">copy()</span></code></strong> - The method <code class="docutils literal notranslate"><span class="pre">copy()</span></code> returns a shallow copy of the dictionary.<a class="headerlink" href="#copy-the-method-copy-returns-a-shallow-copy-of-the-dictionary" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example:</span>
+
+<span class="n">dict1</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">:</span><span class="s1">&#39;Python&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span><span class="s1">&#39;Java&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">:</span><span class="s1">&#39;C++&#39;</span><span class="p">,</span> <span class="mi">4</span><span class="p">:</span><span class="s1">&#39;PHP&#39;</span><span class="p">}</span>
+<span class="n">dict2</span> <span class="o">=</span> <span class="n">dict1</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">dict2</span><span class="p">)</span>  <span class="c1"># ▶ {1: &#39;Python&#39;, 2: &#39;Java&#39;, 3: &#39;C++&#39;, 4: &#39;PHP&#39;}</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{1: &#39;Python&#39;, 2: &#39;Java&#39;, 3: &#39;C++&#39;, 4: &#39;PHP&#39;}
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="itmes-the-method-items-returns-a-list-of-dicts-key-value-tuple-pairs">
+<h3><strong><code class="docutils literal notranslate"><span class="pre">itmes()</span></code></strong> - The method <code class="docutils literal notranslate"><span class="pre">items()</span></code> returns a list of dict’s (key, value) tuple pairs.<a class="headerlink" href="#itmes-the-method-items-returns-a-list-of-dicts-key-value-tuple-pairs" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example:</span>
+
+<span class="n">my_dict</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">:</span><span class="s1">&#39;Python&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span><span class="s1">&#39;Java&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">:</span><span class="s1">&#39;C++&#39;</span><span class="p">,</span> <span class="mi">4</span><span class="p">:</span><span class="s1">&#39;PHP&#39;</span><span class="p">}</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_dict</span><span class="o">.</span><span class="n">items</span><span class="p">())</span> <span class="c1"># ▶ dict_items([(1, &#39;Python&#39;), (2, &#39;Java&#39;), (3, &#39;C++&#39;), (4, &#39;PHP&#39;)])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>dict_items([(1, &#39;Python&#39;), (2, &#39;Java&#39;), (3, &#39;C++&#39;), (4, &#39;PHP&#39;)])
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="keys-the-method-keys-returns-a-list-of-all-the-available-keys-in-the-dictionary">
+<h3><strong><code class="docutils literal notranslate"><span class="pre">keys()</span></code></strong> - The method <code class="docutils literal notranslate"><span class="pre">keys()</span></code> returns a list of all the available keys in the dictionary.<a class="headerlink" href="#keys-the-method-keys-returns-a-list-of-all-the-available-keys-in-the-dictionary" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example:</span>
+
+<span class="n">my_dict</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">:</span><span class="s1">&#39;Python&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span><span class="s1">&#39;Java&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">:</span><span class="s1">&#39;C++&#39;</span><span class="p">,</span> <span class="mi">4</span><span class="p">:</span><span class="s1">&#39;PHP&#39;</span><span class="p">}</span>
+<span class="n">all_keys</span><span class="o">=</span><span class="n">my_dict</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">all_keys</span><span class="p">)</span>  <span class="c1"># ▶ dict_keys([1, 2, 3, 4])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>dict_keys([1, 2, 3, 4])
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="fromkeys-the-method-fromkeys-creates-a-new-dictionary-with-keys-from-seq-and-values-set-to-value">
+<h3><strong><code class="docutils literal notranslate"><span class="pre">fromkeys()</span></code></strong> - The method <code class="docutils literal notranslate"><span class="pre">fromkeys()</span></code> creates a new dictionary with keys from seq and values set to value.<a class="headerlink" href="#fromkeys-the-method-fromkeys-creates-a-new-dictionary-with-keys-from-seq-and-values-set-to-value" title="Permalink to this heading">#</a></h3>
+<p><strong>Syntax:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">dict</span><span class="o">.</span><span class="n">fromkeys</span><span class="p">(</span><span class="n">seq</span><span class="p">[,</span> <span class="n">value</span><span class="p">])</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example:</span>
+
+<span class="n">seq</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Python&#39;</span><span class="p">,</span> <span class="s1">&#39;Java&#39;</span><span class="p">,</span> <span class="s1">&#39;C++&#39;</span><span class="p">)</span>
+<span class="n">my_dict</span> <span class="o">=</span> <span class="n">my_dict</span><span class="o">.</span><span class="n">fromkeys</span><span class="p">(</span><span class="n">seq</span><span class="p">)</span>
+
+<span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;new_dict : </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="nb">str</span><span class="p">(</span><span class="n">my_dict</span><span class="p">))</span> <span class="c1"># ▶ new_dict : {&#39;python&#39;: None, &#39;java&#39;: None, &#39;c++&#39;: None}</span>
+<span class="n">my_dict</span> <span class="o">=</span> <span class="n">my_dict</span><span class="o">.</span><span class="n">fromkeys</span><span class="p">(</span><span class="n">seq</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
+<span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;new_dict : </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="nb">str</span><span class="p">(</span><span class="n">my_dict</span><span class="p">))</span> <span class="c1"># ▶ new_dict : {&#39;python&#39;: 50, &#39;java&#39;: 50, &#39;c++&#39;: 50}</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>new_dict : {&#39;Python&#39;: None, &#39;Java&#39;: None, &#39;C++&#39;: None}
+new_dict : {&#39;Python&#39;: 50, &#39;Java&#39;: 50, &#39;C++&#39;: 50}
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="setdefault-the-method-setdefault-is-similar-to-get-but-will-set-dict-key-default-if-key-is-not-already-in-dict">
+<h3><strong><code class="docutils literal notranslate"><span class="pre">setdefault()</span></code></strong> - The method <code class="docutils literal notranslate"><span class="pre">setdefault()</span></code> is similar to <code class="docutils literal notranslate"><span class="pre">get</span></code> but will set <code class="docutils literal notranslate"><span class="pre">dict[key]</span> <span class="pre">=</span> <span class="pre">default</span></code> if key is not already in dict.<a class="headerlink" href="#setdefault-the-method-setdefault-is-similar-to-get-but-will-set-dict-key-default-if-key-is-not-already-in-dict" title="Permalink to this heading">#</a></h3>
+<p><strong>Syntax:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">dict</span><span class="o">.</span><span class="n">setdefault</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">default</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>key −&gt; This is the key to be searched.</p></li>
+<li><p>default −&gt; This is the Value to be returned in case key is not found.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example:</span>
+
+<span class="n">my_dict</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;emp_name&#39;</span><span class="p">:</span><span class="s1">&#39;Milaan&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">:</span><span class="mi">96</span><span class="p">,</span> <span class="s1">&#39;emp_id&#39;</span><span class="p">:</span><span class="mi">999</span><span class="p">}</span>
+<span class="n">my_dict</span><span class="o">.</span><span class="n">setdefault</span><span class="p">(</span><span class="s1">&#39;company&#39;</span><span class="p">,</span><span class="s1">&#39;JLUFE&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_dict</span><span class="p">[</span><span class="s1">&#39;emp_name&#39;</span><span class="p">])</span>   <span class="c1"># ▶ Milaan</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_dict</span><span class="p">[</span><span class="s1">&#39;company&#39;</span><span class="p">])</span>    <span class="c1"># ▶ JLUFE</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Milaan
+JLUFE
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="update-the-method-update-adds-dictionary-dict2s-key-values-pairs-in-to-dict-this-function-does-not-return-anything">
+<h3><strong><code class="docutils literal notranslate"><span class="pre">update()</span></code></strong> - The method <code class="docutils literal notranslate"><span class="pre">update()</span></code> adds dictionary dict2’s key-values pairs in to dict. This function does not return anything.<a class="headerlink" href="#update-the-method-update-adds-dictionary-dict2s-key-values-pairs-in-to-dict-this-function-does-not-return-anything" title="Permalink to this heading">#</a></h3>
+<p><strong>Syntax:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">dict</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">dict2</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example:</span>
+
+<span class="n">dict1</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">:</span><span class="s1">&#39;Python&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span><span class="s1">&#39;Java&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">:</span><span class="s1">&#39;C++&#39;</span><span class="p">,</span> <span class="mi">4</span><span class="p">:</span><span class="s1">&#39;PHP&#39;</span><span class="p">}</span>
+<span class="n">dict2</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">:</span> <span class="s1">&#39;Python3&#39;</span><span class="p">,</span><span class="mi">5</span><span class="p">:</span><span class="s1">&#39;C&#39;</span><span class="p">}</span>  <span class="c1"># update Python to Python3</span>
+<span class="n">dict1</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">dict2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">dict1</span><span class="p">)</span>   <span class="c1"># ▶ {1: &#39;Python3&#39;, 2: &#39;Java&#39;, 3: &#39;C++&#39;, 4: &#39;PHP&#39;, 5: &#39;C&#39;}</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{1: &#39;Python3&#39;, 2: &#39;Java&#39;, 3: &#39;C++&#39;, 4: &#39;PHP&#39;, 5: &#39;C&#39;}
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="value-the-method-values-returns-a-list-of-all-the-values-available-in-a-given-dictionary">
+<h3><strong><code class="docutils literal notranslate"><span class="pre">value()</span></code></strong> - The method <code class="docutils literal notranslate"><span class="pre">values()</span></code> returns a list of all the values available in a given dictionary.<a class="headerlink" href="#value-the-method-values-returns-a-list-of-all-the-values-available-in-a-given-dictionary" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example:</span>
+
+<span class="n">dict1</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">:</span><span class="s1">&#39;Python&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span><span class="s1">&#39;Java&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">:</span><span class="s1">&#39;C++&#39;</span><span class="p">,</span> <span class="mi">4</span><span class="p">:</span><span class="s1">&#39;PHP&#39;</span><span class="p">}</span>
+<span class="n">values</span><span class="o">=</span> <span class="n">dict1</span><span class="o">.</span><span class="n">values</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">values</span><span class="p">)</span>  <span class="c1"># ▶ dict_values([&#39;Python&#39;, &#39;Java&#39;, &#39;C++&#39;, &#39;PHP&#39;])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>dict_values([&#39;Python&#39;, &#39;Java&#39;, &#39;C++&#39;, &#39;PHP&#39;])
+</pre></div>
+</div>
+</div>
+</div>
+<p>Here is a complete list of all the <strong><a class="reference external" href="https://github.com/milaan9/02_Python_Datatypes/tree/main/005_Python_Dictionary_Methods">built-in methods to work with Dictionary in Python</a></strong>.</p>
+</section>
+</section>
+<section id="python-dictionary-comprehension">
+<h2>Python Dictionary Comprehension<a class="headerlink" href="#python-dictionary-comprehension" title="Permalink to this heading">#</a></h2>
+<p>Dictionary comprehension is an elegant and concise way to create a new dictionary from an iterable in Python.</p>
+<p>Dictionary comprehension consists of an expression pair <strong><code class="docutils literal notranslate"><span class="pre">(key:</span> <span class="pre">value)</span></code></strong> followed by a <strong><code class="docutils literal notranslate"><span class="pre">for</span></code></strong> statement inside curly braces <strong><code class="docutils literal notranslate"><span class="pre">{}</span></code></strong>.</p>
+<p>Here is an example to make a dictionary with each item being a pair of a number and its square.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example: Dictionary Comprehension</span>
+
+<span class="n">squares</span> <span class="o">=</span> <span class="p">{</span><span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">*</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">6</span><span class="p">)}</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">squares</span><span class="p">)</span>  <span class="c1"># ▶ {0: 0, 1: 1, 2: 4, 3: 9, 4: 16, 5: 25}</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{0: 0, 1: 1, 2: 4, 3: 9, 4: 16, 5: 25}
+</pre></div>
+</div>
+</div>
+</div>
+<p>This code is equivalent to</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example:</span>
+
+<span class="n">squares</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">6</span><span class="p">):</span>
+    <span class="n">squares</span><span class="p">[</span><span class="n">x</span><span class="p">]</span> <span class="o">=</span> <span class="n">x</span><span class="o">*</span><span class="n">x</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">squares</span><span class="p">)</span>  <span class="c1"># ▶ {0: 0, 1: 1, 2: 4, 3: 9, 4: 16, 5: 25}</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{0: 0, 1: 1, 2: 4, 3: 9, 4: 16, 5: 25}
+</pre></div>
+</div>
+</div>
+</div>
+<p>A dictionary comprehension can optionally contain more <strong><a class="reference external" href="https://github.com/milaan9/03_Python_Flow_Control/blob/main/005_Python_for_Loop.ipynb">for</a></strong> or <strong><a class="reference external" href="https://github.com/milaan9/03_Python_Flow_Control/blob/main/001_Python_if_statement.ipynb">if</a></strong> statements.</p>
+<p>An optional <strong><code class="docutils literal notranslate"><span class="pre">if</span></code></strong> statement can filter out items to form the new dictionary.</p>
+<p>Here are some examples to make a dictionary with only odd items.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example: Dictionary Comprehension with if conditional</span>
+
+<span class="n">odd_squares</span> <span class="o">=</span> <span class="p">{</span><span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">*</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">11</span><span class="p">)</span> <span class="k">if</span> <span class="n">x</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">1</span><span class="p">}</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">odd_squares</span><span class="p">)</span>  <span class="c1"># ▶ {1: 1, 3: 9, 5: 25, 7: 49, 9: 81}</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{1: 1, 3: 9, 5: 25, 7: 49, 9: 81}
+</pre></div>
+</div>
+</div>
+</div>
+<p>To learn more dictionary comprehensions, visit <strong><a class="reference external" href="https://github.com/milaan9/02_Python_Datatypes/blob/main/005_Python_Dictionary_Methods/Python_Dictionary_Comprehension.ipynb">Python Dictionary Comprehension</a></strong>.</p>
+</section>
+<section id="other-dictionary-operations">
+<h2>Other Dictionary Operations<a class="headerlink" href="#other-dictionary-operations" title="Permalink to this heading">#</a></h2>
+<section id="dictionary-membership-test">
+<h3>1. Dictionary Membership Test<a class="headerlink" href="#dictionary-membership-test" title="Permalink to this heading">#</a></h3>
+<p>We can test if a <strong><code class="docutils literal notranslate"><span class="pre">key</span></code></strong> is in a dictionary or not using the keyword <strong><code class="docutils literal notranslate"><span class="pre">in</span></code></strong>. Notice that the membership test is only for the <strong><code class="docutils literal notranslate"><span class="pre">keys</span></code></strong> and not for the <strong><code class="docutils literal notranslate"><span class="pre">values</span></code></strong>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example: Membership Test for Dictionary Keys</span>
+
+<span class="n">squares</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">:</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">5</span><span class="p">:</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">7</span><span class="p">:</span> <span class="mi">99</span><span class="p">,</span> <span class="mi">9</span><span class="p">:</span> <span class="mi">61</span><span class="p">}</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="mi">1</span> <span class="ow">in</span> <span class="n">squares</span><span class="p">)</span>      <span class="c1"># ▶ True</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="mi">2</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">squares</span><span class="p">)</span>  <span class="c1"># ▶ True</span>
+
+<span class="c1"># membership tests for key only not value</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">99</span> <span class="ow">in</span> <span class="n">squares</span><span class="p">)</span>     <span class="c1"># ▶ False</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+True
+False
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="iterating-through-a-dictionary">
+<h3>2. Iterating Through a Dictionary<a class="headerlink" href="#iterating-through-a-dictionary" title="Permalink to this heading">#</a></h3>
+<p>We can iterate through each key in a dictionary using a <strong><code class="docutils literal notranslate"><span class="pre">for</span></code></strong> loop.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example: Iterating through a Dictionary</span>
+
+<span class="n">squares</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">:</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">5</span><span class="p">:</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">7</span><span class="p">:</span> <span class="mi">49</span><span class="p">,</span> <span class="mi">9</span><span class="p">:</span> <span class="mi">81</span><span class="p">}</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">squares</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">squares</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
+9
+25
+49
+81
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="exercises-span-class-label-label-default-dictionary-span">
+<h2>💻 Exercises ➞ <span class='label label-default'>Dictionary</span><a class="headerlink" href="#exercises-span-class-label-label-default-dictionary-span" title="Permalink to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Create an empty dictionary called <strong><code class="docutils literal notranslate"><span class="pre">bird</span></code></strong></p></li>
+<li><p>Add <strong><code class="docutils literal notranslate"><span class="pre">name</span></code></strong>, <strong><code class="docutils literal notranslate"><span class="pre">color</span></code></strong>, <strong><code class="docutils literal notranslate"><span class="pre">breed</span></code></strong>, <strong><code class="docutils literal notranslate"><span class="pre">legs</span></code></strong>, <strong><code class="docutils literal notranslate"><span class="pre">age</span></code></strong> to the <strong><code class="docutils literal notranslate"><span class="pre">bird</span></code></strong> dictionary</p></li>
+<li><p>Create a <strong><code class="docutils literal notranslate"><span class="pre">student</span></code></strong> dictionary and add <strong><code class="docutils literal notranslate"><span class="pre">first_name</span></code></strong>, <strong><code class="docutils literal notranslate"><span class="pre">last_name</span></code></strong>, <strong><code class="docutils literal notranslate"><span class="pre">gender</span></code></strong>, <strong><code class="docutils literal notranslate"><span class="pre">age</span></code></strong>, <strong><code class="docutils literal notranslate"><span class="pre">marital_status</span></code></strong>, <strong><code class="docutils literal notranslate"><span class="pre">skills</span></code></strong>, <strong><code class="docutils literal notranslate"><span class="pre">country</span></code></strong>, <strong><code class="docutils literal notranslate"><span class="pre">city</span></code></strong> and <strong><code class="docutils literal notranslate"><span class="pre">address</span></code></strong> as keys for the dictionary</p></li>
+<li><p>Get the length of the <strong><code class="docutils literal notranslate"><span class="pre">student</span></code></strong> dictionary</p></li>
+<li><p>Get the value of <strong><code class="docutils literal notranslate"><span class="pre">skills</span></code></strong> and check the data type, it should be a list</p></li>
+<li><p>Modify the <strong><code class="docutils literal notranslate"><span class="pre">skills</span></code></strong> values by adding one or two skills</p></li>
+<li><p>Get the dictionary keys as a list</p></li>
+<li><p>Get the dictionary values as a list</p></li>
+<li><p>Change the dictionary to a list of tuples using <strong><code class="docutils literal notranslate"><span class="pre">items()</span></code></strong> method</p></li>
+<li><p>Delete one of the items in the dictionary</p></li>
+<li><p>Delete one of the dictionaries</p></li>
+</ol>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./content/essentials/python/datatypes"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="004_Python_Tuple.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Python Tuple</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="006_Python_Sets.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Python Sets</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-dictionary-in-python">What is Dictionary in Python?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-python-dictionary">Creating Python Dictionary</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#accessing-elements-from-dictionary">Accessing Elements from Dictionary</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#changing-and-adding-dictionary-elements">Changing and Adding Dictionary elements</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#removing-elements-from-dictionary">Removing elements from Dictionary</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dictionary-built-in-dictionary-functions">Dictionary Built-in Dictionary Functions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#all-dict-the-all-function-returns-true-when-all-elements-in-the-given-iterable-are-true-if-not-it-returns-false"><code class="docutils literal notranslate"><span class="pre">all(dict)</span></code> - The <code class="docutils literal notranslate"><span class="pre">all()</span></code> function returns True when all elements in the given iterable are true. If not, it returns False.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#any-dict-the-any-function-returns-true-if-any-element-of-an-iterable-is-true-if-not-any-returns-false"><code class="docutils literal notranslate"><span class="pre">any(dict)</span></code> - The <code class="docutils literal notranslate"><span class="pre">any()</span></code> function returns True if any element of an iterable is True. If not, any() returns False.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#len-dict-the-len-function-gives-the-total-length-of-the-dictionary-this-would-be-equal-to-the-number-of-items-in-the-dictionary"><strong><code class="docutils literal notranslate"><span class="pre">len(dict)</span></code></strong> - The <code class="docutils literal notranslate"><span class="pre">len()</span></code> function gives the total length of the dictionary. This would be equal to the number of items in the dictionary.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sorted-dict-the-sorted-function-sorts-the-elements-of-a-given-iterable-in-a-specific-order-either-ascending-or-descending-and-returns-the-sorted-iterable-as-a-list"><strong><code class="docutils literal notranslate"><span class="pre">sorted(dict)</span></code></strong> - The <code class="docutils literal notranslate"><span class="pre">sorted()</span></code> function sorts the elements of a given iterable in a specific order (either <strong>ascending</strong> or <strong>descending</strong>) and returns the sorted iterable as a list.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#str-dict-the-str-function-produces-a-printable-string-representation-of-a-dictionary"><strong><code class="docutils literal notranslate"><span class="pre">str(dict)</span></code></strong> - The <code class="docutils literal notranslate"><span class="pre">str()</span></code> function produces a printable string representation of a dictionary.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#type-the-type-function-returns-the-type-of-the-passed-variable-if-passed-variable-is-dictionary-then-it-would-return-a-dictionary-type"><strong><code class="docutils literal notranslate"><span class="pre">type()</span></code></strong> - The <code class="docutils literal notranslate"><span class="pre">type()</span></code> function returns the type of the passed variable. If passed variable is dictionary then it would return a dictionary type.</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-dictionary-methods">Python Dictionary Methods</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#clear-the-method-clear-removes-all-items-from-the-dictionary"><strong><code class="docutils literal notranslate"><span class="pre">clear()</span></code></strong> - The method <code class="docutils literal notranslate"><span class="pre">clear()</span></code> removes all items from the dictionary.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#copy-the-method-copy-returns-a-shallow-copy-of-the-dictionary"><strong><code class="docutils literal notranslate"><span class="pre">copy()</span></code></strong> - The method <code class="docutils literal notranslate"><span class="pre">copy()</span></code> returns a shallow copy of the dictionary.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#itmes-the-method-items-returns-a-list-of-dicts-key-value-tuple-pairs"><strong><code class="docutils literal notranslate"><span class="pre">itmes()</span></code></strong> - The method <code class="docutils literal notranslate"><span class="pre">items()</span></code> returns a list of dict’s (key, value) tuple pairs.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#keys-the-method-keys-returns-a-list-of-all-the-available-keys-in-the-dictionary"><strong><code class="docutils literal notranslate"><span class="pre">keys()</span></code></strong> - The method <code class="docutils literal notranslate"><span class="pre">keys()</span></code> returns a list of all the available keys in the dictionary.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fromkeys-the-method-fromkeys-creates-a-new-dictionary-with-keys-from-seq-and-values-set-to-value"><strong><code class="docutils literal notranslate"><span class="pre">fromkeys()</span></code></strong> - The method <code class="docutils literal notranslate"><span class="pre">fromkeys()</span></code> creates a new dictionary with keys from seq and values set to value.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#setdefault-the-method-setdefault-is-similar-to-get-but-will-set-dict-key-default-if-key-is-not-already-in-dict"><strong><code class="docutils literal notranslate"><span class="pre">setdefault()</span></code></strong> - The method <code class="docutils literal notranslate"><span class="pre">setdefault()</span></code> is similar to <code class="docutils literal notranslate"><span class="pre">get</span></code> but will set <code class="docutils literal notranslate"><span class="pre">dict[key]</span> <span class="pre">=</span> <span class="pre">default</span></code> if key is not already in dict.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#update-the-method-update-adds-dictionary-dict2s-key-values-pairs-in-to-dict-this-function-does-not-return-anything"><strong><code class="docutils literal notranslate"><span class="pre">update()</span></code></strong> - The method <code class="docutils literal notranslate"><span class="pre">update()</span></code> adds dictionary dict2’s key-values pairs in to dict. This function does not return anything.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#value-the-method-values-returns-a-list-of-all-the-values-available-in-a-given-dictionary"><strong><code class="docutils literal notranslate"><span class="pre">value()</span></code></strong> - The method <code class="docutils literal notranslate"><span class="pre">values()</span></code> returns a list of all the values available in a given dictionary.</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-dictionary-comprehension">Python Dictionary Comprehension</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#other-dictionary-operations">Other Dictionary Operations</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dictionary-membership-test">1. Dictionary Membership Test</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iterating-through-a-dictionary">2. Iterating Through a Dictionary</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-span-class-label-label-default-dictionary-span">💻 Exercises ➞ <span class="label label-default">Dictionary</span></a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Anukool Chaturvedi
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,1476 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Python Sets &#8212; Mindmesh</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../../../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="../../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../../../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+
+    <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
+    <script src="../../../../_static/jquery.js"></script>
+    <script src="../../../../_static/underscore.js"></script>
+    <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../../../_static/doctools.js"></script>
+    <script src="../../../../_static/clipboard.min.js"></script>
+    <script src="../../../../_static/copybutton.js"></script>
+    <script src="../../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../../_static/togglebutton.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../../../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'content/essentials/python/datatypes/006_Python_Sets';</script>
+    <link rel="canonical" href="https://anukchat.github.io/content/essentials/python/datatypes/006_Python_Sets.html" />
+    <link rel="shortcut icon" href="../../../../_static/mesh-smallest.png"/>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="Python List Comprehension" href="Python_List_Comprehension.html" />
+    <link rel="prev" title="Python Dictionary" href="005_Python_Dictionary.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../../../intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Mindmesh</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Essentials</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../../intro_python.html">Python</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 has-children"><a class="reference internal" href="../introduction/intro_toc.html">Introduction</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../introduction/002_Hello_World.html">Hello World</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../introduction/003_Python_Keywords_and_Identifiers.html">Keywords and identifiers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../introduction/004_Python_Statement_Indentation_Comments.html">Statement indentation &amp; comments</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../introduction/005_Python_Variables_%26_Constants.html">Variables &amp; constants</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../introduction/006_Python_Literals.html">Literals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../introduction/007_Python_Data_Types.html">Datatypes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../introduction/008_Python_Type_Conversion.html">Type conversion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../introduction/009_Python_Input_Output_Import.html">I/O &amp; imports</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../introduction/010_Python_Operators.html">Operators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../introduction/011_Python_Namespace_and_Scope.html">Namespace &amp; scope</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../introduction/Interpreter_Vs_Compiler.html">Interpreter vs compiler</a></li>
+</ul>
+</li>
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="datatypes_toc.html">Datatypes</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="001_Python_Numbers.html">Numbers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="002_Python_String.html">String</a></li>
+<li class="toctree-l3"><a class="reference internal" href="003_Python_List.html">List</a></li>
+<li class="toctree-l3"><a class="reference internal" href="004_Python_Tuple.html">Tuple</a></li>
+<li class="toctree-l3"><a class="reference internal" href="005_Python_Dictionary.html">Dictionary</a></li>
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">Sets</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Python_List_Comprehension.html">List comprehension</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../intro_mathematics.html">Mathematics</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../mathematics/1_linear_algebra.html">Linear algebra</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../intro_statistics.html">Statistics</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../statistics/statistics.html">Content with notebooks</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Tools</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../tools/tools-for-ml.html">Tools for dataScience and ML</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../tools/tools-for-nn.html">Tools for designing neural networks</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../tools/tools-for-llms.html">Tools for LLMs and multimodels</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../tools/langchain/intro.html">Langchain introduction and setup</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../tools/langchain/lcel.html">Langchain expression language</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tools/langchain/langchain-modules.html">Langchain modules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tools/langchain/langserve.html">LangServe</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tools/langchain/langsmith.html">LangSmith</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tools/langchain/langgraph.html">LangGraph</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../tools/hf/intro.html">HuggingFace introduction and setup</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Concepts</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../concepts/mymarkdown.html">Concepts at glance</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../concepts/markdown-notebooks.html">Sample machine learning</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Core engineering</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../core/markdown.html">Introduction to core</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../core/mymarkdown.html">End to 2nd ML usecase</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Real world use cases</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../real-world/markdown.html">Understand how real world ML works</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../real-world/mymarkdown.html">Real world examples</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/anukchat/anukchat.github.io/main?urlpath=tree/content/essentials/python/datatypes/006_Python_Sets.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onBinder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../../../../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/anukchat/anukchat.github.io/blob/main/content/essentials/python/datatypes/006_Python_Sets.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../../../../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+<a href="https://github.com/anukchat/anukchat.github.io" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Source repository"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../../_sources/content/essentials/python/datatypes/006_Python_Sets.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Python Sets</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-set-in-python">What is Set in Python?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-are-sets-better-than-other-datatypes">How Are Sets Better Than Other DataTypes?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-python-sets">Creating Python Sets</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-an-empty-set-is-a-bit-tricky">Creating an empty set is a bit tricky.</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modifying-a-set-in-python">Modifying a set in Python</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#removing-elements-from-a-set">Removing elements from a set</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-set-operations">Python Set Operations</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#set-union">Set Union</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#set-intersection">Set Intersection</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#set-difference">Set Difference</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#set-symmetric-difference">Set Symmetric Difference</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#built-in-functions-with-set">Built-in Functions with Set</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#other-python-set-methods">Other Python Set Methods</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#other-set-operations">Other Set Operations</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#set-membership-test">1. Set Membership Test</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iterating-through-a-set">2. Iterating Through a Set</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-frozenset">Python Frozenset</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#frozenset-methods">Frozenset methods</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#other-frozenset-methods">Other Frozenset methods</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-span-class-label-label-default-sets-span">💻 Exercises ➞ <span class="label label-default">Sets</span></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-span-class-label-label-default-level-1-span">Exercises ➞ <span class="label label-default">Level 1</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-span-class-label-label-default-level-2-span">Exercises ➞ <span class="label label-default">Level 2</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-span-class-label-label-default-level-3-span">Exercises ➞ <span class="label label-default">Level 3</span></a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <p><small><small><i>
+All the IPython Notebooks in <strong>Python Datatypes</strong> lecture series by <strong><a class="reference external" href="https://www.linkedin.com/in/milaanparmar/">Dr. Milaan Parmar</a></strong> are available &#64; <strong><a class="reference external" href="https://github.com/milaan9/02_Python_Datatypes">GitHub</a></strong>
+</i></small></small></p>
+<section class="tex2jax_ignore mathjax_ignore" id="python-sets">
+<h1>Python Sets<a class="headerlink" href="#python-sets" title="Permalink to this heading">#</a></h1>
+<p>In this class, you’ll learn everything about Python sets; how they are created, adding or removing elements from them, and all operations performed on sets in Python.</p>
+<section id="what-is-set-in-python">
+<h2>What is Set in Python?<a class="headerlink" href="#what-is-set-in-python" title="Permalink to this heading">#</a></h2>
+<p>A set is an <strong>unordered collection of items</strong>. Every set element is unique (no duplicates) and must be immutable (cannot be changed).</p>
+<p>However, a <strong>set itself is mutable. We can add or remove items from it</strong>.</p>
+<p>Sets can also be used to perform mathematical set operations like <strong>union</strong>, <strong>intersection</strong>, <strong>symmetric difference</strong>, etc.</p>
+<section id="summary">
+<h3>Summary<a class="headerlink" href="#summary" title="Permalink to this heading">#</a></h3>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-center"><p>Data types</p></th>
+<th class="head text-center"><p>Type</p></th>
+<th class="head text-center"><p></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p><strong>String</strong></p></td>
+<td class="text-center"><p><strong>immutable</strong></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p><strong>List</strong></p></td>
+<td class="text-center"><p><strong>mutable</strong></p></td>
+<td class="text-center"><p>✎</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p><strong>Tuple</strong></p></td>
+<td class="text-center"><p><strong>immutable</strong></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p><strong>Dictionary</strong></p></td>
+<td class="text-center"><p><strong>mutable</strong></p></td>
+<td class="text-center"><p>✎</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p><strong>Set</strong></p></td>
+<td class="text-center"><p><strong>immutable</strong></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="how-are-sets-better-than-other-datatypes">
+<h2>How Are Sets Better Than Other DataTypes?<a class="headerlink" href="#how-are-sets-better-than-other-datatypes" title="Permalink to this heading">#</a></h2>
+<p>Sets <strong>will not contain multiple occurrences of the same element</strong>, they are very useful in removing duplicate elements from a list or a tuple. Also, they are useful in computing mathematical notations such as union, intersection, etc.</p>
+</section>
+<section id="creating-python-sets">
+<h2>Creating Python Sets<a class="headerlink" href="#creating-python-sets" title="Permalink to this heading">#</a></h2>
+<p>A set is created by placing all the items (elements) inside curly braces <strong><code class="docutils literal notranslate"><span class="pre">{}</span></code></strong>, separated by comma, or by using the built-in <strong><code class="docutils literal notranslate"><span class="pre">set()</span></code></strong> function.</p>
+<p>It can have any number of items and they may be of different types (integer, float, tuple, string etc.). But a set cannot have mutable elements like <strong><a class="reference external" href="https://github.com/milaan9/02_Python_Datatypes/blob/main/003_Python_List.ipynb">lists</a></strong>, sets or <strong><a class="reference external" href="https://github.com/milaan9/02_Python_Datatypes/blob/main/005_Python_Dictionary.ipynb">dictionaries</a></strong> as its elements.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example 1: Different types of sets in Python</span>
+
+<span class="c1"># set of integers</span>
+<span class="n">my_set</span> <span class="o">=</span> <span class="p">{</span><span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">}</span>            
+<span class="nb">print</span><span class="p">(</span><span class="n">my_set</span><span class="p">)</span>           <span class="c1"># ▶ {1, 2, 3, 5, 7}</span>
+ 
+<span class="c1"># set of mixed datatypes</span>
+<span class="n">my_set</span> <span class="o">=</span> <span class="p">{</span><span class="mf">1.0</span><span class="p">,</span> <span class="s2">&quot;Hello&quot;</span><span class="p">,</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)}</span>  
+<span class="nb">print</span><span class="p">(</span><span class="n">my_set</span><span class="p">)</span>           <span class="c1"># ▶ {1.0, &#39;Hello&#39;, (1, 2, 3)}</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{1, 2, 3, 5, 7}
+{1.0, (1, 2, 3), &#39;Hello&#39;}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example 2: Different types of sets in Python</span>
+
+<span class="c1"># set cannot have duplicates</span>
+<span class="n">my_set</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">}</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_set</span><span class="p">)</span>             <span class="c1"># ▶ {1, 2, 3, 4}</span>
+
+<span class="c1"># we can make set from a list</span>
+<span class="n">my_set</span> <span class="o">=</span> <span class="nb">set</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_set</span><span class="p">)</span>             <span class="c1"># ▶ {1, 2, 3}</span>
+
+<span class="c1"># set can have immutable items</span>
+<span class="c1"># here (3, 4) is a immutable list</span>
+
+<span class="n">my_set</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)}</span>   
+<span class="nb">print</span><span class="p">(</span><span class="n">my_set</span><span class="p">)</span>            <span class="c1"># ▶ {1, 2, (3, 4)} ∵ tuple is immutable</span>
+
+<span class="c1"># set cannot have mutable items</span>
+<span class="c1"># here [3, 4] is a mutable list</span>
+
+<span class="n">my_set</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]}</span>  <span class="c1"># this will cause an error ∵ list is mutable</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{1, 2, 3, 4}
+{1, 2, 3}
+{1, 2, (3, 4)}
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">2</span><span class="o">-</span><span class="n">f49307ce4aaa</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">     </span><span class="mi">18</span> <span class="c1"># here [3, 4] is a mutable list</span>
+<span class="g g-Whitespace">     </span><span class="mi">19</span> 
+<span class="ne">---&gt; </span><span class="mi">20</span> <span class="n">my_set</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]}</span>   <span class="c1"># this will cause an error as list is mutable</span>
+
+<span class="ne">TypeError</span>: unhashable type: &#39;list&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<section id="creating-an-empty-set-is-a-bit-tricky">
+<h3>Creating an empty set is a bit tricky.<a class="headerlink" href="#creating-an-empty-set-is-a-bit-tricky" title="Permalink to this heading">#</a></h3>
+<p>Empty curly braces <strong><code class="docutils literal notranslate"><span class="pre">{}</span></code></strong> will make an empty dictionary in Python. To make a set without any elements, we use the <strong><code class="docutils literal notranslate"><span class="pre">set()</span></code></strong> function without any argument.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example: Distinguish set and dictionary while creating empty set</span>
+
+<span class="c1"># initialize a with {}</span>
+<span class="n">a</span> <span class="o">=</span> <span class="p">{}</span>
+
+<span class="c1"># check data type of a</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>  <span class="c1"># ▶ &lt;class &#39;dict&#39;&gt; ∵ dict also use {}</span>
+
+<span class="c1"># initialize a with set()</span>
+<span class="n">a</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+
+<span class="c1"># check data type of a</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">a</span><span class="p">))</span> <span class="c1"># ▶ &lt;class &#39;set&#39;&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;dict&#39;&gt;
+&lt;class &#39;set&#39;&gt;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="modifying-a-set-in-python">
+<h2>Modifying a set in Python<a class="headerlink" href="#modifying-a-set-in-python" title="Permalink to this heading">#</a></h2>
+<p>Sets are mutable. However, since they are unordered, indexing has no meaning.</p>
+<p>We cannot access or change an element of a set using indexing or slicing. Set data type does not support it.</p>
+<p>We can add a single element using the <strong><code class="docutils literal notranslate"><span class="pre">add()</span></code></strong> method, and multiple elements using the <strong><code class="docutils literal notranslate"><span class="pre">update()</span></code></strong> method. The <strong><code class="docutils literal notranslate"><span class="pre">update()</span></code></strong> method can take <strong><a class="reference external" href="https://github.com/milaan9/02_Python_Datatypes/blob/main/004_Python_Tuple.ipynb">tuples</a></strong>, lists, <strong><a class="reference external" href="https://github.com/milaan9/02_Python_Datatypes/blob/main/002_Python_String.ipynb">strings</a></strong> or other sets as its argument. In all cases, duplicates are avoided.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example: </span>
+
+<span class="c1"># initialize my_set</span>
+<span class="n">my_set</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">}</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_set</span><span class="p">)</span>      <span class="c1"># ▶ {1, 3}</span>
+
+<span class="c1"># my_set[0]</span>
+<span class="c1"># if you uncomment above line, you will get an error</span>
+<span class="c1"># TypeError: &#39;set&#39; object does not support indexing</span>
+
+<span class="c1"># add an element</span>
+<span class="n">my_set</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_set</span><span class="p">)</span>     <span class="c1"># ▶ {1, 2, 3}</span>
+
+<span class="c1"># add multiple elements</span>
+<span class="n">my_set</span><span class="o">.</span><span class="n">update</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_set</span><span class="p">)</span>     <span class="c1"># ▶ {1, 2, 3, 4}</span>
+
+<span class="c1"># add list and set</span>
+<span class="n">my_set</span><span class="o">.</span><span class="n">update</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">7</span><span class="p">],(</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">10</span><span class="p">),{</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">10</span><span class="p">})</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_set</span><span class="p">)</span>     <span class="c1"># ▶ {1, 2, 3, 4, 5, 7, 8, 9, 10}</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{1, 3}
+{1, 2, 3}
+{1, 2, 3, 4}
+{1, 2, 3, 4, 5, 7, 8, 9, 10}
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="removing-elements-from-a-set">
+<h2>Removing elements from a set<a class="headerlink" href="#removing-elements-from-a-set" title="Permalink to this heading">#</a></h2>
+<p>A particular item can be removed from a set using the methods <strong><code class="docutils literal notranslate"><span class="pre">discard()</span></code></strong> and <strong><code class="docutils literal notranslate"><span class="pre">remove()</span></code></strong>.</p>
+<p>The only difference between the two is that the <strong><code class="docutils literal notranslate"><span class="pre">discard()</span></code></strong> function leaves a set unchanged if the element is not present in the set. On the other hand, the <strong><code class="docutils literal notranslate"><span class="pre">remove()</span></code></strong> function will raise an error in such a condition (if element is not present in the set).</p>
+<p>The following example will illustrate this.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example: Difference between discard() and remove()</span>
+
+<span class="c1"># initialize my_set</span>
+<span class="n">my_set</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">}</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_set</span><span class="p">)</span>     <span class="c1"># ▶ {1, 3, 4, 5, 6}</span>
+
+<span class="c1"># discard an element</span>
+<span class="n">my_set</span><span class="o">.</span><span class="n">discard</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_set</span><span class="p">)</span>     <span class="c1"># ▶ {1, 3, 5, 6}</span>
+
+<span class="c1"># remove an element</span>
+<span class="n">my_set</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_set</span><span class="p">)</span>     <span class="c1"># ▶ {1, 3, 5}</span>
+
+<span class="c1"># discard an element not present in my_set</span>
+<span class="n">my_set</span><span class="o">.</span><span class="n">discard</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_set</span><span class="p">)</span>     <span class="c1"># ▶ {1, 3, 5} NO ERROR!</span>
+
+<span class="c1"># remove an element not present in my_set you will get an error.</span>
+<span class="n">my_set</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>  <span class="c1"># ▶ KeyError!!!</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{1, 3, 4, 5, 6}
+{1, 3, 5, 6}
+{1, 3, 5}
+{1, 3, 5}
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">KeyError</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">5</span><span class="o">-</span><span class="mi">3</span><span class="n">bfaa309574d</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">     </span><span class="mi">18</span> 
+<span class="g g-Whitespace">     </span><span class="mi">19</span> <span class="c1"># remove an element not present in my_set you will get an error.</span>
+<span class="ne">---&gt; </span><span class="mi">20</span> <span class="n">my_set</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>  <span class="c1"># Output: KeyError!!!</span>
+
+<span class="ne">KeyError</span>: 2
+</pre></div>
+</div>
+</div>
+</div>
+<p>Similarly, we can remove and return an item using the <strong><code class="docutils literal notranslate"><span class="pre">pop()</span></code></strong> method.</p>
+<p>Since set is an unordered data type, there is no way of determining which item will be popped. It is completely arbitrary.</p>
+<p>We can also remove all the items from a set using the <strong><code class="docutils literal notranslate"><span class="pre">clear()</span></code></strong> method.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example:</span>
+
+<span class="c1"># initialize my_set</span>
+<span class="n">my_set</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="s2">&quot;HelloWorld&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_set</span><span class="p">)</span>        <span class="c1"># ▶ unorderd set of unique elements</span>
+
+<span class="c1"># pop an element</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_set</span><span class="o">.</span><span class="n">pop</span><span class="p">())</span>  <span class="c1"># ▶ removes a random element</span>
+
+<span class="c1"># pop another element</span>
+<span class="n">my_set</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_set</span><span class="p">)</span>
+
+<span class="c1"># clear my_set</span>
+<span class="n">my_set</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_set</span><span class="p">)</span>        <span class="c1"># ▶ set()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;W&#39;, &#39;H&#39;, &#39;r&#39;, &#39;d&#39;, &#39;e&#39;, &#39;o&#39;, &#39;l&#39;}
+W
+{&#39;r&#39;, &#39;d&#39;, &#39;e&#39;, &#39;o&#39;, &#39;l&#39;}
+set()
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="python-set-operations">
+<h2>Python Set Operations<a class="headerlink" href="#python-set-operations" title="Permalink to this heading">#</a></h2>
+<p>Sets can be used to carry out mathematical set operations like union, intersection, difference and symmetric difference. We can do this with operators or methods.</p>
+<p>Let us consider the following two sets for the following operations.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">A</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">B</span> <span class="o">=</span> <span class="p">{</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">}</span>
+</pre></div>
+</div>
+<section id="set-union">
+<h3>Set Union<a class="headerlink" href="#set-union" title="Permalink to this heading">#</a></h3>
+<div>
+<img src="img/set1.png" width="300"/>
+</div>
+<p>Union of <strong><code class="docutils literal notranslate"><span class="pre">A</span></code></strong> and <strong><code class="docutils literal notranslate"><span class="pre">B</span></code></strong> is a set of all elements from both sets.</p>
+<p>Union is performed using <strong><code class="docutils literal notranslate"><span class="pre">|</span></code></strong> operator. Same can be accomplished using the <strong><code class="docutils literal notranslate"><span class="pre">union()</span></code></strong> method.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example 1:</span>
+
+<span class="c1"># Set union method</span>
+<span class="c1"># initialize A and B</span>
+<span class="n">A</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">}</span>
+<span class="n">B</span> <span class="o">=</span> <span class="p">{</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">}</span>
+
+<span class="c1"># use | operator</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">A</span> <span class="o">|</span> <span class="n">B</span><span class="p">)</span>      <span class="c1"># ▶ {1, 2, 3, 4, 5, 6, 7, 8}</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{1, 2, 3, 4, 5, 6, 7, 8}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example 2:</span>
+
+<span class="c1"># use union function</span>
+<span class="n">A</span><span class="o">.</span><span class="n">union</span><span class="p">(</span><span class="n">B</span><span class="p">)</span>
+<span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">}</span>
+
+<span class="c1"># use union function on B</span>
+<span class="n">B</span><span class="o">.</span><span class="n">union</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+<span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{1, 2, 3, 4, 5, 6, 7, 8}
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="set-intersection">
+<h3>Set Intersection<a class="headerlink" href="#set-intersection" title="Permalink to this heading">#</a></h3>
+<div>
+<img src="img/set2.png" width="300"/>
+</div>
+<p>Intersection of <strong><code class="docutils literal notranslate"><span class="pre">A</span></code></strong> and <strong><code class="docutils literal notranslate"><span class="pre">B</span></code></strong> is a set of elements that are common in both the sets.</p>
+<p>Intersection is performed using <strong><code class="docutils literal notranslate"><span class="pre">&amp;</span></code></strong> operator. Same can be accomplished using the <strong><code class="docutils literal notranslate"><span class="pre">intersection()</span></code></strong> method.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example 1:</span>
+
+<span class="c1"># Intersection of sets</span>
+<span class="c1"># initialize A and B</span>
+<span class="n">A</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">}</span>
+<span class="n">B</span> <span class="o">=</span> <span class="p">{</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">}</span>
+
+<span class="c1"># use &amp; operator</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">A</span> <span class="o">&amp;</span> <span class="n">B</span><span class="p">)</span>     <span class="c1"># ▶ {4, 5}</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{4, 5}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example 2:</span>
+
+<span class="c1"># use intersection function on A</span>
+<span class="n">A</span><span class="o">.</span><span class="n">intersection</span><span class="p">(</span><span class="n">B</span><span class="p">)</span> <span class="c1"># ▶ {4, 5}</span>
+
+<span class="c1"># use intersection function on B</span>
+<span class="n">B</span><span class="o">.</span><span class="n">intersection</span><span class="p">(</span><span class="n">A</span><span class="p">)</span> <span class="c1"># ▶ {4, 5}</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{4, 5}
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="set-difference">
+<h3>Set Difference<a class="headerlink" href="#set-difference" title="Permalink to this heading">#</a></h3>
+<div>
+<img src="img/set3.png" width="300"/>
+</div>
+<p>Difference of the set <strong><code class="docutils literal notranslate"><span class="pre">B</span></code></strong> from set <strong><code class="docutils literal notranslate"><span class="pre">A</span></code></strong>, <strong><code class="docutils literal notranslate"><span class="pre">(A</span> <span class="pre">-</span> <span class="pre">B)</span></code></strong> is a set of elements that are only in A but not in <strong><code class="docutils literal notranslate"><span class="pre">B</span></code></strong>. Similarly, <strong><code class="docutils literal notranslate"><span class="pre">B</span> <span class="pre">-</span> <span class="pre">A</span></code></strong> is a set of elements in <strong><code class="docutils literal notranslate"><span class="pre">B</span></code></strong> but not in <strong><code class="docutils literal notranslate"><span class="pre">A</span></code></strong>.</p>
+<p>Difference is performed using <strong><code class="docutils literal notranslate"><span class="pre">-</span></code></strong> operator. Same can be accomplished using the <strong><code class="docutils literal notranslate"><span class="pre">difference()</span></code></strong> method.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example 1:</span>
+
+<span class="c1"># Difference of two sets</span>
+<span class="c1"># initialize A and B</span>
+<span class="n">A</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">}</span>
+<span class="n">B</span> <span class="o">=</span> <span class="p">{</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">}</span>
+
+<span class="c1"># use - operator on A</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">A</span> <span class="o">-</span> <span class="n">B</span><span class="p">)</span>    <span class="c1"># ▶ {1, 2, 3}</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">B</span> <span class="o">-</span> <span class="n">A</span><span class="p">)</span>    <span class="c1"># ▶ {8, 6, 7}</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{1, 2, 3}
+{8, 6, 7}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example 2:</span>
+
+<span class="c1"># use difference function on A</span>
+<span class="n">A</span><span class="o">.</span><span class="n">difference</span><span class="p">(</span><span class="n">B</span><span class="p">)</span> <span class="c1"># ▶ {1, 2, 3}</span>
+
+<span class="c1"># use difference function on B</span>
+<span class="n">B</span><span class="o">.</span><span class="n">difference</span><span class="p">(</span><span class="n">A</span><span class="p">)</span> <span class="c1"># ▶ {6, 7, 8}</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{6, 7, 8}
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="set-symmetric-difference">
+<h3>Set Symmetric Difference<a class="headerlink" href="#set-symmetric-difference" title="Permalink to this heading">#</a></h3>
+<div>
+<img src="img/set4.png" width="300"/>
+</div>
+<p>Symmetric Difference of <strong><code class="docutils literal notranslate"><span class="pre">A</span></code></strong> and <strong><code class="docutils literal notranslate"><span class="pre">B</span></code></strong> is a set of elements in <strong><code class="docutils literal notranslate"><span class="pre">A</span></code></strong> and <strong><code class="docutils literal notranslate"><span class="pre">B</span></code></strong> but not in both (excluding the intersection).</p>
+<p>Symmetric difference is performed using <strong><code class="docutils literal notranslate"><span class="pre">^</span></code></strong> operator. Same can be accomplished using the method <strong><code class="docutils literal notranslate"><span class="pre">symmetric_difference()</span></code></strong>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example 1:</span>
+
+<span class="c1"># Symmetric difference of two sets</span>
+<span class="c1"># initialize A and B</span>
+<span class="n">A</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">}</span>
+<span class="n">B</span> <span class="o">=</span> <span class="p">{</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">}</span>
+
+<span class="c1"># use ^ operator</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">A</span> <span class="o">^</span> <span class="n">B</span><span class="p">)</span>    <span class="c1"># ▶ {1, 2, 3, 6, 7, 8}</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{1, 2, 3, 6, 7, 8}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example 2:</span>
+
+<span class="c1"># use symmetric_difference function on A</span>
+<span class="n">A</span><span class="o">.</span><span class="n">symmetric_difference</span><span class="p">(</span><span class="n">B</span><span class="p">)</span>  <span class="c1"># ▶ {1, 2, 3, 6, 7, 8}</span>
+
+<span class="c1"># use symmetric_difference function on B</span>
+<span class="n">B</span><span class="o">.</span><span class="n">symmetric_difference</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>  <span class="c1"># ▶ {1, 2, 3, 6, 7, 8}</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{1, 2, 3, 6, 7, 8}
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="built-in-functions-with-set">
+<h2>Built-in Functions with Set<a class="headerlink" href="#built-in-functions-with-set" title="Permalink to this heading">#</a></h2>
+<p>Built-in functions like <strong><code class="docutils literal notranslate"><span class="pre">all()</span></code></strong>, <strong><code class="docutils literal notranslate"><span class="pre">any()</span></code></strong>, <strong><code class="docutils literal notranslate"><span class="pre">enumerate()</span></code></strong>, <strong><code class="docutils literal notranslate"><span class="pre">len()</span></code></strong>, <strong><code class="docutils literal notranslate"><span class="pre">max()</span></code></strong>, <strong><code class="docutils literal notranslate"><span class="pre">min()</span></code></strong>, <strong><code class="docutils literal notranslate"><span class="pre">sorted()</span></code></strong>, <strong><code class="docutils literal notranslate"><span class="pre">sum()</span></code></strong>, etc. are commonly used with sets to perform different tasks.</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Function</p></th>
+<th class="head text-left"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p><strong><strong><a class="reference external" href="https://github.com/milaan9/04_Python_Functions/blob/main/002_Python_Functions_Built_in/003_Python_all%28%29.ipynb">all()</a></strong></strong></p></td>
+<td class="text-left"><p>Returns <strong><code class="docutils literal notranslate"><span class="pre">True</span></code></strong> if all elements of the set are true (or if the set is empty).</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong><a class="reference external" href="https://github.com/milaan9/04_Python_Functions/blob/main/002_Python_Functions_Built_in/002_Python_any%28%29.ipynb">any()</a></strong></p></td>
+<td class="text-left"><p>Returns <strong><code class="docutils literal notranslate"><span class="pre">True</span></code></strong> if any element of the set is true. If the set is empty, returns <strong><code class="docutils literal notranslate"><span class="pre">False</span></code></strong>.</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong><a class="reference external" href="https://github.com/milaan9/04_Python_Functions/blob/main/002_Python_Functions_Built_in/018_Python_enumerate%28%29.ipynb">enumerate()</a></strong></p></td>
+<td class="text-left"><p>Returns an enumerate object. It contains the index and value for all the items of the set as a pair.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong><a class="reference external" href="https://github.com/milaan9/04_Python_Functions/blob/main/002_Python_Functions_Built_in/040_Python_len%28%29.ipynb">len()</a></strong></p></td>
+<td class="text-left"><p>Returns the length (the number of items) in the set.</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong><a class="reference external" href="https://github.com/milaan9/04_Python_Functions/blob/main/002_Python_Functions_Built_in/041_Python_max%28%29.ipynb">max()</a></strong></p></td>
+<td class="text-left"><p>Returns the largest item in the set.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong><a class="reference external" href="https://github.com/milaan9/04_Python_Functions/blob/main/002_Python_Functions_Built_in/042_Python_min%28%29.ipynb">min()</a></strong></p></td>
+<td class="text-left"><p>Returns the smallest item in the set.</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong><a class="reference external" href="https://github.com/milaan9/04_Python_Functions/blob/main/002_Python_Functions_Built_in/060_Python_sorted%28%29.ipynb">sorted()</a></strong></p></td>
+<td class="text-left"><p>Returns a new sorted list from elements in the set(does not sort the set itself).</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong><a class="reference external" href="https://github.com/milaan9/04_Python_Functions/blob/main/002_Python_Functions_Built_in/062_Python_sum%28%29.ipynb">sum()</a></strong></p></td>
+<td class="text-left"><p>Returns the sum of all elements in the set.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="other-python-set-methods">
+<h2>Other Python Set Methods<a class="headerlink" href="#other-python-set-methods" title="Permalink to this heading">#</a></h2>
+<p>There are many set methods, some of which we have already used above. Here is a list of all the methods that are available with the set objects:</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Method</p></th>
+<th class="head text-left"><p>Operator</p></th>
+<th class="head text-left"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p><strong><a class="reference external" href="https://github.com/milaan9/02_Python_Datatypes/blob/main/006_Python_Sets_Methods/002_Python_Set_add%28%29.ipynb">add()</a></strong></p></td>
+<td class="text-left"><p></p></td>
+<td class="text-left"><p>Adds an element to the set.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong><a class="reference external" href="https://github.com/milaan9/02_Python_Datatypes/blob/main/006_Python_Sets_Methods/003_Python_Set_copy%28%29.ipynb">copy()</a></strong></p></td>
+<td class="text-left"><p></p></td>
+<td class="text-left"><p>Returns a copy of the set.</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong><a class="reference external" href="https://github.com/milaan9/02_Python_Datatypes/blob/main/006_Python_Sets_Methods/001_Python_Set_remove%28%29.ipynb">remove()</a></strong></p></td>
+<td class="text-left"><p></p></td>
+<td class="text-left"><p>Removes an element from the set. If the element is not a member, raises a <strong><code class="docutils literal notranslate"><span class="pre">KeyError</span></code></strong>.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong><a class="reference external" href="https://github.com/milaan9/02_Python_Datatypes/blob/main/006_Python_Sets_Methods/007_Python_Set_discard%28%29.ipynb">discard()</a></strong></p></td>
+<td class="text-left"><p></p></td>
+<td class="text-left"><p>Removes an element from the set if it is a member. (Do nothing if the element is not in set).</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong><a class="reference external" href="https://github.com/milaan9/02_Python_Datatypes/blob/main/006_Python_Sets_Methods/013_Python_Set_pop%28%29.ipynb">pop()</a></strong></p></td>
+<td class="text-left"><p></p></td>
+<td class="text-left"><p>Removes and returns an arbitrary set element. Raises <strong><code class="docutils literal notranslate"><span class="pre">KeyError</span></code></strong> if the set is empty.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong><a class="reference external" href="https://github.com/milaan9/02_Python_Datatypes/blob/main/006_Python_Sets_Methods/004_Python_Set_clear%28%29.ipynb">clear()</a></strong></p></td>
+<td class="text-left"><p></p></td>
+<td class="text-left"><p>Removes all elements from the set.</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong><a class="reference external" href="https://github.com/milaan9/02_Python_Datatypes/blob/main/006_Python_Sets_Methods/016_Python_Set_union%28%29.ipynb">union()</a></strong></p></td>
+<td class="text-left"><p><strong><code class="docutils literal notranslate"><span class="pre">A</span> <span class="pre">|</span> <span class="pre">B</span></code></strong></p></td>
+<td class="text-left"><p>Returns the union of sets in a new set.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong><a class="reference external" href="https://github.com/milaan9/02_Python_Datatypes/blob/main/006_Python_Sets_Methods/017_Python_Set_update%28%29.ipynb">update()</a></strong></p></td>
+<td class="text-left"><p><strong><code class="docutils literal notranslate"><span class="pre">A</span> <span class="pre">|=</span> <span class="pre">B</span></code></strong></p></td>
+<td class="text-left"><p>Updates the set with the union of itself and others.</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong><a class="reference external" href="https://github.com/milaan9/02_Python_Datatypes/blob/main/006_Python_Sets_Methods/008_Python_Set_intersection%28%29.ipynb">intersection()</a></strong></p></td>
+<td class="text-left"><p><strong><code class="docutils literal notranslate"><span class="pre">A</span> <span class="pre">&amp;</span> <span class="pre">B</span></code></strong></p></td>
+<td class="text-left"><p>Returns the intersection of two sets as a new set.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong><a class="reference external" href="https://github.com/milaan9/02_Python_Datatypes/blob/main/006_Python_Sets_Methods/009_Python_Set_intersection_update%28%29.ipynb">intersection_update()</a></strong></p></td>
+<td class="text-left"><p><strong><code class="docutils literal notranslate"><span class="pre">A</span> <span class="pre">&amp;=</span> <span class="pre">B</span></code></strong></p></td>
+<td class="text-left"><p>Updates the set with the intersection of itself and another.</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong><a class="reference external" href="https://github.com/milaan9/02_Python_Datatypes/blob/main/006_Python_Sets_Methods/010_Python_Set_isdisjoint%28%29.ipynb">isdisjoint()</a></strong></p></td>
+<td class="text-left"><p></p></td>
+<td class="text-left"><p>Returns <strong><code class="docutils literal notranslate"><span class="pre">True</span></code></strong> if two sets have a null intersection.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong><a class="reference external" href="https://github.com/milaan9/02_Python_Datatypes/blob/main/006_Python_Sets_Methods/005_Python_Set_difference%28%29.ipynb">difference()</a></strong></p></td>
+<td class="text-left"><p><strong><code class="docutils literal notranslate"><span class="pre">A</span> <span class="pre">–</span> <span class="pre">B</span></code></strong></p></td>
+<td class="text-left"><p>Returns the difference of two or more sets as a new set.</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong><a class="reference external" href="https://github.com/milaan9/02_Python_Datatypes/blob/main/006_Python_Sets_Methods/006_Python_Set_difference_update%28%29.ipynb">difference_update()</a></strong></p></td>
+<td class="text-left"><p><strong><code class="docutils literal notranslate"><span class="pre">A</span> <span class="pre">-=</span> <span class="pre">B</span></code></strong></p></td>
+<td class="text-left"><p>Removes all elements of another set from this set.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong><a class="reference external" href="https://github.com/milaan9/02_Python_Datatypes/blob/main/006_Python_Sets_Methods/014_Python_Set_symmetric_difference%28%29.ipynb">symmetric_difference()</a></strong></p></td>
+<td class="text-left"><p><strong><code class="docutils literal notranslate"><span class="pre">A</span> <span class="pre">^</span> <span class="pre">B</span></code></strong></p></td>
+<td class="text-left"><p>Returns the symmetric difference of two sets as a new set.</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong><a class="reference external" href="https://github.com/milaan9/02_Python_Datatypes/blob/main/006_Python_Sets_Methods/015_Python_Set_symmetric_difference_update%28%29.ipynb">symmetric_difference_update()</a></strong></p></td>
+<td class="text-left"><p><strong><code class="docutils literal notranslate"><span class="pre">A</span> <span class="pre">^=</span> <span class="pre">B</span></code></strong></p></td>
+<td class="text-left"><p>Updates a set with the symmetric difference of itself and another.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong><a class="reference external" href="https://github.com/milaan9/02_Python_Datatypes/blob/main/006_Python_Sets_Methods/011_Python_Set_issubset%28%29.ipynb">issubset()</a></strong></p></td>
+<td class="text-left"><p><strong><code class="docutils literal notranslate"><span class="pre">A</span> <span class="pre">&lt;=</span> <span class="pre">B</span></code></strong></p></td>
+<td class="text-left"><p>Returns <strong><code class="docutils literal notranslate"><span class="pre">True</span></code></strong> if another set contains this set.</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong><a class="reference external" href="https://github.com/milaan9/02_Python_Datatypes/blob/main/006_Python_Sets_Methods/012_Python_Set_issuperset%28%29.ipynb">issuperset()</a></strong></p></td>
+<td class="text-left"><p><strong><code class="docutils literal notranslate"><span class="pre">A</span> <span class="pre">&gt;=</span> <span class="pre">B</span></code></strong></p></td>
+<td class="text-left"><p>Returns <strong><code class="docutils literal notranslate"><span class="pre">True</span></code></strong> if this set contains another set.</p></td>
+</tr>
+</tbody>
+</table>
+<p>Here is a complete list of all the <strong><a class="reference external" href="https://github.com/milaan9/02_Python_Datatypes/tree/main/006_Python_Sets_Methods">built-in methods to work with Sets in Python</a></strong>.</p>
+</section>
+<section id="other-set-operations">
+<h2>Other Set Operations<a class="headerlink" href="#other-set-operations" title="Permalink to this heading">#</a></h2>
+<section id="set-membership-test">
+<h3>1. Set Membership Test<a class="headerlink" href="#set-membership-test" title="Permalink to this heading">#</a></h3>
+<p>We can test if an item exists in a set or not, using the <strong><code class="docutils literal notranslate"><span class="pre">in</span></code></strong> keyword.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example:</span>
+
+<span class="c1"># in keyword in a set</span>
+<span class="c1"># initialize my_set</span>
+<span class="n">my_set</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="s2">&quot;apple&quot;</span><span class="p">)</span>
+
+<span class="c1"># check if &#39;a&#39; is present</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;a&#39;</span> <span class="ow">in</span> <span class="n">my_set</span><span class="p">)</span>      <span class="c1"># ▶ True</span>
+
+<span class="c1"># check if &#39;p&#39; is present</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;p&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">my_set</span><span class="p">)</span>  <span class="c1"># ▶ False</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+False
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="iterating-through-a-set">
+<h3>2. Iterating Through a Set<a class="headerlink" href="#iterating-through-a-set" title="Permalink to this heading">#</a></h3>
+<p>We can iterate through each item in a set using a <strong><code class="docutils literal notranslate"><span class="pre">for</span></code></strong> loop.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">letter</span> <span class="ow">in</span> <span class="nb">set</span><span class="p">(</span><span class="s2">&quot;apple&quot;</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">letter</span><span class="p">)</span>  <span class="c1"># ▶ ∵ unorderd set of unique elements</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>p
+a
+e
+l
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="python-frozenset">
+<h2>Python Frozenset<a class="headerlink" href="#python-frozenset" title="Permalink to this heading">#</a></h2>
+<p>Frozenset is a new class that has the characteristics of a set, but its elements cannot be changed once assigned. While tuples are immutable lists, frozensets are immutable sets.</p>
+<p>Sets being mutable are unhashable, so they can’t be used as dictionary keys. On the other hand, frozensets are hashable and can be used as keys to a dictionary.</p>
+<p>Frozensets can be created using the <strong><a class="reference external" href="https://github.com/milaan9/04_Python_Functions/blob/main/002_Python_Functions_Built_in/024_Python_frozenset%28%29.ipynb">frozenset()</a></strong> function.</p>
+<p>The <strong><code class="docutils literal notranslate"><span class="pre">frozenset()</span></code></strong> function returns an immutable frozenset object initialized with elements from the given iterable.</p>
+<p>This data type supports methods like <strong><code class="docutils literal notranslate"><span class="pre">copy()</span></code></strong>, <strong><code class="docutils literal notranslate"><span class="pre">difference()</span></code></strong>, <strong><code class="docutils literal notranslate"><span class="pre">intersection()</span></code></strong>, <strong><code class="docutils literal notranslate"><span class="pre">isdisjoint()</span></code></strong>, <strong><code class="docutils literal notranslate"><span class="pre">issubset()</span></code></strong>, <strong><code class="docutils literal notranslate"><span class="pre">issuperset()</span></code></strong>, <strong><code class="docutils literal notranslate"><span class="pre">symmetric_difference()</span></code></strong> and <strong><code class="docutils literal notranslate"><span class="pre">union()</span></code></strong>. Being immutable, it does not have methods that add or remove elements.</p>
+<p><strong>Syntax:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">frozenset</span><span class="p">([</span><span class="n">iterable</span><span class="p">])</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example:</span>
+
+<span class="c1"># Frozensets</span>
+<span class="c1"># initialize A and B</span>
+<span class="n">A</span> <span class="o">=</span> <span class="nb">frozenset</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
+<span class="n">B</span> <span class="o">=</span> <span class="nb">frozenset</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A</span><span class="o">.</span><span class="n">isdisjoint</span><span class="p">(</span><span class="n">B</span><span class="p">)</span> <span class="c1"># ▶ False ∵ they have common intersection points</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A</span><span class="o">.</span><span class="n">difference</span><span class="p">(</span><span class="n">B</span><span class="p">)</span> <span class="c1"># ▶ frozenset({1, 2})</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>frozenset({1, 2})
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">|</span> <span class="n">B</span>           <span class="c1"># ▶ frozenset({1, 2, 3, 4, 5, 6})</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>frozenset({1, 2, 3, 4, 5, 6})
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>        <span class="c1"># ▶ Error!</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">AttributeError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">21</span><span class="o">-</span><span class="n">bc9e07fcbe69</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">A</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="c1"># Output: Error!</span>
+
+<span class="ne">AttributeError</span>: &#39;frozenset&#39; object has no attribute &#39;add&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<section id="frozenset-methods">
+<h3>Frozenset methods<a class="headerlink" href="#frozenset-methods" title="Permalink to this heading">#</a></h3>
+<p>This data type supports methods like <strong><code class="docutils literal notranslate"><span class="pre">copy()</span></code></strong>, <strong><code class="docutils literal notranslate"><span class="pre">union()</span></code></strong>, <strong><code class="docutils literal notranslate"><span class="pre">intersection()</span></code></strong>, <strong><code class="docutils literal notranslate"><span class="pre">difference()</span></code></strong>, and <strong><code class="docutils literal notranslate"><span class="pre">symmetric_difference()</span></code></strong>. Being immutable, it does not have methods that add or remove elements.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example 1: Frozensets</span>
+
+<span class="c1"># initialize A and B</span>
+<span class="n">A</span> <span class="o">=</span> <span class="nb">frozenset</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
+<span class="n">B</span> <span class="o">=</span> <span class="nb">frozenset</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">])</span>
+
+<span class="c1"># copying a frozenset</span>
+<span class="n">C</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>                     <span class="c1"># ▶ frozenset({1, 2, 3, 4})</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">C</span><span class="p">)</span>
+
+<span class="c1"># union</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">A</span><span class="o">.</span><span class="n">union</span><span class="p">(</span><span class="n">B</span><span class="p">))</span>                <span class="c1"># ▶ frozenset({1, 2, 3, 4, 5, 6})</span>
+
+<span class="c1"># intersection</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">A</span><span class="o">.</span><span class="n">intersection</span><span class="p">(</span><span class="n">B</span><span class="p">))</span>         <span class="c1"># ▶ frozenset({3, 4})</span>
+
+<span class="c1"># difference</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">A</span><span class="o">.</span><span class="n">difference</span><span class="p">(</span><span class="n">B</span><span class="p">))</span>           <span class="c1"># ▶ frozenset({1, 2})</span>
+
+<span class="c1"># symmetric_difference</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">A</span><span class="o">.</span><span class="n">symmetric_difference</span><span class="p">(</span><span class="n">B</span><span class="p">))</span> <span class="c1"># ▶ frozenset({1, 2, 5, 6})</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>frozenset({1, 2, 3, 4})
+frozenset({1, 2, 3, 4, 5, 6})
+frozenset({3, 4})
+frozenset({1, 2})
+frozenset({1, 2, 5, 6})
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="other-frozenset-methods">
+<h3>Other Frozenset methods<a class="headerlink" href="#other-frozenset-methods" title="Permalink to this heading">#</a></h3>
+<p>Similarly, other set methods like <strong><code class="docutils literal notranslate"><span class="pre">isdisjoint()</span></code></strong>, <strong><code class="docutils literal notranslate"><span class="pre">issubset()</span></code></strong>, and <strong><code class="docutils literal notranslate"><span class="pre">issuperset()</span></code></strong> are also available.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example 2: Frozensets</span>
+
+<span class="c1"># initialize A, B and C</span>
+<span class="n">A</span> <span class="o">=</span> <span class="nb">frozenset</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
+<span class="n">B</span> <span class="o">=</span> <span class="nb">frozenset</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">])</span>
+<span class="n">C</span> <span class="o">=</span> <span class="nb">frozenset</span><span class="p">([</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">])</span>
+
+<span class="c1"># isdisjoint() method</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">A</span><span class="o">.</span><span class="n">isdisjoint</span><span class="p">(</span><span class="n">C</span><span class="p">))</span>  <span class="c1"># ▶ True</span>
+
+<span class="c1"># issubset() method</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">C</span><span class="o">.</span><span class="n">issubset</span><span class="p">(</span><span class="n">B</span><span class="p">))</span>    <span class="c1"># ▶ True</span>
+
+<span class="c1"># issuperset() method</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">B</span><span class="o">.</span><span class="n">issuperset</span><span class="p">(</span><span class="n">C</span><span class="p">))</span>  <span class="c1"># ▶ True</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+True
+True
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="exercises-span-class-label-label-default-sets-span">
+<h2>💻 Exercises ➞ <span class='label label-default'>Sets</span><a class="headerlink" href="#exercises-span-class-label-label-default-sets-span" title="Permalink to this heading">#</a></h2>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="n">mix_fruits</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Guava&#39;</span><span class="p">,</span> <span class="s1">&#39;Pear&#39;</span><span class="p">,</span> <span class="s1">&#39;Mango&#39;</span><span class="p">,</span> <span class="s1">&#39;Apple&#39;</span><span class="p">,</span> <span class="s1">&#39;Fig&#39;</span><span class="p">,</span> <span class="s1">&#39;Orange&#39;</span><span class="p">,</span> <span class="s1">&#39;Banana&#39;</span><span class="p">}</span>
+<span class="n">A</span> <span class="o">=</span> <span class="p">{</span><span class="mi">19</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">26</span><span class="p">}</span>
+<span class="n">B</span> <span class="o">=</span> <span class="p">{</span><span class="mi">19</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">26</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">27</span><span class="p">}</span>
+<span class="n">num</span> <span class="o">=</span> <span class="p">[</span><span class="mi">22</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">26</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">24</span><span class="p">]</span>
+</pre></div>
+</div>
+<section id="exercises-span-class-label-label-default-level-1-span">
+<h3>Exercises ➞ <span class='label label-default'>Level 1</span><a class="headerlink" href="#exercises-span-class-label-label-default-level-1-span" title="Permalink to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>Find the length of the set <strong><code class="docutils literal notranslate"><span class="pre">mix_fruits</span></code></strong></p></li>
+<li><p>Add <strong><code class="docutils literal notranslate"><span class="pre">'Kiwi'</span></code></strong> to <strong><code class="docutils literal notranslate"><span class="pre">mix_fruits</span></code></strong></p></li>
+<li><p>Insert multiple fruits at once to the set <strong><code class="docutils literal notranslate"><span class="pre">mix_fruits</span></code></strong></p></li>
+<li><p>Remove one of the fruit from the set <strong><code class="docutils literal notranslate"><span class="pre">mix_fruits</span></code></strong></p></li>
+<li><p>What is the difference between <strong>remove</strong> and <strong>discard</strong></p></li>
+</ol>
+</section>
+<section id="exercises-span-class-label-label-default-level-2-span">
+<h3>Exercises ➞ <span class='label label-default'>Level 2</span><a class="headerlink" href="#exercises-span-class-label-label-default-level-2-span" title="Permalink to this heading">#</a></h3>
+<p>Use Imaginary values for Set <strong><code class="docutils literal notranslate"><span class="pre">A</span></code></strong> and <strong><code class="docutils literal notranslate"><span class="pre">B</span></code></strong></p>
+<ol class="arabic simple">
+<li><p>Join <strong><code class="docutils literal notranslate"><span class="pre">A</span></code></strong> and <strong><code class="docutils literal notranslate"><span class="pre">B</span></code></strong></p></li>
+<li><p>Find <strong><code class="docutils literal notranslate"><span class="pre">A</span></code></strong> intersection <strong><code class="docutils literal notranslate"><span class="pre">B</span></code></strong></p></li>
+<li><p>Is <strong><code class="docutils literal notranslate"><span class="pre">A</span></code></strong> subset of <strong><code class="docutils literal notranslate"><span class="pre">B</span></code></strong></p></li>
+<li><p>Are <strong><code class="docutils literal notranslate"><span class="pre">A</span></code></strong> and <strong><code class="docutils literal notranslate"><span class="pre">B</span></code></strong> disjoint sets</p></li>
+<li><p>Join <strong><code class="docutils literal notranslate"><span class="pre">A</span></code></strong> with <strong><code class="docutils literal notranslate"><span class="pre">B</span></code></strong> and <strong><code class="docutils literal notranslate"><span class="pre">B</span></code></strong> with <strong><code class="docutils literal notranslate"><span class="pre">A</span></code></strong></p></li>
+<li><p>What is the symmetric difference between A and <strong><code class="docutils literal notranslate"><span class="pre">B</span></code></strong></p></li>
+<li><p>Delete the sets completely</p></li>
+</ol>
+</section>
+<section id="exercises-span-class-label-label-default-level-3-span">
+<h3>Exercises ➞ <span class='label label-default'>Level 3</span><a class="headerlink" href="#exercises-span-class-label-label-default-level-3-span" title="Permalink to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>Convert the <strong><code class="docutils literal notranslate"><span class="pre">num</span></code></strong> to a set and compare the length of the list and the set, which one is bigger?</p></li>
+<li><p>Explain the difference between the following data types: <strong>string</strong>, <strong>list</strong>, <strong>tuple</strong> and <strong>set</strong></p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">I</span> <span class="pre">am</span> <span class="pre">a</span> <span class="pre">researcher</span> <span class="pre">cum</span> <span class="pre">teacher</span> <span class="pre">and</span> <span class="pre">I</span> <span class="pre">love</span> <span class="pre">to</span> <span class="pre">inspire</span> <span class="pre">and</span> <span class="pre">teach</span> <span class="pre">people.</span></code></strong>. How many unique words have been used in the sentence? Use the <strong><code class="docutils literal notranslate"><span class="pre">split()</span></code></strong> methods and set to get the unique words.</p></li>
+</ol>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./content/essentials/python/datatypes"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="005_Python_Dictionary.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Python Dictionary</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="Python_List_Comprehension.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Python List Comprehension</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-set-in-python">What is Set in Python?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-are-sets-better-than-other-datatypes">How Are Sets Better Than Other DataTypes?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-python-sets">Creating Python Sets</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-an-empty-set-is-a-bit-tricky">Creating an empty set is a bit tricky.</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modifying-a-set-in-python">Modifying a set in Python</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#removing-elements-from-a-set">Removing elements from a set</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-set-operations">Python Set Operations</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#set-union">Set Union</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#set-intersection">Set Intersection</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#set-difference">Set Difference</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#set-symmetric-difference">Set Symmetric Difference</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#built-in-functions-with-set">Built-in Functions with Set</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#other-python-set-methods">Other Python Set Methods</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#other-set-operations">Other Set Operations</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#set-membership-test">1. Set Membership Test</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iterating-through-a-set">2. Iterating Through a Set</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-frozenset">Python Frozenset</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#frozenset-methods">Frozenset methods</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#other-frozenset-methods">Other Frozenset methods</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-span-class-label-label-default-sets-span">💻 Exercises ➞ <span class="label label-default">Sets</span></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-span-class-label-label-default-level-1-span">Exercises ➞ <span class="label label-default">Level 1</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-span-class-label-label-default-level-2-span">Exercises ➞ <span class="label label-default">Level 2</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-span-class-label-label-default-level-3-span">Exercises ➞ <span class="label label-default">Level 3</span></a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Anukool Chaturvedi
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
