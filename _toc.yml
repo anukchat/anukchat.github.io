@@ -10,6 +10,7 @@ parts:
       title: Python
       sections:
         - file: content/essentials/python/001_Jupyter_Keyboard_Shortcuts_Practice
+          title: Jupyter Keyboard Shortcuts
         - file: content/essentials/python/002_Hello_World
         - file: content/essentials/python/003_Python_Keywords_and_Identifiers
         - file: content/essentials/python/004_Python_Statement_Indentation_Comments
