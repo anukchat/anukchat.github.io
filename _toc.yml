@@ -6,7 +6,7 @@ root: intro
 parts:
   - caption: Essentials
     chapters:
-    - file: content/essentials/python/getting_started
+    - file: content/essentials/intro_python
       title: Python
       sections:
         - file: content/essentials/python/002_Hello_World
