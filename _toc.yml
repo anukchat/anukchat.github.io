@@ -9,31 +9,48 @@ parts:
     - file: content/essentials/intro_python
       title: Python
       sections:
-        - file: content/essentials/python/002_Hello_World
+        - file: content/essentials/python/introduction/intro_toc
           title: Introduction
-          options:
-            numbered: true
           sections:
-            - file: content/essentials/python/003_Python_Keywords_and_Identifiers
+            - file: content/essentials/python/introduction/002_Hello_World.ipynb
+              title: Hello World
+            - file: content/essentials/python/introduction/003_Python_Keywords_and_Identifiers
               title: Keywords and identifiers
-            - file: content/essentials/python/004_Python_Statement_Indentation_Comments
+            - file: content/essentials/python/introduction/004_Python_Statement_Indentation_Comments
               title: Statement indentation & comments
-            - file: content/essentials/python/005_Python_Variables_&_Constants
+            - file: content/essentials/python/introduction/005_Python_Variables_&_Constants
               title: Variables & constants
-            - file: content/essentials/python/006_Python_Literals
+            - file: content/essentials/python/introduction/006_Python_Literals
               title: Literals
-            - file: content/essentials/python/007_Python_Data_Types
+            - file: content/essentials/python/introduction/007_Python_Data_Types
               title: Datatypes
-            - file: content/essentials/python/008_Python_Type_Conversion
+            - file: content/essentials/python/introduction/008_Python_Type_Conversion
               title: Type conversion
-            - file: content/essentials/python/009_Python_Input_Output_Import
+            - file: content/essentials/python/introduction/009_Python_Input_Output_Import
               title: I/O & imports
-            - file: content/essentials/python/010_Python_Operators
+            - file: content/essentials/python/introduction/010_Python_Operators
               title: Operators
-            - file: content/essentials/python/011_Python_Namespace_and_Scope
+            - file: content/essentials/python/introduction/011_Python_Namespace_and_Scope
               title: Namespace & scope
-            - file: content/essentials/python/Interpreter_Vs_Compiler
+            - file: content/essentials/python/introduction/Interpreter_Vs_Compiler
               title: Interpreter vs compiler
+        - file: content/essentials/python/datatypes/datatypes_toc
+          title: Datatypes
+          sections:
+            - file: content/essentials/python/datatypes/001_Python_Numbers
+              title: Numbers
+            - file: content/essentials/python/datatypes/002_Python_String
+              title: String
+            - file: content/essentials/python/datatypes/003_Python_List
+              title: List
+            - file: content/essentials/python/datatypes/004_Python_Tuple
+              title: Tuple
+            - file: content/essentials/python/datatypes/005_Python_Dictionary
+              title: Dictionary
+            - file: content/essentials/python/datatypes/006_Python_Sets
+              title: Sets
+            - file: content/essentials/python/datatypes/Python_List_Comprehension
+              title: List comprehension
     - file: content/essentials/intro_mathematics
       title: Mathematics
       sections:
