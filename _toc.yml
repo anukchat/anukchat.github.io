@@ -10,27 +10,30 @@ parts:
       title: Python
       sections:
         - file: content/essentials/python/002_Hello_World
-          title: Hello world
-        - file: content/essentials/python/003_Python_Keywords_and_Identifiers
-          title: Python keywords and identifiers
-        - file: content/essentials/python/004_Python_Statement_Indentation_Comments
-          title: Python statement indentation & comments
-        - file: content/essentials/python/005_Python_Variables_&_Constants
-          title: Python variables & constants
-        - file: content/essentials/python/006_Python_Literals
-          title: Python literals
-        - file: content/essentials/python/007_Python_Data_Types
-          title: Python datatypes
-        - file: content/essentials/python/008_Python_Type_Conversion
-          title: Python type conversion
-        - file: content/essentials/python/009_Python_Input_Output_Import
-          title: Python I/O & imports
-        - file: content/essentials/python/010_Python_Operators
-          title: Python operators
-        - file: content/essentials/python/011_Python_Namespace_and_Scope
-          title: Python namespace & scope
-        - file: content/essentials/python/Interpreter_Vs_Compiler
-          title: Bonus - Interpreter vs compiler
+          title: Introduction
+          options:
+            numbered: true
+          sections:
+            - file: content/essentials/python/003_Python_Keywords_and_Identifiers
+              title: Keywords and identifiers
+            - file: content/essentials/python/004_Python_Statement_Indentation_Comments
+              title: Statement indentation & comments
+            - file: content/essentials/python/005_Python_Variables_&_Constants
+              title: Variables & constants
+            - file: content/essentials/python/006_Python_Literals
+              title: Literals
+            - file: content/essentials/python/007_Python_Data_Types
+              title: Datatypes
+            - file: content/essentials/python/008_Python_Type_Conversion
+              title: Type conversion
+            - file: content/essentials/python/009_Python_Input_Output_Import
+              title: I/O & imports
+            - file: content/essentials/python/010_Python_Operators
+              title: Operators
+            - file: content/essentials/python/011_Python_Namespace_and_Scope
+              title: Namespace & scope
+            - file: content/essentials/python/Interpreter_Vs_Compiler
+              title: Interpreter vs compiler
     - file: content/essentials/intro_mathematics
       title: Mathematics
       sections:
