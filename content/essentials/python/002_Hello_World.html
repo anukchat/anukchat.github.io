@@ -69,7 +69,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="Python Keywords and Identifiers" href="003_Python_Keywords_and_Identifiers.html" />
-    <link rel="prev" title="Getting Started with Python" href="getting_started.html" />
+    <link rel="prev" title="Getting Started with Python" href="../intro_python.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -159,13 +159,25 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Essentials</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started with Python</a></li>
-
-<li class="toctree-l1 has-children"><a class="reference internal" href="../intro_mathematics.html">Mathematics</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../intro_python.html">Python</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Hello world</a></li>
+<li class="toctree-l2"><a class="reference internal" href="003_Python_Keywords_and_Identifiers.html">Python keywords and identifiers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="004_Python_Statement_Indentation_Comments.html">Python statement indentation &amp; comments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="005_Python_Variables_%26_Constants.html">Python variables &amp; constants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="006_Python_Literals.html">Python literals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="007_Python_Data_Types.html">Python datatypes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="008_Python_Type_Conversion.html">Python type conversion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="009_Python_Input_Output_Import.html">Python I/O &amp; imports</a></li>
+<li class="toctree-l2"><a class="reference internal" href="010_Python_Operators.html">Python operators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="011_Python_Namespace_and_Scope.html">Python namespace &amp; scope</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Interpreter_Vs_Compiler.html">Bonus - Interpreter vs compiler</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../intro_mathematics.html">Mathematics</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../mathematics/1_linear_algebra.html">Linear algebra</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../intro_statistics.html">Statistics</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../intro_statistics.html">Statistics</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../statistics/statistics.html">Content with notebooks</a></li>
 </ul>
 </li>
@@ -174,8 +186,8 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../tools/tools-for-ml.html">Tools for dataScience and ML</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../tools/tools-for-nn.html">Tools for designing neural networks</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../tools/tools-for-llms.html">Tools for LLMs and multimodels</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../tools/langchain/intro.html">Langchain introduction and setup</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../tools/tools-for-llms.html">Tools for LLMs and multimodels</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../tools/langchain/intro.html">Langchain introduction and setup</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../tools/langchain/lcel.html">Langchain expression language</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../tools/langchain/langchain-modules.html">Langchain modules</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../tools/langchain/langserve.html">LangServe</a></li>
@@ -189,21 +201,21 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Concepts</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../concepts/mymarkdown.html">Concepts at glance</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../concepts/mymarkdown.html">Concepts at glance</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../concepts/markdown-notebooks.html">Sample machine learning</a></li>
 </ul>
 </li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Core engineering</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../core/markdown.html">Introduction to core</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../core/markdown.html">Introduction to core</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../core/mymarkdown.html">End to 2nd ML usecase</a></li>
 </ul>
 </li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Real world use cases</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../real-world/markdown.html">Understand how real world ML works</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../real-world/markdown.html">Understand how real world ML works</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../real-world/mymarkdown.html">Real world examples</a></li>
 </ul>
 </li>
@@ -421,14 +433,16 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#writing-the-hello-world-program">Writing the “Hello, World!” Program</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lets-break-down-the-different-components-of-the-code">Let’s break down the different components of the code.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-the-hello-world-program">Running the “Hello, World!” Program</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-print-blank-lines">How to print blank lines</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example">Example:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-the-hello-world-program">Running the “Hello, World!” Program</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-print-blank-lines">How to print blank lines</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#example">Example:</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#print-end-command">Print end command</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-1">Example 1:</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-2">Example 2:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#print-end-command">Print end command</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#example-1">Example 1:</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#example-2">Example 2:</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -442,7 +456,7 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section id="python-hello-world">
+  <section class="tex2jax_ignore mathjax_ignore" id="python-hello-world">
 <h1>Python Hello, World<a class="headerlink" href="#python-hello-world" title="Permalink to this heading">#</a></h1>
 <p><strong>Python</strong> is easy to learn and code and can be execute with python <strong>interpreter</strong>. We can also use Python <strong>interactive shell</strong> to test python code immediately. A simple hello world example is given below. Write below code in a file and save with <strong>.py</strong> extension. Python source file has <strong>.pyextension</strong>.</p>
 <section id="writing-the-hello-world-program">
@@ -485,12 +499,11 @@ document.write(`
 </div>
 <p><strong>Congratulations!</strong> You have written the “Hello, World!” program in <strong>Python 3</strong>.
 Since the program ran, you can now confirm that <strong>Python 3</strong> is properly installed and that the program is <strong>syntactically correct</strong>.</p>
-</section>
 <section id="how-to-print-blank-lines">
-<h2>How to print blank lines<a class="headerlink" href="#how-to-print-blank-lines" title="Permalink to this heading">#</a></h2>
+<h3>How to print blank lines<a class="headerlink" href="#how-to-print-blank-lines" title="Permalink to this heading">#</a></h3>
 <p>Sometimes you need to print one blank line in your Python program. Following are an example to perform this task.</p>
 <section id="example">
-<h3>Example:<a class="headerlink" href="#example" title="Permalink to this heading">#</a></h3>
+<h4>Example:<a class="headerlink" href="#example" title="Permalink to this heading">#</a></h4>
 <p>Let us print 8 blank lines. You can type:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="go">&gt;&gt;&gt;print (9 * &quot;\n&quot;)</span>
 </pre></div>
@@ -597,10 +610,10 @@ I&#39;m very *happy*
 </section>
 </section>
 <section id="print-end-command">
-<h2>Print end command<a class="headerlink" href="#print-end-command" title="Permalink to this heading">#</a></h2>
+<h3>Print end command<a class="headerlink" href="#print-end-command" title="Permalink to this heading">#</a></h3>
 <p>By default, python’s <strong><code class="docutils literal notranslate"><span class="pre">print()</span></code></strong> function ends with a newline. This function comes with a parameter called <strong><code class="docutils literal notranslate"><span class="pre">end</span></code></strong>. The default value of this parameter is <strong><code class="docutils literal notranslate"><span class="pre">\n</span></code></strong>, i.e., the new line character. You can end a print statement with any character or string using this parameter. This is available in only in <strong>Python 3+</strong></p>
 <section id="example-1">
-<h3>Example 1:<a class="headerlink" href="#example-1" title="Permalink to this heading">#</a></h3>
+<h4>Example 1:<a class="headerlink" href="#example-1" title="Permalink to this heading">#</a></h4>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="go">&gt;&gt;&gt;print (&quot;Welcome to&quot;, end = &#39; &#39;) </span>
 <span class="go">&gt;&gt;&gt;print (&quot;Python&quot;, end = &#39;!&#39;)`</span>
 
@@ -622,7 +635,7 @@ I&#39;m very *happy*
 </div>
 </section>
 <section id="example-2">
-<h3>Example 2:<a class="headerlink" href="#example-2" title="Permalink to this heading">#</a></h3>
+<h4>Example 2:<a class="headerlink" href="#example-2" title="Permalink to this heading">#</a></h4>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="go">&gt;&gt;&gt;print(&quot;Python&quot; , end = &#39;@&#39;)</span>
 
 <span class="go">Python@</span>
@@ -667,6 +680,7 @@ I&#39;m very *happy*
 </section>
 </section>
 </section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -699,7 +713,7 @@ I&#39;m very *happy*
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="getting_started.html"
+       href="../intro_python.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
@@ -733,14 +747,16 @@ I&#39;m very *happy*
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#writing-the-hello-world-program">Writing the “Hello, World!” Program</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lets-break-down-the-different-components-of-the-code">Let’s break down the different components of the code.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-the-hello-world-program">Running the “Hello, World!” Program</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-print-blank-lines">How to print blank lines</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example">Example:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-the-hello-world-program">Running the “Hello, World!” Program</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-print-blank-lines">How to print blank lines</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#example">Example:</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#print-end-command">Print end command</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-1">Example 1:</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-2">Example 2:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#print-end-command">Print end command</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#example-1">Example 1:</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#example-2">Example 2:</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>

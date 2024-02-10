@@ -161,13 +161,25 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Essentials</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started with Python</a></li>
-
-<li class="toctree-l1 has-children"><a class="reference internal" href="../intro_mathematics.html">Mathematics</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../intro_python.html">Python</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="002_Hello_World.html">Hello world</a></li>
+<li class="toctree-l2"><a class="reference internal" href="003_Python_Keywords_and_Identifiers.html">Python keywords and identifiers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="004_Python_Statement_Indentation_Comments.html">Python statement indentation &amp; comments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="005_Python_Variables_%26_Constants.html">Python variables &amp; constants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="006_Python_Literals.html">Python literals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="007_Python_Data_Types.html">Python datatypes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="008_Python_Type_Conversion.html">Python type conversion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="009_Python_Input_Output_Import.html">Python I/O &amp; imports</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Python operators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="011_Python_Namespace_and_Scope.html">Python namespace &amp; scope</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Interpreter_Vs_Compiler.html">Bonus - Interpreter vs compiler</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../intro_mathematics.html">Mathematics</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../mathematics/1_linear_algebra.html">Linear algebra</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../intro_statistics.html">Statistics</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../intro_statistics.html">Statistics</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../statistics/statistics.html">Content with notebooks</a></li>
 </ul>
 </li>
@@ -176,8 +188,8 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../tools/tools-for-ml.html">Tools for dataScience and ML</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../tools/tools-for-nn.html">Tools for designing neural networks</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../tools/tools-for-llms.html">Tools for LLMs and multimodels</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../tools/langchain/intro.html">Langchain introduction and setup</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../tools/tools-for-llms.html">Tools for LLMs and multimodels</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../tools/langchain/intro.html">Langchain introduction and setup</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../tools/langchain/lcel.html">Langchain expression language</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../tools/langchain/langchain-modules.html">Langchain modules</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../tools/langchain/langserve.html">LangServe</a></li>
@@ -191,21 +203,21 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Concepts</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../concepts/mymarkdown.html">Concepts at glance</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../concepts/mymarkdown.html">Concepts at glance</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../concepts/markdown-notebooks.html">Sample machine learning</a></li>
 </ul>
 </li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Core engineering</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../core/markdown.html">Introduction to core</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../core/markdown.html">Introduction to core</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../core/mymarkdown.html">End to 2nd ML usecase</a></li>
 </ul>
 </li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Real world use cases</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../real-world/markdown.html">Understand how real world ML works</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../real-world/markdown.html">Understand how real world ML works</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../real-world/mymarkdown.html">Real world examples</a></li>
 </ul>
 </li>
@@ -421,29 +433,33 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Python Operators</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#arithmatic-operators">1. Arithmatic Operators</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-arithmetic-operators-in-python">Example : Arithmetic operators in Python</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#comparison-relational-operators">2. Comparison/Relational operators</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-comparison-operators-in-python">Example : Comparison operators in Python</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#arithmatic-operators">1. Arithmatic Operators</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-arithmetic-operators-in-python">Example : Arithmetic operators in Python</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#logical-boolean-operators">3. Logical/Boolean operators</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-logical-operators-in-python">Example : Logical operators in Python</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#comparison-relational-operators">2. Comparison/Relational operators</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-comparison-operators-in-python">Example : Comparison operators in Python</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#logical-boolean-operators">3. Logical/Boolean operators</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-logical-operators-in-python">Example : Logical operators in Python</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bitwise-operators">4. Bitwise operators</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#assignment-operators">5. Assignment operators</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#special-operators">6. Special operators</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#identity-operators">1. Identity operators</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-identity-operators-in-python">Example : Identity operators in Python</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#membership-operators">2. Membership operators</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-membership-operators-in-python">Example : Membership operators in Python</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#identity-operators">1. Identity operators</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#example-identity-operators-in-python">Example : Identity operators in Python</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-span-class-label-label-default-operators-span">💻 Exercises ➞ <span class="label label-default">Operators</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#membership-operators">2. Membership operators</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#example-membership-operators-in-python">Example : Membership operators in Python</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-span-class-label-label-default-operators-span">💻 Exercises ➞ <span class="label label-default">Operators</span></a></li>
 </ul>
 </li>
 </ul>
-
             </nav>
         </div>
     </div>
@@ -454,7 +470,7 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section id="python-operators">
+  <section class="tex2jax_ignore mathjax_ignore" id="python-operators">
 <h1>Python Operators<a class="headerlink" href="#python-operators" title="Permalink to this heading">#</a></h1>
 <p>Python can be used like a calculator. Simply type in expressions to get them evaluated.</p>
 <p><strong>What are operators in python?</strong></p>
@@ -528,9 +544,8 @@ document.write(`
 </tbody>
 </table>
 <p>As expected these operations generally promote to the most general type of any of the numbers involved i.e. int -&gt; float -&gt; complex.</p>
-</section>
 <section id="example-arithmetic-operators-in-python">
-<h2>Example : Arithmetic operators in Python<a class="headerlink" href="#example-arithmetic-operators-in-python" title="Permalink to this heading">#</a></h2>
+<h3>Example : Arithmetic operators in Python<a class="headerlink" href="#example-arithmetic-operators-in-python" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Addition: &#39;</span><span class="p">,</span> <span class="mi">1</span> <span class="o">+</span> <span class="mi">2</span><span class="p">)</span>
@@ -700,6 +715,7 @@ x // y = 5
 </div>
 </div>
 </section>
+</section>
 <section id="comparison-relational-operators">
 <h2>2. Comparison/Relational operators<a class="headerlink" href="#comparison-relational-operators" title="Permalink to this heading">#</a></h2>
 <p>Comparison operators are used to <strong>compare values</strong>. It either returns <strong>True</strong> or <strong>False</strong> according to the <strong>condition</strong>.</p>
@@ -745,9 +761,8 @@ x // y = 5
 </tbody>
 </table>
 <p>Note the difference between <strong><code class="docutils literal notranslate"><span class="pre">==</span></code></strong> (equality test) and <strong><code class="docutils literal notranslate"><span class="pre">=</span></code></strong> (assignment)</p>
-</section>
 <section id="example-comparison-operators-in-python">
-<h2>Example : Comparison operators in Python<a class="headerlink" href="#example-comparison-operators-in-python" title="Permalink to this heading">#</a></h2>
+<h3>Example : Comparison operators in Python<a class="headerlink" href="#example-comparison-operators-in-python" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="mi">6</span> <span class="o">&gt;</span> <span class="mi">3</span><span class="p">)</span>                           <span class="c1"># True, because 3 is greater than 2</span>
@@ -848,7 +863,7 @@ x &lt;= y is False
 </section>
 </section>
 <section id="logical-boolean-operators">
-<h1>3. Logical/Boolean operators<a class="headerlink" href="#logical-boolean-operators" title="Permalink to this heading">#</a></h1>
+<h2>3. Logical/Boolean operators<a class="headerlink" href="#logical-boolean-operators" title="Permalink to this heading">#</a></h2>
 <p>Logical operators are the <strong><code class="docutils literal notranslate"><span class="pre">and</span></code></strong>, <strong><code class="docutils literal notranslate"><span class="pre">or</span></code></strong>, <strong><code class="docutils literal notranslate"><span class="pre">not</span></code></strong> operators.</p>
 <table class="table">
 <thead>
@@ -873,7 +888,7 @@ x &lt;= y is False
 </tbody>
 </table>
 <section id="example-logical-operators-in-python">
-<h2>Example : Logical operators in Python<a class="headerlink" href="#example-logical-operators-in-python" title="Permalink to this heading">#</a></h2>
+<h3>Example : Logical operators in Python<a class="headerlink" href="#example-logical-operators-in-python" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;True == True: &#39;</span><span class="p">,</span> <span class="kc">True</span> <span class="o">==</span> <span class="kc">True</span><span class="p">)</span>
@@ -1003,6 +1018,7 @@ not x is False
 </div>
 </div>
 <p>Here is the <strong><a class="reference external" href="https://github.com/milaan9/01_Python_Introduction/blob/main/Python_Keywords_List.ipynb">truth table (&#64; and, or, not)</a></strong> for these operators.</p>
+</section>
 </section>
 <section id="bitwise-operators">
 <h2>4. Bitwise operators<a class="headerlink" href="#bitwise-operators" title="Permalink to this heading">#</a></h2>
@@ -1262,9 +1278,8 @@ x is 144
 </tr>
 </tbody>
 </table>
-</section>
 <section id="example-identity-operators-in-python">
-<h3>Example : Identity operators in Python<a class="headerlink" href="#example-identity-operators-in-python" title="Permalink to this heading">#</a></h3>
+<h4>Example : Identity operators in Python<a class="headerlink" href="#example-identity-operators-in-python" title="Permalink to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x1</span> <span class="o">=</span> <span class="mi">6</span>
@@ -1297,6 +1312,7 @@ False
 <p>Here, we see that <strong><code class="docutils literal notranslate"><span class="pre">x1</span></code></strong> and <strong><code class="docutils literal notranslate"><span class="pre">y1</span></code></strong> are integers of same values, so they are equal as well as identical. Same is the case with <strong><code class="docutils literal notranslate"><span class="pre">x2</span></code></strong> and <strong><code class="docutils literal notranslate"><span class="pre">y2</span></code></strong> (strings).</p>
 <p>But <strong><code class="docutils literal notranslate"><span class="pre">x3</span></code></strong> and <strong><code class="docutils literal notranslate"><span class="pre">y3</span></code></strong> are list. They are equal but not identical. It is because interpreter locates them <strong>separately in memory</strong> although they are equal.</p>
 </section>
+</section>
 <section id="membership-operators">
 <h3>2. Membership operators<a class="headerlink" href="#membership-operators" title="Permalink to this heading">#</a></h3>
 <p><strong><code class="docutils literal notranslate"><span class="pre">in</span></code></strong> and <strong><code class="docutils literal notranslate"><span class="pre">not</span> <span class="pre">in</span></code></strong> are the membership operators in Python. They are used to test whether a value or variable is found in a <strong>sequence</strong> (<strong><a class="reference external" href="https://github.com/milaan9/02_Python_Datatypes/blob/main/002_Python_String.ipynb">string</a></strong>, <strong><a class="reference external" href="https://github.com/milaan9/02_Python_Datatypes/blob/main/003_Python_List.ipynb">list</a></strong>, <strong><a class="reference external" href="https://github.com/milaan9/02_Python_Datatypes/blob/main/004_Python_Tuple.ipynb">tuple</a></strong>, <strong><a class="reference external" href="https://github.com/milaan9/02_Python_Datatypes/blob/main/006_Python_Sets.ipynb">set</a></strong> and <strong><a class="reference external" href="https://github.com/milaan9/02_Python_Datatypes/blob/main/005_Python_Dictionary.ipynb">dictionary</a></strong>).</p>
@@ -1319,9 +1335,8 @@ False
 </tr>
 </tbody>
 </table>
-</section>
 <section id="example-membership-operators-in-python">
-<h3>Example : Membership operators in Python<a class="headerlink" href="#example-membership-operators-in-python" title="Permalink to this heading">#</a></h3>
+<h4>Example : Membership operators in Python<a class="headerlink" href="#example-membership-operators-in-python" title="Permalink to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;Hello world&#39;</span>
@@ -1355,7 +1370,7 @@ False
 </section>
 </section>
 <section id="exercises-span-class-label-label-default-operators-span">
-<h2>💻 Exercises ➞ <span class='label label-default'>Operators</span><a class="headerlink" href="#exercises-span-class-label-label-default-operators-span" title="Permalink to this heading">#</a></h2>
+<h3>💻 Exercises ➞ <span class='label label-default'>Operators</span><a class="headerlink" href="#exercises-span-class-label-label-default-operators-span" title="Permalink to this heading">#</a></h3>
 <ol class="arabic simple">
 <li><p>Declare your age as integer variable</p></li>
 <li><p>Declare your height as a float variable</p></li>
@@ -1416,6 +1431,7 @@ False
 <span class="mi">5</span> <span class="mi">10</span> <span class="mi">15</span> <span class="mi">20</span> <span class="mi">25</span>
 </pre></div>
 </div>
+</section>
 </section>
 </section>
 
@@ -1482,29 +1498,33 @@ False
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Python Operators</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#arithmatic-operators">1. Arithmatic Operators</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-arithmetic-operators-in-python">Example : Arithmetic operators in Python</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#comparison-relational-operators">2. Comparison/Relational operators</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-comparison-operators-in-python">Example : Comparison operators in Python</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#arithmatic-operators">1. Arithmatic Operators</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-arithmetic-operators-in-python">Example : Arithmetic operators in Python</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#logical-boolean-operators">3. Logical/Boolean operators</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-logical-operators-in-python">Example : Logical operators in Python</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#comparison-relational-operators">2. Comparison/Relational operators</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-comparison-operators-in-python">Example : Comparison operators in Python</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#logical-boolean-operators">3. Logical/Boolean operators</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-logical-operators-in-python">Example : Logical operators in Python</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bitwise-operators">4. Bitwise operators</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#assignment-operators">5. Assignment operators</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#special-operators">6. Special operators</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#identity-operators">1. Identity operators</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-identity-operators-in-python">Example : Identity operators in Python</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#membership-operators">2. Membership operators</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-membership-operators-in-python">Example : Membership operators in Python</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#identity-operators">1. Identity operators</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#example-identity-operators-in-python">Example : Identity operators in Python</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-span-class-label-label-default-operators-span">💻 Exercises ➞ <span class="label label-default">Operators</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#membership-operators">2. Membership operators</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#example-membership-operators-in-python">Example : Membership operators in Python</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-span-class-label-label-default-operators-span">💻 Exercises ➞ <span class="label label-default">Operators</span></a></li>
 </ul>
 </li>
 </ul>
-
   </nav></div>
 
 </div></div>

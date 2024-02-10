@@ -159,13 +159,25 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Essentials</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started with Python</a></li>
-
-<li class="toctree-l1 has-children"><a class="reference internal" href="../intro_mathematics.html">Mathematics</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../intro_python.html">Python</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="002_Hello_World.html">Hello world</a></li>
+<li class="toctree-l2"><a class="reference internal" href="003_Python_Keywords_and_Identifiers.html">Python keywords and identifiers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="004_Python_Statement_Indentation_Comments.html">Python statement indentation &amp; comments</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Python variables &amp; constants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="006_Python_Literals.html">Python literals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="007_Python_Data_Types.html">Python datatypes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="008_Python_Type_Conversion.html">Python type conversion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="009_Python_Input_Output_Import.html">Python I/O &amp; imports</a></li>
+<li class="toctree-l2"><a class="reference internal" href="010_Python_Operators.html">Python operators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="011_Python_Namespace_and_Scope.html">Python namespace &amp; scope</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Interpreter_Vs_Compiler.html">Bonus - Interpreter vs compiler</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../intro_mathematics.html">Mathematics</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../mathematics/1_linear_algebra.html">Linear algebra</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../intro_statistics.html">Statistics</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../intro_statistics.html">Statistics</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../statistics/statistics.html">Content with notebooks</a></li>
 </ul>
 </li>
@@ -174,8 +186,8 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../tools/tools-for-ml.html">Tools for dataScience and ML</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../tools/tools-for-nn.html">Tools for designing neural networks</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../tools/tools-for-llms.html">Tools for LLMs and multimodels</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../tools/langchain/intro.html">Langchain introduction and setup</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../tools/tools-for-llms.html">Tools for LLMs and multimodels</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../tools/langchain/intro.html">Langchain introduction and setup</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../tools/langchain/lcel.html">Langchain expression language</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../tools/langchain/langchain-modules.html">Langchain modules</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../tools/langchain/langserve.html">LangServe</a></li>
@@ -189,21 +201,21 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Concepts</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../concepts/mymarkdown.html">Concepts at glance</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../concepts/mymarkdown.html">Concepts at glance</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../concepts/markdown-notebooks.html">Sample machine learning</a></li>
 </ul>
 </li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Core engineering</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../core/markdown.html">Introduction to core</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../core/markdown.html">Introduction to core</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../core/mymarkdown.html">End to 2nd ML usecase</a></li>
 </ul>
 </li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Real world use cases</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../real-world/markdown.html">Understand how real world ML works</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../real-world/markdown.html">Understand how real world ML works</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../real-world/mymarkdown.html">Real world examples</a></li>
 </ul>
 </li>
@@ -419,7 +431,6 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Python Variables and Constants</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-variables">1. Python Variables</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#let-us-see-valid-variable-names">Let us see valid variable names</a></li>
 </ul>
@@ -435,18 +446,15 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-1-declaring-and-assigning-value-to-a-constant">Example 1: Declaring and assigning value to a constant</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#rules-and-naming-convention-for-variables-and-constants">Rules and Naming Convention for Variables and constants</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-span-class-label-label-default-variables-span">💻 Exercises ➞ <span class="label label-default">Variables</span></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-span-class-label-label-default-level-1-span">Exercises ➞ <span class="label label-default">Level 1</span></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-span-class-label-label-default-level-2-span">Exercises ➞ <span class="label label-default">Level 2</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rules-and-naming-convention-for-variables-and-constants">Rules and Naming Convention for Variables and constants</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-span-class-label-label-default-variables-span">💻 Exercises ➞ <span class="label label-default">Variables</span></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-span-class-label-label-default-level-1-span">Exercises ➞ <span class="label label-default">Level 1</span></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-span-class-label-label-default-level-2-span">Exercises ➞ <span class="label label-default">Level 2</span></a></li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
-
             </nav>
         </div>
     </div>
@@ -457,7 +465,7 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section id="python-variables-and-constants">
+  <section class="tex2jax_ignore mathjax_ignore" id="python-variables-and-constants">
 <h1>Python Variables and Constants<a class="headerlink" href="#python-variables-and-constants" title="Permalink to this heading">#</a></h1>
 <p>In this class, you will learn about Python variables, constants, literals and their use cases.</p>
 <section id="python-variables">
@@ -811,9 +819,8 @@ baidu.com
 </div></blockquote>
 </section>
 </section>
-</section>
 <section id="rules-and-naming-convention-for-variables-and-constants">
-<h1>Rules and Naming Convention for Variables and constants<a class="headerlink" href="#rules-and-naming-convention-for-variables-and-constants" title="Permalink to this heading">#</a></h1>
+<h2>Rules and Naming Convention for Variables and constants<a class="headerlink" href="#rules-and-naming-convention-for-variables-and-constants" title="Permalink to this heading">#</a></h2>
 <p>The examples you have seen so far have used <strong>short</strong>, terse variable names like m and n. But variable names can be more <strong>verbose</strong>. In fact, it is usually beneficial if they are because it makes the purpose of the variable more evident at first glance.</p>
 <ol class="arabic simple">
 <li><p>Constant and variable names should have a combination of letters in lowercase (a to z) or uppercase (<strong>A to Z</strong>) or digits (<strong>0 to 9</strong>) or an underscore <strong><code class="docutils literal notranslate"><span class="pre">_</span></code></strong>. For example:</p></li>
@@ -917,9 +924,9 @@ baidu.com
 </div>
 </div>
 <section id="exercises-span-class-label-label-default-variables-span">
-<h2>💻 Exercises ➞ <span class='label label-default'>Variables</span><a class="headerlink" href="#exercises-span-class-label-label-default-variables-span" title="Permalink to this heading">#</a></h2>
+<h3>💻 Exercises ➞ <span class='label label-default'>Variables</span><a class="headerlink" href="#exercises-span-class-label-label-default-variables-span" title="Permalink to this heading">#</a></h3>
 <section id="exercises-span-class-label-label-default-level-1-span">
-<h3>Exercises ➞ <span class='label label-default'>Level 1</span><a class="headerlink" href="#exercises-span-class-label-label-default-level-1-span" title="Permalink to this heading">#</a></h3>
+<h4>Exercises ➞ <span class='label label-default'>Level 1</span><a class="headerlink" href="#exercises-span-class-label-label-default-level-1-span" title="Permalink to this heading">#</a></h4>
 <ol class="arabic simple">
 <li><p>Write a python comment saying <strong><code class="docutils literal notranslate"><span class="pre">Python</span> <span class="pre">variables</span> <span class="pre">and</span> <span class="pre">Constants</span></code></strong></p></li>
 <li><p>Declare a <strong><code class="docutils literal notranslate"><span class="pre">first_name</span></code></strong> variable and assign a value to it</p></li>
@@ -930,7 +937,7 @@ baidu.com
 </ol>
 </section>
 <section id="exercises-span-class-label-label-default-level-2-span">
-<h3>Exercises ➞ <span class='label label-default'>Level 2</span><a class="headerlink" href="#exercises-span-class-label-label-default-level-2-span" title="Permalink to this heading">#</a></h3>
+<h4>Exercises ➞ <span class='label label-default'>Level 2</span><a class="headerlink" href="#exercises-span-class-label-label-default-level-2-span" title="Permalink to this heading">#</a></h4>
 <ol class="arabic simple">
 <li><p>Check the data type of all your variables using <strong><code class="docutils literal notranslate"><span class="pre">type()</span></code></strong> built-in function</p></li>
 <li><p>Using the <strong><code class="docutils literal notranslate"><span class="pre">len()</span></code></strong> built-in function, find the length of your first name</p></li>
@@ -956,6 +963,7 @@ baidu.com
 <li><p>Use the built-in <strong><code class="docutils literal notranslate"><span class="pre">input()</span></code></strong> function to get first name, last name, country and age from a user and store the value to their corresponding variable names</p></li>
 <li><p>Run help (<strong><code class="docutils literal notranslate"><span class="pre">keywords</span></code></strong>) in Python shell or in your file to check for the Python reserved words or keywords</p></li>
 </ol>
+</section>
 </section>
 </section>
 </section>
@@ -1023,7 +1031,6 @@ baidu.com
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Python Variables and Constants</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-variables">1. Python Variables</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#let-us-see-valid-variable-names">Let us see valid variable names</a></li>
 </ul>
@@ -1039,18 +1046,15 @@ baidu.com
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-1-declaring-and-assigning-value-to-a-constant">Example 1: Declaring and assigning value to a constant</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#rules-and-naming-convention-for-variables-and-constants">Rules and Naming Convention for Variables and constants</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-span-class-label-label-default-variables-span">💻 Exercises ➞ <span class="label label-default">Variables</span></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-span-class-label-label-default-level-1-span">Exercises ➞ <span class="label label-default">Level 1</span></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-span-class-label-label-default-level-2-span">Exercises ➞ <span class="label label-default">Level 2</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rules-and-naming-convention-for-variables-and-constants">Rules and Naming Convention for Variables and constants</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-span-class-label-label-default-variables-span">💻 Exercises ➞ <span class="label label-default">Variables</span></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-span-class-label-label-default-level-1-span">Exercises ➞ <span class="label label-default">Level 1</span></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-span-class-label-label-default-level-2-span">Exercises ➞ <span class="label label-default">Level 2</span></a></li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
-
   </nav></div>
 
 </div></div>
