@@ -83,6 +83,10 @@ repository:
 
 #######################################################################################
 # Advanced and power-user settings
+
+# sphinx:
+#   config:
+#     html_extra_path: ["img",content/essentials/python/introduction/img]
 # sphinx:
 #   extra_extensions          :   # A list of extra extensions to load by Sphinx (added to those already used by JB).
 #   local_extensions          :   # A list of local extensions to load by sphinx specified by "name: path" items

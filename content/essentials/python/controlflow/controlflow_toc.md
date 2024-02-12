@@ -1,12 +1,12 @@
-## Python Flow Control
+# Python Flow Control
 
-✅ **[Python Flow Control Statement](/content/essentials/python/controlflow/000_Python_Flow_Control_statement%20.ipynb)**
+✅ **[Python Flow Control Statement](/content/essentials/python/controlflow/000_Python_Flow_Control_statement.ipynb)**
 
 ✅ **[Python if statement](/content/essentials/python/controlflow/001_Python_if_statement.ipynb)**
 
 ✅ **[Python if-else statement](/content/essentials/python/controlflow/002_Python_if_else_statement.ipynb)**
 
-✅ **[Python if-elif-else statement](/content/essentials/python/controlflow/003_Python_if_elif_else_statement%20.ipynb)**
+✅ **[Python if-elif-else statement](/content/essentials/python/controlflow/003_Python_if_elif_else_statement.ipynb)**
 
 ✅ **[Python Nested if statement](/content/essentials/python/controlflow/004_Python_Nested_if_statement.ipynb)**
 

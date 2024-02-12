@@ -54,13 +54,13 @@ parts:
         - file: content/essentials/python/controlflow/controlflow_toc
           title: Control flows
           sections:
-            - file: content/essentials/python/controlflow/000_Python_Flow_Control_statement 
+            - file: content/essentials/python/controlflow/000_Python_Flow_Control_statement
               title: Flow control statement
             - file: content/essentials/python/controlflow/001_Python_if_statement
               title: If 
             - file: content/essentials/python/controlflow/002_Python_if_else_statement
               title: If else 
-            - file: content/essentials/python/controlflow/003_Python_if_elif_else_statement 
+            - file: content/essentials/python/controlflow/003_Python_if_elif_else_statement
               title: If elif else
             - file: content/essentials/python/controlflow/004_Python_Nested_if_statement
               title: Nested if
