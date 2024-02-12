@@ -492,10 +492,7 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <p><small><small><i>
-All the IPython Notebooks in <strong>Python Datatypes</strong> lecture series by <strong><a class="reference external" href="https://www.linkedin.com/in/milaanparmar/">Dr. Milaan Parmar</a></strong> are available &#64; <strong><a class="reference external" href="https://github.com/milaan9/02_Python_Datatypes">GitHub</a></strong>
-</i></small></small></p>
-<section class="tex2jax_ignore mathjax_ignore" id="python-strings">
+  <section class="tex2jax_ignore mathjax_ignore" id="python-strings">
 <h1>Python Strings<a class="headerlink" href="#python-strings" title="Permalink to this heading">#</a></h1>
 <p>In this class you will learn to create, format, modify and delete strings in Python. Also, you will be introduced to various string operations and functions.</p>
 <section id="what-is-string-in-python">
@@ -521,9 +518,7 @@ All the IPython Notebooks in <strong>Python Datatypes</strong> lecture series by
 <p>Computers do not deal with characters, they deal with numbers (binary). Even though you may see characters on your screen, internally it is stored and manipulated as a combination of 0s and 1s.</p>
 <p>This conversion of character to a number is called encoding, and the reverse process is decoding. ASCII and Unicode are some of the popular encodings used.</p>
 <p>In Python, a string is a sequence of Unicode characters. Unicode was introduced to include every character in all languages and bring uniformity in encoding. These Unicodes range from <strong><span class="math notranslate nohighlight">\(0_{hex}\)</span></strong> to <strong><span class="math notranslate nohighlight">\(10FFFF_{hex}\)</span></strong>. Normally, a Unicode is referred to by writing <strong>“U+”</strong> followed by its <strong>hexadecimal</strong> number. Thus strings in Python are a sequence of Unicode values. You can learn about Unicode from <strong><a class="reference external" href="https://docs.python.org/3.3/howto/unicode.html">Python Unicode</a></strong>.</p>
-<div>
-<img src="img/s0.png" width="600"/>
-</div></section>
+</section>
 </section>
 <section id="how-to-create-a-string-in-python">
 <h2>How to create a string in Python?<a class="headerlink" href="#how-to-create-a-string-in-python" title="Permalink to this heading">#</a></h2>
@@ -676,9 +671,7 @@ n
 <span class="nb">str</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;N&#39;</span> <span class="o">=</span> <span class="nb">str</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span>  <span class="c1"># refers to the last item</span>
 </pre></div>
 </div>
-<div>
-<img src="img/s3.png" width="300"/>
-</div><div class="cell docutils container">
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">language</span> <span class="o">=</span> <span class="s1">&#39;Python&#39;</span>
 
@@ -786,9 +779,6 @@ n 	 M
 <p>There can be many forms to slice a string, as string can be accessed or indexed from both the direction and hence string can also be sliced from both the directions.</p>
 <p>Slicing can be best visualized by considering the index to be between the elements as shown below.</p>
 <p>If we want to access a range, we need the index that will slice the portion from the string.</p>
-<div>
-<img src="img/s16.png" width="300"/>
-</div>
 <p><strong>Syntax</strong> of Slice Operator :</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">str</span><span class="p">[</span><span class="n">start</span> <span class="p">:</span> <span class="n">stop</span> <span class="p">:</span> <span class="n">step</span> <span class="p">]</span>
 </pre></div>
@@ -1113,7 +1103,7 @@ one;two;three
 <section id="python-strings-operations">
 <h2>Python Strings Operations<a class="headerlink" href="#python-strings-operations" title="Permalink to this heading">#</a></h2>
 <p>There are many operations that can be performed with strings which makes it one of the most used data types in Python.</p>
-<p>To learn more about the data types available in Python visit: <strong><a class="reference external" href="https://github.com/milaan9/01_Python_Introduction/blob/main/009_Python_Data_Types.ipynb">Python Data Types</a></strong>.</p>
+<p>To learn more about the data types available in Python visit: <strong><a class="reference internal" href="../introduction/007_Python_Data_Types.html"><span class="doc std std-doc">Python Data Types</span></a></strong>.</p>
 <p>To perform operation on string, Python provides basically 3 types of Operators that are given below.</p>
 <ul class="simple">
 <li><p>Basic Operators/Concatenation of Two or More Strings.</p></li>
@@ -1306,7 +1296,7 @@ str1 * 3 = HelloHelloHello
 </section>
 <section id="iterating-through-a-string">
 <h3>Iterating Through a string<a class="headerlink" href="#iterating-through-a-string" title="Permalink to this heading">#</a></h3>
-<p>We can iterate through a string using a <strong><a class="reference external" href="https://github.com/milaan9/03_Python_Flow_Control/blob/main/005_Python_for_Loop.ipynb">for loop</a></strong>. Here is an example to count the number of  ‘l’s in a string.</p>
+<p>We can iterate through a string using a <strong>for loop</strong>. Here is an example to count the number of  ‘l’s in a string.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Iterating through a string</span>
@@ -1414,7 +1404,7 @@ True
 <li><p><strong><code class="docutils literal notranslate"><span class="pre">%x</span></code></strong> ➡ Hexadecimal</p></li>
 <li><p><strong><code class="docutils literal notranslate"><span class="pre">%e</span></code></strong> ➡ exponential</p></li>
 </ul>
-<p>These will be very familiar to anyone who has ever written a C or Java program and follow nearly exactly the same rules as the <strong><a class="reference external" href="https://en.wikipedia.org/wiki/Printf_format_string">printf() function</a></strong>.</p>
+<p>These will be very familiar to anyone who has ever written a C or Java program and follow nearly exactly the same rules as the <strong>printf() function</strong>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">string1</span><span class="p">)</span>
@@ -1478,8 +1468,8 @@ Pad pi with 0 = 0000003.14
 <section id="built-in-functions-to-work-with-python">
 <h3>Built-in functions to Work with Python<a class="headerlink" href="#built-in-functions-to-work-with-python" title="Permalink to this heading">#</a></h3>
 <p>Various built-in functions that work with sequence work with strings as well.</p>
-<p>Some of the commonly used ones are <strong><code class="docutils literal notranslate"><span class="pre">enumerate()</span></code></strong> and <strong><code class="docutils literal notranslate"><span class="pre">len()</span></code></strong>. The <strong><a class="reference external" href="https://github.com/milaan9/04_Python_Functions/blob/main/002_Python_Functions_Built_in/018_Python_enumerate%28%29.ipynb">enumerate()</a></strong> function returns an enumerate object. It contains the index and value of all the items in the string as pairs. This can be useful for iteration.</p>
-<p>Similarly, <strong><a class="reference external" href="https://github.com/milaan9/04_Python_Functions/blob/main/002_Python_Functions_Built_in/040_Python_len%28%29.ipynb">len()</a></strong> returns the length (number of characters) of the string.</p>
+<p>Some of the commonly used ones are <strong><code class="docutils literal notranslate"><span class="pre">enumerate()</span></code></strong> and <strong><code class="docutils literal notranslate"><span class="pre">len()</span></code></strong>. The <strong>enumerate()</strong> function returns an enumerate object. It contains the index and value of all the items in the string as pairs. This can be useful for iteration.</p>
+<p>Similarly, <strong>len()</strong> returns the length (number of characters) of the string.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;cold&#39;</span>
@@ -1721,7 +1711,7 @@ Cory, Bill and Allan
 </div>
 </div>
 <p>The <strong><code class="docutils literal notranslate"><span class="pre">format()</span></code></strong> method can have optional format specifications. They are separated from the field name using colon. For example, we can left-justify <strong><code class="docutils literal notranslate"><span class="pre">&lt;</span></code></strong>, right-justify <strong><code class="docutils literal notranslate"><span class="pre">&gt;</span></code></strong> or center <strong><code class="docutils literal notranslate"><span class="pre">^</span></code></strong> a string in the given space.</p>
-<p>We can also format integers as binary, hexadecimal, etc. and floats can be rounded or displayed in the exponent format. There are tons of formatting you can use. Visit here for all the <strong><a class="reference external" href="https://github.com/milaan9/02_Python_Datatypes/blob/main/002_Python_String_Methods/009_Python_String_format%28%29.ipynb">string formatting available with the format()</a></strong> method.</p>
+<p>We can also format integers as binary, hexadecimal, etc. and floats can be rounded or displayed in the exponent format. There are tons of formatting you can use. Visit here for all the <strong>string formatting available with the format()</strong> method.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># formatting integers</span>
@@ -1814,7 +1804,7 @@ Cory, Bill and Allan
 <li><p>Padding strings: <strong><code class="docutils literal notranslate"><span class="pre">center(n)</span></code></strong>, <strong><code class="docutils literal notranslate"><span class="pre">ljust(n)</span></code></strong> and <strong><code class="docutils literal notranslate"><span class="pre">rjust(n)</span></code></strong> each place the string into a longer string of length n  padded by spaces (centered, left-justified or right-justified respectively). <strong><code class="docutils literal notranslate"><span class="pre">zfill(n)</span></code></strong> works similarly but pads with leading zeros.</p></li>
 <li><p>Stripping strings: Often we want to remove spaces, this is achived with the functions <strong><code class="docutils literal notranslate"><span class="pre">strip()</span></code></strong>, <strong><code class="docutils literal notranslate"><span class="pre">lstrip()</span></code></strong>, and <strong><code class="docutils literal notranslate"><span class="pre">rstrip()</span></code></strong> respectively to remove from spaces from the both end, just left or just the right respectively. An optional argument can be used to list a set of other characters to be removed.</p></li>
 </ul>
-<p>Here is a complete list of all the <strong><a class="reference external" href="https://github.com/milaan9/02_Python_Datatypes/tree/main/002_Python_String_Methods">built-in methods to work with Strings in Python</a></strong>.</p>
+<p>Here is a complete list of all the <strong>built-in methods to work with Strings in Python</strong>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example:</span>
@@ -2327,7 +2317,7 @@ There are 3 &#39;l&#39;s but only 1 World in Hello World
 <li><p>Does ‘<strong><code class="docutils literal notranslate"><span class="pre">Python</span> <span class="pre">4</span> <span class="pre">Data</span> <span class="pre">Science</span></code></strong> contains with a substring <strong><code class="docutils literal notranslate"><span class="pre">Python</span></code></strong>?</p></li>
 <li><p><strong><code class="docutils literal notranslate">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">Python</span> <span class="pre">4</span> <span class="pre">DataScience</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; </code></strong> remove the left and right trailing spaces in the given string.</p></li>
 <li><p>The following list contains the names of some of python libraries: <strong><code class="docutils literal notranslate"><span class="pre">['Django',</span> <span class="pre">'Flask',</span> <span class="pre">'Bottle',</span> <span class="pre">'Pyramid',</span> <span class="pre">'Falcon']</span></code></strong>. Join the list with a hash with space string.</p></li>
-<li><p>Which one of the following variables return True when we use the method <strong><a class="reference external" href="https://github.com/milaan9/02_Python_Datatypes/blob/main/002_Python_String_Methods/015_Python_String_isidentifier%28%29.ipynb">isidentifier()</a></strong></p>
+<li><p>Which one of the following variables return True when we use the method <strong>isidentifier()</strong></p>
 <ul>
 <li><div class="highlight-py notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
@@ -2357,7 +2347,7 @@ Python_Dataypes_2021</p>
 8 // 6 = 1
 8 ** 6 = 262144
 ```</p>
-<ol class="arabic" start="26">
+<ol class="arabic">
 <li><p>Use a <strong>new line</strong> and <strong>tab</strong> escape sequence to print the following lines.</p>
 <ul>
 <li><div class="highlight-py notranslate"><div class="highlight"><pre><span></span>

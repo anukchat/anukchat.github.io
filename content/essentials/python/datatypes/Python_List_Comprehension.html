@@ -470,17 +470,14 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <p><small><small><i>
-All the IPython Notebooks in <strong>Python Datatypes</strong> lecture series by <strong><a class="reference external" href="https://www.linkedin.com/in/milaanparmar/">Dr. Milaan Parmar</a></strong> are available &#64; <strong><a class="reference external" href="https://github.com/milaan9/02_Python_Datatypes">GitHub</a></strong>
-</i></small></small></p>
-<section class="tex2jax_ignore mathjax_ignore" id="python-list-comprehension">
+  <section class="tex2jax_ignore mathjax_ignore" id="python-list-comprehension">
 <h1>Python List Comprehension<a class="headerlink" href="#python-list-comprehension" title="Permalink to this heading">#</a></h1>
 <p>In this class, we will learn about Python list comprehensions, and how to use it.</p>
 <p>List comprehension is an elegant and concise way to create a new list from an existing list in Python. It is a short way to create a new list. List comprehension is considerably faster than processing a list using the <strong><code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">loop</span></code></strong>.</p>
 <section id="list-comprehension-vs-string-vs-for-loop-in-python">
 <h2>List Comprehension vs String vs For Loop in Python<a class="headerlink" href="#list-comprehension-vs-string-vs-for-loop-in-python" title="Permalink to this heading">#</a></h2>
 <p>Suppose, we want to separate the letters of the word <strong><code class="docutils literal notranslate"><span class="pre">python</span></code></strong> and add the letters as items of a list.</p>
-<p>The first thing that comes in mind would be using <strong><a class="reference external" href="https://github.com/milaan9/02_Python_Datatypes/blob/main/002_Python_String.ipynb">String</a></strong>.</p>
+<p>The first thing that comes in mind would be using <strong>String</strong>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example 1: Converting string to a list</span>
@@ -501,7 +498,7 @@ All the IPython Notebooks in <strong>Python Datatypes</strong> lecture series by
 </div>
 </div>
 </div>
-<p>The second thing that comes in mind would be using <strong><a class="reference external" href="https://github.com/milaan9/03_Python_Flow_Control/blob/main/005_Python_for_Loop.ipynb">for loop</a></strong>.</p>
+<p>The second thing that comes in mind would be using <strong>for loop</strong>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example 1: Iterating through a string Using for Loop</span>
@@ -553,15 +550,13 @@ All the IPython Notebooks in <strong>Python Datatypes</strong> lecture series by
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">expression</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">]</span>
 </pre></div>
 </div>
-<div>
-<img src="img/exlc.png" width="300"/>
-</div><p>We can now identify where list comprehensions are used.</p>
-<p>If you noticed, <strong><code class="docutils literal notranslate"><span class="pre">python</span></code></strong> is a string, not a list. This is the power of list comprehension. It can identify when it receives a string or a tuple and work on it like a <strong><a class="reference external" href="https://github.com/milaan9/02_Python_Datatypes/blob/main/003_Python_List.ipynb">list</a></strong>.</p>
+<p>We can now identify where list comprehensions are used.</p>
+<p>If you noticed, <strong><code class="docutils literal notranslate"><span class="pre">python</span></code></strong> is a string, not a list. This is the power of list comprehension. It can identify when it receives a string or a tuple and work on it like a <strong><a class="reference internal" href="003_Python_List.html"><span class="doc std std-doc">list</span></a></strong>.</p>
 <p>You can do that using loops. However, not every loop can be rewritten as list comprehension. But as you learn and get comfortable with list comprehensions, you will find yourself replacing more and more loops with this elegant syntax.</p>
 </section>
 <section id="conditionals-in-list-comprehension">
 <h2>Conditionals in List Comprehension<a class="headerlink" href="#conditionals-in-list-comprehension" title="Permalink to this heading">#</a></h2>
-<p>List comprehensions can utilize conditional statement to modify existing list (or other tuples). We will create list that uses mathematical operators, integers, and <strong><a class="reference external" href="https://github.com/milaan9/04_Python_Functions/blob/main/002_Python_Functions_Built_in/053_Python_range%28%29.ipynb">range()</a></strong>.</p>
+<p>List comprehensions can utilize conditional statement to modify existing list (or other tuples). We will create list that uses mathematical operators, integers, and <strong>range()</strong>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example 4: regular program to generate power for the numbers</span>
@@ -595,7 +590,7 @@ All the IPython Notebooks in <strong>Python Datatypes</strong> lecture series by
 </div>
 </div>
 </div>
-<p>A list comprehension can optionally contain more <strong><code class="docutils literal notranslate"><span class="pre">for</span></code></strong> or <strong><a class="reference external" href="https://github.com/milaan9/03_Python_Flow_Control/blob/main/001_Python_if_statement.ipynb">if statements</a></strong>. An optional <strong><code class="docutils literal notranslate"><span class="pre">if</span></code></strong> statement can filter out items for the new list. Here are some examples.</p>
+<p>A list comprehension can optionally contain more <strong><code class="docutils literal notranslate"><span class="pre">for</span></code></strong> or <strong>if statements</strong>. An optional <strong><code class="docutils literal notranslate"><span class="pre">if</span></code></strong> statement can filter out items for the new list. Here are some examples.</p>
 <section id="for-instance-if-you-want-to-generate-a-list-of-numbers">
 <h3>For instance if you want to generate a list of numbers<a class="headerlink" href="#for-instance-if-you-want-to-generate-a-list-of-numbers" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
@@ -804,7 +799,7 @@ All the IPython Notebooks in <strong>Python Datatypes</strong> lecture series by
 <p>List comprehensions aren’t the only way to work on lists. Various built-in functions and lambda functions can create and modify lists in less lines of code.</p>
 <section id="lambda-function">
 <h3>Lambda Function<a class="headerlink" href="#lambda-function" title="Permalink to this heading">#</a></h3>
-<p><strong><a class="reference external" href="https://github.com/milaan9/04_Python_Functions/blob/main/006_Python_Function_Anonymous.ipynb">Lambda function</a></strong> is a small anonymous function without a name. It can take any number of arguments, but can only have one expression. Lambda function is similar to anonymous functions in JavaScript. We need it when we want to write an anonymous function inside another function.</p>
+<p><strong>Lambda function</strong> is a small anonymous function without a name. It can take any number of arguments, but can only have one expression. Lambda function is similar to anonymous functions in JavaScript. We need it when we want to write an anonymous function inside another function.</p>
 </section>
 <section id="creating-a-lambda-function">
 <h3>Creating a Lambda Function<a class="headerlink" href="#creating-a-lambda-function" title="Permalink to this heading">#</a></h3>

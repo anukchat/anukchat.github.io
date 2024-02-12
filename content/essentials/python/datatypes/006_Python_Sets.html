@@ -491,10 +491,7 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <p><small><small><i>
-All the IPython Notebooks in <strong>Python Datatypes</strong> lecture series by <strong><a class="reference external" href="https://www.linkedin.com/in/milaanparmar/">Dr. Milaan Parmar</a></strong> are available &#64; <strong><a class="reference external" href="https://github.com/milaan9/02_Python_Datatypes">GitHub</a></strong>
-</i></small></small></p>
-<section class="tex2jax_ignore mathjax_ignore" id="python-sets">
+  <section class="tex2jax_ignore mathjax_ignore" id="python-sets">
 <h1>Python Sets<a class="headerlink" href="#python-sets" title="Permalink to this heading">#</a></h1>
 <p>In this class, you’ll learn everything about Python sets; how they are created, adding or removing elements from them, and all operations performed on sets in Python.</p>
 <section id="what-is-set-in-python">
@@ -518,7 +515,7 @@ All the IPython Notebooks in <strong>Python Datatypes</strong> lecture series by
 </tr>
 <tr class="row-odd"><td class="text-center"><p><strong>List</strong></p></td>
 <td class="text-center"><p><strong>mutable</strong></p></td>
-<td class="text-center"><p>✎</p></td>
+<td class="text-center"><p></p></td>
 </tr>
 <tr class="row-even"><td class="text-center"><p><strong>Tuple</strong></p></td>
 <td class="text-center"><p><strong>immutable</strong></p></td>
@@ -526,7 +523,7 @@ All the IPython Notebooks in <strong>Python Datatypes</strong> lecture series by
 </tr>
 <tr class="row-odd"><td class="text-center"><p><strong>Dictionary</strong></p></td>
 <td class="text-center"><p><strong>mutable</strong></p></td>
-<td class="text-center"><p>✎</p></td>
+<td class="text-center"><p></p></td>
 </tr>
 <tr class="row-even"><td class="text-center"><p><strong>Set</strong></p></td>
 <td class="text-center"><p><strong>immutable</strong></p></td>
@@ -543,7 +540,7 @@ All the IPython Notebooks in <strong>Python Datatypes</strong> lecture series by
 <section id="creating-python-sets">
 <h2>Creating Python Sets<a class="headerlink" href="#creating-python-sets" title="Permalink to this heading">#</a></h2>
 <p>A set is created by placing all the items (elements) inside curly braces <strong><code class="docutils literal notranslate"><span class="pre">{}</span></code></strong>, separated by comma, or by using the built-in <strong><code class="docutils literal notranslate"><span class="pre">set()</span></code></strong> function.</p>
-<p>It can have any number of items and they may be of different types (integer, float, tuple, string etc.). But a set cannot have mutable elements like <strong><a class="reference external" href="https://github.com/milaan9/02_Python_Datatypes/blob/main/003_Python_List.ipynb">lists</a></strong>, sets or <strong><a class="reference external" href="https://github.com/milaan9/02_Python_Datatypes/blob/main/005_Python_Dictionary.ipynb">dictionaries</a></strong> as its elements.</p>
+<p>It can have any number of items and they may be of different types (integer, float, tuple, string etc.). But a set cannot have mutable elements like <strong><a class="reference internal" href="003_Python_List.html"><span class="doc std std-doc">lists</span></a></strong>, sets or <strong><a class="reference internal" href="005_Python_Dictionary.html"><span class="doc std std-doc">dictionaries</span></a></strong> as its elements.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example 1: Different types of sets in Python</span>
@@ -642,7 +639,7 @@ All the IPython Notebooks in <strong>Python Datatypes</strong> lecture series by
 <h2>Modifying a set in Python<a class="headerlink" href="#modifying-a-set-in-python" title="Permalink to this heading">#</a></h2>
 <p>Sets are mutable. However, since they are unordered, indexing has no meaning.</p>
 <p>We cannot access or change an element of a set using indexing or slicing. Set data type does not support it.</p>
-<p>We can add a single element using the <strong><code class="docutils literal notranslate"><span class="pre">add()</span></code></strong> method, and multiple elements using the <strong><code class="docutils literal notranslate"><span class="pre">update()</span></code></strong> method. The <strong><code class="docutils literal notranslate"><span class="pre">update()</span></code></strong> method can take <strong><a class="reference external" href="https://github.com/milaan9/02_Python_Datatypes/blob/main/004_Python_Tuple.ipynb">tuples</a></strong>, lists, <strong><a class="reference external" href="https://github.com/milaan9/02_Python_Datatypes/blob/main/002_Python_String.ipynb">strings</a></strong> or other sets as its argument. In all cases, duplicates are avoided.</p>
+<p>We can add a single element using the <strong><code class="docutils literal notranslate"><span class="pre">add()</span></code></strong> method, and multiple elements using the <strong><code class="docutils literal notranslate"><span class="pre">update()</span></code></strong> method. The <strong><code class="docutils literal notranslate"><span class="pre">update()</span></code></strong> method can take <strong><a class="reference internal" href="004_Python_Tuple.html"><span class="doc std std-doc">tuples</span></a></strong>, lists, <strong><a class="reference internal" href="002_Python_String.html"><span class="doc std std-doc">strings</span></a></strong> or other sets as its argument. In all cases, duplicates are avoided.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example: </span>
@@ -772,9 +769,6 @@ set()
 </div>
 <section id="set-union">
 <h3>Set Union<a class="headerlink" href="#set-union" title="Permalink to this heading">#</a></h3>
-<div>
-<img src="img/set1.png" width="300"/>
-</div>
 <p>Union of <strong><code class="docutils literal notranslate"><span class="pre">A</span></code></strong> and <strong><code class="docutils literal notranslate"><span class="pre">B</span></code></strong> is a set of all elements from both sets.</p>
 <p>Union is performed using <strong><code class="docutils literal notranslate"><span class="pre">|</span></code></strong> operator. Same can be accomplished using the <strong><code class="docutils literal notranslate"><span class="pre">union()</span></code></strong> method.</p>
 <div class="cell docutils container">
@@ -820,9 +814,6 @@ set()
 </section>
 <section id="set-intersection">
 <h3>Set Intersection<a class="headerlink" href="#set-intersection" title="Permalink to this heading">#</a></h3>
-<div>
-<img src="img/set2.png" width="300"/>
-</div>
 <p>Intersection of <strong><code class="docutils literal notranslate"><span class="pre">A</span></code></strong> and <strong><code class="docutils literal notranslate"><span class="pre">B</span></code></strong> is a set of elements that are common in both the sets.</p>
 <p>Intersection is performed using <strong><code class="docutils literal notranslate"><span class="pre">&amp;</span></code></strong> operator. Same can be accomplished using the <strong><code class="docutils literal notranslate"><span class="pre">intersection()</span></code></strong> method.</p>
 <div class="cell docutils container">
@@ -866,9 +857,6 @@ set()
 </section>
 <section id="set-difference">
 <h3>Set Difference<a class="headerlink" href="#set-difference" title="Permalink to this heading">#</a></h3>
-<div>
-<img src="img/set3.png" width="300"/>
-</div>
 <p>Difference of the set <strong><code class="docutils literal notranslate"><span class="pre">B</span></code></strong> from set <strong><code class="docutils literal notranslate"><span class="pre">A</span></code></strong>, <strong><code class="docutils literal notranslate"><span class="pre">(A</span> <span class="pre">-</span> <span class="pre">B)</span></code></strong> is a set of elements that are only in A but not in <strong><code class="docutils literal notranslate"><span class="pre">B</span></code></strong>. Similarly, <strong><code class="docutils literal notranslate"><span class="pre">B</span> <span class="pre">-</span> <span class="pre">A</span></code></strong> is a set of elements in <strong><code class="docutils literal notranslate"><span class="pre">B</span></code></strong> but not in <strong><code class="docutils literal notranslate"><span class="pre">A</span></code></strong>.</p>
 <p>Difference is performed using <strong><code class="docutils literal notranslate"><span class="pre">-</span></code></strong> operator. Same can be accomplished using the <strong><code class="docutils literal notranslate"><span class="pre">difference()</span></code></strong> method.</p>
 <div class="cell docutils container">
@@ -914,9 +902,6 @@ set()
 </section>
 <section id="set-symmetric-difference">
 <h3>Set Symmetric Difference<a class="headerlink" href="#set-symmetric-difference" title="Permalink to this heading">#</a></h3>
-<div>
-<img src="img/set4.png" width="300"/>
-</div>
 <p>Symmetric Difference of <strong><code class="docutils literal notranslate"><span class="pre">A</span></code></strong> and <strong><code class="docutils literal notranslate"><span class="pre">B</span></code></strong> is a set of elements in <strong><code class="docutils literal notranslate"><span class="pre">A</span></code></strong> and <strong><code class="docutils literal notranslate"><span class="pre">B</span></code></strong> but not in both (excluding the intersection).</p>
 <p>Symmetric difference is performed using <strong><code class="docutils literal notranslate"><span class="pre">^</span></code></strong> operator. Same can be accomplished using the method <strong><code class="docutils literal notranslate"><span class="pre">symmetric_difference()</span></code></strong>.</p>
 <div class="cell docutils container">
@@ -1007,77 +992,76 @@ set()
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td class="text-left"><p><strong><a class="reference external" href="https://github.com/milaan9/02_Python_Datatypes/blob/main/006_Python_Sets_Methods/002_Python_Set_add%28%29.ipynb">add()</a></strong></p></td>
+<tr class="row-even"><td class="text-left"><p><strong>add()</strong></p></td>
 <td class="text-left"><p></p></td>
 <td class="text-left"><p>Adds an element to the set.</p></td>
 </tr>
-<tr class="row-odd"><td class="text-left"><p><strong><a class="reference external" href="https://github.com/milaan9/02_Python_Datatypes/blob/main/006_Python_Sets_Methods/003_Python_Set_copy%28%29.ipynb">copy()</a></strong></p></td>
+<tr class="row-odd"><td class="text-left"><p><strong>copy()</strong></p></td>
 <td class="text-left"><p></p></td>
 <td class="text-left"><p>Returns a copy of the set.</p></td>
 </tr>
-<tr class="row-even"><td class="text-left"><p><strong><a class="reference external" href="https://github.com/milaan9/02_Python_Datatypes/blob/main/006_Python_Sets_Methods/001_Python_Set_remove%28%29.ipynb">remove()</a></strong></p></td>
+<tr class="row-even"><td class="text-left"><p><strong>remove()</strong></p></td>
 <td class="text-left"><p></p></td>
 <td class="text-left"><p>Removes an element from the set. If the element is not a member, raises a <strong><code class="docutils literal notranslate"><span class="pre">KeyError</span></code></strong>.</p></td>
 </tr>
-<tr class="row-odd"><td class="text-left"><p><strong><a class="reference external" href="https://github.com/milaan9/02_Python_Datatypes/blob/main/006_Python_Sets_Methods/007_Python_Set_discard%28%29.ipynb">discard()</a></strong></p></td>
+<tr class="row-odd"><td class="text-left"><p><strong>discard()</strong></p></td>
 <td class="text-left"><p></p></td>
 <td class="text-left"><p>Removes an element from the set if it is a member. (Do nothing if the element is not in set).</p></td>
 </tr>
-<tr class="row-even"><td class="text-left"><p><strong><a class="reference external" href="https://github.com/milaan9/02_Python_Datatypes/blob/main/006_Python_Sets_Methods/013_Python_Set_pop%28%29.ipynb">pop()</a></strong></p></td>
+<tr class="row-even"><td class="text-left"><p><strong>pop()</strong></p></td>
 <td class="text-left"><p></p></td>
 <td class="text-left"><p>Removes and returns an arbitrary set element. Raises <strong><code class="docutils literal notranslate"><span class="pre">KeyError</span></code></strong> if the set is empty.</p></td>
 </tr>
-<tr class="row-odd"><td class="text-left"><p><strong><a class="reference external" href="https://github.com/milaan9/02_Python_Datatypes/blob/main/006_Python_Sets_Methods/004_Python_Set_clear%28%29.ipynb">clear()</a></strong></p></td>
+<tr class="row-odd"><td class="text-left"><p><strong>clear()</strong></p></td>
 <td class="text-left"><p></p></td>
 <td class="text-left"><p>Removes all elements from the set.</p></td>
 </tr>
-<tr class="row-even"><td class="text-left"><p><strong><a class="reference external" href="https://github.com/milaan9/02_Python_Datatypes/blob/main/006_Python_Sets_Methods/016_Python_Set_union%28%29.ipynb">union()</a></strong></p></td>
+<tr class="row-even"><td class="text-left"><p><strong>union()</strong></p></td>
 <td class="text-left"><p><strong><code class="docutils literal notranslate"><span class="pre">A</span> <span class="pre">|</span> <span class="pre">B</span></code></strong></p></td>
 <td class="text-left"><p>Returns the union of sets in a new set.</p></td>
 </tr>
-<tr class="row-odd"><td class="text-left"><p><strong><a class="reference external" href="https://github.com/milaan9/02_Python_Datatypes/blob/main/006_Python_Sets_Methods/017_Python_Set_update%28%29.ipynb">update()</a></strong></p></td>
+<tr class="row-odd"><td class="text-left"><p><strong>update()</strong></p></td>
 <td class="text-left"><p><strong><code class="docutils literal notranslate"><span class="pre">A</span> <span class="pre">|=</span> <span class="pre">B</span></code></strong></p></td>
 <td class="text-left"><p>Updates the set with the union of itself and others.</p></td>
 </tr>
-<tr class="row-even"><td class="text-left"><p><strong><a class="reference external" href="https://github.com/milaan9/02_Python_Datatypes/blob/main/006_Python_Sets_Methods/008_Python_Set_intersection%28%29.ipynb">intersection()</a></strong></p></td>
+<tr class="row-even"><td class="text-left"><p><strong>intersection()</strong></p></td>
 <td class="text-left"><p><strong><code class="docutils literal notranslate"><span class="pre">A</span> <span class="pre">&amp;</span> <span class="pre">B</span></code></strong></p></td>
 <td class="text-left"><p>Returns the intersection of two sets as a new set.</p></td>
 </tr>
-<tr class="row-odd"><td class="text-left"><p><strong><a class="reference external" href="https://github.com/milaan9/02_Python_Datatypes/blob/main/006_Python_Sets_Methods/009_Python_Set_intersection_update%28%29.ipynb">intersection_update()</a></strong></p></td>
+<tr class="row-odd"><td class="text-left"><p><strong>intersection_update()</strong></p></td>
 <td class="text-left"><p><strong><code class="docutils literal notranslate"><span class="pre">A</span> <span class="pre">&amp;=</span> <span class="pre">B</span></code></strong></p></td>
 <td class="text-left"><p>Updates the set with the intersection of itself and another.</p></td>
 </tr>
-<tr class="row-even"><td class="text-left"><p><strong><a class="reference external" href="https://github.com/milaan9/02_Python_Datatypes/blob/main/006_Python_Sets_Methods/010_Python_Set_isdisjoint%28%29.ipynb">isdisjoint()</a></strong></p></td>
+<tr class="row-even"><td class="text-left"><p><strong>isdisjoint()</strong></p></td>
 <td class="text-left"><p></p></td>
 <td class="text-left"><p>Returns <strong><code class="docutils literal notranslate"><span class="pre">True</span></code></strong> if two sets have a null intersection.</p></td>
 </tr>
-<tr class="row-odd"><td class="text-left"><p><strong><a class="reference external" href="https://github.com/milaan9/02_Python_Datatypes/blob/main/006_Python_Sets_Methods/005_Python_Set_difference%28%29.ipynb">difference()</a></strong></p></td>
+<tr class="row-odd"><td class="text-left"><p><strong>difference()</strong></p></td>
 <td class="text-left"><p><strong><code class="docutils literal notranslate"><span class="pre">A</span> <span class="pre">–</span> <span class="pre">B</span></code></strong></p></td>
 <td class="text-left"><p>Returns the difference of two or more sets as a new set.</p></td>
 </tr>
-<tr class="row-even"><td class="text-left"><p><strong><a class="reference external" href="https://github.com/milaan9/02_Python_Datatypes/blob/main/006_Python_Sets_Methods/006_Python_Set_difference_update%28%29.ipynb">difference_update()</a></strong></p></td>
+<tr class="row-even"><td class="text-left"><p><strong>difference_update()</strong></p></td>
 <td class="text-left"><p><strong><code class="docutils literal notranslate"><span class="pre">A</span> <span class="pre">-=</span> <span class="pre">B</span></code></strong></p></td>
 <td class="text-left"><p>Removes all elements of another set from this set.</p></td>
 </tr>
-<tr class="row-odd"><td class="text-left"><p><strong><a class="reference external" href="https://github.com/milaan9/02_Python_Datatypes/blob/main/006_Python_Sets_Methods/014_Python_Set_symmetric_difference%28%29.ipynb">symmetric_difference()</a></strong></p></td>
+<tr class="row-odd"><td class="text-left"><p><strong>symmetric_difference()</strong></p></td>
 <td class="text-left"><p><strong><code class="docutils literal notranslate"><span class="pre">A</span> <span class="pre">^</span> <span class="pre">B</span></code></strong></p></td>
 <td class="text-left"><p>Returns the symmetric difference of two sets as a new set.</p></td>
 </tr>
-<tr class="row-even"><td class="text-left"><p><strong><a class="reference external" href="https://github.com/milaan9/02_Python_Datatypes/blob/main/006_Python_Sets_Methods/015_Python_Set_symmetric_difference_update%28%29.ipynb">symmetric_difference_update()</a></strong></p></td>
+<tr class="row-even"><td class="text-left"><p><strong>symmetric_difference_update()</strong></p></td>
 <td class="text-left"><p><strong><code class="docutils literal notranslate"><span class="pre">A</span> <span class="pre">^=</span> <span class="pre">B</span></code></strong></p></td>
 <td class="text-left"><p>Updates a set with the symmetric difference of itself and another.</p></td>
 </tr>
-<tr class="row-odd"><td class="text-left"><p><strong><a class="reference external" href="https://github.com/milaan9/02_Python_Datatypes/blob/main/006_Python_Sets_Methods/011_Python_Set_issubset%28%29.ipynb">issubset()</a></strong></p></td>
+<tr class="row-odd"><td class="text-left"><p><strong>issubset()</strong></p></td>
 <td class="text-left"><p><strong><code class="docutils literal notranslate"><span class="pre">A</span> <span class="pre">&lt;=</span> <span class="pre">B</span></code></strong></p></td>
 <td class="text-left"><p>Returns <strong><code class="docutils literal notranslate"><span class="pre">True</span></code></strong> if another set contains this set.</p></td>
 </tr>
-<tr class="row-even"><td class="text-left"><p><strong><a class="reference external" href="https://github.com/milaan9/02_Python_Datatypes/blob/main/006_Python_Sets_Methods/012_Python_Set_issuperset%28%29.ipynb">issuperset()</a></strong></p></td>
+<tr class="row-even"><td class="text-left"><p><strong>issuperset()</strong></p></td>
 <td class="text-left"><p><strong><code class="docutils literal notranslate"><span class="pre">A</span> <span class="pre">&gt;=</span> <span class="pre">B</span></code></strong></p></td>
 <td class="text-left"><p>Returns <strong><code class="docutils literal notranslate"><span class="pre">True</span></code></strong> if this set contains another set.</p></td>
 </tr>
 </tbody>
 </table>
-<p>Here is a complete list of all the <strong><a class="reference external" href="https://github.com/milaan9/02_Python_Datatypes/tree/main/006_Python_Sets_Methods">built-in methods to work with Sets in Python</a></strong>.</p>
 </section>
 <section id="other-set-operations">
 <h2>Other Set Operations<a class="headerlink" href="#other-set-operations" title="Permalink to this heading">#</a></h2>
@@ -1133,7 +1117,7 @@ l
 <h2>Python Frozenset<a class="headerlink" href="#python-frozenset" title="Permalink to this heading">#</a></h2>
 <p>Frozenset is a new class that has the characteristics of a set, but its elements cannot be changed once assigned. While tuples are immutable lists, frozensets are immutable sets.</p>
 <p>Sets being mutable are unhashable, so they can’t be used as dictionary keys. On the other hand, frozensets are hashable and can be used as keys to a dictionary.</p>
-<p>Frozensets can be created using the <strong><a class="reference external" href="https://github.com/milaan9/04_Python_Functions/blob/main/002_Python_Functions_Built_in/024_Python_frozenset%28%29.ipynb">frozenset()</a></strong> function.</p>
+<p>Frozensets can be created using the <strong>frozenset()</strong> function.</p>
 <p>The <strong><code class="docutils literal notranslate"><span class="pre">frozenset()</span></code></strong> function returns an immutable frozenset object initialized with elements from the given iterable.</p>
 <p>This data type supports methods like <strong><code class="docutils literal notranslate"><span class="pre">copy()</span></code></strong>, <strong><code class="docutils literal notranslate"><span class="pre">difference()</span></code></strong>, <strong><code class="docutils literal notranslate"><span class="pre">intersection()</span></code></strong>, <strong><code class="docutils literal notranslate"><span class="pre">isdisjoint()</span></code></strong>, <strong><code class="docutils literal notranslate"><span class="pre">issubset()</span></code></strong>, <strong><code class="docutils literal notranslate"><span class="pre">issuperset()</span></code></strong>, <strong><code class="docutils literal notranslate"><span class="pre">symmetric_difference()</span></code></strong> and <strong><code class="docutils literal notranslate"><span class="pre">union()</span></code></strong>. Being immutable, it does not have methods that add or remove elements.</p>
 <p><strong>Syntax:</strong></p>

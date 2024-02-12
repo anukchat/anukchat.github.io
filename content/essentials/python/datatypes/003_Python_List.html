@@ -506,10 +506,7 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <p><small><small><i>
-All the IPython Notebooks in <strong>Python Datatypes</strong> lecture series by <strong><a class="reference external" href="https://www.linkedin.com/in/milaanparmar/">Dr. Milaan Parmar</a></strong> are available &#64; <strong><a class="reference external" href="https://github.com/milaan9/02_Python_Datatypes">GitHub</a></strong>
-</i></small></small></p>
-<section class="tex2jax_ignore mathjax_ignore" id="python-list">
+  <section class="tex2jax_ignore mathjax_ignore" id="python-list">
 <h1>Python List<a class="headerlink" href="#python-list" title="Permalink to this heading">#</a></h1>
 <p>In this class, we’ll learn everything about Python lists, how they are created, slicing of a list, adding or removing elements from them and so on.</p>
 <p>Python offers a range of compound data types often referred to as sequences. List is one of the most frequently used and very versatile data types used in Python.</p>
@@ -543,9 +540,6 @@ All the IPython Notebooks in <strong>Python Datatypes</strong> lecture series by
 <h2>Creating Python List<a class="headerlink" href="#creating-python-list" title="Permalink to this heading">#</a></h2>
 <p>In Python programming, a list is created by placing all the items (elements) inside <strong>square brackets <code class="docutils literal notranslate"><span class="pre">[]</span></code></strong>, separated by <strong>commas</strong> <strong><code class="docutils literal notranslate"><span class="pre">,</span></code></strong>. All the elements in list are stored in the index basis with starting index <strong>0</strong>.</p>
 <p>It can have any number of items and they may be of different types (integer, float, string etc.).</p>
-<div>
-<img src="img/l0.png" width="600"/>
-</div>
 <p><strong>Syantax:</strong></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">list_name</span><span class="o">&gt;=</span><span class="p">[</span><span class="n">value1</span><span class="p">,</span><span class="n">value2</span><span class="p">,</span><span class="n">value3</span><span class="p">,</span><span class="o">...</span><span class="p">,</span><span class="n">valuen</span><span class="p">]</span> 
 </pre></div>
@@ -600,9 +594,7 @@ All the IPython Notebooks in <strong>Python Datatypes</strong> lecture series by
 <p>We can use the index operator <strong><code class="docutils literal notranslate"><span class="pre">[]</span></code></strong> to access an item in a list. In Python, indices start at 0. So, a list having 5 elements will have an index from 0 to 4.</p>
 <p>Trying to access indexes other than these will raise an <strong><code class="docutils literal notranslate"><span class="pre">IndexError</span></code></strong>. The index must be an integer. We can’t use float or other types, this will result in <strong><code class="docutils literal notranslate"><span class="pre">TypeError</span></code></strong>.</p>
 <p>Nested lists are accessed using nested indexing.</p>
-<div>
-<img src="img/l6_1.png" width="400"/>
-</div><div class="cell docutils container">
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example: List indexing</span>
 
@@ -706,9 +698,7 @@ p
 </div>
 </div>
 <p>Slicing can be best visualized by considering the index to be between the elements as shown below. So if we want to access a range, we need two indices that will slice that portion from the list.</p>
-<div>
-<img src="img/l6_2.png" width="350"/>
-</div><blockquote>
+<blockquote>
 <div><p><strong>NOTE:</strong> Internal Memory Organization:</p>
 </div></blockquote>
 <blockquote>
@@ -757,7 +747,7 @@ True
 <p>Apart from creating and accessing elements from the list, Python allows us to perform various other operations on the list. Some common operations are given below:</p>
 <section id="add-change-list-elements">
 <h3>Add/Change List Elements<a class="headerlink" href="#add-change-list-elements" title="Permalink to this heading">#</a></h3>
-<p>Lists are mutable, meaning their elements can be changed unlike <strong><a class="reference external" href="https://github.com/milaan9/02_Python_Datatypes/blob/main/002_Python_String.ipynb">string</a></strong> or <strong><a class="reference external" href="https://github.com/milaan9/02_Python_Datatypes/blob/main/004_Python_Tuple.ipynb">tuple</a></strong>.</p>
+<p>Lists are mutable, meaning their elements can be changed unlike <strong><a class="reference internal" href="002_Python_String.html"><span class="doc std std-doc">string</span></a></strong> or <strong><a class="reference internal" href="004_Python_Tuple.html"><span class="doc std std-doc">tuple</span></a></strong>.</p>
 <p>We can use the assignment operator (<strong><code class="docutils literal notranslate"><span class="pre">=</span></code></strong>) to change an item or a range of items.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1292,37 +1282,37 @@ False
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td class="text-left"><p><strong><a class="reference external" href="https://github.com/milaan9/02_Python_Datatypes/blob/main/003_Python_List_Methods/002_Python_List_append%28%29.ipynb">append()</a></strong></p></td>
+<tr class="row-even"><td class="text-left"><p><strong>append()</strong></p></td>
 <td class="text-left"><p>Add an element to the end of the list</p></td>
 </tr>
-<tr class="row-odd"><td class="text-left"><p><strong><a class="reference external" href="https://github.com/milaan9/02_Python_Datatypes/blob/main/003_Python_List_Methods/003_Python_List_extend%28%29.ipynb">extend()</a></strong></p></td>
+<tr class="row-odd"><td class="text-left"><p><strong>extend()</strong></p></td>
 <td class="text-left"><p>Add all elements of a list to the another list</p></td>
 </tr>
-<tr class="row-even"><td class="text-left"><p><strong><a class="reference external" href="https://github.com/milaan9/02_Python_Datatypes/blob/main/003_Python_List_Methods/004_Python_List_insert%28%29.ipynb">insert()</a></strong></p></td>
+<tr class="row-even"><td class="text-left"><p><strong>insert()</strong></p></td>
 <td class="text-left"><p>Insert an item at the defined index</p></td>
 </tr>
-<tr class="row-odd"><td class="text-left"><p><strong><a class="reference external" href="https://github.com/milaan9/02_Python_Datatypes/blob/main/003_Python_List_Methods/005_Python_List_remove%28%29.ipynb">remove()</a></strong></p></td>
+<tr class="row-odd"><td class="text-left"><p><strong>remove()</strong></p></td>
 <td class="text-left"><p>Removes an item from the list</p></td>
 </tr>
-<tr class="row-even"><td class="text-left"><p><strong><a class="reference external" href="https://github.com/milaan9/02_Python_Datatypes/blob/main/003_Python_List_Methods/007_Python_List_pop%28%29.ipynb">pop()</a></strong></p></td>
+<tr class="row-even"><td class="text-left"><p><strong>pop()</strong></p></td>
 <td class="text-left"><p>Removes and returns an element at the given index</p></td>
 </tr>
-<tr class="row-odd"><td class="text-left"><p><strong><a class="reference external" href="https://github.com/milaan9/02_Python_Datatypes/blob/main/003_Python_List_Methods/011_Python_List_clear%28%29.ipynb">clear()</a></strong></p></td>
+<tr class="row-odd"><td class="text-left"><p><strong>clear()</strong></p></td>
 <td class="text-left"><p>Removes all items from the list</p></td>
 </tr>
-<tr class="row-even"><td class="text-left"><p><strong><a class="reference external" href="https://github.com/milaan9/02_Python_Datatypes/blob/main/003_Python_List_Methods/001_Python_List_index%28%29.ipynb">index()</a></strong></p></td>
+<tr class="row-even"><td class="text-left"><p><strong>index()</strong></p></td>
 <td class="text-left"><p>Returns the index of the first matched item</p></td>
 </tr>
-<tr class="row-odd"><td class="text-left"><p><strong><a class="reference external" href="https://github.com/milaan9/02_Python_Datatypes/blob/main/003_Python_List_Methods/006_Python_List_count%28%29.ipynb">count()</a></strong></p></td>
+<tr class="row-odd"><td class="text-left"><p><strong>count()</strong></p></td>
 <td class="text-left"><p>Returns the count of the number of items passed as an argument</p></td>
 </tr>
-<tr class="row-even"><td class="text-left"><p><strong><a class="reference external" href="https://github.com/milaan9/02_Python_Datatypes/blob/main/003_Python_List_Methods/009_Python_List_sort%28%29.ipynb">sort()</a></strong></p></td>
+<tr class="row-even"><td class="text-left"><p><strong>sort()</strong></p></td>
 <td class="text-left"><p>Sort items in a list in ascending order</p></td>
 </tr>
-<tr class="row-odd"><td class="text-left"><p><strong><a class="reference external" href="https://github.com/milaan9/02_Python_Datatypes/blob/main/003_Python_List_Methods/008_Python_List_reverse%28%29.ipynb">reverse()</a></strong></p></td>
+<tr class="row-odd"><td class="text-left"><p><strong>reverse()</strong></p></td>
 <td class="text-left"><p>Reverse the order of items in the list</p></td>
 </tr>
-<tr class="row-even"><td class="text-left"><p><strong><a class="reference external" href="https://github.com/milaan9/02_Python_Datatypes/blob/main/003_Python_List_Methods/010_Python_List_copy%28%29.ipynb">copy()</a></strong></p></td>
+<tr class="row-even"><td class="text-left"><p><strong>copy()</strong></p></td>
 <td class="text-left"><p>Returns a shallow copy of the list</p></td>
 </tr>
 </tbody>
@@ -1580,7 +1570,6 @@ list2: [&#39;helloworld&#39;, &#39;python&#39;, &#39;java&#39;, &#39;c++&#39;, 1
 </div>
 </div>
 </div>
-<p>Here is a complete list of all the <strong><a class="reference external" href="https://github.com/milaan9/02_Python_Datatypes/tree/main/003_Python_List_Methods">built-in methods to work with List in Python</a></strong>.</p>
 </section>
 </section>
 <section id="list-comprehension-elegant-way-to-create-new-list">
@@ -1617,7 +1606,7 @@ list2: [&#39;helloworld&#39;, &#39;python&#39;, &#39;java&#39;, &#39;c++&#39;, 1
 </div>
 </div>
 </div>
-<p>A list comprehension can optionally contain more <strong><code class="docutils literal notranslate"><span class="pre">for</span></code></strong> or <strong><a class="reference external" href="https://github.com/milaan9/03_Python_Flow_Control/blob/main/001_Python_if_statement.ipynb">if statements</a></strong>. An optional <strong><code class="docutils literal notranslate"><span class="pre">if</span></code></strong> statement can filter out items for the new list. Here are some examples.</p>
+<p>A list comprehension can optionally contain more <strong><code class="docutils literal notranslate"><span class="pre">for</span></code></strong> or <strong>if statements</strong>. An optional <strong><code class="docutils literal notranslate"><span class="pre">if</span></code></strong> statement can filter out items for the new list. Here are some examples.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pow2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span> <span class="o">**</span> <span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">5</span><span class="p">]</span>
@@ -1756,7 +1745,7 @@ I like mango
 <li><p>Get the first item, the middle item and the last item of the list</p></li>
 <li><p>Declare a list <strong><code class="docutils literal notranslate"><span class="pre">called</span> <span class="pre">my_info</span></code></strong>, put your (name, age, height, marital status, country)</p></li>
 <li><p>Declare a list variable named <strong><code class="docutils literal notranslate"><span class="pre">mix_fruits</span></code></strong> and assign initial values Guava, Mango, Apple, Pear, Fig, Orange and Banana and print the list.</p></li>
-<li><p>Print the list using <strong><a class="reference external" href="https://github.com/milaan9/04_Python_Functions/blob/main/002_Python_Functions_Built_in/051_Python_print%28%29.ipynb">print()</a></strong></p></li>
+<li><p>Print the list using <strong>print()</strong></p></li>
 <li><p>Print the number of <strong><code class="docutils literal notranslate"><span class="pre">mix_fruits</span></code></strong> in the list</p></li>
 <li><p>Print the first, middle and last fruit</p></li>
 <li><p>Print the list after modifying one of the fruit</p></li>
@@ -1765,8 +1754,8 @@ I like mango
 <li><p>Change one of the fruit names to uppercase</p></li>
 <li><p>Join the elements in <strong><code class="docutils literal notranslate"><span class="pre">mix_fruits</span></code></strong> with a string <strong><code class="docutils literal notranslate"><span class="pre">-#-</span></code></strong></p></li>
 <li><p>Check if a certain fruit exists in the <strong><code class="docutils literal notranslate"><span class="pre">mix_fruits</span></code></strong> list.</p></li>
-<li><p>Sort the list using <strong><a class="reference external" href="https://github.com/milaan9/02_Python_Datatypes/blob/main/003_Python_List_Methods/009_Python_List_sort%28%29.ipynb">sort()</a></strong> method</p></li>
-<li><p>Reverse the list in descending order using <strong><a class="reference external" href="https://github.com/milaan9/02_Python_Datatypes/blob/main/003_Python_List_Methods/008_Python_List_reverse%28%29.ipynb">reverse()</a></strong> method</p></li>
+<li><p>Sort the list using <strong>sort()</strong> method</p></li>
+<li><p>Reverse the list in descending order using <strong>reverse()</strong> method</p></li>
 <li><p>Slice out the first 3 fruits from the list</p></li>
 <li><p>Slice out the last 3 fruits from the list</p></li>
 <li><p>Slice out the middle fruit or fruits from the list</p></li>
@@ -1810,11 +1799,11 @@ back_end = [‘Node’,‘Express’, ‘MongoDB’]</p>
     - Find the median age (one middle item or two middle items divided by two)
     - Find the average age (sum of all items divided by their number )
     - Find the range of the ages (max - min)
-    - Compare the value of (min - average) and (max - average), use **[abs()](https://github.com/milaan9/04_Python_Functions/blob/main/002_Python_Functions_Built_in/001_Python_abs%28%29.ipynb)** method
+    - Compare the value of (min - average) and (max - average), use **abs()** method
 </pre></div>
 </div>
-<ol class="arabic simple" start="2">
-<li><p>Find the middle country(ies) in the <strong><a class="reference external" href="https://github.com/milaan9/02_Python_Datatypes/blob/main/countries_data.py">countries list</a></strong></p></li>
+<ol class="arabic simple">
+<li><p>Find the middle country(ies) in the <strong>countries list</strong></p></li>
 <li><p>Divide the countries list into two equal lists if it is even if not one more country for the first half.</p></li>
 <li><p><strong><code class="docutils literal notranslate"><span class="pre">['India',</span> <span class="pre">'Russia',</span> <span class="pre">'China',</span> <span class="pre">'Finland',</span> <span class="pre">'Sweden',</span> <span class="pre">'Norway',</span> <span class="pre">'Denmark']</span></code></strong>. Unpack the first three countries and the rest as scandic countries.</p></li>
 </ol>
