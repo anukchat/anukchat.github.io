@@ -1,8 +1,9 @@
 ![mindmesh](logos/mesh-smallest.png) 
-# Welcome to mindmesh 🤯
+# Welcome to my almanac 🤯
 
-Mindmesh project is an initiative to give a bare 
-minimum practical course using executable jupyter notebooks which can immediately get you started on AI/ML. 
+Here you will find my notes on Python, Data Science, AI/ML including Generative AI ( and in future some real world use cases on AI/IoT etc).
+
+I have compiled my notes into one place which would help you with a minimal practical course using executable jupyter notebooks (you can directly execute them on Colab by clicking on :rocket: icon ) which can immediately get you started on AI/ML. 
 
 ## Target Audience 🧐
 This course is designed for beginners who **DO NOT WANT** to waste time on watching many hours long AI/ML course videos and still dont get to do the actual implementation.
