@@ -70,6 +70,34 @@ parts:
               title: While loop
             - file: content/essentials/python/controlflow/007_Python_break_continue_pass_statements
               title: Break continue & pass
+        - file: content/essentials/python/controlflow/functions_toc
+          title: Functions
+          sections:
+            - file: content/essentials/python/functions/001_Python_Functions
+              title: Functions
+            - file: content/essentials/python/functions/002_Python_Function_Global_Local_Nonlocal
+              title: Global, local and nonlocal 
+            - file: content/essentials/python/functions/003_Python_Function_global_Keywords
+              title: Global keywords
+            - file: content/essentials/python/functions/004_Python_Function_Arguments
+              title: Arguments
+            - file: content/essentials/python/functions/005_Python_Function_Recursion
+              title: Recursion
+            - file: content/essentials/python/functions/006_Python_Function_Anonymous
+              title: Anonymous
+            - file: content/essentials/python/functions/007_Python_Function_Module
+              title: Module
+            - file: content/essentials/python/functions/008_Python_Function_random_Module
+              title: Random module
+            - file: content/essentials/python/functions/009_Python_Function_math_Module
+              title: Math module
+            - file: content/essentials/python/functions/010_Python_Function_Package
+              title: Package
+            - file: content/essentials/python/functions/Python_Docstrings
+              title: Docstrings
+            - file: content/essentials/python/functions/Python_User_defined_Functions
+              title: User defined functions
+            
     - file: content/essentials/intro_mathematics
       title: Mathematics
       sections:
