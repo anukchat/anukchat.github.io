@@ -5,7 +5,7 @@
 
 #######################################################################################
 # Book settings
-title                       : Mindmesh # The title of the book. Will be placed in the left navbar.
+title                       : Anukool's almanac - Python, Data Science and AI # The title of the book. Will be placed in the left navbar.
 author                      : "Anukool Chaturvedi"  # The author of the book
 copyright                   : "2023"  # Copyright year to be placed in the footer
 # logo                        : # A path to the book logo
@@ -48,9 +48,9 @@ parse:
 html:
   favicon                   : "logos/mesh-smallest.png"  # A path to a favicon image
   use_edit_page_button      : false  # Whether to add an "edit this page" button to pages. If `true`, repository information in repository: must be filled in
-  use_repository_button     : true  # Whether to add a link to your repository button
+  use_repository_button     : false  # Whether to add a link to your repository button
   use_issues_button         : false  # Whether to add an "open an issue" button
-  use_multitoc_numbering    : true   # Continuous numbering across parts/chapters
+  use_multitoc_numbering    : false   # Continuous numbering across parts/chapters
   extra_footer              : ""  # Will be displayed underneath the footer.
   google_analytics_id       : ""  # A GA id that can be used to track book views.
   home_page_in_navbar       : false  # Whether to include your home page in the left Navigation Bar
@@ -71,7 +71,7 @@ latex:
 # Launch button settings
 launch_buttons:
   notebook_interface        : "classic"  # The interface interactive links will activate ["classic", "jupyterlab"]
-  binderhub_url             : https://mybinder.org  # The URL of the BinderHub (e.g., https://mybinder.org)
+  # binderhub_url             : https://mybinder.org  # The URL of the BinderHub (e.g., https://mybinder.org)
   # jupyterhub_url            : ""  # The URL of the JupyterHub (e.g., https://datahub.berkeley.edu)
   thebe                     : false  # Add a thebe button to pages (requires the repository to run on Binder)
   colab_url                 : https://colab.research.google.com # The URL of Google Colab (https://colab.research.google.com)
@@ -84,7 +84,10 @@ repository:
 #######################################################################################
 # Advanced and power-user settings
 
-# sphinx:
+sphinx:
+  config:
+    latex_elements.papersize: a4paper
+    latex_elements.pointsize: 12pt
 #   config:
 #     html_extra_path: ["img",content/essentials/python/introduction/img]
 # sphinx:
