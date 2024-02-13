@@ -70,7 +70,7 @@ parts:
               title: While loop
             - file: content/essentials/python/controlflow/007_Python_break_continue_pass_statements
               title: Break continue & pass
-        - file: content/essentials/python/controlflow/functions_toc
+        - file: content/essentials/python/functions/functions_toc
           title: Functions
           sections:
             - file: content/essentials/python/functions/001_Python_Functions
