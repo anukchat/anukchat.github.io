@@ -97,7 +97,19 @@ parts:
               title: Docstrings
             - file: content/essentials/python/functions/Python_User_defined_Functions
               title: User defined functions
-            
+        - file: content/essentials/python/files/files_toc
+          title: Files
+          sections:
+            - file: content/essentials/python/files/001_Python_File_Input_Output
+              title: File input output
+            - file: content/essentials/python/files/002_Python_File_Directory
+              title: File directory
+            - file: content/essentials/python/files/003_Python_File_Exception
+              title: File exception
+            - file: content/essentials/python/files/004_Python_Exceptions_Handling
+              title: Exceptions handling
+            - file: content/essentials/python/files/005_Python_User_defined_Exceptions
+              title: User defined exceptions
     - file: content/essentials/intro_mathematics
       title: Mathematics
       sections:
