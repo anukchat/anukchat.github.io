@@ -1,0 +1,1627 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Python File I/O &#8212; Anukool&#39;s almanac</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../../../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="../../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../../../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+
+    <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
+    <script src="../../../../_static/jquery.js"></script>
+    <script src="../../../../_static/underscore.js"></script>
+    <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../../../_static/doctools.js"></script>
+    <script src="../../../../_static/clipboard.min.js"></script>
+    <script src="../../../../_static/copybutton.js"></script>
+    <script src="../../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../../_static/togglebutton.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../../../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'content/essentials/python/files/001_Python_File_Input_Output';</script>
+    <link rel="canonical" href="https://anukchat.github.io/content/essentials/python/files/001_Python_File_Input_Output.html" />
+    <link rel="shortcut icon" href="../../../../_static/mesh-smallest.png"/>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="Python Directory and Files Management" href="002_Python_File_Directory.html" />
+    <link rel="prev" title="&lt;no title&gt;" href="files_toc.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../../../intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Anukool's almanac</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Essentials</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../../intro_python.html">Python</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 has-children"><a class="reference internal" href="../introduction/intro_toc.html">Introduction</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../introduction/002_Hello_World.html">Hello World</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../introduction/003_Python_Keywords_and_Identifiers.html">Keywords and identifiers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../introduction/004_Python_Statement_Indentation_Comments.html">Statement indentation &amp; comments</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../introduction/005_Python_Variables_%26_Constants.html">Variables &amp; constants</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../introduction/006_Python_Literals.html">Literals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../introduction/007_Python_Data_Types.html">Datatypes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../introduction/008_Python_Type_Conversion.html">Type conversion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../introduction/009_Python_Input_Output_Import.html">I/O &amp; imports</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../introduction/010_Python_Operators.html">Operators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../introduction/011_Python_Namespace_and_Scope.html">Namespace &amp; scope</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../introduction/Interpreter_Vs_Compiler.html">Interpreter vs compiler</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../datatypes/datatypes_toc.html">Datatypes</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../datatypes/001_Python_Numbers.html">Numbers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../datatypes/002_Python_String.html">String</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../datatypes/003_Python_List.html">List</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../datatypes/004_Python_Tuple.html">Tuple</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../datatypes/005_Python_Dictionary.html">Dictionary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../datatypes/006_Python_Sets.html">Sets</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../datatypes/Python_List_Comprehension.html">List comprehension</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../controlflow/controlflow_toc.html">Control flows</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../controlflow/000_Python_Flow_Control_statement.html">Flow control statement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../controlflow/001_Python_if_statement.html">If</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../controlflow/002_Python_if_else_statement.html">If else</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../controlflow/003_Python_if_elif_else_statement.html">If elif else</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../controlflow/004_Python_Nested_if_statement.html">Nested if</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../controlflow/005_Python_for_Loop.html">Loops in Python</a></li>
+
+<li class="toctree-l3"><a class="reference internal" href="../controlflow/006_Python_while_Loop.html">Loops in Python</a></li>
+
+<li class="toctree-l3"><a class="reference internal" href="../controlflow/007_Python_break_continue_pass_statements.html">Control Statements in Python</a></li>
+
+
+
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../functions/functions_toc.html">Functions</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../functions/001_Python_Functions.html">Python Functions</a></li>
+
+<li class="toctree-l3"><a class="reference internal" href="../functions/002_Python_Function_Global_Local_Nonlocal.html">Global, local and nonlocal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../functions/003_Python_Function_global_Keywords.html">Python <code class="docutils literal notranslate"><span class="pre">global</span></code> Keyword</a></li>
+
+<li class="toctree-l3"><a class="reference internal" href="../functions/004_Python_Function_Arguments.html">Function Argument and Parameter</a></li>
+
+<li class="toctree-l3"><a class="reference internal" href="../functions/005_Python_Function_Recursion.html">Python Recursion</a></li>
+
+<li class="toctree-l3"><a class="reference internal" href="../functions/006_Python_Function_Anonymous.html">Anonymous</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../functions/007_Python_Function_Module.html">Module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../functions/008_Python_Function_random_Module.html">Random module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../functions/010_Python_Function_Package.html">Package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../functions/Python_Docstrings.html">Docstrings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../functions/Python_User_defined_Functions.html">User defined functions</a></li>
+</ul>
+</li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Python File I/O</a></li>
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="002_Python_File_Directory.html">File directory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="003_Python_File_Exception.html">File exception</a></li>
+<li class="toctree-l2"><a class="reference internal" href="004_Python_Exceptions_Handling.html">Exceptions handling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="005_Python_User_defined_Exceptions.html">User defined exceptions</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../intro_mathematics.html">Mathematics</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../mathematics/1_linear_algebra.html">Linear algebra</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../intro_statistics.html">Statistics</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../statistics/statistics.html">Content with notebooks</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Tools</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../tools/tools-for-ml.html">Tools for dataScience and ML</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../tools/tools-for-nn.html">Tools for designing neural networks</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../tools/tools-for-llms.html">Tools for LLMs and multimodels</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../tools/langchain/intro.html">Langchain introduction and setup</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../tools/langchain/lcel.html">Langchain expression language</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tools/langchain/langchain-modules.html">Langchain modules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tools/langchain/langserve.html">LangServe</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tools/langchain/langsmith.html">LangSmith</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tools/langchain/langgraph.html">LangGraph</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../tools/hf/intro.html">HuggingFace introduction and setup</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Concepts</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../concepts/mymarkdown.html">Concepts at glance</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../concepts/markdown-notebooks.html">Sample machine learning</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Core engineering</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../core/markdown.html">Introduction to core</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../core/mymarkdown.html">End to 2nd ML usecase</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Real world use cases</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../real-world/markdown.html">Understand how real world ML works</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../real-world/mymarkdown.html">Real world examples</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/anukchat/anukchat.github.io/blob/main/content/essentials/python/files/001_Python_File_Input_Output.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../../../../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../../_sources/content/essentials/python/files/001_Python_File_Input_Output.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Python File I/O</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Python File I/O</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#files">Files</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opening-files-in-python">1. Opening Files in Python</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#closing-files-in-python">2. Closing Files in Python</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-file-object-attributes">The file Object Attributes</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#writing-to-files-in-python">3. Writing to Files in Python</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reading-files-in-python">4. Reading Files in Python</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#file-positions">File Positions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-file-methods">Python File Methods</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deleting-files">Deleting Files</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#file-types">File Types</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#file-with-txt-extension">File with txt Extension</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#file-with-json-extension">File with json Extension</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#changing-json-to-dictionary">Changing JSON to Dictionary</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#changing-dictionary-to-json">Changing Dictionary to JSON</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#saving-as-json-file">Saving as JSON File</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#file-with-csv-extension">File with csv Extension</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#file-with-xlsx-extension">File with xlsx Extension</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#file-with-xml-extension">File with xml Extension</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-span-class-label-label-default-files-span">💻 Exercises ➞ <span class="label label-default">Files</span></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-span-class-label-label-default-level-1-span">Exercises ➞ <span class="label label-default">Level 1</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#your-output-should-look-like-this">Your output should look like this:</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Your output should look like this:</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Your output should look like this:</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Your output should look like this:</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-span-class-label-label-default-level-2-span">Exercises ➞ <span class="label label-default">Level 2</span></a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Your output should look like this</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Your output should look like this</a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="python-file-i-o">
+<h1>Python File I/O<a class="headerlink" href="#python-file-i-o" title="Permalink to this heading">#</a></h1>
+<p>In this class, you’ll learn about Python file operations. More specifically, opening a file, reading from it, writing into it, closing it, and various file methods that you should be aware of.</p>
+<section id="files">
+<h2>Files<a class="headerlink" href="#files" title="Permalink to this heading">#</a></h2>
+<p>Files are named locations on disk to store related information. They are used to permanently store data in a non-volatile memory (e.g. hard disk).</p>
+<p>Since Random Access Memory (RAM) is volatile (which loses its data when the computer is turned off), we use files for future use of the data by permanently storing them.</p>
+<p>When we want to read from or write to a file, we need to open it first. When we are done, it needs to be closed so that the resources that are tied with the file are freed.</p>
+<p>Hence, in Python, a file operation takes place in the following order:
+<b></p>
+<ol class="arabic simple">
+<li><p>Open a file</p></li>
+<li><p>Close the file</p></li>
+<li><p>Write into files (perform operation)</p></li>
+<li><p>Read contents of files (perform operation)
+</b></p></li>
+</ol>
+</section>
+<section id="opening-files-in-python">
+<h2>1. Opening Files in Python<a class="headerlink" href="#opening-files-in-python" title="Permalink to this heading">#</a></h2>
+<p>Python has a built-in <strong><code class="docutils literal notranslate"><span class="pre">open()</span></code></strong> function to open a file. This function returns a file object, also called a handle, as it is used to read or modify the file accordingly.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;test.txt&quot;</span><span class="p">)</span>  <span class="c1"># open file in current directory</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;C:/Python99/README.txt&quot;</span><span class="p">)</span>   <span class="c1"># specifying full path</span>
+</pre></div>
+</div>
+<p>We can specify the mode while opening a file. In mode, we specify whether we want to read <strong><code class="docutils literal notranslate"><span class="pre">r</span></code></strong>, write <strong><code class="docutils literal notranslate"><span class="pre">w</span></code></strong> or append <strong><code class="docutils literal notranslate"><span class="pre">a</span></code></strong> to the file. We can also specify if we want to open the file in text mode or binary mode.</p>
+<p>The default is reading in text mode. In this mode, we get strings when reading from the file.</p>
+<p>On the other hand, binary mode returns bytes and this is the mode to be used when dealing with non-text files like images or executable files.</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-center"><p>Mode</p></th>
+<th class="head text-left"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p><strong><code class="docutils literal notranslate"><span class="pre">r</span></code></strong></p></td>
+<td class="text-left"><p><strong>Read</strong> -Opens a file for reading only. The file pointer is placed at the beginning of the file. This is the default mode.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p><strong><code class="docutils literal notranslate"><span class="pre">t</span></code></strong></p></td>
+<td class="text-left"><p><strong>Text</strong> - Opens in text mode. (default).</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p><strong><code class="docutils literal notranslate"><span class="pre">b</span></code></strong></p></td>
+<td class="text-left"><p><strong>Binary</strong> - Opens in binary mode (e.g. images).</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p><strong><code class="docutils literal notranslate"><span class="pre">x</span></code></strong></p></td>
+<td class="text-left"><p><strong>Create</strong> - Opens a file for exclusive creation. If the file already exists, the operation fails.</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p><strong><code class="docutils literal notranslate"><span class="pre">rb</span></code></strong></p></td>
+<td class="text-left"><p>Opens a file for reading only in binary format. The file pointer is placed at the beginning of the file. This is the default mode.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p><strong><code class="docutils literal notranslate"><span class="pre">r+</span></code></strong></p></td>
+<td class="text-left"><p>Opens a file for both reading and writing. The file pointer placed at the beginning of the file.</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p><strong><code class="docutils literal notranslate"><span class="pre">rb+</span></code></strong></p></td>
+<td class="text-left"><p>Opens a file for both reading and writing in binary format. The file pointer placed at the beginning of the file.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p><strong><code class="docutils literal notranslate"><span class="pre">w</span></code></strong></p></td>
+<td class="text-left"><p><strong>Write</strong> - Opens a file for writing only. Overwrites the file if the file exists. If the file does not exist, creates a new file for writing.</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p><strong><code class="docutils literal notranslate"><span class="pre">wb</span></code></strong></p></td>
+<td class="text-left"><p>Opens a file for writing only in binary format. Overwrites the file if the file exists. If the file does not exist, creates a new file for writing.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p><strong><code class="docutils literal notranslate"><span class="pre">w+</span></code></strong></p></td>
+<td class="text-left"><p>Opens a file for both writing and reading. Overwrites the existing file if the file exists. If the file does not exist, creates a new file for reading and writing.</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p><strong><code class="docutils literal notranslate"><span class="pre">wb+</span></code></strong></p></td>
+<td class="text-left"><p>Opens a file for both writing and reading in binary format. Overwrites the existing file if the file exists. If the file does not exist, creates a new file for reading and writing.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p><strong><code class="docutils literal notranslate"><span class="pre">a</span></code></strong></p></td>
+<td class="text-left"><p><strong>Append</strong> - Opens a file for appending. The file pointer is at the end of the file if the file exists. That is, the file is in the append mode. If the file does not exist, it creates a new file for writing.</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p><strong><code class="docutils literal notranslate"><span class="pre">ab</span></code></strong></p></td>
+<td class="text-left"><p>Opens a file for appending in binary format. The file pointer is at the end of the file if the file exists. That is, the file is in the append mode. If the file does not exist, it creates a new file for writing.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p><strong><code class="docutils literal notranslate"><span class="pre">a+</span></code></strong></p></td>
+<td class="text-left"><p>Opens a file for both appending and reading. The file pointer is at the end of the file if the file exists. The file opens in the append mode. If the file does not exist, it creates a new file for reading and writing.</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p><strong><code class="docutils literal notranslate"><span class="pre">ab+</span></code></strong></p></td>
+<td class="text-left"><p>Opens a file for both appending and reading in binary format. The file pointer is at the end of the file if the file exists. The file opens in the append mode. If the file does not exist, it creates a new file for reading and writing.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;test.txt&quot;</span><span class="p">)</span>   <span class="c1"># equivalent to &#39;r&#39; or &#39;rt&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>               <span class="c1"># &lt;_io.TextIOWrapper name=&#39;test.txt&#39; mode=&#39;r&#39; encoding=&#39;cp1252&#39;&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;_io.TextIOWrapper name=&#39;test.txt&#39; mode=&#39;r&#39; encoding=&#39;cp1252&#39;&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<p>As you can see in the example above, I printed the opened file and it gave  some information about it. Opened file has different reading methods: <strong><code class="docutils literal notranslate"><span class="pre">read()</span></code></strong>, <strong><code class="docutils literal notranslate"><span class="pre">readline</span></code></strong>, <strong><code class="docutils literal notranslate"><span class="pre">readlines</span></code></strong>. An opened file has to be closed with <strong><code class="docutils literal notranslate"><span class="pre">close()</span></code></strong> method.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;test.txt&quot;</span><span class="p">,</span><span class="s1">&#39;w&#39;</span><span class="p">)</span>  <span class="c1"># write in text mode</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;_io.TextIOWrapper name=&#39;test.txt&#39; mode=&#39;w&#39; encoding=&#39;cp1252&#39;&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;logo.png&quot;</span><span class="p">,</span><span class="s1">&#39;r+b&#39;</span><span class="p">)</span>  <span class="c1"># read and write in binary mode</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Unlike other languages, the character <strong><code class="docutils literal notranslate"><span class="pre">a</span></code></strong> does not imply the number 97 until it is encoded using <strong><code class="docutils literal notranslate"><span class="pre">ASCII</span></code></strong> (or other equivalent encodings).</p>
+<p>Moreover, the default encoding is platform dependent. In windows, it is <strong><code class="docutils literal notranslate"><span class="pre">cp1252</span></code></strong> but <strong><code class="docutils literal notranslate"><span class="pre">utf-8</span></code></strong> in Linux.</p>
+<p>So, we must not also rely on the default encoding or else our code will behave differently in different platforms.</p>
+<p>Hence, when working with files in text mode, it is highly recommended to specify the encoding type.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;test.txt&quot;</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="closing-files-in-python">
+<h2>2. Closing Files in Python<a class="headerlink" href="#closing-files-in-python" title="Permalink to this heading">#</a></h2>
+<p>When we are done with performing operations on the file, we need to properly close the file.</p>
+<p>Closing a file will free up the resources that were tied with the file. It is done using the <strong><code class="docutils literal notranslate"><span class="pre">close()</span></code></strong> method available in Python.</p>
+<p>Python has a garbage collector to clean up unreferenced objects but we must not rely on it to close the file.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;test.txt&quot;</span><span class="p">,</span> <span class="n">encoding</span> <span class="o">=</span> <span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+<span class="c1"># perform file operations</span>
+<span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>This method is not entirely safe. If an exception occurs when we are performing some operation with the file, the code exits without closing the file.</p>
+<p>A safer way is to use a <strong><a class="reference internal" href="004_Python_Exceptions_Handling.html"><span class="doc std std-doc">try-finally</span></a></strong> block.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;test.txt&quot;</span><span class="p">,</span> <span class="n">encoding</span> <span class="o">=</span> <span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+    <span class="c1"># perform file operations</span>
+<span class="k">finally</span><span class="p">:</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>This way, we are guaranteeing that the file is properly closed even if an exception is raised that causes program flow to stop.</p>
+<p>The best way to close a file is by using the <strong><code class="docutils literal notranslate"><span class="pre">with</span></code></strong> statement. This ensures that the file is closed when the block inside the <strong><code class="docutils literal notranslate"><span class="pre">with</span></code></strong> statement is exited.</p>
+<p>We don’t need to explicitly call the <strong><code class="docutils literal notranslate"><span class="pre">close()</span></code></strong> method. It is done internally.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="go">&gt;&gt;&gt;with open(&quot;test.txt&quot;, encoding = &#39;utf-8&#39;) as f:</span>
+<span class="go">   # perform file operations</span>
+</pre></div>
+</div>
+<section id="the-file-object-attributes">
+<h3>The file Object Attributes<a class="headerlink" href="#the-file-object-attributes" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>file.closed</strong> - Returns true if file is closed, false otherwise.</p></li>
+<li><p><strong>file.mode</strong> - Returns access mode with which file was opened.</p></li>
+<li><p><strong><a class="reference external" href="http://file.name">file.name</a></strong> - Returns name of the file.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Open a file</span>
+<span class="n">data</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;data.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;wb&quot;</span><span class="p">)</span>
+<span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;Name of the file: &quot;</span><span class="p">,</span> <span class="n">data</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;Closed or not : &quot;</span><span class="p">,</span> <span class="n">data</span><span class="o">.</span><span class="n">closed</span><span class="p">)</span>
+<span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;Opening mode : &quot;</span><span class="p">,</span> <span class="n">data</span><span class="o">.</span><span class="n">mode</span><span class="p">)</span>
+<span class="n">data</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>  <span class="c1">#closed data.txt file</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Name of the file:  data.txt
+Closed or not :  False
+Opening mode :  wb
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="writing-to-files-in-python">
+<h2>3. Writing to Files in Python<a class="headerlink" href="#writing-to-files-in-python" title="Permalink to this heading">#</a></h2>
+<p>In order to write into a file in Python, we need to open it in write <strong><code class="docutils literal notranslate"><span class="pre">w</span></code></strong>, append <strong><code class="docutils literal notranslate"><span class="pre">a</span></code></strong> or exclusive creation <strong><code class="docutils literal notranslate"><span class="pre">x</span></code></strong> mode.</p>
+<p>We need to be careful with the <strong><code class="docutils literal notranslate"><span class="pre">w</span></code></strong> mode, as it will overwrite into the file if it already exists. Due to this, all the previous data are erased.</p>
+<p>Writing a string or sequence of bytes (for binary files) is done using the <strong><code class="docutils literal notranslate"><span class="pre">write()</span></code></strong> method. This method returns the number of characters written to the file.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;test_1.txt&quot;</span><span class="p">,</span><span class="s1">&#39;w&#39;</span><span class="p">,</span><span class="n">encoding</span> <span class="o">=</span> <span class="s1">&#39;utf-8&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;my first file</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;This file</span><span class="se">\n\n</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;contains three lines</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>This program will create a new file named <strong><code class="docutils literal notranslate"><span class="pre">test_1.txt</span></code></strong> in the current directory if it does not exist. If it does exist, it is overwritten.</p>
+<p>We must include the newline characters ourselves to distinguish the different lines.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;test_2.txt&quot;</span><span class="p">,</span><span class="s1">&#39;w&#39;</span><span class="p">,</span><span class="n">encoding</span> <span class="o">=</span> <span class="s1">&#39;utf-8&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;This is file</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;my</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;first file</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Let us append <strong><code class="docutils literal notranslate"><span class="pre">a</span></code></strong> some text to the file we have been reading:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;test_2.txt&quot;</span><span class="p">,</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="n">encoding</span> <span class="o">=</span> <span class="s1">&#39;utf-8&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;This text has to be appended at the end&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># open a file in current directory</span>
+<span class="n">data</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;data_1.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="c1"># &quot;w&quot; write in text mode,</span>
+<span class="n">data</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;Welcome to Dr. Milan Parmar&#39;s Python Tutorial&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;done&quot;</span><span class="p">)</span>
+<span class="n">data</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>done
+</pre></div>
+</div>
+</div>
+</div>
+<div>
+<img src="img/io1.png" width="1000"/>
+</div></section>
+<section id="reading-files-in-python">
+<h2>4. Reading Files in Python<a class="headerlink" href="#reading-files-in-python" title="Permalink to this heading">#</a></h2>
+<p>To read a file in Python, we must open the file in reading <strong><code class="docutils literal notranslate"><span class="pre">r</span></code></strong> mode.</p>
+<p>There are various methods available for this purpose. We can use the <strong><code class="docutils literal notranslate"><span class="pre">read(size)</span></code></strong> method to read in the <strong><code class="docutils literal notranslate"><span class="pre">size</span></code></strong> number of data. If the <strong><code class="docutils literal notranslate"><span class="pre">size</span></code></strong> parameter is not specified, it reads and returns up to the end of the file.</p>
+<p>We can read the <strong><code class="docutils literal notranslate"><span class="pre">text_1.txt</span></code></strong> file we wrote in the above section in the following way:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;test.txt&quot;</span><span class="p">,</span><span class="s1">&#39;r&#39;</span><span class="p">,</span><span class="n">encoding</span> <span class="o">=</span> <span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+<span class="n">txt</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>  <span class="c1"># read all the characters in the file</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">txt</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">txt</span><span class="p">)</span>
+<span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;str&#39;&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;test_1.txt&quot;</span><span class="p">,</span><span class="s1">&#39;r&#39;</span><span class="p">,</span><span class="n">encoding</span> <span class="o">=</span> <span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+<span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>  <span class="c1"># read the first 8 data characters</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;my first&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>  <span class="c1"># read the next 5 data characters</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39; file&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>  <span class="c1"># read in the rest till end of file</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;\nThis file\n\ncontains three lines\n&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>  <span class="c1"># further reading returns empty sting</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can see that the <strong><code class="docutils literal notranslate"><span class="pre">read()</span></code></strong> method returns a newline as <strong><code class="docutils literal notranslate"><span class="pre">'\n'</span></code></strong>. Once the end of the file is reached, we get an empty string on further reading.</p>
+<p>We can change our current file cursor (position) using the <strong><code class="docutils literal notranslate"><span class="pre">seek()</span></code></strong> method. Similarly, the <strong><code class="docutils literal notranslate"><span class="pre">tell()</span></code></strong> method returns our current position (in number of bytes).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="o">.</span><span class="n">tell</span><span class="p">()</span>    <span class="c1"># get the current file position</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>50
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="o">.</span><span class="n">seek</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>   <span class="c1"># bring file cursor to initial position</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>  <span class="c1"># read the entire file</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>my first file
+This file
+
+contains three lines
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can read a file line-by-line using a <strong>for loop</strong>. This is both efficient and fast.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;test_1.txt&quot;</span><span class="p">,</span><span class="s1">&#39;r&#39;</span><span class="p">,</span><span class="n">encoding</span> <span class="o">=</span> <span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">line</span><span class="p">,</span> <span class="n">end</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>my first file
+This file
+
+contains three lines
+</pre></div>
+</div>
+</div>
+</div>
+<p>In this program, the lines in the file itself include a newline character <strong><code class="docutils literal notranslate"><span class="pre">\n</span></code></strong>. So, we use the end parameter of the <strong><code class="docutils literal notranslate"><span class="pre">print()</span></code></strong> function to avoid two newlines when printing.</p>
+<p>Alternatively, we can use the <strong><code class="docutils literal notranslate"><span class="pre">readline()</span></code></strong> method to read individual lines of a file. This method reads a file till the newline, including the newline character.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="o">.</span><span class="n">seek</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>  <span class="c1"># bring file cursor to initial position</span>
+<span class="n">f</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;my first file\n&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;This file\n&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;\n&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;contains three lines\n&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Lastly, the <strong><code class="docutils literal notranslate"><span class="pre">readlines()</span></code></strong> method returns a list of remaining lines of the entire file. All these reading methods return empty values when the end of file <strong>(EOF)</strong> is reached.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="o">.</span><span class="n">seek</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>  <span class="c1"># bring file cursor to initial position</span>
+<span class="n">f</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;my first file\n&#39;, &#39;This file\n&#39;, &#39;\n&#39;, &#39;contains three lines\n&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Another way to get all the lines as a list is using <strong><code class="docutils literal notranslate"><span class="pre">splitlines()</span></code></strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="o">.</span><span class="n">seek</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>  <span class="c1"># bring file cursor to initial position</span>
+<span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;my first file&#39;, &#39;This file&#39;, &#39;&#39;, &#39;contains three lines&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Open a file</span>
+<span class="n">data</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;data_1.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;r+&quot;</span><span class="p">)</span>
+<span class="n">file_data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">27</span><span class="p">)</span> <span class="c1"># read 3.375 byte only</span>
+<span class="n">full_data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>   <span class="c1"># read all byte into file from last cursor</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">file_data</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">full_data</span><span class="p">)</span>
+<span class="n">data</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Welcome to Dr. Milan Parmar
+&#39;s Python Tutorial
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="file-positions">
+<h2>File Positions<a class="headerlink" href="#file-positions" title="Permalink to this heading">#</a></h2>
+<p>The <strong><code class="docutils literal notranslate"><span class="pre">tell()</span></code></strong> method tells you the current position within the file; in other words, the next read or write will occur at that many bytes from the beginning of the file.</p>
+<p>The <strong><code class="docutils literal notranslate"><span class="pre">seek(offset[,</span> <span class="pre">from])</span></code></strong> method changes the current file position. The offset argument indicates the number of bytes to be moved. The from argument specifies the reference position from where the bytes are to be moved.</p>
+<p>If from is set to 0, the beginning of the file is used as the reference position. If it is set to 1, the current position is used as the reference position. If it is set to 2 then the end of the file would be taken as the reference position.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Open a file</span>
+<span class="n">data</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;data_1.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;r+&quot;</span><span class="p">)</span>
+<span class="n">file_data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">27</span><span class="p">)</span> <span class="c1"># read 18 byte only</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;current position after reading 27 byte :&quot;</span><span class="p">,</span><span class="n">data</span><span class="o">.</span><span class="n">tell</span><span class="p">())</span>
+<span class="n">data</span><span class="o">.</span><span class="n">seek</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="c1">#here current position set to 0 (starting of file)</span>
+<span class="n">full_data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">read</span><span class="p">()</span> <span class="c1">#read all byte</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">file_data</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">full_data</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;position after reading file : &quot;</span><span class="p">,</span><span class="n">data</span><span class="o">.</span><span class="n">tell</span><span class="p">())</span>
+<span class="n">data</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>current position after reading 27 byte : 27
+Welcome to Dr. Milan Parmar
+Welcome to Dr. Milan Parmar&#39;s Python Tutorial
+position after reading file :  45
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="python-file-methods">
+<h2>Python File Methods<a class="headerlink" href="#python-file-methods" title="Permalink to this heading">#</a></h2>
+<p>There are various methods available with the file object. Some of them have been used in the above examples.</p>
+<p>Here is the complete list of methods in text mode with a brief description:</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Method</p></th>
+<th class="head text-left"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p><strong><code class="docutils literal notranslate"><span class="pre">close()</span></code></strong></p></td>
+<td class="text-left"><p>Closes an opened file. It has no effect if the file is already closed.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong><code class="docutils literal notranslate"><span class="pre">detach()</span></code></strong></p></td>
+<td class="text-left"><p>Separates the underlying binary buffer from the <strong><code class="docutils literal notranslate"><span class="pre">TextIOBase</span></code></strong> and returns it.</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong><code class="docutils literal notranslate"><span class="pre">fileno()</span></code></strong></p></td>
+<td class="text-left"><p>Returns an integer number (file descriptor) of the file.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong><code class="docutils literal notranslate"><span class="pre">flush()</span></code></strong></p></td>
+<td class="text-left"><p>Flushes the write buffer of the file stream.</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong><code class="docutils literal notranslate"><span class="pre">isatty()</span></code></strong></p></td>
+<td class="text-left"><p>Returns <strong><code class="docutils literal notranslate"><span class="pre">True</span></code></strong> if the file stream is interactive.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong><code class="docutils literal notranslate"><span class="pre">read(n)</span></code></strong></p></td>
+<td class="text-left"><p>Reads at most <code class="docutils literal notranslate"><span class="pre">n</span></code> characters from the file. Reads till end of file if it is negative or <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong><code class="docutils literal notranslate"><span class="pre">readable()</span></code></strong></p></td>
+<td class="text-left"><p>Returns <strong><code class="docutils literal notranslate"><span class="pre">True</span></code></strong> if the file stream can be read from.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong><code class="docutils literal notranslate"><span class="pre">readline(n=-1)</span></code></strong></p></td>
+<td class="text-left"><p>Reads and returns one line from the file. Reads in at most <strong><code class="docutils literal notranslate"><span class="pre">n</span></code></strong> bytes if specified.</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong><code class="docutils literal notranslate"><span class="pre">readlines(n=-1)</span></code></strong></p></td>
+<td class="text-left"><p>Reads and returns a list of lines from the file. Reads in at most <strong><code class="docutils literal notranslate"><span class="pre">n</span></code></strong> bytes/characters if specified.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong><code class="docutils literal notranslate"><span class="pre">seek(offset,from=SEEK_SET)</span></code></strong></p></td>
+<td class="text-left"><p>Changes the file position to <strong><code class="docutils literal notranslate"><span class="pre">offset</span></code></strong> bytes, in reference to <code class="docutils literal notranslate"><span class="pre">from</span></code> (start, current, end).</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong><code class="docutils literal notranslate"><span class="pre">seekable()</span></code></strong></p></td>
+<td class="text-left"><p>Returns <strong><code class="docutils literal notranslate"><span class="pre">True</span></code></strong> if the file stream supports random access.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong><code class="docutils literal notranslate"><span class="pre">tell()</span></code></strong></p></td>
+<td class="text-left"><p>Returns the current file location.</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong><code class="docutils literal notranslate"><span class="pre">truncate(size=None)</span></code></strong></p></td>
+<td class="text-left"><p>Resizes the file stream to <strong><code class="docutils literal notranslate"><span class="pre">size</span></code></strong> bytes. If <strong><code class="docutils literal notranslate"><span class="pre">size</span></code></strong> is not specified, resizes to current location…</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong><code class="docutils literal notranslate"><span class="pre">writable()</span></code></strong></p></td>
+<td class="text-left"><p>Returns <strong><code class="docutils literal notranslate"><span class="pre">True</span></code></strong> if the file stream can be written to.</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong><code class="docutils literal notranslate"><span class="pre">write(s)</span></code></strong></p></td>
+<td class="text-left"><p>Writes the string <strong><code class="docutils literal notranslate"><span class="pre">s</span></code></strong> to the file and returns the number of characters written…</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong><code class="docutils literal notranslate"><span class="pre">writelines(lines)</span></code></strong></p></td>
+<td class="text-left"><p>Writes a list of <strong><code class="docutils literal notranslate"><span class="pre">lines</span></code></strong> to the file…</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="deleting-files">
+<h2>Deleting Files<a class="headerlink" href="#deleting-files" title="Permalink to this heading">#</a></h2>
+<p>We have seen in previous section, how to make and remove a directory using <strong>os</strong> module (04_Python_Functions ➞ 007_Python_Function_Module ➞ Python Built-In Modules). Again now, if we want to remove a file we use <strong><code class="docutils literal notranslate"><span class="pre">os</span></code></strong> module.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s1">&#39;example.txt&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">29</span><span class="o">-</span><span class="n">c3f637926d7e</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">os</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s1">&#39;example.txt&#39;</span><span class="p">)</span>
+
+<span class="ne">FileNotFoundError</span>: [WinError 2] The system cannot find the file specified: &#39;example.txt&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>If the file does not exist, the remove method will raise an error, so it is good to use a condition like this:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="s1">&#39;./files/example.txt&#39;</span><span class="p">):</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s1">&#39;./files/example.txt&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The file does not exist&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The file does not exist
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="file-types">
+<h2>File Types<a class="headerlink" href="#file-types" title="Permalink to this heading">#</a></h2>
+<section id="file-with-txt-extension">
+<h3>File with txt Extension<a class="headerlink" href="#file-with-txt-extension" title="Permalink to this heading">#</a></h3>
+<p>File with <strong>txt</strong> extension is a very common form of data and we have covered it in the previous section. Let us move to the JSON file.</p>
+</section>
+<section id="file-with-json-extension">
+<h3>File with json Extension<a class="headerlink" href="#file-with-json-extension" title="Permalink to this heading">#</a></h3>
+<p><strong>JSON</strong> stands for <strong>J</strong>ava<strong>S</strong>cript <strong>O</strong>bject <strong>N</strong>otation. Actually, it is a stringified JavaScript object or Python dictionary.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># dictionary</span>
+<span class="n">person_dct</span><span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;Milaan&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;country&quot;</span><span class="p">:</span><span class="s2">&quot;England&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;city&quot;</span><span class="p">:</span><span class="s2">&quot;London&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;skills&quot;</span><span class="p">:[</span><span class="s2">&quot;Python&quot;</span><span class="p">,</span> <span class="s2">&quot;MATLAB&quot;</span><span class="p">,</span><span class="s2">&quot;R&quot;</span><span class="p">]</span>
+<span class="p">}</span>
+<span class="c1"># JSON: A string form a dictionary</span>
+<span class="n">person_json</span> <span class="o">=</span> <span class="s2">&quot;{&#39;name&#39;: &#39;Milaan&#39;, &#39;country&#39;: &#39;England&#39;, &#39;city&#39;: &#39;London&#39;, &#39;skills&#39;: [&#39;Python&#39;, &#39;MATLAB&#39;,&#39;R&#39;]}&quot;</span>
+
+<span class="c1"># we use three quotes and make it multiple line to make it more readable</span>
+<span class="n">person_json</span> <span class="o">=</span> <span class="s1">&#39;&#39;&#39;{</span>
+<span class="s1">    &quot;name&quot;:&quot;Milaan&quot;,</span>
+<span class="s1">    &quot;country&quot;:&quot;England&quot;,</span>
+<span class="s1">    &quot;city&quot;:&quot;London&quot;,</span>
+<span class="s1">    &quot;skills&quot;:[&quot;Python&quot;, &quot;MATLAB&quot;,&quot;R&quot;]</span>
+<span class="s1">}&#39;&#39;&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="changing-json-to-dictionary">
+<h3>Changing JSON to Dictionary<a class="headerlink" href="#changing-json-to-dictionary" title="Permalink to this heading">#</a></h3>
+<p>To change a JSON to a dictionary, first we import the json module and then we use <strong><code class="docutils literal notranslate"><span class="pre">loads</span></code></strong> method.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
+<span class="c1"># JSON</span>
+<span class="n">person_json</span> <span class="o">=</span> <span class="s1">&#39;&#39;&#39;{</span>
+<span class="s1">    &quot;name&quot;:&quot;Milaan&quot;,</span>
+<span class="s1">    &quot;country&quot;:&quot;England&quot;,</span>
+<span class="s1">    &quot;city&quot;:&quot;London&quot;,</span>
+<span class="s1">    &quot;skills&quot;:[&quot;Python&quot;, &quot;MATLAB&quot;,&quot;R&quot;]</span>
+<span class="s1">}&#39;&#39;&#39;</span>
+<span class="c1"># let&#39;s change JSON to dictionary</span>
+<span class="n">person_dct</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">person_json</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">person_dct</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">person_dct</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">person_dct</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;dict&#39;&gt;
+{&#39;name&#39;: &#39;Milaan&#39;, &#39;country&#39;: &#39;England&#39;, &#39;city&#39;: &#39;London&#39;, &#39;skills&#39;: [&#39;Python&#39;, &#39;MATLAB&#39;, &#39;R&#39;]}
+Milaan
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="changing-dictionary-to-json">
+<h3>Changing Dictionary to JSON<a class="headerlink" href="#changing-dictionary-to-json" title="Permalink to this heading">#</a></h3>
+<p>To change a dictionary to a JSON we use <strong><code class="docutils literal notranslate"><span class="pre">dumps</span></code></strong> method from the json module.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
+<span class="c1"># python dictionary</span>
+<span class="n">person</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;Milaan&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;country&quot;</span><span class="p">:</span><span class="s2">&quot;England&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;city&quot;</span><span class="p">:</span><span class="s2">&quot;London&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;skills&quot;</span><span class="p">:[</span><span class="s2">&quot;Python&quot;</span><span class="p">,</span> <span class="s2">&quot;MATLAB&quot;</span><span class="p">,</span><span class="s2">&quot;R&quot;</span><span class="p">]</span>
+<span class="p">}</span>
+<span class="c1"># let&#39;s convert it to  json</span>
+<span class="n">person_json</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">person</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span> <span class="c1"># indent could be 2, 4, 8. It beautifies the json</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">person_json</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">person_json</span><span class="p">)</span>
+
+<span class="c1"># when you print it, it does not have the quote, but actually it is a string</span>
+<span class="c1"># JSON does not have type, it is a string type.</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;str&#39;&gt;
+{
+    &quot;name&quot;: &quot;Milaan&quot;,
+    &quot;country&quot;: &quot;England&quot;,
+    &quot;city&quot;: &quot;London&quot;,
+    &quot;skills&quot;: [
+        &quot;Python&quot;,
+        &quot;MATLAB&quot;,
+        &quot;R&quot;
+    ]
+}
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="saving-as-json-file">
+<h3>Saving as JSON File<a class="headerlink" href="#saving-as-json-file" title="Permalink to this heading">#</a></h3>
+<p>We can also save our data as a json file. Let us save it as a json file using the following steps. For writing a json file, we use the <strong><code class="docutils literal notranslate"><span class="pre">json.dump()</span></code></strong> method, it can take dictionary, output file, <strong><code class="docutils literal notranslate"><span class="pre">ensure_ascii</span></code></strong> and <strong><code class="docutils literal notranslate"><span class="pre">indent</span></code></strong>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
+<span class="c1"># python dictionary</span>
+<span class="n">person</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;Milaan&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;country&quot;</span><span class="p">:</span><span class="s2">&quot;England&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;city&quot;</span><span class="p">:</span><span class="s2">&quot;London&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;skills&quot;</span><span class="p">:[</span><span class="s2">&quot;Python&quot;</span><span class="p">,</span> <span class="s2">&quot;MATLAB&quot;</span><span class="p">,</span><span class="s2">&quot;R&quot;</span><span class="p">]</span>
+<span class="p">}</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;json_example.json&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">person</span><span class="p">,</span> <span class="n">f</span><span class="p">,</span> <span class="n">ensure_ascii</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>In the code above, we use encoding and indentation. Indentation makes the json file easy to read.</p>
+</section>
+<section id="file-with-csv-extension">
+<h3>File with csv Extension<a class="headerlink" href="#file-with-csv-extension" title="Permalink to this heading">#</a></h3>
+<p><strong>CSV</strong> stands for <strong>C</strong>omma <strong>S</strong>eparated <strong>V</strong>alues. CSV is a simple file format used to store tabular data, such as a spreadsheet or database. CSV is a very common data format in data science.</p>
+<p>For example, create <strong>csv_example.csv</strong> in your working directory with the following contents:</p>
+<div class="highlight-csv notranslate"><div class="highlight"><pre><span></span>&quot;name&quot;,&quot;country&quot;,&quot;city&quot;,&quot;skills&quot;
+&quot;Milaan&quot;,&quot;England&quot;,&quot;London&quot;,&quot;Python&quot;
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">csv</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;csv_example.csv&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">csv_reader</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">reader</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">)</span> <span class="c1"># w use, reader method to read csv</span>
+    <span class="n">line_count</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">csv_reader</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">line_count</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Column names are :</span><span class="si">{</span><span class="s2">&quot;, &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">row</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+            <span class="n">line_count</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s1">&#39;</span><span class="se">\t</span><span class="si">{</span><span class="n">row</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s1"> is a teachers. He lives in </span><span class="si">{</span><span class="n">row</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s1">, </span><span class="si">{</span><span class="n">row</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="si">}</span><span class="s1">.&#39;</span><span class="p">)</span>
+            <span class="n">line_count</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Number of lines:  </span><span class="si">{</span><span class="n">line_count</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Column names are :name, country, city, skills
+	Milaan is a teachers. He lives in England, London.
+Number of lines:  2
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="file-with-xlsx-extension">
+<h3>File with xlsx Extension<a class="headerlink" href="#file-with-xlsx-extension" title="Permalink to this heading">#</a></h3>
+<p>To read excel files we need to install <strong><code class="docutils literal notranslate"><span class="pre">xlrd</span></code></strong> package. We will cover this after we cover package installing using <strong>pip</strong>.</p>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">xlrd</span>
+<span class="n">excel_book</span> <span class="o">=</span> <span class="n">xlrd</span><span class="o">.</span><span class="n">open_workbook</span><span class="p">(</span><span class="s1">&#39;sample.xls)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">excel_book</span><span class="o">.</span><span class="n">nsheets</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">excel_book</span><span class="o">.</span><span class="n">sheet_names</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="file-with-xml-extension">
+<h3>File with xml Extension<a class="headerlink" href="#file-with-xml-extension" title="Permalink to this heading">#</a></h3>
+<p><strong>XML</strong> is another structured data format which looks like HTML. In XML the tags are not predefined. The first line is an XML declaration. The person tag is the root of the XML. The person has a gender attribute.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot;?&gt;</span>
+<span class="nt">&lt;person</span><span class="w"> </span><span class="na">gender=</span><span class="s">&quot;female&quot;</span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="nt">&lt;name&gt;</span>Asabeneh<span class="nt">&lt;/name&gt;</span>
+<span class="w">  </span><span class="nt">&lt;country&gt;</span>Finland<span class="nt">&lt;/country&gt;</span>
+<span class="w">  </span><span class="nt">&lt;city&gt;</span>Helsinki<span class="nt">&lt;/city&gt;</span>
+<span class="w">  </span><span class="nt">&lt;skills&gt;</span>
+<span class="w">    </span><span class="nt">&lt;skill&gt;</span>JavaScrip<span class="nt">&lt;/skill&gt;</span>
+<span class="w">    </span><span class="nt">&lt;skill&gt;</span>React<span class="nt">&lt;/skill&gt;</span>
+<span class="w">    </span><span class="nt">&lt;skill&gt;</span>Python<span class="nt">&lt;/skill&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/skills&gt;</span>
+<span class="nt">&lt;/person&gt;</span>
+</pre></div>
+</div>
+<p>For more information on how to read an XML file check the <strong><a class="reference external" href="https://docs.python.org/2/library/xml.etree.elementtree.html">documentation</a></strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">xml.etree.ElementTree</span> <span class="k">as</span> <span class="nn">ET</span>
+<span class="n">tree</span> <span class="o">=</span> <span class="n">ET</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="s1">&#39;xml_example.xml&#39;</span><span class="p">)</span>
+<span class="n">root</span> <span class="o">=</span> <span class="n">tree</span><span class="o">.</span><span class="n">getroot</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Root tag:&#39;</span><span class="p">,</span> <span class="n">root</span><span class="o">.</span><span class="n">tag</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Attribute:&#39;</span><span class="p">,</span> <span class="n">root</span><span class="o">.</span><span class="n">attrib</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">child</span> <span class="ow">in</span> <span class="n">root</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;field: &#39;</span><span class="p">,</span> <span class="n">child</span><span class="o">.</span><span class="n">tag</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Root tag: person
+Attribute: {&#39;gender&#39;: &#39;male&#39;}
+field:  name
+field:  country
+field:  city
+field:  skills
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="exercises-span-class-label-label-default-files-span">
+<h2>💻 Exercises ➞ <span class='label label-default'>Files</span><a class="headerlink" href="#exercises-span-class-label-label-default-files-span" title="Permalink to this heading">#</a></h2>
+<section id="exercises-span-class-label-label-default-level-1-span">
+<h3>Exercises ➞ <span class='label label-default'>Level 1</span><a class="headerlink" href="#exercises-span-class-label-label-default-level-1-span" title="Permalink to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>Write a function which count number of lines and number of words in a text.</p></li>
+</ol>
+<ul class="simple">
+<li><p>a) Read <strong><span class="xref myst">speech_barack_obama.txt</span></strong> file and count number of lines and words</p></li>
+<li><p>b) Read <strong><span class="xref myst">speech_michelle_obama.txt </span></strong> file and count number of lines and words</p></li>
+<li><p>c) Read <strong><span class="xref myst">speech_donald_trump.txt</span></strong> file and count number of lines and words</p></li>
+<li><p>d) Read <strong><span class="xref myst">speech_melina_trump.txt</span></strong> file and count number of lines and words</p></li>
+</ul>
+<ol class="arabic" start="2">
+<li><p>Read the <strong><span class="xref myst">countries_data.json</span></strong> data file in data directory, create a function that finds the ten most spoken languages</p>
+<ul>
+<li><div class="highlight-py notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+<li><p>Read the <strong><span class="xref myst">countries_data.json</span></strong> data file and create a function that creates a list of the ten most populated countries</p>
+<ul>
+<li><div class="highlight-py notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+</ol>
+</section>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="your-output-should-look-like-this">
+<h1>Your output should look like this:<a class="headerlink" href="#your-output-should-look-like-this" title="Permalink to this heading">#</a></h1>
+<p>print(most_spoken_languages(filename=‘./countries_data.json’, 10))
+[(91, ‘English’),
+(45, ‘French’),
+(25, ‘Arabic’),
+(24, ‘Spanish’),
+(9, ‘Russian’),
+(9, ‘Portuguese’),
+(8, ‘Dutch’),
+(7, ‘German’),
+(5, ‘Chinese’),
+(4, ‘Swahili’),
+(4, ‘Serbian’)]</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="id1">
+<h1>Your output should look like this:<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h1>
+<p>print(most_spoken_languages(filename=‘./countries_data.json’, 3))
+[(91, ‘English’),
+(45, ‘French’),
+(25, ‘Arabic’)]</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="id2">
+<h1>Your output should look like this:<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h1>
+<p>print(most_populated_countries(filename=‘./countries_data.json’, 10))
+[
+{‘country’: ‘China’, ‘population’: 1377422166},
+{‘country’: ‘India’, ‘population’: 1295210000},
+{‘country’: ‘United States of America’, ‘population’: 323947000},
+{‘country’: ‘Indonesia’, ‘population’: 258705000},
+{‘country’: ‘Brazil’, ‘population’: 206135893},
+{‘country’: ‘Pakistan’, ‘population’: 194125062},
+{‘country’: ‘Nigeria’, ‘population’: 186988000},
+{‘country’: ‘Bangladesh’, ‘population’: 161006790},
+{‘country’: ‘Russian Federation’, ‘population’: 146599183},
+{‘country’: ‘Japan’, ‘population’: 126960000}
+]</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="id3">
+<h1>Your output should look like this:<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h1>
+<p>print(most_populated_countries(filename=‘./countries_data.json’, 3))
+[
+{‘country’: ‘China’, ‘population’: 1377422166},
+{‘country’: ‘India’, ‘population’: 1295210000},
+{‘country’: ‘United States of America’, ‘population’: 323947000}
+]</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+
+</pre></div>
+</div>
+<section id="exercises-span-class-label-label-default-level-2-span">
+<h2>Exercises ➞ <span class='label label-default'>Level 2</span><a class="headerlink" href="#exercises-span-class-label-label-default-level-2-span" title="Permalink to this heading">#</a></h2>
+<ol class="arabic">
+<li><p>Extract all incoming email addresses as a list from the <strong><span class="xref myst">email_exchanges_big.txt</span></strong> file.</p></li>
+<li><p>Find the most common words in the English language. Call the name of your function <strong><code class="docutils literal notranslate"><span class="pre">find_most_common_words</span></code></strong>, it will take two parameters - a string or a file and a positive integer, indicating the number of words. Your function will return an array of tuples in descending order. Check the output</p>
+<ul>
+<li><div class="highlight-py notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+<li><p>Use the function, find_most_frequent_words to find:</p></li>
+</ol>
+<ul class="simple">
+<li><p>a) The ten most frequent words used in <strong><span class="xref myst">Barack Obama’s Speech.txt</span></strong></p></li>
+<li><p>b) The ten most frequent words used in <strong><span class="xref myst">Michelle Obama’s Speech.txt </span></strong></p></li>
+<li><p>c) The ten most frequent words used in <strong><span class="xref myst">Donald Trump’s Speech.txt</span></strong></p></li>
+<li><p>d) The ten most frequent words used in <strong><span class="xref myst">Melina Trump’s Speech.txt</span></strong></p></li>
+</ul>
+<ol class="arabic simple" start="4">
+<li><p>Write a python application that checks similarity between two texts. It takes a file or a string as a parameter and it will evaluate the similarity of the two texts. For instance check the similarity between the transcripts of <strong><span class="xref myst">Michelle Obama’s Speech.txt </span></strong> and <strong><span class="xref myst">Melina Trump’s Speech.txt</span></strong> speech. You may need a couple of functions, function to clean the text (<strong><code class="docutils literal notranslate"><span class="pre">clean_text</span></code></strong>), function to remove support words (<strong><code class="docutils literal notranslate"><span class="pre">remove_support_words</span></code></strong>) and finally to check the similarity (<strong><code class="docutils literal notranslate"><span class="pre">check_text_similarity</span></code></strong>). List of <strong><span class="xref myst">support_words</span></strong>.</p></li>
+<li><p>Find the 10 most repeated words in the <strong><span class="xref myst">romeo_and_juliet.txt</span></strong>.</p></li>
+<li><p>Read the <strong><span class="xref myst">hacker_news.csv</span></strong> file and find out:</p></li>
+</ol>
+<ul class="simple">
+<li><p>a) Count the number of lines containing <strong><code class="docutils literal notranslate"><span class="pre">python</span></code></strong> or <strong><code class="docutils literal notranslate"><span class="pre">Python</span></code></strong></p></li>
+<li><p>b) Count the number lines containing <strong><code class="docutils literal notranslate"><span class="pre">JavaScript</span></code></strong>, <strong><code class="docutils literal notranslate"><span class="pre">javascript</span></code></strong> or <strong><code class="docutils literal notranslate"><span class="pre">Javascript</span></code></strong></p></li>
+<li><p>c) Count the number lines containing <strong><code class="docutils literal notranslate"><span class="pre">Java</span></code></strong> and not <strong><code class="docutils literal notranslate"><span class="pre">JavaScript</span></code></strong></p></li>
+</ul>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="id4">
+<h1>Your output should look like this<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h1>
+<p>print(find_most_common_words(‘sample.txt’, 10))
+[(10, ‘the’),
+(8, ‘be’),
+(6, ‘to’),
+(6, ‘of’),
+(5, ‘and’),
+(4, ‘a’),
+(4, ‘in’),
+(3, ‘that’),
+(2, ‘have’),
+(2, ‘I’)]</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="id5">
+<h1>Your output should look like this<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h1>
+<p>print(find_most_common_words(‘sample.txt’, 5))</p>
+<p>[(10, ‘the’),
+(8, ‘be’),
+(6, ‘to’),
+(6, ‘of’),
+(5, ‘and’)]</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./content/essentials/python/files"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="files_toc.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">&lt;no title&gt;</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="002_Python_File_Directory.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Python Directory and Files Management</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Python File I/O</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#files">Files</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opening-files-in-python">1. Opening Files in Python</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#closing-files-in-python">2. Closing Files in Python</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-file-object-attributes">The file Object Attributes</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#writing-to-files-in-python">3. Writing to Files in Python</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reading-files-in-python">4. Reading Files in Python</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#file-positions">File Positions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-file-methods">Python File Methods</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deleting-files">Deleting Files</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#file-types">File Types</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#file-with-txt-extension">File with txt Extension</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#file-with-json-extension">File with json Extension</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#changing-json-to-dictionary">Changing JSON to Dictionary</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#changing-dictionary-to-json">Changing Dictionary to JSON</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#saving-as-json-file">Saving as JSON File</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#file-with-csv-extension">File with csv Extension</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#file-with-xlsx-extension">File with xlsx Extension</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#file-with-xml-extension">File with xml Extension</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-span-class-label-label-default-files-span">💻 Exercises ➞ <span class="label label-default">Files</span></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-span-class-label-label-default-level-1-span">Exercises ➞ <span class="label label-default">Level 1</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#your-output-should-look-like-this">Your output should look like this:</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Your output should look like this:</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Your output should look like this:</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Your output should look like this:</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-span-class-label-label-default-level-2-span">Exercises ➞ <span class="label label-default">Level 2</span></a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Your output should look like this</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Your output should look like this</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Anukool Chaturvedi
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
