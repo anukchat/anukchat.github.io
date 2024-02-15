@@ -110,6 +110,19 @@ parts:
               title: Exceptions handling
             - file: content/essentials/python/files/005_Python_User_defined_Exceptions
               title: User defined exceptions
+        - file: content/essentials/python/objects/objects_toc
+          title: Objects & classes
+          sections:
+            - file: content/essentials/python/objects/001_Python_OOPs_Concepts
+              title: OOPs concepts
+            - file: content/essentials/python/objects/002_Python_Classes_and_Objects
+              title: Classes & objects
+            - file: content/essentials/python/objects/003_Python_Inheritance
+              title: Inheritance
+            - file: content/essentials/python/objects/004_Python_Operator_Overloading
+              title: Operator overloading
+            - file: content/essentials/python/objects/self_in_Python_Demystified
+              title: self demystified
     - file: content/essentials/intro_mathematics
       title: Mathematics
       sections:
