@@ -123,6 +123,23 @@ parts:
               title: Operator overloading
             - file: content/essentials/python/objects/self_in_Python_Demystified
               title: self demystified
+        - file: content/essentials/python/advanced/advanced_toc
+          title: Advanced
+          sections:
+            - file: content/essentials/python/advanced/001_Python_Iterators
+              title: OOPs concepts
+            - file: content/essentials/python/advanced/002_Python_Generators
+              title: Generators
+            - file: content/essentials/python/advanced/003_Python_Closure
+              title: Closure
+            - file: content/essentials/python/advanced/004_Python_Decorators
+              title: Decorators
+            - file: content/essentials/python/advanced/005_Python_Property
+              title: Property
+            - file: content/essentials/python/advanced/005_Python_RegEx
+              title: RegEx
+            - file: content/essentials/python/advanced/Python_args_and_kwargs
+              title: args and kwargs
     - file: content/essentials/intro_mathematics
       title: Mathematics
       sections:
