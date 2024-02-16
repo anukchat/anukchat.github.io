@@ -127,7 +127,7 @@ parts:
           title: Advanced
           sections:
             - file: content/essentials/python/advanced/001_Python_Iterators
-              title: OOPs concepts
+              title: Iterators
             - file: content/essentials/python/advanced/002_Python_Generators
               title: Generators
             - file: content/essentials/python/advanced/003_Python_Closure
@@ -140,6 +140,25 @@ parts:
               title: RegEx
             - file: content/essentials/python/advanced/Python_args_and_kwargs
               title: args and kwargs
+        - file: content/essentials/python/datetime/datetime_toc
+          title: Date time module
+          sections:
+            - file: content/essentials/python/datetime/001_Python_datetime_Module
+              title: Datetime
+            - file: content/essentials/python/datetime/002_Python_strftime
+              title: strftime
+            - file: content/essentials/python/datetime/003_Python_strptime
+              title: strptime
+            - file: content/essentials/python/datetime/004_Python_current_date_and_time
+              title: Current date & time
+            - file: content/essentials/python/datetime/005_Python_get_current_time
+              title: Current time
+            - file: content/essentials/python/datetime/006_Python_timestamp_to_datetime
+              title: Timestamp to datetime
+            - file: content/essentials/python/datetime/007_Python_time_Module
+              title: Time module
+            - file: content/essentials/python/datetime/008_Python_sleep
+              title: Sleep
     - file: content/essentials/intro_mathematics
       title: Mathematics
       sections:
