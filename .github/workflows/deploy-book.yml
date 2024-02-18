@@ -43,5 +43,5 @@ jobs:
     - name: GitHub Pages action
       uses: actions/deploy-pages@v4.0.4
       with:
-        token: ${{ secrets.GITHUB_TOKEN }}
+        # token: ${{ secrets.GITHUB_TOKEN }}
         artifact_name: ./_build/html
