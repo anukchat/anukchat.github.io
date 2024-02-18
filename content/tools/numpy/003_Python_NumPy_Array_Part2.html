@@ -283,12 +283,8 @@ const thebe_selector_output = ".output, .cell_output"
 
 <li class="toctree-l3"><a class="reference internal" href="002_Python_NumPy_Array_Part1.html">Arrays Part 1</a></li>
 <li class="toctree-l3 current active"><a class="current reference internal" href="#">Arrays Part 2</a></li>
-<li class="toctree-l3"><a class="reference internal" href="004_Python_NumPy_Array_Part3.html">Array math</a></li>
-
-<li class="toctree-l3"><a class="reference internal" href="005_Python_NumPy_Array_Part4.html">Arrays reorganizing</a></li>
-
-
-
+<li class="toctree-l3"><a class="reference internal" href="004_Python_NumPy_Array_Part3.html">Arrays Part 3</a></li>
+<li class="toctree-l3"><a class="reference internal" href="005_Python_NumPy_Array_Part4.html">Arrays Part 4</a></li>
 <li class="toctree-l3"><a class="reference internal" href="Python_Numpy_Exercises_with_hints.html">Exercises</a></li>
 </ul>
 </li>
@@ -520,10 +516,12 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#indexing-a-2d-array-matrices">Indexing a 2D array (matrices)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary:</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#integer-array-indexing">Integer array indexing</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quiz-time">Quiz time</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#boolean-array-indexing">Boolean array indexing</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary:</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#integer-array-indexing">Integer array indexing</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quiz-time">Quiz time</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#boolean-array-indexing">Boolean array indexing</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -1107,9 +1105,8 @@ document.write(`
 </div>
 </div>
 </div>
-</section>
 <section id="integer-array-indexing">
-<h2>Integer array indexing<a class="headerlink" href="#integer-array-indexing" title="Permalink to this heading">#</a></h2>
+<h3>Integer array indexing<a class="headerlink" href="#integer-array-indexing" title="Permalink to this heading">#</a></h3>
 <p>When you index into numpy arrays using slicing, the resulting array view will always be a subarray of the original array. In contrast, integer array indexing allows you to construct arbitrary arrays using the data from another array. Here is an example:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1191,7 +1188,7 @@ document.write(`
 </div>
 </section>
 <section id="quiz-time">
-<h2>Quiz time<a class="headerlink" href="#quiz-time" title="Permalink to this heading">#</a></h2>
+<h3>Quiz time<a class="headerlink" href="#quiz-time" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Generate matrix:</span>
@@ -1226,7 +1223,7 @@ document.write(`
 </div>
 </section>
 <section id="boolean-array-indexing">
-<h2>Boolean array indexing<a class="headerlink" href="#boolean-array-indexing" title="Permalink to this heading">#</a></h2>
+<h3>Boolean array indexing<a class="headerlink" href="#boolean-array-indexing" title="Permalink to this heading">#</a></h3>
 <p>Boolean array indexing lets you pick out arbitrary elements of an array. Frequently this type of indexing is used to select the elements of an array that satisfy some condition. Here is an example:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1353,6 +1350,7 @@ document.write(`
 <p>For brevity we have left out a lot of details about numpy array indexing; if you want to know more about Array Indexing you should read this <strong><a class="reference external" href="https://numpy.org/doc/stable/reference/arrays.indexing.html">documentation</a></strong>.</p>
 </section>
 </section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -1422,10 +1420,12 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#indexing-a-2d-array-matrices">Indexing a 2D array (matrices)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary:</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#integer-array-indexing">Integer array indexing</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quiz-time">Quiz time</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#boolean-array-indexing">Boolean array indexing</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary:</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#integer-array-indexing">Integer array indexing</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quiz-time">Quiz time</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#boolean-array-indexing">Boolean array indexing</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 

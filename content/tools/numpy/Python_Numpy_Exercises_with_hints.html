@@ -283,12 +283,8 @@ const thebe_selector_output = ".output, .cell_output"
 
 <li class="toctree-l3"><a class="reference internal" href="002_Python_NumPy_Array_Part1.html">Arrays Part 1</a></li>
 <li class="toctree-l3"><a class="reference internal" href="003_Python_NumPy_Array_Part2.html">Arrays Part 2</a></li>
-<li class="toctree-l3"><a class="reference internal" href="004_Python_NumPy_Array_Part3.html">Array math</a></li>
-
-<li class="toctree-l3"><a class="reference internal" href="005_Python_NumPy_Array_Part4.html">Arrays reorganizing</a></li>
-
-
-
+<li class="toctree-l3"><a class="reference internal" href="004_Python_NumPy_Array_Part3.html">Arrays Part 3</a></li>
+<li class="toctree-l3"><a class="reference internal" href="005_Python_NumPy_Array_Part4.html">Arrays Part 4</a></li>
 <li class="toctree-l3 current active"><a class="current reference internal" href="#">Exercises</a></li>
 </ul>
 </li>
@@ -517,18 +513,22 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#import-the-numpy-package-under-the-name-np-and-print-the-numpy-version-and-the-configuration">1. Import the numpy package under the name <code class="docutils literal notranslate"><span class="pre">np</span></code> and print the numpy version and the configuration (★☆☆)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#convert-a-list-of-numeric-value-into-a-one-dimensional-numpy-array">2. Convert a list of numeric value into a one-dimensional NumPy array (★☆☆)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-null-vector-of-size-9">3. Create a null vector of size 9 (★☆☆)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-find-the-memory-size-of-any-array">4. How to find the memory size of any array (★☆☆)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-null-vector-of-size-9">3. Create a null vector of size 9 (★☆☆)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-find-the-memory-size-of-any-array">4. How to find the memory size of any array (★☆☆)</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-get-the-documentation-of-the-numpy-add-function-from-the-command-line">5. How to get the documentation of the numpy add function from the command line? (★☆☆)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-null-vector-of-size-12-but-the-sixth-value-which-is-1">6. Create a null vector of size 12 but the sixth value which is 1 (★☆☆)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-vector-with-values-ranging-from-20-to-59">7. Create a vector with values ranging from 20 to 59 (★☆☆)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reverse-a-vector-first-element-becomes-last">8. Reverse a vector (first element becomes last) (★☆☆)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-vector-with-values-ranging-from-20-to-59">7. Create a vector with values ranging from 20 to 59 (★☆☆)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reverse-a-vector-first-element-becomes-last">8. Reverse a vector (first element becomes last) (★☆☆)</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-3x3-matrix-with-values-ranging-from-12-to-20">9. Create a 3x3 matrix with values ranging from 12 to 20 (★☆☆)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#find-indices-of-non-zero-elements-from-3-7-0-0-9-0">10. Find indices of non-zero elements from [3,7,0,0,9,0] (★☆☆)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-4x4-identity-matrix">11. Create a 4x4 identity matrix (★☆☆)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-2x2x2-array-with-random-values">12. Create a 2x2x2 array with random values (★☆☆)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-9x9-array-with-random-values-and-find-the-minimum-and-maximum-values">13. Create a 9x9 array with random values and find the minimum and maximum values (★☆☆)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-random-vector-of-size-20-and-find-the-mean-value">14. Create a random vector of size 20 and find the mean value (★☆☆)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-random-vector-of-size-20-and-find-the-mean-value">6# 6# 14. Create a random vector of size 20 and find the mean value (★☆☆)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-2d-array-with-1-on-the-border-and-0-inside">15. Create a 2d array with 1 on the border and 0 inside (★☆☆)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-add-a-border-filled-with-0s-around-an-existing-array">16. How to add a border (filled with 0’s) around an existing array? (★☆☆)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-the-result-of-the-following-expression">17. What is the result of the following expression? (★☆☆)</a></li>
@@ -642,10 +642,10 @@ and new users but also to provide a set of exercises for those who teach.</p>
 <section id="create-a-null-vector-of-size-9">
 <h2>3. Create a null vector of size 9 (★☆☆)<a class="headerlink" href="#create-a-null-vector-of-size-9" title="Permalink to this heading">#</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">💡</span> <span class="pre">hint:</span> <span class="pre">np.zeros</span></code></p>
-</section>
 <section id="how-to-find-the-memory-size-of-any-array">
-<h2>4. How to find the memory size of any array (★☆☆)<a class="headerlink" href="#how-to-find-the-memory-size-of-any-array" title="Permalink to this heading">#</a></h2>
+<h3>4. How to find the memory size of any array (★☆☆)<a class="headerlink" href="#how-to-find-the-memory-size-of-any-array" title="Permalink to this heading">#</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">💡</span> <span class="pre">hint:</span> <span class="pre">size,</span> <span class="pre">itemsize</span></code></p>
+</section>
 </section>
 <section id="how-to-get-the-documentation-of-the-numpy-add-function-from-the-command-line">
 <h2>5. How to get the documentation of the numpy add function from the command line? (★☆☆)<a class="headerlink" href="#how-to-get-the-documentation-of-the-numpy-add-function-from-the-command-line" title="Permalink to this heading">#</a></h2>
@@ -658,10 +658,10 @@ and new users but also to provide a set of exercises for those who teach.</p>
 <section id="create-a-vector-with-values-ranging-from-20-to-59">
 <h2>7. Create a vector with values ranging from 20 to 59 (★☆☆)<a class="headerlink" href="#create-a-vector-with-values-ranging-from-20-to-59" title="Permalink to this heading">#</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">💡hint:</span> <span class="pre">arange</span></code></p>
-</section>
 <section id="reverse-a-vector-first-element-becomes-last">
-<h2>8. Reverse a vector (first element becomes last) (★☆☆)<a class="headerlink" href="#reverse-a-vector-first-element-becomes-last" title="Permalink to this heading">#</a></h2>
+<h3>8. Reverse a vector (first element becomes last) (★☆☆)<a class="headerlink" href="#reverse-a-vector-first-element-becomes-last" title="Permalink to this heading">#</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">💡hint:</span> <span class="pre">array[::-1]</span></code></p>
+</section>
 </section>
 <section id="create-a-3x3-matrix-with-values-ranging-from-12-to-20">
 <h2>9. Create a 3x3 matrix with values ranging from 12 to 20 (★☆☆)<a class="headerlink" href="#create-a-3x3-matrix-with-values-ranging-from-12-to-20" title="Permalink to this heading">#</a></h2>
@@ -684,7 +684,7 @@ and new users but also to provide a set of exercises for those who teach.</p>
 <p><code class="docutils literal notranslate"><span class="pre">💡hint:</span> <span class="pre">min,</span> <span class="pre">max</span></code></p>
 </section>
 <section id="create-a-random-vector-of-size-20-and-find-the-mean-value">
-<h2>14. Create a random vector of size 20 and find the mean value (★☆☆)<a class="headerlink" href="#create-a-random-vector-of-size-20-and-find-the-mean-value" title="Permalink to this heading">#</a></h2>
+<h2>6# 6# 14. Create a random vector of size 20 and find the mean value (★☆☆)<a class="headerlink" href="#create-a-random-vector-of-size-20-and-find-the-mean-value" title="Permalink to this heading">#</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">💡hint:</span> <span class="pre">mean</span></code></p>
 </section>
 <section id="create-a-2d-array-with-1-on-the-border-and-0-inside">
@@ -1138,18 +1138,22 @@ and new users but also to provide a set of exercises for those who teach.</p>
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#import-the-numpy-package-under-the-name-np-and-print-the-numpy-version-and-the-configuration">1. Import the numpy package under the name <code class="docutils literal notranslate"><span class="pre">np</span></code> and print the numpy version and the configuration (★☆☆)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#convert-a-list-of-numeric-value-into-a-one-dimensional-numpy-array">2. Convert a list of numeric value into a one-dimensional NumPy array (★☆☆)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-null-vector-of-size-9">3. Create a null vector of size 9 (★☆☆)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-find-the-memory-size-of-any-array">4. How to find the memory size of any array (★☆☆)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-null-vector-of-size-9">3. Create a null vector of size 9 (★☆☆)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-find-the-memory-size-of-any-array">4. How to find the memory size of any array (★☆☆)</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-get-the-documentation-of-the-numpy-add-function-from-the-command-line">5. How to get the documentation of the numpy add function from the command line? (★☆☆)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-null-vector-of-size-12-but-the-sixth-value-which-is-1">6. Create a null vector of size 12 but the sixth value which is 1 (★☆☆)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-vector-with-values-ranging-from-20-to-59">7. Create a vector with values ranging from 20 to 59 (★☆☆)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reverse-a-vector-first-element-becomes-last">8. Reverse a vector (first element becomes last) (★☆☆)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-vector-with-values-ranging-from-20-to-59">7. Create a vector with values ranging from 20 to 59 (★☆☆)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reverse-a-vector-first-element-becomes-last">8. Reverse a vector (first element becomes last) (★☆☆)</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-3x3-matrix-with-values-ranging-from-12-to-20">9. Create a 3x3 matrix with values ranging from 12 to 20 (★☆☆)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#find-indices-of-non-zero-elements-from-3-7-0-0-9-0">10. Find indices of non-zero elements from [3,7,0,0,9,0] (★☆☆)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-4x4-identity-matrix">11. Create a 4x4 identity matrix (★☆☆)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-2x2x2-array-with-random-values">12. Create a 2x2x2 array with random values (★☆☆)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-9x9-array-with-random-values-and-find-the-minimum-and-maximum-values">13. Create a 9x9 array with random values and find the minimum and maximum values (★☆☆)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-random-vector-of-size-20-and-find-the-mean-value">14. Create a random vector of size 20 and find the mean value (★☆☆)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-random-vector-of-size-20-and-find-the-mean-value">6# 6# 14. Create a random vector of size 20 and find the mean value (★☆☆)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-2d-array-with-1-on-the-border-and-0-inside">15. Create a 2d array with 1 on the border and 0 inside (★☆☆)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-add-a-border-filled-with-0s-around-an-existing-array">16. How to add a border (filled with 0’s) around an existing array? (★☆☆)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-the-result-of-the-following-expression">17. What is the result of the following expression? (★☆☆)</a></li>

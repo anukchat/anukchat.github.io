@@ -283,12 +283,8 @@ const thebe_selector_output = ".output, .cell_output"
 
 <li class="toctree-l3"><a class="reference internal" href="002_Python_NumPy_Array_Part1.html">Arrays Part 1</a></li>
 <li class="toctree-l3"><a class="reference internal" href="003_Python_NumPy_Array_Part2.html">Arrays Part 2</a></li>
-<li class="toctree-l3 current active"><a class="current reference internal" href="#">Array math</a></li>
-
-<li class="toctree-l3"><a class="reference internal" href="005_Python_NumPy_Array_Part4.html">Arrays reorganizing</a></li>
-
-
-
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">Arrays Part 3</a></li>
+<li class="toctree-l3"><a class="reference internal" href="005_Python_NumPy_Array_Part4.html">Arrays Part 4</a></li>
 <li class="toctree-l3"><a class="reference internal" href="Python_Numpy_Exercises_with_hints.html">Exercises</a></li>
 </ul>
 </li>
@@ -515,15 +511,13 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Array math</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#universal-array-functions-mathematical-operations">Universal  Array Functions (Mathematical operations)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-multiplication">Matrix Multiplication</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#determinant">Determinant</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#universal-array-functions-mathematical-operations">Universal  Array Functions (Mathematical operations)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-multiplication">Matrix Multiplication</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#determinant">Determinant</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#broadcasting">Broadcasting</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#broadcasting">Broadcasting</a></li>
 </ul>
-
             </nav>
         </div>
     </div>
@@ -534,7 +528,7 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section id="array-math">
+  <section class="tex2jax_ignore mathjax_ignore" id="array-math">
 <h1>Array math<a class="headerlink" href="#array-math" title="Permalink to this heading">#</a></h1>
 <p>Basic mathematical functions operate elementwise on arrays, and are available both as operator overloads and as functions in the numpy module:</p>
 <div class="cell docutils container">
@@ -953,9 +947,8 @@ document.write(`
 </div>
 </div>
 <p>Numpy provides many more functions for manipulating arrays; you can see the full list in the <strong><a class="reference external" href="https://numpy.org/doc/stable/reference/routines.array-manipulation.html">documentation</a></strong>.</p>
-</section>
 <section id="matrix-multiplication">
-<h2>Matrix Multiplication<a class="headerlink" href="#matrix-multiplication" title="Permalink to this heading">#</a></h2>
+<h3>Matrix Multiplication<a class="headerlink" href="#matrix-multiplication" title="Permalink to this heading">#</a></h3>
 <p>The Numpy <strong><code class="docutils literal notranslate"><span class="pre">matmul()</span></code></strong> function is used to return the matrix product of 2 arrays.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1003,7 +996,7 @@ document.write(`
 </div>
 </section>
 <section id="determinant">
-<h2>Determinant<a class="headerlink" href="#determinant" title="Permalink to this heading">#</a></h2>
+<h3>Determinant<a class="headerlink" href="#determinant" title="Permalink to this heading">#</a></h3>
 <p>Last but not least, if you need to compute the determinant, you can use <strong><code class="docutils literal notranslate"><span class="pre">np.linalg.det()</span></code></strong>.</p>
 <blockquote>
 <div><p><strong>Note:</strong> numpy takes care of the dimension.</p>
@@ -1056,7 +1049,7 @@ document.write(`
 </section>
 </section>
 <section id="broadcasting">
-<h1>Broadcasting<a class="headerlink" href="#broadcasting" title="Permalink to this heading">#</a></h1>
+<h2>Broadcasting<a class="headerlink" href="#broadcasting" title="Permalink to this heading">#</a></h2>
 <p>Broadcasting is a powerful mechanism that allows numpy to work with arrays of different shapes when performing arithmetic operations. Frequently we have a smaller array and a larger array, and we want to use the smaller array multiple times to perform some operation on the larger array.</p>
 <p>For example, suppose that we want to add a constant vector to each row of a matrix. We could do it like this:</p>
 <div class="cell docutils container">
@@ -1236,6 +1229,7 @@ document.write(`
 </li>
 </ul>
 </section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -1300,15 +1294,13 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Array math</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#universal-array-functions-mathematical-operations">Universal  Array Functions (Mathematical operations)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-multiplication">Matrix Multiplication</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#determinant">Determinant</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#universal-array-functions-mathematical-operations">Universal  Array Functions (Mathematical operations)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-multiplication">Matrix Multiplication</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#determinant">Determinant</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#broadcasting">Broadcasting</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#broadcasting">Broadcasting</a></li>
 </ul>
-
   </nav></div>
 
 </div></div>

@@ -283,12 +283,8 @@ const thebe_selector_output = ".output, .cell_output"
 
 <li class="toctree-l3"><a class="reference internal" href="002_Python_NumPy_Array_Part1.html">Arrays Part 1</a></li>
 <li class="toctree-l3"><a class="reference internal" href="003_Python_NumPy_Array_Part2.html">Arrays Part 2</a></li>
-<li class="toctree-l3"><a class="reference internal" href="004_Python_NumPy_Array_Part3.html">Array math</a></li>
-
-<li class="toctree-l3 current active"><a class="current reference internal" href="#">Arrays reorganizing</a></li>
-
-
-
+<li class="toctree-l3"><a class="reference internal" href="004_Python_NumPy_Array_Part3.html">Arrays Part 3</a></li>
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">Arrays Part 4</a></li>
 <li class="toctree-l3"><a class="reference internal" href="Python_Numpy_Exercises_with_hints.html">Exercises</a></li>
 </ul>
 </li>
@@ -515,7 +511,6 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Arrays reorganizing</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#asarray"><code class="docutils literal notranslate"><span class="pre">asarray()</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#arange"><code class="docutils literal notranslate"><span class="pre">arange()</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reshape-data">Reshape Data</a></li>
@@ -526,17 +521,14 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#generate-random-numbers">Generate Random Numbers</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linspace">Linspace</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#logspace">LogSpace</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#statistics">Statistics</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#miscellaneous">Miscellaneous</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#load-data-from-file">Load Data from File</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#boolean-masking-and-advanced-indexing">Boolean Masking and Advanced Indexing</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#statistics">Statistics</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#miscellaneous">Miscellaneous</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#load-data-from-file">Load Data from File</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#boolean-masking-and-advanced-indexing">Boolean Masking and Advanced Indexing</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#numpy-documentation">Numpy Documentation</a></li>
 </ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#numpy-documentation">Numpy Documentation</a></li>
-</ul>
-
             </nav>
         </div>
     </div>
@@ -547,7 +539,7 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section id="arrays-reorganizing">
+  <section class="tex2jax_ignore mathjax_ignore" id="arrays-reorganizing">
 <h1>Arrays reorganizing<a class="headerlink" href="#arrays-reorganizing" title="Permalink to this heading">#</a></h1>
 <section id="asarray">
 <h2><code class="docutils literal notranslate"><span class="pre">asarray()</span></code><a class="headerlink" href="#asarray" title="Permalink to this heading">#</a></h2>
@@ -1025,9 +1017,8 @@ y+1:
 </div>
 </div>
 </section>
-</section>
 <section id="statistics">
-<h1>Statistics<a class="headerlink" href="#statistics" title="Permalink to this heading">#</a></h1>
+<h2>Statistics<a class="headerlink" href="#statistics" title="Permalink to this heading">#</a></h2>
 <p>NumPy has quite a few useful statistical functions for finding minimum, maximum, percentile standard deviation and variance, etc from the given elements in the array. The functions are explained as follows −</p>
 <p>Numpy is equipped with the robust statistical function as listed below:</p>
 <table class="table">
@@ -1155,9 +1146,9 @@ y+1:
 </div>
 </section>
 <section id="miscellaneous">
-<h1>Miscellaneous<a class="headerlink" href="#miscellaneous" title="Permalink to this heading">#</a></h1>
+<h2>Miscellaneous<a class="headerlink" href="#miscellaneous" title="Permalink to this heading">#</a></h2>
 <section id="load-data-from-file">
-<h2>Load Data from File<a class="headerlink" href="#load-data-from-file" title="Permalink to this heading">#</a></h2>
+<h3>Load Data from File<a class="headerlink" href="#load-data-from-file" title="Permalink to this heading">#</a></h3>
 <p>you can download the “data.txt” from <strong><span class="xref myst">here</span></strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1177,7 +1168,7 @@ y+1:
 </div>
 </section>
 <section id="boolean-masking-and-advanced-indexing">
-<h2>Boolean Masking and Advanced Indexing<a class="headerlink" href="#boolean-masking-and-advanced-indexing" title="Permalink to this heading">#</a></h2>
+<h3>Boolean Masking and Advanced Indexing<a class="headerlink" href="#boolean-masking-and-advanced-indexing" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">filedata</span> <span class="o">&gt;</span><span class="mi">50</span>
@@ -1314,8 +1305,9 @@ y+1:
 </section>
 </section>
 <section id="numpy-documentation">
-<h1>Numpy Documentation<a class="headerlink" href="#numpy-documentation" title="Permalink to this heading">#</a></h1>
+<h2>Numpy Documentation<a class="headerlink" href="#numpy-documentation" title="Permalink to this heading">#</a></h2>
 <p>This brief overview has touched on many of the important things that you need to know about numpy, but is far from complete. Check out the <strong><a class="reference external" href="https://numpy.org/doc/stable/reference/">numpy reference</a></strong> to find out much more about numpy.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -1381,7 +1373,6 @@ y+1:
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Arrays reorganizing</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#asarray"><code class="docutils literal notranslate"><span class="pre">asarray()</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#arange"><code class="docutils literal notranslate"><span class="pre">arange()</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reshape-data">Reshape Data</a></li>
@@ -1392,17 +1383,14 @@ y+1:
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#generate-random-numbers">Generate Random Numbers</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linspace">Linspace</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#logspace">LogSpace</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#statistics">Statistics</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#miscellaneous">Miscellaneous</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#load-data-from-file">Load Data from File</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#boolean-masking-and-advanced-indexing">Boolean Masking and Advanced Indexing</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#statistics">Statistics</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#miscellaneous">Miscellaneous</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#load-data-from-file">Load Data from File</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#boolean-masking-and-advanced-indexing">Boolean Masking and Advanced Indexing</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#numpy-documentation">Numpy Documentation</a></li>
 </ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#numpy-documentation">Numpy Documentation</a></li>
-</ul>
-
   </nav></div>
 
 </div></div>
