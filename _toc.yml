@@ -170,8 +170,54 @@ parts:
         - file: content/essentials/statistics/statistics
   - caption: Tools
     chapters:
-    - file: content/tools/tools-for-ml
-      title: Tools for dataScience and ML
+    - file: content/tools/intro_tools
+      title: Data analytics
+      sections:
+        - file: content/tools/numpy/numpy_toc
+          title: NumPy
+          sections:
+            - file: content/tools/numpy/001_Python_NumPy.ipynb
+              title: Introduction
+            - file: content/tools/numpy/001_Python_NumPy_Array_Part1.ipynb
+              title: Arrays Part 1
+            - file: content/tools/numpy/001_Python_NumPy_Array_Part2.ipynb
+              title: Arrays Part 2
+            - file: content/tools/numpy/001_Python_NumPy_Array_Part3.ipynb
+              title: Arrays Part 3
+            - file: content/tools/numpy/001_Python_NumPy_Array_Part4.ipynb
+              title: Arrays Part 4
+            - file: content/tools/numpy/Python_Numpy_Exercises_with_hints.ipynb
+              title: Excercises 
+        - file: content/tools/pandas/pandas_toc
+          title: Pandas
+          sections:
+            - file: content/tools/pandas/001_Python_Pandas_DataFrame.ipynb
+              title: Dataframe
+              sections:
+                - file: content/tools/pandas/001_Python_Pandas_Methods/001_Python_Pandas_DataFrame_from_Dictionary.ipynb
+                  title: From dictionary
+                - file: content/tools/pandas/001_Python_Pandas_Methods/001_Python_Pandas_DataFrame_from_List.ipynb
+                  title: List
+                - file: content/tools/pandas/001_Python_Pandas_Methods/001_Python_Pandas_DataFrame_haid_and_tail.ipynb
+                  title: Head & tail
+                - file: content/tools/pandas/001_Python_Pandas_Methods/001_Python_Pandas_DataFrame_drop_columns.ipynb
+                  title: Drop columns
+                - file: content/tools/pandas/001_Python_Pandas_Methods/001_Python_Pandas_DataFrame_drop_duplicates.ipynb
+                  title: Drop duplicates
+                - file: content/tools/pandas/001_Python_Pandas_Methods/001_Python_Pandas_DataFrame_drop_columns_with_NA.ipynb
+                  title: Drop with NA
+                - file: content/tools/pandas/001_Python_Pandas_Methods/001_Python_Pandas_DataFrame_rename_columns.ipynb
+                  title: Rename columns
+                - file: content/tools/pandas/001_Python_Pandas_Methods/001_Python_Pandas_DataFrame_to_Python_dictionary.ipynb
+                  title: To python dictionary
+                - file: content/tools/pandas/001_Python_Pandas_Methods/001_Python_Pandas_DataFrame_set_index.ipynb
+                  title: Set index
+                - file: content/tools/pandas/001_Python_Pandas_Methods/001_Python_Pandas_DataFrame_reset_index.ipynb
+                  title: Reset index
+            - file: content/tools/pandas/001_Python_Pandas_Exercise_1.ipynb
+              title: Exercise 1
+            - file: content/tools/pandas/001_Python_Pandas_Exercise_2.ipynb
+              title: Exercise 2
     - file: content/tools/tools-for-nn
       title: Tools for designing neural networks
     - file: content/tools/tools-for-llms
