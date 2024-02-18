@@ -12,7 +12,7 @@ parts:
         - file: content/essentials/python/introduction/intro_toc
           title: Introduction
           sections:
-            - file: content/essentials/python/introduction/002_Hello_World.ipynb
+            - file: content/essentials/python/introduction/002_Hello_World
               title: Hello World
             - file: content/essentials/python/introduction/003_Python_Keywords_and_Identifiers
               title: Keywords and identifiers
@@ -176,47 +176,47 @@ parts:
         - file: content/tools/numpy/numpy_toc
           title: NumPy
           sections:
-            - file: content/tools/numpy/001_Python_NumPy.ipynb
+            - file: content/tools/numpy/001_Python_NumPy
               title: Introduction
-            - file: content/tools/numpy/001_Python_NumPy_Array_Part1.ipynb
+            - file: content/tools/numpy/001_Python_NumPy_Array_Part1
               title: Arrays Part 1
-            - file: content/tools/numpy/001_Python_NumPy_Array_Part2.ipynb
+            - file: content/tools/numpy/001_Python_NumPy_Array_Part2
               title: Arrays Part 2
-            - file: content/tools/numpy/001_Python_NumPy_Array_Part3.ipynb
+            - file: content/tools/numpy/001_Python_NumPy_Array_Part3
               title: Arrays Part 3
-            - file: content/tools/numpy/001_Python_NumPy_Array_Part4.ipynb
+            - file: content/tools/numpy/001_Python_NumPy_Array_Part4
               title: Arrays Part 4
-            - file: content/tools/numpy/Python_Numpy_Exercises_with_hints.ipynb
+            - file: content/tools/numpy/Python_Numpy_Exercises_with_hints
               title: Excercises 
         - file: content/tools/pandas/pandas_toc
           title: Pandas
           sections:
-            - file: content/tools/pandas/001_Python_Pandas_DataFrame.ipynb
+            - file: content/tools/pandas/001_Python_Pandas_DataFrame
               title: Dataframe
               sections:
-                - file: content/tools/pandas/001_Python_Pandas_Methods/001_Python_Pandas_DataFrame_from_Dictionary.ipynb
+                - file: content/tools/pandas/001_Python_Pandas_Methods/001_Python_Pandas_DataFrame_from_Dictionary
                   title: From dictionary
-                - file: content/tools/pandas/001_Python_Pandas_Methods/001_Python_Pandas_DataFrame_from_List.ipynb
+                - file: content/tools/pandas/001_Python_Pandas_Methods/001_Python_Pandas_DataFrame_from_List
                   title: List
-                - file: content/tools/pandas/001_Python_Pandas_Methods/001_Python_Pandas_DataFrame_haid_and_tail.ipynb
+                - file: content/tools/pandas/001_Python_Pandas_Methods/001_Python_Pandas_DataFrame_haid_and_tail
                   title: Head & tail
-                - file: content/tools/pandas/001_Python_Pandas_Methods/001_Python_Pandas_DataFrame_drop_columns.ipynb
+                - file: content/tools/pandas/001_Python_Pandas_Methods/001_Python_Pandas_DataFrame_drop_columns
                   title: Drop columns
-                - file: content/tools/pandas/001_Python_Pandas_Methods/001_Python_Pandas_DataFrame_drop_duplicates.ipynb
+                - file: content/tools/pandas/001_Python_Pandas_Methods/001_Python_Pandas_DataFrame_drop_duplicates
                   title: Drop duplicates
-                - file: content/tools/pandas/001_Python_Pandas_Methods/001_Python_Pandas_DataFrame_drop_columns_with_NA.ipynb
+                - file: content/tools/pandas/001_Python_Pandas_Methods/001_Python_Pandas_DataFrame_drop_columns_with_NA
                   title: Drop with NA
-                - file: content/tools/pandas/001_Python_Pandas_Methods/001_Python_Pandas_DataFrame_rename_columns.ipynb
+                - file: content/tools/pandas/001_Python_Pandas_Methods/001_Python_Pandas_DataFrame_rename_columns
                   title: Rename columns
-                - file: content/tools/pandas/001_Python_Pandas_Methods/001_Python_Pandas_DataFrame_to_Python_dictionary.ipynb
+                - file: content/tools/pandas/001_Python_Pandas_Methods/001_Python_Pandas_DataFrame_to_Python_dictionary
                   title: To python dictionary
-                - file: content/tools/pandas/001_Python_Pandas_Methods/001_Python_Pandas_DataFrame_set_index.ipynb
+                - file: content/tools/pandas/001_Python_Pandas_Methods/001_Python_Pandas_DataFrame_set_index
                   title: Set index
-                - file: content/tools/pandas/001_Python_Pandas_Methods/001_Python_Pandas_DataFrame_reset_index.ipynb
+                - file: content/tools/pandas/001_Python_Pandas_Methods/001_Python_Pandas_DataFrame_reset_index
                   title: Reset index
-            - file: content/tools/pandas/001_Python_Pandas_Exercise_1.ipynb
+            - file: content/tools/pandas/001_Python_Pandas_Exercise_1
               title: Exercise 1
-            - file: content/tools/pandas/001_Python_Pandas_Exercise_2.ipynb
+            - file: content/tools/pandas/001_Python_Pandas_Exercise_2
               title: Exercise 2
     - file: content/tools/tools-for-nn
       title: Tools for designing neural networks
