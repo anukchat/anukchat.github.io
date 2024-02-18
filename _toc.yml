@@ -187,7 +187,7 @@ parts:
             - file: content/tools/numpy/005_Python_NumPy_Array_Part4
               title: Arrays Part 4
             - file: content/tools/numpy/Python_Numpy_Exercises_with_hints
-              title: Excercises 
+              title: Exercises 
         - file: content/tools/pandas/pandas_toc
           title: Pandas
           sections:
