@@ -38,7 +38,20 @@ jobs:
         cp -r "./content/essentials/python/objects/img" "_build/html/content/essentials/python/objects/img"
         cp -r "./content/essentials/python/advanced/img" "_build/html/content/essentials/python/advanced/img"
         cp -r "./content/essentials/python/datetime/img" "_build/html/content/essentials/python/datetime/img"
-          
+        cp -r "./content/tools/numpy/img" "_build/html/content/tools/numpy/img"
+        cp -r "./content/tools/numpy/*.txt" "_build/html/content/tools/numpy/"
+        cp -r "./content/tools/numpy/*.pdf" "_build/html/content/tools/numpy/"
+        cp -r "./content/tools/numpy/Data_Analysis_with_NumPy" "_build/html/content/tools/numpy/Data_Analysis_with_NumPy"
+        cp -r "./content/tools/pandas/img" "_build/html/content/tools/pandas/img"
+        cp -r "./content/tools/numpy/001_Python_Pandas_Methods/img" "_build/html/content/tools/numpy/001_Python_Pandas_Methods/img"
+        cp -r "./content/tools/pandas/*.pdf" "_build/html/content/tools/pandas/"
+        cp -r "./content/tools/pandas/*.csv" "_build/html/content/tools/pandas/"
+        cp -r "./content/tools/numpy/001_Python_Pandas_Methods/*.csv" "_build/html/content/tools/numpy/001_Python_Pandas_Methods/"
+
+
+
+        
+
     # Push the book's HTML to github-pages./docs/_myfolder/${foldername}.md
     - name: GitHub Pages action
       uses: peaceiris/actions-gh-pages@v3.8.0
