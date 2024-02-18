@@ -168,76 +168,77 @@ parts:
       title: Statistics
       sections:
         - file: content/essentials/statistics/statistics
+
   - caption: Tools
-    chapters:
-    - file: content/tools/intro_tools
+		chapters:
+		- file: content/tools/intro_tools
       title: Data analytics
       sections:
-      - file: content/tools/numpy/numpy_toc
-        title: NumPy
-        sections:
-          - file: content/tools/numpy/001_Python_NumPy
-            title: Introduction
-          - file: content/tools/numpy/002_Python_NumPy_Array_Part1
-            title: Arrays Part 1
-          - file: content/tools/numpy/003_Python_NumPy_Array_Part2
-            title: Arrays Part 2
-          - file: content/tools/numpy/004_Python_NumPy_Array_Part3
-            title: Arrays Part 3
-          - file: content/tools/numpy/005_Python_NumPy_Array_Part4
-            title: Arrays Part 4
-          - file: content/tools/numpy/Python_Numpy_Exercises_with_hints
-            title: Exercises 
-      - file: content/tools/pandas/pandas_toc
-        title: Pandas
-        sections:
-          - file: content/tools/pandas/001_Python_Pandas_DataFrame
-            title: Dataframe
-            sections:
-              - file: content/tools/pandas/001_Python_Pandas_Methods/001_Python_Pandas_DataFrame_from_Dictionary
-                title: From dictionary
-              - file: content/tools/pandas/001_Python_Pandas_Methods/002_Python_Pandas_DataFrame_from_List
-                title: List
-              - file: content/tools/pandas/001_Python_Pandas_Methods/003_Python_Pandas_DataFrame_head_and_tail
-                title: Head & tail
-              - file: content/tools/pandas/001_Python_Pandas_Methods/004_Python_Pandas_DataFrame_drop_columns
-                title: Drop columns
-              - file: content/tools/pandas/001_Python_Pandas_Methods/005_Python_Pandas_DataFrame_drop_duplicates
-                title: Drop duplicates
-              - file: content/tools/pandas/001_Python_Pandas_Methods/006_Python_Pandas_DataFrame_drop_columns_with_NA
-                title: Drop with NA
-              - file: content/tools/pandas/001_Python_Pandas_Methods/007_Python_Pandas_DataFrame_rename_columns
-                title: Rename columns
-              - file: content/tools/pandas/001_Python_Pandas_Methods/008_Python_Pandas_DataFrame_to_Python_dictionary
-                title: To python dictionary
-              - file: content/tools/pandas/001_Python_Pandas_Methods/009_Python_Pandas_DataFrame_set_index
-                title: Set index
-              - file: content/tools/pandas/001_Python_Pandas_Methods/010_Python_Pandas_DataFrame_reset_index
-                title: Reset index
-          - file: content/tools/pandas/002_Python_Pandas_Exercise_1
-            title: Exercise 1
-          - file: content/tools/pandas/003_Python_Pandas_Exercise_2
-            title: Exercise 2
-    - file: content/tools/tools-for-nn
-      title: Tools for designing neural networks
-    - file: content/tools/tools-for-llms
-      title: Tools for LLMs and multimodels
-      sections:
-        - file: content/tools/langchain/intro
-          title: Langchain introduction and setup
+        - file: content/tools/numpy/numpy_toc
+          title: NumPy
           sections:
-            - file: content/tools/langchain/lcel
-              title: Langchain expression language
-            - file: content/tools/langchain/langchain-modules
-              title: Langchain modules
-            - file: content/tools/langchain/langserve
-              title: LangServe
-            - file: content/tools/langchain/langsmith
-              title: LangSmith
-            - file: content/tools/langchain/langgraph
-              title: LangGraph
-        - file: content/tools/hf/intro
-          title: HuggingFace introduction and setup
+            - file: content/tools/numpy/001_Python_NumPy
+              title: Introduction
+            - file: content/tools/numpy/002_Python_NumPy_Array_Part1
+              title: Arrays Part 1
+            - file: content/tools/numpy/003_Python_NumPy_Array_Part2
+              title: Arrays Part 2
+            - file: content/tools/numpy/004_Python_NumPy_Array_Part3
+              title: Arrays Part 3
+            - file: content/tools/numpy/005_Python_NumPy_Array_Part4
+              title: Arrays Part 4
+            - file: content/tools/numpy/Python_Numpy_Exercises_with_hints
+              title: Exercises 
+        - file: content/tools/pandas/pandas_toc
+          title: Pandas
+          sections:
+            - file: content/tools/pandas/001_Python_Pandas_DataFrame
+              title: Dataframe
+              sections:
+                - file: content/tools/pandas/001_Python_Pandas_Methods/001_Python_Pandas_DataFrame_from_Dictionary
+                  title: From dictionary
+                - file: content/tools/pandas/001_Python_Pandas_Methods/002_Python_Pandas_DataFrame_from_List
+                  title: List
+                - file: content/tools/pandas/001_Python_Pandas_Methods/003_Python_Pandas_DataFrame_head_and_tail
+                  title: Head & tail
+                - file: content/tools/pandas/001_Python_Pandas_Methods/004_Python_Pandas_DataFrame_drop_columns
+                  title: Drop columns
+                - file: content/tools/pandas/001_Python_Pandas_Methods/005_Python_Pandas_DataFrame_drop_duplicates
+                  title: Drop duplicates
+                - file: content/tools/pandas/001_Python_Pandas_Methods/006_Python_Pandas_DataFrame_drop_columns_with_NA
+                  title: Drop with NA
+                - file: content/tools/pandas/001_Python_Pandas_Methods/007_Python_Pandas_DataFrame_rename_columns
+                  title: Rename columns
+                - file: content/tools/pandas/001_Python_Pandas_Methods/008_Python_Pandas_DataFrame_to_Python_dictionary
+                  title: To python dictionary
+                - file: content/tools/pandas/001_Python_Pandas_Methods/009_Python_Pandas_DataFrame_set_index
+                  title: Set index
+                - file: content/tools/pandas/001_Python_Pandas_Methods/010_Python_Pandas_DataFrame_reset_index
+                  title: Reset index
+            - file: content/tools/pandas/002_Python_Pandas_Exercise_1
+              title: Exercise 1
+            - file: content/tools/pandas/003_Python_Pandas_Exercise_2
+              title: Exercise 2
+      - file: content/tools/tools-for-nn
+        title: Tools for designing neural networks
+      - file: content/tools/tools-for-llms
+        title: Tools for LLMs and multimodels
+        sections:
+          - file: content/tools/langchain/intro
+            title: Langchain introduction and setup
+            sections:
+              - file: content/tools/langchain/lcel
+                title: Langchain expression language
+              - file: content/tools/langchain/langchain-modules
+                title: Langchain modules
+              - file: content/tools/langchain/langserve
+                title: LangServe
+              - file: content/tools/langchain/langsmith
+                title: LangSmith
+              - file: content/tools/langchain/langgraph
+                title: LangGraph
+          - file: content/tools/hf/intro
+            title: HuggingFace introduction and setup
   - caption: Concepts
     chapters:
     - file: content/concepts/mymarkdown
