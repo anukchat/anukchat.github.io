@@ -88,6 +88,8 @@ sphinx:
   config:
     latex_elements.papersize: a4paper
     latex_elements.pointsize: 12pt
+    html_theme: sphinx_book_theme
+
 #   config:
 #     html_extra_path: ["img",content/essentials/python/introduction/img]
 # sphinx:

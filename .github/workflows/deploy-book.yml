@@ -27,7 +27,7 @@ jobs:
     # Build the book
     - name: Build the book
       run: |
-        jupyter-book build .
+        jupyter-book build . --all
         cp -r "./content/essentials/python/introduction/img" "_build/html/content/essentials/python/introduction/img"
         cp -r "./content/essentials/python/controlflow/img" "_build/html/content/essentials/python/controlflow/img"
         cp -r "./content/essentials/python/functions/img" "_build/html/content/essentials/python/functions/img"
