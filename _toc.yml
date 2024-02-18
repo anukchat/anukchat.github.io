@@ -168,10 +168,9 @@ parts:
       title: Statistics
       sections:
         - file: content/essentials/statistics/statistics
-
   - caption: Tools
-		chapters:
-		- file: content/tools/intro_tools
+    chapters:
+    - file: content/tools/intro_tools
       title: Data analytics
       sections:
         - file: content/tools/numpy/numpy_toc
@@ -219,26 +218,26 @@ parts:
               title: Exercise 1
             - file: content/tools/pandas/003_Python_Pandas_Exercise_2
               title: Exercise 2
-      - file: content/tools/tools-for-nn
-        title: Tools for designing neural networks
-      - file: content/tools/tools-for-llms
-        title: Tools for LLMs and multimodels
-        sections:
-          - file: content/tools/langchain/intro
-            title: Langchain introduction and setup
-            sections:
-              - file: content/tools/langchain/lcel
-                title: Langchain expression language
-              - file: content/tools/langchain/langchain-modules
-                title: Langchain modules
-              - file: content/tools/langchain/langserve
-                title: LangServe
-              - file: content/tools/langchain/langsmith
-                title: LangSmith
-              - file: content/tools/langchain/langgraph
-                title: LangGraph
-          - file: content/tools/hf/intro
-            title: HuggingFace introduction and setup
+        - file: content/tools/tools-for-nn
+          title: Tools for designing neural networks
+    - file: content/tools/tools-for-llms
+      title: Tools for LLMs and multimodels
+      sections:
+        - file: content/tools/langchain/intro
+          title: Langchain introduction and setup
+          sections:
+            - file: content/tools/langchain/lcel
+              title: Langchain expression language
+            - file: content/tools/langchain/langchain-modules
+              title: Langchain modules
+            - file: content/tools/langchain/langserve
+              title: LangServe
+            - file: content/tools/langchain/langsmith
+              title: LangSmith
+            - file: content/tools/langchain/langgraph
+              title: LangGraph
+        - file: content/tools/hf/intro
+          title: HuggingFace introduction and setup
   - caption: Concepts
     chapters:
     - file: content/concepts/mymarkdown
