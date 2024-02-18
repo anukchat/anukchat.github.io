@@ -9,4 +9,5 @@
 ## Resources
 
 ✅ <a href="\content\tools\pandas\Pandas_Cheat_Sheet_Data_Wrangling_in_Python.pdf" download>Pandas Cheat Sheet Data Wrangling in Python</a>
+
 ✅ <a href="\content\tools\pandas\Pandas_Cheat_Sheet_for_Data_Science_in_Python" download>Pandas Cheat Sheet for Data Science in Python</a>
