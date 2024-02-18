@@ -214,9 +214,9 @@ parts:
                   title: Set index
                 - file: content/tools/pandas/001_Python_Pandas_Methods/010_Python_Pandas_DataFrame_reset_index
                   title: Reset index
-            - file: content/tools/pandas/001_Python_Pandas_Exercise_1
+            - file: content/tools/pandas/002_Python_Pandas_Exercise_1
               title: Exercise 1
-            - file: content/tools/pandas/002_Python_Pandas_Exercise_2
+            - file: content/tools/pandas/003_Python_Pandas_Exercise_2
               title: Exercise 2
     - file: content/tools/tools-for-nn
       title: Tools for designing neural networks
