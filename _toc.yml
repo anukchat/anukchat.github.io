@@ -136,7 +136,7 @@ parts:
               title: Decorators
             - file: content/essentials/python/advanced/005_Python_Property
               title: Property
-            - file: content/essentials/python/advanced/005_Python_RegEx
+            - file: content/essentials/python/advanced/006_Python_RegEx
               title: RegEx
             - file: content/essentials/python/advanced/Python_args_and_kwargs
               title: args and kwargs
