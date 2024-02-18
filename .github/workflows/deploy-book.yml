@@ -42,6 +42,6 @@ jobs:
     # Push the book's HTML to github-pages./docs/_myfolder/${foldername}.md
     - name: GitHub Pages action
       uses: actions/deploy-pages@v4.0.4
-      with:
+      # with:
         # token: ${{ secrets.GITHUB_TOKEN }}
-        artifact_name: ./_build/html
+        # artifact_name: ./_build/html
