@@ -1,4 +1,4 @@
-## Python Numpy Module
+# Python Numpy Module
 
 ✅ **[Python Numpy](/content/tools/numpy/001_Python_NumPy.ipynb)**
 

@@ -7,7 +7,7 @@
 
 ✅ **[Statements, Indentation & Comments](004_Python_Statement_Indentation_Comments.ipynb)**
 
-✅ **[Python Variables & Constants](005_Python_Variables_%26_Constants.ipynb)**
+✅ **[Python Variables & Constants](005_Python_Variables_&_Constants.ipynb)**
 
 ✅ **[Python Literals](006_Python_Literals.ipynb)**
 
