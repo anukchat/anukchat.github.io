@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" >
+<html lang="en" data-content_root="../../../../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Create Pandas DataFrame from Python Dictionary &#8212; Anukool&#39;s almanac</title>
   
@@ -19,53 +18,49 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="../../../../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link href="../../../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
   
-  <link href="../../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../../../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
-<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
-  <script src="../../../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
-    <script src="../../../../_static/jquery.js"></script>
-    <script src="../../../../_static/underscore.js"></script>
-    <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../../../../_static/doctools.js"></script>
-    <script src="../../../../_static/clipboard.min.js"></script>
-    <script src="../../../../_static/copybutton.js"></script>
-    <script src="../../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../../../_static/togglebutton.js"></script>
+    <script src="../../../../_static/togglebutton.js?v=4a39c7ea"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../../../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../../../../_static/sphinx-thebe.js"></script>
+    <script src="../../../../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'content/tools/pandas/001_Python_Pandas_Methods/001_Python_Pandas_DataFrame_from_Dictionary';</script>
     <link rel="canonical" href="https://anukchat.github.io/content/tools/pandas/001_Python_Pandas_Methods/001_Python_Pandas_DataFrame_from_Dictionary.html" />
-    <link rel="shortcut icon" href="../../../../_static/mesh-smallest.png"/>
+    <link rel="icon" href="../../../../_static/mesh-smallest.png"/>
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
     <link rel="next" title="Create Pandas DataFrame from Python List" href="002_Python_Pandas_DataFrame_from_List.html" />
@@ -79,10 +74,9 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
   
   <div id="pst-scroll-pixel-helper"></div>
-
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
     <i class="fa-solid fa-arrow-up"></i>
@@ -123,11 +117,14 @@ const thebe_selector_output = ".output, .cell_output"
 </form></div>
   </div>
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -155,7 +152,18 @@ const thebe_selector_output = ".output, .cell_output"
     <p class="title logo__title">Anukool's almanac</p>
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Essentials</span></p>
 <ul class="nav bd-sidenav">
@@ -220,13 +228,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../../essentials/python/files/files_toc.html">Files</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../../essentials/python/files/001_Python_File_Input_Output.html">Python File I/O</a></li>
-
-
-
-
-
-
+<li class="toctree-l3"><a class="reference internal" href="../../../essentials/python/files/001_Python_File_Input_Output.html">File I/O</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../essentials/python/files/002_Python_File_Directory.html">File directory</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../essentials/python/files/003_Python_File_Exception.html">File exception</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../essentials/python/files/004_Python_Exceptions_Handling.html">Exceptions handling</a></li>
@@ -531,11 +533,11 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="create-pandas-dataframe-from-python-dictionary">
-<h1>Create Pandas DataFrame from Python Dictionary<a class="headerlink" href="#create-pandas-dataframe-from-python-dictionary" title="Permalink to this heading">#</a></h1>
-<p>In this class shows how to convert a <strong><a class="reference internal" href="../../../essentials/python/datatypes/005_Python_Dictionary.html"><span class="doc std std-doc">Python dictionary</span></a></strong> to <strong><a class="reference internal" href="../001_Python_Pandas_DataFrame.html"><span class="doc std std-doc">Pandas DataFrame</span></a></strong>. It covers the creating DataFrame from all types of dictionaries using the DataFrame constructor and <strong><code class="docutils literal notranslate"><span class="pre">from_dict()</span></code></strong> method.</p>
+<h1>Create Pandas DataFrame from Python Dictionary<a class="headerlink" href="#create-pandas-dataframe-from-python-dictionary" title="Link to this heading">#</a></h1>
+<p>In this class shows how to convert a <strong><a class="reference internal" href="../../../essentials/python/datatypes/005_Python_Dictionary.html"><span class="std std-doc">Python dictionary</span></a></strong> to <strong><a class="reference internal" href="../001_Python_Pandas_DataFrame.html"><span class="std std-doc">Pandas DataFrame</span></a></strong>. It covers the creating DataFrame from all types of dictionaries using the DataFrame constructor and <strong><code class="docutils literal notranslate"><span class="pre">from_dict()</span></code></strong> method.</p>
 <p>And at the end of this class, we summarize the usage of both ways with the comparison. So please stay till the end.</p>
 <p>Python dictionary is the data structure that stores the data in key-value pairs. By converting data from dictionary format to DataFrame will make it very competent for analysis by using functions of DataFrame.</p>
 <p>There are multiple ways to convert Python dictionary object into Pandas DataFrame. Majorly used ways are,</p>
@@ -544,7 +546,7 @@ document.write(`
 <li><p><strong><code class="docutils literal notranslate"><span class="pre">from_dict()</span></code></strong></p></li>
 </ol>
 <section id="create-dataframe-from-dict-using-constructor">
-<h2>Create DataFrame from dict using constructor<a class="headerlink" href="#create-dataframe-from-dict-using-constructor" title="Permalink to this heading">#</a></h2>
+<h2>Create DataFrame from dict using constructor<a class="headerlink" href="#create-dataframe-from-dict-using-constructor" title="Link to this heading">#</a></h2>
 <p><strong>DataFrame constructor</strong> can be used to create DataFrame from different data structures in python like dict, list, set, tuple, and ndarray.</p>
 <p><strong>Example:</strong></p>
 <p>We create a DataFrame object using dictionary objects contain student data.</p>
@@ -579,7 +581,7 @@ document.write(`
 </div></blockquote>
 </section>
 <section id="dataframe-from-dict-with-required-columns-only">
-<h2>DataFrame from dict with required columns only<a class="headerlink" href="#dataframe-from-dict-with-required-columns-only" title="Permalink to this heading">#</a></h2>
+<h2>DataFrame from dict with required columns only<a class="headerlink" href="#dataframe-from-dict-with-required-columns-only" title="Link to this heading">#</a></h2>
 <p>While converting the whole <strong><code class="docutils literal notranslate"><span class="pre">dict</span></code></strong> to DataFrame, we may need only some of the columns to be included in the resulting DataFrame.</p>
 <p>We can select only required columns by passing list column labels to <strong><code class="docutils literal notranslate"><span class="pre">columns=['col1',</span> <span class="pre">'col2']</span></code></strong> parameter in the constructor.</p>
 <p><strong>Example:</strong></p>
@@ -610,7 +612,7 @@ document.write(`
 </div>
 </section>
 <section id="dataframe-from-dict-with-user-defined-indexes">
-<h2>DataFrame from dict with user-defined indexes<a class="headerlink" href="#dataframe-from-dict-with-user-defined-indexes" title="Permalink to this heading">#</a></h2>
+<h2>DataFrame from dict with user-defined indexes<a class="headerlink" href="#dataframe-from-dict-with-user-defined-indexes" title="Link to this heading">#</a></h2>
 <p>In pandas DataFrame, each row has an index that is used to identify each row. In some cases, we need to provide a customized index for each row. We can do that while creating the DataFrame from <strong><code class="docutils literal notranslate"><span class="pre">dict</span></code></strong> using the <strong><code class="docutils literal notranslate"><span class="pre">index</span></code></strong> parameter of the DataFrame constructor.</p>
 <p>The default index is a range of integers starting from 0 to a number of rows. We can pass a list of the row indexes as <strong><code class="docutils literal notranslate"><span class="pre">index=['index1','index2']</span></code></strong> to the dataFrame constructor.</p>
 <p><strong>Example:</strong></p>
@@ -642,7 +644,7 @@ stud3  Harry   19  91.54
 </div>
 </section>
 <section id="dataframe-from-dict-by-changing-the-column-data-type">
-<h2>DataFrame from dict by changing the column data type<a class="headerlink" href="#dataframe-from-dict-by-changing-the-column-data-type" title="Permalink to this heading">#</a></h2>
+<h2>DataFrame from dict by changing the column data type<a class="headerlink" href="#dataframe-from-dict-by-changing-the-column-data-type" title="Link to this heading">#</a></h2>
 <p>By default, while creating a DataFrame from <strong><code class="docutils literal notranslate"><span class="pre">dict</span></code></strong> using constructor, it keeps the original data type of the values in dict. But, if we need to change the data type of the data in the resulting DataFrame, we can use the <strong><code class="docutils literal notranslate"><span class="pre">dtype</span></code></strong> parameter in the constructor.</p>
 <p>Only one data type is allowed to specify as <strong><code class="docutils literal notranslate"><span class="pre">dtype='data_type'</span></code></strong> which will be applicable for all the data in the resultant DataFrame. If we do not force such a data type, it internally infers from the Data.</p>
 <p><strong>Example:</strong></p>
@@ -729,7 +731,7 @@ dtype: object
 </div>
 </section>
 <section id="dataframe-from-dict-with-a-single-value">
-<h2>DataFrame from dict with a single value<a class="headerlink" href="#dataframe-from-dict-with-a-single-value" title="Permalink to this heading">#</a></h2>
+<h2>DataFrame from dict with a single value<a class="headerlink" href="#dataframe-from-dict-with-a-single-value" title="Link to this heading">#</a></h2>
 <p>If we have a <strong><code class="docutils literal notranslate"><span class="pre">dict</span></code></strong> with only single values for each key and need to convert such <strong><code class="docutils literal notranslate"><span class="pre">dict</span></code></strong> to the DataFrame, we can use the DataFrame constructor.</p>
 <p>In such a case, it converts the <strong><code class="docutils literal notranslate"><span class="pre">dict</span></code></strong> to DataFrame as we have seen before, like keys of the <strong><code class="docutils literal notranslate"><span class="pre">dict</span></code></strong> will be column labels and values will be the column data. But, we must provide the index parameter to give the row index. Else it throws an error,</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="ne">ValueError</span><span class="p">:</span> <span class="n">If</span> <span class="n">using</span> <span class="nb">all</span> <span class="n">scalar</span> <span class="n">values</span><span class="p">,</span> <span class="n">you</span> <span class="n">must</span> <span class="k">pass</span> <span class="n">an</span> <span class="n">index</span>
@@ -761,7 +763,7 @@ stud1  Smith   22   88.9
 </div>
 </section>
 <section id="dataframe-from-dict-with-key-and-value-as-a-column">
-<h2>DataFrame from dict with key and value as a column<a class="headerlink" href="#dataframe-from-dict-with-key-and-value-as-a-column" title="Permalink to this heading">#</a></h2>
+<h2>DataFrame from dict with key and value as a column<a class="headerlink" href="#dataframe-from-dict-with-key-and-value-as-a-column" title="Link to this heading">#</a></h2>
 <p>Suppose we have a dictionary object where the key is the <strong>student’s name</strong>, and the value is the student’s marks. And we want the keys in one column and all the values in another column of the DataFrame.</p>
 <p>For that, rather than passing a whole <strong><code class="docutils literal notranslate"><span class="pre">dict</span></code></strong> object, we need to pass each key-value pair in the dictionary to the DataFrame constructor to create a new DataFrame.</p>
 <p>We can get the entry of key-value pair using <strong><code class="docutils literal notranslate"><span class="pre">dict.items()</span></code></strong> and pass that function to the constructor.</p>
@@ -793,7 +795,7 @@ stud1  Smith   22   88.9
 </div>
 </section>
 <section id="create-dataframe-from-list-of-dict">
-<h2>Create DataFrame from list of dict<a class="headerlink" href="#create-dataframe-from-list-of-dict" title="Permalink to this heading">#</a></h2>
+<h2>Create DataFrame from list of dict<a class="headerlink" href="#create-dataframe-from-list-of-dict" title="Link to this heading">#</a></h2>
 <p>For the sake of our understanding, consider the case where each school stores data of students into the dictionary data structure. Each school store different information about students. Like, some school stores student’s hobby whereas some school only stores academic information. If we want to analyze data of all the students from the city, we need to gather all this information into the DataFrame.</p>
 <p>To convert such a list of <strong><code class="docutils literal notranslate"><span class="pre">dict</span></code></strong> from different schools can be converted to a single DataFrame using either <strong><code class="docutils literal notranslate"><span class="pre">DataFrame.from_dict()</span></code></strong> function or DataFrame constructor.</p>
 <p>By default, keys of all the different dictionary objects are converted into columns of resultant DataFrame. It handles the missing keys by adding NaN where the values for the column are missing.</p>
@@ -827,7 +829,7 @@ stud1  Smith   22   88.9
 </div>
 </section>
 <section id="the-from-dict-function">
-<h2>The <code class="docutils literal notranslate"><span class="pre">from_dict()</span></code> function<a class="headerlink" href="#the-from-dict-function" title="Permalink to this heading">#</a></h2>
+<h2>The <code class="docutils literal notranslate"><span class="pre">from_dict()</span></code> function<a class="headerlink" href="#the-from-dict-function" title="Link to this heading">#</a></h2>
 <p>This is another way of creating DataFrame from a Python dictionary using <strong><code class="docutils literal notranslate"><span class="pre">DataFrame.from_dict()</span> </code></strong> method.</p>
 <blockquote>
 <div><p><strong>Note:</strong> This method is useful for the cases when you need to <strong>transpose</strong> the DataFrame i.e. when we need the keys in the dictionary object as rows in the resultant DataFrame. In all the other cases DataFrame constructor should be preferred.</p>
@@ -848,7 +850,7 @@ stud1  Smith   22   88.9
 </div></blockquote>
 </section>
 <section id="dataframe-from-dict-with-dict-keys-as-a-row">
-<h2>DataFrame from dict with dict keys as a row<a class="headerlink" href="#dataframe-from-dict-with-dict-keys-as-a-row" title="Permalink to this heading">#</a></h2>
+<h2>DataFrame from dict with dict keys as a row<a class="headerlink" href="#dataframe-from-dict-with-dict-keys-as-a-row" title="Link to this heading">#</a></h2>
 <p>It is used to transpose the DataFrame, i.e., when keys in the dictionary should be the rows in the resultant DataFrame. We can change the orientation of the DataFrame using a parameter <strong><code class="docutils literal notranslate"><span class="pre">orient=&quot;index&quot;</span></code></strong> in <strong><code class="docutils literal notranslate"><span class="pre">DataFrame.from_dict()</span></code></strong>.</p>
 <p><strong>Example:</strong></p>
 <p>In the below example, keys <strong><code class="docutils literal notranslate"><span class="pre">name</span></code></strong>, <strong><code class="docutils literal notranslate"><span class="pre">age</span></code></strong>, and <strong><code class="docutils literal notranslate"><span class="pre">marks</span></code></strong> becomes row indexes in the DataFrame, and values are added in respective rows. New column labels are provided using <strong><code class="docutils literal notranslate"><span class="pre">columns</span></code></strong> parameter.</p>
@@ -878,7 +880,7 @@ marks  85.1  77.8  91.54
 </div>
 </section>
 <section id="dataframe-from-dict-where-values-are-variable-length-lists">
-<h2>DataFrame from dict where values are variable-length lists<a class="headerlink" href="#dataframe-from-dict-where-values-are-variable-length-lists" title="Permalink to this heading">#</a></h2>
+<h2>DataFrame from dict where values are variable-length lists<a class="headerlink" href="#dataframe-from-dict-where-values-are-variable-length-lists" title="Link to this heading">#</a></h2>
 <p>It is a widespread use case in the IT industry where data is stored in the dictionary with different values against each key.</p>
 <p>If such a dictionary object needs to be converted into the DataFrame such that keys and values will be added as columns in DataFrame. Then it can be done using chaining of <strong><code class="docutils literal notranslate"><span class="pre">DataFrame.from_dict()</span></code></strong>, <strong><code class="docutils literal notranslate"><span class="pre">stack()</span></code></strong>, and <strong><code class="docutils literal notranslate"><span class="pre">reset_index()</span></code></strong> functions.</p>
 <p><strong>Example:</strong></p>
@@ -908,7 +910,7 @@ marks  85.1  77.8  91.54
 </div>
 </section>
 <section id="dataframe-from-dict-nested-dict">
-<h2>DataFrame from dict nested dict<a class="headerlink" href="#dataframe-from-dict-nested-dict" title="Permalink to this heading">#</a></h2>
+<h2>DataFrame from dict nested dict<a class="headerlink" href="#dataframe-from-dict-nested-dict" title="Link to this heading">#</a></h2>
 <p>In this section, we cover the complex structure of the dictionary object where we have a hierarchical structure of the dictionary i.e. one dictionary object into another dictionary object.</p>
 <p><strong>Example:</strong></p>
 <p>We have a student dictionary object where student data categorized by their grades and further divided as per their class. Such a dictionary object is converted into the multi-index DataFrame using <strong><code class="docutils literal notranslate"><span class="pre">DataFrame.from_dict()</span></code></strong> by iterating over each key and its values and parameter <strong><code class="docutils literal notranslate"><span class="pre">orient='index'</span></code></strong>.</p>
@@ -945,7 +947,7 @@ Grade B Class A    Sam  70.00
 </div>
 </section>
 <section id="dataframe-constructor-vs-from-dict">
-<h2>DataFrame constructor vs <code class="docutils literal notranslate"><span class="pre">from_dict()</span></code><a class="headerlink" href="#dataframe-constructor-vs-from-dict" title="Permalink to this heading">#</a></h2>
+<h2>DataFrame constructor vs <code class="docutils literal notranslate"><span class="pre">from_dict()</span></code><a class="headerlink" href="#dataframe-constructor-vs-from-dict" title="Link to this heading">#</a></h2>
 <p>The below table summarizes all the cases of converting <strong><code class="docutils literal notranslate"><span class="pre">dict</span></code></strong> to the DataFrame that we have already discussed in this article. It shows the comparison of using the DataFrame constructor and <strong><code class="docutils literal notranslate"><span class="pre">DataFrame.from_dict()</span></code></strong> method.</p>
 <p>It will help you to choose the correct function for converting the <strong><code class="docutils literal notranslate"><span class="pre">dict</span></code></strong> to the DataFrame.</p>
 <table class="table">
@@ -1058,6 +1060,7 @@ Grade B Class A    Sam  70.00
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
+
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> Contents
@@ -1124,8 +1127,8 @@ By Anukool Chaturvedi
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
-<script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+  <script src="../../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
   <footer class="bd-footer">
   </footer>

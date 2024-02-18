@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" >
+<html lang="en" data-content_root="../../../../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Python Exceptions Handling Using try, except and finally statement &#8212; Anukool&#39;s almanac</title>
   
@@ -19,53 +18,49 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="../../../../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link href="../../../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
   
-  <link href="../../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../../../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
-<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
-  <script src="../../../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
-    <script src="../../../../_static/jquery.js"></script>
-    <script src="../../../../_static/underscore.js"></script>
-    <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../../../../_static/doctools.js"></script>
-    <script src="../../../../_static/clipboard.min.js"></script>
-    <script src="../../../../_static/copybutton.js"></script>
-    <script src="../../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../../../_static/togglebutton.js"></script>
+    <script src="../../../../_static/togglebutton.js?v=4a39c7ea"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../../../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../../../../_static/sphinx-thebe.js"></script>
+    <script src="../../../../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'content/essentials/python/files/004_Python_Exceptions_Handling';</script>
     <link rel="canonical" href="https://anukchat.github.io/content/essentials/python/files/004_Python_Exceptions_Handling.html" />
-    <link rel="shortcut icon" href="../../../../_static/mesh-smallest.png"/>
+    <link rel="icon" href="../../../../_static/mesh-smallest.png"/>
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
     <link rel="next" title="Python Custom Exceptions" href="005_Python_User_defined_Exceptions.html" />
@@ -79,10 +74,9 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
   
   <div id="pst-scroll-pixel-helper"></div>
-
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
     <i class="fa-solid fa-arrow-up"></i>
@@ -123,11 +117,14 @@ const thebe_selector_output = ".output, .cell_output"
 </form></div>
   </div>
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -155,7 +152,18 @@ const thebe_selector_output = ".output, .cell_output"
     <p class="title logo__title">Anukool's almanac</p>
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Essentials</span></p>
 <ul class="current nav bd-sidenav">
@@ -220,13 +228,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l2 current active has-children"><a class="reference internal" href="files_toc.html">Files</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="001_Python_File_Input_Output.html">Python File I/O</a></li>
-
-
-
-
-
-
+<li class="toctree-l3"><a class="reference internal" href="001_Python_File_Input_Output.html">File I/O</a></li>
 <li class="toctree-l3"><a class="reference internal" href="002_Python_File_Directory.html">File directory</a></li>
 <li class="toctree-l3"><a class="reference internal" href="003_Python_File_Exception.html">File exception</a></li>
 <li class="toctree-l3 current active"><a class="current reference internal" href="#">Exceptions handling</a></li>
@@ -540,8 +542,8 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spreading-in-python">Spreading in Python</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#enumerate">Enumerate</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zip">Zip</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-span-class-label-label-default-exceptions-handling-span">💻 Exercises ➞ <span class="label label-default">Exceptions Handling</span></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-span-class-label-label-default-level-1-span">Exercises ➞ <span class="label label-default">Level 1</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-exceptions-handling">💻 Exercises ➞ <span class="label label-default">Exceptions Handling</span></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-level-1">Exercises ➞ <span class="label label-default">Level 1</span></a></li>
 </ul>
 </li>
 </ul>
@@ -553,22 +555,22 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="python-exceptions-handling-using-try-except-and-finally-statement">
-<h1>Python Exceptions Handling Using <code class="docutils literal notranslate"><span class="pre">try</span></code>, <code class="docutils literal notranslate"><span class="pre">except</span></code> and <code class="docutils literal notranslate"><span class="pre">finally</span></code> statement<a class="headerlink" href="#python-exceptions-handling-using-try-except-and-finally-statement" title="Permalink to this heading">#</a></h1>
+<h1>Python Exceptions Handling Using <code class="docutils literal notranslate"><span class="pre">try</span></code>, <code class="docutils literal notranslate"><span class="pre">except</span></code> and <code class="docutils literal notranslate"><span class="pre">finally</span></code> statement<a class="headerlink" href="#python-exceptions-handling-using-try-except-and-finally-statement" title="Link to this heading">#</a></h1>
 <p>In this class, you’ll learn how to handle exceptions in your Python program using try, except and finally statements with the help of examples.</p>
 <section id="exceptions-in-python">
-<h2>Exceptions in Python<a class="headerlink" href="#exceptions-in-python" title="Permalink to this heading">#</a></h2>
+<h2>Exceptions in Python<a class="headerlink" href="#exceptions-in-python" title="Link to this heading">#</a></h2>
 <p>An <strong>exception</strong> is an event, which occurs during the execution of a program that disrupts the normal flow of the program’s instructions. In general, when a Python script encounters a situation that it cannot cope with, it raises an exception. An exception is a Python object that <strong>represents an error</strong>.</p>
-<p>Python has many <strong><a class="reference internal" href="003_Python_File_Exception.html"><span class="doc std std-doc">built-in exceptions</span></a></strong> that are raised when your program encounters an error (something in the program goes wrong).</p>
+<p>Python has many <strong><a class="reference internal" href="003_Python_File_Exception.html"><span class="std std-doc">built-in exceptions</span></a></strong> that are raised when your program encounters an error (something in the program goes wrong).</p>
 <p>When a Python script raises an exception, it must either handle the exception immediately otherwise it <strong>terminates</strong> and <strong>quits</strong>.</p>
 <p>When these exceptions occur, the Python interpreter stops the current process and passes it to the calling process until it is handled. If not handled, the program will crash.</p>
-<p>For example, let us consider a program where we have a function <strong><code class="docutils literal notranslate"><span class="pre">A</span></code></strong> that calls <strong><a class="reference internal" href="../functions/001_Python_Functions.html"><span class="doc std std-doc">function</span></a></strong> <strong><code class="docutils literal notranslate"><span class="pre">B</span></code></strong>, which in turn calls function <strong><code class="docutils literal notranslate"><span class="pre">C</span></code></strong>. If an exception occurs in function <strong><code class="docutils literal notranslate"><span class="pre">C</span></code></strong> but is not handled in <strong><code class="docutils literal notranslate"><span class="pre">C</span></code></strong>, the exception passes to <strong><code class="docutils literal notranslate"><span class="pre">B</span></code></strong> and then to <strong><code class="docutils literal notranslate"><span class="pre">A</span></code></strong>.</p>
+<p>For example, let us consider a program where we have a function <strong><code class="docutils literal notranslate"><span class="pre">A</span></code></strong> that calls <strong><a class="reference internal" href="../functions/001_Python_Functions.html"><span class="std std-doc">function</span></a></strong> <strong><code class="docutils literal notranslate"><span class="pre">B</span></code></strong>, which in turn calls function <strong><code class="docutils literal notranslate"><span class="pre">C</span></code></strong>. If an exception occurs in function <strong><code class="docutils literal notranslate"><span class="pre">C</span></code></strong> but is not handled in <strong><code class="docutils literal notranslate"><span class="pre">C</span></code></strong>, the exception passes to <strong><code class="docutils literal notranslate"><span class="pre">B</span></code></strong> and then to <strong><code class="docutils literal notranslate"><span class="pre">A</span></code></strong>.</p>
 <p>If never handled, an error message is displayed and our program comes to a sudden unexpected halt.</p>
 </section>
 <section id="catching-exceptions-in-python">
-<h2>Catching Exceptions in Python<a class="headerlink" href="#catching-exceptions-in-python" title="Permalink to this heading">#</a></h2>
+<h2>Catching Exceptions in Python<a class="headerlink" href="#catching-exceptions-in-python" title="Link to this heading">#</a></h2>
 <p>In Python, exceptions can be handled using a <strong><code class="docutils literal notranslate"><span class="pre">try</span></code></strong> statement.</p>
 <p>The critical operation which can raise an exception is placed inside the <strong><code class="docutils literal notranslate"><span class="pre">try</span></code></strong> clause. The code that handles the exceptions is written in the <strong><code class="docutils literal notranslate"><span class="pre">except</span></code></strong> clause.</p>
 <p>We can thus choose what operations to perform once we have caught the exception. Here is a simple example.</p>
@@ -725,7 +727,7 @@ Type error occured
 </div>
 </section>
 <section id="catching-specific-exceptions-in-python">
-<h2>Catching Specific Exceptions in Python<a class="headerlink" href="#catching-specific-exceptions-in-python" title="Permalink to this heading">#</a></h2>
+<h2>Catching Specific Exceptions in Python<a class="headerlink" href="#catching-specific-exceptions-in-python" title="Link to this heading">#</a></h2>
 <p>In the above example, we did not mention any specific exception in the <strong><code class="docutils literal notranslate"><span class="pre">except</span></code></strong> clause.</p>
 <p>This is not a good programming practice as it will catch all exceptions and handle every case in the same way. We can specify which exceptions an <strong><code class="docutils literal notranslate"><span class="pre">except</span></code></strong> clause should catch.</p>
 <p>A <strong><code class="docutils literal notranslate"><span class="pre">try</span></code></strong> clause can have any number of <strong><code class="docutils literal notranslate"><span class="pre">except</span></code></strong> clauses to handle different exceptions, however, only one will be executed in case an exception occurs.</p>
@@ -750,7 +752,7 @@ Type error occured
 </div>
 </section>
 <section id="raising-exceptions-in-python">
-<h2>Raising Exceptions in Python<a class="headerlink" href="#raising-exceptions-in-python" title="Permalink to this heading">#</a></h2>
+<h2>Raising Exceptions in Python<a class="headerlink" href="#raising-exceptions-in-python" title="Link to this heading">#</a></h2>
 <p>In Python programming, exceptions are raised when errors occur at runtime. We can also manually <strong><code class="docutils literal notranslate"><span class="pre">raise</span></code></strong> exceptions using the raise keyword.</p>
 <p>We can optionally pass values to the exception to clarify why that exception was raised.</p>
 <div class="cell docutils container">
@@ -805,7 +807,7 @@ Type error occured
 </div>
 </div>
 <section id="python-try-with-else-clause">
-<h3>Python <code class="docutils literal notranslate"><span class="pre">try</span></code> with <code class="docutils literal notranslate"><span class="pre">else</span></code> clause<a class="headerlink" href="#python-try-with-else-clause" title="Permalink to this heading">#</a></h3>
+<h3>Python <code class="docutils literal notranslate"><span class="pre">try</span></code> with <code class="docutils literal notranslate"><span class="pre">else</span></code> clause<a class="headerlink" href="#python-try-with-else-clause" title="Link to this heading">#</a></h3>
 <p>In some situations, you might want to run a certain block of code if the code block inside <code class="docutils literal notranslate"><span class="pre">try</span></code> ran without any errors. For these cases, you can use the optional <code class="docutils literal notranslate"><span class="pre">else</span></code> keyword with the <code class="docutils literal notranslate"><span class="pre">try</span></code> statement.</p>
 <blockquote>
 <div><p><strong>Note</strong>: Exceptions in the else clause are not handled by the preceding except clauses.</p>
@@ -876,8 +878,8 @@ Not an even number!
 </div>
 <p><strong>Explanation</strong>:</p>
 <p>If we pass an odd number:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>Enter a number: 1
-Not an even number!
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">Enter</span> <span class="n">a</span> <span class="n">number</span><span class="p">:</span> <span class="mi">1</span>
+<span class="n">Not</span> <span class="n">an</span> <span class="n">even</span> <span class="n">number</span><span class="err">!</span>
 </pre></div>
 </div>
 <p>If we pass an even number, the reciprocal is computed and displayed.</p>
@@ -896,7 +898,7 @@ Not an even number!
 </section>
 </section>
 <section id="the-except-clause-with-no-exceptions">
-<h2>The <code class="docutils literal notranslate"><span class="pre">except</span></code> Clause with No Exceptions<a class="headerlink" href="#the-except-clause-with-no-exceptions" title="Permalink to this heading">#</a></h2>
+<h2>The <code class="docutils literal notranslate"><span class="pre">except</span></code> Clause with No Exceptions<a class="headerlink" href="#the-except-clause-with-no-exceptions" title="Link to this heading">#</a></h2>
 <p>You can also use the except statement with no exceptions defined as follows</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">try</span><span class="p">:</span>
 <span class="gp">&gt;&gt;&gt; </span>   <span class="n">You</span> <span class="n">do</span> <span class="n">your</span> <span class="n">operations</span> <span class="n">here</span>
@@ -911,7 +913,7 @@ Not an even number!
 <p>This kind of a <strong>try-except</strong> statement catches all the exceptions that occur. Using this kind of try-except statement is not considered a good programming practice though, because it catches all exceptions but does not make the programmer identify the root cause of the problem that may occur.</p>
 </section>
 <section id="the-except-clause-with-multiple-exceptions">
-<h2>The <code class="docutils literal notranslate"><span class="pre">except</span></code> Clause with Multiple Exceptions<a class="headerlink" href="#the-except-clause-with-multiple-exceptions" title="Permalink to this heading">#</a></h2>
+<h2>The <code class="docutils literal notranslate"><span class="pre">except</span></code> Clause with Multiple Exceptions<a class="headerlink" href="#the-except-clause-with-multiple-exceptions" title="Link to this heading">#</a></h2>
 <p>You can also use the same except statement to handle multiple exceptions as follows −</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="go">&gt;&gt;&gt;try:</span>
 <span class="gp">&gt;&gt;&gt; </span>  <span class="n">You</span> <span class="n">do</span> <span class="n">your</span> <span class="n">operations</span> <span class="n">here</span>
@@ -926,7 +928,7 @@ Not an even number!
 </div>
 </section>
 <section id="python-try-finally-clause">
-<h2>Python <code class="docutils literal notranslate"><span class="pre">try</span></code>-<code class="docutils literal notranslate"><span class="pre">finally</span></code> Clause<a class="headerlink" href="#python-try-finally-clause" title="Permalink to this heading">#</a></h2>
+<h2>Python <code class="docutils literal notranslate"><span class="pre">try</span></code>-<code class="docutils literal notranslate"><span class="pre">finally</span></code> Clause<a class="headerlink" href="#python-try-finally-clause" title="Link to this heading">#</a></h2>
 <p>The <strong><code class="docutils literal notranslate"><span class="pre">try</span></code></strong> statement in Python can have an optional <strong><code class="docutils literal notranslate"><span class="pre">finally</span></code></strong> clause. This clause is executed no matter what, and is generally used to release external resources.</p>
 <p>For example, we may be connected to a remote data center through the network or working with a file or a Graphical User Interface (GUI).</p>
 <p>In all these circumstances, we must clean up the resource before the program comes to a halt whether it successfully ran or not. These actions (closing a file, GUI or disconnecting from network) are performed in the <strong><code class="docutils literal notranslate"><span class="pre">finally</span></code></strong> clause to guarantee the execution.</p>
@@ -963,7 +965,7 @@ Not an even number!
 </div>
 </div>
 </div>
-<p>Here is an example of <strong><a class="reference internal" href="001_Python_File_Input_Output.html"><span class="doc std std-doc">file operations</span></a></strong> to illustrate this.</p>
+<p>Here is an example of <strong><a class="reference internal" href="001_Python_File_Input_Output.html"><span class="std std-doc">file operations</span></a></strong> to illustrate this.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
@@ -1034,7 +1036,7 @@ You are Milaan. And your age is 96.
 </div>
 </section>
 <section id="argument-of-an-exception">
-<h2>Argument of an Exception<a class="headerlink" href="#argument-of-an-exception" title="Permalink to this heading">#</a></h2>
+<h2>Argument of an Exception<a class="headerlink" href="#argument-of-an-exception" title="Link to this heading">#</a></h2>
 <p>An exception can have an <strong>argument</strong>, which is a value that gives additional information about the problem. The contents of the argument vary by exception. You capture an exception’s argument by supplying a variable in the except clause as follows −</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1059,7 +1061,7 @@ You are Milaan. And your age is 96.
 </div>
 </section>
 <section id="raising-an-exception">
-<h2>Raising an Exception<a class="headerlink" href="#raising-an-exception" title="Permalink to this heading">#</a></h2>
+<h2>Raising an Exception<a class="headerlink" href="#raising-an-exception" title="Link to this heading">#</a></h2>
 <p>You can raise exceptions in several ways by using the <strong><code class="docutils literal notranslate"><span class="pre">raise</span></code></strong> statement.</p>
 <p>The general syntax for the <strong><code class="docutils literal notranslate"><span class="pre">raise</span></code></strong> statement is as follows:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">raise</span> <span class="p">[</span><span class="ne">Exception</span> <span class="p">[,</span> <span class="n">args</span> <span class="p">[,</span> <span class="n">traceback</span><span class="p">]]]</span>
@@ -1092,7 +1094,7 @@ You are Milaan. And your age is 96.
 </div>
 </section>
 <section id="writing-the-hello-world-program">
-<h2>Writing the “Hello, World!” Program<a class="headerlink" href="#writing-the-hello-world-program" title="Permalink to this heading">#</a></h2>
+<h2>Writing the “Hello, World!” Program<a class="headerlink" href="#writing-the-hello-world-program" title="Link to this heading">#</a></h2>
 <p>Python also allows you to create your own exceptions by deriving classes from the standard <strong>built-in exceptions</strong>.</p>
 <p>Here is an example related to <strong>RuntimeError</strong>. Here, a class is created that is subclassed from RuntimeError. This is useful when you need to display more <strong>specific information</strong> when an exception is caught.</p>
 <p>In the try block, the user-defined exception is raised and caught in the except block. The variable e is used to create an instance of the class <strong>Networkerror</strong>.</p>
@@ -1110,7 +1112,7 @@ You are Milaan. And your age is 96.
 </div>
 </section>
 <section id="packing-and-unpacking-arguments-in-python">
-<h2>Packing and Unpacking Arguments in Python<a class="headerlink" href="#packing-and-unpacking-arguments-in-python" title="Permalink to this heading">#</a></h2>
+<h2>Packing and Unpacking Arguments in Python<a class="headerlink" href="#packing-and-unpacking-arguments-in-python" title="Link to this heading">#</a></h2>
 <p>We use two operators:</p>
 <ul class="simple">
 <li><p><strong><code class="docutils literal notranslate"><span class="pre">*</span></code></strong> for tuples</p></li>
@@ -1118,9 +1120,9 @@ You are Milaan. And your age is 96.
 </ul>
 <p>Let us take as an example below. It takes only arguments but we have list. We can unpack the list and changes to argument.</p>
 <section id="unpacking">
-<h3>Unpacking<a class="headerlink" href="#unpacking" title="Permalink to this heading">#</a></h3>
+<h3>Unpacking<a class="headerlink" href="#unpacking" title="Link to this heading">#</a></h3>
 <section id="unpacking-lists">
-<h4>Unpacking Lists<a class="headerlink" href="#unpacking-lists" title="Permalink to this heading">#</a></h4>
+<h4>Unpacking Lists<a class="headerlink" href="#unpacking-lists" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">sum_of_five_nums</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">e</span><span class="p">):</span>
@@ -1181,7 +1183,7 @@ range(2, 7)
 </div>
 </section>
 <section id="unpacking-list-or-a-tuple">
-<h4>Unpacking List or a Tuple<a class="headerlink" href="#unpacking-list-or-a-tuple" title="Permalink to this heading">#</a></h4>
+<h4>Unpacking List or a Tuple<a class="headerlink" href="#unpacking-list-or-a-tuple" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">countries</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Finland&#39;</span><span class="p">,</span> <span class="s1">&#39;Sweden&#39;</span><span class="p">,</span> <span class="s1">&#39;Norway&#39;</span><span class="p">,</span> <span class="s1">&#39;Denmark&#39;</span><span class="p">,</span> <span class="s1">&#39;Iceland&#39;</span><span class="p">]</span>
@@ -1202,7 +1204,7 @@ range(2, 7)
 </div>
 </section>
 <section id="unpacking-dictionaries">
-<h4>Unpacking Dictionaries<a class="headerlink" href="#unpacking-dictionaries" title="Permalink to this heading">#</a></h4>
+<h4>Unpacking Dictionaries<a class="headerlink" href="#unpacking-dictionaries" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">unpacking_person_info</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">country</span><span class="p">,</span> <span class="n">city</span><span class="p">,</span> <span class="n">age</span><span class="p">):</span>
@@ -1221,10 +1223,10 @@ range(2, 7)
 </section>
 </section>
 <section id="packing">
-<h3>Packing<a class="headerlink" href="#packing" title="Permalink to this heading">#</a></h3>
+<h3>Packing<a class="headerlink" href="#packing" title="Link to this heading">#</a></h3>
 <p>Sometimes we never know how many arguments need to be passed to a python function. We can use the packing method to allow our function to take unlimited number or arbitrary number of arguments.</p>
 <section id="packing-lists">
-<h4>Packing Lists<a class="headerlink" href="#packing-lists" title="Permalink to this heading">#</a></h4>
+<h4>Packing Lists<a class="headerlink" href="#packing-lists" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">sum_all</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">):</span>
@@ -1246,7 +1248,7 @@ range(2, 7)
 </div>
 </section>
 <section id="packing-dictionaries">
-<h4>Packing Dictionaries<a class="headerlink" href="#packing-dictionaries" title="Permalink to this heading">#</a></h4>
+<h4>Packing Dictionaries<a class="headerlink" href="#packing-dictionaries" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">packing_person_info</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
@@ -1276,7 +1278,7 @@ range(2, 7)
 </section>
 </section>
 <section id="spreading-in-python">
-<h2>Spreading in Python<a class="headerlink" href="#spreading-in-python" title="Permalink to this heading">#</a></h2>
+<h2>Spreading in Python<a class="headerlink" href="#spreading-in-python" title="Link to this heading">#</a></h2>
 <p>Like in JavaScript, spreading is possible in Python. Let us check it in an example below:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1300,7 +1302,7 @@ range(2, 7)
 </div>
 </section>
 <section id="enumerate">
-<h2>Enumerate<a class="headerlink" href="#enumerate" title="Permalink to this heading">#</a></h2>
+<h2>Enumerate<a class="headerlink" href="#enumerate" title="Link to this heading">#</a></h2>
 <p>If we are interested in an index of a list, we use <em>enumerate</em> built-in function to get the index of each item in the list.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1339,7 +1341,7 @@ hi
 </div>
 </section>
 <section id="zip">
-<h2>Zip<a class="headerlink" href="#zip" title="Permalink to this heading">#</a></h2>
+<h2>Zip<a class="headerlink" href="#zip" title="Link to this heading">#</a></h2>
 <p>Sometimes we would like to combine lists when looping through them. See the example below:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1360,10 +1362,10 @@ hi
 </div>
 </div>
 </section>
-<section id="exercises-span-class-label-label-default-exceptions-handling-span">
-<h2>💻 Exercises ➞ <span class='label label-default'>Exceptions Handling</span><a class="headerlink" href="#exercises-span-class-label-label-default-exceptions-handling-span" title="Permalink to this heading">#</a></h2>
-<section id="exercises-span-class-label-label-default-level-1-span">
-<h3>Exercises ➞ <span class='label label-default'>Level 1</span><a class="headerlink" href="#exercises-span-class-label-label-default-level-1-span" title="Permalink to this heading">#</a></h3>
+<section id="exercises-exceptions-handling">
+<h2>💻 Exercises ➞ <span class='label label-default'>Exceptions Handling</span><a class="headerlink" href="#exercises-exceptions-handling" title="Link to this heading">#</a></h2>
+<section id="exercises-level-1">
+<h3>Exercises ➞ <span class='label label-default'>Level 1</span><a class="headerlink" href="#exercises-level-1" title="Link to this heading">#</a></h3>
 <ol class="arabic simple">
 <li><p>names = [‘Finland’, ‘Sweden’, ‘Norway’,‘Denmark’,‘Iceland’, ‘Estonia’,‘Russia’]. Unpack the first five countries and store them in a variable <strong><code class="docutils literal notranslate"><span class="pre">nordic_countries</span></code></strong>, store Estonia and Russia in es, and ru respectively.</p></li>
 </ol>
@@ -1428,6 +1430,7 @@ hi
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
+
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> Contents
@@ -1464,8 +1467,8 @@ hi
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spreading-in-python">Spreading in Python</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#enumerate">Enumerate</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zip">Zip</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-span-class-label-label-default-exceptions-handling-span">💻 Exercises ➞ <span class="label label-default">Exceptions Handling</span></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-span-class-label-label-default-level-1-span">Exercises ➞ <span class="label label-default">Level 1</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-exceptions-handling">💻 Exercises ➞ <span class="label label-default">Exceptions Handling</span></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-level-1">Exercises ➞ <span class="label label-default">Level 1</span></a></li>
 </ul>
 </li>
 </ul>
@@ -1516,8 +1519,8 @@ By Anukool Chaturvedi
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
-<script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+  <script src="../../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
   <footer class="bd-footer">
   </footer>

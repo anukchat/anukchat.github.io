@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" >
+<html lang="en" data-content_root="../../../../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Convert Pandas DataFrame to Python dictionary &#8212; Anukool&#39;s almanac</title>
   
@@ -19,53 +18,49 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="../../../../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link href="../../../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
   
-  <link href="../../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../../../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
-<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
-  <script src="../../../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
-    <script src="../../../../_static/jquery.js"></script>
-    <script src="../../../../_static/underscore.js"></script>
-    <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../../../../_static/doctools.js"></script>
-    <script src="../../../../_static/clipboard.min.js"></script>
-    <script src="../../../../_static/copybutton.js"></script>
-    <script src="../../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../../../_static/togglebutton.js"></script>
+    <script src="../../../../_static/togglebutton.js?v=4a39c7ea"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../../../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../../../../_static/sphinx-thebe.js"></script>
+    <script src="../../../../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'content/tools/pandas/001_Python_Pandas_Methods/008_Python_Pandas_DataFrame_to_Python_dictionary';</script>
     <link rel="canonical" href="https://anukchat.github.io/content/tools/pandas/001_Python_Pandas_Methods/008_Python_Pandas_DataFrame_to_Python_dictionary.html" />
-    <link rel="shortcut icon" href="../../../../_static/mesh-smallest.png"/>
+    <link rel="icon" href="../../../../_static/mesh-smallest.png"/>
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
     <link rel="next" title="Set index in pandas DataFrame" href="009_Python_Pandas_DataFrame_set_index.html" />
@@ -79,10 +74,9 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
   
   <div id="pst-scroll-pixel-helper"></div>
-
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
     <i class="fa-solid fa-arrow-up"></i>
@@ -123,11 +117,14 @@ const thebe_selector_output = ".output, .cell_output"
 </form></div>
   </div>
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -155,7 +152,18 @@ const thebe_selector_output = ".output, .cell_output"
     <p class="title logo__title">Anukool's almanac</p>
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Essentials</span></p>
 <ul class="nav bd-sidenav">
@@ -220,13 +228,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../../essentials/python/files/files_toc.html">Files</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../../essentials/python/files/001_Python_File_Input_Output.html">Python File I/O</a></li>
-
-
-
-
-
-
+<li class="toctree-l3"><a class="reference internal" href="../../../essentials/python/files/001_Python_File_Input_Output.html">File I/O</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../essentials/python/files/002_Python_File_Directory.html">File directory</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../essentials/python/files/003_Python_File_Exception.html">File exception</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../essentials/python/files/004_Python_Exceptions_Handling.html">Exceptions handling</a></li>
@@ -530,18 +532,18 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="convert-pandas-dataframe-to-python-dictionary">
-<h1>Convert Pandas DataFrame to Python dictionary<a class="headerlink" href="#convert-pandas-dataframe-to-python-dictionary" title="Permalink to this heading">#</a></h1>
-<p>In this class, you will learn how to convert <strong><a class="reference internal" href="../001_Python_Pandas_DataFrame.html"><span class="doc std std-doc">Pandas DataFrame</span></a></strong> into a Python dictionary. It explains creating different kinds of dictionaries from pandas DataFrame.</p>
+<h1>Convert Pandas DataFrame to Python dictionary<a class="headerlink" href="#convert-pandas-dataframe-to-python-dictionary" title="Link to this heading">#</a></h1>
+<p>In this class, you will learn how to convert <strong><a class="reference internal" href="../001_Python_Pandas_DataFrame.html"><span class="std std-doc">Pandas DataFrame</span></a></strong> into a Python dictionary. It explains creating different kinds of dictionaries from pandas DataFrame.</p>
 <p>Data Analyst needs to collect the data from heterogeneous sources like CSV files or SQL tables or Python data structures like a dictionary, list, etc. Such data is converted into pandas DataFrame.</p>
 <p>After analyzing the data, we need to convert the resultant DataFrame back to its original format like CSV files or a dictionary. Or sometimes, we need to convert it into some other form.</p>
 <section id="the-dataframe-to-dict-function">
-<h2>The <code class="docutils literal notranslate"><span class="pre">DataFrame.to_dict()</span></code> function<a class="headerlink" href="#the-dataframe-to-dict-function" title="Permalink to this heading">#</a></h2>
+<h2>The <code class="docutils literal notranslate"><span class="pre">DataFrame.to_dict()</span></code> function<a class="headerlink" href="#the-dataframe-to-dict-function" title="Link to this heading">#</a></h2>
 <p>Pandas have a <strong><code class="docutils literal notranslate"><span class="pre">DataFrame.to_dict()</span></code></strong> function to create a Python dict object from DataFrame.</p>
 <p><strong>Syntax:</strong></p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>DataFrame.to_dict(orient=&#39;dict&#39;, into=&lt;class &#39;dict&#39;&gt;)
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">DataFrame</span><span class="o">.</span><span class="n">to_dict</span><span class="p">(</span><span class="n">orient</span><span class="o">=</span><span class="s1">&#39;dict&#39;</span><span class="p">,</span> <span class="n">into</span><span class="o">=&lt;</span><span class="k">class</span> <span class="err">&#39;</span><span class="nc">dict</span><span class="s1">&#39;&gt;)</span>
 </pre></div>
 </div>
 <p><strong>Parameters:</strong></p>
@@ -596,8 +598,8 @@ document.write(`
 <div>
 <img src="img/df2dict.png" width="500"/>
 </div><section id="example-to-convert-pandas-dataframe-to-dict">
-<h3>Example to convert pandas DataFrame to dict<a class="headerlink" href="#example-to-convert-pandas-dataframe-to-dict" title="Permalink to this heading">#</a></h3>
-<p>In the below example, we read the input from the <strong><span class="xref myst">student_data.csv</span></strong> file and create a DataFrame object. It is then converted into the Python dictionary object.</p>
+<h3>Example to convert pandas DataFrame to dict<a class="headerlink" href="#example-to-convert-pandas-dataframe-to-dict" title="Link to this heading">#</a></h3>
+<p>In the below example, we read the input from the <strong><a class="reference download internal" download="" href="../../../../_downloads/d7ac82cae816483f34d35887d647a576/student_data.csv"><span class="xref download myst">student_data.csv</span></a></strong> file and create a DataFrame object. It is then converted into the Python dictionary object.</p>
 <p>Input CSV file contains a simple dataset of student data with two columns, <strong><code class="docutils literal notranslate"><span class="pre">Name</span></code></strong> and <strong><code class="docutils literal notranslate"><span class="pre">Marks</span></code></strong>.</p>
 <div>
 <img src="img/dfcsv.png" width="200"/>
@@ -632,7 +634,7 @@ Result dict:
 </section>
 </section>
 <section id="dataframe-to-dict-with-a-list-of-values">
-<h2>DataFrame to dict with a list of values<a class="headerlink" href="#dataframe-to-dict-with-a-list-of-values" title="Permalink to this heading">#</a></h2>
+<h2>DataFrame to dict with a list of values<a class="headerlink" href="#dataframe-to-dict-with-a-list-of-values" title="Link to this heading">#</a></h2>
 <p>It is a case when we have DataFrame, which needs to be converted into the dictionary object such that column label should be the keys in the dictionary, and all the columns’ data should be added into the resultant dict as a list of values against each key.</p>
 <p>In that case, we can use <strong><code class="docutils literal notranslate"><span class="pre">'list'</span></code></strong> parameter of the <strong><code class="docutils literal notranslate"><span class="pre">DataFrame.to_dict()</span></code></strong> function.</p>
 <p><strong>Syntax:</strong></p>
@@ -669,7 +671,7 @@ Result dict:
 </div>
 </section>
 <section id="dataframe-to-dict-with-pandas-series-of-values">
-<h2>DataFrame to dict with pandas series of values<a class="headerlink" href="#dataframe-to-dict-with-pandas-series-of-values" title="Permalink to this heading">#</a></h2>
+<h2>DataFrame to dict with pandas series of values<a class="headerlink" href="#dataframe-to-dict-with-pandas-series-of-values" title="Link to this heading">#</a></h2>
 <p>When we need to convert the DataFrame into <strong><code class="docutils literal notranslate"><span class="pre">dict</span></code></strong> whereas column name as a key of the <strong><code class="docutils literal notranslate"><span class="pre">dict</span></code></strong>. And row index and data as a value in the <strong><code class="docutils literal notranslate"><span class="pre">dict</span></code></strong> for the respective keys.</p>
 <p><strong>Syntax:</strong></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">column_label</span> <span class="p">:</span> <span class="n">Series</span><span class="p">(</span><span class="n">row_index</span> <span class="n">data</span><span class="p">)}</span>
@@ -712,7 +714,7 @@ Name: Marks, dtype: float64}
 </div>
 </section>
 <section id="dataframe-to-dict-without-header-and-index">
-<h2>DataFrame to dict without header and index<a class="headerlink" href="#dataframe-to-dict-without-header-and-index" title="Permalink to this heading">#</a></h2>
+<h2>DataFrame to dict without header and index<a class="headerlink" href="#dataframe-to-dict-without-header-and-index" title="Link to this heading">#</a></h2>
 <p>When we want to collect the data from DataFrame without the column headers or we need to separate the row index and header from the data, we can use the <strong><code class="docutils literal notranslate"><span class="pre">'split'</span></code></strong> parameter of <strong><code class="docutils literal notranslate"><span class="pre">DataFrame.to_dict()</span></code></strong> function. It splits the input DataFrame into three parts, i.e., row index, column labels, and actual data.</p>
 <p><strong>Syntax:</strong></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s1">&#39;row_index&#39;</span> <span class="p">:</span> <span class="p">[</span><span class="n">index</span><span class="p">],</span> <span class="s1">&#39;column_label&#39;</span> <span class="p">:</span> <span class="p">[</span><span class="n">columns</span><span class="p">],</span> <span class="s1">&#39;data&#39;</span> <span class="p">:</span> <span class="p">[</span><span class="n">data</span><span class="p">]}</span>
@@ -752,7 +754,7 @@ List of values from DF without index and header:
 </div>
 </section>
 <section id="dataframe-to-dict-by-row">
-<h2>DataFrame to dict by row<a class="headerlink" href="#dataframe-to-dict-by-row" title="Permalink to this heading">#</a></h2>
+<h2>DataFrame to dict by row<a class="headerlink" href="#dataframe-to-dict-by-row" title="Link to this heading">#</a></h2>
 <p>When we have a DataFrame where <strong>each row</strong> contains data that needs to be store in a <strong>separate dictionary</strong> object, i.e., we need a data row-wise, we can use the <strong><code class="docutils literal notranslate"><span class="pre">'records'</span></code></strong> parameter of the <strong><code class="docutils literal notranslate"><span class="pre">DataFrame.to_dict()</span></code></strong> function.</p>
 <p>It returns a list of dictionary objects. A <strong><code class="docutils literal notranslate"><span class="pre">dict</span></code></strong> for each row, where the key is a column label, and the value is column data.</p>
 <p><strong>Syntax:</strong></p>
@@ -792,7 +794,7 @@ List of values from DF without index and header:
 </div>
 </section>
 <section id="dataframe-to-dict-by-row-index">
-<h2>DataFrame to dict by row index<a class="headerlink" href="#dataframe-to-dict-by-row-index" title="Permalink to this heading">#</a></h2>
+<h2>DataFrame to dict by row index<a class="headerlink" href="#dataframe-to-dict-by-row-index" title="Link to this heading">#</a></h2>
 <p>When we have a DataFrame with row indexes and if we need to convert the data of each row from DataFrame to <strong><code class="docutils literal notranslate"><span class="pre">dict</span></code></strong>, we can use the <strong><code class="docutils literal notranslate"><span class="pre">index</span></code></strong> parameter of the <strong><code class="docutils literal notranslate"><span class="pre">DataFrame.to_dict()</span></code></strong> function.</p>
 <p>It returns a list of dictionary objects. A <strong><code class="docutils literal notranslate"><span class="pre">dict</span></code></strong> is created for each row. Where the key is a row index, and the value is <strong><code class="docutils literal notranslate"><span class="pre">dict</span></code></strong> of column label and data.</p>
 <p><strong>Syntax:</strong></p>
@@ -827,7 +829,7 @@ List of values from DF without index and header:
 </div>
 </section>
 <section id="dataframe-to-dict-with-one-column-as-the-key">
-<h2>DataFrame to dict with one column as the key<a class="headerlink" href="#dataframe-to-dict-with-one-column-as-the-key" title="Permalink to this heading">#</a></h2>
+<h2>DataFrame to dict with one column as the key<a class="headerlink" href="#dataframe-to-dict-with-one-column-as-the-key" title="Link to this heading">#</a></h2>
 <p>In this section, we target the use case when we need to create a <strong><code class="docutils literal notranslate"><span class="pre">dict</span></code></strong> from DataFrame where one column as a key of <strong><code class="docutils literal notranslate"><span class="pre">dict</span></code></strong> and other columns as the value of the <strong><code class="docutils literal notranslate"><span class="pre">dict</span></code></strong>.</p>
 <p>Suppose we have student DataFrame with two columns, student’s <strong>Name</strong>, and student’s <strong>Marks</strong>. And we need to store each student’s data in the <strong><code class="docutils literal notranslate"><span class="pre">dict</span></code></strong> where the student name is the Key and their marks as a Value of the <strong><code class="docutils literal notranslate"><span class="pre">dict</span></code></strong>.</p>
 <p>We can do it in various ways, as shown below:</p>
@@ -899,7 +901,7 @@ List of values from DF without index and header:
 </div>
 </section>
 <section id="dataframe-to-dict-using-into-parameter">
-<h2>DataFrame to dict using <code class="docutils literal notranslate"><span class="pre">into</span></code> parameter<a class="headerlink" href="#dataframe-to-dict-using-into-parameter" title="Permalink to this heading">#</a></h2>
+<h2>DataFrame to dict using <code class="docutils literal notranslate"><span class="pre">into</span></code> parameter<a class="headerlink" href="#dataframe-to-dict-using-into-parameter" title="Link to this heading">#</a></h2>
 <p>While converting a DataFrame to <strong><code class="docutils literal notranslate"><span class="pre">dict</span></code></strong> if we need output <strong><code class="docutils literal notranslate"><span class="pre">dict</span></code></strong> to be of a particular type, we can use the parameter into of <strong><code class="docutils literal notranslate"><span class="pre">DataFrame.to_dict()</span></code></strong> function. We can specify the class name or the instance of the class for the resultant <strong><code class="docutils literal notranslate"><span class="pre">dict</span></code></strong>.</p>
 <p><strong>Example:</strong></p>
 <p>In the below example, we converted DataFrame to the <strong><code class="docutils literal notranslate"><span class="pre">dict</span></code></strong> of type <strong>OrderedDict</strong>.</p>
@@ -989,6 +991,7 @@ OrderedDict([(&#39;Name&#39;, OrderedDict([(0, &#39;Nat&#39;), (1, &#39;Harry&#3
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
+
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> Contents
@@ -1054,8 +1057,8 @@ By Anukool Chaturvedi
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
-<script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+  <script src="../../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
   <footer class="bd-footer">
   </footer>

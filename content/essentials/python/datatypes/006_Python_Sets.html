@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" >
+<html lang="en" data-content_root="../../../../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Python Sets &#8212; Anukool&#39;s almanac</title>
   
@@ -19,53 +18,49 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="../../../../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link href="../../../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
   
-  <link href="../../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../../../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
-<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
-  <script src="../../../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
-    <script src="../../../../_static/jquery.js"></script>
-    <script src="../../../../_static/underscore.js"></script>
-    <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../../../../_static/doctools.js"></script>
-    <script src="../../../../_static/clipboard.min.js"></script>
-    <script src="../../../../_static/copybutton.js"></script>
-    <script src="../../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../../../_static/togglebutton.js"></script>
+    <script src="../../../../_static/togglebutton.js?v=4a39c7ea"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../../../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../../../../_static/sphinx-thebe.js"></script>
+    <script src="../../../../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'content/essentials/python/datatypes/006_Python_Sets';</script>
     <link rel="canonical" href="https://anukchat.github.io/content/essentials/python/datatypes/006_Python_Sets.html" />
-    <link rel="shortcut icon" href="../../../../_static/mesh-smallest.png"/>
+    <link rel="icon" href="../../../../_static/mesh-smallest.png"/>
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
     <link rel="next" title="Python List Comprehension" href="Python_List_Comprehension.html" />
@@ -79,10 +74,9 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
   
   <div id="pst-scroll-pixel-helper"></div>
-
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
     <i class="fa-solid fa-arrow-up"></i>
@@ -123,11 +117,14 @@ const thebe_selector_output = ".output, .cell_output"
 </form></div>
   </div>
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -155,7 +152,18 @@ const thebe_selector_output = ".output, .cell_output"
     <p class="title logo__title">Anukool's almanac</p>
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Essentials</span></p>
 <ul class="current nav bd-sidenav">
@@ -220,13 +228,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../files/files_toc.html">Files</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../files/001_Python_File_Input_Output.html">Python File I/O</a></li>
-
-
-
-
-
-
+<li class="toctree-l3"><a class="reference internal" href="../files/001_Python_File_Input_Output.html">File I/O</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../files/002_Python_File_Directory.html">File directory</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../files/003_Python_File_Exception.html">File exception</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../files/004_Python_Exceptions_Handling.html">Exceptions handling</a></li>
@@ -540,10 +542,10 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#other-frozenset-methods">Other Frozenset methods</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-span-class-label-label-default-sets-span">💻 Exercises ➞ <span class="label label-default">Sets</span></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-span-class-label-label-default-level-1-span">Exercises ➞ <span class="label label-default">Level 1</span></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-span-class-label-label-default-level-2-span">Exercises ➞ <span class="label label-default">Level 2</span></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-span-class-label-label-default-level-3-span">Exercises ➞ <span class="label label-default">Level 3</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-sets">💻 Exercises ➞ <span class="label label-default">Sets</span></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-level-1">Exercises ➞ <span class="label label-default">Level 1</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-level-2">Exercises ➞ <span class="label label-default">Level 2</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-level-3">Exercises ➞ <span class="label label-default">Level 3</span></a></li>
 </ul>
 </li>
 </ul>
@@ -555,18 +557,18 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="python-sets">
-<h1>Python Sets<a class="headerlink" href="#python-sets" title="Permalink to this heading">#</a></h1>
+<h1>Python Sets<a class="headerlink" href="#python-sets" title="Link to this heading">#</a></h1>
 <p>In this class, you’ll learn everything about Python sets; how they are created, adding or removing elements from them, and all operations performed on sets in Python.</p>
 <section id="what-is-set-in-python">
-<h2>What is Set in Python?<a class="headerlink" href="#what-is-set-in-python" title="Permalink to this heading">#</a></h2>
+<h2>What is Set in Python?<a class="headerlink" href="#what-is-set-in-python" title="Link to this heading">#</a></h2>
 <p>A set is an <strong>unordered collection of items</strong>. Every set element is unique (no duplicates) and must be immutable (cannot be changed).</p>
 <p>However, a <strong>set itself is mutable. We can add or remove items from it</strong>.</p>
 <p>Sets can also be used to perform mathematical set operations like <strong>union</strong>, <strong>intersection</strong>, <strong>symmetric difference</strong>, etc.</p>
 <section id="summary">
-<h3>Summary<a class="headerlink" href="#summary" title="Permalink to this heading">#</a></h3>
+<h3>Summary<a class="headerlink" href="#summary" title="Link to this heading">#</a></h3>
 <table class="table">
 <thead>
 <tr class="row-odd"><th class="head text-center"><p>Data types</p></th>
@@ -600,13 +602,13 @@ document.write(`
 </section>
 </section>
 <section id="how-are-sets-better-than-other-datatypes">
-<h2>How Are Sets Better Than Other DataTypes?<a class="headerlink" href="#how-are-sets-better-than-other-datatypes" title="Permalink to this heading">#</a></h2>
+<h2>How Are Sets Better Than Other DataTypes?<a class="headerlink" href="#how-are-sets-better-than-other-datatypes" title="Link to this heading">#</a></h2>
 <p>Sets <strong>will not contain multiple occurrences of the same element</strong>, they are very useful in removing duplicate elements from a list or a tuple. Also, they are useful in computing mathematical notations such as union, intersection, etc.</p>
 </section>
 <section id="creating-python-sets">
-<h2>Creating Python Sets<a class="headerlink" href="#creating-python-sets" title="Permalink to this heading">#</a></h2>
+<h2>Creating Python Sets<a class="headerlink" href="#creating-python-sets" title="Link to this heading">#</a></h2>
 <p>A set is created by placing all the items (elements) inside curly braces <strong><code class="docutils literal notranslate"><span class="pre">{}</span></code></strong>, separated by comma, or by using the built-in <strong><code class="docutils literal notranslate"><span class="pre">set()</span></code></strong> function.</p>
-<p>It can have any number of items and they may be of different types (integer, float, tuple, string etc.). But a set cannot have mutable elements like <strong><a class="reference internal" href="003_Python_List.html"><span class="doc std std-doc">lists</span></a></strong>, sets or <strong><a class="reference internal" href="005_Python_Dictionary.html"><span class="doc std std-doc">dictionaries</span></a></strong> as its elements.</p>
+<p>It can have any number of items and they may be of different types (integer, float, tuple, string etc.). But a set cannot have mutable elements like <strong><a class="reference internal" href="003_Python_List.html"><span class="std std-doc">lists</span></a></strong>, sets or <strong><a class="reference internal" href="005_Python_Dictionary.html"><span class="std std-doc">dictionaries</span></a></strong> as its elements.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example 1: Different types of sets in Python</span>
@@ -672,7 +674,7 @@ document.write(`
 </div>
 </div>
 <section id="creating-an-empty-set-is-a-bit-tricky">
-<h3>Creating an empty set is a bit tricky.<a class="headerlink" href="#creating-an-empty-set-is-a-bit-tricky" title="Permalink to this heading">#</a></h3>
+<h3>Creating an empty set is a bit tricky.<a class="headerlink" href="#creating-an-empty-set-is-a-bit-tricky" title="Link to this heading">#</a></h3>
 <p>Empty curly braces <strong><code class="docutils literal notranslate"><span class="pre">{}</span></code></strong> will make an empty dictionary in Python. To make a set without any elements, we use the <strong><code class="docutils literal notranslate"><span class="pre">set()</span></code></strong> function without any argument.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -702,10 +704,10 @@ document.write(`
 </section>
 </section>
 <section id="modifying-a-set-in-python">
-<h2>Modifying a set in Python<a class="headerlink" href="#modifying-a-set-in-python" title="Permalink to this heading">#</a></h2>
+<h2>Modifying a set in Python<a class="headerlink" href="#modifying-a-set-in-python" title="Link to this heading">#</a></h2>
 <p>Sets are mutable. However, since they are unordered, indexing has no meaning.</p>
 <p>We cannot access or change an element of a set using indexing or slicing. Set data type does not support it.</p>
-<p>We can add a single element using the <strong><code class="docutils literal notranslate"><span class="pre">add()</span></code></strong> method, and multiple elements using the <strong><code class="docutils literal notranslate"><span class="pre">update()</span></code></strong> method. The <strong><code class="docutils literal notranslate"><span class="pre">update()</span></code></strong> method can take <strong><a class="reference internal" href="004_Python_Tuple.html"><span class="doc std std-doc">tuples</span></a></strong>, lists, <strong><a class="reference internal" href="002_Python_String.html"><span class="doc std std-doc">strings</span></a></strong> or other sets as its argument. In all cases, duplicates are avoided.</p>
+<p>We can add a single element using the <strong><code class="docutils literal notranslate"><span class="pre">add()</span></code></strong> method, and multiple elements using the <strong><code class="docutils literal notranslate"><span class="pre">update()</span></code></strong> method. The <strong><code class="docutils literal notranslate"><span class="pre">update()</span></code></strong> method can take <strong><a class="reference internal" href="004_Python_Tuple.html"><span class="std std-doc">tuples</span></a></strong>, lists, <strong><a class="reference internal" href="002_Python_String.html"><span class="std std-doc">strings</span></a></strong> or other sets as its argument. In all cases, duplicates are avoided.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example: </span>
@@ -743,7 +745,7 @@ document.write(`
 </div>
 </section>
 <section id="removing-elements-from-a-set">
-<h2>Removing elements from a set<a class="headerlink" href="#removing-elements-from-a-set" title="Permalink to this heading">#</a></h2>
+<h2>Removing elements from a set<a class="headerlink" href="#removing-elements-from-a-set" title="Link to this heading">#</a></h2>
 <p>A particular item can be removed from a set using the methods <strong><code class="docutils literal notranslate"><span class="pre">discard()</span></code></strong> and <strong><code class="docutils literal notranslate"><span class="pre">remove()</span></code></strong>.</p>
 <p>The only difference between the two is that the <strong><code class="docutils literal notranslate"><span class="pre">discard()</span></code></strong> function leaves a set unchanged if the element is not present in the set. On the other hand, the <strong><code class="docutils literal notranslate"><span class="pre">remove()</span></code></strong> function will raise an error in such a condition (if element is not present in the set).</p>
 <p>The following example will illustrate this.</p>
@@ -826,7 +828,7 @@ set()
 </div>
 </section>
 <section id="python-set-operations">
-<h2>Python Set Operations<a class="headerlink" href="#python-set-operations" title="Permalink to this heading">#</a></h2>
+<h2>Python Set Operations<a class="headerlink" href="#python-set-operations" title="Link to this heading">#</a></h2>
 <p>Sets can be used to carry out mathematical set operations like union, intersection, difference and symmetric difference. We can do this with operators or methods.</p>
 <p>Let us consider the following two sets for the following operations.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">A</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">}</span>
@@ -834,7 +836,7 @@ set()
 </pre></div>
 </div>
 <section id="set-union">
-<h3>Set Union<a class="headerlink" href="#set-union" title="Permalink to this heading">#</a></h3>
+<h3>Set Union<a class="headerlink" href="#set-union" title="Link to this heading">#</a></h3>
 <p>Union of <strong><code class="docutils literal notranslate"><span class="pre">A</span></code></strong> and <strong><code class="docutils literal notranslate"><span class="pre">B</span></code></strong> is a set of all elements from both sets.</p>
 <p>Union is performed using <strong><code class="docutils literal notranslate"><span class="pre">|</span></code></strong> operator. Same can be accomplished using the <strong><code class="docutils literal notranslate"><span class="pre">union()</span></code></strong> method.</p>
 <div class="cell docutils container">
@@ -879,7 +881,7 @@ set()
 </div>
 </section>
 <section id="set-intersection">
-<h3>Set Intersection<a class="headerlink" href="#set-intersection" title="Permalink to this heading">#</a></h3>
+<h3>Set Intersection<a class="headerlink" href="#set-intersection" title="Link to this heading">#</a></h3>
 <p>Intersection of <strong><code class="docutils literal notranslate"><span class="pre">A</span></code></strong> and <strong><code class="docutils literal notranslate"><span class="pre">B</span></code></strong> is a set of elements that are common in both the sets.</p>
 <p>Intersection is performed using <strong><code class="docutils literal notranslate"><span class="pre">&amp;</span></code></strong> operator. Same can be accomplished using the <strong><code class="docutils literal notranslate"><span class="pre">intersection()</span></code></strong> method.</p>
 <div class="cell docutils container">
@@ -922,7 +924,7 @@ set()
 </div>
 </section>
 <section id="set-difference">
-<h3>Set Difference<a class="headerlink" href="#set-difference" title="Permalink to this heading">#</a></h3>
+<h3>Set Difference<a class="headerlink" href="#set-difference" title="Link to this heading">#</a></h3>
 <p>Difference of the set <strong><code class="docutils literal notranslate"><span class="pre">B</span></code></strong> from set <strong><code class="docutils literal notranslate"><span class="pre">A</span></code></strong>, <strong><code class="docutils literal notranslate"><span class="pre">(A</span> <span class="pre">-</span> <span class="pre">B)</span></code></strong> is a set of elements that are only in A but not in <strong><code class="docutils literal notranslate"><span class="pre">B</span></code></strong>. Similarly, <strong><code class="docutils literal notranslate"><span class="pre">B</span> <span class="pre">-</span> <span class="pre">A</span></code></strong> is a set of elements in <strong><code class="docutils literal notranslate"><span class="pre">B</span></code></strong> but not in <strong><code class="docutils literal notranslate"><span class="pre">A</span></code></strong>.</p>
 <p>Difference is performed using <strong><code class="docutils literal notranslate"><span class="pre">-</span></code></strong> operator. Same can be accomplished using the <strong><code class="docutils literal notranslate"><span class="pre">difference()</span></code></strong> method.</p>
 <div class="cell docutils container">
@@ -967,7 +969,7 @@ set()
 </div>
 </section>
 <section id="set-symmetric-difference">
-<h3>Set Symmetric Difference<a class="headerlink" href="#set-symmetric-difference" title="Permalink to this heading">#</a></h3>
+<h3>Set Symmetric Difference<a class="headerlink" href="#set-symmetric-difference" title="Link to this heading">#</a></h3>
 <p>Symmetric Difference of <strong><code class="docutils literal notranslate"><span class="pre">A</span></code></strong> and <strong><code class="docutils literal notranslate"><span class="pre">B</span></code></strong> is a set of elements in <strong><code class="docutils literal notranslate"><span class="pre">A</span></code></strong> and <strong><code class="docutils literal notranslate"><span class="pre">B</span></code></strong> but not in both (excluding the intersection).</p>
 <p>Symmetric difference is performed using <strong><code class="docutils literal notranslate"><span class="pre">^</span></code></strong> operator. Same can be accomplished using the method <strong><code class="docutils literal notranslate"><span class="pre">symmetric_difference()</span></code></strong>.</p>
 <div class="cell docutils container">
@@ -1011,7 +1013,7 @@ set()
 </section>
 </section>
 <section id="built-in-functions-with-set">
-<h2>Built-in Functions with Set<a class="headerlink" href="#built-in-functions-with-set" title="Permalink to this heading">#</a></h2>
+<h2>Built-in Functions with Set<a class="headerlink" href="#built-in-functions-with-set" title="Link to this heading">#</a></h2>
 <p>Built-in functions like <strong><code class="docutils literal notranslate"><span class="pre">all()</span></code></strong>, <strong><code class="docutils literal notranslate"><span class="pre">any()</span></code></strong>, <strong><code class="docutils literal notranslate"><span class="pre">enumerate()</span></code></strong>, <strong><code class="docutils literal notranslate"><span class="pre">len()</span></code></strong>, <strong><code class="docutils literal notranslate"><span class="pre">max()</span></code></strong>, <strong><code class="docutils literal notranslate"><span class="pre">min()</span></code></strong>, <strong><code class="docutils literal notranslate"><span class="pre">sorted()</span></code></strong>, <strong><code class="docutils literal notranslate"><span class="pre">sum()</span></code></strong>, etc. are commonly used with sets to perform different tasks.</p>
 <table class="table">
 <thead>
@@ -1048,7 +1050,7 @@ set()
 </table>
 </section>
 <section id="other-python-set-methods">
-<h2>Other Python Set Methods<a class="headerlink" href="#other-python-set-methods" title="Permalink to this heading">#</a></h2>
+<h2>Other Python Set Methods<a class="headerlink" href="#other-python-set-methods" title="Link to this heading">#</a></h2>
 <p>There are many set methods, some of which we have already used above. Here is a list of all the methods that are available with the set objects:</p>
 <table class="table">
 <thead>
@@ -1130,9 +1132,9 @@ set()
 </table>
 </section>
 <section id="other-set-operations">
-<h2>Other Set Operations<a class="headerlink" href="#other-set-operations" title="Permalink to this heading">#</a></h2>
+<h2>Other Set Operations<a class="headerlink" href="#other-set-operations" title="Link to this heading">#</a></h2>
 <section id="set-membership-test">
-<h3>1. Set Membership Test<a class="headerlink" href="#set-membership-test" title="Permalink to this heading">#</a></h3>
+<h3>1. Set Membership Test<a class="headerlink" href="#set-membership-test" title="Link to this heading">#</a></h3>
 <p>We can test if an item exists in a set or not, using the <strong><code class="docutils literal notranslate"><span class="pre">in</span></code></strong> keyword.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1159,7 +1161,7 @@ False
 </div>
 </section>
 <section id="iterating-through-a-set">
-<h3>2. Iterating Through a Set<a class="headerlink" href="#iterating-through-a-set" title="Permalink to this heading">#</a></h3>
+<h3>2. Iterating Through a Set<a class="headerlink" href="#iterating-through-a-set" title="Link to this heading">#</a></h3>
 <p>We can iterate through each item in a set using a <strong><code class="docutils literal notranslate"><span class="pre">for</span></code></strong> loop.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1180,7 +1182,7 @@ l
 </section>
 </section>
 <section id="python-frozenset">
-<h2>Python Frozenset<a class="headerlink" href="#python-frozenset" title="Permalink to this heading">#</a></h2>
+<h2>Python Frozenset<a class="headerlink" href="#python-frozenset" title="Link to this heading">#</a></h2>
 <p>Frozenset is a new class that has the characteristics of a set, but its elements cannot be changed once assigned. While tuples are immutable lists, frozensets are immutable sets.</p>
 <p>Sets being mutable are unhashable, so they can’t be used as dictionary keys. On the other hand, frozensets are hashable and can be used as keys to a dictionary.</p>
 <p>Frozensets can be created using the <strong>frozenset()</strong> function.</p>
@@ -1256,7 +1258,7 @@ l
 </div>
 </div>
 <section id="frozenset-methods">
-<h3>Frozenset methods<a class="headerlink" href="#frozenset-methods" title="Permalink to this heading">#</a></h3>
+<h3>Frozenset methods<a class="headerlink" href="#frozenset-methods" title="Link to this heading">#</a></h3>
 <p>This data type supports methods like <strong><code class="docutils literal notranslate"><span class="pre">copy()</span></code></strong>, <strong><code class="docutils literal notranslate"><span class="pre">union()</span></code></strong>, <strong><code class="docutils literal notranslate"><span class="pre">intersection()</span></code></strong>, <strong><code class="docutils literal notranslate"><span class="pre">difference()</span></code></strong>, and <strong><code class="docutils literal notranslate"><span class="pre">symmetric_difference()</span></code></strong>. Being immutable, it does not have methods that add or remove elements.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1296,7 +1298,7 @@ frozenset({1, 2, 5, 6})
 </div>
 </section>
 <section id="other-frozenset-methods">
-<h3>Other Frozenset methods<a class="headerlink" href="#other-frozenset-methods" title="Permalink to this heading">#</a></h3>
+<h3>Other Frozenset methods<a class="headerlink" href="#other-frozenset-methods" title="Link to this heading">#</a></h3>
 <p>Similarly, other set methods like <strong><code class="docutils literal notranslate"><span class="pre">isdisjoint()</span></code></strong>, <strong><code class="docutils literal notranslate"><span class="pre">issubset()</span></code></strong>, and <strong><code class="docutils literal notranslate"><span class="pre">issuperset()</span></code></strong> are also available.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1328,16 +1330,16 @@ True
 </div>
 </section>
 </section>
-<section id="exercises-span-class-label-label-default-sets-span">
-<h2>💻 Exercises ➞ <span class='label label-default'>Sets</span><a class="headerlink" href="#exercises-span-class-label-label-default-sets-span" title="Permalink to this heading">#</a></h2>
+<section id="exercises-sets">
+<h2>💻 Exercises ➞ <span class='label label-default'>Sets</span><a class="headerlink" href="#exercises-sets" title="Link to this heading">#</a></h2>
 <div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="n">mix_fruits</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Guava&#39;</span><span class="p">,</span> <span class="s1">&#39;Pear&#39;</span><span class="p">,</span> <span class="s1">&#39;Mango&#39;</span><span class="p">,</span> <span class="s1">&#39;Apple&#39;</span><span class="p">,</span> <span class="s1">&#39;Fig&#39;</span><span class="p">,</span> <span class="s1">&#39;Orange&#39;</span><span class="p">,</span> <span class="s1">&#39;Banana&#39;</span><span class="p">}</span>
 <span class="n">A</span> <span class="o">=</span> <span class="p">{</span><span class="mi">19</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">26</span><span class="p">}</span>
 <span class="n">B</span> <span class="o">=</span> <span class="p">{</span><span class="mi">19</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">26</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">27</span><span class="p">}</span>
 <span class="n">num</span> <span class="o">=</span> <span class="p">[</span><span class="mi">22</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">26</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">24</span><span class="p">]</span>
 </pre></div>
 </div>
-<section id="exercises-span-class-label-label-default-level-1-span">
-<h3>Exercises ➞ <span class='label label-default'>Level 1</span><a class="headerlink" href="#exercises-span-class-label-label-default-level-1-span" title="Permalink to this heading">#</a></h3>
+<section id="exercises-level-1">
+<h3>Exercises ➞ <span class='label label-default'>Level 1</span><a class="headerlink" href="#exercises-level-1" title="Link to this heading">#</a></h3>
 <ol class="arabic simple">
 <li><p>Find the length of the set <strong><code class="docutils literal notranslate"><span class="pre">mix_fruits</span></code></strong></p></li>
 <li><p>Add <strong><code class="docutils literal notranslate"><span class="pre">'Kiwi'</span></code></strong> to <strong><code class="docutils literal notranslate"><span class="pre">mix_fruits</span></code></strong></p></li>
@@ -1346,8 +1348,8 @@ True
 <li><p>What is the difference between <strong>remove</strong> and <strong>discard</strong></p></li>
 </ol>
 </section>
-<section id="exercises-span-class-label-label-default-level-2-span">
-<h3>Exercises ➞ <span class='label label-default'>Level 2</span><a class="headerlink" href="#exercises-span-class-label-label-default-level-2-span" title="Permalink to this heading">#</a></h3>
+<section id="exercises-level-2">
+<h3>Exercises ➞ <span class='label label-default'>Level 2</span><a class="headerlink" href="#exercises-level-2" title="Link to this heading">#</a></h3>
 <p>Use Imaginary values for Set <strong><code class="docutils literal notranslate"><span class="pre">A</span></code></strong> and <strong><code class="docutils literal notranslate"><span class="pre">B</span></code></strong></p>
 <ol class="arabic simple">
 <li><p>Join <strong><code class="docutils literal notranslate"><span class="pre">A</span></code></strong> and <strong><code class="docutils literal notranslate"><span class="pre">B</span></code></strong></p></li>
@@ -1359,8 +1361,8 @@ True
 <li><p>Delete the sets completely</p></li>
 </ol>
 </section>
-<section id="exercises-span-class-label-label-default-level-3-span">
-<h3>Exercises ➞ <span class='label label-default'>Level 3</span><a class="headerlink" href="#exercises-span-class-label-label-default-level-3-span" title="Permalink to this heading">#</a></h3>
+<section id="exercises-level-3">
+<h3>Exercises ➞ <span class='label label-default'>Level 3</span><a class="headerlink" href="#exercises-level-3" title="Link to this heading">#</a></h3>
 <ol class="arabic simple">
 <li><p>Convert the <strong><code class="docutils literal notranslate"><span class="pre">num</span></code></strong> to a set and compare the length of the list and the set, which one is bigger?</p></li>
 <li><p>Explain the difference between the following data types: <strong>string</strong>, <strong>list</strong>, <strong>tuple</strong> and <strong>set</strong></p></li>
@@ -1427,6 +1429,7 @@ True
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
+
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> Contents
@@ -1463,10 +1466,10 @@ True
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#other-frozenset-methods">Other Frozenset methods</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-span-class-label-label-default-sets-span">💻 Exercises ➞ <span class="label label-default">Sets</span></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-span-class-label-label-default-level-1-span">Exercises ➞ <span class="label label-default">Level 1</span></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-span-class-label-label-default-level-2-span">Exercises ➞ <span class="label label-default">Level 2</span></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-span-class-label-label-default-level-3-span">Exercises ➞ <span class="label label-default">Level 3</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-sets">💻 Exercises ➞ <span class="label label-default">Sets</span></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-level-1">Exercises ➞ <span class="label label-default">Level 1</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-level-2">Exercises ➞ <span class="label label-default">Level 2</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-level-3">Exercises ➞ <span class="label label-default">Level 3</span></a></li>
 </ul>
 </li>
 </ul>
@@ -1517,8 +1520,8 @@ By Anukool Chaturvedi
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
-<script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+  <script src="../../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
   <footer class="bd-footer">
   </footer>

@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" >
+<html lang="en" data-content_root="../../../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Python Pandas &#8212; Anukool&#39;s almanac</title>
   
@@ -19,53 +18,49 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="../../../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link href="../../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
   
-  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
-<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
-  <script src="../../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-    <script src="../../../_static/jquery.js"></script>
-    <script src="../../../_static/underscore.js"></script>
-    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../../../_static/doctools.js"></script>
-    <script src="../../../_static/clipboard.min.js"></script>
-    <script src="../../../_static/copybutton.js"></script>
-    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../../_static/togglebutton.js"></script>
+    <script src="../../../_static/togglebutton.js?v=4a39c7ea"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script src="../../../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'content/tools/pandas/001_Python_Pandas_DataFrame';</script>
     <link rel="canonical" href="https://anukchat.github.io/content/tools/pandas/001_Python_Pandas_DataFrame.html" />
-    <link rel="shortcut icon" href="../../../_static/mesh-smallest.png"/>
+    <link rel="icon" href="../../../_static/mesh-smallest.png"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="Create Pandas DataFrame from Python Dictionary" href="001_Python_Pandas_Methods/001_Python_Pandas_DataFrame_from_Dictionary.html" />
@@ -79,10 +74,9 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
   
   <div id="pst-scroll-pixel-helper"></div>
-
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
     <i class="fa-solid fa-arrow-up"></i>
@@ -123,11 +117,14 @@ const thebe_selector_output = ".output, .cell_output"
 </form></div>
   </div>
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -155,7 +152,18 @@ const thebe_selector_output = ".output, .cell_output"
     <p class="title logo__title">Anukool's almanac</p>
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Essentials</span></p>
 <ul class="nav bd-sidenav">
@@ -220,13 +228,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../essentials/python/files/files_toc.html">Files</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../essentials/python/files/001_Python_File_Input_Output.html">Python File I/O</a></li>
-
-
-
-
-
-
+<li class="toctree-l3"><a class="reference internal" href="../../essentials/python/files/001_Python_File_Input_Output.html">File I/O</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../essentials/python/files/002_Python_File_Directory.html">File directory</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../essentials/python/files/003_Python_File_Exception.html">File exception</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../essentials/python/files/004_Python_Exceptions_Handling.html">Exceptions handling</a></li>
@@ -578,10 +580,10 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="python-pandas">
-<h1>Python Pandas<a class="headerlink" href="#python-pandas" title="Permalink to this heading">#</a></h1>
+<h1>Python Pandas<a class="headerlink" href="#python-pandas" title="Link to this heading">#</a></h1>
 <p><strong><a class="reference external" href="https://pandas.pydata.org/">Pandas</a></strong> is an open-source, BSD-licensed Python library. Python package providing fast, flexible, handy, and expressive data structures tool designed to make working with ‘relationa’ or ‘labeled’ data both easy and intuitive. It aims to be the fundamental high-level building block for doing practical, real world complex data analysis in Python.</p>
 <p>pandas is well suited for many different kinds of data:</p>
 <ul class="simple">
@@ -591,29 +593,29 @@ document.write(`
 <li><p>Any other form of observational / statistical data sets.</p></li>
 </ul>
 <section id="python-dataframe">
-<h2>Python DataFrame<a class="headerlink" href="#python-dataframe" title="Permalink to this heading">#</a></h2>
+<h2>Python DataFrame<a class="headerlink" href="#python-dataframe" title="Link to this heading">#</a></h2>
 <p>In this lesson, you will learn pandas DataFrame. It covers the basics of DataFrame, its attributes, functions, and how to use DataFrame for Data Analysis.</p>
 <p>DataFrame is the most widely used data structure in Python pandas. You can imagine it as a table in a database or a spreadsheet.</p>
 <p>Imagine you have an automobile showroom, and you want to analyze cars’ data to make business strategies. For example, you need to check how many vehicles you have in your showroom of type sedan, or the cars that give good mileage. For such analysis pandas DataFrame is used.</p>
 </section>
 <section id="what-is-dataframe-in-pandas">
-<h2>What is DataFrame in Pandas<a class="headerlink" href="#what-is-dataframe-in-pandas" title="Permalink to this heading">#</a></h2>
+<h2>What is DataFrame in Pandas<a class="headerlink" href="#what-is-dataframe-in-pandas" title="Link to this heading">#</a></h2>
 <p>Dataframe is a tabular(rows, columns) representation of data. It is a two-dimensional data structure with potentially heterogeneous data.</p>
 <p>Dataframe is a size-mutable structure that means data can be added or deleted from it, unlike data series, which does not allow operations that change its size.</p>
 <div>
 <img src="img/dataframe.png" width="600"/>
 </div></section>
 <section id="dataframe-creation">
-<h2>DataFrame creation<a class="headerlink" href="#dataframe-creation" title="Permalink to this heading">#</a></h2>
+<h2>DataFrame creation<a class="headerlink" href="#dataframe-creation" title="Link to this heading">#</a></h2>
 <p>Data is available in various forms and types like CSV, SQL table, JSON, or Python structures like list, dict etc. We need to convert all such different data formats into a DataFrame so that we can use pandas libraries to analyze such data efficiently.</p>
 <p>To create DataFrame, we can use either the DataFrame constructor or pandas built-in functions. Below are some examples.</p>
 <section id="dataframe-constructor">
-<h3>DataFrame constructor<a class="headerlink" href="#dataframe-constructor" title="Permalink to this heading">#</a></h3>
+<h3>DataFrame constructor<a class="headerlink" href="#dataframe-constructor" title="Link to this heading">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pandas</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">copy</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
 </div>
 <section id="parameters">
-<h4>Parameters:<a class="headerlink" href="#parameters" title="Permalink to this heading">#</a></h4>
+<h4>Parameters:<a class="headerlink" href="#parameters" title="Link to this heading">#</a></h4>
 <ul class="simple">
 <li><p><strong><code class="docutils literal notranslate"><span class="pre">data</span></code></strong>: It takes input <strong><code class="docutils literal notranslate"><span class="pre">dict</span></code></strong>, <strong><code class="docutils literal notranslate"><span class="pre">list</span></code></strong>, <strong><code class="docutils literal notranslate"><span class="pre">set</span></code></strong>, <strong><code class="docutils literal notranslate"><span class="pre">ndarray</span></code></strong>, <strong><code class="docutils literal notranslate"><span class="pre">iterable</span></code></strong>, or DataFrame. If the input is not provided, then it creates an empty DataFrame. The resultant column order follows the insertion order.</p></li>
 <li><p><strong><code class="docutils literal notranslate"><span class="pre">index</span></code></strong>: (Optional) It takes the list of row index for the DataFrame. The default value is a range of integers 0, 1,…n.</p></li>
@@ -623,15 +625,15 @@ document.write(`
 </ul>
 <p>Refer the following articles for more details:</p>
 <ul class="simple">
-<li><p><strong><a class="reference internal" href="001_Python_Pandas_Methods/001_Python_Pandas_DataFrame_from_Dictionary.html"><span class="doc std std-doc">Create pandas DataFrame from Python Dictionary</span></a></strong></p></li>
-<li><p><strong><a class="reference internal" href="001_Python_Pandas_Methods/002_Python_Pandas_DataFrame_from_List.html"><span class="doc std std-doc">Create pandas DataFrame from Python List</span></a></strong></p></li>
+<li><p><strong><a class="reference internal" href="001_Python_Pandas_Methods/001_Python_Pandas_DataFrame_from_Dictionary.html"><span class="std std-doc">Create pandas DataFrame from Python Dictionary</span></a></strong></p></li>
+<li><p><strong><a class="reference internal" href="001_Python_Pandas_Methods/002_Python_Pandas_DataFrame_from_List.html"><span class="std std-doc">Create pandas DataFrame from Python List</span></a></strong></p></li>
 </ul>
 </section>
 </section>
 <section id="dataframe-from-dict">
-<h3>Dataframe from dict<a class="headerlink" href="#dataframe-from-dict" title="Permalink to this heading">#</a></h3>
+<h3>Dataframe from dict<a class="headerlink" href="#dataframe-from-dict" title="Link to this heading">#</a></h3>
 <p>When we have data in <strong><code class="docutils literal notranslate"><span class="pre">dict</span></code></strong> or any default data structures in Python, we can convert it into DataFrame using the DataFrame constructor.</p>
-<p>To construct a DataFrame from a <strong><code class="docutils literal notranslate"><span class="pre">dict</span></code></strong> object, we can pass it to the DataFrame constructor <strong><code class="docutils literal notranslate"><span class="pre">pd.DataFrame(dict)</span></code></strong>. It creates DataFrame using, where <strong><code class="docutils literal notranslate"><span class="pre">dict</span></code></strong> keys will be column labels, and <strong><code class="docutils literal notranslate"><span class="pre">dict</span></code></strong> values will be the columns’ data. We can also use <strong><code class="docutils literal notranslate"><span class="pre">DataFrame.from_dict()</span></code></strong> function to <strong><a class="reference internal" href="001_Python_Pandas_Methods/001_Python_Pandas_DataFrame_from_Dictionary.html"><span class="doc std std-doc">Create DataFrame from dict</span></a></strong>.</p>
+<p>To construct a DataFrame from a <strong><code class="docutils literal notranslate"><span class="pre">dict</span></code></strong> object, we can pass it to the DataFrame constructor <strong><code class="docutils literal notranslate"><span class="pre">pd.DataFrame(dict)</span></code></strong>. It creates DataFrame using, where <strong><code class="docutils literal notranslate"><span class="pre">dict</span></code></strong> keys will be column labels, and <strong><code class="docutils literal notranslate"><span class="pre">dict</span></code></strong> values will be the columns’ data. We can also use <strong><code class="docutils literal notranslate"><span class="pre">DataFrame.from_dict()</span></code></strong> function to <strong><a class="reference internal" href="001_Python_Pandas_Methods/001_Python_Pandas_DataFrame_from_Dictionary.html"><span class="std std-doc">Create DataFrame from dict</span></a></strong>.</p>
 <p><strong>Key and Imports:</strong></p>
 <table class="table">
 <thead>
@@ -772,7 +774,7 @@ document.write(`
 </div>
 </section>
 <section id="indexing">
-<h3>Indexing<a class="headerlink" href="#indexing" title="Permalink to this heading">#</a></h3>
+<h3>Indexing<a class="headerlink" href="#indexing" title="Link to this heading">#</a></h3>
 <p>Our first improvement over numpy arrays is labeled indexing. We can select subsets by column, row, or both. Column selection uses the regular python <strong><code class="docutils literal notranslate"><span class="pre">__getitem__</span></code></strong> machinery. Pass in a single column label <strong><code class="docutils literal notranslate"><span class="pre">'A'</span></code></strong> or a list of labels <strong><code class="docutils literal notranslate"><span class="pre">['A',</span> <span class="pre">'C']</span></code></strong> to select subsets of the original <strong><code class="docutils literal notranslate"><span class="pre">DataFrame</span></code></strong>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1092,7 +1094,7 @@ Name: A, dtype: int64
 </div></div></div>
 </div>
 <section id="summary">
-<h4>Summary<a class="headerlink" href="#summary" title="Permalink to this heading">#</a></h4>
+<h4>Summary<a class="headerlink" href="#summary" title="Link to this heading">#</a></h4>
 <ul class="simple">
 <li><p>Use <strong><code class="docutils literal notranslate"><span class="pre">[]</span></code></strong> for selecting columns</p></li>
 <li><p>Use <strong><code class="docutils literal notranslate"><span class="pre">.loc[row_lables,</span> <span class="pre">column_labels]</span></code></strong> for label-based indexing</p></li>
@@ -1103,7 +1105,7 @@ Name: A, dtype: int64
 </section>
 </section>
 <section id="series">
-<h2>Series<a class="headerlink" href="#series" title="Permalink to this heading">#</a></h2>
+<h2>Series<a class="headerlink" href="#series" title="Link to this heading">#</a></h2>
 <p>You’ve already seen some <strong>Series</strong> up above. It’s the 1-dimensional analog of the DataFrame. Each column in a <strong>DataFrame</strong> is in some sense a <strong>Series</strong>. You can select a <strong>Series</strong> from a DataFrame in a few ways:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1277,7 +1279,7 @@ dtype: int64
 <p><strong>Series</strong> share many of the same methods as <strong>DataFrame</strong>s.</p>
 </section>
 <section id="index">
-<h2>Index<a class="headerlink" href="#index" title="Permalink to this heading">#</a></h2>
+<h2>Index<a class="headerlink" href="#index" title="Link to this heading">#</a></h2>
 <p><strong><code class="docutils literal notranslate"><span class="pre">Index</span></code></strong> are something of a peculiarity to pandas.
 First off, they are not the kind of indexes you’ll find in SQL, which are used to help the engine speed up certain queries.
 In pandas, <strong><code class="docutils literal notranslate"><span class="pre">Index</span></code></strong> are about lables. This helps with selection (like we did above) and automatic alignment when performing operations between two <strong>DataFrames</strong> or <strong>Series</strong>.</p>
@@ -1331,11 +1333,11 @@ In pandas, <strong><code class="docutils literal notranslate"><span class="pre">
 </li>
 </ul>
 <section id="dataframe-from-csv">
-<h3>Dataframe from CSV<a class="headerlink" href="#dataframe-from-csv" title="Permalink to this heading">#</a></h3>
+<h3>Dataframe from CSV<a class="headerlink" href="#dataframe-from-csv" title="Link to this heading">#</a></h3>
 <p>In the field of Data Science, <strong><a class="reference external" href="https://en.wikipedia.org/wiki/Comma-separated_values">CSV</a></strong> files are used to store large datasets. To efficiently analyze such datasets, we need to convert them into pandas DataFrame.</p>
 <p>To create a DataFrame from CSV, we use the <strong><code class="docutils literal notranslate"><span class="pre">read_csv('file_name')</span></code></strong> function that takes the file name as input and returns DataFrame as output.</p>
 <p><strong>Example 1:</strong></p>
-<p>Let’s see how to read the <span class="xref myst"><strong>stockprice_data.csv</strong></span> file into the DataFrame and then convert it into Pandas Series</p>
+<p>Let’s see how to read the <a class="reference internal" href="#/content/tools/pandas/stockprice_data.csv%3E"><span class="xref myst"><strong>stockprice_data.csv</strong></span></a> file into the DataFrame and then convert it into Pandas Series</p>
 <div>
 <img src="img/csvfile1.png" width="300" />
 </div><div class="cell docutils container">
@@ -1490,7 +1492,7 @@ Name: Return, dtype: float64
 </div>
 </div>
 <p><strong>Example 2:</strong></p>
-<p>Let’s see how to read the <strong><span class="xref myst">automobile_data.csv</span></strong> file into the DataFrame.</p>
+<p>Let’s see how to read the <strong><a class="reference download internal" download="" href="../../../_downloads/5fc2bc7e34833a212863965952ee6665/automobile_data.csv"><span class="xref download myst">automobile_data.csv</span></a></strong> file into the DataFrame.</p>
 <div>
 <img src="img/csvfile.png" width="500"/>
 </div><div class="cell docutils container">
@@ -1535,10 +1537,10 @@ Name: Return, dtype: float64
 </section>
 </section>
 <section id="dataframe-options">
-<h2>DataFrame Options<a class="headerlink" href="#dataframe-options" title="Permalink to this heading">#</a></h2>
+<h2>DataFrame Options<a class="headerlink" href="#dataframe-options" title="Link to this heading">#</a></h2>
 <p>When DataFrame is vast, and we can not display the whole data while printing. In that case, we need to change how DataFrame gets display on the console using the <strong><code class="docutils literal notranslate"><span class="pre">print()</span></code></strong> function. For that, pandas have provided many options and functions to customize the presentation of the DataFrame.</p>
 <section id="to-customize-the-display-of-dataframe-while-printing">
-<h3>To customize the display of DataFrame while printing<a class="headerlink" href="#to-customize-the-display-of-dataframe-while-printing" title="Permalink to this heading">#</a></h3>
+<h3>To customize the display of DataFrame while printing<a class="headerlink" href="#to-customize-the-display-of-dataframe-while-printing" title="Link to this heading">#</a></h3>
 <p>When we display the DataFrame using <strong><code class="docutils literal notranslate"><span class="pre">print()</span></code></strong> function by default, it displays 10 rows (top 5 and bottom 5). Sometimes we may need to show more or lesser rows than the default view of the DataFrame.</p>
 <p>We can change the setting by using <strong><code class="docutils literal notranslate"><span class="pre">pd.options</span></code></strong> or <strong><code class="docutils literal notranslate"><span class="pre">pd.set_option()</span></code></strong> functions. Both can be used interchangeably.</p>
 <p>The below example will show a maximum of 20 and a minimum of 5 rows while printing DataFrame.</p>
@@ -1580,7 +1582,7 @@ Name: Return, dtype: float64
 </section>
 </section>
 <section id="dataframe-metadata">
-<h2>DataFrame metadata<a class="headerlink" href="#dataframe-metadata" title="Permalink to this heading">#</a></h2>
+<h2>DataFrame metadata<a class="headerlink" href="#dataframe-metadata" title="Link to this heading">#</a></h2>
 <p>Sometimes we need to get metadata of the DataFrame and not the content inside it. Such metadata information is useful to understand the DataFrame as it gives more details about the DataFrame that we need to process.</p>
 <p>In this section, we cover the functions which provide such information of the DataFrame.</p>
 <p>Let’s take an example of student DataFrame which contains <strong>‘Name’</strong>, <strong>‘Age’</strong> and <strong>‘Marks’</strong> of students as shown below:</p>
@@ -1591,7 +1593,7 @@ Name: Return, dtype: float64
 </pre></div>
 </div>
 <section id="metadata-info-of-dataframe">
-<h3>Metadata info of DataFrame<a class="headerlink" href="#metadata-info-of-dataframe" title="Permalink to this heading">#</a></h3>
+<h3>Metadata info of DataFrame<a class="headerlink" href="#metadata-info-of-dataframe" title="Link to this heading">#</a></h3>
 <p><strong><code class="docutils literal notranslate"><span class="pre">DataFrame.info()</span></code></strong> is a function of DataFrame that gives metadata of DataFrame. Which includes,</p>
 <ul class="simple">
 <li><p>Number of rows and its range of index</p></li>
@@ -1628,7 +1630,7 @@ memory usage: 176.0+ bytes
 </div>
 </section>
 <section id="get-the-statistics-of-dataframe">
-<h3>Get the statistics of DataFrame<a class="headerlink" href="#get-the-statistics-of-dataframe" title="Permalink to this heading">#</a></h3>
+<h3>Get the statistics of DataFrame<a class="headerlink" href="#get-the-statistics-of-dataframe" title="Link to this heading">#</a></h3>
 <p><strong><code class="docutils literal notranslate"><span class="pre">DataFrame.describe()</span></code></strong> is a function that gives mathematical statistics of the data in DataFrame. But, it applies to the columns that contain numeric values.</p>
 <p>In our example of student DataFrame, it gives descriptive statistics of <strong>‘Age’</strong> and <strong>‘Marks’</strong> columns only, that includes:</p>
 <ol class="arabic simple">
@@ -1724,7 +1726,7 @@ memory usage: 176.0+ bytes
 </section>
 </section>
 <section id="dataframe-attributes">
-<h2>DataFrame Attributes<a class="headerlink" href="#dataframe-attributes" title="Permalink to this heading">#</a></h2>
+<h2>DataFrame Attributes<a class="headerlink" href="#dataframe-attributes" title="Link to this heading">#</a></h2>
 <p>DataFrame has provided many built-in attributes. Attributes do not modify the underlying data, unlike functions, but it is used to get more details about the DataFrame.</p>
 <p>Following are majorly used attributes of the DataFrame:</p>
 <table class="table">
@@ -1807,7 +1809,7 @@ DataFrame Values :  [[&#39;Joe&#39; 20 85.1]
 </div>
 </section>
 <section id="dataframe-selection">
-<h2>DataFrame selection<a class="headerlink" href="#dataframe-selection" title="Permalink to this heading">#</a></h2>
+<h2>DataFrame selection<a class="headerlink" href="#dataframe-selection" title="Link to this heading">#</a></h2>
 <p>While dealing with the vast data in DataFrame, a data analyst always needs to select a particular row or column for the analysis. In such cases, functions that can choose a set of rows or columns like top rows, bottom rows, or data within an index range play a significant role.</p>
 <p>Following are the functions that help in selecting the subset of the DataFrame:</p>
 <table class="table">
@@ -1907,11 +1909,11 @@ Name: Name, dtype: object
 </div>
 </section>
 <section id="dataframe-modification">
-<h2>DataFrame modification<a class="headerlink" href="#dataframe-modification" title="Permalink to this heading">#</a></h2>
-<p>DataFrame is similar to any excel sheet or a database table where we need to insert new data or <strong><span class="xref myst">drop columns</span></strong> and rows if not required. Such data manipulation operations are very common on a DataFrame.</p>
+<h2>DataFrame modification<a class="headerlink" href="#dataframe-modification" title="Link to this heading">#</a></h2>
+<p>DataFrame is similar to any excel sheet or a database table where we need to insert new data or <strong><a class="reference internal" href="#"><span class="xref myst">drop columns</span></a></strong> and rows if not required. Such data manipulation operations are very common on a DataFrame.</p>
 <p>In this section, we discuss the data manipulation functions of the DataFrame.</p>
 <section id="insert-columns">
-<h3>Insert columns<a class="headerlink" href="#insert-columns" title="Permalink to this heading">#</a></h3>
+<h3>Insert columns<a class="headerlink" href="#insert-columns" title="Link to this heading">#</a></h3>
 <p>Sometimes it is required to add a new column in the DataFrame. <strong><code class="docutils literal notranslate"><span class="pre">DataFrame.insert()</span></code></strong> function is used to insert a new column in DataFrame at the specified position.</p>
 <p>In the below example, we insert a new column <strong>‘Class’</strong> as a third new column in the DataFrame with default value ‘<strong>A</strong>’ using the syntax:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="n">loc</span> <span class="o">=</span> <span class="n">col_position</span><span class="p">,</span> <span class="n">column</span> <span class="o">=</span> <span class="n">new_col_name</span><span class="p">,</span> <span class="n">value</span> <span class="o">=</span> <span class="n">default_value</span><span class="p">)</span>
@@ -1949,12 +1951,12 @@ Name: Name, dtype: object
 </div>
 </section>
 <section id="drop-columns">
-<h3>Drop columns<a class="headerlink" href="#drop-columns" title="Permalink to this heading">#</a></h3>
-<p>DataFrame may contain redundant data, in such cases, we may need to delete such data that is not required. <strong><code class="docutils literal notranslate"><span class="pre">DataFrame.drop()</span></code></strong> function is used to <strong><a class="reference internal" href="001_Python_Pandas_Methods/004_Python_Pandas_DataFrame_drop_columns.html"><span class="doc std std-doc">delete the columns from DataFrame</span></a></strong>.</p>
+<h3>Drop columns<a class="headerlink" href="#drop-columns" title="Link to this heading">#</a></h3>
+<p>DataFrame may contain redundant data, in such cases, we may need to delete such data that is not required. <strong><code class="docutils literal notranslate"><span class="pre">DataFrame.drop()</span></code></strong> function is used to <strong><a class="reference internal" href="001_Python_Pandas_Methods/004_Python_Pandas_DataFrame_drop_columns.html"><span class="std std-doc">delete the columns from DataFrame</span></a></strong>.</p>
 <p>Refer to the following articles to get more details</p>
 <ul class="simple">
-<li><p><strong><a class="reference internal" href="001_Python_Pandas_Methods/005_Python_Pandas_DataFrame_drop_duplicates.html"><span class="doc std std-doc">Drop duplicates</span></a></strong></p></li>
-<li><p><strong><a class="reference internal" href="001_Python_Pandas_Methods/006_Python_Pandas_DataFrame_drop_columns_with_NA.html"><span class="doc std std-doc">Drop columns with NA</span></a></strong></p></li>
+<li><p><strong><a class="reference internal" href="001_Python_Pandas_Methods/005_Python_Pandas_DataFrame_drop_duplicates.html"><span class="std std-doc">Drop duplicates</span></a></strong></p></li>
+<li><p><strong><a class="reference internal" href="001_Python_Pandas_Methods/006_Python_Pandas_DataFrame_drop_columns_with_NA.html"><span class="std std-doc">Drop columns with NA</span></a></strong></p></li>
 </ul>
 <p>In the below example, we delete the “<strong>Age</strong>” column from the student DataFrame using <strong><code class="docutils literal notranslate"><span class="pre">df.drop(columns=[col1,col2...])</span></code></strong>.</p>
 <div class="cell docutils container">
@@ -1988,7 +1990,7 @@ Name: Name, dtype: object
 </div>
 </section>
 <section id="apply-condition">
-<h3>Apply condition<a class="headerlink" href="#apply-condition" title="Permalink to this heading">#</a></h3>
+<h3>Apply condition<a class="headerlink" href="#apply-condition" title="Link to this heading">#</a></h3>
 <p>We may need to update the value in the DataFrame based on some condition. **<code class="docutils literal notranslate"><span class="pre">DataFrame.where()</span> </code>**function is used to replace the value of DataFrame, where the condition is <strong><code class="docutils literal notranslate"><span class="pre">False</span></code></strong>.</p>
 <p><strong>Syntax:</strong></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">where</span><span class="p">(</span><span class="nb">filter</span><span class="p">,</span> <span class="n">other</span><span class="o">=</span><span class="n">new_value</span><span class="p">)</span>
@@ -2034,7 +2036,7 @@ Name: Name, dtype: object
 </section>
 </section>
 <section id="dataframe-filter-columns">
-<h2>DataFrame filter columns<a class="headerlink" href="#dataframe-filter-columns" title="Permalink to this heading">#</a></h2>
+<h2>DataFrame filter columns<a class="headerlink" href="#dataframe-filter-columns" title="Link to this heading">#</a></h2>
 <p>Datasets contain massive data that need to be analyzed. But, sometimes, we may want to analyze relevant data and filter out all the other data. In such a case, we can use <strong><code class="docutils literal notranslate"><span class="pre">DataFrame.filter()</span> </code></strong> function to fetch only required data from DataFrame.</p>
 <p>It returns the subset of the DataFrame by applying conditions on each row index or column label as specified using the below syntax.</p>
 <p><strong>Syntax:</strong></p>
@@ -2081,8 +2083,8 @@ Name: Name, dtype: object
 </div>
 </section>
 <section id="dataframe-rename-columns">
-<h2>DataFrame rename columns<a class="headerlink" href="#dataframe-rename-columns" title="Permalink to this heading">#</a></h2>
-<p>While working with DataFrame, we may need to <strong><a class="reference internal" href="001_Python_Pandas_Methods/007_Python_Pandas_DataFrame_rename_columns.html"><span class="doc std std-doc">rename the column</span></a></strong> or row index. We can use <strong><code class="docutils literal notranslate"><span class="pre">DataFrame.rename()</span></code></strong> function to alter the row or column labels.</p>
+<h2>DataFrame rename columns<a class="headerlink" href="#dataframe-rename-columns" title="Link to this heading">#</a></h2>
+<p>While working with DataFrame, we may need to <strong><a class="reference internal" href="001_Python_Pandas_Methods/007_Python_Pandas_DataFrame_rename_columns.html"><span class="std std-doc">rename the column</span></a></strong> or row index. We can use <strong><code class="docutils literal notranslate"><span class="pre">DataFrame.rename()</span></code></strong> function to alter the row or column labels.</p>
 <p>We need to pass a dictionary of key-value pairs as input to the function. Where key of the <strong><code class="docutils literal notranslate"><span class="pre">dict</span></code></strong> is the existing column label, and the value of <strong><code class="docutils literal notranslate"><span class="pre">dict</span></code></strong> is the new column label.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;old&#39;</span><span class="p">:</span><span class="s1">&#39;new&#39;</span><span class="p">})</span>
 </pre></div>
@@ -2120,7 +2122,7 @@ Name: Name, dtype: object
 </div>
 </section>
 <section id="dataframe-join">
-<h2>DataFrame Join<a class="headerlink" href="#dataframe-join" title="Permalink to this heading">#</a></h2>
+<h2>DataFrame Join<a class="headerlink" href="#dataframe-join" title="Link to this heading">#</a></h2>
 <p>In most of the use cases of Data Analytics, data gathered from multiple sources, and we need to combine that data for further analysis. In such instances, join and merge operations are required.</p>
 <p><strong><code class="docutils literal notranslate"><span class="pre">DataFrame.join()</span></code></strong> function is used to join one DataFrame with another DataFrame as <strong><code class="docutils literal notranslate"><span class="pre">df1.join(df2)</span></code></strong></p>
 <p>In the below example, we joined two different DataFrames to create a new resultant DataFrame.</p>
@@ -2160,7 +2162,7 @@ Name: Name, dtype: object
 </div>
 </section>
 <section id="dataframe-groupby">
-<h2>DataFrame GroupBy<a class="headerlink" href="#dataframe-groupby" title="Permalink to this heading">#</a></h2>
+<h2>DataFrame GroupBy<a class="headerlink" href="#dataframe-groupby" title="Link to this heading">#</a></h2>
 <p><strong><code class="docutils literal notranslate"><span class="pre">GroupBy</span></code></strong> operation means splitting the data and then combining them based on some condition. Large data can be divided into logical groups to analyze it.</p>
 <p><strong><code class="docutils literal notranslate"><span class="pre">DataFrame.groupby()</span></code></strong> function groups the DataFrame row-wise or column-wise based on the condition.</p>
 <p>If we want to analyze each class’s average marks, we need to combine the student data based on the ‘Class’ column and calculate its average using <strong><code class="docutils literal notranslate"><span class="pre">df.groupby(col_label).mean()</span></code></strong> as shown in the below example.</p>
@@ -2194,7 +2196,7 @@ B      77.80
 </div>
 </section>
 <section id="dataframe-iteration">
-<h2>DataFrame Iteration<a class="headerlink" href="#dataframe-iteration" title="Permalink to this heading">#</a></h2>
+<h2>DataFrame Iteration<a class="headerlink" href="#dataframe-iteration" title="Link to this heading">#</a></h2>
 <p>DataFrame iteration means visiting each element in the DataFrame one by one. While analyzing a DataFrame, we may need to iterate over each row of the DataFrame.</p>
 <p>There are multiple ways to iterate a DataFrame. We will see the function <strong><code class="docutils literal notranslate"><span class="pre">DataFrame.iterrows()</span></code></strong>, which can loop a DataFrame row-wise. It returns the index and row of the DataFrame in each iteration of the for a loop.</p>
 <div class="cell docutils container">
@@ -2226,7 +2228,7 @@ Name: 1, dtype: object
 </div>
 </section>
 <section id="dataframe-sorting">
-<h2>DataFrame Sorting<a class="headerlink" href="#dataframe-sorting" title="Permalink to this heading">#</a></h2>
+<h2>DataFrame Sorting<a class="headerlink" href="#dataframe-sorting" title="Link to this heading">#</a></h2>
 <p>Data Analyst always needs to perform different operations on the underlying data like merge, sort, concatenate, etc. The most frequently used operation is the sorting of data. Sorted data becomes easy to analyze and inferred.</p>
 <p>The <strong><code class="docutils literal notranslate"><span class="pre">DataFrame.sort_values()</span></code></strong> function is used to sort the DataFrame using one or more columns in ascending (default) or descending order.</p>
 <p>In the below example, we sort the student data based on the ‘<strong>Marks</strong>’.</p>
@@ -2260,10 +2262,10 @@ Name: 1, dtype: object
 </div>
 </section>
 <section id="dataframe-conversion">
-<h2>DataFrame conversion<a class="headerlink" href="#dataframe-conversion" title="Permalink to this heading">#</a></h2>
+<h2>DataFrame conversion<a class="headerlink" href="#dataframe-conversion" title="Link to this heading">#</a></h2>
 <p>After all the processing on DataFrame, we will get the expected data in the DataFrame. But, we may require to convert the DataFrame back to its original formats like CSV file or <strong><code class="docutils literal notranslate"><span class="pre">dict</span></code></strong>, or we may need to convert it to another format for further action like storing it into the Database as SQL table format.</p>
 <p>Pandas have provided plenty of functions to convert the DataFrames into many different formats.</p>
-<p>For example, <strong><code class="docutils literal notranslate"><span class="pre">DataFrame.to_dict()</span></code></strong> function is used to converts the <strong><a class="reference internal" href="001_Python_Pandas_Methods/008_Python_Pandas_DataFrame_to_Python_dictionary.html"><span class="doc std std-doc">DataFrame into a Python dictionary</span></a></strong> object.</p>
+<p>For example, <strong><code class="docutils literal notranslate"><span class="pre">DataFrame.to_dict()</span></code></strong> function is used to converts the <strong><a class="reference internal" href="001_Python_Pandas_Methods/008_Python_Pandas_DataFrame_to_Python_dictionary.html"><span class="std std-doc">DataFrame into a Python dictionary</span></a></strong> object.</p>
 <p>Below is the example of a DataFrame which we need to convert into the Python <strong><code class="docutils literal notranslate"><span class="pre">dict</span></code></strong>.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="n">Name</span>  <span class="n">Class</span> <span class="n">Marks</span>
 <span class="mi">0</span>    <span class="n">Joe</span>     <span class="n">A</span>  <span class="mf">85.10</span>
@@ -2289,9 +2291,9 @@ Name: 1, dtype: object
 </section>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="id1">
-<h1>Summary:<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h1>
+<h1>Summary:<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
 <section id="create-test-objects">
-<h2>Create Test Objects<a class="headerlink" href="#create-test-objects" title="Permalink to this heading">#</a></h2>
+<h2>Create Test Objects<a class="headerlink" href="#create-test-objects" title="Link to this heading">#</a></h2>
 <table class="table">
 <thead>
 <tr class="row-odd"><th class="head text-left"><p>Operator</p></th>
@@ -2312,7 +2314,7 @@ Name: 1, dtype: object
 </table>
 </section>
 <section id="viewing-inspecting-data">
-<h2>Viewing/Inspecting Data<a class="headerlink" href="#viewing-inspecting-data" title="Permalink to this heading">#</a></h2>
+<h2>Viewing/Inspecting Data<a class="headerlink" href="#viewing-inspecting-data" title="Link to this heading">#</a></h2>
 <table class="table">
 <thead>
 <tr class="row-odd"><th class="head text-left"><p>Operator</p></th>
@@ -2345,7 +2347,7 @@ Name: 1, dtype: object
 </table>
 </section>
 <section id="selection">
-<h2>Selection<a class="headerlink" href="#selection" title="Permalink to this heading">#</a></h2>
+<h2>Selection<a class="headerlink" href="#selection" title="Link to this heading">#</a></h2>
 <table class="table">
 <thead>
 <tr class="row-odd"><th class="head text-left"><p>Operator</p></th>
@@ -2375,7 +2377,7 @@ Name: 1, dtype: object
 </table>
 </section>
 <section id="data-cleaning">
-<h2>Data Cleaning<a class="headerlink" href="#data-cleaning" title="Permalink to this heading">#</a></h2>
+<h2>Data Cleaning<a class="headerlink" href="#data-cleaning" title="Link to this heading">#</a></h2>
 <table class="table">
 <thead>
 <tr class="row-odd"><th class="head text-left"><p>Operator</p></th>
@@ -2432,7 +2434,7 @@ Name: 1, dtype: object
 </table>
 </section>
 <section id="filter-sort-and-groupby">
-<h2>Filter, Sort, and Groupby<a class="headerlink" href="#filter-sort-and-groupby" title="Permalink to this heading">#</a></h2>
+<h2>Filter, Sort, and Groupby<a class="headerlink" href="#filter-sort-and-groupby" title="Link to this heading">#</a></h2>
 <table class="table">
 <thead>
 <tr class="row-odd"><th class="head text-left"><p>Operator</p></th>
@@ -2480,7 +2482,7 @@ Name: 1, dtype: object
 </table>
 </section>
 <section id="join-combine">
-<h2>Join/Combine<a class="headerlink" href="#join-combine" title="Permalink to this heading">#</a></h2>
+<h2>Join/Combine<a class="headerlink" href="#join-combine" title="Link to this heading">#</a></h2>
 <table class="table">
 <thead>
 <tr class="row-odd"><th class="head text-left"><p>Operator</p></th>
@@ -2501,7 +2503,7 @@ Name: 1, dtype: object
 </table>
 </section>
 <section id="statistics">
-<h2>Statistics<a class="headerlink" href="#statistics" title="Permalink to this heading">#</a></h2>
+<h2>Statistics<a class="headerlink" href="#statistics" title="Link to this heading">#</a></h2>
 <table class="table">
 <thead>
 <tr class="row-odd"><th class="head text-left"><p>Operator</p></th>
@@ -2537,7 +2539,7 @@ Name: 1, dtype: object
 </table>
 </section>
 <section id="importing-data">
-<h2>Importing Data<a class="headerlink" href="#importing-data" title="Permalink to this heading">#</a></h2>
+<h2>Importing Data<a class="headerlink" href="#importing-data" title="Link to this heading">#</a></h2>
 <table class="table">
 <thead>
 <tr class="row-odd"><th class="head text-left"><p>Operator</p></th>
@@ -2573,7 +2575,7 @@ Name: 1, dtype: object
 </table>
 </section>
 <section id="exporting-data">
-<h2>Exporting Data<a class="headerlink" href="#exporting-data" title="Permalink to this heading">#</a></h2>
+<h2>Exporting Data<a class="headerlink" href="#exporting-data" title="Link to this heading">#</a></h2>
 <table class="table">
 <thead>
 <tr class="row-odd"><th class="head text-left"><p>Operator</p></th>
@@ -2656,6 +2658,7 @@ Name: 1, dtype: object
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -2770,8 +2773,8 @@ By Anukool Chaturvedi
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
-<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+  <script src="../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
   <footer class="bd-footer">
   </footer>

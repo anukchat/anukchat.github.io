@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" >
+<html lang="en" data-content_root="../../../../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Loops in Python &#8212; Anukool&#39;s almanac</title>
   
@@ -19,53 +18,49 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="../../../../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link href="../../../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
   
-  <link href="../../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../../../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
-<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
-  <script src="../../../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
-    <script src="../../../../_static/jquery.js"></script>
-    <script src="../../../../_static/underscore.js"></script>
-    <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../../../../_static/doctools.js"></script>
-    <script src="../../../../_static/clipboard.min.js"></script>
-    <script src="../../../../_static/copybutton.js"></script>
-    <script src="../../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../../../_static/togglebutton.js"></script>
+    <script src="../../../../_static/togglebutton.js?v=4a39c7ea"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../../../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../../../../_static/sphinx-thebe.js"></script>
+    <script src="../../../../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'content/essentials/python/controlflow/006_Python_while_Loop';</script>
     <link rel="canonical" href="https://anukchat.github.io/content/essentials/python/controlflow/006_Python_while_Loop.html" />
-    <link rel="shortcut icon" href="../../../../_static/mesh-smallest.png"/>
+    <link rel="icon" href="../../../../_static/mesh-smallest.png"/>
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
     <link rel="next" title="Control Statements in Python" href="007_Python_break_continue_pass_statements.html" />
@@ -79,10 +74,9 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
   
   <div id="pst-scroll-pixel-helper"></div>
-
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
     <i class="fa-solid fa-arrow-up"></i>
@@ -123,11 +117,14 @@ const thebe_selector_output = ".output, .cell_output"
 </form></div>
   </div>
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -155,7 +152,18 @@ const thebe_selector_output = ".output, .cell_output"
     <p class="title logo__title">Anukool's almanac</p>
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Essentials</span></p>
 <ul class="current nav bd-sidenav">
@@ -220,13 +228,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../files/files_toc.html">Files</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../files/001_Python_File_Input_Output.html">Python File I/O</a></li>
-
-
-
-
-
-
+<li class="toctree-l3"><a class="reference internal" href="../files/001_Python_File_Input_Output.html">File I/O</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../files/002_Python_File_Directory.html">File directory</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../files/003_Python_File_Exception.html">File exception</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../files/004_Python_Exceptions_Handling.html">Exceptions handling</a></li>
@@ -551,34 +553,34 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="loops-in-python">
-<h1>Loops in Python<a class="headerlink" href="#loops-in-python" title="Permalink to this heading">#</a></h1>
+<h1>Loops in Python<a class="headerlink" href="#loops-in-python" title="Link to this heading">#</a></h1>
 <p>Loops in Python programming function similar to loops in C, C++, Java or other languages. Python loops are used to repeatedly execute a block of statements until a given condition returns to be <strong><code class="docutils literal notranslate"><span class="pre">False</span></code></strong>. In Python, we have <strong>two types of looping statements</strong>, namely:</p>
 <div>
 <img src="/content/essentials/python/controlflow/img/loop1.png" width="200"/>
 </div></section>
 <section class="tex2jax_ignore mathjax_ignore" id="python-while-loop">
-<h1>Python <code class="docutils literal notranslate"><span class="pre">while</span></code> Loop<a class="headerlink" href="#python-while-loop" title="Permalink to this heading">#</a></h1>
+<h1>Python <code class="docutils literal notranslate"><span class="pre">while</span></code> Loop<a class="headerlink" href="#python-while-loop" title="Link to this heading">#</a></h1>
 <p>Loops are used in programming to repeat a specific block of code. In this article, you will learn to create a <strong><code class="docutils literal notranslate"><span class="pre">while</span></code></strong> loop in Python. We use a <strong><code class="docutils literal notranslate"><span class="pre">while</span></code></strong> loop when we want to repeat a code block.</p>
 <section id="what-is-while-loop-in-python">
-<h2>What is <code class="docutils literal notranslate"><span class="pre">while</span></code> loop in Python?<a class="headerlink" href="#what-is-while-loop-in-python" title="Permalink to this heading">#</a></h2>
+<h2>What is <code class="docutils literal notranslate"><span class="pre">while</span></code> loop in Python?<a class="headerlink" href="#what-is-while-loop-in-python" title="Link to this heading">#</a></h2>
 <p>The <strong><code class="docutils literal notranslate"><span class="pre">while</span></code></strong> loop in Python is used to iterate over a block of code as long as the  expression/condition is <strong><code class="docutils literal notranslate"><span class="pre">True</span></code></strong>. When the condition becomes <strong><code class="docutils literal notranslate"><span class="pre">False</span></code></strong>, execution comes out of the loop immediately, and the first statement after the <strong><code class="docutils literal notranslate"><span class="pre">while</span></code></strong> loop is executed.</p>
 <p>We generally use this loop when we don’t know the number of times to iterate beforehand.</p>
 <p>Python interprets any non-zero value as <strong><code class="docutils literal notranslate"><span class="pre">True</span></code></strong>. <strong><code class="docutils literal notranslate"><span class="pre">None</span></code></strong> and <strong><code class="docutils literal notranslate"><span class="pre">0</span></code></strong> are interpreted as <strong><code class="docutils literal notranslate"><span class="pre">False</span></code></strong>.</p>
 </section>
 <section id="why-and-when-to-use-while-loop-in-python">
-<h2>Why and When to use <code class="docutils literal notranslate"><span class="pre">while</span></code> loop in Python<a class="headerlink" href="#why-and-when-to-use-while-loop-in-python" title="Permalink to this heading">#</a></h2>
+<h2>Why and When to use <code class="docutils literal notranslate"><span class="pre">while</span></code> loop in Python<a class="headerlink" href="#why-and-when-to-use-while-loop-in-python" title="Link to this heading">#</a></h2>
 <p>Now, the question might arise: when do we use a <strong><code class="docutils literal notranslate"><span class="pre">while</span></code></strong> loop, and why do we use it.</p>
 <ul class="simple">
 <li><p><strong>Automate and repeat tasks:</strong> As we know, <strong><code class="docutils literal notranslate"><span class="pre">while</span></code></strong> loops execute blocks of code over and over again until the condition is met it allows us to automate and repeat tasks in an efficient manner.</p></li>
-<li><p>**Indefinite Iteration:**The <strong><code class="docutils literal notranslate"><span class="pre">while</span></code></strong> loop will run as often as necessary to complete a particular task. When the user doesn’t know the number of iterations before execution, <strong><code class="docutils literal notranslate"><span class="pre">while</span></code></strong> loop is used instead of a <strong><a class="reference internal" href="005_Python_for_Loop.html"><span class="doc std std-doc">for loop</span></a></strong> loop</p></li>
+<li><p>**Indefinite Iteration:**The <strong><code class="docutils literal notranslate"><span class="pre">while</span></code></strong> loop will run as often as necessary to complete a particular task. When the user doesn’t know the number of iterations before execution, <strong><code class="docutils literal notranslate"><span class="pre">while</span></code></strong> loop is used instead of a <strong><a class="reference internal" href="005_Python_for_Loop.html"><span class="std std-doc">for loop</span></a></strong> loop</p></li>
 <li><p><strong>Reduce complexity:</strong> <strong><code class="docutils literal notranslate"><span class="pre">while</span></code></strong> loop is easy to write. using the loop, we don’t need to write the statements again and again. Instead, we can write statements we wanted to execute again and again inside the body of the loop thus, reducing the complexity of the code</p></li>
 <li><p><strong>Infinite loop:</strong> If the code inside the <strong><code class="docutils literal notranslate"><span class="pre">while</span></code></strong> loop doesn’t modify the variables being tested in the loop condition, the loop will run forever.</p></li>
 </ul>
 <section id="syntax">
-<h3>Syntax:<a class="headerlink" href="#syntax" title="Permalink to this heading">#</a></h3>
+<h3>Syntax:<a class="headerlink" href="#syntax" title="Link to this heading">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">while</span> <span class="n">condition</span><span class="p">:</span>
     <span class="n">body</span> <span class="n">of</span> <span class="k">while</span> <span class="n">loop</span>
 </pre></div>
@@ -756,8 +758,8 @@ Loop is Completed
 </section>
 </section>
 <section id="while-loop-with-if-else">
-<h2><code class="docutils literal notranslate"><span class="pre">while</span></code> loop with <code class="docutils literal notranslate"><span class="pre">if-else</span></code><a class="headerlink" href="#while-loop-with-if-else" title="Permalink to this heading">#</a></h2>
-<p>A <strong><code class="docutils literal notranslate"><span class="pre">while</span></code></strong> loop can have an optional <strong><a class="reference internal" href="002_Python_if_else_statement.html"><span class="doc std std-doc">if-else</span></a></strong> block. We use <strong><code class="docutils literal notranslate"><span class="pre">if-else</span></code></strong> statement in the loop when conditional iteration is needed. i.e., If the condition is <strong><code class="docutils literal notranslate"><span class="pre">True</span></code></strong>, then the statements inside the if block will execute othwerwise, the else block will execute.</p>
+<h2><code class="docutils literal notranslate"><span class="pre">while</span></code> loop with <code class="docutils literal notranslate"><span class="pre">if-else</span></code><a class="headerlink" href="#while-loop-with-if-else" title="Link to this heading">#</a></h2>
+<p>A <strong><code class="docutils literal notranslate"><span class="pre">while</span></code></strong> loop can have an optional <strong><a class="reference internal" href="002_Python_if_else_statement.html"><span class="std std-doc">if-else</span></a></strong> block. We use <strong><code class="docutils literal notranslate"><span class="pre">if-else</span></code></strong> statement in the loop when conditional iteration is needed. i.e., If the condition is <strong><code class="docutils literal notranslate"><span class="pre">True</span></code></strong>, then the statements inside the if block will execute othwerwise, the else block will execute.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example 1: Print even and odd numbers between 1 to the entered number.</span>
@@ -886,12 +888,12 @@ The total sum is 340
 </div>
 </section>
 <section id="while-loop-with-else">
-<h2><code class="docutils literal notranslate"><span class="pre">while</span></code> loop with <code class="docutils literal notranslate"><span class="pre">else</span></code><a class="headerlink" href="#while-loop-with-else" title="Permalink to this heading">#</a></h2>
+<h2><code class="docutils literal notranslate"><span class="pre">while</span></code> loop with <code class="docutils literal notranslate"><span class="pre">else</span></code><a class="headerlink" href="#while-loop-with-else" title="Link to this heading">#</a></h2>
 <p>A <strong><code class="docutils literal notranslate"><span class="pre">while</span></code></strong> loop can have an optional <strong><code class="docutils literal notranslate"><span class="pre">else</span></code></strong> block as well. The <strong><code class="docutils literal notranslate"><span class="pre">else</span></code></strong> part is executed if the condition in the <strong><code class="docutils literal notranslate"><span class="pre">while</span></code></strong> loop evaluates to <strong><code class="docutils literal notranslate"><span class="pre">False</span></code></strong>.</p>
 <p>The <strong><code class="docutils literal notranslate"><span class="pre">else</span></code></strong> will be skipped/ignored when:</p>
 <ul class="simple">
 <li><p><strong><code class="docutils literal notranslate"><span class="pre">while</span></code></strong> loop terminates abruptly</p></li>
-<li><p>The <strong><a class="reference internal" href="007_Python_break_continue_pass_statements.html"><span class="doc std std-doc">break statement</span></a></strong> is used to break the <strong><code class="docutils literal notranslate"><span class="pre">while</span></code></strong> loop</p></li>
+<li><p>The <strong><a class="reference internal" href="007_Python_break_continue_pass_statements.html"><span class="std std-doc">break statement</span></a></strong> is used to break the <strong><code class="docutils literal notranslate"><span class="pre">while</span></code></strong> loop</p></li>
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1015,11 +1017,11 @@ Given Number is correct 555
 </div>
 </section>
 <section id="using-control-statement-in-while-loops-in-python">
-<h2>Using Control Statement in <code class="docutils literal notranslate"><span class="pre">while</span></code> loops in Python<a class="headerlink" href="#using-control-statement-in-while-loops-in-python" title="Permalink to this heading">#</a></h2>
-<p><strong><a class="reference internal" href="007_Python_break_continue_pass_statements.html"><span class="doc std std-doc">Control statements</span></a></strong> in Python like <strong><code class="docutils literal notranslate"><span class="pre">break</span></code></strong>, <strong><code class="docutils literal notranslate"><span class="pre">continue</span></code></strong>, etc can be used to control the execution flow of <strong><code class="docutils literal notranslate"><span class="pre">while</span></code></strong> loop in Python. Let us now understand how this can be done.</p>
+<h2>Using Control Statement in <code class="docutils literal notranslate"><span class="pre">while</span></code> loops in Python<a class="headerlink" href="#using-control-statement-in-while-loops-in-python" title="Link to this heading">#</a></h2>
+<p><strong><a class="reference internal" href="007_Python_break_continue_pass_statements.html"><span class="std std-doc">Control statements</span></a></strong> in Python like <strong><code class="docutils literal notranslate"><span class="pre">break</span></code></strong>, <strong><code class="docutils literal notranslate"><span class="pre">continue</span></code></strong>, etc can be used to control the execution flow of <strong><code class="docutils literal notranslate"><span class="pre">while</span></code></strong> loop in Python. Let us now understand how this can be done.</p>
 <p>It is used when you want to exit a loop or skip a part of the loop based on the given condition. It also knows as <strong>transfer statements</strong>.</p>
 <section id="a-break-in-while-loop">
-<h3>a) <code class="docutils literal notranslate"><span class="pre">break</span></code> in <code class="docutils literal notranslate"><span class="pre">while</span></code> loop<a class="headerlink" href="#a-break-in-while-loop" title="Permalink to this heading">#</a></h3>
+<h3>a) <code class="docutils literal notranslate"><span class="pre">break</span></code> in <code class="docutils literal notranslate"><span class="pre">while</span></code> loop<a class="headerlink" href="#a-break-in-while-loop" title="Link to this heading">#</a></h3>
 <p>Using the <strong><code class="docutils literal notranslate"><span class="pre">break</span></code></strong> statement, we can exit from the <strong><code class="docutils literal notranslate"><span class="pre">while</span></code></strong> loop even if the condition is <strong><code class="docutils literal notranslate"><span class="pre">True</span></code></strong>.</p>
 <p>If the <strong><code class="docutils literal notranslate"><span class="pre">break</span></code></strong> statement is used inside a nested loop (loop inside another loop), it will terminate the innermost loop. For example,</p>
 <div class="cell docutils container">
@@ -1095,7 +1097,7 @@ HelloWorld
 </div>
 </section>
 <section id="b-continue-in-while-loop">
-<h3>b) <code class="docutils literal notranslate"><span class="pre">continue</span></code> in while loop<a class="headerlink" href="#b-continue-in-while-loop" title="Permalink to this heading">#</a></h3>
+<h3>b) <code class="docutils literal notranslate"><span class="pre">continue</span></code> in while loop<a class="headerlink" href="#b-continue-in-while-loop" title="Link to this heading">#</a></h3>
 <p>The <strong><code class="docutils literal notranslate"><span class="pre">continue</span></code></strong> statement is used to stop/skip the block of code in the loop for the current iteration only and continue with the next iteration.</p>
 <p>For example, let’s say you want to print all the odd numbers less than a particular value. Here is how you can do it using <strong><code class="docutils literal notranslate"><span class="pre">continue</span></code></strong> keyword in Python.</p>
 <div class="cell docutils container">
@@ -1189,7 +1191,7 @@ HelloWorld
 </div>
 </section>
 <section id="c-pass-in-while-loop">
-<h3>c) <code class="docutils literal notranslate"><span class="pre">pass</span></code> in <code class="docutils literal notranslate"><span class="pre">while</span></code> loop<a class="headerlink" href="#c-pass-in-while-loop" title="Permalink to this heading">#</a></h3>
+<h3>c) <code class="docutils literal notranslate"><span class="pre">pass</span></code> in <code class="docutils literal notranslate"><span class="pre">while</span></code> loop<a class="headerlink" href="#c-pass-in-while-loop" title="Link to this heading">#</a></h3>
 <p>The <strong><code class="docutils literal notranslate"><span class="pre">pass</span></code></strong> statement is a null statement, i.e., nothing happens when the statement is executed. Primarily it is used in empty functions or classes. When the interpreter finds a pass statement in the program, it returns no operation.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1206,7 +1208,7 @@ HelloWorld
 </section>
 </section>
 <section id="reverse-while-loop">
-<h2>Reverse <code class="docutils literal notranslate"><span class="pre">while</span></code> loop<a class="headerlink" href="#reverse-while-loop" title="Permalink to this heading">#</a></h2>
+<h2>Reverse <code class="docutils literal notranslate"><span class="pre">while</span></code> loop<a class="headerlink" href="#reverse-while-loop" title="Link to this heading">#</a></h2>
 <p>A reverse loop means an iterating loop in the backward direction. A simple example includes:</p>
 <ul class="simple">
 <li><p>Display numbers from 10 to 1.</p></li>
@@ -1232,7 +1234,7 @@ HelloWorld
 </div>
 </section>
 <section id="nested-while-loops">
-<h2>Nested <code class="docutils literal notranslate"><span class="pre">while</span></code> loops<a class="headerlink" href="#nested-while-loops" title="Permalink to this heading">#</a></h2>
+<h2>Nested <code class="docutils literal notranslate"><span class="pre">while</span></code> loops<a class="headerlink" href="#nested-while-loops" title="Link to this heading">#</a></h2>
 <p><strong>Nested while loop</strong> is a <strong><code class="docutils literal notranslate"><span class="pre">while</span></code></strong> loop inside another <strong><code class="docutils literal notranslate"><span class="pre">while</span></code></strong> a loop.</p>
 <p>In the nested <strong><code class="docutils literal notranslate"><span class="pre">while</span></code></strong> loop, the number of iterations will be equal to the number of iterations in the outer loop multiplied by the iterations in the inner loop. In each iteration of the outer loop inner loop execute all its iteration.</p>
 <p><strong>Syntax:</strong></p>
@@ -1243,9 +1245,9 @@ HelloWorld
 </pre></div>
 </div>
 <section id="while-loop-inside-while-loop">
-<h3><code class="docutils literal notranslate"><span class="pre">while</span></code> loop inside <code class="docutils literal notranslate"><span class="pre">while</span></code> loop<a class="headerlink" href="#while-loop-inside-while-loop" title="Permalink to this heading">#</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">while</span></code> loop inside <code class="docutils literal notranslate"><span class="pre">while</span></code> loop<a class="headerlink" href="#while-loop-inside-while-loop" title="Link to this heading">#</a></h3>
 <section id="example-nested-while-loop">
-<h4>Example: Nested <code class="docutils literal notranslate"><span class="pre">while</span></code> loop<a class="headerlink" href="#example-nested-while-loop" title="Permalink to this heading">#</a></h4>
+<h4>Example: Nested <code class="docutils literal notranslate"><span class="pre">while</span></code> loop<a class="headerlink" href="#example-nested-while-loop" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example: print the first 10 numbers on each line 5 times</span>
@@ -1271,7 +1273,7 @@ HelloWorld
 </div>
 </section>
 <section id="example-nested-while-loop-to-print-the-pattern">
-<h4>Example: Nested <code class="docutils literal notranslate"><span class="pre">while</span></code> loop to print the pattern<a class="headerlink" href="#example-nested-while-loop-to-print-the-pattern" title="Permalink to this heading">#</a></h4>
+<h4>Example: Nested <code class="docutils literal notranslate"><span class="pre">while</span></code> loop to print the pattern<a class="headerlink" href="#example-nested-while-loop-to-print-the-pattern" title="Link to this heading">#</a></h4>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">*</span>
 <span class="o">*</span> <span class="o">*</span>
 <span class="o">*</span> <span class="o">*</span> <span class="o">*</span>
@@ -1312,8 +1314,8 @@ HelloWorld
 </section>
 </section>
 <section id="for-loop-inside-while-loop">
-<h3><code class="docutils literal notranslate"><span class="pre">for</span></code> loop inside <code class="docutils literal notranslate"><span class="pre">while</span></code> loop<a class="headerlink" href="#for-loop-inside-while-loop" title="Permalink to this heading">#</a></h3>
-<p>We can also use <strong><a class="reference internal" href="005_Python_for_Loop.html"><span class="doc std std-doc">for loop</span></a></strong> inside a <strong><code class="docutils literal notranslate"><span class="pre">while</span></code></strong> loop as a nested loop. For example,</p>
+<h3><code class="docutils literal notranslate"><span class="pre">for</span></code> loop inside <code class="docutils literal notranslate"><span class="pre">while</span></code> loop<a class="headerlink" href="#for-loop-inside-while-loop" title="Link to this heading">#</a></h3>
+<p>We can also use <strong><a class="reference internal" href="005_Python_for_Loop.html"><span class="std std-doc">for loop</span></a></strong> inside a <strong><code class="docutils literal notranslate"><span class="pre">while</span></code></strong> loop as a nested loop. For example,</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example 1: Method 2</span>
@@ -1407,8 +1409,8 @@ Perfect number: 28
 </section>
 </section>
 <section id="iterate-string-using-while-loop">
-<h2>Iterate String using <code class="docutils literal notranslate"><span class="pre">while</span></code> loop<a class="headerlink" href="#iterate-string-using-while-loop" title="Permalink to this heading">#</a></h2>
-<p>By looping through the <strong><a class="reference internal" href="../datatypes/002_Python_String.html"><span class="doc std std-doc">string</span></a></strong> using <strong><code class="docutils literal notranslate"><span class="pre">while</span></code></strong> loop, we can do lots of string operations. For example,</p>
+<h2>Iterate String using <code class="docutils literal notranslate"><span class="pre">while</span></code> loop<a class="headerlink" href="#iterate-string-using-while-loop" title="Link to this heading">#</a></h2>
+<p>By looping through the <strong><a class="reference internal" href="../datatypes/002_Python_String.html"><span class="std std-doc">string</span></a></strong> using <strong><code class="docutils literal notranslate"><span class="pre">while</span></code></strong> loop, we can do lots of string operations. For example,</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example 1: while loop to iterate string letter by letter</span>
@@ -1433,8 +1435,8 @@ n
 </div>
 </section>
 <section id="iterate-list-using-while-loop">
-<h2>Iterate List using <code class="docutils literal notranslate"><span class="pre">while</span></code> loop<a class="headerlink" href="#iterate-list-using-while-loop" title="Permalink to this heading">#</a></h2>
-<p><strong><a class="reference internal" href="../datatypes/003_Python_List.html"><span class="doc std std-doc">Python list</span></a></strong>  is an ordered collection of items of different data types. It means Lists are ordered by index numbers starting from 0 to the total items-1. List items are enclosed in square <strong><code class="docutils literal notranslate"><span class="pre">[]</span></code></strong> brackets.</p>
+<h2>Iterate List using <code class="docutils literal notranslate"><span class="pre">while</span></code> loop<a class="headerlink" href="#iterate-list-using-while-loop" title="Link to this heading">#</a></h2>
+<p><strong><a class="reference internal" href="../datatypes/003_Python_List.html"><span class="std std-doc">Python list</span></a></strong>  is an ordered collection of items of different data types. It means Lists are ordered by index numbers starting from 0 to the total items-1. List items are enclosed in square <strong><code class="docutils literal notranslate"><span class="pre">[]</span></code></strong> brackets.</p>
 <p>Below are the few examples of Python list.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">numers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">players</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Messi&quot;</span><span class="p">,</span> <span class="s2">&quot;Ronaldo&quot;</span><span class="p">,</span> <span class="s2">&quot;Neymar&quot;</span><span class="p">]</span>
@@ -1488,8 +1490,8 @@ HelloWorld
 </div></blockquote>
 </section>
 <section id="iterate-numbers-using-while-loop">
-<h2>Iterate Numbers using <code class="docutils literal notranslate"><span class="pre">while</span></code> loop<a class="headerlink" href="#iterate-numbers-using-while-loop" title="Permalink to this heading">#</a></h2>
-<p>Now, consider a program where you want to print out the squares of all the <strong><a class="reference internal" href="../datatypes/001_Python_Numbers.html"><span class="doc std std-doc">numbers</span></a></strong> less a particular number. Let’s see how this works with a while statement.</p>
+<h2>Iterate Numbers using <code class="docutils literal notranslate"><span class="pre">while</span></code> loop<a class="headerlink" href="#iterate-numbers-using-while-loop" title="Link to this heading">#</a></h2>
+<p>Now, consider a program where you want to print out the squares of all the <strong><a class="reference internal" href="../datatypes/001_Python_Numbers.html"><span class="std std-doc">numbers</span></a></strong> less a particular number. Let’s see how this works with a while statement.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example 1: printing the square of numbers less than `n`</span>
@@ -1564,7 +1566,7 @@ Loop over
 </div>
 </section>
 <section id="while-loop-in-python-faqs">
-<h2>While loop in Python FAQs<a class="headerlink" href="#while-loop-in-python-faqs" title="Permalink to this heading">#</a></h2>
+<h2>While loop in Python FAQs<a class="headerlink" href="#while-loop-in-python-faqs" title="Link to this heading">#</a></h2>
 <ol class="arabic simple">
 <li><p>A while loop in python is used for what type of iteration?</p></li>
 </ol>
@@ -1661,6 +1663,7 @@ Loop over
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
+
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> Contents
@@ -1747,8 +1750,8 @@ By Anukool Chaturvedi
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
-<script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+  <script src="../../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
   <footer class="bd-footer">
   </footer>

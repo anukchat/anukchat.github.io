@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" >
+<html lang="en" data-content_root="../../../../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Python Functions &#8212; Anukool&#39;s almanac</title>
   
@@ -19,53 +18,49 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="../../../../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link href="../../../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
   
-  <link href="../../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../../../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
-<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
-  <script src="../../../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
-    <script src="../../../../_static/jquery.js"></script>
-    <script src="../../../../_static/underscore.js"></script>
-    <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../../../../_static/doctools.js"></script>
-    <script src="../../../../_static/clipboard.min.js"></script>
-    <script src="../../../../_static/copybutton.js"></script>
-    <script src="../../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../../../_static/togglebutton.js"></script>
+    <script src="../../../../_static/togglebutton.js?v=4a39c7ea"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../../../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../../../../_static/sphinx-thebe.js"></script>
+    <script src="../../../../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'content/essentials/python/functions/001_Python_Functions';</script>
     <link rel="canonical" href="https://anukchat.github.io/content/essentials/python/functions/001_Python_Functions.html" />
-    <link rel="shortcut icon" href="../../../../_static/mesh-smallest.png"/>
+    <link rel="icon" href="../../../../_static/mesh-smallest.png"/>
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
     <link rel="next" title="Python Global, Local and Nonlocal variables" href="002_Python_Function_Global_Local_Nonlocal.html" />
@@ -79,10 +74,9 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
   
   <div id="pst-scroll-pixel-helper"></div>
-
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
     <i class="fa-solid fa-arrow-up"></i>
@@ -123,11 +117,14 @@ const thebe_selector_output = ".output, .cell_output"
 </form></div>
   </div>
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -155,7 +152,18 @@ const thebe_selector_output = ".output, .cell_output"
     <p class="title logo__title">Anukool's almanac</p>
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Essentials</span></p>
 <ul class="current nav bd-sidenav">
@@ -220,13 +228,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../files/files_toc.html">Files</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../files/001_Python_File_Input_Output.html">Python File I/O</a></li>
-
-
-
-
-
-
+<li class="toctree-l3"><a class="reference internal" href="../files/001_Python_File_Input_Output.html">File I/O</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../files/002_Python_File_Directory.html">File directory</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../files/003_Python_File_Exception.html">File exception</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../files/004_Python_Exceptions_Handling.html">Exceptions handling</a></li>
@@ -535,10 +537,10 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-call-a-function-in-python">How to call a function in python?</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#docstrings">Docstrings</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#function-pass-statement">Function <code class="docutils literal notranslate"><span class="pre">pass</span></code> Statement</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-span-class-label-label-default-functions-span">💻 Exercises ➞ <span class="label label-default">Functions</span></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-span-class-label-label-default-level-1-span">Exercises ➞ <span class="label label-default">Level 1</span></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-span-class-label-label-default-level-2-span">Exercises ➞ <span class="label label-default">Level 2</span></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-span-class-label-label-default-level-3-span">Exercises ➞ <span class="label label-default">Level 3</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-functions">💻 Exercises ➞ <span class="label label-default">Functions</span></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-level-1">Exercises ➞ <span class="label label-default">Level 1</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-level-2">Exercises ➞ <span class="label label-default">Level 2</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-level-3">Exercises ➞ <span class="label label-default">Level 3</span></a></li>
 </ul>
 </li>
 </ul>
@@ -553,23 +555,23 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="python-functions">
-<h1>Python Functions<a class="headerlink" href="#python-functions" title="Permalink to this heading">#</a></h1>
+<h1>Python Functions<a class="headerlink" href="#python-functions" title="Link to this heading">#</a></h1>
 <p>In this class, you’ll learn about functions, what a function is, the syntax, components, and types of functions. Also, you’ll learn to create a function in Python.</p>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="what-is-a-function-in-python">
-<h1>What is a function in Python?<a class="headerlink" href="#what-is-a-function-in-python" title="Permalink to this heading">#</a></h1>
+<h1>What is a function in Python?<a class="headerlink" href="#what-is-a-function-in-python" title="Link to this heading">#</a></h1>
 <p>In Python, a <strong>function is a block of organized, reusable (DRY- Don’t Repeat Yourself) code with a name</strong> that is used to perform a single, specific task. It can take arguments and returns the value.</p>
 <p>Functions help break our program into smaller and modular chunks. As our program grows larger and larger, functions make it more organized and manageable.</p>
 <p>Furthermore, it improves efficiency and reduces errors because of the reusability of a code.</p>
 <section id="types-of-functions">
-<h2>Types of Functions<a class="headerlink" href="#types-of-functions" title="Permalink to this heading">#</a></h2>
+<h2>Types of Functions<a class="headerlink" href="#types-of-functions" title="Link to this heading">#</a></h2>
 <p>Python support two types of functions</p>
 <ol class="arabic simple">
 <li><p><strong>Built-in</strong> function</p></li>
-<li><p><strong><a class="reference internal" href="Python_User_defined_Functions.html"><span class="doc std std-doc">User-defined</span></a></strong> function</p></li>
+<li><p><strong><a class="reference internal" href="Python_User_defined_Functions.html"><span class="std std-doc">User-defined</span></a></strong> function</p></li>
 </ol>
 <p>1.<strong>Built-in function</strong></p>
 <p>The functions which are come along with Python itself are called a built-in function or predefined function. Some of them are:
@@ -597,10 +599,10 @@ document.write(`
 <img src="img/f1.png" width="550"/>
 </div></section>
 <section id="defining-a-function">
-<h2>Defining a Function<a class="headerlink" href="#defining-a-function" title="Permalink to this heading">#</a></h2>
+<h2>Defining a Function<a class="headerlink" href="#defining-a-function" title="Link to this heading">#</a></h2>
 <ol class="arabic simple">
 <li><p><strong><code class="docutils literal notranslate"><span class="pre">def</span></code></strong> is a keyword that marks the start of the function header.</p></li>
-<li><p><strong><code class="docutils literal notranslate"><span class="pre">function_name</span></code></strong> to uniquely identify the function. Function naming follows the same <strong><a class="reference internal" href="../introduction/003_Python_Keywords_and_Identifiers.html"><span class="doc std std-doc">rules of writing identifiers in Python</span></a></strong>.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">function_name</span></code></strong> to uniquely identify the function. Function naming follows the same <strong><a class="reference internal" href="../introduction/003_Python_Keywords_and_Identifiers.html"><span class="std std-doc">rules of writing identifiers in Python</span></a></strong>.</p></li>
 <li><p><strong><code class="docutils literal notranslate"><span class="pre">parameter</span></code></strong> is the value passed to the function. They are optional.</p></li>
 <li><p><strong><code class="docutils literal notranslate"><span class="pre">:</span></code></strong> (colon) to mark the end of the function header.</p></li>
 <li><p><strong><code class="docutils literal notranslate"><span class="pre">function</span> <span class="pre">body</span></code></strong> is a block of code that performs some task and all the statements in <strong><code class="docutils literal notranslate"><span class="pre">function</span> <span class="pre">body</span></code></strong> must have the same <strong>indentation</strong> level (usually 4 spaces).</p></li>
@@ -624,7 +626,7 @@ document.write(`
 </div>
 </section>
 <section id="defining-a-function-without-any-parameters">
-<h2>Defining a function without any parameters<a class="headerlink" href="#defining-a-function-without-any-parameters" title="Permalink to this heading">#</a></h2>
+<h2>Defining a function without any parameters<a class="headerlink" href="#defining-a-function-without-any-parameters" title="Link to this heading">#</a></h2>
 <p>Function can be declared without parameters.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -685,7 +687,7 @@ document.write(`
 </div>
 </section>
 <section id="defining-a-function-without-parameters-and-return-value">
-<h2>Defining a function without parameters and <code class="docutils literal notranslate"><span class="pre">return</span></code> value<a class="headerlink" href="#defining-a-function-without-parameters-and-return-value" title="Permalink to this heading">#</a></h2>
+<h2>Defining a function without parameters and <code class="docutils literal notranslate"><span class="pre">return</span></code> value<a class="headerlink" href="#defining-a-function-without-parameters-and-return-value" title="Link to this heading">#</a></h2>
 <p>Function can also return values, if a function does not have a <strong><code class="docutils literal notranslate"><span class="pre">return</span></code></strong> statement, the value of the function is None. Let us rewrite the above functions using <strong><code class="docutils literal notranslate"><span class="pre">return</span></code></strong>. From now on, we get a value from a function when we call the function and print it.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -728,10 +730,10 @@ document.write(`
 </div>
 </section>
 <section id="defining-a-function-with-parameters">
-<h2>Defining a function with parameters<a class="headerlink" href="#defining-a-function-with-parameters" title="Permalink to this heading">#</a></h2>
+<h2>Defining a function with parameters<a class="headerlink" href="#defining-a-function-with-parameters" title="Link to this heading">#</a></h2>
 <p>In a function we can pass different data types(number, string, boolean, list, tuple, dictionary or set) as a parameter.</p>
 <section id="single-parameter">
-<h3>Single Parameter:<a class="headerlink" href="#single-parameter" title="Permalink to this heading">#</a></h3>
+<h3>Single Parameter:<a class="headerlink" href="#single-parameter" title="Link to this heading">#</a></h3>
 <p>If our function takes a parameter we should call our function with an argument</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -771,7 +773,7 @@ None
 </div>
 </section>
 <section id="two-parameter">
-<h3>Two Parameter:<a class="headerlink" href="#two-parameter" title="Permalink to this heading">#</a></h3>
+<h3>Two Parameter:<a class="headerlink" href="#two-parameter" title="Link to this heading">#</a></h3>
 <p>A function may or may not have a parameter or parameters. A function may also have two or more parameters. If our function takes parameters we should call it with arguments.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -795,7 +797,7 @@ Your course name is Python
 </section>
 </section>
 <section id="defining-a-function-with-parameters-and-return-value">
-<h2>Defining a function with parameters and <code class="docutils literal notranslate"><span class="pre">return</span></code> value<a class="headerlink" href="#defining-a-function-with-parameters-and-return-value" title="Permalink to this heading">#</a></h2>
+<h2>Defining a function with parameters and <code class="docutils literal notranslate"><span class="pre">return</span></code> value<a class="headerlink" href="#defining-a-function-with-parameters-and-return-value" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example 1: </span>
@@ -956,7 +958,7 @@ Your course name is Python
 </div>
 </section>
 <section id="function-return-statement">
-<h2>Function <code class="docutils literal notranslate"><span class="pre">return</span></code> Statement<a class="headerlink" href="#function-return-statement" title="Permalink to this heading">#</a></h2>
+<h2>Function <code class="docutils literal notranslate"><span class="pre">return</span></code> Statement<a class="headerlink" href="#function-return-statement" title="Link to this heading">#</a></h2>
 <p>In Python, to return value from the function, a <strong><code class="docutils literal notranslate"><span class="pre">return</span></code></strong> statement is used. It returns the value of the expression following the returns keyword.</p>
 <p><strong>Syntax:</strong></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fun</span><span class="p">():</span>
@@ -976,7 +978,7 @@ Your course name is Python
 <li><p>The <strong><code class="docutils literal notranslate"><span class="pre">return</span></code></strong> statement should be inside of the function block.</p></li>
 </ul>
 <section id="return-single-value">
-<h3>Return Single Value<a class="headerlink" href="#return-single-value" title="Permalink to this heading">#</a></h3>
+<h3>Return Single Value<a class="headerlink" href="#return-single-value" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">greet</span><span class="p">(</span><span class="s2">&quot;Cory&quot;</span><span class="p">))</span>
@@ -994,7 +996,7 @@ None
 </section>
 </section>
 <section id="passing-arguments-with-key-and-value">
-<h2>Passing Arguments with Key and Value<a class="headerlink" href="#passing-arguments-with-key-and-value" title="Permalink to this heading">#</a></h2>
+<h2>Passing Arguments with Key and Value<a class="headerlink" href="#passing-arguments-with-key-and-value" title="Link to this heading">#</a></h2>
 <p>If we pass the arguments with key and value, the order of the arguments does not matter.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1151,7 +1153,7 @@ Rest of code
 </div>
 </div>
 <section id="return-multiple-values">
-<h3>Return Multiple Values<a class="headerlink" href="#return-multiple-values" title="Permalink to this heading">#</a></h3>
+<h3>Return Multiple Values<a class="headerlink" href="#return-multiple-values" title="Link to this heading">#</a></h3>
 <p>You can also return multiple values from a function. Use the return statement by separating each expression by a comma.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1185,7 +1187,7 @@ Division:  5.0
 </div>
 </section>
 <section id="return-boolean-values">
-<h3>Return Boolean Values<a class="headerlink" href="#return-boolean-values" title="Permalink to this heading">#</a></h3>
+<h3>Return Boolean Values<a class="headerlink" href="#return-boolean-values" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example 1:</span>
@@ -1210,7 +1212,7 @@ False
 </div>
 </section>
 <section id="return-a-list">
-<h3>Return a List<a class="headerlink" href="#return-a-list" title="Permalink to this heading">#</a></h3>
+<h3>Return a List<a class="headerlink" href="#return-a-list" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example 1:</span>
@@ -1234,7 +1236,7 @@ False
 </section>
 </section>
 <section id="how-to-call-a-function-in-python">
-<h2>How to call a function in python?<a class="headerlink" href="#how-to-call-a-function-in-python" title="Permalink to this heading">#</a></h2>
+<h2>How to call a function in python?<a class="headerlink" href="#how-to-call-a-function-in-python" title="Link to this heading">#</a></h2>
 <p>Once we have defined a function, we can call it from another function, program or even the Python prompt. To call a function we simply type the function name with appropriate parameters.</p>
 <div>
 <img src="img/f2.png" width="500"/>
@@ -1398,7 +1400,7 @@ Weight of an object in Newtons:  162.0 N
 </div>
 </section>
 <section id="docstrings">
-<h2>Docstrings<a class="headerlink" href="#docstrings" title="Permalink to this heading">#</a></h2>
+<h2>Docstrings<a class="headerlink" href="#docstrings" title="Link to this heading">#</a></h2>
 <p>The first string after the function header is called the <strong>docstring</strong> and is short for documentation string. It is a descriptive text (like a comment) written by a programmer to let others know what block of code does.</p>
 <p>Although <strong>optional</strong>, documentation is a good programming practice. Unless you can remember what you had for dinner last week, always document your code.</p>
 <p>It is being declared using triple single quotes <strong><code class="docutils literal notranslate"><span class="pre">'''</span> <span class="pre">'''</span></code></strong> or triple-double quote <strong><code class="docutils literal notranslate"><span class="pre">&quot;&quot;&quot;</span> <span class="pre">&quot;&quot;&quot;</span></code></strong> so that docstring can extend up to multiple lines.</p>
@@ -1417,10 +1419,10 @@ Weight of an object in Newtons:  162.0 N
 </div>
 </div>
 </div>
-<p>To learn more about docstrings in Python, visit <strong><a class="reference internal" href="Python_Docstrings.html"><span class="doc std std-doc">Python Docstrings</span></a></strong>.</p>
+<p>To learn more about docstrings in Python, visit <strong><a class="reference internal" href="Python_Docstrings.html"><span class="std std-doc">Python Docstrings</span></a></strong>.</p>
 </section>
 <section id="function-pass-statement">
-<h2>Function <code class="docutils literal notranslate"><span class="pre">pass</span></code> Statement<a class="headerlink" href="#function-pass-statement" title="Permalink to this heading">#</a></h2>
+<h2>Function <code class="docutils literal notranslate"><span class="pre">pass</span></code> Statement<a class="headerlink" href="#function-pass-statement" title="Link to this heading">#</a></h2>
 <p>In Python, the <strong><code class="docutils literal notranslate"><span class="pre">pass</span></code></strong> is the keyword, which won’t do anything. Sometimes there is a situation where we need to define a syntactically empty block. We can define that block using the <strong><code class="docutils literal notranslate"><span class="pre">pass</span></code></strong> keyword.</p>
 <p>When the interpreter finds a <strong><code class="docutils literal notranslate"><span class="pre">pass</span></code></strong> statement in the program, it returns no operation.</p>
 <div class="cell docutils container">
@@ -1438,10 +1440,10 @@ Weight of an object in Newtons:  162.0 N
 </div>
 </div>
 </section>
-<section id="exercises-span-class-label-label-default-functions-span">
-<h2>💻 Exercises ➞ <span class='label label-default'>Functions</span><a class="headerlink" href="#exercises-span-class-label-label-default-functions-span" title="Permalink to this heading">#</a></h2>
-<section id="exercises-span-class-label-label-default-level-1-span">
-<h3>Exercises ➞ <span class='label label-default'>Level 1</span><a class="headerlink" href="#exercises-span-class-label-label-default-level-1-span" title="Permalink to this heading">#</a></h3>
+<section id="exercises-functions">
+<h2>💻 Exercises ➞ <span class='label label-default'>Functions</span><a class="headerlink" href="#exercises-functions" title="Link to this heading">#</a></h2>
+<section id="exercises-level-1">
+<h3>Exercises ➞ <span class='label label-default'>Level 1</span><a class="headerlink" href="#exercises-level-1" title="Link to this heading">#</a></h3>
 <ol class="arabic">
 <li><p>Area of a circle is calculated as follows: <strong>area = π x r x r</strong> and <strong>perimeter = 2 x π x r</strong>. Write a function that calculates <strong><code class="docutils literal notranslate"><span class="pre">area_of_circle</span></code></strong> and <strong><code class="docutils literal notranslate"><span class="pre">perimeter_of_circle</span></code></strong>.</p></li>
 <li><p>Write a function called <strong><code class="docutils literal notranslate"><span class="pre">add_all_nums</span></code></strong> which takes arbitrary number of arguments and sums all the arguments. Check if all the list items are number types. If not do give a reasonable feedback.</p></li>
@@ -1514,8 +1516,8 @@ print(sum_all_numbers(100)) # 5050
 <li><p>Declare a function named <strong><code class="docutils literal notranslate"><span class="pre">sum_of_even</span></code></strong>. It takes a number parameter and it adds all the even numbers in that - range.</p></li>
 </ol>
 </section>
-<section id="exercises-span-class-label-label-default-level-2-span">
-<h3>Exercises ➞ <span class='label label-default'>Level 2</span><a class="headerlink" href="#exercises-span-class-label-label-default-level-2-span" title="Permalink to this heading">#</a></h3>
+<section id="exercises-level-2">
+<h3>Exercises ➞ <span class='label label-default'>Level 2</span><a class="headerlink" href="#exercises-level-2" title="Link to this heading">#</a></h3>
 <ol class="arabic">
 <li><p>Declare a function named <strong><code class="docutils literal notranslate"><span class="pre">evens_and_odds</span></code></strong>. It takes a positive integer as parameter and it counts number of evens and odds in the number.</p>
 <ul>
@@ -1536,8 +1538,8 @@ print(sum_all_numbers(100)) # 5050
 <li><p>Write different functions which take lists. They should <strong><code class="docutils literal notranslate"><span class="pre">calculate_mean</span></code></strong>, <strong><code class="docutils literal notranslate"><span class="pre">calculate_median</span></code></strong>, <strong><code class="docutils literal notranslate"><span class="pre">calculate_mode</span></code></strong>, <strong><code class="docutils literal notranslate"><span class="pre">calculate_range</span></code></strong>, <strong><code class="docutils literal notranslate"><span class="pre">calculate_variance</span></code></strong>, <strong><code class="docutils literal notranslate"><span class="pre">calculate_std</span></code></strong> (standard deviation).</p></li>
 </ol>
 </section>
-<section id="exercises-span-class-label-label-default-level-3-span">
-<h3>Exercises ➞ <span class='label label-default'>Level 3</span><a class="headerlink" href="#exercises-span-class-label-label-default-level-3-span" title="Permalink to this heading">#</a></h3>
+<section id="exercises-level-3">
+<h3>Exercises ➞ <span class='label label-default'>Level 3</span><a class="headerlink" href="#exercises-level-3" title="Link to this heading">#</a></h3>
 <ol class="arabic simple">
 <li><p>Write a function called <strong><code class="docutils literal notranslate"><span class="pre">is_prime</span></code></strong>, which checks if a number is prime.</p></li>
 <li><p>Write a functions which checks if all items are unique in the list.</p></li>
@@ -1609,6 +1611,7 @@ print(sum_all_numbers(100)) # 5050
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
+
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> Contents
@@ -1640,10 +1643,10 @@ print(sum_all_numbers(100)) # 5050
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-call-a-function-in-python">How to call a function in python?</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#docstrings">Docstrings</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#function-pass-statement">Function <code class="docutils literal notranslate"><span class="pre">pass</span></code> Statement</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-span-class-label-label-default-functions-span">💻 Exercises ➞ <span class="label label-default">Functions</span></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-span-class-label-label-default-level-1-span">Exercises ➞ <span class="label label-default">Level 1</span></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-span-class-label-label-default-level-2-span">Exercises ➞ <span class="label label-default">Level 2</span></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-span-class-label-label-default-level-3-span">Exercises ➞ <span class="label label-default">Level 3</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-functions">💻 Exercises ➞ <span class="label label-default">Functions</span></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-level-1">Exercises ➞ <span class="label label-default">Level 1</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-level-2">Exercises ➞ <span class="label label-default">Level 2</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-level-3">Exercises ➞ <span class="label label-default">Level 3</span></a></li>
 </ul>
 </li>
 </ul>
@@ -1697,8 +1700,8 @@ By Anukool Chaturvedi
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
-<script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+  <script src="../../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
   <footer class="bd-footer">
   </footer>

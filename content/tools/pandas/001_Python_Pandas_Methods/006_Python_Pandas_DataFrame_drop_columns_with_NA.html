@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" >
+<html lang="en" data-content_root="../../../../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Drop columns with NA in pandas DataFrame &#8212; Anukool&#39;s almanac</title>
   
@@ -19,53 +18,49 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="../../../../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link href="../../../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
   
-  <link href="../../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../../../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
-<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
-  <script src="../../../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
-    <script src="../../../../_static/jquery.js"></script>
-    <script src="../../../../_static/underscore.js"></script>
-    <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../../../../_static/doctools.js"></script>
-    <script src="../../../../_static/clipboard.min.js"></script>
-    <script src="../../../../_static/copybutton.js"></script>
-    <script src="../../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../../../_static/togglebutton.js"></script>
+    <script src="../../../../_static/togglebutton.js?v=4a39c7ea"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../../../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../../../../_static/sphinx-thebe.js"></script>
+    <script src="../../../../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'content/tools/pandas/001_Python_Pandas_Methods/006_Python_Pandas_DataFrame_drop_columns_with_NA';</script>
     <link rel="canonical" href="https://anukchat.github.io/content/tools/pandas/001_Python_Pandas_Methods/006_Python_Pandas_DataFrame_drop_columns_with_NA.html" />
-    <link rel="shortcut icon" href="../../../../_static/mesh-smallest.png"/>
+    <link rel="icon" href="../../../../_static/mesh-smallest.png"/>
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
     <link rel="next" title="Rename columns in Pandas DataFrame" href="007_Python_Pandas_DataFrame_rename_columns.html" />
@@ -79,10 +74,9 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
   
   <div id="pst-scroll-pixel-helper"></div>
-
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
     <i class="fa-solid fa-arrow-up"></i>
@@ -123,11 +117,14 @@ const thebe_selector_output = ".output, .cell_output"
 </form></div>
   </div>
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -155,7 +152,18 @@ const thebe_selector_output = ".output, .cell_output"
     <p class="title logo__title">Anukool's almanac</p>
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Essentials</span></p>
 <ul class="nav bd-sidenav">
@@ -220,13 +228,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../../essentials/python/files/files_toc.html">Files</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../../essentials/python/files/001_Python_File_Input_Output.html">Python File I/O</a></li>
-
-
-
-
-
-
+<li class="toctree-l3"><a class="reference internal" href="../../../essentials/python/files/001_Python_File_Input_Output.html">File I/O</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../essentials/python/files/002_Python_File_Directory.html">File directory</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../essentials/python/files/003_Python_File_Exception.html">File exception</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../essentials/python/files/004_Python_Exceptions_Handling.html">Exceptions handling</a></li>
@@ -526,19 +528,19 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="drop-columns-with-na-in-pandas-dataframe">
-<h1>Drop columns with NA in pandas DataFrame<a class="headerlink" href="#drop-columns-with-na-in-pandas-dataframe" title="Permalink to this heading">#</a></h1>
-<p>This article covers all the cases to remove columns from <strong><a class="reference internal" href="../001_Python_Pandas_DataFrame.html"><span class="doc std std-doc">Pandas DataFrame</span></a></strong> that contains missing or NA values.</p>
+<h1>Drop columns with NA in pandas DataFrame<a class="headerlink" href="#drop-columns-with-na-in-pandas-dataframe" title="Link to this heading">#</a></h1>
+<p>This article covers all the cases to remove columns from <strong><a class="reference internal" href="../001_Python_Pandas_DataFrame.html"><span class="std std-doc">Pandas DataFrame</span></a></strong> that contains missing or NA values.</p>
 <p>For multiple reasons, it could happen that data in the Dataset is missing or not available. It is a very usual case where we need to clean the data before start analyzing it.</p>
 <p>Also, See:</p>
 <ul class="simple">
-<li><p><strong><a class="reference internal" href="004_Python_Pandas_DataFrame_drop_columns.html"><span class="doc std std-doc">Drop columns in pandas DataFrame</span></a></strong></p></li>
-<li><p><strong><a class="reference internal" href="005_Python_Pandas_DataFrame_drop_duplicates.html"><span class="doc std std-doc">Drop duplicates in pandas DataFrame</span></a></strong></p></li>
+<li><p><strong><a class="reference internal" href="004_Python_Pandas_DataFrame_drop_columns.html"><span class="std std-doc">Drop columns in pandas DataFrame</span></a></strong></p></li>
+<li><p><strong><a class="reference internal" href="005_Python_Pandas_DataFrame_drop_duplicates.html"><span class="std std-doc">Drop duplicates in pandas DataFrame</span></a></strong></p></li>
 </ul>
 <section id="the-dataframe-dropna-function">
-<h2>The <code class="docutils literal notranslate"><span class="pre">DataFrame.dropna()</span></code> function<a class="headerlink" href="#the-dataframe-dropna-function" title="Permalink to this heading">#</a></h2>
+<h2>The <code class="docutils literal notranslate"><span class="pre">DataFrame.dropna()</span></code> function<a class="headerlink" href="#the-dataframe-dropna-function" title="Link to this heading">#</a></h2>
 <p>We can use this pandas function to remove columns from the DataFrame with values Not Available(NA).</p>
 <p><strong>Syntax:</strong></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">DataFrame</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;any&#39;</span><span class="p">,</span> <span class="n">thresh</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">subset</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
@@ -563,7 +565,7 @@ document.write(`
 </ul>
 </section>
 <section id="drop-column-where-at-least-one-value-is-missing">
-<h2>Drop column where at least one value is missing<a class="headerlink" href="#drop-column-where-at-least-one-value-is-missing" title="Permalink to this heading">#</a></h2>
+<h2>Drop column where at least one value is missing<a class="headerlink" href="#drop-column-where-at-least-one-value-is-missing" title="Link to this heading">#</a></h2>
 <p>There is a case when we cannot process the dataset with missing values. If we need to drop such columns that contain NA, we can use the <strong><code class="docutils literal notranslate"><span class="pre">axis=columns</span></code></strong> parameter of <strong><code class="docutils literal notranslate"><span class="pre">DataFrame.dropna()</span></code></strong> to specify deleting the columns.</p>
 <p>By default, it removes the column where one or more values are missing.</p>
 <p><strong>Example:</strong></p>
@@ -606,7 +608,7 @@ After dropping column NA:
 </div>
 </section>
 <section id="drop-column-where-all-values-are-missing">
-<h2>Drop column where all values are missing<a class="headerlink" href="#drop-column-where-all-values-are-missing" title="Permalink to this heading">#</a></h2>
+<h2>Drop column where all values are missing<a class="headerlink" href="#drop-column-where-all-values-are-missing" title="Link to this heading">#</a></h2>
 <p>We can drop an empty column from DataFrame using <strong><code class="docutils literal notranslate"><span class="pre">DataFrame.dropna()</span></code></strong>.</p>
 <p>We need to use how parameter as follows:</p>
 <ul class="simple">
@@ -654,7 +656,7 @@ After dropping column NA:
 </div>
 </section>
 <section id="drop-column-with-the-number-of-na">
-<h2>Drop column with the number of NA<a class="headerlink" href="#drop-column-with-the-number-of-na" title="Permalink to this heading">#</a></h2>
+<h2>Drop column with the number of NA<a class="headerlink" href="#drop-column-with-the-number-of-na" title="Link to this heading">#</a></h2>
 <p>While cleaning the dataset, we can keep the columns with at least some data available in it else drop otherwise.</p>
 <p>We need to use the parameter <strong><code class="docutils literal notranslate"><span class="pre">thresh=no_of_nonNA_values</span></code></strong> of <strong><code class="docutils literal notranslate"><span class="pre">DataFrame.drop()</span></code></strong> to specify the number of values that must be available in the column. Else, drop the column.</p>
 <p><strong>Example</strong></p>
@@ -700,7 +702,7 @@ After dropping column NA:
 </div>
 </section>
 <section id="drop-na-from-defined-rows">
-<h2>Drop NA from defined rows<a class="headerlink" href="#drop-na-from-defined-rows" title="Permalink to this heading">#</a></h2>
+<h2>Drop NA from defined rows<a class="headerlink" href="#drop-na-from-defined-rows" title="Link to this heading">#</a></h2>
 <p>Suppose we are interested in dropping the column only if it contains null values in some particular rows. For example, consider when we need to drop a column if it does not have data in its initial rows.</p>
 <p>In such a case, we can use <strong><code class="docutils literal notranslate"><span class="pre">subset=[row1,</span> <span class="pre">row2]</span></code></strong> of <strong><code class="docutils literal notranslate"><span class="pre">DataFrame.dropna()</span></code></strong> to specify the list of row indexes so that it drops the columns containing missing values in these rows only, i.e., row1 and row2 in this case.</p>
 <p><strong>Example:</strong></p>
@@ -743,7 +745,7 @@ After dropping column NA:
 </div>
 </section>
 <section id="drop-column-with-missing-values-in-place">
-<h2>Drop column with missing values in place<a class="headerlink" href="#drop-column-with-missing-values-in-place" title="Permalink to this heading">#</a></h2>
+<h2>Drop column with missing values in place<a class="headerlink" href="#drop-column-with-missing-values-in-place" title="Link to this heading">#</a></h2>
 <p>We can drop columns from the existing DataFrame or by creating a copy of it. For that, we can use a flag <strong><code class="docutils literal notranslate"><span class="pre">inplace</span></code></strong> of <strong><code class="docutils literal notranslate"><span class="pre">DataFrame.dropna()</span></code></strong>.</p>
 <ul class="simple">
 <li><p>If the <strong><code class="docutils literal notranslate"><span class="pre">inplace=True</span></code></strong>, then it updates the DataFrame and returns None.</p></li>
@@ -786,7 +788,7 @@ After dropping row NA:
 </div>
 </section>
 <section id="drop-duplicates-and-reset-the-index">
-<h2>Drop duplicates and reset the index<a class="headerlink" href="#drop-duplicates-and-reset-the-index" title="Permalink to this heading">#</a></h2>
+<h2>Drop duplicates and reset the index<a class="headerlink" href="#drop-duplicates-and-reset-the-index" title="Link to this heading">#</a></h2>
 <p>When we drop the rows from DataFrame, by default, it keeps the original row index as is. But, if we need to reset the index of the resultant DataFrame, we can do that using the <strong><code class="docutils literal notranslate"><span class="pre">ignore_index</span></code></strong> parameter of <strong><code class="docutils literal notranslate"><span class="pre">DataFrame.drop_duplicate()</span></code></strong>.</p>
 <ul class="simple">
 <li><p>If <strong><code class="docutils literal notranslate"><span class="pre">ignore_index=True</span></code></strong>, it reset the row labels of resultant DataFrame to 0, 1, …, n – 1.</p></li>
@@ -885,6 +887,7 @@ After dropping column:
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
+
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> Contents
@@ -946,8 +949,8 @@ By Anukool Chaturvedi
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
-<script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+  <script src="../../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
   <footer class="bd-footer">
   </footer>

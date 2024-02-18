@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" >
+<html lang="en" data-content_root="../../../../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Python Classes and Objects &#8212; Anukool&#39;s almanac</title>
   
@@ -19,53 +18,49 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="../../../../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link href="../../../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
   
-  <link href="../../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../../../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
-<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
-  <script src="../../../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
-    <script src="../../../../_static/jquery.js"></script>
-    <script src="../../../../_static/underscore.js"></script>
-    <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../../../../_static/doctools.js"></script>
-    <script src="../../../../_static/clipboard.min.js"></script>
-    <script src="../../../../_static/copybutton.js"></script>
-    <script src="../../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../../../_static/togglebutton.js"></script>
+    <script src="../../../../_static/togglebutton.js?v=4a39c7ea"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../../../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../../../../_static/sphinx-thebe.js"></script>
+    <script src="../../../../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'content/essentials/python/objects/002_Python_Classes_and_Objects';</script>
     <link rel="canonical" href="https://anukchat.github.io/content/essentials/python/objects/002_Python_Classes_and_Objects.html" />
-    <link rel="shortcut icon" href="../../../../_static/mesh-smallest.png"/>
+    <link rel="icon" href="../../../../_static/mesh-smallest.png"/>
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
     <link rel="next" title="Python Inheritance" href="003_Python_Inheritance.html" />
@@ -79,10 +74,9 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
   
   <div id="pst-scroll-pixel-helper"></div>
-
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
     <i class="fa-solid fa-arrow-up"></i>
@@ -123,11 +117,14 @@ const thebe_selector_output = ".output, .cell_output"
 </form></div>
   </div>
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -155,7 +152,18 @@ const thebe_selector_output = ".output, .cell_output"
     <p class="title logo__title">Anukool's almanac</p>
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Essentials</span></p>
 <ul class="current nav bd-sidenav">
@@ -220,13 +228,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../files/files_toc.html">Files</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../files/001_Python_File_Input_Output.html">Python File I/O</a></li>
-
-
-
-
-
-
+<li class="toctree-l3"><a class="reference internal" href="../files/001_Python_File_Input_Output.html">File I/O</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../files/002_Python_File_Directory.html">File directory</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../files/003_Python_File_Exception.html">File exception</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../files/004_Python_Exceptions_Handling.html">Exceptions handling</a></li>
@@ -538,14 +540,14 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="python-classes-and-objects">
-<h1>Python  Classes and Objects<a class="headerlink" href="#python-classes-and-objects" title="Permalink to this heading">#</a></h1>
+<h1>Python  Classes and Objects<a class="headerlink" href="#python-classes-and-objects" title="Link to this heading">#</a></h1>
 <p>In this class, you will learn about the core functionality of Python objects and classes. You’ll learn what a class is, how to create it and use it in your program.</p>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="id1">
-<h1>Python Classes and Objects<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h1>
+<h1>Python Classes and Objects<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
 <p>Python is an object oriented programming language. Everything in Python is an object, with its properties and methods. A number, string, list, dictionary, tuple, set etc. used in a program is an object of a corresponding built-in class. We create class to create an object. Unlike procedure oriented programming, where the main emphasis is on functions, object oriented programming stresses on objects.</p>
 <p>An object is simply a collection of data (variables) and methods (functions) that act on those data. Similarly, a class is a blueprint for that object.</p>
 <p>We can think of class as a sketch (prototype) of a house. It contains all the details about the floors, doors, windows etc. Based on these descriptions we build the house. House is the object.</p>
@@ -589,7 +591,7 @@ document.write(`
 </div>
 </div>
 <section id="defining-a-class-in-python">
-<h2>Defining a Class in Python<a class="headerlink" href="#defining-a-class-in-python" title="Permalink to this heading">#</a></h2>
+<h2>Defining a Class in Python<a class="headerlink" href="#defining-a-class-in-python" title="Link to this heading">#</a></h2>
 <p>Like function definitions begin with the <strong>def</strong> keyword in Python, class definitions begin with a <strong>class</strong> keyword.</p>
 <p>The first string inside the class is called docstring and has a brief description about the class. Although not mandatory, this is highly recommended.</p>
 <p>Here is a simple class definition.</p>
@@ -598,7 +600,7 @@ document.write(`
     <span class="k">pass</span>
 </pre></div>
 </div>
-<p>A class creates a new local <strong><a class="reference internal" href="../introduction/011_Python_Namespace_and_Scope.html"><span class="doc std std-doc">namespace</span></a></strong> where all its attributes are defined. Attributes may be data or functions.</p>
+<p>A class creates a new local <strong><a class="reference internal" href="../introduction/011_Python_Namespace_and_Scope.html"><span class="std std-doc">namespace</span></a></strong> where all its attributes are defined. Attributes may be data or functions.</p>
 <p>There are also special attributes in it that begins with double underscores <strong><code class="docutils literal notranslate"><span class="pre">__</span></code></strong>. For example, <strong><code class="docutils literal notranslate"><span class="pre">__doc__</span></code></strong> gives us the docstring of that class.</p>
 <p>As soon as we define a class, a new class object is created with the same name. This class object allows us to access the different attributes as well as to instantiate new objects of that class.</p>
 <div class="cell docutils container">
@@ -630,9 +632,9 @@ This is a person class
 </div>
 </section>
 <section id="creating-an-object-in-python">
-<h2>Creating an Object in Python<a class="headerlink" href="#creating-an-object-in-python" title="Permalink to this heading">#</a></h2>
+<h2>Creating an Object in Python<a class="headerlink" href="#creating-an-object-in-python" title="Link to this heading">#</a></h2>
 <p>We saw that the class object could be used to access different attributes.</p>
-<p>It can also be used to create new object instances (instantiation) of that class. The procedure to create an object is similar to a <a class="reference internal" href="../functions/001_Python_Functions.html"><span class="doc std std-doc"><strong>function</strong></span></a> call.</p>
+<p>It can also be used to create new object instances (instantiation) of that class. The procedure to create an object is similar to a <a class="reference internal" href="../functions/001_Python_Functions.html"><span class="std std-doc"><strong>function</strong></span></a> call.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">harry</span> <span class="o">=</span> <span class="n">Person</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -669,14 +671,14 @@ Hello
 </div>
 </div>
 <p><strong>Explanation:</strong></p>
-<p>You may have noticed the <strong><code class="docutils literal notranslate"><span class="pre">self</span></code></strong> parameter in function definition inside the class but we called the method simply as <strong><code class="docutils literal notranslate"><span class="pre">harry.greet()</span></code></strong> without any <a class="reference internal" href="../functions/004_Python_Function_Arguments.html"><span class="doc std std-doc"><strong>arguments</strong></span></a>. It still worked.</p>
+<p>You may have noticed the <strong><code class="docutils literal notranslate"><span class="pre">self</span></code></strong> parameter in function definition inside the class but we called the method simply as <strong><code class="docutils literal notranslate"><span class="pre">harry.greet()</span></code></strong> without any <a class="reference internal" href="../functions/004_Python_Function_Arguments.html"><span class="std std-doc"><strong>arguments</strong></span></a>. It still worked.</p>
 <p>This is because, whenever an object calls its method, the object itself is passed as the first argument. So, <strong><code class="docutils literal notranslate"><span class="pre">harry.greet()</span></code></strong> translates into <strong><code class="docutils literal notranslate"><span class="pre">Person.greet(harry)</span></code></strong>.</p>
 <p>In general, calling a method with a list of n arguments is equivalent to calling the corresponding function with an argument list that is created by inserting the method’s object before the first argument.</p>
 <p>For these reasons, the first argument of the function in class must be the object itself. This is conventionally called self. It can be named otherwise but we highly recommend to follow the convention.</p>
 <p>Now you must be familiar with class object, instance object, function object, method object and their differences.</p>
 </section>
 <section id="constructors-in-python">
-<h2>Constructors in Python<a class="headerlink" href="#constructors-in-python" title="Permalink to this heading">#</a></h2>
+<h2>Constructors in Python<a class="headerlink" href="#constructors-in-python" title="Link to this heading">#</a></h2>
 <p>In Python, if a class functions that begin with double underscore <strong><code class="docutils literal notranslate"><span class="pre">__</span></code></strong> are called special functions as they have special meaning.</p>
 <p>A class without a constructor is not really useful in real applications. A constructor is a special type of method used in Python to initialize the object of a Class. The constructor will be executed automatically when the object is created. If we create three objects, the constructor is called three times and initialize each object.</p>
 <p>The main purpose of the constructor is to declare and initialize instance variables. It can take at least one argument that is <strong><code class="docutils literal notranslate"><span class="pre">self</span></code></strong>. The <strong><code class="docutils literal notranslate"><span class="pre">__init__()</span></code></strong> method is called the constructor in Python. In other words, the name of the constructor should be <strong><code class="docutils literal notranslate"><span class="pre">__init__(self)</span></code></strong>.</p>
@@ -757,7 +759,7 @@ Hello
 <p>An interesting thing to note in the above step is that attributes of an object can be created on the fly. We created a new attribute <strong><code class="docutils literal notranslate"><span class="pre">attr</span></code></strong> for object <strong><code class="docutils literal notranslate"><span class="pre">num2</span></code></strong> and read it as well. But this does not create that attribute for object <strong><code class="docutils literal notranslate"><span class="pre">num1</span></code></strong>.</p>
 </section>
 <section id="types-of-constructors">
-<h2>Types of Constructors<a class="headerlink" href="#types-of-constructors" title="Permalink to this heading">#</a></h2>
+<h2>Types of Constructors<a class="headerlink" href="#types-of-constructors" title="Link to this heading">#</a></h2>
 <p>We have two types of constructors in Python:</p>
 <ul class="simple">
 <li><p><strong>Non-parameterized:</strong> The constructors in Python which have no parameter is known as a non parameterized constructor. The non-parameterized constructor uses when we do not want to manipulate the value or the constructor that has only self as an argument.</p></li>
@@ -917,7 +919,7 @@ Bella is also a students
 </ul>
 </section>
 <section id="creating-instance-objects">
-<h2>Creating Instance Objects<a class="headerlink" href="#creating-instance-objects" title="Permalink to this heading">#</a></h2>
+<h2>Creating Instance Objects<a class="headerlink" href="#creating-instance-objects" title="Link to this heading">#</a></h2>
 <p>To create instances of a class, you call the class using class name and pass in whatever arguments its <strong><code class="docutils literal notranslate"><span class="pre">__init__</span></code></strong> method accepts.
 Lets Create Studnet class object of above example :</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">std</span><span class="o">=</span><span class="n">Student</span><span class="p">(</span><span class="s1">&#39;Vijay&#39;</span><span class="p">,</span><span class="s1">&#39;102&#39;</span><span class="p">)</span>
@@ -925,7 +927,7 @@ Lets Create Studnet class object of above example :</p>
 </div>
 </section>
 <section id="accessing-attributes-with-self-parameter">
-<h2>Accessing Attributes with <code class="docutils literal notranslate"><span class="pre">self</span></code> Parameter<a class="headerlink" href="#accessing-attributes-with-self-parameter" title="Permalink to this heading">#</a></h2>
+<h2>Accessing Attributes with <code class="docutils literal notranslate"><span class="pre">self</span></code> Parameter<a class="headerlink" href="#accessing-attributes-with-self-parameter" title="Link to this heading">#</a></h2>
 <p>The <strong><code class="docutils literal notranslate"><span class="pre">self</span></code></strong> is used to represent the instance of the class. It is the default variable that is always pointing to the current object.</p>
 <p>By using <strong><code class="docutils literal notranslate"><span class="pre">self</span></code></strong>, we can access the instance variable and instance method of the object. While defining constructor and instance method, the <strong><code class="docutils literal notranslate"><span class="pre">self</span></code></strong> is their first parameter.</p>
 <p>It’s not required the first parameter named to be <strong><code class="docutils literal notranslate"><span class="pre">self</span></code></strong>, we can give any name whatever we like, but it has to be the first parameter of any function in the class.</p>
@@ -1016,7 +1018,7 @@ Name :  Chirag , Id :  103
 </div>
 </section>
 <section id="built-in-class-attributes">
-<h2>Built-In Class Attributes<a class="headerlink" href="#built-in-class-attributes" title="Permalink to this heading">#</a></h2>
+<h2>Built-In Class Attributes<a class="headerlink" href="#built-in-class-attributes" title="Link to this heading">#</a></h2>
 <p>Every Python class keeps following built-in attributes and they can be accessed using <strong>dot operator</strong> like any other attribute −</p>
 <ul class="simple">
 <li><p><strong><code class="docutils literal notranslate"><span class="pre">__dict__</span></code></strong>  : Dictionary containing the class’s namespace.</p></li>
@@ -1068,11 +1070,11 @@ Student.__dict__: {&#39;__module__&#39;: &#39;__main__&#39;, &#39;__doc__&#39;: 
 </div>
 </section>
 <section id="object-properties">
-<h2>Object Properties<a class="headerlink" href="#object-properties" title="Permalink to this heading">#</a></h2>
+<h2>Object Properties<a class="headerlink" href="#object-properties" title="Link to this heading">#</a></h2>
 <p>Every object has properties with it. In other words, we can say that object property is an association between <strong>name</strong> and <strong>value</strong>.</p>
 <p>For example, a car is an object, and its properties are car color, sunroof, price, manufacture, model, engine, and so on. Here, color is the name and red is the <strong>value</strong>.</p>
 <section id="modify-object-properties">
-<h3>Modify Object Properties<a class="headerlink" href="#modify-object-properties" title="Permalink to this heading">#</a></h3>
+<h3>Modify Object Properties<a class="headerlink" href="#modify-object-properties" title="Link to this heading">#</a></h3>
 <p>Every object has properties associated with them. We can set or modify the object’s properties after object initialization by calling the property directly using the dot operator.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1105,7 +1107,7 @@ Student.__dict__: {&#39;__module__&#39;: &#39;__main__&#39;, &#39;__doc__&#39;: 
 </div>
 </section>
 <section id="delete-object-properties">
-<h3>Delete object properties<a class="headerlink" href="#delete-object-properties" title="Permalink to this heading">#</a></h3>
+<h3>Delete object properties<a class="headerlink" href="#delete-object-properties" title="Link to this heading">#</a></h3>
 <p>We can delete the object property by using the <strong><code class="docutils literal notranslate"><span class="pre">del</span></code></strong> keyword. After deleting it, if we try to access it, we will get an error.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1146,7 +1148,7 @@ Student.__dict__: {&#39;__module__&#39;: &#39;__main__&#39;, &#39;__doc__&#39;: 
 </section>
 </section>
 <section id="delete-objects">
-<h2>Delete Objects<a class="headerlink" href="#delete-objects" title="Permalink to this heading">#</a></h2>
+<h2>Delete Objects<a class="headerlink" href="#delete-objects" title="Link to this heading">#</a></h2>
 <p>In Python, we can also delete the object by using a <strong><code class="docutils literal notranslate"><span class="pre">del</span></code></strong> keyword. An object can be anything like, class object, list, tuple, set, etc.</p>
 <p><strong>Syntax:</strong></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">del</span> <span class="n">object_name</span>
@@ -1275,7 +1277,7 @@ Student.__dict__: {&#39;__module__&#39;: &#39;__main__&#39;, &#39;__doc__&#39;: 
 <img src="img/objr.png" width="450"/>
 </div></section>
 <section id="data-hiding">
-<h2>Data Hiding<a class="headerlink" href="#data-hiding" title="Permalink to this heading">#</a></h2>
+<h2>Data Hiding<a class="headerlink" href="#data-hiding" title="Link to this heading">#</a></h2>
 <p>An object’s attributes may or may not be visible outside the class definition. You need to name attributes with a double underscore prefix, and those attributes then will not be directly <strong>visible</strong> to outsiders.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1416,6 +1418,7 @@ Student.__dict__: {&#39;__module__&#39;: &#39;__main__&#39;, &#39;__doc__&#39;: 
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
+
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> Contents
@@ -1489,8 +1492,8 @@ By Anukool Chaturvedi
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
-<script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+  <script src="../../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
   <footer class="bd-footer">
   </footer>

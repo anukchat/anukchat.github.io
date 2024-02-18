@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" >
+<html lang="en" data-content_root="../../../../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Rename columns in Pandas DataFrame &#8212; Anukool&#39;s almanac</title>
   
@@ -19,53 +18,49 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="../../../../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link href="../../../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
   
-  <link href="../../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../../../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
-<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
-  <script src="../../../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
-    <script src="../../../../_static/jquery.js"></script>
-    <script src="../../../../_static/underscore.js"></script>
-    <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../../../../_static/doctools.js"></script>
-    <script src="../../../../_static/clipboard.min.js"></script>
-    <script src="../../../../_static/copybutton.js"></script>
-    <script src="../../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../../../_static/togglebutton.js"></script>
+    <script src="../../../../_static/togglebutton.js?v=4a39c7ea"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../../../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../../../../_static/sphinx-thebe.js"></script>
+    <script src="../../../../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'content/tools/pandas/001_Python_Pandas_Methods/007_Python_Pandas_DataFrame_rename_columns';</script>
     <link rel="canonical" href="https://anukchat.github.io/content/tools/pandas/001_Python_Pandas_Methods/007_Python_Pandas_DataFrame_rename_columns.html" />
-    <link rel="shortcut icon" href="../../../../_static/mesh-smallest.png"/>
+    <link rel="icon" href="../../../../_static/mesh-smallest.png"/>
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
     <link rel="next" title="Convert Pandas DataFrame to Python dictionary" href="008_Python_Pandas_DataFrame_to_Python_dictionary.html" />
@@ -79,10 +74,9 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
   
   <div id="pst-scroll-pixel-helper"></div>
-
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
     <i class="fa-solid fa-arrow-up"></i>
@@ -123,11 +117,14 @@ const thebe_selector_output = ".output, .cell_output"
 </form></div>
   </div>
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -155,7 +152,18 @@ const thebe_selector_output = ".output, .cell_output"
     <p class="title logo__title">Anukool's almanac</p>
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Essentials</span></p>
 <ul class="nav bd-sidenav">
@@ -220,13 +228,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../../essentials/python/files/files_toc.html">Files</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../../essentials/python/files/001_Python_File_Input_Output.html">Python File I/O</a></li>
-
-
-
-
-
-
+<li class="toctree-l3"><a class="reference internal" href="../../../essentials/python/files/001_Python_File_Input_Output.html">File I/O</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../essentials/python/files/002_Python_File_Directory.html">File directory</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../essentials/python/files/003_Python_File_Exception.html">File exception</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../essentials/python/files/004_Python_Exceptions_Handling.html">Exceptions handling</a></li>
@@ -535,11 +537,11 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="rename-columns-in-pandas-dataframe">
-<h1>Rename columns in Pandas DataFrame<a class="headerlink" href="#rename-columns-in-pandas-dataframe" title="Permalink to this heading">#</a></h1>
-<p>In Python, renaming columns label is useful when working with a pandas Dataframe with no column names or want to rename a specific column’s names. This article covers all the cases of renaming column labels of the pandas <strong><a class="reference internal" href="../001_Python_Pandas_DataFrame.html"><span class="doc std std-doc">Pandas DataFrame</span></a></strong>.</p>
+<h1>Rename columns in Pandas DataFrame<a class="headerlink" href="#rename-columns-in-pandas-dataframe" title="Link to this heading">#</a></h1>
+<p>In Python, renaming columns label is useful when working with a pandas Dataframe with no column names or want to rename a specific column’s names. This article covers all the cases of renaming column labels of the pandas <strong><a class="reference internal" href="../001_Python_Pandas_DataFrame.html"><span class="std std-doc">Pandas DataFrame</span></a></strong>.</p>
 <p>You will learn the following functions available in the pandas to rename columns of a simple DataFrame as well as multi-index DataFrame.</p>
 <table class="table">
 <thead>
@@ -569,7 +571,7 @@ document.write(`
 </tbody>
 </table>
 <section id="the-dataframe-rename-function">
-<h2>The <code class="docutils literal notranslate"><span class="pre">DataFrame.rename()</span></code> function<a class="headerlink" href="#the-dataframe-rename-function" title="Permalink to this heading">#</a></h2>
+<h2>The <code class="docutils literal notranslate"><span class="pre">DataFrame.rename()</span></code> function<a class="headerlink" href="#the-dataframe-rename-function" title="Link to this heading">#</a></h2>
 <p>This is the most widely used pandas function for renaming columns and row indexes. Let’s see the syntax of it before moving to examples.</p>
 <p><strong>Syntax:</strong></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">DataFrame</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">mapper</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">copy</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">errors</span><span class="o">=</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
@@ -592,7 +594,7 @@ document.write(`
 </ul>
 </section>
 <section id="rename-a-single-column">
-<h2>Rename a single column<a class="headerlink" href="#rename-a-single-column" title="Permalink to this heading">#</a></h2>
+<h2>Rename a single column<a class="headerlink" href="#rename-a-single-column" title="Link to this heading">#</a></h2>
 <p>Sometimes it is required to rename the single or specific column names only.  Use the column parameter of <strong><code class="docutils literal notranslate"><span class="pre">DataFrame.rename()</span></code></strong> function and pass the columns to be renamed.</p>
 <p><strong>Syntax:</strong></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;column_current_name&#39;</span><span class="p">:</span> <span class="s1">&#39;new_name&#39;</span><span class="p">})</span>
@@ -632,7 +634,7 @@ document.write(`
 </div>
 </section>
 <section id="rename-multiple-columns">
-<h2>Rename multiple columns<a class="headerlink" href="#rename-multiple-columns" title="Permalink to this heading">#</a></h2>
+<h2>Rename multiple columns<a class="headerlink" href="#rename-multiple-columns" title="Link to this heading">#</a></h2>
 <p>Use any of the following two parameters of a <strong><code class="docutils literal notranslate"><span class="pre">DataFrame.rename()</span></code></strong> to rename multiple or all column labels at once.</p>
 <ul class="simple">
 <li><p>Use the <strong><code class="docutils literal notranslate"><span class="pre">column</span></code></strong> parameter and pass all column names you want to rename as a dictionary (old column name as a key and new column name as a value).</p></li>
@@ -669,7 +671,7 @@ Columns after renaming
 </div>
 </section>
 <section id="using-rename-with-axis-columns-or-axis-1">
-<h2>Using rename with <code class="docutils literal notranslate"><span class="pre">axis='columns'</span></code> or <code class="docutils literal notranslate"><span class="pre">axis=1</span></code><a class="headerlink" href="#using-rename-with-axis-columns-or-axis-1" title="Permalink to this heading">#</a></h2>
+<h2>Using rename with <code class="docutils literal notranslate"><span class="pre">axis='columns'</span></code> or <code class="docutils literal notranslate"><span class="pre">axis=1</span></code><a class="headerlink" href="#using-rename-with-axis-columns-or-axis-1" title="Link to this heading">#</a></h2>
 <p>Let’s see how to rename using the axis-style convention. This is a <strong>new approach</strong>.( This approach makes this method match the rest of the pandas API) .</p>
 <p>Use the <strong><code class="docutils literal notranslate"><span class="pre">axis</span></code></strong> parameter of a <strong><code class="docutils literal notranslate"><span class="pre">df.rename()</span></code></strong> to rename columns and row index. The <strong><code class="docutils literal notranslate"><span class="pre">axis</span></code></strong> can be a row or column. The column axis represented as 1 or ‘columns’.</p>
 <p>Set <strong><code class="docutils literal notranslate"><span class="pre">axis=1</span></code></strong> and pass column names you want to rename as a dictionary (Key-Value pairs).</p>
@@ -686,7 +688,7 @@ Columns after renaming
 </div>
 </section>
 <section id="rename-columns-in-place">
-<h2>Rename columns in place<a class="headerlink" href="#rename-columns-in-place" title="Permalink to this heading">#</a></h2>
+<h2>Rename columns in place<a class="headerlink" href="#rename-columns-in-place" title="Link to this heading">#</a></h2>
 <p>In the above examples, whenever we executed rename operations, pandas created a new copy of DataFrame because the modification is not-in place.</p>
 <p>Specify <strong><code class="docutils literal notranslate"><span class="pre">inplace=True</span></code></strong> to rename the existing DataFrame rather than creating a copy of it.</p>
 <ul class="simple">
@@ -721,7 +723,7 @@ Columns after renaming
 </div>
 </section>
 <section id="rename-column-using-a-function">
-<h2>Rename column using a function<a class="headerlink" href="#rename-column-using-a-function" title="Permalink to this heading">#</a></h2>
+<h2>Rename column using a function<a class="headerlink" href="#rename-column-using-a-function" title="Link to this heading">#</a></h2>
 <p>We can also use the function to rename column labels by applying some logic to it. We can use built-in as well as user-defined functions to rename columns.</p>
 <p><strong>Example</strong></p>
 <p>In the below example, we rename all column names to UPPER CASE using the string function <strong><code class="docutils literal notranslate"><span class="pre">str.upper</span></code></strong>.</p>
@@ -752,7 +754,7 @@ Columns after renaming
 </div>
 </section>
 <section id="use-lambda-expressions-to-rename">
-<h2>Use lambda expressions to rename<a class="headerlink" href="#use-lambda-expressions-to-rename" title="Permalink to this heading">#</a></h2>
+<h2>Use lambda expressions to rename<a class="headerlink" href="#use-lambda-expressions-to-rename" title="Link to this heading">#</a></h2>
 <p>Also, you can use lambda expressions to rename column label or row index. Let’s see how to remove the first character from each column label using lambda.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -781,7 +783,7 @@ Columns after renaming
 </div>
 </section>
 <section id="rename-columns-by-removing-leading-and-trailing-spaces">
-<h2>Rename columns by removing leading and trailing spaces<a class="headerlink" href="#rename-columns-by-removing-leading-and-trailing-spaces" title="Permalink to this heading">#</a></h2>
+<h2>Rename columns by removing leading and trailing spaces<a class="headerlink" href="#rename-columns-by-removing-leading-and-trailing-spaces" title="Link to this heading">#</a></h2>
 <p>Use lambda expression to rename columns by removing leading and trailing spaces from the column names</p>
 <p><strong>Example:</strong></p>
 <div class="cell docutils container">
@@ -810,7 +812,7 @@ Columns after renaming
 </div>
 </section>
 <section id="rename-all-columns-with-a-list">
-<h2>Rename all columns with a list<a class="headerlink" href="#rename-all-columns-with-a-list" title="Permalink to this heading">#</a></h2>
+<h2>Rename all columns with a list<a class="headerlink" href="#rename-all-columns-with-a-list" title="Link to this heading">#</a></h2>
 <p>Suppose we have a list of column names that we need to use to rename the existing DataFrame. In that case, we can pass the list of column labels to a <strong><code class="docutils literal notranslate"><span class="pre">DataFrame.columns</span></code></strong>  attributes as shown in the below example.</p>
 <p>It will replace the existing names with the new names in the order you provide.</p>
 <div class="cell docutils container">
@@ -839,7 +841,7 @@ Columns after renaming
 </div>
 </section>
 <section id="rename-column-by-index-position">
-<h2>Rename column by index position<a class="headerlink" href="#rename-column-by-index-position" title="Permalink to this heading">#</a></h2>
+<h2>Rename column by index position<a class="headerlink" href="#rename-column-by-index-position" title="Link to this heading">#</a></h2>
 <p>If there is a case where we want to rename the first column or the last column in the DataFrame, but we do not know the column name still we can rename the column using a <strong><code class="docutils literal notranslate"><span class="pre">DataFrame.columns</span></code></strong> attribute.</p>
 <blockquote>
 <div><p><strong>Note:</strong> Column index starts from 0 (zero) and it goes till the last column whose index value will be <strong><code class="docutils literal notranslate"><span class="pre">len(df.columns)-1</span></code></strong>.</p>
@@ -870,7 +872,7 @@ df.columns[2]: percentage
 </div>
 </section>
 <section id="raise-error-while-renaming-a-column">
-<h2>Raise error while renaming a column<a class="headerlink" href="#raise-error-while-renaming-a-column" title="Permalink to this heading">#</a></h2>
+<h2>Raise error while renaming a column<a class="headerlink" href="#raise-error-while-renaming-a-column" title="Link to this heading">#</a></h2>
 <p>By default, The <strong><code class="docutils literal notranslate"><span class="pre">DataFrame.rename()</span></code></strong> doesn’t throw any error if column names you tried to rename doesn’t exist in the dataset.</p>
 <p>Do you want to throw an error in such cases?</p>
 <p>If yes, then use the <strong><code class="docutils literal notranslate"><span class="pre">errors</span></code></strong> parameter of <strong><code class="docutils literal notranslate"><span class="pre">DataFrame.rename()</span></code></strong>.</p>
@@ -939,7 +941,7 @@ df.columns[2]: percentage
 </div>
 </section>
 <section id="rename-column-by-adding-prefix-suffix">
-<h2>Rename column by adding prefix/suffix<a class="headerlink" href="#rename-column-by-adding-prefix-suffix" title="Permalink to this heading">#</a></h2>
+<h2>Rename column by adding prefix/suffix<a class="headerlink" href="#rename-column-by-adding-prefix-suffix" title="Link to this heading">#</a></h2>
 <p>We can rename the DataFrame columns using <strong><code class="docutils literal notranslate"><span class="pre">DataFrame.add_prefix()</span></code></strong> and <strong><code class="docutils literal notranslate"><span class="pre">DataFrame.add_suffix()</span></code></strong> functions. It appends the input string as a prefix or suffix to the column names respectively.</p>
 <blockquote>
 <div><p><strong>Note:</strong> These functions are only applicable to column labels and not row index of the DataFrame.</p>
@@ -970,7 +972,7 @@ df.columns[2]: percentage
 </div>
 </section>
 <section id="rename-column-using-dataframe-set-axis">
-<h2>Rename column using <code class="docutils literal notranslate"><span class="pre">DataFrame.set_axis()</span></code><a class="headerlink" href="#rename-column-using-dataframe-set-axis" title="Permalink to this heading">#</a></h2>
+<h2>Rename column using <code class="docutils literal notranslate"><span class="pre">DataFrame.set_axis()</span></code><a class="headerlink" href="#rename-column-using-dataframe-set-axis" title="Link to this heading">#</a></h2>
 <p>Use the <strong><code class="docutils literal notranslate"><span class="pre">set_axis()</span></code></strong> method you to rename all the index or column labels with a list. Using this function we can reassign column headers or row index of the DataFrame.</p>
 <p>This function is useful when working with a data set with no column names.</p>
 <p><strong>Syntax:</strong></p>
@@ -1013,14 +1015,14 @@ df.columns[2]: percentage
 </div>
 </section>
 <section id="rename-column-in-multi-index-dataframe">
-<h2>Rename column in multi-index DataFrame<a class="headerlink" href="#rename-column-in-multi-index-dataframe" title="Permalink to this heading">#</a></h2>
+<h2>Rename column in multi-index DataFrame<a class="headerlink" href="#rename-column-in-multi-index-dataframe" title="Link to this heading">#</a></h2>
 <p>Pandas DataFrame can have single or multiple rows as column labels, i.e., a header to identify the columns. DataFrame with multiple headers is called a <strong>multi-index DataFrame</strong>.</p>
 <p>The below diagram shows the multi-index DataFrame where header levels start with 0.</p>
 <div>
 <img src="img/micolh.png" width="600"/>
 </div></section>
 <section id="rename-columns-in-all-levels">
-<h2>Rename columns in all levels<a class="headerlink" href="#rename-columns-in-all-levels" title="Permalink to this heading">#</a></h2>
+<h2>Rename columns in all levels<a class="headerlink" href="#rename-columns-in-all-levels" title="Link to this heading">#</a></h2>
 <p>We can apply <strong><code class="docutils literal notranslate"><span class="pre">DataFrame.rename()</span></code></strong> function on multi-index DataFrame.</p>
 <p>In the below example, we use <strong><code class="docutils literal notranslate"><span class="pre">df.rename(columns={'old_col':'new_col'})</span></code></strong> which rename the column labels in all the levels of multi-index DataFrame.</p>
 <div class="cell docutils container">
@@ -1055,7 +1057,7 @@ df.columns[2]: percentage
 </div>
 </section>
 <section id="rename-columns-in-defined-level">
-<h2>Rename columns in defined level<a class="headerlink" href="#rename-columns-in-defined-level" title="Permalink to this heading">#</a></h2>
+<h2>Rename columns in defined level<a class="headerlink" href="#rename-columns-in-defined-level" title="Link to this heading">#</a></h2>
 <p>It is the case when we have the same column labels in multiple levels of the multi-index DataFrame. But, we need to rename the column in a selected level only. Or we want to rename column labels of a particular level only in such cases we can use the level parameter of <strong><code class="docutils literal notranslate"><span class="pre">DataFrame.rename()</span></code></strong>.</p>
 <p>This parameter is used to specify the <strong>level name</strong> or <strong>level index</strong> where we need to rename the columns.</p>
 <p><strong>Example:</strong></p>
@@ -1150,6 +1152,7 @@ df.columns[2]: percentage
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
+
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> Contents
@@ -1220,8 +1223,8 @@ By Anukool Chaturvedi
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
-<script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+  <script src="../../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
   <footer class="bd-footer">
   </footer>

@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" >
+<html lang="en" data-content_root="../../../../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Python Input, Output and Import &#8212; Anukool&#39;s almanac</title>
   
@@ -19,53 +18,49 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="../../../../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link href="../../../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
   
-  <link href="../../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../../../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
-<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
-  <script src="../../../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
-    <script src="../../../../_static/jquery.js"></script>
-    <script src="../../../../_static/underscore.js"></script>
-    <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../../../../_static/doctools.js"></script>
-    <script src="../../../../_static/clipboard.min.js"></script>
-    <script src="../../../../_static/copybutton.js"></script>
-    <script src="../../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../../../_static/togglebutton.js"></script>
+    <script src="../../../../_static/togglebutton.js?v=4a39c7ea"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../../../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../../../../_static/sphinx-thebe.js"></script>
+    <script src="../../../../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'content/essentials/python/introduction/009_Python_Input_Output_Import';</script>
     <link rel="canonical" href="https://anukchat.github.io/content/essentials/python/introduction/009_Python_Input_Output_Import.html" />
-    <link rel="shortcut icon" href="../../../../_static/mesh-smallest.png"/>
+    <link rel="icon" href="../../../../_static/mesh-smallest.png"/>
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
     <link rel="next" title="Python Operators" href="010_Python_Operators.html" />
@@ -79,10 +74,9 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
   
   <div id="pst-scroll-pixel-helper"></div>
-
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
     <i class="fa-solid fa-arrow-up"></i>
@@ -123,11 +117,14 @@ const thebe_selector_output = ".output, .cell_output"
 </form></div>
   </div>
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -155,7 +152,18 @@ const thebe_selector_output = ".output, .cell_output"
     <p class="title logo__title">Anukool's almanac</p>
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Essentials</span></p>
 <ul class="current nav bd-sidenav">
@@ -220,13 +228,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../files/files_toc.html">Files</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../files/001_Python_File_Input_Output.html">Python File I/O</a></li>
-
-
-
-
-
-
+<li class="toctree-l3"><a class="reference internal" href="../files/001_Python_File_Input_Output.html">File I/O</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../files/002_Python_File_Directory.html">File directory</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../files/003_Python_File_Exception.html">File exception</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../files/004_Python_Exceptions_Handling.html">Exceptions handling</a></li>
@@ -540,15 +542,15 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="python-input-output-and-import">
-<h1>Python Input, Output and Import<a class="headerlink" href="#python-input-output-and-import" title="Permalink to this heading">#</a></h1>
+<h1>Python Input, Output and Import<a class="headerlink" href="#python-input-output-and-import" title="Link to this heading">#</a></h1>
 <p>This class focuses on two built-in functions <strong><code class="docutils literal notranslate"><span class="pre">print()</span></code></strong> and <strong><code class="docutils literal notranslate"><span class="pre">input()</span></code></strong> to perform I/O task in Python. Also, you will learn to import modules and use them in your program.</p>
 <p>Python provides numerous built-in functions that are readily available to us at the Python prompt.</p>
 <p>Some of the functions like <strong><code class="docutils literal notranslate"><span class="pre">print()</span></code></strong> and <strong><code class="docutils literal notranslate"><span class="pre">input()</span></code></strong> are widely used for standard input and output operations respectively. Let us see the output section first.</p>
 <section id="python-output-using-print-function">
-<h2>1. Python Output Using <code class="docutils literal notranslate"><span class="pre">print()</span></code> function<a class="headerlink" href="#python-output-using-print-function" title="Permalink to this heading">#</a></h2>
+<h2>1. Python Output Using <code class="docutils literal notranslate"><span class="pre">print()</span></code> function<a class="headerlink" href="#python-output-using-print-function" title="Link to this heading">#</a></h2>
 <p>We use the <strong><code class="docutils literal notranslate"><span class="pre">print()</span></code></strong> function to output data to the standard output device (screen). We can also output data to a file but this will be discussed later.</p>
 <p>An example of its use is given below.</p>
 <div class="cell docutils container">
@@ -606,7 +608,7 @@ document.write(`
 </div>
 </div>
 <section id="output-formatting">
-<h3>Output formatting<a class="headerlink" href="#output-formatting" title="Permalink to this heading">#</a></h3>
+<h3>Output formatting<a class="headerlink" href="#output-formatting" title="Link to this heading">#</a></h3>
 <p>Sometimes we would like to format our output to make it look attractive. This can be done by using the <strong><code class="docutils literal notranslate"><span class="pre">str.format()</span></code></strong> method. This method is visible to any string object.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -669,7 +671,7 @@ The value of x is 12.346
 </section>
 </section>
 <section id="python-input-using-input-function">
-<h2>2. Python Input Using <code class="docutils literal notranslate"><span class="pre">input()</span></code> function<a class="headerlink" href="#python-input-using-input-function" title="Permalink to this heading">#</a></h2>
+<h2>2. Python Input Using <code class="docutils literal notranslate"><span class="pre">input()</span></code> function<a class="headerlink" href="#python-input-using-input-function" title="Link to this heading">#</a></h2>
 <p>Up until now, our programs were static. The value of variables was defined or hard coded into the source code.</p>
 <p>To allow flexibility, we might want to take the input from the user. In Python, we have a built-in function <strong><code class="docutils literal notranslate"><span class="pre">input()</span></code></strong> to accept user input.</p>
 <p><strong>Syntax</strong>:</p>
@@ -776,7 +778,7 @@ The value of x is 12.346
 </div>
 </div>
 <section id="accepting-user-inputs-as-both-integer-and-string">
-<h3>Accepting User Inputs (as both integer and string)<a class="headerlink" href="#accepting-user-inputs-as-both-integer-and-string" title="Permalink to this heading">#</a></h3>
+<h3>Accepting User Inputs (as both integer and string)<a class="headerlink" href="#accepting-user-inputs-as-both-integer-and-string" title="Link to this heading">#</a></h3>
 <p><strong><code class="docutils literal notranslate"><span class="pre">input(prompt)</span></code></strong> prompts for and returns input as a string. Hence, if the user inputs a integer, the code should convert the string to an integer and then proceed.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -868,7 +870,7 @@ type of name &lt;class &#39;str&#39;&gt;
 </div>
 </section>
 <section id="accepting-user-inputs-only-as-integer">
-<h3>Accepting User Inputs (only as integer)<a class="headerlink" href="#accepting-user-inputs-only-as-integer" title="Permalink to this heading">#</a></h3>
+<h3>Accepting User Inputs (only as integer)<a class="headerlink" href="#accepting-user-inputs-only-as-integer" title="Link to this heading">#</a></h3>
 <p>A useful function to use in conjunction with this is <strong><code class="docutils literal notranslate"><span class="pre">eval()</span></code></strong> which takes a string and evaluates it as a python expression.</p>
 <p><em>Note:</em> In notebooks it is often easier just to modify the code than to prompt for input.</p>
 <div class="cell docutils container">
@@ -932,7 +934,7 @@ Addition of two number is:  9
 </div>
 </section>
 <section id="practice-problem">
-<h3>Practice Problem<a class="headerlink" href="#practice-problem" title="Permalink to this heading">#</a></h3>
+<h3>Practice Problem<a class="headerlink" href="#practice-problem" title="Link to this heading">#</a></h3>
 <p>Accept one integer and one float number from the user and calculate the addition of both the numbers.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1044,7 +1046,7 @@ cube of 3 is 27
 </div>
 </section>
 <section id="accept-float-input-from-user">
-<h3>Accept float input from User<a class="headerlink" href="#accept-float-input-from-user" title="Permalink to this heading">#</a></h3>
+<h3>Accept float input from User<a class="headerlink" href="#accept-float-input-from-user" title="Link to this heading">#</a></h3>
 <p>Let’s see how to accept float value from a user in Python. You need to convert user input to the float number using the <strong><code class="docutils literal notranslate"><span class="pre">float()</span></code></strong> function as we did for the integer value.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1067,7 +1069,7 @@ type is: &lt;class &#39;float&#39;&gt;
 </div>
 </section>
 <section id="get-multiple-input-values-from-a-user-in-one-line">
-<h3>Get multiple input values from a user in one line<a class="headerlink" href="#get-multiple-input-values-from-a-user-in-one-line" title="Permalink to this heading">#</a></h3>
+<h3>Get multiple input values from a user in one line<a class="headerlink" href="#get-multiple-input-values-from-a-user-in-one-line" title="Link to this heading">#</a></h3>
 <p>In Python, It is possible to get multiple values from the user in one line. i.e., In Python, we can accept two or three values from the user in one <strong><code class="docutils literal notranslate"><span class="pre">input()</span></code></strong> call.</p>
 <p>For example, in a single execution of the <strong><code class="docutils literal notranslate"><span class="pre">input()</span></code></strong> function, we can ask the user his/her name, age, and phone number and store it in three different variables. Lets see how to do this.</p>
 <div class="cell docutils container">
@@ -1089,7 +1091,7 @@ User Details:  Clark 36 13756537093
 </div>
 </section>
 <section id="accept-multiline-input-from-a-user">
-<h3>Accept multiline input from a user<a class="headerlink" href="#accept-multiline-input-from-a-user" title="Permalink to this heading">#</a></h3>
+<h3>Accept multiline input from a user<a class="headerlink" href="#accept-multiline-input-from-a-user" title="Link to this heading">#</a></h3>
 <p>As you know, the input() function does not allow the user to enter put lines separated by a newline. If the user tries to enter multiline input, it prints back only the first line. Let’s see how to gets multiple line input.</p>
 <p>As you know, the input() function does not allow the user to enter put lines separated by a newline. If the user tries to enter multiline input, it prints back only the first line. Let’s see how to gets multiple line input.</p>
 <p>We can use for loop. In each iteration, we can get input string from the user and then .join() them using \n, or you can also concatenate each input string using + operator separated by \n.</p>
@@ -1126,7 +1128,7 @@ Also, I love cooking and singing.
 </div>
 </section>
 <section id="format-output-strings-by-its-positions">
-<h3>Format output strings by its positions<a class="headerlink" href="#format-output-strings-by-its-positions" title="Permalink to this heading">#</a></h3>
+<h3>Format output strings by its positions<a class="headerlink" href="#format-output-strings-by-its-positions" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">firstName</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter First Name: &quot;</span><span class="p">)</span>
@@ -1157,7 +1159,7 @@ Ethan, Hunt Ethan, Hunt works at Mission Impossible
 </div>
 </section>
 <section id="accessing-output-string-arguments-by-name">
-<h3>Accessing output string arguments by name<a class="headerlink" href="#accessing-output-string-arguments-by-name" title="Permalink to this heading">#</a></h3>
+<h3>Accessing output string arguments by name<a class="headerlink" href="#accessing-output-string-arguments-by-name" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter Name: &quot;</span><span class="p">)</span>
@@ -1180,7 +1182,7 @@ Student: Name:  David, Marks: 85%
 </div>
 </section>
 <section id="output-text-alignment-specifying-a-width">
-<h3>Output text alignment specifying a width<a class="headerlink" href="#output-text-alignment-specifying-a-width" title="Permalink to this heading">#</a></h3>
+<h3>Output text alignment specifying a width<a class="headerlink" href="#output-text-alignment-specifying-a-width" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">text</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter text: &quot;</span><span class="p">)</span>
@@ -1208,7 +1210,7 @@ Python
 </div>
 </section>
 <section id="specifying-a-sign-while-displaying-output-numbers">
-<h3>Specifying a sign while displaying output numbers<a class="headerlink" href="#specifying-a-sign-while-displaying-output-numbers" title="Permalink to this heading">#</a></h3>
+<h3>Specifying a sign while displaying output numbers<a class="headerlink" href="#specifying-a-sign-while-displaying-output-numbers" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">positive_number</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter Positive Number: &quot;</span><span class="p">))</span>
@@ -1236,7 +1238,7 @@ Enter Negative Number: -4
 </div>
 </section>
 <section id="display-output-number-in-various-type-format">
-<h3>Display output Number in various type format<a class="headerlink" href="#display-output-number-in-various-type-format" title="Permalink to this heading">#</a></h3>
+<h3>Display output Number in various type format<a class="headerlink" href="#display-output-number-in-various-type-format" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">number</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter number: &quot;</span><span class="p">))</span>
@@ -1270,7 +1272,7 @@ Output number in hexadecimal format: 3f
 </div>
 </section>
 <section id="display-numbers-in-floating-point-format">
-<h3>Display numbers in floating-point format<a class="headerlink" href="#display-numbers-in-floating-point-format" title="Permalink to this heading">#</a></h3>
+<h3>Display numbers in floating-point format<a class="headerlink" href="#display-numbers-in-floating-point-format" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">number</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter float Number: &quot;</span><span class="p">))</span>
@@ -1304,7 +1306,7 @@ Output Exponent notation3.300000E+01
 </div>
 </section>
 <section id="output-string-justification">
-<h3>Output String justification<a class="headerlink" href="#output-string-justification" title="Permalink to this heading">#</a></h3>
+<h3>Output String justification<a class="headerlink" href="#output-string-justification" title="Link to this heading">#</a></h3>
 <p>Let’s see how to use <strong><code class="docutils literal notranslate"><span class="pre">str.rjust()</span></code></strong>,   <strong><code class="docutils literal notranslate"><span class="pre">str.ljust()</span></code></strong> and <strong><code class="docutils literal notranslate"><span class="pre">str.center()</span></code></strong> to justify text output on screen and console.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1331,7 +1333,7 @@ Center justification **************************Jupyter**************************
 </section>
 </section>
 <section id="python-import-function">
-<h2>3. Python <code class="docutils literal notranslate"><span class="pre">Import</span></code> function<a class="headerlink" href="#python-import-function" title="Permalink to this heading">#</a></h2>
+<h2>3. Python <code class="docutils literal notranslate"><span class="pre">Import</span></code> function<a class="headerlink" href="#python-import-function" title="Link to this heading">#</a></h2>
 <p>When our program grows bigger, it is a good idea to break it into different modules.</p>
 <p>A module is a file containing Python definitions and statements. Python modules have a filename and end with the extension <strong><code class="docutils literal notranslate"><span class="pre">.py</span></code></strong>.</p>
 <p>Definitions inside a module can be imported to another module or the interactive interpreter in Python. We use the <strong><code class="docutils literal notranslate"><span class="pre">import</span></code></strong> keyword to do this.</p>
@@ -1437,6 +1439,7 @@ Center justification **************************Jupyter**************************
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
+
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> Contents
@@ -1512,8 +1515,8 @@ By Anukool Chaturvedi
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
-<script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+  <script src="../../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
   <footer class="bd-footer">
   </footer>

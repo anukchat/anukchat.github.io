@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" >
+<html lang="en" data-content_root="../../../../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Python Tuple &#8212; Anukool&#39;s almanac</title>
   
@@ -19,53 +18,49 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="../../../../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link href="../../../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
   
-  <link href="../../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../../../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
-<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
-  <script src="../../../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
-    <script src="../../../../_static/jquery.js"></script>
-    <script src="../../../../_static/underscore.js"></script>
-    <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../../../../_static/doctools.js"></script>
-    <script src="../../../../_static/clipboard.min.js"></script>
-    <script src="../../../../_static/copybutton.js"></script>
-    <script src="../../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../../../_static/togglebutton.js"></script>
+    <script src="../../../../_static/togglebutton.js?v=4a39c7ea"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../../../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../../../../_static/sphinx-thebe.js"></script>
+    <script src="../../../../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'content/essentials/python/datatypes/004_Python_Tuple';</script>
     <link rel="canonical" href="https://anukchat.github.io/content/essentials/python/datatypes/004_Python_Tuple.html" />
-    <link rel="shortcut icon" href="../../../../_static/mesh-smallest.png"/>
+    <link rel="icon" href="../../../../_static/mesh-smallest.png"/>
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
     <link rel="next" title="Python Dictionary" href="005_Python_Dictionary.html" />
@@ -79,10 +74,9 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
   
   <div id="pst-scroll-pixel-helper"></div>
-
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
     <i class="fa-solid fa-arrow-up"></i>
@@ -123,11 +117,14 @@ const thebe_selector_output = ".output, .cell_output"
 </form></div>
   </div>
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -155,7 +152,18 @@ const thebe_selector_output = ".output, .cell_output"
     <p class="title logo__title">Anukool's almanac</p>
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Essentials</span></p>
 <ul class="current nav bd-sidenav">
@@ -220,13 +228,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../files/files_toc.html">Files</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../files/001_Python_File_Input_Output.html">Python File I/O</a></li>
-
-
-
-
-
-
+<li class="toctree-l3"><a class="reference internal" href="../files/001_Python_File_Input_Output.html">File I/O</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../files/002_Python_File_Directory.html">File directory</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../files/003_Python_File_Exception.html">File exception</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../files/004_Python_Exceptions_Handling.html">Exceptions handling</a></li>
@@ -542,9 +544,9 @@ document.write(`
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-should-we-use-tuple-advantages-of-tuple">Why should we use Tuple? (Advantages of Tuple)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#advantages-of-tuple-over-list">Advantages of Tuple over List</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-span-class-label-label-default-tuple-span">💻 Exercises ➞ <span class="label label-default">Tuple</span></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-span-class-label-label-default-level-1-span">Exercises ➞ <span class="label label-default">Level 1</span></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-span-class-label-label-default-level-2-span">Exercises ➞ <span class="label label-default">Level 2</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-tuple">💻 Exercises ➞ <span class="label label-default">Tuple</span></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-level-1">Exercises ➞ <span class="label label-default">Level 1</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-level-2">Exercises ➞ <span class="label label-default">Level 2</span></a></li>
 </ul>
 </li>
 </ul>
@@ -556,17 +558,17 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="python-tuple">
-<h1>Python Tuple<a class="headerlink" href="#python-tuple" title="Permalink to this heading">#</a></h1>
+<h1>Python Tuple<a class="headerlink" href="#python-tuple" title="Link to this heading">#</a></h1>
 <p>In this class, you’ll learn everything about Python tuples. More specifically, what are tuples, how to create them, when to use them and various methods you should be familiar with.</p>
 <section id="what-is-tuple-in-python">
-<h2>What is Tuple in Python?<a class="headerlink" href="#what-is-tuple-in-python" title="Permalink to this heading">#</a></h2>
-<p>A tuple in Python is similar to a <strong><a class="reference internal" href="003_Python_List.html"><span class="doc std std-doc">list</span></a></strong>.
+<h2>What is Tuple in Python?<a class="headerlink" href="#what-is-tuple-in-python" title="Link to this heading">#</a></h2>
+<p>A tuple in Python is similar to a <strong><a class="reference internal" href="003_Python_List.html"><span class="std std-doc">list</span></a></strong>.
 Only the difference is that list is enclosed between <strong>square bracket</strong> <strong><code class="docutils literal notranslate"><span class="pre">[]</span></code></strong>, tuple between <strong>parentheses</strong> <strong><code class="docutils literal notranslate"><span class="pre">()</span></code></strong> and we cannot change the elements of a tuple once it is assigned, i.e., <strong>immutable</strong> whereas we can change the elements of a list i.e., <strong>mutable</strong>.</p>
 <section id="summary">
-<h3>Summary<a class="headerlink" href="#summary" title="Permalink to this heading">#</a></h3>
+<h3>Summary<a class="headerlink" href="#summary" title="Link to this heading">#</a></h3>
 <table class="table">
 <thead>
 <tr class="row-odd"><th class="head text-center"><p>Data types</p></th>
@@ -592,9 +594,9 @@ Only the difference is that list is enclosed between <strong>square bracket</str
 </section>
 </section>
 <section id="creating-python-tuple">
-<h2>Creating Python Tuple<a class="headerlink" href="#creating-python-tuple" title="Permalink to this heading">#</a></h2>
+<h2>Creating Python Tuple<a class="headerlink" href="#creating-python-tuple" title="Link to this heading">#</a></h2>
 <p>A tuple is created by placing all the items (elements) inside <strong>parentheses <code class="docutils literal notranslate"><span class="pre">()</span></code></strong>, separated by <strong>commas <code class="docutils literal notranslate"><span class="pre">,</span></code></strong>. The parentheses are optional, however, it is a good practice to use them.</p>
-<p>A tuple can have any number of items and they may be of different types (integer, float, list, <strong><a class="reference internal" href="002_Python_String.html"><span class="doc std std-doc">string</span></a></strong>, etc.).</p>
+<p>A tuple can have any number of items and they may be of different types (integer, float, list, <strong><a class="reference internal" href="002_Python_String.html"><span class="std std-doc">string</span></a></strong>, etc.).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example:</span>
@@ -721,10 +723,10 @@ dog
 </div>
 </section>
 <section id="access-tuple-elements">
-<h2>Access Tuple Elements<a class="headerlink" href="#access-tuple-elements" title="Permalink to this heading">#</a></h2>
+<h2>Access Tuple Elements<a class="headerlink" href="#access-tuple-elements" title="Link to this heading">#</a></h2>
 <p>There are various ways in which we can access the elements of a tuple.</p>
 <section id="indexing">
-<h3>1. Indexing<a class="headerlink" href="#indexing" title="Permalink to this heading">#</a></h3>
+<h3>1. Indexing<a class="headerlink" href="#indexing" title="Link to this heading">#</a></h3>
 <p>We can use the <strong>index operator</strong> <strong><code class="docutils literal notranslate"><span class="pre">[]</span></code></strong> to access an item in a tuple, where the index starts from 0.</p>
 <p>So, a tuple having 6 elements will have indices from 0 to 5. Trying to access an index outside of the tuple index range(6,7,… in this example) will raise an <strong><code class="docutils literal notranslate"><span class="pre">IndexError</span></code></strong>.</p>
 <p>The index must be an integer, so we cannot use float or other types. This will result in <strong><code class="docutils literal notranslate"><span class="pre">TypeError</span></code></strong>.</p>
@@ -798,7 +800,7 @@ xyz
 </div>
 </section>
 <section id="negative-indexing">
-<h3>2. Negative Indexing<a class="headerlink" href="#negative-indexing" title="Permalink to this heading">#</a></h3>
+<h3>2. Negative Indexing<a class="headerlink" href="#negative-indexing" title="Link to this heading">#</a></h3>
 <p>Python allows negative indexing for its sequences.</p>
 <p>The index of -1 refers to the last item, -2 to the second last item and so on.</p>
 <div class="cell docutils container">
@@ -845,7 +847,7 @@ p
 </div>
 </section>
 <section id="slicing">
-<h3>3. Slicing<a class="headerlink" href="#slicing" title="Permalink to this heading">#</a></h3>
+<h3>3. Slicing<a class="headerlink" href="#slicing" title="Link to this heading">#</a></h3>
 <p>We can access a range of items in a tuple by using the slicing operator <strong><code class="docutils literal notranslate"><span class="pre">:</span></code></strong>(colon).</p>
 <p><strong>Syntax:</strong></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">tuple</span><span class="p">[</span><span class="n">start</span> <span class="p">:</span> <span class="n">stop</span> <span class="p">:</span> <span class="n">step</span><span class="p">]</span>
@@ -884,9 +886,9 @@ p
 </section>
 </section>
 <section id="tuple-operations">
-<h2>Tuple Operations<a class="headerlink" href="#tuple-operations" title="Permalink to this heading">#</a></h2>
+<h2>Tuple Operations<a class="headerlink" href="#tuple-operations" title="Link to this heading">#</a></h2>
 <section id="changing-a-tuple">
-<h3>1. Changing a Tuple<a class="headerlink" href="#changing-a-tuple" title="Permalink to this heading">#</a></h3>
+<h3>1. Changing a Tuple<a class="headerlink" href="#changing-a-tuple" title="Link to this heading">#</a></h3>
 <p>Unlike lists, <strong>tuples are immutable</strong>.</p>
 <p>This means that elements of a tuple cannot be changed once they have been assigned. But, if the element is itself a mutable data type like a list, its nested items can be changed.</p>
 <p>We can also assign a tuple to different values (reassignment).</p>
@@ -980,7 +982,7 @@ p
 </div>
 </section>
 <section id="deleting-a-tuple">
-<h3>2. Deleting a Tuple<a class="headerlink" href="#deleting-a-tuple" title="Permalink to this heading">#</a></h3>
+<h3>2. Deleting a Tuple<a class="headerlink" href="#deleting-a-tuple" title="Link to this heading">#</a></h3>
 <p>As discussed above, we cannot change the elements in a tuple. It means that we cannot delete or remove items from a tuple.</p>
 <p>Deleting a tuple entirely, however, is possible using the keyword <strong>del</strong>.</p>
 <div class="cell docutils container">
@@ -1050,7 +1052,7 @@ p
 </section>
 </section>
 <section id="python-built-in-tuple-functions">
-<h2>Python Built-in Tuple Functions<a class="headerlink" href="#python-built-in-tuple-functions" title="Permalink to this heading">#</a></h2>
+<h2>Python Built-in Tuple Functions<a class="headerlink" href="#python-built-in-tuple-functions" title="Link to this heading">#</a></h2>
 <table class="table">
 <thead>
 <tr class="row-odd"><th class="head text-left"><p>Function</p></th>
@@ -1079,7 +1081,7 @@ p
 </tbody>
 </table>
 <section id="len-tuple-the-len-method-returns-the-number-of-elements-in-the-tuple">
-<h3><strong><code class="docutils literal notranslate"><span class="pre">len(tuple)</span></code></strong> - The <code class="docutils literal notranslate"><span class="pre">len()</span></code> method returns the number of elements in the tuple.<a class="headerlink" href="#len-tuple-the-len-method-returns-the-number-of-elements-in-the-tuple" title="Permalink to this heading">#</a></h3>
+<h3><strong><code class="docutils literal notranslate"><span class="pre">len(tuple)</span></code></strong> - The <code class="docutils literal notranslate"><span class="pre">len()</span></code> method returns the number of elements in the tuple.<a class="headerlink" href="#len-tuple-the-len-method-returns-the-number-of-elements-in-the-tuple" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example:</span>
@@ -1100,7 +1102,7 @@ p
 </div>
 </section>
 <section id="max-tuple-the-max-method-returns-the-elements-from-the-tuple-with-maximum-value-type-of-element-should-be-same-otherwise-complier-throw-typeerror">
-<h3><strong><code class="docutils literal notranslate"><span class="pre">max(tuple)</span></code></strong> - The <code class="docutils literal notranslate"><span class="pre">max()</span></code> method returns the elements from the tuple with maximum value. Type of element should be same otherwise complier throw <code class="docutils literal notranslate"><span class="pre">TypeError</span></code>.<a class="headerlink" href="#max-tuple-the-max-method-returns-the-elements-from-the-tuple-with-maximum-value-type-of-element-should-be-same-otherwise-complier-throw-typeerror" title="Permalink to this heading">#</a></h3>
+<h3><strong><code class="docutils literal notranslate"><span class="pre">max(tuple)</span></code></strong> - The <code class="docutils literal notranslate"><span class="pre">max()</span></code> method returns the elements from the tuple with maximum value. Type of element should be same otherwise complier throw <code class="docutils literal notranslate"><span class="pre">TypeError</span></code>.<a class="headerlink" href="#max-tuple-the-max-method-returns-the-elements-from-the-tuple-with-maximum-value-type-of-element-should-be-same-otherwise-complier-throw-typeerror" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example:</span>
@@ -1121,7 +1123,7 @@ z
 </div>
 </section>
 <section id="min-tuple-the-min-method-returns-the-elements-from-the-tuple-with-minimum-value-type-of-element-should-be-same-otherwise-complier-throw-typeerror">
-<h3><strong><code class="docutils literal notranslate"><span class="pre">min(tuple)</span></code></strong> - The <code class="docutils literal notranslate"><span class="pre">min()</span></code> method returns the elements from the tuple with minimum value. Type of element should be same otherwise complier throw <code class="docutils literal notranslate"><span class="pre">TypeError</span></code>.<a class="headerlink" href="#min-tuple-the-min-method-returns-the-elements-from-the-tuple-with-minimum-value-type-of-element-should-be-same-otherwise-complier-throw-typeerror" title="Permalink to this heading">#</a></h3>
+<h3><strong><code class="docutils literal notranslate"><span class="pre">min(tuple)</span></code></strong> - The <code class="docutils literal notranslate"><span class="pre">min()</span></code> method returns the elements from the tuple with minimum value. Type of element should be same otherwise complier throw <code class="docutils literal notranslate"><span class="pre">TypeError</span></code>.<a class="headerlink" href="#min-tuple-the-min-method-returns-the-elements-from-the-tuple-with-minimum-value-type-of-element-should-be-same-otherwise-complier-throw-typeerror" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example:</span>
@@ -1142,7 +1144,7 @@ x
 </div>
 </section>
 <section id="sorted-dict-the-sorted-function-sorts-the-elements-of-a-given-iterable-in-a-specific-order-either-ascending-or-descending-and-returns-the-sorted-iterable-as-a-list">
-<h3><strong><code class="docutils literal notranslate"><span class="pre">sorted(dict)</span></code></strong> - The <code class="docutils literal notranslate"><span class="pre">sorted()</span></code> function sorts the elements of a given iterable in a specific order (either <strong>ascending</strong> or <strong>descending</strong>) and returns the sorted iterable as a list.<a class="headerlink" href="#sorted-dict-the-sorted-function-sorts-the-elements-of-a-given-iterable-in-a-specific-order-either-ascending-or-descending-and-returns-the-sorted-iterable-as-a-list" title="Permalink to this heading">#</a></h3>
+<h3><strong><code class="docutils literal notranslate"><span class="pre">sorted(dict)</span></code></strong> - The <code class="docutils literal notranslate"><span class="pre">sorted()</span></code> function sorts the elements of a given iterable in a specific order (either <strong>ascending</strong> or <strong>descending</strong>) and returns the sorted iterable as a list.<a class="headerlink" href="#sorted-dict-the-sorted-function-sorts-the-elements-of-a-given-iterable-in-a-specific-order-either-ascending-or-descending-and-returns-the-sorted-iterable-as-a-list" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># vowels tuple</span>
@@ -1161,7 +1163,7 @@ x
 </div>
 </section>
 <section id="tuple-seq-the-tuple-method-converts-a-list-of-items-into-tuples">
-<h3><strong><code class="docutils literal notranslate"><span class="pre">tuple(seq)</span></code></strong> - The <code class="docutils literal notranslate"><span class="pre">tuple()</span></code> method converts a list of items into tuples.<a class="headerlink" href="#tuple-seq-the-tuple-method-converts-a-list-of-items-into-tuples" title="Permalink to this heading">#</a></h3>
+<h3><strong><code class="docutils literal notranslate"><span class="pre">tuple(seq)</span></code></strong> - The <code class="docutils literal notranslate"><span class="pre">tuple()</span></code> method converts a list of items into tuples.<a class="headerlink" href="#tuple-seq-the-tuple-method-converts-a-list-of-items-into-tuples" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example:</span>
@@ -1186,7 +1188,7 @@ x
 </section>
 </section>
 <section id="tuple-methods">
-<h2>Tuple Methods<a class="headerlink" href="#tuple-methods" title="Permalink to this heading">#</a></h2>
+<h2>Tuple Methods<a class="headerlink" href="#tuple-methods" title="Link to this heading">#</a></h2>
 <p>Methods that add items or remove items are not available with tuple. Only the following two methods are available.</p>
 <p>Some examples of Python tuple methods:</p>
 <div class="cell docutils container">
@@ -1209,9 +1211,9 @@ x
 </div>
 </section>
 <section id="other-tuple-operations">
-<h2>Other Tuple Operations<a class="headerlink" href="#other-tuple-operations" title="Permalink to this heading">#</a></h2>
+<h2>Other Tuple Operations<a class="headerlink" href="#other-tuple-operations" title="Link to this heading">#</a></h2>
 <section id="tuple-membership-test">
-<h3>1. Tuple Membership Test<a class="headerlink" href="#tuple-membership-test" title="Permalink to this heading">#</a></h3>
+<h3>1. Tuple Membership Test<a class="headerlink" href="#tuple-membership-test" title="Link to this heading">#</a></h3>
 <p>We can test if an item exists in a tuple or not, using the keyword <strong><code class="docutils literal notranslate"><span class="pre">in</span></code></strong>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1238,7 +1240,7 @@ True
 </div>
 </section>
 <section id="iterating-through-a-tuple">
-<h3>2. Iterating Through a Tuple<a class="headerlink" href="#iterating-through-a-tuple" title="Permalink to this heading">#</a></h3>
+<h3>2. Iterating Through a Tuple<a class="headerlink" href="#iterating-through-a-tuple" title="Link to this heading">#</a></h3>
 <p>We can use a <strong><code class="docutils literal notranslate"><span class="pre">for</span></code></strong> loop to iterate through each item in a tuple.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1259,7 +1261,7 @@ Hello Kate
 </section>
 </section>
 <section id="why-should-we-use-tuple-advantages-of-tuple">
-<h2>Why should we use Tuple? (Advantages of Tuple)<a class="headerlink" href="#why-should-we-use-tuple-advantages-of-tuple" title="Permalink to this heading">#</a></h2>
+<h2>Why should we use Tuple? (Advantages of Tuple)<a class="headerlink" href="#why-should-we-use-tuple-advantages-of-tuple" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Processing of Tuples are <strong>faster</strong> than Lists.</p></li>
 <li><p>It makes the data <strong>safe</strong> as Tuples are <strong>immutable</strong> and hence cannot be changed.</p></li>
@@ -1267,7 +1269,7 @@ Hello Kate
 </ul>
 </section>
 <section id="advantages-of-tuple-over-list">
-<h2>Advantages of Tuple over List<a class="headerlink" href="#advantages-of-tuple-over-list" title="Permalink to this heading">#</a></h2>
+<h2>Advantages of Tuple over List<a class="headerlink" href="#advantages-of-tuple-over-list" title="Link to this heading">#</a></h2>
 <p>Since tuples are quite similar to lists, both of them are used in similar situations. However, there are certain advantages of implementing a tuple over a list. Below listed are some of the main advantages:</p>
 <ul class="simple">
 <li><p>We generally use tuples for heterogeneous (different) data types and lists for homogeneous (similar) data types.</p></li>
@@ -1276,10 +1278,10 @@ Hello Kate
 <li><p>If you have data that doesn’t change, implementing it as tuple will guarantee that it remains write-protected.</p></li>
 </ul>
 </section>
-<section id="exercises-span-class-label-label-default-tuple-span">
-<h2>💻 Exercises ➞ <span class='label label-default'>Tuple</span><a class="headerlink" href="#exercises-span-class-label-label-default-tuple-span" title="Permalink to this heading">#</a></h2>
-<section id="exercises-span-class-label-label-default-level-1-span">
-<h3>Exercises ➞ <span class='label label-default'>Level 1</span><a class="headerlink" href="#exercises-span-class-label-label-default-level-1-span" title="Permalink to this heading">#</a></h3>
+<section id="exercises-tuple">
+<h2>💻 Exercises ➞ <span class='label label-default'>Tuple</span><a class="headerlink" href="#exercises-tuple" title="Link to this heading">#</a></h2>
+<section id="exercises-level-1">
+<h3>Exercises ➞ <span class='label label-default'>Level 1</span><a class="headerlink" href="#exercises-level-1" title="Link to this heading">#</a></h3>
 <ol class="arabic simple">
 <li><p>Create a tuple containing names of <strong><code class="docutils literal notranslate"><span class="pre">fruits</span></code></strong> and <strong><code class="docutils literal notranslate"><span class="pre">vegetables</span></code></strong></p></li>
 <li><p>Join <strong><code class="docutils literal notranslate"><span class="pre">fruits</span></code></strong> and <strong><code class="docutils literal notranslate"><span class="pre">vegetables</span></code></strong> tuples and assign it to <strong><code class="docutils literal notranslate"><span class="pre">fruits_vegetables</span></code></strong></p></li>
@@ -1287,8 +1289,8 @@ Hello Kate
 <li><p>Modify the <strong><code class="docutils literal notranslate"><span class="pre">fruits_vegetables</span></code></strong> tuple and add the name of your favorite mushroom and beverage and assign it to <strong><code class="docutils literal notranslate"><span class="pre">food_tuple</span></code></strong></p></li>
 </ol>
 </section>
-<section id="exercises-span-class-label-label-default-level-2-span">
-<h3>Exercises ➞ <span class='label label-default'>Level 2</span><a class="headerlink" href="#exercises-span-class-label-label-default-level-2-span" title="Permalink to this heading">#</a></h3>
+<section id="exercises-level-2">
+<h3>Exercises ➞ <span class='label label-default'>Level 2</span><a class="headerlink" href="#exercises-level-2" title="Link to this heading">#</a></h3>
 <ol class="arabic">
 <li><p>Unpack <strong><code class="docutils literal notranslate"><span class="pre">fruits_vegetables</span></code></strong> and mushroom and beverage from <strong><code class="docutils literal notranslate"><span class="pre">food_tuple</span></code></strong></p></li>
 <li><p>Change the about <strong><code class="docutils literal notranslate"><span class="pre">food_tuple</span></code></strong> tuple to a <strong><code class="docutils literal notranslate"><span class="pre">food_list</span></code></strong> list</p></li>
@@ -1368,6 +1370,7 @@ Hello Kate
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
+
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> Contents
@@ -1406,9 +1409,9 @@ Hello Kate
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-should-we-use-tuple-advantages-of-tuple">Why should we use Tuple? (Advantages of Tuple)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#advantages-of-tuple-over-list">Advantages of Tuple over List</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-span-class-label-label-default-tuple-span">💻 Exercises ➞ <span class="label label-default">Tuple</span></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-span-class-label-label-default-level-1-span">Exercises ➞ <span class="label label-default">Level 1</span></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-span-class-label-label-default-level-2-span">Exercises ➞ <span class="label label-default">Level 2</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-tuple">💻 Exercises ➞ <span class="label label-default">Tuple</span></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-level-1">Exercises ➞ <span class="label label-default">Level 1</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-level-2">Exercises ➞ <span class="label label-default">Level 2</span></a></li>
 </ul>
 </li>
 </ul>
@@ -1459,8 +1462,8 @@ By Anukool Chaturvedi
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
-<script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+  <script src="../../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
   <footer class="bd-footer">
   </footer>

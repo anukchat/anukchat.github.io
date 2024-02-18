@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" >
+<html lang="en" data-content_root="../../../../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Pandas DataFrame head, tail, at, iat &#8212; Anukool&#39;s almanac</title>
   
@@ -19,53 +18,49 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="../../../../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link href="../../../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
   
-  <link href="../../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../../../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
-<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
-  <script src="../../../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
-    <script src="../../../../_static/jquery.js"></script>
-    <script src="../../../../_static/underscore.js"></script>
-    <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../../../../_static/doctools.js"></script>
-    <script src="../../../../_static/clipboard.min.js"></script>
-    <script src="../../../../_static/copybutton.js"></script>
-    <script src="../../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../../../_static/togglebutton.js"></script>
+    <script src="../../../../_static/togglebutton.js?v=4a39c7ea"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../../../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../../../../_static/sphinx-thebe.js"></script>
+    <script src="../../../../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'content/tools/pandas/001_Python_Pandas_Methods/003_Python_Pandas_DataFrame_head_and_tail';</script>
     <link rel="canonical" href="https://anukchat.github.io/content/tools/pandas/001_Python_Pandas_Methods/003_Python_Pandas_DataFrame_head_and_tail.html" />
-    <link rel="shortcut icon" href="../../../../_static/mesh-smallest.png"/>
+    <link rel="icon" href="../../../../_static/mesh-smallest.png"/>
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
     <link rel="next" title="Drop columns in pandas DataFrame" href="004_Python_Pandas_DataFrame_drop_columns.html" />
@@ -79,10 +74,9 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
   
   <div id="pst-scroll-pixel-helper"></div>
-
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
     <i class="fa-solid fa-arrow-up"></i>
@@ -123,11 +117,14 @@ const thebe_selector_output = ".output, .cell_output"
 </form></div>
   </div>
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -155,7 +152,18 @@ const thebe_selector_output = ".output, .cell_output"
     <p class="title logo__title">Anukool's almanac</p>
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Essentials</span></p>
 <ul class="nav bd-sidenav">
@@ -220,13 +228,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../../essentials/python/files/files_toc.html">Files</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../../essentials/python/files/001_Python_File_Input_Output.html">Python File I/O</a></li>
-
-
-
-
-
-
+<li class="toctree-l3"><a class="reference internal" href="../../../essentials/python/files/001_Python_File_Input_Output.html">File I/O</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../essentials/python/files/002_Python_File_Directory.html">File directory</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../essentials/python/files/003_Python_File_Exception.html">File exception</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../essentials/python/files/004_Python_Exceptions_Handling.html">Exceptions handling</a></li>
@@ -531,13 +533,13 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="pandas-dataframe-head-tail-at-iat">
-<h1>Pandas DataFrame head, tail, at, iat<a class="headerlink" href="#pandas-dataframe-head-tail-at-iat" title="Permalink to this heading">#</a></h1>
-<p>In this class, we learn how to use <strong><code class="docutils literal notranslate"><span class="pre">DataFrame.head()</span></code></strong> and <strong><code class="docutils literal notranslate"><span class="pre">DataFrame.tail()</span></code></strong> functions to select top and bottom rows of the <strong><a class="reference internal" href="../001_Python_Pandas_DataFrame.html"><span class="doc std std-doc">Pandas DataFrame</span></a></strong> respectively. Also, learn <strong><code class="docutils literal notranslate"><span class="pre">DataFrame.at()</span></code></strong> and <strong><code class="docutils literal notranslate"><span class="pre">DataFrame.iat()</span></code></strong> functions to access a specific value in the DataFrame.</p>
+<h1>Pandas DataFrame head, tail, at, iat<a class="headerlink" href="#pandas-dataframe-head-tail-at-iat" title="Link to this heading">#</a></h1>
+<p>In this class, we learn how to use <strong><code class="docutils literal notranslate"><span class="pre">DataFrame.head()</span></code></strong> and <strong><code class="docutils literal notranslate"><span class="pre">DataFrame.tail()</span></code></strong> functions to select top and bottom rows of the <strong><a class="reference internal" href="../001_Python_Pandas_DataFrame.html"><span class="std std-doc">Pandas DataFrame</span></a></strong> respectively. Also, learn <strong><code class="docutils literal notranslate"><span class="pre">DataFrame.at()</span></code></strong> and <strong><code class="docutils literal notranslate"><span class="pre">DataFrame.iat()</span></code></strong> functions to access a specific value in the DataFrame.</p>
 <section id="how-to-use-dataframe-head-function">
-<h2>How to use <code class="docutils literal notranslate"><span class="pre">DataFrame.head()</span></code> function<a class="headerlink" href="#how-to-use-dataframe-head-function" title="Permalink to this heading">#</a></h2>
+<h2>How to use <code class="docutils literal notranslate"><span class="pre">DataFrame.head()</span></code> function<a class="headerlink" href="#how-to-use-dataframe-head-function" title="Link to this heading">#</a></h2>
 <p>This function is used to see the first n rows in the DataFrame. It is beneficial when we have massive datasets, and it is not possible to see the entire dataset at once.</p>
 <p>It takes input as the number of rows to be displayed from the top. The default value is 5.</p>
 <p><strong>Syntax:</strong></p>
@@ -578,7 +580,7 @@ document.write(`
 </div>
 </section>
 <section id="select-top-n-rows-in-pandas-dataframe">
-<h2>Select top n rows in pandas DataFrame<a class="headerlink" href="#select-top-n-rows-in-pandas-dataframe" title="Permalink to this heading">#</a></h2>
+<h2>Select top n rows in pandas DataFrame<a class="headerlink" href="#select-top-n-rows-in-pandas-dataframe" title="Link to this heading">#</a></h2>
 <p>When we want to see a smaller section of data, we can use the function <strong><code class="docutils literal notranslate"><span class="pre">DataFrame.head()</span></code></strong> and pass a parameter as the number of rows to display from the top.</p>
 <p><strong>Example:</strong></p>
 <p>In the below example, after we apply the <strong><code class="docutils literal notranslate"><span class="pre">DataFrame.head(3)</span></code></strong> function, only the first three rows of the DataFrame are displayed.</p>
@@ -601,7 +603,7 @@ document.write(`
 </div>
 </section>
 <section id="select-top-rows-except-for-last-n-rows">
-<h2>Select top rows except for last n rows<a class="headerlink" href="#select-top-rows-except-for-last-n-rows" title="Permalink to this heading">#</a></h2>
+<h2>Select top rows except for last n rows<a class="headerlink" href="#select-top-rows-except-for-last-n-rows" title="Link to this heading">#</a></h2>
 <p>When we have a vast DataFrame, and we want to see all the rows except for the last n rows, we can pass the negative value as a parameter to <strong><code class="docutils literal notranslate"><span class="pre">DataFrame.head()</span></code></strong>.</p>
 <p><strong>Example:</strong></p>
 <p>In the below example, if we want to display all the rows except the bottom two rows, we can use <strong><code class="docutils literal notranslate"><span class="pre">DataFrame.head(-2)</span></code></strong> function.</p>
@@ -635,7 +637,7 @@ document.write(`
 </div>
 </section>
 <section id="select-top-rows-from-multi-index-dataframes">
-<h2>Select top rows from multi-index DataFrames<a class="headerlink" href="#select-top-rows-from-multi-index-dataframes" title="Permalink to this heading">#</a></h2>
+<h2>Select top rows from multi-index DataFrames<a class="headerlink" href="#select-top-rows-from-multi-index-dataframes" title="Link to this heading">#</a></h2>
 <p>When Python pandas DataFrame has multiple row index or column headers, then are called multi-level or hierarchical DataFrame. As we have discussed in the above section, we can use the <strong><code class="docutils literal notranslate"><span class="pre">DataFrame.head()</span></code></strong> function on multi-index DataFrames to display the top rows.</p>
 <p>The below diagram shows hierarchical DataFrame of Student data with two-column headers where column labels <strong><code class="docutils literal notranslate"><span class="pre">Name</span></code></strong> and <strong><code class="docutils literal notranslate"><span class="pre">Marks</span></code></strong> are at level 0 and <strong><code class="docutils literal notranslate"><span class="pre">Surname</span></code></strong> and <strong><code class="docutils literal notranslate"><span class="pre">Percentage</span></code></strong> at level 1. Similarly, two-row indexes are index ‘Standard‘ at level 0 and <strong><code class="docutils literal notranslate"><span class="pre">Class</span></code></strong> at level 1 of the DataFrame.</p>
 <p><strong>Example:</strong></p>
@@ -679,7 +681,7 @@ Standard 3 Class A    Jill      72.00
 </div>
 </section>
 <section id="how-to-use-dataframe-tail-function">
-<h2>How to use <code class="docutils literal notranslate"><span class="pre">DataFrame.tail()</span></code> function<a class="headerlink" href="#how-to-use-dataframe-tail-function" title="Permalink to this heading">#</a></h2>
+<h2>How to use <code class="docutils literal notranslate"><span class="pre">DataFrame.tail()</span></code> function<a class="headerlink" href="#how-to-use-dataframe-tail-function" title="Link to this heading">#</a></h2>
 <p>We can use the <strong><code class="docutils literal notranslate"><span class="pre">DataFrame.tail()</span></code></strong> function to display the last n rows of the DataFrame. Like the head function, this function is used when we want to view a smaller section of the entire DataFrame.</p>
 <p>It takes input as the number of rows to be displayed from the bottom. The default value is 5.</p>
 <p><strong>Syntax:</strong></p>
@@ -720,7 +722,7 @@ Standard 3 Class A    Jill      72.00
 </div>
 </section>
 <section id="select-bottom-n-rows-in-pandas-dataframe">
-<h2>Select bottom n rows in pandas DataFrame<a class="headerlink" href="#select-bottom-n-rows-in-pandas-dataframe" title="Permalink to this heading">#</a></h2>
+<h2>Select bottom n rows in pandas DataFrame<a class="headerlink" href="#select-bottom-n-rows-in-pandas-dataframe" title="Link to this heading">#</a></h2>
 <p>When we want to see a smaller section of data from the bottom of the DataFrame, we can use the function <strong><code class="docutils literal notranslate"><span class="pre">DataFrame.tail()</span></code></strong> and pass a parameter as the number of rows to display from the bottom.</p>
 <p><strong>Example:</strong></p>
 <p>In the below example, after we apply the <strong><code class="docutils literal notranslate"><span class="pre">DataFrame.tail(3)</span></code></strong> function, we see that only the last 3 rows of the DataFrame are displayed.</p>
@@ -742,7 +744,7 @@ Standard 3 Class A    Jill      72.00
 </div>
 </section>
 <section id="select-bottom-rows-except-for-first-n-rows">
-<h2>Select bottom rows except for first n rows<a class="headerlink" href="#select-bottom-rows-except-for-first-n-rows" title="Permalink to this heading">#</a></h2>
+<h2>Select bottom rows except for first n rows<a class="headerlink" href="#select-bottom-rows-except-for-first-n-rows" title="Link to this heading">#</a></h2>
 <p>When we want to see our entire dataset except for the first few rows, we can use <strong><code class="docutils literal notranslate"><span class="pre">DataFrame.tail()</span></code></strong> function and pass the negative value as a parameter to it.</p>
 <p><strong>Example:</strong></p>
 <p>In the below example, if we display all the rows except the top 2 rows using <strong><code class="docutils literal notranslate"><span class="pre">DataFrame.tail(2)</span></code></strong>.</p>
@@ -776,7 +778,7 @@ Standard 3 Class A    Jill      72.00
 </div>
 </section>
 <section id="select-bottom-rows-from-the-multi-index-dataframe">
-<h2>Select bottom rows from the multi index DataFrame<a class="headerlink" href="#select-bottom-rows-from-the-multi-index-dataframe" title="Permalink to this heading">#</a></h2>
+<h2>Select bottom rows from the multi index DataFrame<a class="headerlink" href="#select-bottom-rows-from-the-multi-index-dataframe" title="Link to this heading">#</a></h2>
 <p>We can apply the <strong><code class="docutils literal notranslate"><span class="pre">DataFrame.tail()</span></code></strong> function on multi-index DataFrames as well. It works in the same way as normal DataFrames.</p>
 <p><strong>Example:</strong></p>
 <p>In our example, after we have applied the <strong><code class="docutils literal notranslate"><span class="pre">DataFrame.tail()</span></code></strong> function, only the bottom 5 row are displayed.</p>
@@ -819,7 +821,7 @@ Standard 3 Class A    Jill      72.00
 </div>
 </section>
 <section id="select-value-using-row-and-column-labels-using-dataframe-at">
-<h2>Select value using row and column labels using <code class="docutils literal notranslate"><span class="pre">DataFrame.at</span></code><a class="headerlink" href="#select-value-using-row-and-column-labels-using-dataframe-at" title="Permalink to this heading">#</a></h2>
+<h2>Select value using row and column labels using <code class="docutils literal notranslate"><span class="pre">DataFrame.at</span></code><a class="headerlink" href="#select-value-using-row-and-column-labels-using-dataframe-at" title="Link to this heading">#</a></h2>
 <p>There are cases in the field of Data Science that we need to access a specific element of the DataFrame using its column label and row index. In such cases, we can use the <strong><code class="docutils literal notranslate"><span class="pre">DataFrame.at</span></code></strong> property and pass the row index and column labels of the value to access as parameters. This property can be used with Multi-index DataFrame as well.</p>
 <blockquote>
 <div><p><strong>Note:</strong> It throws <strong><code class="docutils literal notranslate"><span class="pre">KeyError</span></code></strong> if the label does not exist in DataFrame.</p>
@@ -851,7 +853,7 @@ Standard 3 Class A    Jill      72.00
 </div>
 </section>
 <section id="set-specific-value-in-pandas-dataframe">
-<h2>Set specific value in pandas DataFrame<a class="headerlink" href="#set-specific-value-in-pandas-dataframe" title="Permalink to this heading">#</a></h2>
+<h2>Set specific value in pandas DataFrame<a class="headerlink" href="#set-specific-value-in-pandas-dataframe" title="Link to this heading">#</a></h2>
 <p>When we want to update the value of the particular element from DataFrame based on its column label and row index, we can use <a class="reference external" href="http://DataFrame.at">DataFrame.at</a> property.</p>
 <p><strong>Example:</strong></p>
 <p>In the below example, after we have applied <strong><code class="docutils literal notranslate"><span class="pre">DataFrame.at[2,&quot;Age&quot;]=50</span></code></strong> on our DataFrame, the value at that position changed from 19 to 50.</p>
@@ -881,7 +883,7 @@ Standard 3 Class A    Jill      72.00
 </div>
 </section>
 <section id="select-value-using-row-and-column-position-using-dataframe-iat">
-<h2>Select value using row and column position using DataFrame.iat<a class="headerlink" href="#select-value-using-row-and-column-position-using-dataframe-iat" title="Permalink to this heading">#</a></h2>
+<h2>Select value using row and column position using DataFrame.iat<a class="headerlink" href="#select-value-using-row-and-column-position-using-dataframe-iat" title="Link to this heading">#</a></h2>
 <p>We want to access a specific element from a very large DataFrame, but we do not know its column label or row index. We can still access such an element using its column and row positions. For that, we can use <strong><code class="docutils literal notranslate"><span class="pre">DataFrame.iat</span></code></strong> property of python pandas. Unlike <strong><code class="docutils literal notranslate"><span class="pre">DataFrame.at</span></code></strong> it can work on the row and column index position of the DataFrame.</p>
 <blockquote>
 <div><p><strong>Note:</strong> Index positions starts at 0.</p>
@@ -913,7 +915,7 @@ Standard 3 Class A    Jill      72.00
 </div>
 </section>
 <section id="id1">
-<h2>Set specific value in pandas DataFrame<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
+<h2>Set specific value in pandas DataFrame<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
 <p>When we want to update the value of the particular element from DataFrame based on its column and row position, we can use <strong><code class="docutils literal notranslate"><span class="pre">DataFrame.iat</span></code></strong> property.</p>
 <p><strong>Example:</strong></p>
 <p>In the below example, we change the value at the second row and the third column using <strong><code class="docutils literal notranslate"><span class="pre">DataFrame.iat[1,2]=90</span></code></strong>.</p>
@@ -1001,6 +1003,7 @@ Standard 3 Class A    Jill      72.00
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
+
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> Contents
@@ -1067,8 +1070,8 @@ By Anukool Chaturvedi
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
-<script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+  <script src="../../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
   <footer class="bd-footer">
   </footer>

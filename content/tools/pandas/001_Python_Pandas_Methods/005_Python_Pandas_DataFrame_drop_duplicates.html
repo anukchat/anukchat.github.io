@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" >
+<html lang="en" data-content_root="../../../../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Drop duplicates in pandas DataFrame &#8212; Anukool&#39;s almanac</title>
   
@@ -19,53 +18,49 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="../../../../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link href="../../../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
   
-  <link href="../../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../../../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
-<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
-  <script src="../../../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
-    <script src="../../../../_static/jquery.js"></script>
-    <script src="../../../../_static/underscore.js"></script>
-    <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../../../../_static/doctools.js"></script>
-    <script src="../../../../_static/clipboard.min.js"></script>
-    <script src="../../../../_static/copybutton.js"></script>
-    <script src="../../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../../../_static/togglebutton.js"></script>
+    <script src="../../../../_static/togglebutton.js?v=4a39c7ea"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../../../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../../../../_static/sphinx-thebe.js"></script>
+    <script src="../../../../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'content/tools/pandas/001_Python_Pandas_Methods/005_Python_Pandas_DataFrame_drop_duplicates';</script>
     <link rel="canonical" href="https://anukchat.github.io/content/tools/pandas/001_Python_Pandas_Methods/005_Python_Pandas_DataFrame_drop_duplicates.html" />
-    <link rel="shortcut icon" href="../../../../_static/mesh-smallest.png"/>
+    <link rel="icon" href="../../../../_static/mesh-smallest.png"/>
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
     <link rel="next" title="Drop columns with NA in pandas DataFrame" href="006_Python_Pandas_DataFrame_drop_columns_with_NA.html" />
@@ -79,10 +74,9 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
   
   <div id="pst-scroll-pixel-helper"></div>
-
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
     <i class="fa-solid fa-arrow-up"></i>
@@ -123,11 +117,14 @@ const thebe_selector_output = ".output, .cell_output"
 </form></div>
   </div>
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -155,7 +152,18 @@ const thebe_selector_output = ".output, .cell_output"
     <p class="title logo__title">Anukool's almanac</p>
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Essentials</span></p>
 <ul class="nav bd-sidenav">
@@ -220,13 +228,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../../essentials/python/files/files_toc.html">Files</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../../essentials/python/files/001_Python_File_Input_Output.html">Python File I/O</a></li>
-
-
-
-
-
-
+<li class="toctree-l3"><a class="reference internal" href="../../../essentials/python/files/001_Python_File_Input_Output.html">File I/O</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../essentials/python/files/002_Python_File_Directory.html">File directory</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../essentials/python/files/003_Python_File_Exception.html">File exception</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../essentials/python/files/004_Python_Exceptions_Handling.html">Exceptions handling</a></li>
@@ -526,19 +528,19 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="drop-duplicates-in-pandas-dataframe">
-<h1>Drop duplicates in pandas DataFrame<a class="headerlink" href="#drop-duplicates-in-pandas-dataframe" title="Permalink to this heading">#</a></h1>
-<p>In this class, we learn to remove duplicates from the <strong><a class="reference internal" href="../001_Python_Pandas_DataFrame.html"><span class="doc std std-doc">Pandas DataFrame</span></a></strong>.</p>
+<h1>Drop duplicates in pandas DataFrame<a class="headerlink" href="#drop-duplicates-in-pandas-dataframe" title="Link to this heading">#</a></h1>
+<p>In this class, we learn to remove duplicates from the <strong><a class="reference internal" href="../001_Python_Pandas_DataFrame.html"><span class="std std-doc">Pandas DataFrame</span></a></strong>.</p>
 <p>Data is gathered from various sources. It may not be in the proper form. It contains garbage values and duplicate data. Before analyzing a dataset, it must be clean and precise.</p>
 <p>Also, See:</p>
 <ul class="simple">
-<li><p><strong><a class="reference internal" href="004_Python_Pandas_DataFrame_drop_columns.html"><span class="doc std std-doc">Drop columns in pandas DataFrame</span></a></strong></p></li>
-<li><p><strong><a class="reference internal" href="006_Python_Pandas_DataFrame_drop_columns_with_NA.html"><span class="doc std std-doc">Drop columns with NA in pandas DataFrame</span></a></strong></p></li>
+<li><p><strong><a class="reference internal" href="004_Python_Pandas_DataFrame_drop_columns.html"><span class="std std-doc">Drop columns in pandas DataFrame</span></a></strong></p></li>
+<li><p><strong><a class="reference internal" href="006_Python_Pandas_DataFrame_drop_columns_with_NA.html"><span class="std std-doc">Drop columns with NA in pandas DataFrame</span></a></strong></p></li>
 </ul>
 <section id="the-dataframe-drop-duplicates-function">
-<h2>The <code class="docutils literal notranslate"><span class="pre">DataFrame.drop_duplicates()</span></code> function<a class="headerlink" href="#the-dataframe-drop-duplicates-function" title="Permalink to this heading">#</a></h2>
+<h2>The <code class="docutils literal notranslate"><span class="pre">DataFrame.drop_duplicates()</span></code> function<a class="headerlink" href="#the-dataframe-drop-duplicates-function" title="Link to this heading">#</a></h2>
 <p>This function is used to remove the duplicate rows from a DataFrame.</p>
 <p><strong>Syntax:</strong></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">DataFrame</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">keep</span><span class="o">=</span><span class="s1">&#39;first&#39;</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">ignore_index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
@@ -563,7 +565,7 @@ document.write(`
 </ul>
 </section>
 <section id="drop-duplicates-but-keep-first">
-<h2>Drop duplicates but keep first<a class="headerlink" href="#drop-duplicates-but-keep-first" title="Permalink to this heading">#</a></h2>
+<h2>Drop duplicates but keep first<a class="headerlink" href="#drop-duplicates-but-keep-first" title="Link to this heading">#</a></h2>
 <p>When we have the DataFrame with many duplicate rows that we want to remove we use <strong><code class="docutils literal notranslate"><span class="pre">DataFrame.drop_duplicates()</span></code></strong>.</p>
 <p>The rows that contain the same values in all the columns then are identified as duplicates. If the row is duplicated then by default <strong><code class="docutils literal notranslate"><span class="pre">DataFrame.drop_duplicates()</span></code></strong> keeps the first occurrence of that row and drops all other duplicates of it.</p>
 <p><strong>Example:</strong></p>
@@ -607,7 +609,7 @@ After dropping column:
 </div>
 </section>
 <section id="drop-duplicates-from-defined-columns">
-<h2>Drop duplicates from defined columns<a class="headerlink" href="#drop-duplicates-from-defined-columns" title="Permalink to this heading">#</a></h2>
+<h2>Drop duplicates from defined columns<a class="headerlink" href="#drop-duplicates-from-defined-columns" title="Link to this heading">#</a></h2>
 <p>By default, <strong><code class="docutils literal notranslate"><span class="pre">DataFrame.drop_duplicate()</span></code></strong> removes rows with the same values in all the columns. But, we can modify this behavior using a subset parameter.</p>
 <p>For example, <strong><code class="docutils literal notranslate"><span class="pre">subset=[col1,</span> <span class="pre">col2]</span></code></strong> will remove the duplicate rows with the same values in specified columns only, i.e., <strong><code class="docutils literal notranslate"><span class="pre">col1</span></code></strong> and <strong><code class="docutils literal notranslate"><span class="pre">col2</span></code></strong>.</p>
 <p><strong>Example:</strong></p>
@@ -650,7 +652,7 @@ After dropping column:
 </div>
 </section>
 <section id="drop-duplicates-but-keep-last">
-<h2>Drop duplicates but keep last<a class="headerlink" href="#drop-duplicates-but-keep-last" title="Permalink to this heading">#</a></h2>
+<h2>Drop duplicates but keep last<a class="headerlink" href="#drop-duplicates-but-keep-last" title="Link to this heading">#</a></h2>
 <p>Let’s consider the case where we have a row that is duplicated multiple times in the DataSet. In such a case, To keep only one occurrence of the duplicate row, we can use the <strong><code class="docutils literal notranslate"><span class="pre">keep</span></code></strong> parameter of a <strong><code class="docutils literal notranslate"><span class="pre">DataFrame.drop_duplicate()</span></code></strong>, which takes the following inputs:</p>
 <ul class="simple">
 <li><p><strong>first</strong> – Drop duplicates except for the first occurrence of the duplicate row. This is the default behavior.</p></li>
@@ -695,7 +697,7 @@ After dropping column:
 </div>
 </section>
 <section id="drop-all-duplicates">
-<h2>Drop all duplicates<a class="headerlink" href="#drop-all-duplicates" title="Permalink to this heading">#</a></h2>
+<h2>Drop all duplicates<a class="headerlink" href="#drop-all-duplicates" title="Link to this heading">#</a></h2>
 <p>As explained in the above section, by default, <strong><code class="docutils literal notranslate"><span class="pre">DataFrame.drop_duplicates()</span></code></strong> keeps the duplicate row’s first occurrence and removes all others.</p>
 <p>If we need to drop all the duplicate rows, then it can be done by using keep=False, as shown below.</p>
 <div>
@@ -735,7 +737,7 @@ After dropping column:
 </div>
 </section>
 <section id="drop-duplicates-in-place">
-<h2>Drop duplicates in place<a class="headerlink" href="#drop-duplicates-in-place" title="Permalink to this heading">#</a></h2>
+<h2>Drop duplicates in place<a class="headerlink" href="#drop-duplicates-in-place" title="Link to this heading">#</a></h2>
 <p>By default, <strong><code class="docutils literal notranslate"><span class="pre">DataFrame.drop_duplicates()</span></code></strong> removes the duplicates and returns the copy of the DataFrame.</p>
 <p>But, if we want to make changes in the existing DataFrame, then set the flag <strong><code class="docutils literal notranslate"><span class="pre">inplace=True</span></code></strong>. It can be used when the drop operation is part of the function chaining.</p>
 <div class="cell docutils container">
@@ -776,7 +778,7 @@ After dropping column:
 </div>
 </section>
 <section id="drop-duplicates-and-reset-the-index">
-<h2>Drop duplicates and reset the index<a class="headerlink" href="#drop-duplicates-and-reset-the-index" title="Permalink to this heading">#</a></h2>
+<h2>Drop duplicates and reset the index<a class="headerlink" href="#drop-duplicates-and-reset-the-index" title="Link to this heading">#</a></h2>
 <p>When we drop the rows from DataFrame, by default, it keeps the original row index as is. But, if we need to reset the index of the resultant DataFrame, we can do that using the <strong><code class="docutils literal notranslate"><span class="pre">ignore_index</span></code></strong> parameter of <strong><code class="docutils literal notranslate"><span class="pre">DataFrame.drop_duplicate()</span></code></strong>.</p>
 <ul class="simple">
 <li><p>If <strong><code class="docutils literal notranslate"><span class="pre">ignore_index=True</span></code></strong>, it reset the row labels of resultant DataFrame to 0, 1, …, n – 1.</p></li>
@@ -875,6 +877,7 @@ After dropping column:
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
+
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> Contents
@@ -936,8 +939,8 @@ By Anukool Chaturvedi
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
-<script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+  <script src="../../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
   <footer class="bd-footer">
   </footer>

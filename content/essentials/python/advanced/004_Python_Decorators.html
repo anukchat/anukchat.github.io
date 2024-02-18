@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" >
+<html lang="en" data-content_root="../../../../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Python Decorators &#8212; Anukool&#39;s almanac</title>
   
@@ -19,53 +18,49 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="../../../../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link href="../../../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
   
-  <link href="../../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../../../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
-<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
-  <script src="../../../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
-    <script src="../../../../_static/jquery.js"></script>
-    <script src="../../../../_static/underscore.js"></script>
-    <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../../../../_static/doctools.js"></script>
-    <script src="../../../../_static/clipboard.min.js"></script>
-    <script src="../../../../_static/copybutton.js"></script>
-    <script src="../../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../../../_static/togglebutton.js"></script>
+    <script src="../../../../_static/togglebutton.js?v=4a39c7ea"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../../../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../../../../_static/sphinx-thebe.js"></script>
+    <script src="../../../../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'content/essentials/python/advanced/004_Python_Decorators';</script>
     <link rel="canonical" href="https://anukchat.github.io/content/essentials/python/advanced/004_Python_Decorators.html" />
-    <link rel="shortcut icon" href="../../../../_static/mesh-smallest.png"/>
+    <link rel="icon" href="../../../../_static/mesh-smallest.png"/>
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
     <link rel="next" title="Python @property decorator" href="005_Python_Property.html" />
@@ -79,10 +74,9 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
   
   <div id="pst-scroll-pixel-helper"></div>
-
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
     <i class="fa-solid fa-arrow-up"></i>
@@ -123,11 +117,14 @@ const thebe_selector_output = ".output, .cell_output"
 </form></div>
   </div>
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -155,7 +152,18 @@ const thebe_selector_output = ".output, .cell_output"
     <p class="title logo__title">Anukool's almanac</p>
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Essentials</span></p>
 <ul class="current nav bd-sidenav">
@@ -220,13 +228,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../files/files_toc.html">Files</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../files/001_Python_File_Input_Output.html">Python File I/O</a></li>
-
-
-
-
-
-
+<li class="toctree-l3"><a class="reference internal" href="../files/001_Python_File_Input_Output.html">File I/O</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../files/002_Python_File_Directory.html">File directory</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../files/003_Python_File_Exception.html">File exception</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../files/004_Python_Exceptions_Handling.html">Exceptions handling</a></li>
@@ -520,10 +522,10 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#python-filter-function">Python - <code class="docutils literal notranslate"><span class="pre">filter</span></code> Function</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-span-class-label-label-default-higher-order-functions-closure-and-decorators-span">💻 Exercises ➞ <span class="label label-default">Higher order functions, Closure and Decorators</span></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-span-class-label-label-default-level-1-span">Exercises ➞ <span class="label label-default">Level 1</span></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-span-class-label-label-default-level-2-span">Exercises ➞ <span class="label label-default">Level 2</span></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-span-class-label-label-default-level-3-span">Exercises ➞ <span class="label label-default">Level 3</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-higher-order-functions-closure-and-decorators">💻 Exercises ➞ <span class="label label-default">Higher order functions, Closure and Decorators</span></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-level-1">Exercises ➞ <span class="label label-default">Level 1</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-level-2">Exercises ➞ <span class="label label-default">Level 2</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-level-3">Exercises ➞ <span class="label label-default">Level 3</span></a></li>
 </ul>
 </li>
 </ul>
@@ -535,21 +537,21 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="python-decorators">
-<h1>Python Decorators<a class="headerlink" href="#python-decorators" title="Permalink to this heading">#</a></h1>
+<h1>Python Decorators<a class="headerlink" href="#python-decorators" title="Link to this heading">#</a></h1>
 <p>A decorator takes in a function, adds some functionality and returns it. In this tutorial, you will learn how you can create a decorator and why you should use it.</p>
 <section id="decorators-in-python">
-<h2>Decorators in Python<a class="headerlink" href="#decorators-in-python" title="Permalink to this heading">#</a></h2>
+<h2>Decorators in Python<a class="headerlink" href="#decorators-in-python" title="Link to this heading">#</a></h2>
 <p>Python has an interesting feature called <strong>decorators</strong> to add functionality to an existing code.</p>
 <p>A <strong>decorator</strong> is a design pattern in Python that allows a user to add new functionality to an existing object without modifying its structure. Decorators are usually called before the definition of a function you want to decorate.</p>
 <p>This is also called <strong>metaprogramming</strong> because a part of the program tries to modify another part of the program at compile time.</p>
 </section>
 <section id="prerequisites-for-learning-decorators">
-<h2>Prerequisites for learning decorators<a class="headerlink" href="#prerequisites-for-learning-decorators" title="Permalink to this heading">#</a></h2>
+<h2>Prerequisites for learning decorators<a class="headerlink" href="#prerequisites-for-learning-decorators" title="Link to this heading">#</a></h2>
 <p>In order to understand about decorators, we must first know a few basic things in Python.</p>
-<p>We must be comfortable with the fact that everything in Python (Yes! Even classes), are <strong><a class="reference internal" href="../objects/002_Python_Classes_and_Objects.html"><span class="doc std std-doc">objects</span></a></strong>. Names that we define are simply identifiers bound to these objects. <strong><a class="reference internal" href="../functions/001_Python_Functions.html"><span class="doc std std-doc">Functions</span></a></strong> are no exceptions, they are objects too (with attributes). Various different names can be bound to the same function object.</p>
+<p>We must be comfortable with the fact that everything in Python (Yes! Even classes), are <strong><a class="reference internal" href="../objects/002_Python_Classes_and_Objects.html"><span class="std std-doc">objects</span></a></strong>. Names that we define are simply identifiers bound to these objects. <strong><a class="reference internal" href="../functions/001_Python_Functions.html"><span class="std std-doc">Functions</span></a></strong> are no exceptions, they are objects too (with attributes). Various different names can be bound to the same function object.</p>
 <p>For example:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -619,7 +621,7 @@ Hello
 </div>
 </div>
 <p>Here, <strong><code class="docutils literal notranslate"><span class="pre">is_returned()</span></code></strong> is a nested function which is defined and returned each time we call <strong><code class="docutils literal notranslate"><span class="pre">is_called()</span></code></strong>.</p>
-<p>Finally, we must know about <strong><a class="reference internal" href="003_Python_Closure.html"><span class="doc std std-doc">Closures in Python</span></a></strong>.</p>
+<p>Finally, we must know about <strong><a class="reference internal" href="003_Python_Closure.html"><span class="std std-doc">Closures in Python</span></a></strong>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Normal function</span>
@@ -668,7 +670,7 @@ Hello
 </div>
 </section>
 <section id="getting-back-to-decorators">
-<h2>Getting back to Decorators<a class="headerlink" href="#getting-back-to-decorators" title="Permalink to this heading">#</a></h2>
+<h2>Getting back to Decorators<a class="headerlink" href="#getting-back-to-decorators" title="Link to this heading">#</a></h2>
 <p>Functions and methods are called <strong>callable</strong> as they can be called.</p>
 <p>In fact, any object which implements the special <strong><code class="docutils literal notranslate"><span class="pre">__call__()</span></code></strong> method is termed callable. So, in the most basic sense, a decorator is a callable that returns a callable.</p>
 <p>Basically, a decorator takes in a function, adds some functionality and returns it.</p>
@@ -740,7 +742,7 @@ I am ordinary
 <p>This is just a syntactic sugar to implement decorators.</p>
 </section>
 <section id="decorating-functions-with-parameters">
-<h2>Decorating Functions with Parameters<a class="headerlink" href="#decorating-functions-with-parameters" title="Permalink to this heading">#</a></h2>
+<h2>Decorating Functions with Parameters<a class="headerlink" href="#decorating-functions-with-parameters" title="Link to this heading">#</a></h2>
 <p>The above decorator was simple and it only worked with functions that did not have any parameters. What if we had functions that took in parameters like:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -860,7 +862,7 @@ I live in London
 </div>
 <p>In this manner, we can decorate functions that take parameters.</p>
 <p>A keen observer will notice that parameters of the nested <strong><code class="docutils literal notranslate"><span class="pre">inner()</span></code></strong> function inside the decorator is the same as the parameters of functions it decorates. Taking this into account, now we can make general decorators that work with any number of parameters.</p>
-<p>In Python, this magic is done as <strong><code class="docutils literal notranslate"><span class="pre">function(*args,</span> <span class="pre">**kwargs)</span></code></strong>. In this way, <strong><code class="docutils literal notranslate"><span class="pre">args</span></code></strong> will be the <strong><a class="reference internal" href="../datatypes/004_Python_Tuple.html"><span class="doc std std-doc">tuple</span></a></strong> of positional arguments and <strong><code class="docutils literal notranslate"><span class="pre">kwargs</span></code></strong> will be the <strong><a class="reference internal" href="../datatypes/005_Python_Dictionary.html"><span class="doc std std-doc">dictionary</span></a></strong> of keyword arguments. An example of such a decorator will be:</p>
+<p>In Python, this magic is done as <strong><code class="docutils literal notranslate"><span class="pre">function(*args,</span> <span class="pre">**kwargs)</span></code></strong>. In this way, <strong><code class="docutils literal notranslate"><span class="pre">args</span></code></strong> will be the <strong><a class="reference internal" href="../datatypes/004_Python_Tuple.html"><span class="std std-doc">tuple</span></a></strong> of positional arguments and <strong><code class="docutils literal notranslate"><span class="pre">kwargs</span></code></strong> will be the <strong><a class="reference internal" href="../datatypes/005_Python_Dictionary.html"><span class="std std-doc">dictionary</span></a></strong> of keyword arguments. An example of such a decorator will be:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">works_for_all</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
 <span class="gp">&gt;&gt;&gt; </span>    <span class="k">def</span> <span class="nf">inner</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="gp">&gt;&gt;&gt; </span>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;I can decorate any function&quot;</span><span class="p">)</span>
@@ -870,7 +872,7 @@ I live in London
 </div>
 </section>
 <section id="chaining-decorators-in-python">
-<h2>Chaining Decorators in Python<a class="headerlink" href="#chaining-decorators-in-python" title="Permalink to this heading">#</a></h2>
+<h2>Chaining Decorators in Python<a class="headerlink" href="#chaining-decorators-in-python" title="Link to this heading">#</a></h2>
 <p>Multiple decorators can be chained in Python.</p>
 <p>This is to say, a function can be decorated multiple times with different (or same) decorators. We simply place the decorators above the desired function.</p>
 <div class="cell docutils container">
@@ -978,11 +980,11 @@ Hello
 </div>
 </section>
 <section id="built-in-higher-order-functions">
-<h2>Built-in Higher Order Functions<a class="headerlink" href="#built-in-higher-order-functions" title="Permalink to this heading">#</a></h2>
+<h2>Built-in Higher Order Functions<a class="headerlink" href="#built-in-higher-order-functions" title="Link to this heading">#</a></h2>
 <p>Some of the built-in higher order functions that we cover in this part are <strong>map()</strong> and <strong>filteR()</strong>.
 <strong>Lambda function</strong> can be passed as a parameter and the best use case of lambda functions is in functions like <strong>map()</strong> and <strong>filter()</strong>.</p>
 <section id="python-map-function">
-<h3>Python - <code class="docutils literal notranslate"><span class="pre">map</span></code> Function<a class="headerlink" href="#python-map-function" title="Permalink to this heading">#</a></h3>
+<h3>Python - <code class="docutils literal notranslate"><span class="pre">map</span></code> Function<a class="headerlink" href="#python-map-function" title="Link to this heading">#</a></h3>
 <p>The <strong>map()</strong> function is a built-in function that takes a function and iterable as parameters.</p>
 <div class="highlight-py notranslate"><div class="highlight"><pre><span></span>    <span class="c1"># syntax</span>
     <span class="nb">map</span><span class="p">(</span><span class="n">function</span><span class="p">,</span> <span class="n">iterable</span><span class="p">)</span>
@@ -1054,7 +1056,7 @@ Hello
 <p>What actually map does is iterating over a list. For instance, it changes the names to upper case and returns a new list.</p>
 </section>
 <section id="python-filter-function">
-<h3>Python - <code class="docutils literal notranslate"><span class="pre">filter</span></code> Function<a class="headerlink" href="#python-filter-function" title="Permalink to this heading">#</a></h3>
+<h3>Python - <code class="docutils literal notranslate"><span class="pre">filter</span></code> Function<a class="headerlink" href="#python-filter-function" title="Link to this heading">#</a></h3>
 <p>The <strong>filter()</strong> function calls the specified function which returns boolean for each item of the specified iterable (list). It filters the items that satisfy the filtering criteria.</p>
 <div class="highlight-py notranslate"><div class="highlight"><pre><span></span>    <span class="c1"># syntax</span>
     <span class="nb">filter</span><span class="p">(</span><span class="n">function</span><span class="p">,</span> <span class="n">iterable</span><span class="p">)</span>
@@ -1127,15 +1129,15 @@ Hello
 </div>
 </section>
 </section>
-<section id="exercises-span-class-label-label-default-higher-order-functions-closure-and-decorators-span">
-<h2>💻 Exercises ➞ <span class='label label-default'>Higher order functions, Closure and Decorators</span><a class="headerlink" href="#exercises-span-class-label-label-default-higher-order-functions-closure-and-decorators-span" title="Permalink to this heading">#</a></h2>
+<section id="exercises-higher-order-functions-closure-and-decorators">
+<h2>💻 Exercises ➞ <span class='label label-default'>Higher order functions, Closure and Decorators</span><a class="headerlink" href="#exercises-higher-order-functions-closure-and-decorators" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>countries = [‘India’, ‘Russia’, ‘China’, ‘Denmark’, ‘USA’, ‘Finland’]</p></li>
 <li><p>names = [‘Milaan’, ‘Arthur’, ‘Bill’, ‘Clark’]</p></li>
 <li><p>numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]</p></li>
 </ul>
-<section id="exercises-span-class-label-label-default-level-1-span">
-<h3>Exercises ➞ <span class='label label-default'>Level 1</span><a class="headerlink" href="#exercises-span-class-label-label-default-level-1-span" title="Permalink to this heading">#</a></h3>
+<section id="exercises-level-1">
+<h3>Exercises ➞ <span class='label label-default'>Level 1</span><a class="headerlink" href="#exercises-level-1" title="Link to this heading">#</a></h3>
 <ol class="arabic simple">
 <li><p>Explain the difference between <strong>map()</strong> and <strong>filter()</strong>.</p></li>
 <li><p>Explain the difference between higher order function, closure and decorator</p></li>
@@ -1145,8 +1147,8 @@ Hello
 <li><p>Use for to print each number in the numbers list.</p></li>
 </ol>
 </section>
-<section id="exercises-span-class-label-label-default-level-2-span">
-<h3>Exercises ➞ <span class='label label-default'>Level 2</span><a class="headerlink" href="#exercises-span-class-label-label-default-level-2-span" title="Permalink to this heading">#</a></h3>
+<section id="exercises-level-2">
+<h3>Exercises ➞ <span class='label label-default'>Level 2</span><a class="headerlink" href="#exercises-level-2" title="Link to this heading">#</a></h3>
 <ol class="arabic simple">
 <li><p>Use <strong>map()</strong> to create a new list by changing each country to uppercase in the countries list</p></li>
 <li><p>Use <strong>map()</strong> to create a new list by changing each number to its square in the numbers list</p></li>
@@ -1163,8 +1165,8 @@ Hello
 <li><p>Declare a <strong><code class="docutils literal notranslate"><span class="pre">get_last_ten_countries</span></code></strong> function that returns the last ten countries in the countries list.</p></li>
 </ol>
 </section>
-<section id="exercises-span-class-label-label-default-level-3-span">
-<h3>Exercises ➞ <span class='label label-default'>Level 3</span><a class="headerlink" href="#exercises-span-class-label-label-default-level-3-span" title="Permalink to this heading">#</a></h3>
+<section id="exercises-level-3">
+<h3>Exercises ➞ <span class='label label-default'>Level 3</span><a class="headerlink" href="#exercises-level-3" title="Link to this heading">#</a></h3>
 <ol class="arabic simple">
 <li><p>Use the <strong>countries_details_data.py</strong> file and follow the tasks below:</p>
 <ul class="simple">
@@ -1235,6 +1237,7 @@ Hello
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
+
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> Contents
@@ -1251,10 +1254,10 @@ Hello
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#python-filter-function">Python - <code class="docutils literal notranslate"><span class="pre">filter</span></code> Function</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-span-class-label-label-default-higher-order-functions-closure-and-decorators-span">💻 Exercises ➞ <span class="label label-default">Higher order functions, Closure and Decorators</span></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-span-class-label-label-default-level-1-span">Exercises ➞ <span class="label label-default">Level 1</span></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-span-class-label-label-default-level-2-span">Exercises ➞ <span class="label label-default">Level 2</span></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-span-class-label-label-default-level-3-span">Exercises ➞ <span class="label label-default">Level 3</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-higher-order-functions-closure-and-decorators">💻 Exercises ➞ <span class="label label-default">Higher order functions, Closure and Decorators</span></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-level-1">Exercises ➞ <span class="label label-default">Level 1</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-level-2">Exercises ➞ <span class="label label-default">Level 2</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-level-3">Exercises ➞ <span class="label label-default">Level 3</span></a></li>
 </ul>
 </li>
 </ul>
@@ -1305,8 +1308,8 @@ By Anukool Chaturvedi
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
-<script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+  <script src="../../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
   <footer class="bd-footer">
   </footer>

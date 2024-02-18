@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" >
+<html lang="en" data-content_root="../../../../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Python RegEx &#8212; Anukool&#39;s almanac</title>
   
@@ -19,55 +18,51 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="../../../../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link href="../../../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
   
-  <link href="../../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../../../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
-<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
-  <script src="../../../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
-    <script src="../../../../_static/jquery.js"></script>
-    <script src="../../../../_static/underscore.js"></script>
-    <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../../../../_static/doctools.js"></script>
-    <script src="../../../../_static/clipboard.min.js"></script>
-    <script src="../../../../_static/copybutton.js"></script>
-    <script src="../../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../../../_static/togglebutton.js"></script>
+    <script src="../../../../_static/togglebutton.js?v=4a39c7ea"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../../../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../../../../_static/sphinx-thebe.js"></script>
+    <script src="../../../../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'content/essentials/python/advanced/006_Python_RegEx';</script>
     <link rel="canonical" href="https://anukchat.github.io/content/essentials/python/advanced/006_Python_RegEx.html" />
-    <link rel="shortcut icon" href="../../../../_static/mesh-smallest.png"/>
+    <link rel="icon" href="../../../../_static/mesh-smallest.png"/>
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
     <link rel="next" title="Python *args and **kwargs" href="Python_args_and_kwargs.html" />
@@ -81,10 +76,9 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
   
   <div id="pst-scroll-pixel-helper"></div>
-
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
     <i class="fa-solid fa-arrow-up"></i>
@@ -125,11 +119,14 @@ const thebe_selector_output = ".output, .cell_output"
 </form></div>
   </div>
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -157,7 +154,18 @@ const thebe_selector_output = ".output, .cell_output"
     <p class="title logo__title">Anukool's almanac</p>
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Essentials</span></p>
 <ul class="current nav bd-sidenav">
@@ -222,13 +230,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../files/files_toc.html">Files</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../files/001_Python_File_Input_Output.html">Python File I/O</a></li>
-
-
-
-
-
-
+<li class="toctree-l3"><a class="reference internal" href="../files/001_Python_File_Input_Output.html">File I/O</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../files/002_Python_File_Directory.html">File directory</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../files/003_Python_File_Exception.html">File exception</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../files/004_Python_Exceptions_Handling.html">Exceptions handling</a></li>
@@ -565,10 +567,10 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cart">Cart <code class="docutils literal notranslate"><span class="pre">^</span></code></a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-span-class-label-label-default-regex-span">💻 Exercises ➞ <span class="label label-default">RegEx</span></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-span-class-label-label-default-level-1-span">Exercises ➞ <span class="label label-default">Level 1</span></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-span-class-label-label-default-level-2-span">Exercises ➞ <span class="label label-default">Level 2</span></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-span-class-label-label-default-level-3-span">Exercises ➞ <span class="label label-default">Level 3</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-regex">💻 Exercises ➞ <span class="label label-default">RegEx</span></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-level-1">Exercises ➞ <span class="label label-default">Level 1</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-level-2">Exercises ➞ <span class="label label-default">Level 2</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-level-3">Exercises ➞ <span class="label label-default">Level 3</span></a></li>
 </ul>
 </li>
 </ul>
@@ -580,13 +582,13 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="python-regex">
-<h1>Python RegEx<a class="headerlink" href="#python-regex" title="Permalink to this heading">#</a></h1>
+<h1>Python RegEx<a class="headerlink" href="#python-regex" title="Link to this heading">#</a></h1>
 <p>In this class, you will learn about regular expressions (RegEx), and use Python’s re module to work with RegEx (with the help of examples).</p>
 <p>A <strong>Reg</strong>ular <strong>Ex</strong>pression (RegEx) is a sequence of characters that defines a search pattern. For example,</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt; ^a...s$
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="o">^</span><span class="n">a</span><span class="o">...</span><span class="n">s</span><span class="err">$</span>
 </pre></div>
 </div>
 <p>The above code defines a RegEx pattern. The pattern is: <strong>any five letter string starting with <code class="docutils literal notranslate"><span class="pre">a</span></code> and ending with <code class="docutils literal notranslate"><span class="pre">s</span></code></strong>.</p>
@@ -646,17 +648,17 @@ document.write(`
 <p>Here, we used <strong><code class="docutils literal notranslate"><span class="pre">re.match()</span></code></strong> function to search <strong><code class="docutils literal notranslate"><span class="pre">pattern</span></code></strong> within the <strong><code class="docutils literal notranslate"><span class="pre">test_string</span></code></strong>. The method returns a match object if the search is successful. If not, it returns <strong><code class="docutils literal notranslate"><span class="pre">None</span></code></strong>.</p>
 <p>There are other several functions defined in the <strong><code class="docutils literal notranslate"><span class="pre">re</span></code></strong> module to work with RegEx. Before we explore that, let’s learn about regular expressions themselves.</p>
 <section id="specify-pattern-using-regex">
-<h2>Specify Pattern Using RegEx<a class="headerlink" href="#specify-pattern-using-regex" title="Permalink to this heading">#</a></h2>
+<h2>Specify Pattern Using RegEx<a class="headerlink" href="#specify-pattern-using-regex" title="Link to this heading">#</a></h2>
 <p>To specify regular expressions, metacharacters are used. In the above example, <strong><code class="docutils literal notranslate"><span class="pre">^</span></code></strong> and <strong><code class="docutils literal notranslate"><span class="pre">$</span></code></strong> are metacharacters.</p>
 </section>
 <section id="metacharacters">
-<h2>MetaCharacters<a class="headerlink" href="#metacharacters" title="Permalink to this heading">#</a></h2>
+<h2>MetaCharacters<a class="headerlink" href="#metacharacters" title="Link to this heading">#</a></h2>
 <p>Metacharacters are characters that are interpreted in a special way by a RegEx engine. Here’s a list of metacharacters:</p>
 <section id="id1">
-<h3><strong><code class="docutils literal notranslate"><span class="pre">[]</span> <span class="pre">.</span> <span class="pre">^</span> <span class="pre">$</span> <span class="pre">*</span> <span class="pre">+</span> <span class="pre">?</span> <span class="pre">{}</span> <span class="pre">()</span> <span class="pre">\</span> <span class="pre">|</span></code></strong><a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
+<h3><strong><code class="docutils literal notranslate"><span class="pre">[]</span> <span class="pre">.</span> <span class="pre">^</span> <span class="pre">$</span> <span class="pre">*</span> <span class="pre">+</span> <span class="pre">?</span> <span class="pre">{}</span> <span class="pre">()</span> <span class="pre">\</span> <span class="pre">|</span></code></strong><a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
 </section>
 <section id="square-brackets">
-<h3>1. <code class="docutils literal notranslate"><span class="pre">[]</span></code> - Square brackets<a class="headerlink" href="#square-brackets" title="Permalink to this heading">#</a></h3>
+<h3>1. <code class="docutils literal notranslate"><span class="pre">[]</span></code> - Square brackets<a class="headerlink" href="#square-brackets" title="Link to this heading">#</a></h3>
 <p>Square brackets specifies a set of characters you wish to match.</p>
 <table class="table">
 <thead>
@@ -701,7 +703,7 @@ document.write(`
 </ul>
 </section>
 <section id="period">
-<h3>2. <code class="docutils literal notranslate"><span class="pre">.</span></code> - Period<a class="headerlink" href="#period" title="Permalink to this heading">#</a></h3>
+<h3>2. <code class="docutils literal notranslate"><span class="pre">.</span></code> - Period<a class="headerlink" href="#period" title="Link to this heading">#</a></h3>
 <p>A period matches any single character (except newline <strong><code class="docutils literal notranslate"><span class="pre">'\n'</span></code></strong>).</p>
 <table class="table">
 <thead>
@@ -731,7 +733,7 @@ document.write(`
 </table>
 </section>
 <section id="caret">
-<h3>3. <code class="docutils literal notranslate"><span class="pre">^</span></code> - Caret<a class="headerlink" href="#caret" title="Permalink to this heading">#</a></h3>
+<h3>3. <code class="docutils literal notranslate"><span class="pre">^</span></code> - Caret<a class="headerlink" href="#caret" title="Link to this heading">#</a></h3>
 <p>The caret symbol <strong><code class="docutils literal notranslate"><span class="pre">^</span></code></strong> is used to check if a string <strong>starts with</strong> a certain character.</p>
 <ul class="simple">
 <li><p><strong><code class="docutils literal notranslate"><span class="pre">r'^substring'</span></code></strong> eg <strong><code class="docutils literal notranslate"><span class="pre">r'^love'</span></code></strong>, a sentence that starts with a word love</p></li>
@@ -773,7 +775,7 @@ document.write(`
 </table>
 </section>
 <section id="dollar">
-<h3>4. <code class="docutils literal notranslate"><span class="pre">$</span></code> - Dollar<a class="headerlink" href="#dollar" title="Permalink to this heading">#</a></h3>
+<h3>4. <code class="docutils literal notranslate"><span class="pre">$</span></code> - Dollar<a class="headerlink" href="#dollar" title="Link to this heading">#</a></h3>
 <p>The dollar symbol <strong><code class="docutils literal notranslate"><span class="pre">$</span></code></strong> is used to check if a string <strong>ends with</strong> a certain character.</p>
 <table class="table">
 <thead>
@@ -799,7 +801,7 @@ document.write(`
 </table>
 </section>
 <section id="star">
-<h3>5. <code class="docutils literal notranslate"><span class="pre">*</span></code> - Star<a class="headerlink" href="#star" title="Permalink to this heading">#</a></h3>
+<h3>5. <code class="docutils literal notranslate"><span class="pre">*</span></code> - Star<a class="headerlink" href="#star" title="Link to this heading">#</a></h3>
 <p>The star symbol <strong><code class="docutils literal notranslate"><span class="pre">*</span></code></strong> matches <strong>zero or more occurrences</strong> of the pattern left to it.</p>
 <table class="table">
 <thead>
@@ -833,7 +835,7 @@ document.write(`
 </table>
 </section>
 <section id="plus">
-<h3>6. <code class="docutils literal notranslate"><span class="pre">+</span></code> - Plus<a class="headerlink" href="#plus" title="Permalink to this heading">#</a></h3>
+<h3>6. <code class="docutils literal notranslate"><span class="pre">+</span></code> - Plus<a class="headerlink" href="#plus" title="Link to this heading">#</a></h3>
 <p>The plus symbol <strong><code class="docutils literal notranslate"><span class="pre">+</span></code></strong> matches <strong>zero or more occurrences</strong> of the pattern left to it.</p>
 <table class="table">
 <thead>
@@ -867,7 +869,7 @@ document.write(`
 </table>
 </section>
 <section id="question-mark">
-<h3>7. <code class="docutils literal notranslate"><span class="pre">?</span></code> - Question Mark<a class="headerlink" href="#question-mark" title="Permalink to this heading">#</a></h3>
+<h3>7. <code class="docutils literal notranslate"><span class="pre">?</span></code> - Question Mark<a class="headerlink" href="#question-mark" title="Link to this heading">#</a></h3>
 <p>The question mark symbol <strong><code class="docutils literal notranslate"><span class="pre">?</span></code></strong> matches <strong>zero or more occurrences</strong> of the pattern left to it.</p>
 <table class="table">
 <thead>
@@ -901,7 +903,7 @@ document.write(`
 </table>
 </section>
 <section id="braces">
-<h3>8. <code class="docutils literal notranslate"><span class="pre">{}</span></code> - Braces<a class="headerlink" href="#braces" title="Permalink to this heading">#</a></h3>
+<h3>8. <code class="docutils literal notranslate"><span class="pre">{}</span></code> - Braces<a class="headerlink" href="#braces" title="Link to this heading">#</a></h3>
 <p>We can specify the length of the substring we are looking for in a text, using a curly brackets <strong><code class="docutils literal notranslate"><span class="pre">{}</span></code></strong>.</p>
 <p>Consider this code: <strong><code class="docutils literal notranslate"><span class="pre">{n,m}</span></code></strong>. This means at least <strong><code class="docutils literal notranslate"><span class="pre">n</span></code></strong>, and at most <strong><code class="docutils literal notranslate"><span class="pre">m</span></code></strong> repetitions of the pattern left to it.</p>
 <ul class="simple">
@@ -960,7 +962,7 @@ document.write(`
 </table>
 </section>
 <section id="alternation">
-<h3>9. <code class="docutils literal notranslate"><span class="pre">|</span></code> - Alternation<a class="headerlink" href="#alternation" title="Permalink to this heading">#</a></h3>
+<h3>9. <code class="docutils literal notranslate"><span class="pre">|</span></code> - Alternation<a class="headerlink" href="#alternation" title="Link to this heading">#</a></h3>
 <p>Vertical bar <strong><code class="docutils literal notranslate"><span class="pre">|</span></code></strong> is used for alternation (<strong><code class="docutils literal notranslate"><span class="pre">or</span></code></strong> operator).</p>
 <table class="table">
 <thead>
@@ -987,7 +989,7 @@ document.write(`
 <p>Here, <strong><code class="docutils literal notranslate"><span class="pre">a|b</span></code></strong> match any string that contains either <strong><code class="docutils literal notranslate"><span class="pre">a</span></code></strong> or <strong><code class="docutils literal notranslate"><span class="pre">b</span></code></strong></p>
 </section>
 <section id="group">
-<h3>10. <code class="docutils literal notranslate"><span class="pre">()</span></code> - Group<a class="headerlink" href="#group" title="Permalink to this heading">#</a></h3>
+<h3>10. <code class="docutils literal notranslate"><span class="pre">()</span></code> - Group<a class="headerlink" href="#group" title="Link to this heading">#</a></h3>
 <p>Parentheses <strong><code class="docutils literal notranslate"><span class="pre">()</span></code></strong> is used to group sub-patterns. For example, <strong><code class="docutils literal notranslate"><span class="pre">(a|b|c)xz</span></code></strong> match any string that matches either <strong><code class="docutils literal notranslate"><span class="pre">a</span></code></strong> or <strong><code class="docutils literal notranslate"><span class="pre">b</span></code></strong> or <strong><code class="docutils literal notranslate"><span class="pre">c</span></code></strong>. followed by <strong><code class="docutils literal notranslate"><span class="pre">xz</span></code></strong>.</p>
 <table class="table">
 <thead>
@@ -1013,16 +1015,16 @@ document.write(`
 </table>
 </section>
 <section id="backslash">
-<h3>11. <code class="docutils literal notranslate"><span class="pre">\</span></code> - Backslash<a class="headerlink" href="#backslash" title="Permalink to this heading">#</a></h3>
+<h3>11. <code class="docutils literal notranslate"><span class="pre">\</span></code> - Backslash<a class="headerlink" href="#backslash" title="Link to this heading">#</a></h3>
 <p>Backlash <strong><code class="docutils literal notranslate"><span class="pre">\</span></code></strong> is used to escape various characters including all metacharacters. For example,</p>
 <p><strong><code class="docutils literal notranslate"><span class="pre">\$a</span></code></strong> match if a string contains <strong><code class="docutils literal notranslate"><span class="pre">$</span></code></strong> followed by <strong><code class="docutils literal notranslate"><span class="pre">a</span></code></strong>. Here, <strong><code class="docutils literal notranslate"><span class="pre">$</span></code></strong> is not interpreted by a RegEx engine in a special way.</p>
 <p>If you are unsure if a character has special meaning or not, you can put <strong><code class="docutils literal notranslate"><span class="pre">\</span></code></strong> in front of it. This makes sure the character is not treated in a special way.</p>
 </section>
 <section id="special-sequences">
-<h3>Special Sequences<a class="headerlink" href="#special-sequences" title="Permalink to this heading">#</a></h3>
+<h3>Special Sequences<a class="headerlink" href="#special-sequences" title="Link to this heading">#</a></h3>
 <p>Special sequences make commonly used patterns easier to write. Here’s a list of special sequences:</p>
 <section id="a-matches-if-the-specified-characters-are-at-the-start-of-a-string">
-<h4><code class="docutils literal notranslate"><span class="pre">\A</span></code> - Matches if the specified characters are at the start of a string.<a class="headerlink" href="#a-matches-if-the-specified-characters-are-at-the-start-of-a-string" title="Permalink to this heading">#</a></h4>
+<h4><code class="docutils literal notranslate"><span class="pre">\A</span></code> - Matches if the specified characters are at the start of a string.<a class="headerlink" href="#a-matches-if-the-specified-characters-are-at-the-start-of-a-string" title="Link to this heading">#</a></h4>
 <table class="table">
 <thead>
 <tr class="row-odd"><th class="head text-left"><p>Expression</p></th>
@@ -1043,7 +1045,7 @@ document.write(`
 </table>
 </section>
 <section id="b-matches-if-the-specified-characters-are-at-the-beginning-or-end-of-a-word">
-<h4><code class="docutils literal notranslate"><span class="pre">\b</span></code> - Matches if the specified characters are at the beginning or end of a word.<a class="headerlink" href="#b-matches-if-the-specified-characters-are-at-the-beginning-or-end-of-a-word" title="Permalink to this heading">#</a></h4>
+<h4><code class="docutils literal notranslate"><span class="pre">\b</span></code> - Matches if the specified characters are at the beginning or end of a word.<a class="headerlink" href="#b-matches-if-the-specified-characters-are-at-the-beginning-or-end-of-a-word" title="Link to this heading">#</a></h4>
 <table class="table">
 <thead>
 <tr class="row-odd"><th class="head text-left"><p>Expression</p></th>
@@ -1084,7 +1086,7 @@ document.write(`
 </table>
 </section>
 <section id="b-opposite-of-b-matches-if-the-specified-characters-are-not-at-the-beginning-or-end-of-a-word">
-<h4><code class="docutils literal notranslate"><span class="pre">\B</span></code> - Opposite of <code class="docutils literal notranslate"><span class="pre">\b</span></code>. Matches if the specified characters are not at the beginning or end of a word.<a class="headerlink" href="#b-opposite-of-b-matches-if-the-specified-characters-are-not-at-the-beginning-or-end-of-a-word" title="Permalink to this heading">#</a></h4>
+<h4><code class="docutils literal notranslate"><span class="pre">\B</span></code> - Opposite of <code class="docutils literal notranslate"><span class="pre">\b</span></code>. Matches if the specified characters are not at the beginning or end of a word.<a class="headerlink" href="#b-opposite-of-b-matches-if-the-specified-characters-are-not-at-the-beginning-or-end-of-a-word" title="Link to this heading">#</a></h4>
 <table class="table">
 <thead>
 <tr class="row-odd"><th class="head text-left"><p>Expression</p></th>
@@ -1125,7 +1127,7 @@ document.write(`
 </table>
 </section>
 <section id="d-matches-any-non-decimal-digit-equivalent-to-0-9">
-<h4><code class="docutils literal notranslate"><span class="pre">\d</span></code> - Matches any non-decimal digit. Equivalent to <code class="docutils literal notranslate"><span class="pre">[^0-9]</span></code><a class="headerlink" href="#d-matches-any-non-decimal-digit-equivalent-to-0-9" title="Permalink to this heading">#</a></h4>
+<h4><code class="docutils literal notranslate"><span class="pre">\d</span></code> - Matches any non-decimal digit. Equivalent to <code class="docutils literal notranslate"><span class="pre">[^0-9]</span></code><a class="headerlink" href="#d-matches-any-non-decimal-digit-equivalent-to-0-9" title="Link to this heading">#</a></h4>
 <ul class="simple">
 <li><p><strong><code class="docutils literal notranslate"><span class="pre">\d</span></code></strong> means: match where the string contains digits (numbers from 0-9)</p></li>
 <li><p><strong><code class="docutils literal notranslate"><span class="pre">\D</span></code></strong> means: match where the string does not contain digits</p></li>
@@ -1150,7 +1152,7 @@ document.write(`
 </table>
 </section>
 <section id="s-matches-where-a-string-contains-any-whitespace-character-equivalent-to-t-n-r-f-v">
-<h4><code class="docutils literal notranslate"><span class="pre">\s</span></code> - Matches where a string contains any whitespace character. Equivalent to <code class="docutils literal notranslate"><span class="pre">[</span> <span class="pre">\t\n\r\f\v]</span></code>.<a class="headerlink" href="#s-matches-where-a-string-contains-any-whitespace-character-equivalent-to-t-n-r-f-v" title="Permalink to this heading">#</a></h4>
+<h4><code class="docutils literal notranslate"><span class="pre">\s</span></code> - Matches where a string contains any whitespace character. Equivalent to <code class="docutils literal notranslate"><span class="pre">[</span> <span class="pre">\t\n\r\f\v]</span></code>.<a class="headerlink" href="#s-matches-where-a-string-contains-any-whitespace-character-equivalent-to-t-n-r-f-v" title="Link to this heading">#</a></h4>
 <table class="table">
 <thead>
 <tr class="row-odd"><th class="head text-left"><p>Expression</p></th>
@@ -1171,7 +1173,7 @@ document.write(`
 </table>
 </section>
 <section id="s-matches-where-a-string-contains-any-non-whitespace-character-equivalent-to-t-n-r-f-v">
-<h4><code class="docutils literal notranslate"><span class="pre">\S</span></code> - Matches where a string contains any non-whitespace character. Equivalent to <code class="docutils literal notranslate"><span class="pre">[^</span> <span class="pre">\t\n\r\f\v]</span></code>.<a class="headerlink" href="#s-matches-where-a-string-contains-any-non-whitespace-character-equivalent-to-t-n-r-f-v" title="Permalink to this heading">#</a></h4>
+<h4><code class="docutils literal notranslate"><span class="pre">\S</span></code> - Matches where a string contains any non-whitespace character. Equivalent to <code class="docutils literal notranslate"><span class="pre">[^</span> <span class="pre">\t\n\r\f\v]</span></code>.<a class="headerlink" href="#s-matches-where-a-string-contains-any-non-whitespace-character-equivalent-to-t-n-r-f-v" title="Link to this heading">#</a></h4>
 <table class="table">
 <thead>
 <tr class="row-odd"><th class="head text-left"><p>Expression</p></th>
@@ -1192,7 +1194,7 @@ document.write(`
 </table>
 </section>
 <section id="w-matches-any-alphanumeric-character-digits-and-alphabets-equivalent-to-a-za-z0-9-by-the-way-underscore-is-also-considered-an-alphanumeric-character">
-<h4><code class="docutils literal notranslate"><span class="pre">\w</span></code> - Matches any alphanumeric character (digits and alphabets). Equivalent to <code class="docutils literal notranslate"><span class="pre">[a-zA-Z0-9_]</span></code>. By the way, underscore <code class="docutils literal notranslate"><span class="pre">_</span></code> is also considered an alphanumeric character.<a class="headerlink" href="#w-matches-any-alphanumeric-character-digits-and-alphabets-equivalent-to-a-za-z0-9-by-the-way-underscore-is-also-considered-an-alphanumeric-character" title="Permalink to this heading">#</a></h4>
+<h4><code class="docutils literal notranslate"><span class="pre">\w</span></code> - Matches any alphanumeric character (digits and alphabets). Equivalent to <code class="docutils literal notranslate"><span class="pre">[a-zA-Z0-9_]</span></code>. By the way, underscore <code class="docutils literal notranslate"><span class="pre">_</span></code> is also considered an alphanumeric character.<a class="headerlink" href="#w-matches-any-alphanumeric-character-digits-and-alphabets-equivalent-to-a-za-z0-9-by-the-way-underscore-is-also-considered-an-alphanumeric-character" title="Link to this heading">#</a></h4>
 <table class="table">
 <thead>
 <tr class="row-odd"><th class="head text-left"><p>Expression</p></th>
@@ -1213,7 +1215,7 @@ document.write(`
 </table>
 </section>
 <section id="w-matches-any-non-alphanumeric-character-equivalent-to-a-za-z0-9">
-<h4><code class="docutils literal notranslate"><span class="pre">\W</span></code> - Matches any non-alphanumeric character. Equivalent to <code class="docutils literal notranslate"><span class="pre">[^a-zA-Z0-9_]</span></code>.<a class="headerlink" href="#w-matches-any-non-alphanumeric-character-equivalent-to-a-za-z0-9" title="Permalink to this heading">#</a></h4>
+<h4><code class="docutils literal notranslate"><span class="pre">\W</span></code> - Matches any non-alphanumeric character. Equivalent to <code class="docutils literal notranslate"><span class="pre">[^a-zA-Z0-9_]</span></code>.<a class="headerlink" href="#w-matches-any-non-alphanumeric-character-equivalent-to-a-za-z0-9" title="Link to this heading">#</a></h4>
 <table class="table">
 <thead>
 <tr class="row-odd"><th class="head text-left"><p>Expression</p></th>
@@ -1234,7 +1236,7 @@ document.write(`
 </table>
 </section>
 <section id="z-matches-if-the-specified-characters-are-at-the-end-of-a-string">
-<h4><code class="docutils literal notranslate"><span class="pre">\Z</span></code> - Matches if the specified characters are at the end of a string.<a class="headerlink" href="#z-matches-if-the-specified-characters-are-at-the-end-of-a-string" title="Permalink to this heading">#</a></h4>
+<h4><code class="docutils literal notranslate"><span class="pre">\Z</span></code> - Matches if the specified characters are at the end of a string.<a class="headerlink" href="#z-matches-if-the-specified-characters-are-at-the-end-of-a-string" title="Link to this heading">#</a></h4>
 <table class="table">
 <thead>
 <tr class="row-odd"><th class="head text-left"><p>Expression</p></th>
@@ -1260,7 +1262,7 @@ document.write(`
 </section>
 </section>
 <section id="summary-metacharacters">
-<h3>Summary - MetaCharacters<a class="headerlink" href="#summary-metacharacters" title="Permalink to this heading">#</a></h3>
+<h3>Summary - MetaCharacters<a class="headerlink" href="#summary-metacharacters" title="Link to this heading">#</a></h3>
 <div>
 <img src="img/regex.png" width="1000"/>
 </div><blockquote>
@@ -1270,7 +1272,7 @@ document.write(`
 <p>A <strong>Reg</strong>ular <strong>Ex</strong>pression or <strong>RegEx</strong> is a special text string that helps to find patterns in data. A RegEx can be used to check if some pattern exists in a different data type. To use RegEx in python first we should import the RegEx module which is called <strong><code class="docutils literal notranslate"><span class="pre">re</span></code></strong>.</p>
 </section>
 <section id="python-regex-methods">
-<h3>Python RegEx Methods<a class="headerlink" href="#python-regex-methods" title="Permalink to this heading">#</a></h3>
+<h3>Python RegEx Methods<a class="headerlink" href="#python-regex-methods" title="Link to this heading">#</a></h3>
 <p>To find a pattern we use different set of <strong><code class="docutils literal notranslate"><span class="pre">re</span></code></strong> character sets that allows to search for a match in a string.</p>
 <ul class="simple">
 <li><p><strong><code class="docutils literal notranslate"><span class="pre">re.findall</span></code></strong>: Returns a list containing all matches</p></li>
@@ -1290,7 +1292,7 @@ document.write(`
 <p>The module defines several functions and constants to work with RegEx.</p>
 </section>
 <section id="re-findall">
-<h3>1. <code class="docutils literal notranslate"><span class="pre">re.findall()</span></code><a class="headerlink" href="#re-findall" title="Permalink to this heading">#</a></h3>
+<h3>1. <code class="docutils literal notranslate"><span class="pre">re.findall()</span></code><a class="headerlink" href="#re-findall" title="Link to this heading">#</a></h3>
 <p>The <strong><code class="docutils literal notranslate"><span class="pre">re.findall()</span></code></strong> method returns a list of strings containing all matches.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1382,7 +1384,7 @@ Now we will look for both <strong><code class="docutils literal notranslate"><sp
 </div>
 </section>
 <section id="re-split">
-<h3>2. <code class="docutils literal notranslate"><span class="pre">re.split()</span></code><a class="headerlink" href="#re-split" title="Permalink to this heading">#</a></h3>
+<h3>2. <code class="docutils literal notranslate"><span class="pre">re.split()</span></code><a class="headerlink" href="#re-split" title="Link to this heading">#</a></h3>
 <p>The <strong><code class="docutils literal notranslate"><span class="pre">re.split</span></code></strong> method splits the string where there is a match and returns a list of strings where the splits have occurred.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1453,7 +1455,7 @@ Now we will look for both <strong><code class="docutils literal notranslate"><sp
 <p>By the way, the default value of <strong><code class="docutils literal notranslate"><span class="pre">maxsplit</span></code></strong> is 0; meaning all possible splits.</p>
 </section>
 <section id="re-sub">
-<h3>3. <code class="docutils literal notranslate"><span class="pre">re.sub()</span></code><a class="headerlink" href="#re-sub" title="Permalink to this heading">#</a></h3>
+<h3>3. <code class="docutils literal notranslate"><span class="pre">re.sub()</span></code><a class="headerlink" href="#re-sub" title="Link to this heading">#</a></h3>
 <p><strong>Syntax:</strong></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="n">replace</span><span class="p">,</span> <span class="n">string</span><span class="p">)</span>
 </pre></div>
@@ -1571,7 +1573,7 @@ Does this motivate you to be a teacher?
 </div>
 </section>
 <section id="re-subn">
-<h3>4. <code class="docutils literal notranslate"><span class="pre">re.subn()</span></code><a class="headerlink" href="#re-subn" title="Permalink to this heading">#</a></h3>
+<h3>4. <code class="docutils literal notranslate"><span class="pre">re.subn()</span></code><a class="headerlink" href="#re-subn" title="Link to this heading">#</a></h3>
 <p>The <strong><code class="docutils literal notranslate"><span class="pre">re.subn()</span></code></strong> is similar to <strong><code class="docutils literal notranslate"><span class="pre">re.sub()</span></code></strong> expect it returns a tuple of 2 items containing the new string and the number of substitutions made.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1605,7 +1607,7 @@ Does this motivate you to be a teacher?
 </div>
 </section>
 <section id="re-search">
-<h3>5. <code class="docutils literal notranslate"><span class="pre">re.search()</span></code><a class="headerlink" href="#re-search" title="Permalink to this heading">#</a></h3>
+<h3>5. <code class="docutils literal notranslate"><span class="pre">re.search()</span></code><a class="headerlink" href="#re-search" title="Link to this heading">#</a></h3>
 <p>The <strong><code class="docutils literal notranslate"><span class="pre">re.search()</span></code></strong> method takes two arguments: a pattern and a string. The method looks for the first location where the RegEx pattern produces a match with the string.</p>
 <p>If the search is successful, <strong><code class="docutils literal notranslate"><span class="pre">re.search()</span></code></strong> returns a match object; if not, it returns <strong><code class="docutils literal notranslate"><span class="pre">None</span></code></strong>.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">match</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span>
@@ -1673,7 +1675,7 @@ first
 </section>
 </section>
 <section id="match-object">
-<h2>Match object<a class="headerlink" href="#match-object" title="Permalink to this heading">#</a></h2>
+<h2>Match object<a class="headerlink" href="#match-object" title="Link to this heading">#</a></h2>
 <p>You can get methods and attributes of a match object using <strong>dir()</strong> function.</p>
 <p>Some of the commonly used methods and attributes of match objects are:</p>
 <div class="cell docutils container">
@@ -1723,7 +1725,7 @@ I love to teach
 </div>
 <p>The string does not string with <strong><code class="docutils literal notranslate"><span class="pre">I</span> <span class="pre">like</span> <span class="pre">to</span> <span class="pre">teach</span></code></strong>, therefore there was no match and the match method returned <strong><code class="docutils literal notranslate"><span class="pre">None</span></code></strong>.</p>
 <section id="match-group">
-<h3>1. <code class="docutils literal notranslate"><span class="pre">match.group()</span></code><a class="headerlink" href="#match-group" title="Permalink to this heading">#</a></h3>
+<h3>1. <code class="docutils literal notranslate"><span class="pre">match.group()</span></code><a class="headerlink" href="#match-group" title="Link to this heading">#</a></h3>
 <p>The <strong><code class="docutils literal notranslate"><span class="pre">group()</span></code></strong> method returns the part of the string where there is a match.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1806,7 +1808,7 @@ I love to teach
 </div>
 </section>
 <section id="match-start-match-end-and-match-span">
-<h3>2. <code class="docutils literal notranslate"><span class="pre">match.start(),</span> <span class="pre">match.end()</span> <span class="pre">and</span> <span class="pre">match.span()</span></code><a class="headerlink" href="#match-start-match-end-and-match-span" title="Permalink to this heading">#</a></h3>
+<h3>2. <code class="docutils literal notranslate"><span class="pre">match.start(),</span> <span class="pre">match.end()</span> <span class="pre">and</span> <span class="pre">match.span()</span></code><a class="headerlink" href="#match-start-match-end-and-match-span" title="Link to this heading">#</a></h3>
 <p>The <strong><code class="docutils literal notranslate"><span class="pre">start()</span></code></strong> function returns the index of the start of the matched substring. Similarly, <strong><code class="docutils literal notranslate"><span class="pre">end()</span></code></strong> returns the end index of the matched substring.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1847,7 +1849,7 @@ I love to teach
 </div>
 </section>
 <section id="match-re-and-match-string">
-<h3>3. <code class="docutils literal notranslate"><span class="pre">match.re</span> <span class="pre">and</span> <span class="pre">match.string</span></code><a class="headerlink" href="#match-re-and-match-string" title="Permalink to this heading">#</a></h3>
+<h3>3. <code class="docutils literal notranslate"><span class="pre">match.re</span> <span class="pre">and</span> <span class="pre">match.string</span></code><a class="headerlink" href="#match-re-and-match-string" title="Link to this heading">#</a></h3>
 <p>The <strong><code class="docutils literal notranslate"><span class="pre">re</span></code></strong> attribute of a matched object returns a regular expression object. Similarly, <strong><code class="docutils literal notranslate"><span class="pre">string</span></code></strong> attribute returns the passed string.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1878,7 +1880,7 @@ I love to teach
 </section>
 </section>
 <section id="using-r-prefix-before-regex">
-<h2>Using <code class="docutils literal notranslate"><span class="pre">r</span></code> prefix before RegEx<a class="headerlink" href="#using-r-prefix-before-regex" title="Permalink to this heading">#</a></h2>
+<h2>Using <code class="docutils literal notranslate"><span class="pre">r</span></code> prefix before RegEx<a class="headerlink" href="#using-r-prefix-before-regex" title="Link to this heading">#</a></h2>
 <p>When <strong><code class="docutils literal notranslate"><span class="pre">r</span></code></strong> or <strong><code class="docutils literal notranslate"><span class="pre">R</span></code></strong> prefix is used before a regular expression, it means raw string. For example, <strong><code class="docutils literal notranslate"><span class="pre">'\n'</span></code></strong> is a new line whereas <strong><code class="docutils literal notranslate"><span class="pre">r'\n'</span></code></strong> means two characters: a backslash <strong><code class="docutils literal notranslate"><span class="pre">\</span></code></strong> followed by <strong><code class="docutils literal notranslate"><span class="pre">n</span></code></strong>.</p>
 <p>Backlash <strong><code class="docutils literal notranslate"><span class="pre">\</span></code></strong> is used to escape various characters including all metacharacters. However, using <strong><code class="docutils literal notranslate"><span class="pre">r</span></code></strong> prefix makes <strong><code class="docutils literal notranslate"><span class="pre">\</span></code></strong> treat as a normal character.</p>
 <div class="cell docutils container">
@@ -1904,10 +1906,10 @@ I love to teach
 </div>
 </section>
 <section id="example-of-regex-with-metacharacters">
-<h2>Example of RegEx with Metacharacters<a class="headerlink" href="#example-of-regex-with-metacharacters" title="Permalink to this heading">#</a></h2>
+<h2>Example of RegEx with Metacharacters<a class="headerlink" href="#example-of-regex-with-metacharacters" title="Link to this heading">#</a></h2>
 <p>Let us use examples to clarify the meta characters with RegEx methods:</p>
 <section id="id2">
-<h3>Square Brackets <code class="docutils literal notranslate"><span class="pre">[]</span></code><a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
+<h3>Square Brackets <code class="docutils literal notranslate"><span class="pre">[]</span></code><a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
 <p>Let us use square bracket to include lower and upper case</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1947,7 +1949,7 @@ I love to teach
 <p>Using the square brackets <strong><code class="docutils literal notranslate"><span class="pre">[]</span></code></strong> and or operator <strong><code class="docutils literal notranslate"><span class="pre">|</span></code></strong> , we manage to extract Apple, apple, Banana</p>
 </section>
 <section id="escape-character">
-<h3>Escape character <code class="docutils literal notranslate"><span class="pre">\</span></code><a class="headerlink" href="#escape-character" title="Permalink to this heading">#</a></h3>
+<h3>Escape character <code class="docutils literal notranslate"><span class="pre">\</span></code><a class="headerlink" href="#escape-character" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example 1:</span>
@@ -1967,7 +1969,7 @@ I love to teach
 </div>
 </section>
 <section id="one-or-more-times">
-<h3>One or more times <code class="docutils literal notranslate"><span class="pre">+</span></code><a class="headerlink" href="#one-or-more-times" title="Permalink to this heading">#</a></h3>
+<h3>One or more times <code class="docutils literal notranslate"><span class="pre">+</span></code><a class="headerlink" href="#one-or-more-times" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example 1:</span>
@@ -1987,7 +1989,7 @@ I love to teach
 </div>
 </section>
 <section id="id3">
-<h3>Period <code class="docutils literal notranslate"><span class="pre">.</span></code><a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h3>
+<h3>Period <code class="docutils literal notranslate"><span class="pre">.</span></code><a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example 1:</span>
@@ -2023,7 +2025,7 @@ I love to teach
 </div>
 </section>
 <section id="zero-or-more-times">
-<h3>Zero or more times <code class="docutils literal notranslate"><span class="pre">*</span></code><a class="headerlink" href="#zero-or-more-times" title="Permalink to this heading">#</a></h3>
+<h3>Zero or more times <code class="docutils literal notranslate"><span class="pre">*</span></code><a class="headerlink" href="#zero-or-more-times" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example 1:</span>
@@ -2043,7 +2045,7 @@ I love to teach
 </div>
 </section>
 <section id="zero-or-one-time">
-<h3>Zero or one time <code class="docutils literal notranslate"><span class="pre">?</span></code><a class="headerlink" href="#zero-or-one-time" title="Permalink to this heading">#</a></h3>
+<h3>Zero or one time <code class="docutils literal notranslate"><span class="pre">?</span></code><a class="headerlink" href="#zero-or-one-time" title="Link to this heading">#</a></h3>
 <p>Zero or one time. The pattern may not occur or it may occur once.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2065,7 +2067,7 @@ I love to teach
 </div>
 </section>
 <section id="quantifier">
-<h3>Quantifier <code class="docutils literal notranslate"><span class="pre">{}</span></code><a class="headerlink" href="#quantifier" title="Permalink to this heading">#</a></h3>
+<h3>Quantifier <code class="docutils literal notranslate"><span class="pre">{}</span></code><a class="headerlink" href="#quantifier" title="Link to this heading">#</a></h3>
 <p>We can specify the length of the substring we are looking for in a text, using a curly brackets <strong><code class="docutils literal notranslate"><span class="pre">{}</span></code></strong>. Let us imagine, we are interested in a substring with a length of 4 characters:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2103,7 +2105,7 @@ I love to teach
 </div>
 </section>
 <section id="cart">
-<h3>Cart <code class="docutils literal notranslate"><span class="pre">^</span></code><a class="headerlink" href="#cart" title="Permalink to this heading">#</a></h3>
+<h3>Cart <code class="docutils literal notranslate"><span class="pre">^</span></code><a class="headerlink" href="#cart" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example 1: Starts with</span>
@@ -2140,10 +2142,10 @@ I love to teach
 </div>
 </section>
 </section>
-<section id="exercises-span-class-label-label-default-regex-span">
-<h2>💻 Exercises ➞ <span class='label label-default'>RegEx</span><a class="headerlink" href="#exercises-span-class-label-label-default-regex-span" title="Permalink to this heading">#</a></h2>
-<section id="exercises-span-class-label-label-default-level-1-span">
-<h3>Exercises ➞ <span class='label label-default'>Level 1</span><a class="headerlink" href="#exercises-span-class-label-label-default-level-1-span" title="Permalink to this heading">#</a></h3>
+<section id="exercises-regex">
+<h2>💻 Exercises ➞ <span class='label label-default'>RegEx</span><a class="headerlink" href="#exercises-regex" title="Link to this heading">#</a></h2>
+<section id="exercises-level-1">
+<h3>Exercises ➞ <span class='label label-default'>Level 1</span><a class="headerlink" href="#exercises-level-1" title="Link to this heading">#</a></h3>
 <ol class="arabic">
 <li><p>What is the most frequent word in the following paragraph?</p>
 <ul>
@@ -2204,8 +2206,8 @@ sorted_points =  [-4, -3, -1, -1, 0, 2, 4, 8]
 distance = 8 -(-4) # 12
 ```</p>
 </section>
-<section id="exercises-span-class-label-label-default-level-2-span">
-<h3>Exercises ➞ <span class='label label-default'>Level 2</span><a class="headerlink" href="#exercises-span-class-label-label-default-level-2-span" title="Permalink to this heading">#</a></h3>
+<section id="exercises-level-2">
+<h3>Exercises ➞ <span class='label label-default'>Level 2</span><a class="headerlink" href="#exercises-level-2" title="Link to this heading">#</a></h3>
 <ol class="arabic">
 <li><p>Write a pattern which identifies if a string is a valid python variable</p>
 <ul>
@@ -2225,8 +2227,8 @@ is_valid_variable(‘firstname’)   # True</p>
 </li>
 </ol>
 </section>
-<section id="exercises-span-class-label-label-default-level-3-span">
-<h3>Exercises ➞ <span class='label label-default'>Level 3</span><a class="headerlink" href="#exercises-span-class-label-label-default-level-3-span" title="Permalink to this heading">#</a></h3>
+<section id="exercises-level-3">
+<h3>Exercises ➞ <span class='label label-default'>Level 3</span><a class="headerlink" href="#exercises-level-3" title="Link to this heading">#</a></h3>
 <ol class="arabic">
 <li><p>Clean the following text. After cleaning, count three most frequent words in the string.</p>
 <ul>
@@ -2305,6 +2307,7 @@ print(most_frequent_words(cleaned_text)) # [(3, ‘I’), (2, ‘teaching’), (
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
+
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> Contents
@@ -2364,10 +2367,10 @@ print(most_frequent_words(cleaned_text)) # [(3, ‘I’), (2, ‘teaching’), (
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cart">Cart <code class="docutils literal notranslate"><span class="pre">^</span></code></a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-span-class-label-label-default-regex-span">💻 Exercises ➞ <span class="label label-default">RegEx</span></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-span-class-label-label-default-level-1-span">Exercises ➞ <span class="label label-default">Level 1</span></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-span-class-label-label-default-level-2-span">Exercises ➞ <span class="label label-default">Level 2</span></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-span-class-label-label-default-level-3-span">Exercises ➞ <span class="label label-default">Level 3</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-regex">💻 Exercises ➞ <span class="label label-default">RegEx</span></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-level-1">Exercises ➞ <span class="label label-default">Level 1</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-level-2">Exercises ➞ <span class="label label-default">Level 2</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-level-3">Exercises ➞ <span class="label label-default">Level 3</span></a></li>
 </ul>
 </li>
 </ul>
@@ -2418,8 +2421,8 @@ By Anukool Chaturvedi
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
-<script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+  <script src="../../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
   <footer class="bd-footer">
   </footer>

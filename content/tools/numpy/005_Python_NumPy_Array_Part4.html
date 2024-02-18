@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" >
+<html lang="en" data-content_root="../../../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Arrays reorganizing &#8212; Anukool&#39;s almanac</title>
   
@@ -19,53 +18,49 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="../../../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link href="../../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
   
-  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
-<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
-  <script src="../../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-    <script src="../../../_static/jquery.js"></script>
-    <script src="../../../_static/underscore.js"></script>
-    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../../../_static/doctools.js"></script>
-    <script src="../../../_static/clipboard.min.js"></script>
-    <script src="../../../_static/copybutton.js"></script>
-    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../../_static/togglebutton.js"></script>
+    <script src="../../../_static/togglebutton.js?v=4a39c7ea"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script src="../../../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'content/tools/numpy/005_Python_NumPy_Array_Part4';</script>
     <link rel="canonical" href="https://anukchat.github.io/content/tools/numpy/005_Python_NumPy_Array_Part4.html" />
-    <link rel="shortcut icon" href="../../../_static/mesh-smallest.png"/>
+    <link rel="icon" href="../../../_static/mesh-smallest.png"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="Python NumPy Exercises" href="Python_Numpy_Exercises_with_hints.html" />
@@ -79,10 +74,9 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
   
   <div id="pst-scroll-pixel-helper"></div>
-
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
     <i class="fa-solid fa-arrow-up"></i>
@@ -123,11 +117,14 @@ const thebe_selector_output = ".output, .cell_output"
 </form></div>
   </div>
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -155,7 +152,18 @@ const thebe_selector_output = ".output, .cell_output"
     <p class="title logo__title">Anukool's almanac</p>
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Essentials</span></p>
 <ul class="nav bd-sidenav">
@@ -220,13 +228,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../essentials/python/files/files_toc.html">Files</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../essentials/python/files/001_Python_File_Input_Output.html">Python File I/O</a></li>
-
-
-
-
-
-
+<li class="toctree-l3"><a class="reference internal" href="../../essentials/python/files/001_Python_File_Input_Output.html">File I/O</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../essentials/python/files/002_Python_File_Directory.html">File directory</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../essentials/python/files/003_Python_File_Exception.html">File exception</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../essentials/python/files/004_Python_Exceptions_Handling.html">Exceptions handling</a></li>
@@ -536,12 +538,12 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="arrays-reorganizing">
-<h1>Arrays reorganizing<a class="headerlink" href="#arrays-reorganizing" title="Permalink to this heading">#</a></h1>
+<h1>Arrays reorganizing<a class="headerlink" href="#arrays-reorganizing" title="Link to this heading">#</a></h1>
 <section id="asarray">
-<h2><code class="docutils literal notranslate"><span class="pre">asarray()</span></code><a class="headerlink" href="#asarray" title="Permalink to this heading">#</a></h2>
+<h2><code class="docutils literal notranslate"><span class="pre">asarray()</span></code><a class="headerlink" href="#asarray" title="Link to this heading">#</a></h2>
 <p>The <strong><code class="docutils literal notranslate"><span class="pre">asarray()</span></code></strong> function is used when you want to convert an input to an array. The input could be a lists, tuple, ndarray, etc.</p>
 <p><strong>Syntax:</strong></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">numpy</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">order</span><span class="o">=</span><span class="kc">None</span><span class="p">)[</span><span class="n">source</span><span class="p">]</span>
@@ -599,7 +601,7 @@ document.write(`
 </div>
 </section>
 <section id="arange">
-<h2><code class="docutils literal notranslate"><span class="pre">arange()</span></code><a class="headerlink" href="#arange" title="Permalink to this heading">#</a></h2>
+<h2><code class="docutils literal notranslate"><span class="pre">arange()</span></code><a class="headerlink" href="#arange" title="Link to this heading">#</a></h2>
 <p>The <strong><code class="docutils literal notranslate"><span class="pre">arange()</span></code></strong> is an inbuilt numpy function that returns an ndarray object containing evenly spaced values within a defined interval. For instance, you want to create values from 1 to 10; you can use <strong><code class="docutils literal notranslate"><span class="pre">arange()</span></code></strong> function.</p>
 <p><strong>Syntax:</strong></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">numpy</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">stop</span><span class="p">,</span><span class="n">step</span><span class="p">)</span> 
@@ -667,7 +669,7 @@ document.write(`
 </div>
 </section>
 <section id="reshape-data">
-<h2>Reshape Data<a class="headerlink" href="#reshape-data" title="Permalink to this heading">#</a></h2>
+<h2>Reshape Data<a class="headerlink" href="#reshape-data" title="Link to this heading">#</a></h2>
 <p>In some occasions, you need to reshape the data from wide to long. You can use the reshape function for this.</p>
 <p><strong>Syntax:</strong></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">numpy</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">newShape</span><span class="p">,</span> <span class="n">order</span><span class="o">=</span><span class="s1">&#39;C&#39;</span><span class="p">)</span>
@@ -702,7 +704,7 @@ document.write(`
 </div>
 </section>
 <section id="broadcasting-with-array-reorganizing">
-<h2>Broadcasting with array reorganizing<a class="headerlink" href="#broadcasting-with-array-reorganizing" title="Permalink to this heading">#</a></h2>
+<h2>Broadcasting with array reorganizing<a class="headerlink" href="#broadcasting-with-array-reorganizing" title="Link to this heading">#</a></h2>
 <p>It’s super cool and super useful. The one-line explanation is that when doing elementwise operations, things expand to the “correct” shape.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -780,7 +782,7 @@ y+1:
 </div>
 </section>
 <section id="flatten-data">
-<h2>Flatten Data<a class="headerlink" href="#flatten-data" title="Permalink to this heading">#</a></h2>
+<h2>Flatten Data<a class="headerlink" href="#flatten-data" title="Link to this heading">#</a></h2>
 <p>When you deal with some neural network like convnet, you need to flatten the array. You can use <strong><code class="docutils literal notranslate"><span class="pre">flatten()</span></code></strong>.</p>
 <p><strong>Syntax:</strong></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">numpy</span><span class="o">.</span><span class="n">flatten</span><span class="p">(</span><span class="n">order</span><span class="o">=</span><span class="s1">&#39;C&#39;</span><span class="p">)</span>
@@ -805,7 +807,7 @@ y+1:
 </div>
 </section>
 <section id="what-is-hstack">
-<h2>What is <code class="docutils literal notranslate"><span class="pre">hstack</span></code>?<a class="headerlink" href="#what-is-hstack" title="Permalink to this heading">#</a></h2>
+<h2>What is <code class="docutils literal notranslate"><span class="pre">hstack</span></code>?<a class="headerlink" href="#what-is-hstack" title="Link to this heading">#</a></h2>
 <p>With <strong><code class="docutils literal notranslate"><span class="pre">hstack</span></code></strong> you can appened data horizontally. This is a very convinient function in Numpy. Lets study it with an example:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -845,7 +847,7 @@ y+1:
 </div>
 </section>
 <section id="what-is-vstack">
-<h2>What is <code class="docutils literal notranslate"><span class="pre">vstack</span></code>?<a class="headerlink" href="#what-is-vstack" title="Permalink to this heading">#</a></h2>
+<h2>What is <code class="docutils literal notranslate"><span class="pre">vstack</span></code>?<a class="headerlink" href="#what-is-vstack" title="Link to this heading">#</a></h2>
 <p>With <strong><code class="docutils literal notranslate"><span class="pre">vstack</span></code></strong> you can appened data vertically. Lets study it with an example:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -888,7 +890,7 @@ y+1:
 </div>
 </section>
 <section id="generate-random-numbers">
-<h2>Generate Random Numbers<a class="headerlink" href="#generate-random-numbers" title="Permalink to this heading">#</a></h2>
+<h2>Generate Random Numbers<a class="headerlink" href="#generate-random-numbers" title="Link to this heading">#</a></h2>
 <p>To generate random numbers for Gaussian distribution use:</p>
 <p><strong>Syntax:</strong></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">numpy</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="n">loc</span><span class="p">,</span> <span class="n">scale</span><span class="p">,</span> <span class="n">size</span><span class="p">)</span>
@@ -917,7 +919,7 @@ y+1:
 </div>
 </section>
 <section id="linspace">
-<h2>Linspace<a class="headerlink" href="#linspace" title="Permalink to this heading">#</a></h2>
+<h2>Linspace<a class="headerlink" href="#linspace" title="Link to this heading">#</a></h2>
 <p>Linspace gives evenly spaced samples.</p>
 <p><strong>Syntax:</strong></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">numpy</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">stop</span><span class="p">,</span> <span class="n">num</span><span class="p">,</span> <span class="n">endpoint</span><span class="p">)</span>
@@ -975,7 +977,7 @@ y+1:
 </div>
 </section>
 <section id="logspace">
-<h2>LogSpace<a class="headerlink" href="#logspace" title="Permalink to this heading">#</a></h2>
+<h2>LogSpace<a class="headerlink" href="#logspace" title="Link to this heading">#</a></h2>
 <p>LogSpace returns even spaced numbers on a log scale. Logspace has the same parameters as <strong><code class="docutils literal notranslate"><span class="pre">np.linspace</span></code></strong>.</p>
 <p><strong>Syntax:</strong></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">numpy</span><span class="o">.</span><span class="n">logspace</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">stop</span><span class="p">,</span> <span class="n">num</span><span class="p">,</span> <span class="n">endpoint</span><span class="p">)</span>
@@ -1017,7 +1019,7 @@ y+1:
 </div>
 </section>
 <section id="statistics">
-<h2>Statistics<a class="headerlink" href="#statistics" title="Permalink to this heading">#</a></h2>
+<h2>Statistics<a class="headerlink" href="#statistics" title="Link to this heading">#</a></h2>
 <p>NumPy has quite a few useful statistical functions for finding minimum, maximum, percentile standard deviation and variance, etc from the given elements in the array. The functions are explained as follows −</p>
 <p>Numpy is equipped with the robust statistical function as listed below:</p>
 <table class="table">
@@ -1145,10 +1147,10 @@ y+1:
 </div>
 </section>
 <section id="miscellaneous">
-<h2>Miscellaneous<a class="headerlink" href="#miscellaneous" title="Permalink to this heading">#</a></h2>
+<h2>Miscellaneous<a class="headerlink" href="#miscellaneous" title="Link to this heading">#</a></h2>
 <section id="load-data-from-file">
-<h3>Load Data from File<a class="headerlink" href="#load-data-from-file" title="Permalink to this heading">#</a></h3>
-<p>you can download the “data.txt” from <strong><span class="xref myst">here</span></strong></p>
+<h3>Load Data from File<a class="headerlink" href="#load-data-from-file" title="Link to this heading">#</a></h3>
+<p>you can download the “data.txt” from <strong><a class="reference download internal" download="" href="../../../_downloads/4e0c23e62ca1ebde7a62fab7d43af6c8/data.txt"><span class="xref download myst">here</span></a></strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">filedata</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">genfromtxt</span><span class="p">(</span><span class="s1">&#39;data.txt&#39;</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
@@ -1167,7 +1169,7 @@ y+1:
 </div>
 </section>
 <section id="boolean-masking-and-advanced-indexing">
-<h3>Boolean Masking and Advanced Indexing<a class="headerlink" href="#boolean-masking-and-advanced-indexing" title="Permalink to this heading">#</a></h3>
+<h3>Boolean Masking and Advanced Indexing<a class="headerlink" href="#boolean-masking-and-advanced-indexing" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">filedata</span> <span class="o">&gt;</span><span class="mi">50</span>
@@ -1304,7 +1306,7 @@ y+1:
 </section>
 </section>
 <section id="numpy-documentation">
-<h2>Numpy Documentation<a class="headerlink" href="#numpy-documentation" title="Permalink to this heading">#</a></h2>
+<h2>Numpy Documentation<a class="headerlink" href="#numpy-documentation" title="Link to this heading">#</a></h2>
 <p>This brief overview has touched on many of the important things that you need to know about numpy, but is far from complete. Check out the <strong><a class="reference external" href="https://numpy.org/doc/stable/reference/">numpy reference</a></strong> to find out much more about numpy.</p>
 </section>
 </section>
@@ -1365,6 +1367,7 @@ y+1:
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -1437,8 +1440,8 @@ By Anukool Chaturvedi
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
-<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+  <script src="../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
   <footer class="bd-footer">
   </footer>

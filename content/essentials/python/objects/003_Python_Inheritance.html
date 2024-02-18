@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" >
+<html lang="en" data-content_root="../../../../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Python Inheritance &#8212; Anukool&#39;s almanac</title>
   
@@ -19,53 +18,49 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="../../../../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link href="../../../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
   
-  <link href="../../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../../../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
-<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
-  <script src="../../../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
-    <script src="../../../../_static/jquery.js"></script>
-    <script src="../../../../_static/underscore.js"></script>
-    <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../../../../_static/doctools.js"></script>
-    <script src="../../../../_static/clipboard.min.js"></script>
-    <script src="../../../../_static/copybutton.js"></script>
-    <script src="../../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../../../_static/togglebutton.js"></script>
+    <script src="../../../../_static/togglebutton.js?v=4a39c7ea"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../../../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../../../../_static/sphinx-thebe.js"></script>
+    <script src="../../../../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'content/essentials/python/objects/003_Python_Inheritance';</script>
     <link rel="canonical" href="https://anukchat.github.io/content/essentials/python/objects/003_Python_Inheritance.html" />
-    <link rel="shortcut icon" href="../../../../_static/mesh-smallest.png"/>
+    <link rel="icon" href="../../../../_static/mesh-smallest.png"/>
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
     <link rel="next" title="Python Operator Overloading" href="004_Python_Operator_Overloading.html" />
@@ -79,10 +74,9 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
   
   <div id="pst-scroll-pixel-helper"></div>
-
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
     <i class="fa-solid fa-arrow-up"></i>
@@ -123,11 +117,14 @@ const thebe_selector_output = ".output, .cell_output"
 </form></div>
   </div>
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -155,7 +152,18 @@ const thebe_selector_output = ".output, .cell_output"
     <p class="title logo__title">Anukool's almanac</p>
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Essentials</span></p>
 <ul class="current nav bd-sidenav">
@@ -220,13 +228,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../files/files_toc.html">Files</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../files/001_Python_File_Input_Output.html">Python File I/O</a></li>
-
-
-
-
-
-
+<li class="toctree-l3"><a class="reference internal" href="../files/001_Python_File_Input_Output.html">File I/O</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../files/002_Python_File_Directory.html">File directory</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../files/003_Python_File_Exception.html">File exception</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../files/004_Python_Exceptions_Handling.html">Exceptions handling</a></li>
@@ -538,15 +540,15 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="python-inheritance">
-<h1>Python Inheritance<a class="headerlink" href="#python-inheritance" title="Permalink to this heading">#</a></h1>
+<h1>Python Inheritance<a class="headerlink" href="#python-inheritance" title="Link to this heading">#</a></h1>
 <p>The <strong>process of inheriting the properties of the base (or parent) class into a derived (or child) class is called inheritance</strong>. Inheritance enables us to define a class that takes all the functionality from a base class and allows us to add more. In this tutorial, you will learn to use inheritance in Python.</p>
 <section id="inheritance-in-python">
-<h2>Inheritance in Python<a class="headerlink" href="#inheritance-in-python" title="Permalink to this heading">#</a></h2>
+<h2>Inheritance in Python<a class="headerlink" href="#inheritance-in-python" title="Link to this heading">#</a></h2>
 <p>Inheritance is a powerful feature in object oriented programming. The main purpose of inheritance is the reusability of code because we can use the existing class to create a new class instead of creating it from scratch.</p>
-<p>It refers to defining a new <a class="reference internal" href="002_Python_Classes_and_Objects.html"><span class="doc std std-doc"><strong>class</strong></span></a> with little or no modification to an existing class. The new class is called <strong>derived (or child)</strong> class and the one from which it inherits is called the <strong>base (or parent)</strong> class.</p>
+<p>It refers to defining a new <a class="reference internal" href="002_Python_Classes_and_Objects.html"><span class="std std-doc"><strong>class</strong></span></a> with little or no modification to an existing class. The new class is called <strong>derived (or child)</strong> class and the one from which it inherits is called the <strong>base (or parent)</strong> class.</p>
 <p>In inheritance, the derived class acquires and access all the data members, properties, and functions from the base class. Also, a derived class can also provide its specific implementation to the methods of the base class.</p>
 <div>
 <img src="img/i.png" width="150"/>
@@ -559,7 +561,7 @@ document.write(`
 </div>
 </section>
 <section id="types-of-inheritance">
-<h2>Types Of Inheritance<a class="headerlink" href="#types-of-inheritance" title="Permalink to this heading">#</a></h2>
+<h2>Types Of Inheritance<a class="headerlink" href="#types-of-inheritance" title="Link to this heading">#</a></h2>
 <p>In Python, based upon the number of child and parent classes involved, there are five types of inheritance. The type of inheritance are listed below:
 <b></p>
 <ol class="arabic simple">
@@ -573,7 +575,7 @@ Now let’s see each in detail with example.</p></li>
 </ol>
 </section>
 <section id="python-single-inheritance">
-<h2>Python Single Inheritance<a class="headerlink" href="#python-single-inheritance" title="Permalink to this heading">#</a></h2>
+<h2>Python Single Inheritance<a class="headerlink" href="#python-single-inheritance" title="Link to this heading">#</a></h2>
 <p>In single inheritance, a derived class inherits from a single-base class. Here in one derived class and one base class.</p>
 <div>
 <img src="img/si.png" width="150"/>
@@ -611,7 +613,7 @@ Inside Car class
 </div>
 </section>
 <section id="python-multiple-inheritance">
-<h2>Python Multiple Inheritance<a class="headerlink" href="#python-multiple-inheritance" title="Permalink to this heading">#</a></h2>
+<h2>Python Multiple Inheritance<a class="headerlink" href="#python-multiple-inheritance" title="Link to this heading">#</a></h2>
 <p>In multiple inheritance, one derived class can inherit from multiple base classes.</p>
 <div>
 <img src="img/mpi.png" width="400"/>
@@ -781,7 +783,7 @@ Bat is an animal.
 </div>
 </div>
 <section id="why-super-keyword">
-<h3>Why <code class="docutils literal notranslate"><span class="pre">super()</span></code> keyword<a class="headerlink" href="#why-super-keyword" title="Permalink to this heading">#</a></h3>
+<h3>Why <code class="docutils literal notranslate"><span class="pre">super()</span></code> keyword<a class="headerlink" href="#why-super-keyword" title="Link to this heading">#</a></h3>
 <p>The <strong><code class="docutils literal notranslate"><span class="pre">super()</span></code></strong> function is most commonly used with <strong><code class="docutils literal notranslate"><span class="pre">__init__</span></code></strong> function in base class. This is usually the only place where we need to do some things in a child then complete the <strong>initialization</strong> in the <strong>parent</strong>.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Child</span><span class="p">(</span><span class="n">Parent</span><span class="p">):</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">stuff</span><span class="p">)</span>
@@ -791,7 +793,7 @@ Bat is an animal.
 </div>
 </section>
 <section id="private-members-of-parent-class">
-<h3>Private members of parent class<a class="headerlink" href="#private-members-of-parent-class" title="Permalink to this heading">#</a></h3>
+<h3>Private members of parent class<a class="headerlink" href="#private-members-of-parent-class" title="Link to this heading">#</a></h3>
 <p>We don’t always want the instance variables of the parent class to be inherited by the child class i.e. we can make some of the instance variables of the parent class private, which won’t be available to the child class.  We can make an instance variable by adding double underscores before its name.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -832,7 +834,7 @@ Bat is an animal.
 </section>
 </section>
 <section id="python-multilevel-inheritance">
-<h2>Python Multilevel Inheritance<a class="headerlink" href="#python-multilevel-inheritance" title="Permalink to this heading">#</a></h2>
+<h2>Python Multilevel Inheritance<a class="headerlink" href="#python-multilevel-inheritance" title="Link to this heading">#</a></h2>
 <p>In multilevel inheritance, we can also inherit from a derived class. It can be of any depth in Python.</p>
 <p>All the features of the base class and the derived class are inherited into the new derived class.</p>
 <p>For example, there are three classes A, B, C. A is the superclass, B is the child class of A, C is the child class of B. In other words, we can say a <strong>chain of classes</strong> is called multilevel inheritance.</p>
@@ -910,7 +912,7 @@ Weeping...
 </div>
 </section>
 <section id="hierarchical-inheritance">
-<h2>Hierarchical Inheritance<a class="headerlink" href="#hierarchical-inheritance" title="Permalink to this heading">#</a></h2>
+<h2>Hierarchical Inheritance<a class="headerlink" href="#hierarchical-inheritance" title="Link to this heading">#</a></h2>
 <p>In Hierarchical inheritance, more than one child class is derived from a single parent class. In other words, we can say one base class and multiple derived classes.</p>
 <div>
 <img src="img/hi.png" width="500"/>
@@ -951,7 +953,7 @@ Truck name is: Ford
 </div>
 </section>
 <section id="hybrid-inheritance">
-<h2>Hybrid Inheritance<a class="headerlink" href="#hybrid-inheritance" title="Permalink to this heading">#</a></h2>
+<h2>Hybrid Inheritance<a class="headerlink" href="#hybrid-inheritance" title="Link to this heading">#</a></h2>
 <p>When inheritance is consists of multiple types or a combination of different inheritance is called hybrid inheritance.</p>
 <div>
 <img src="img/hbi.png" width="500"/>
@@ -995,7 +997,7 @@ Inside SportsCar class
 </div>
 </section>
 <section id="example-of-inheritance-in-python">
-<h2>Example of Inheritance in Python<a class="headerlink" href="#example-of-inheritance-in-python" title="Permalink to this heading">#</a></h2>
+<h2>Example of Inheritance in Python<a class="headerlink" href="#example-of-inheritance-in-python" title="Link to this heading">#</a></h2>
 <p>To demonstrate the use of inheritance, let us take an example.</p>
 <p>A polygon is a closed figure with 3 or more sides. Say, we have a class called <strong><code class="docutils literal notranslate"><span class="pre">Polygon</span></code></strong> defined as follows.</p>
 <div class="cell docutils container">
@@ -1127,7 +1129,7 @@ Parent attribute : 200
 <p>Another is <strong><code class="docutils literal notranslate"><span class="pre">SportsCar</span></code></strong> inherit from two parent classes named <strong><code class="docutils literal notranslate"><span class="pre">Car</span></code></strong> and <strong><code class="docutils literal notranslate"><span class="pre">Vehicle</span></code></strong>. This is multiple inheritance.</p>
 </section>
 <section id="python-super-function">
-<h2>Python <code class="docutils literal notranslate"><span class="pre">super()</span></code> function<a class="headerlink" href="#python-super-function" title="Permalink to this heading">#</a></h2>
+<h2>Python <code class="docutils literal notranslate"><span class="pre">super()</span></code> function<a class="headerlink" href="#python-super-function" title="Link to this heading">#</a></h2>
 <p>When a class inherits all properties and behavior from the parent class is called inheritance. In such a case, the inherited class is a subclass and the latter class is the parent class.</p>
 <p>In child class, we can refer to parent class by using the <strong><code class="docutils literal notranslate"><span class="pre">super()</span></code></strong> function. <strong><a class="reference external" href="https://rhettinger.wordpress.com/2011/05/26/super-considered-super/">Python super() function</a></strong> returns a temporary object of the parent class that allows us to call a parent class method inside a child class method.</p>
 <p>Benefits of using the <strong><code class="docutils literal notranslate"><span class="pre">super()</span></code></strong> function are:</p>
@@ -1166,7 +1168,7 @@ Parent attribute : 200
 <p>In the above example, we create a parent class <strong><code class="docutils literal notranslate"><span class="pre">Company</span></code></strong> and child class <strong><code class="docutils literal notranslate"><span class="pre">Employee</span></code></strong>. In Employee class, we call the parent class method by using a <strong><code class="docutils literal notranslate"><span class="pre">super()</span></code></strong> function.</p>
 </section>
 <section id="issubclass">
-<h2><code class="docutils literal notranslate"><span class="pre">issubclass()</span></code><a class="headerlink" href="#issubclass" title="Permalink to this heading">#</a></h2>
+<h2><code class="docutils literal notranslate"><span class="pre">issubclass()</span></code><a class="headerlink" href="#issubclass" title="Link to this heading">#</a></h2>
 <p>In Python, we can verify whether a particular class is a subclass of another class. For this purpose, we can use <strong>Python issubclass() function</strong>. This function returns <strong><code class="docutils literal notranslate"><span class="pre">True</span></code></strong> if the given class is the subclass of the specified class. Otherwise, it returns <strong><code class="docutils literal notranslate"><span class="pre">False</span></code></strong>.</p>
 <p><strong>Syntax:</strong></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">issubclass</span><span class="p">(</span><span class="n">class</span><span class="p">,</span> <span class="n">classinfo</span><span class="p">)</span>
@@ -1222,7 +1224,7 @@ True
 </div>
 </section>
 <section id="method-overriding">
-<h2>Method Overriding<a class="headerlink" href="#method-overriding" title="Permalink to this heading">#</a></h2>
+<h2>Method Overriding<a class="headerlink" href="#method-overriding" title="Link to this heading">#</a></h2>
 <p>In inheritance, all members available in the parent class are by default available in the child class. If the child class does not satisfy with parent class implementation, then the child class is allowed to redefine that method by extending additional functions in the child class. This concept is called <strong>method overriding</strong>.</p>
 <p>When a child class method has the same name, same parameters, and same return type as a method in its superclass, then the method in the child is said to <strong>override</strong> the method in the parent class.</p>
 <div>
@@ -1334,7 +1336,7 @@ Run faster
 </div>
 </section>
 <section id="example-of-method-overriding-in-python">
-<h2>Example of Method Overriding in Python<a class="headerlink" href="#example-of-method-overriding-in-python" title="Permalink to this heading">#</a></h2>
+<h2>Example of Method Overriding in Python<a class="headerlink" href="#example-of-method-overriding-in-python" title="Link to this heading">#</a></h2>
 <p>In the example of <strong>“Polygon”</strong> and <strong>“Triangle”</strong>, notice that <strong><code class="docutils literal notranslate"><span class="pre">__init__()</span></code></strong> method was defined in both classes, <strong><code class="docutils literal notranslate"><span class="pre">Triangle</span></code></strong> as well <strong><code class="docutils literal notranslate"><span class="pre">Polygon</span></code></strong>. When this happens, the method in the derived class overrides that in the base class. This is to say, <strong><code class="docutils literal notranslate"><span class="pre">__init__()</span></code></strong> in <strong><code class="docutils literal notranslate"><span class="pre">Triangle</span></code></strong> gets preference over the <strong><code class="docutils literal notranslate"><span class="pre">__init__</span></code></strong> in <strong><code class="docutils literal notranslate"><span class="pre">Polygon</span></code></strong>.</p>
 <p>Generally when overriding a base method, we tend to extend the definition rather than simply replace it. The same is being done by calling the method in base class from the one in derived class (calling <strong><code class="docutils literal notranslate"><span class="pre">Polygon.__init__()</span></code></strong> from <strong><code class="docutils literal notranslate"><span class="pre">__init__()</span></code></strong> in <strong><code class="docutils literal notranslate"><span class="pre">Triangle</span></code></strong>).</p>
 <p>A better option would be to use the built-in function <strong><code class="docutils literal notranslate"><span class="pre">super()</span></code></strong>. So, <strong><code class="docutils literal notranslate"><span class="pre">super().__init__(3)</span></code></strong> is equivalent to <strong><code class="docutils literal notranslate"><span class="pre">Polygon.__init__(self,3)</span></code></strong> and is preferred. To learn more about the <strong><code class="docutils literal notranslate"><span class="pre">super()</span></code></strong> function in Python, visit <strong><a class="reference external" href="https://rhettinger.wordpress.com/2011/05/26/super-considered-super/">Python super() function</a></strong>.</p>
@@ -1426,7 +1428,7 @@ Run faster
 </div>
 </div>
 <section id="method-resolution-order-in-python">
-<h3>Method Resolution Order in Python<a class="headerlink" href="#method-resolution-order-in-python" title="Permalink to this heading">#</a></h3>
+<h3>Method Resolution Order in Python<a class="headerlink" href="#method-resolution-order-in-python" title="Link to this heading">#</a></h3>
 <p>In Python, Method Resolution Order(MRO) is the order by which <strong>Python looks for a method or attribute</strong>. First, the method or attribute is searched within a class, and then it follows the order we specified while inheriting.</p>
 <p>This order is also called the Linearization of a class, and a set of rules is called MRO (Method Resolution Order). The <strong>MRO plays an essential role in multiple inheritances as a single method may found in multiple parent classes</strong>.</p>
 <p>In multiple inheritance, the following search order is followed.</p>
@@ -1622,6 +1624,7 @@ Run faster
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
+
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> Contents
@@ -1695,8 +1698,8 @@ By Anukool Chaturvedi
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
-<script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+  <script src="../../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
   <footer class="bd-footer">
   </footer>

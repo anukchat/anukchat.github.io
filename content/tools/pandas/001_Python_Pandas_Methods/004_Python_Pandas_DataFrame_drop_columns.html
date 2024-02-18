@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" >
+<html lang="en" data-content_root="../../../../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Drop columns in pandas DataFrame &#8212; Anukool&#39;s almanac</title>
   
@@ -19,53 +18,49 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="../../../../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link href="../../../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
   
-  <link href="../../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../../../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
-<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
-  <script src="../../../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
-    <script src="../../../../_static/jquery.js"></script>
-    <script src="../../../../_static/underscore.js"></script>
-    <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../../../../_static/doctools.js"></script>
-    <script src="../../../../_static/clipboard.min.js"></script>
-    <script src="../../../../_static/copybutton.js"></script>
-    <script src="../../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../../../_static/togglebutton.js"></script>
+    <script src="../../../../_static/togglebutton.js?v=4a39c7ea"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../../../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../../../../_static/sphinx-thebe.js"></script>
+    <script src="../../../../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'content/tools/pandas/001_Python_Pandas_Methods/004_Python_Pandas_DataFrame_drop_columns';</script>
     <link rel="canonical" href="https://anukchat.github.io/content/tools/pandas/001_Python_Pandas_Methods/004_Python_Pandas_DataFrame_drop_columns.html" />
-    <link rel="shortcut icon" href="../../../../_static/mesh-smallest.png"/>
+    <link rel="icon" href="../../../../_static/mesh-smallest.png"/>
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
     <link rel="next" title="Drop duplicates in pandas DataFrame" href="005_Python_Pandas_DataFrame_drop_duplicates.html" />
@@ -79,10 +74,9 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
   
   <div id="pst-scroll-pixel-helper"></div>
-
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
     <i class="fa-solid fa-arrow-up"></i>
@@ -123,11 +117,14 @@ const thebe_selector_output = ".output, .cell_output"
 </form></div>
   </div>
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -155,7 +152,18 @@ const thebe_selector_output = ".output, .cell_output"
     <p class="title logo__title">Anukool's almanac</p>
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Essentials</span></p>
 <ul class="nav bd-sidenav">
@@ -220,13 +228,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../../essentials/python/files/files_toc.html">Files</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../../essentials/python/files/001_Python_File_Input_Output.html">Python File I/O</a></li>
-
-
-
-
-
-
+<li class="toctree-l3"><a class="reference internal" href="../../../essentials/python/files/001_Python_File_Input_Output.html">File I/O</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../essentials/python/files/002_Python_File_Directory.html">File directory</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../essentials/python/files/003_Python_File_Exception.html">File exception</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../essentials/python/files/004_Python_Exceptions_Handling.html">Exceptions handling</a></li>
@@ -541,11 +543,11 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="drop-columns-in-pandas-dataframe">
-<h1>Drop columns in pandas DataFrame<a class="headerlink" href="#drop-columns-in-pandas-dataframe" title="Permalink to this heading">#</a></h1>
-<p>Datasets could be in any shape and form. To optimize the data analysis, we need to remove some data that is redundant or not required. This article aims to discuss all the cases of dropping single or multiple columns from a <strong><a class="reference internal" href="../001_Python_Pandas_DataFrame.html"><span class="doc std std-doc">Pandas DataFrame</span></a></strong>.</p>
+<h1>Drop columns in pandas DataFrame<a class="headerlink" href="#drop-columns-in-pandas-dataframe" title="Link to this heading">#</a></h1>
+<p>Datasets could be in any shape and form. To optimize the data analysis, we need to remove some data that is redundant or not required. This article aims to discuss all the cases of dropping single or multiple columns from a <strong><a class="reference internal" href="../001_Python_Pandas_DataFrame.html"><span class="std std-doc">Pandas DataFrame</span></a></strong>.</p>
 <p>The following functions are discussed in this article in detail:</p>
 <ul class="simple">
 <li><p><strong><code class="docutils literal notranslate"><span class="pre">df.drop(columns</span> <span class="pre">=</span> <span class="pre">['col1','col2'...])</span></code></strong></p></li>
@@ -559,7 +561,7 @@ document.write(`
 <li><p><strong><a class="reference external" href="https://github.com/milaan9/10_Python_Pandas_Module/blob/main/001_Python_Pandas_Methods/006_Python_Pandas_DataFrame_drop_columns_with_NA.ipynb">Drop columns with NA in pandas DataFrame</a></strong></p></li>
 </ul>
 <section id="the-dataframe-drop-function">
-<h2>The <code class="docutils literal notranslate"><span class="pre">DataFrame.drop()</span></code> function<a class="headerlink" href="#the-dataframe-drop-function" title="Permalink to this heading">#</a></h2>
+<h2>The <code class="docutils literal notranslate"><span class="pre">DataFrame.drop()</span></code> function<a class="headerlink" href="#the-dataframe-drop-function" title="Link to this heading">#</a></h2>
 <p>We can use this pandas function to remove the columns or rows from simple as well as multi-index DataFrame.</p>
 <p><strong>Syntax:</strong></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">DataFrame</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">labels</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">errors</span><span class="o">=</span><span class="s1">&#39;raise&#39;</span><span class="p">)</span>
@@ -586,7 +588,7 @@ document.write(`
 </ul>
 </section>
 <section id="drop-single-column">
-<h2>Drop single column<a class="headerlink" href="#drop-single-column" title="Permalink to this heading">#</a></h2>
+<h2>Drop single column<a class="headerlink" href="#drop-single-column" title="Link to this heading">#</a></h2>
 <p>We may need to delete a single or specific column from a DataFrame.</p>
 <p>In the below example we drop the <strong><code class="docutils literal notranslate"><span class="pre">age</span></code></strong> column from the DataFrame using <strong><code class="docutils literal notranslate"><span class="pre">df.drop(columns</span> <span class="pre">=</span> <span class="pre">'col_name')</span></code></strong></p>
 <div>
@@ -621,7 +623,7 @@ document.write(`
 </div>
 </section>
 <section id="drop-multiple-columns">
-<h2>Drop multiple columns<a class="headerlink" href="#drop-multiple-columns" title="Permalink to this heading">#</a></h2>
+<h2>Drop multiple columns<a class="headerlink" href="#drop-multiple-columns" title="Link to this heading">#</a></h2>
 <p>Use any of the following two parameters of <strong><code class="docutils literal notranslate"><span class="pre">DataFrame.drop()</span></code></strong> to delete multiple columns of DataFrame at once.</p>
 <ul class="simple">
 <li><p>Use the <strong><code class="docutils literal notranslate"><span class="pre">column</span></code></strong> parameter and pass the list of column names you want to remove.</p></li>
@@ -653,7 +655,7 @@ document.write(`
 </div>
 </div>
 <section id="using-drop-with-axis-columns-or-axis-1">
-<h3>Using drop with <code class="docutils literal notranslate"><span class="pre">axis='columns'</span></code> or <code class="docutils literal notranslate"><span class="pre">axis=1</span></code><a class="headerlink" href="#using-drop-with-axis-columns-or-axis-1" title="Permalink to this heading">#</a></h3>
+<h3>Using drop with <code class="docutils literal notranslate"><span class="pre">axis='columns'</span></code> or <code class="docutils literal notranslate"><span class="pre">axis=1</span></code><a class="headerlink" href="#using-drop-with-axis-columns-or-axis-1" title="Link to this heading">#</a></h3>
 <p>Let’s see how to drop using the axis-style convention. This is a new approach. (This approach makes this method match the rest of the pandas API) .</p>
 <p>Use the axis parameter of a <strong><code class="docutils literal notranslate"><span class="pre">DataFrame.drop()</span></code></strong> to delete columns. The axis can be a row or column. The column axis represented as 1 or ‘columns’.</p>
 <p>Set <strong><code class="docutils literal notranslate"><span class="pre">axis=1</span></code></strong> or <strong><code class="docutils literal notranslate"><span class="pre">axis='columns'</span></code></strong> and pass the list of column names you want to remove…</p>
@@ -694,7 +696,7 @@ After droping columns in dataframe:
 </section>
 </section>
 <section id="drop-column-in-place">
-<h2>Drop column in place<a class="headerlink" href="#drop-column-in-place" title="Permalink to this heading">#</a></h2>
+<h2>Drop column in place<a class="headerlink" href="#drop-column-in-place" title="Link to this heading">#</a></h2>
 <p>In the above examples, whenever we executed drop operations, pandas created a new copy of DataFrame because the modification is not in place.</p>
 <p>Parameter <strong><code class="docutils literal notranslate"><span class="pre">inplace</span></code></strong> is used to indicate if drop column from the existing DataFrame or create a copy of it.</p>
 <ul class="simple">
@@ -729,7 +731,7 @@ After droping columns in dataframe:
 </div>
 </section>
 <section id="drop-column-by-suppressing-errors">
-<h2>Drop column by suppressing errors<a class="headerlink" href="#drop-column-by-suppressing-errors" title="Permalink to this heading">#</a></h2>
+<h2>Drop column by suppressing errors<a class="headerlink" href="#drop-column-by-suppressing-errors" title="Link to this heading">#</a></h2>
 <p>By default, The <strong><code class="docutils literal notranslate"><span class="pre">DataFrame.drop()</span></code></strong>  throws <strong><code class="docutils literal notranslate"><span class="pre">KeyError</span></code></strong> if the column you are trying to delete does not exist in the dataset.</p>
 <p>If we want to drop the column only if exists then we can suppress the error by using the parameter <strong><code class="docutils literal notranslate"><span class="pre">errors</span></code></strong>.</p>
 <ul class="simple">
@@ -804,13 +806,13 @@ After droping columns in dataframe:
 </div>
 </section>
 <section id="drop-column-by-index-position">
-<h2>Drop column by index position<a class="headerlink" href="#drop-column-by-index-position" title="Permalink to this heading">#</a></h2>
+<h2>Drop column by index position<a class="headerlink" href="#drop-column-by-index-position" title="Link to this heading">#</a></h2>
 <p>If there is a case where we want to drop columns in the DataFrame, but we do not know the name of the columns still we can delete the column using its index position.</p>
 <blockquote>
 <div><p><strong>Note:</strong> Column index starts from 0 (zero) and it goes till the last column whose index value will be <strong><code class="docutils literal notranslate"><span class="pre">len(df.columns)-1</span></code></strong>.</p>
 </div></blockquote>
 <section id="drop-the-last-column">
-<h3>Drop the last column<a class="headerlink" href="#drop-the-last-column" title="Permalink to this heading">#</a></h3>
+<h3>Drop the last column<a class="headerlink" href="#drop-the-last-column" title="Link to this heading">#</a></h3>
 <p>Assume you want to drop the first column or the last column of the DataFrame without using the column name.</p>
 <p>In such cases, use the DataFrame.columns attribute to delete a column of the DataFrame based on its index position. Simply pass <strong><code class="docutils literal notranslate"><span class="pre">df.columns[index]</span></code></strong> to the columns parameter of the <strong><code class="docutils literal notranslate"><span class="pre">DataFrame.drop()</span></code></strong>.</p>
 <p><strong>Example</strong></p>
@@ -844,7 +846,7 @@ After droping columns in dataframe:
 </div>
 </section>
 <section id="drop-range-of-columns-using-iloc">
-<h3>Drop range of columns using <code class="docutils literal notranslate"><span class="pre">iloc</span></code><a class="headerlink" href="#drop-range-of-columns-using-iloc" title="Permalink to this heading">#</a></h3>
+<h3>Drop range of columns using <code class="docutils literal notranslate"><span class="pre">iloc</span></code><a class="headerlink" href="#drop-range-of-columns-using-iloc" title="Link to this heading">#</a></h3>
 <p>There could be a case when we need to delete the fourth column from the dataset or need to delete a range of columns. We can use <strong><code class="docutils literal notranslate"><span class="pre">DataFrame.iloc</span></code></strong> to select single or multiple columns from the DataFrame.</p>
 <p>We can use <strong><code class="docutils literal notranslate"><span class="pre">DataFrame.iloc</span></code></strong> in the <strong><code class="docutils literal notranslate"><span class="pre">columns</span></code></strong> parameter to specify the index position of the columns which need to drop.</p>
 <p><strong>Example:</strong></p>
@@ -875,7 +877,7 @@ After droping columns in dataframe:
 </div>
 </section>
 <section id="drop-first-n-columns">
-<h3>Drop first n columns<a class="headerlink" href="#drop-first-n-columns" title="Permalink to this heading">#</a></h3>
+<h3>Drop first n columns<a class="headerlink" href="#drop-first-n-columns" title="Link to this heading">#</a></h3>
 <p>If we need to delete the first ‘n’ columns from a DataFrame, we can use <strong><code class="docutils literal notranslate"><span class="pre">DataFrame.iloc</span></code></strong> and the <strong><a class="reference external" href="https://github.com/milaan9/04_Python_Functions/blob/main/002_Python_Functions_Built_in/053_Python_range().ipynb">Python range()</a></strong> function to specify the columns’ range to be deleted.</p>
 <p>We need to use the built-in function <strong><code class="docutils literal notranslate"><span class="pre">range()</span></code></strong> with <strong><code class="docutils literal notranslate"><span class="pre">columns</span></code></strong> parameter of <strong><code class="docutils literal notranslate"><span class="pre">DataFrame.drop()</span></code></strong>.</p>
 <p><strong>Example:</strong></p>
@@ -912,7 +914,7 @@ After dropping:
 </section>
 </section>
 <section id="drop-column-from-multi-index-dataframe">
-<h2>Drop column from multi-index DataFrame<a class="headerlink" href="#drop-column-from-multi-index-dataframe" title="Permalink to this heading">#</a></h2>
+<h2>Drop column from multi-index DataFrame<a class="headerlink" href="#drop-column-from-multi-index-dataframe" title="Link to this heading">#</a></h2>
 <p>DataFrame can have multiple column headers, such DataFrame is called a <strong>multi-index</strong> DataFrame. Such headers are divided into the levels where the first header is at level 0, the second header is at level 1, and so on.</p>
 <p>We can drop a column from any level of multi-index DataFrame. By default, it drops columns from all the levels, but we can use a parameter <strong><code class="docutils literal notranslate"><span class="pre">level</span></code></strong> to drop from a particular level only.</p>
 <p>We need to pass a level name or level index as <strong><code class="docutils literal notranslate"><span class="pre">level=level_index</span></code></strong>.</p>
@@ -960,10 +962,10 @@ After dropping column:
 </div>
 </section>
 <section id="drop-column-using-a-function">
-<h2>Drop column using a function<a class="headerlink" href="#drop-column-using-a-function" title="Permalink to this heading">#</a></h2>
+<h2>Drop column using a function<a class="headerlink" href="#drop-column-using-a-function" title="Link to this heading">#</a></h2>
 <p>We can also use the function to delete columns by applying some logic or based on some condition. We can use built-in as well as user-defined functions to drop columns.</p>
 <section id="drop-all-the-columns-using-loc">
-<h3>Drop all the columns using <code class="docutils literal notranslate"><span class="pre">loc</span></code><a class="headerlink" href="#drop-all-the-columns-using-loc" title="Permalink to this heading">#</a></h3>
+<h3>Drop all the columns using <code class="docutils literal notranslate"><span class="pre">loc</span></code><a class="headerlink" href="#drop-all-the-columns-using-loc" title="Link to this heading">#</a></h3>
 <p>If we want to drop all the columns from DataFrame we can easily do that using <strong><code class="docutils literal notranslate"><span class="pre">DataFrame.loc</span></code></strong> in the <strong><code class="docutils literal notranslate"><span class="pre">columns</span></code></strong> parameter of <strong><code class="docutils literal notranslate"><span class="pre">DataFrame.drop()</span></code></strong>.</p>
 <p><strong><code class="docutils literal notranslate"><span class="pre">DataFrame.loc</span></code></strong> is used to specify the column labels which need to delete. If we do not specify any column labels like <strong><code class="docutils literal notranslate"><span class="pre">df.loc[:]</span></code></strong> then it will drop all the columns in the DataFrame.</p>
 <p><strong>Example:</strong></p>
@@ -999,7 +1001,7 @@ After dropping column:
 </section>
 </section>
 <section id="drop-column-using-pandas-dataframe-pop-function">
-<h2>Drop column using pandas <code class="docutils literal notranslate"><span class="pre">DataFrame.pop()</span></code> function<a class="headerlink" href="#drop-column-using-pandas-dataframe-pop-function" title="Permalink to this heading">#</a></h2>
+<h2>Drop column using pandas <code class="docutils literal notranslate"><span class="pre">DataFrame.pop()</span></code> function<a class="headerlink" href="#drop-column-using-pandas-dataframe-pop-function" title="Link to this heading">#</a></h2>
 <p>If we want to delete a single column then we can also do that using <strong><code class="docutils literal notranslate"><span class="pre">DataFrame.pop(col_label)</span></code></strong> function. We need to pass a column label that needs to delete.</p>
 <p>It removes the column in-place by updating the existing DataFrame. It raises <strong><code class="docutils literal notranslate"><span class="pre">KeyError</span></code></strong> if the column is not found.</p>
 <blockquote>
@@ -1040,7 +1042,7 @@ After dropping column:
 </div>
 </section>
 <section id="drop-column-using-pandas-dataframe-delete">
-<h2>Drop column using pandas DataFrame delete<a class="headerlink" href="#drop-column-using-pandas-dataframe-delete" title="Permalink to this heading">#</a></h2>
+<h2>Drop column using pandas DataFrame delete<a class="headerlink" href="#drop-column-using-pandas-dataframe-delete" title="Link to this heading">#</a></h2>
 <p>We can also use the pandas inbuilt function <strong><code class="docutils literal notranslate"><span class="pre">del</span></code></strong> to drop a single column from a DataFrame. It is a very simplified way of dropping the column from a DataFrame.</p>
 <p>We need to select the column of DataFrame which needs to be deleted and pass it as <strong><code class="docutils literal notranslate"><span class="pre">del</span> <span class="pre">df[col_label]</span></code></strong>.</p>
 <blockquote>
@@ -1079,7 +1081,7 @@ After dropping column:
 </div>
 </section>
 <section id="compare-dataframe-drop-vs-pop-vs-del">
-<h2>Compare DataFrame <code class="docutils literal notranslate"><span class="pre">drop()</span></code> vs. <code class="docutils literal notranslate"><span class="pre">pop()</span></code> vs. <code class="docutils literal notranslate"><span class="pre">del</span></code><a class="headerlink" href="#compare-dataframe-drop-vs-pop-vs-del" title="Permalink to this heading">#</a></h2>
+<h2>Compare DataFrame <code class="docutils literal notranslate"><span class="pre">drop()</span></code> vs. <code class="docutils literal notranslate"><span class="pre">pop()</span></code> vs. <code class="docutils literal notranslate"><span class="pre">del</span></code><a class="headerlink" href="#compare-dataframe-drop-vs-pop-vs-del" title="Link to this heading">#</a></h2>
 <table class="table">
 <thead>
 <tr class="row-odd"><th class="head text-left"><p>Features</p></th>
@@ -1171,6 +1173,7 @@ After dropping column:
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
+
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> Contents
@@ -1247,8 +1250,8 @@ By Anukool Chaturvedi
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
-<script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+  <script src="../../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
   <footer class="bd-footer">
   </footer>

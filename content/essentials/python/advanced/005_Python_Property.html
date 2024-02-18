@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" >
+<html lang="en" data-content_root="../../../../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Python @property decorator &#8212; Anukool&#39;s almanac</title>
   
@@ -19,53 +18,49 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="../../../../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link href="../../../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
   
-  <link href="../../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../../../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
-<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
-  <script src="../../../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
-    <script src="../../../../_static/jquery.js"></script>
-    <script src="../../../../_static/underscore.js"></script>
-    <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../../../../_static/doctools.js"></script>
-    <script src="../../../../_static/clipboard.min.js"></script>
-    <script src="../../../../_static/copybutton.js"></script>
-    <script src="../../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../../../_static/togglebutton.js"></script>
+    <script src="../../../../_static/togglebutton.js?v=4a39c7ea"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../../../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../../../../_static/sphinx-thebe.js"></script>
+    <script src="../../../../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'content/essentials/python/advanced/005_Python_Property';</script>
     <link rel="canonical" href="https://anukchat.github.io/content/essentials/python/advanced/005_Python_Property.html" />
-    <link rel="shortcut icon" href="../../../../_static/mesh-smallest.png"/>
+    <link rel="icon" href="../../../../_static/mesh-smallest.png"/>
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
     <link rel="next" title="Python RegEx" href="006_Python_RegEx.html" />
@@ -79,10 +74,9 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
   
   <div id="pst-scroll-pixel-helper"></div>
-
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
     <i class="fa-solid fa-arrow-up"></i>
@@ -123,11 +117,14 @@ const thebe_selector_output = ".output, .cell_output"
 </form></div>
   </div>
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -155,7 +152,18 @@ const thebe_selector_output = ".output, .cell_output"
     <p class="title logo__title">Anukool's almanac</p>
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Essentials</span></p>
 <ul class="current nav bd-sidenav">
@@ -220,13 +228,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../files/files_toc.html">Files</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../files/001_Python_File_Input_Output.html">Python File I/O</a></li>
-
-
-
-
-
-
+<li class="toctree-l3"><a class="reference internal" href="../files/001_Python_File_Input_Output.html">File I/O</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../files/002_Python_File_Directory.html">File directory</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../files/003_Python_File_Exception.html">File exception</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../files/004_Python_Exceptions_Handling.html">Exceptions handling</a></li>
@@ -523,16 +525,16 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="python-property-decorator">
-<h1>Python <code class="docutils literal notranslate"><span class="pre">&#64;property</span></code> decorator<a class="headerlink" href="#python-property-decorator" title="Permalink to this heading">#</a></h1>
+<h1>Python <code class="docutils literal notranslate"><span class="pre">&#64;property</span></code> decorator<a class="headerlink" href="#python-property-decorator" title="Link to this heading">#</a></h1>
 <p>In this class, you will learn about Python <strong><code class="docutils literal notranslate"><span class="pre">&#64;property</span></code></strong> decorator; a pythonic way to use getters and setters in object-oriented programming.</p>
 <p>Python programming provides us with a built-in <strong><code class="docutils literal notranslate"><span class="pre">&#64;property</span></code></strong> decorator which makes usage of getter and setters much easier in Object-Oriented Programming.</p>
 <p>Before going into details on what <strong><code class="docutils literal notranslate"><span class="pre">&#64;property</span></code></strong> decorator is, let us first build an intuition on why it would be needed in the first place.</p>
 <section id="class-without-getters-and-setters">
-<h2>Class Without Getters and Setters<a class="headerlink" href="#class-without-getters-and-setters" title="Permalink to this heading">#</a></h2>
-<p>Let us assume that we decide to make a <strong><a class="reference internal" href="../objects/002_Python_Classes_and_Objects.html"><span class="doc std std-doc">class</span></a></strong> that stores the temperature in degrees Celsius. It would also implement a method to convert the temperature into degrees Fahrenheit. One way of doing this is as follows:</p>
+<h2>Class Without Getters and Setters<a class="headerlink" href="#class-without-getters-and-setters" title="Link to this heading">#</a></h2>
+<p>Let us assume that we decide to make a <strong><a class="reference internal" href="../objects/002_Python_Classes_and_Objects.html"><span class="std std-doc">class</span></a></strong> that stores the temperature in degrees Celsius. It would also implement a method to convert the temperature into degrees Fahrenheit. One way of doing this is as follows:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Celsius</span><span class="p">:</span>
@@ -579,7 +581,7 @@ document.write(`
 </div>
 </div>
 </div>
-<p>The extra decimal places when converting into Fahrenheit is due to the floating point arithmetic error. To learn more, visit <strong><a class="reference internal" href="../datatypes/001_Python_Numbers.html"><span class="doc std std-doc">Python Floating Point Arithmetic Error</span></a></strong>.</p>
+<p>The extra decimal places when converting into Fahrenheit is due to the floating point arithmetic error. To learn more, visit <strong><a class="reference internal" href="../datatypes/001_Python_Numbers.html"><span class="std std-doc">Python Floating Point Arithmetic Error</span></a></strong>.</p>
 <p>Whenever we assign or retrieve any object attribute like <strong><code class="docutils literal notranslate"><span class="pre">temperature</span></code></strong> as shown above, Python searches it in the object’s built-in <strong><code class="docutils literal notranslate"><span class="pre">__dict__</span></code></strong> dictionary attribute.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -596,7 +598,7 @@ document.write(`
 <p>Therefore, <strong><code class="docutils literal notranslate"><span class="pre">man.temperature</span></code></strong> internally becomes <strong><code class="docutils literal notranslate"><span class="pre">man.__dict__['temperature']</span></code></strong>.</p>
 </section>
 <section id="using-getters-and-setters">
-<h2>Using Getters and Setters<a class="headerlink" href="#using-getters-and-setters" title="Permalink to this heading">#</a></h2>
+<h2>Using Getters and Setters<a class="headerlink" href="#using-getters-and-setters" title="Link to this heading">#</a></h2>
 <p>Suppose we want to extend the usability of the <strong><code class="docutils literal notranslate"><span class="pre">Celsius</span></code></strong> class defined above. We know that the temperature of any object cannot reach below -273.15 degrees Celsius (Absolute Zero in Thermodynamics)</p>
 <p>Let’s update our code to implement this value constraint.</p>
 <p>An obvious solution to the above restriction will be to hide the attribute <strong><code class="docutils literal notranslate"><span class="pre">temperature</span></code></strong> (make it private) and define new getter and setter methods to manipulate it. This can be done as follows:</p>
@@ -704,7 +706,7 @@ document.write(`
 <p>All in all, our new update was not backwards compatible. This is where <strong><code class="docutils literal notranslate"><span class="pre">&#64;property</span></code></strong> comes to rescue.</p>
 </section>
 <section id="the-property-class">
-<h2>The property Class<a class="headerlink" href="#the-property-class" title="Permalink to this heading">#</a></h2>
+<h2>The property Class<a class="headerlink" href="#the-property-class" title="Link to this heading">#</a></h2>
 <p>A pythonic way to deal with the above problem is to use the property class. Here is how we can update our code:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -868,7 +870,7 @@ Setting value...
 </div></blockquote>
 </section>
 <section id="the-property-decorator">
-<h2>The <code class="docutils literal notranslate"><span class="pre">&#64;property</span></code> Decorator<a class="headerlink" href="#the-property-decorator" title="Permalink to this heading">#</a></h2>
+<h2>The <code class="docutils literal notranslate"><span class="pre">&#64;property</span></code> Decorator<a class="headerlink" href="#the-property-decorator" title="Link to this heading">#</a></h2>
 <p>In Python, <strong><code class="docutils literal notranslate"><span class="pre">property()</span></code></strong> is a built-in function that creates and returns a <strong><code class="docutils literal notranslate"><span class="pre">property</span></code></strong> object. The syntax of this function is:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">property</span><span class="p">(</span><span class="n">fget</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">fset</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">fdel</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">doc</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
 </pre></div>
@@ -907,7 +909,7 @@ Setting value...
 </pre></div>
 </div>
 <p>These two pieces of codes are equivalent.</p>
-<p>Programmers familiar with <strong><a class="reference internal" href="004_Python_Decorators.html"><span class="doc std std-doc">Python Decorators</span></a></strong> can recognize that the above construct can be implemented as decorators.</p>
+<p>Programmers familiar with <strong><a class="reference internal" href="004_Python_Decorators.html"><span class="std std-doc">Python Decorators</span></a></strong> can recognize that the above construct can be implemented as decorators.</p>
 <p>We can even not define the names <strong><code class="docutils literal notranslate"><span class="pre">get_temperature</span></code></strong> and <strong><code class="docutils literal notranslate"><span class="pre">set_temperature</span></code></strong> as they are unnecessary and pollute the class namespace.</p>
 <p>For this, we reuse the <strong><code class="docutils literal notranslate"><span class="pre">temperature</span></code></strong> name while defining our getter and setter functions. Let’s look at how to implement this as a decorator:</p>
 <div class="cell docutils container">
@@ -1041,6 +1043,7 @@ Setting value...
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
+
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> Contents
@@ -1099,8 +1102,8 @@ By Anukool Chaturvedi
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
-<script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+  <script src="../../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
   <footer class="bd-footer">
   </footer>

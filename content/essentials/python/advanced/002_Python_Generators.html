@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" >
+<html lang="en" data-content_root="../../../../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Python Python Generators &#8212; Anukool&#39;s almanac</title>
   
@@ -19,53 +18,49 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="../../../../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link href="../../../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
   
-  <link href="../../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../../../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
-<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
-  <script src="../../../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
-    <script src="../../../../_static/jquery.js"></script>
-    <script src="../../../../_static/underscore.js"></script>
-    <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../../../../_static/doctools.js"></script>
-    <script src="../../../../_static/clipboard.min.js"></script>
-    <script src="../../../../_static/copybutton.js"></script>
-    <script src="../../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../../../_static/togglebutton.js"></script>
+    <script src="../../../../_static/togglebutton.js?v=4a39c7ea"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../../../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../../../../_static/sphinx-thebe.js"></script>
+    <script src="../../../../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'content/essentials/python/advanced/002_Python_Generators';</script>
     <link rel="canonical" href="https://anukchat.github.io/content/essentials/python/advanced/002_Python_Generators.html" />
-    <link rel="shortcut icon" href="../../../../_static/mesh-smallest.png"/>
+    <link rel="icon" href="../../../../_static/mesh-smallest.png"/>
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
     <link rel="next" title="Python Closures" href="003_Python_Closure.html" />
@@ -79,10 +74,9 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
   
   <div id="pst-scroll-pixel-helper"></div>
-
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
     <i class="fa-solid fa-arrow-up"></i>
@@ -123,11 +117,14 @@ const thebe_selector_output = ".output, .cell_output"
 </form></div>
   </div>
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -155,7 +152,18 @@ const thebe_selector_output = ".output, .cell_output"
     <p class="title logo__title">Anukool's almanac</p>
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Essentials</span></p>
 <ul class="current nav bd-sidenav">
@@ -220,13 +228,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../files/files_toc.html">Files</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../files/001_Python_File_Input_Output.html">Python File I/O</a></li>
-
-
-
-
-
-
+<li class="toctree-l3"><a class="reference internal" href="../files/001_Python_File_Input_Output.html">File I/O</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../files/002_Python_File_Directory.html">File directory</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../files/003_Python_File_Exception.html">File exception</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../files/004_Python_Exceptions_Handling.html">Exceptions handling</a></li>
@@ -529,27 +531,27 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="python-python-generators">
-<h1>Python Python Generators<a class="headerlink" href="#python-python-generators" title="Permalink to this heading">#</a></h1>
+<h1>Python Python Generators<a class="headerlink" href="#python-python-generators" title="Link to this heading">#</a></h1>
 <p>In this class, you’ll learn how to create iterations easily using Python generators, how it is different from iterators and normal functions, and why you should use it.</p>
 <section id="generators-in-python">
-<h2>Generators in Python<a class="headerlink" href="#generators-in-python" title="Permalink to this heading">#</a></h2>
-<p>There is a lot of work in building an <strong><a class="reference internal" href="001_Python_Iterators.html"><span class="doc std std-doc">iterator</span></a></strong> in Python. We have to implement a class with <strong><code class="docutils literal notranslate"><span class="pre">__iter__()</span></code></strong> and <strong><code class="docutils literal notranslate"><span class="pre">__next__()</span></code></strong> method, keep track of internal states, and raise <strong><code class="docutils literal notranslate"><span class="pre">StopIteration</span></code></strong> when there are no values to be returned.</p>
+<h2>Generators in Python<a class="headerlink" href="#generators-in-python" title="Link to this heading">#</a></h2>
+<p>There is a lot of work in building an <strong><a class="reference internal" href="001_Python_Iterators.html"><span class="std std-doc">iterator</span></a></strong> in Python. We have to implement a class with <strong><code class="docutils literal notranslate"><span class="pre">__iter__()</span></code></strong> and <strong><code class="docutils literal notranslate"><span class="pre">__next__()</span></code></strong> method, keep track of internal states, and raise <strong><code class="docutils literal notranslate"><span class="pre">StopIteration</span></code></strong> when there are no values to be returned.</p>
 <p>This is both lengthy and counterintuitive. Generator comes to the rescue in such situations.</p>
 <p>Python generators are a simple way of creating iterators. All the work we mentioned above are automatically handled by generators in Python.</p>
 <p>Simply speaking, a generator is a function that returns an object (iterator) which we can iterate over (one value at a time).</p>
 </section>
 <section id="create-generators-in-python">
-<h2>Create Generators in Python<a class="headerlink" href="#create-generators-in-python" title="Permalink to this heading">#</a></h2>
+<h2>Create Generators in Python<a class="headerlink" href="#create-generators-in-python" title="Link to this heading">#</a></h2>
 <p>It is fairly simple to create a generator in Python. It is as easy as defining a normal function, but with a <strong><code class="docutils literal notranslate"><span class="pre">yield</span></code></strong> statement instead of a <strong><code class="docutils literal notranslate"><span class="pre">return</span></code></strong> statement.</p>
 <p>If a function contains at least one <strong><code class="docutils literal notranslate"><span class="pre">yield</span></code></strong> statement (it may contain other <strong><code class="docutils literal notranslate"><span class="pre">yield</span></code></strong> or <strong><code class="docutils literal notranslate"><span class="pre">return</span></code></strong> statements), it becomes a generator function. Both <strong><code class="docutils literal notranslate"><span class="pre">yield</span></code></strong> and <strong><code class="docutils literal notranslate"><span class="pre">return</span></code></strong> will return some value from a function.</p>
 <p>The difference is that while a <strong><code class="docutils literal notranslate"><span class="pre">return</span></code></strong> statement terminates a function entirely, <strong><code class="docutils literal notranslate"><span class="pre">yield</span></code></strong> statement pauses the function saving all its states and later continues from there on successive calls.</p>
 </section>
 <section id="differences-between-generator-function-and-normal-function">
-<h2>Differences between Generator function and Normal function<a class="headerlink" href="#differences-between-generator-function-and-normal-function" title="Permalink to this heading">#</a></h2>
-<p>Here is how a generator function differs from a normal <strong><a class="reference internal" href="../functions/001_Python_Functions.html"><span class="doc std std-doc">function</span></a></strong>.</p>
+<h2>Differences between Generator function and Normal function<a class="headerlink" href="#differences-between-generator-function-and-normal-function" title="Link to this heading">#</a></h2>
+<p>Here is how a generator function differs from a normal <strong><a class="reference internal" href="../functions/001_Python_Functions.html"><span class="std std-doc">function</span></a></strong>.</p>
 <ol class="arabic simple">
 <li><p>Generator function contains one or more <strong><code class="docutils literal notranslate"><span class="pre">yield</span></code></strong> statements.</p></li>
 <li><p>When called, it returns an object (iterator) but does not start execution immediately.</p></li>
@@ -608,8 +610,8 @@ document.write(`
 <p>One interesting thing to note in the above example is that the value of variable <strong><code class="docutils literal notranslate"><span class="pre">n</span></code></strong> is remembered between each call.</p>
 <p>Unlike normal functions, the local variables are not destroyed when the function yields. Furthermore, the generator object can be iterated only once.</p>
 <p>To restart the process we need to create another generator object using something like <strong><code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">=</span> <span class="pre">my_gen()</span></code></strong>.</p>
-<p>One final thing to note is that we can use generators with <strong><a class="reference internal" href="../controlflow/005_Python_for_Loop.html"><span class="doc std std-doc">for loop</span></a></strong> directly.</p>
-<p>This is because a <strong><code class="docutils literal notranslate"><span class="pre">for</span></code></strong> loop takes an iterator and iterates over it using <strong><code class="docutils literal notranslate"><span class="pre">next()</span></code></strong> function. It automatically ends when <strong><code class="docutils literal notranslate"><span class="pre">StopIteration</span></code></strong> is raised. Check here to <strong><a class="reference internal" href="001_Python_Iterators.html"><span class="doc std std-doc">know how a for loop is actually implemented in Python</span></a></strong>.</p>
+<p>One final thing to note is that we can use generators with <strong><a class="reference internal" href="../controlflow/005_Python_for_Loop.html"><span class="std std-doc">for loop</span></a></strong> directly.</p>
+<p>This is because a <strong><code class="docutils literal notranslate"><span class="pre">for</span></code></strong> loop takes an iterator and iterates over it using <strong><code class="docutils literal notranslate"><span class="pre">next()</span></code></strong> function. It automatically ends when <strong><code class="docutils literal notranslate"><span class="pre">StopIteration</span></code></strong> is raised. Check here to <strong><a class="reference internal" href="001_Python_Iterators.html"><span class="std std-doc">know how a for loop is actually implemented in Python</span></a></strong>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># A simple generator function</span>
@@ -649,7 +651,7 @@ This is printed at last
 <p>A more elegant way of automatically iterating is by using the for loop. Using this, we can iterate over any object that can return an iterator, for example list, string, file etc.</p>
 </section>
 <section id="python-generators-with-a-loop">
-<h2>Python Generators with a Loop<a class="headerlink" href="#python-generators-with-a-loop" title="Permalink to this heading">#</a></h2>
+<h2>Python Generators with a Loop<a class="headerlink" href="#python-generators-with-a-loop" title="Link to this heading">#</a></h2>
 <p>The above example is of less use and we studied it just to get an idea of what was happening in the background.</p>
 <p>Normally, generator functions are implemented with a loop having a suitable terminating condition.</p>
 <p>Let’s take an example of a generator that reverses a string.</p>
@@ -679,14 +681,14 @@ h
 </div>
 <p>In this example, we have used the <strong><code class="docutils literal notranslate"><span class="pre">range()</span></code></strong> function to get the index in reverse order using the for loop.</p>
 <blockquote>
-<div><p><strong>Note</strong>: This generator function not only works with strings, but also with other kinds of iterables like <strong><a class="reference internal" href="../datatypes/003_Python_List.html"><span class="doc std std-doc">list</span></a></strong>, <strong><a class="reference internal" href="../datatypes/004_Python_Tuple.html"><span class="doc std std-doc">tuple</span></a></strong>, etc.</p>
+<div><p><strong>Note</strong>: This generator function not only works with strings, but also with other kinds of iterables like <strong><a class="reference internal" href="../datatypes/003_Python_List.html"><span class="std std-doc">list</span></a></strong>, <strong><a class="reference internal" href="../datatypes/004_Python_Tuple.html"><span class="std std-doc">tuple</span></a></strong>, etc.</p>
 </div></blockquote>
 </section>
 <section id="python-generator-expression">
-<h2>Python Generator Expression<a class="headerlink" href="#python-generator-expression" title="Permalink to this heading">#</a></h2>
+<h2>Python Generator Expression<a class="headerlink" href="#python-generator-expression" title="Link to this heading">#</a></h2>
 <p>Simple generators can be easily created on the fly using generator expressions. It makes building generators easy.</p>
-<p>Similar to the lambda functions which create <strong><a class="reference internal" href="../functions/006_Python_Function_Anonymous.html"><span class="doc std std-doc">anonymous functions</span></a></strong>, generator expressions create <strong>anonymous generator functions</strong>.</p>
-<p>The syntax for generator expression is similar to that of a <strong><a class="reference internal" href="../datatypes/003_Python_List.html"><span class="doc std std-doc">list comprehension in Python</span></a></strong>. But the square brackets are replaced with round parentheses.</p>
+<p>Similar to the lambda functions which create <strong><a class="reference internal" href="../functions/006_Python_Function_Anonymous.html"><span class="std std-doc">anonymous functions</span></a></strong>, generator expressions create <strong>anonymous generator functions</strong>.</p>
+<p>The syntax for generator expression is similar to that of a <strong><a class="reference internal" href="../datatypes/003_Python_List.html"><span class="std std-doc">list comprehension in Python</span></a></strong>. But the square brackets are replaced with round parentheses.</p>
 <p>The major difference between a list comprehension and a generator expression is that a list comprehension produces the entire list while the generator expression produces one item at a time.</p>
 <p>They have lazy execution ( producing items only when asked for ). For this reason, a generator expression is much more memory efficient than an equivalent list comprehension.</p>
 <div class="cell docutils container">
@@ -779,11 +781,11 @@ h
 </div>
 </section>
 <section id="use-of-python-generators">
-<h2>Use of Python Generators<a class="headerlink" href="#use-of-python-generators" title="Permalink to this heading">#</a></h2>
+<h2>Use of Python Generators<a class="headerlink" href="#use-of-python-generators" title="Link to this heading">#</a></h2>
 <p>There are several reasons that make generators a powerful implementation.</p>
 </section>
 <section id="easy-to-implement">
-<h2>1. Easy to Implement<a class="headerlink" href="#easy-to-implement" title="Permalink to this heading">#</a></h2>
+<h2>1. Easy to Implement<a class="headerlink" href="#easy-to-implement" title="Link to this heading">#</a></h2>
 <p>Generators can be implemented in a clear and concise way as compared to their iterator class counterpart. Following is an example to implement a sequence of power of 2 using an iterator class.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">PowTwo</span><span class="p">:</span>
 <span class="gp">&gt;&gt;&gt; </span>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">max</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
@@ -813,12 +815,12 @@ h
 <p>Since generators keep track of details automatically, the implementation was concise and much cleaner.</p>
 </section>
 <section id="memory-efficient">
-<h2>2. Memory Efficient<a class="headerlink" href="#memory-efficient" title="Permalink to this heading">#</a></h2>
+<h2>2. Memory Efficient<a class="headerlink" href="#memory-efficient" title="Link to this heading">#</a></h2>
 <p>A normal function to return a sequence will create the entire sequence in memory before returning the result. This is an overkill, if the number of items in the sequence is very large.</p>
 <p>Generator implementation of such sequences is memory friendly and is preferred since it only produces one item at a time.</p>
 </section>
 <section id="represent-infinite-stream">
-<h2>3. Represent Infinite Stream<a class="headerlink" href="#represent-infinite-stream" title="Permalink to this heading">#</a></h2>
+<h2>3. Represent Infinite Stream<a class="headerlink" href="#represent-infinite-stream" title="Link to this heading">#</a></h2>
 <p>Generators are excellent mediums to represent an infinite stream of data. Infinite streams cannot be stored in memory, and since generators produce only one item at a time, they can represent an infinite stream of data.</p>
 <p>The following generator function can generate all the even numbers (at least in theory).</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">all_even</span><span class="p">():</span>
@@ -830,7 +832,7 @@ h
 </div>
 </section>
 <section id="pipelining-generators">
-<h2>4. Pipelining Generators<a class="headerlink" href="#pipelining-generators" title="Permalink to this heading">#</a></h2>
+<h2>4. Pipelining Generators<a class="headerlink" href="#pipelining-generators" title="Link to this heading">#</a></h2>
 <p>Multiple generators can be used to pipeline a series of operations. This is best illustrated using an example.</p>
 <p>Suppose we have a generator that produces the numbers in the Fibonacci series. And we have another generator for squaring numbers.</p>
 <p>If we want to find out the sum of squares of numbers in the Fibonacci series, we can do it in the following way by pipelining the output of generator functions together.</p>
@@ -917,6 +919,7 @@ h
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
+
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> Contents
@@ -981,8 +984,8 @@ By Anukool Chaturvedi
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
-<script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+  <script src="../../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
   <footer class="bd-footer">
   </footer>

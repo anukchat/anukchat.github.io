@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" >
+<html lang="en" data-content_root="../../../../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Python Operators &#8212; Anukool&#39;s almanac</title>
   
@@ -19,55 +18,51 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="../../../../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link href="../../../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
   
-  <link href="../../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../../../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
-<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
-  <script src="../../../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
-    <script src="../../../../_static/jquery.js"></script>
-    <script src="../../../../_static/underscore.js"></script>
-    <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../../../../_static/doctools.js"></script>
-    <script src="../../../../_static/clipboard.min.js"></script>
-    <script src="../../../../_static/copybutton.js"></script>
-    <script src="../../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../../../_static/togglebutton.js"></script>
+    <script src="../../../../_static/togglebutton.js?v=4a39c7ea"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../../../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../../../../_static/sphinx-thebe.js"></script>
+    <script src="../../../../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'content/essentials/python/introduction/010_Python_Operators';</script>
     <link rel="canonical" href="https://anukchat.github.io/content/essentials/python/introduction/010_Python_Operators.html" />
-    <link rel="shortcut icon" href="../../../../_static/mesh-smallest.png"/>
+    <link rel="icon" href="../../../../_static/mesh-smallest.png"/>
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
     <link rel="next" title="Python Namespace and Scope" href="011_Python_Namespace_and_Scope.html" />
@@ -81,10 +76,9 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
   
   <div id="pst-scroll-pixel-helper"></div>
-
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
     <i class="fa-solid fa-arrow-up"></i>
@@ -125,11 +119,14 @@ const thebe_selector_output = ".output, .cell_output"
 </form></div>
   </div>
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -157,7 +154,18 @@ const thebe_selector_output = ".output, .cell_output"
     <p class="title logo__title">Anukool's almanac</p>
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Essentials</span></p>
 <ul class="current nav bd-sidenav">
@@ -222,13 +230,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../files/files_toc.html">Files</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../files/001_Python_File_Input_Output.html">Python File I/O</a></li>
-
-
-
-
-
-
+<li class="toctree-l3"><a class="reference internal" href="../files/001_Python_File_Input_Output.html">File I/O</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../files/002_Python_File_Directory.html">File directory</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../files/003_Python_File_Exception.html">File exception</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../files/004_Python_Exceptions_Handling.html">Exceptions handling</a></li>
@@ -535,7 +537,7 @@ document.write(`
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#membership-operators">2. Membership operators</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-membership-operators-in-python">Example : Membership operators in Python</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-span-class-label-label-default-operators-span">💻 Exercises ➞ <span class="label label-default">Operators</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-operators">💻 Exercises ➞ <span class="label label-default">Operators</span></a></li>
 </ul>
 </li>
 </ul>
@@ -547,10 +549,10 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="python-operators">
-<h1>Python Operators<a class="headerlink" href="#python-operators" title="Permalink to this heading">#</a></h1>
+<h1>Python Operators<a class="headerlink" href="#python-operators" title="Link to this heading">#</a></h1>
 <p>Python can be used like a calculator. Simply type in expressions to get them evaluated.</p>
 <p><strong>What are operators in python?</strong></p>
 <p>Operators are special <strong>symbols</strong> in Python that carry out <strong>arithmetic</strong> or <strong>logical computation</strong>. The value that the operator operates on is called the <strong>operand</strong>.</p>
@@ -574,7 +576,7 @@ document.write(`
 </div>
 </div>
 <section id="arithmatic-operators">
-<h2>1. Arithmatic Operators<a class="headerlink" href="#arithmatic-operators" title="Permalink to this heading">#</a></h2>
+<h2>1. Arithmatic Operators<a class="headerlink" href="#arithmatic-operators" title="Link to this heading">#</a></h2>
 <p>Arithmetic operators are used to perform <strong>mathematical operations</strong> like <strong>addition</strong>, <strong>subtraction</strong>, <strong>multiplication</strong> etc.</p>
 <table class="table">
 <thead>
@@ -624,7 +626,7 @@ document.write(`
 </table>
 <p>As expected these operations generally promote to the most general type of any of the numbers involved i.e. int -&gt; float -&gt; complex.</p>
 <section id="example-arithmetic-operators-in-python">
-<h3>Example : Arithmetic operators in Python<a class="headerlink" href="#example-arithmetic-operators-in-python" title="Permalink to this heading">#</a></h3>
+<h3>Example : Arithmetic operators in Python<a class="headerlink" href="#example-arithmetic-operators-in-python" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Addition: &#39;</span><span class="p">,</span> <span class="mi">1</span> <span class="o">+</span> <span class="mi">2</span><span class="p">)</span>
@@ -796,7 +798,7 @@ x // y = 5
 </section>
 </section>
 <section id="comparison-relational-operators">
-<h2>2. Comparison/Relational operators<a class="headerlink" href="#comparison-relational-operators" title="Permalink to this heading">#</a></h2>
+<h2>2. Comparison/Relational operators<a class="headerlink" href="#comparison-relational-operators" title="Link to this heading">#</a></h2>
 <p>Comparison operators are used to <strong>compare values</strong>. It either returns <strong>True</strong> or <strong>False</strong> according to the <strong>condition</strong>.</p>
 <table class="table">
 <thead>
@@ -841,7 +843,7 @@ x // y = 5
 </table>
 <p>Note the difference between <strong><code class="docutils literal notranslate"><span class="pre">==</span></code></strong> (equality test) and <strong><code class="docutils literal notranslate"><span class="pre">=</span></code></strong> (assignment)</p>
 <section id="example-comparison-operators-in-python">
-<h3>Example : Comparison operators in Python<a class="headerlink" href="#example-comparison-operators-in-python" title="Permalink to this heading">#</a></h3>
+<h3>Example : Comparison operators in Python<a class="headerlink" href="#example-comparison-operators-in-python" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="mi">6</span> <span class="o">&gt;</span> <span class="mi">3</span><span class="p">)</span>                           <span class="c1"># True, because 3 is greater than 2</span>
@@ -942,7 +944,7 @@ x &lt;= y is False
 </section>
 </section>
 <section id="logical-boolean-operators">
-<h2>3. Logical/Boolean operators<a class="headerlink" href="#logical-boolean-operators" title="Permalink to this heading">#</a></h2>
+<h2>3. Logical/Boolean operators<a class="headerlink" href="#logical-boolean-operators" title="Link to this heading">#</a></h2>
 <p>Logical operators are the <strong><code class="docutils literal notranslate"><span class="pre">and</span></code></strong>, <strong><code class="docutils literal notranslate"><span class="pre">or</span></code></strong>, <strong><code class="docutils literal notranslate"><span class="pre">not</span></code></strong> operators.</p>
 <table class="table">
 <thead>
@@ -967,7 +969,7 @@ x &lt;= y is False
 </tbody>
 </table>
 <section id="example-logical-operators-in-python">
-<h3>Example : Logical operators in Python<a class="headerlink" href="#example-logical-operators-in-python" title="Permalink to this heading">#</a></h3>
+<h3>Example : Logical operators in Python<a class="headerlink" href="#example-logical-operators-in-python" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;True == True: &#39;</span><span class="p">,</span> <span class="kc">True</span> <span class="o">==</span> <span class="kc">True</span><span class="p">)</span>
@@ -1100,7 +1102,7 @@ not x is False
 </section>
 </section>
 <section id="bitwise-operators">
-<h2>4. Bitwise operators<a class="headerlink" href="#bitwise-operators" title="Permalink to this heading">#</a></h2>
+<h2>4. Bitwise operators<a class="headerlink" href="#bitwise-operators" title="Link to this heading">#</a></h2>
 <p>Bitwise operators act on operands as if they were string of binary digits. It operates <strong>bit by bit</strong>, hence the name.</p>
 <p><strong>For example:</strong> 2 is <strong><code class="docutils literal notranslate"><span class="pre">10</span></code></strong> in binary and 7 is <strong><code class="docutils literal notranslate"><span class="pre">111</span></code></strong>.</p>
 <p><strong>In the table below:</strong> Let <strong><code class="docutils literal notranslate"><span class="pre">x</span></code></strong> = 10 (<strong><code class="docutils literal notranslate"><span class="pre">0000</span> <span class="pre">1010</span></code></strong> in binary) and <strong><code class="docutils literal notranslate"><span class="pre">y</span></code></strong> = 4 (<strong><code class="docutils literal notranslate"><span class="pre">0000</span> <span class="pre">0100</span></code></strong> in binary)</p>
@@ -1245,7 +1247,7 @@ not x is False
 </div>
 </section>
 <section id="assignment-operators">
-<h2>5. Assignment operators<a class="headerlink" href="#assignment-operators" title="Permalink to this heading">#</a></h2>
+<h2>5. Assignment operators<a class="headerlink" href="#assignment-operators" title="Link to this heading">#</a></h2>
 <p>Assignment operators are used in Python to <strong>assign values</strong> to <strong>variables</strong>.</p>
 <p><strong><code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">=</span> <span class="pre">5</span></code></strong> is a simple assignment operator that assigns the value 5 on the right to the variable <strong><code class="docutils literal notranslate"><span class="pre">a</span></code></strong> on the left.</p>
 <p>There are various compound operators in Python like a <strong><code class="docutils literal notranslate"><span class="pre">+=</span> <span class="pre">5</span></code></strong> that adds to the variable and later assigns the same. It is equivalent to <strong><code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">=</span> <span class="pre">a</span> <span class="pre">+</span> <span class="pre">5</span></code></strong>.</p>
@@ -1334,10 +1336,10 @@ x is 144
 </div>
 </section>
 <section id="special-operators">
-<h2>6. Special operators<a class="headerlink" href="#special-operators" title="Permalink to this heading">#</a></h2>
+<h2>6. Special operators<a class="headerlink" href="#special-operators" title="Link to this heading">#</a></h2>
 <p>Python language offers some special types of operators like the identity operator or the membership operator. They are described below with examples.</p>
 <section id="identity-operators">
-<h3>1. Identity operators<a class="headerlink" href="#identity-operators" title="Permalink to this heading">#</a></h3>
+<h3>1. Identity operators<a class="headerlink" href="#identity-operators" title="Link to this heading">#</a></h3>
 <p><strong><code class="docutils literal notranslate"><span class="pre">is</span></code></strong> and <strong><code class="docutils literal notranslate"><span class="pre">is</span> <span class="pre">not</span></code></strong> are the identity operators in Python. They are used to check if two values (or variables) are located on the same part of the <strong>memory</strong>. Two variables that are equal does not imply that they are <strong>identical</strong>.</p>
 <table class="table">
 <thead>
@@ -1358,7 +1360,7 @@ x is 144
 </tbody>
 </table>
 <section id="example-identity-operators-in-python">
-<h4>Example : Identity operators in Python<a class="headerlink" href="#example-identity-operators-in-python" title="Permalink to this heading">#</a></h4>
+<h4>Example : Identity operators in Python<a class="headerlink" href="#example-identity-operators-in-python" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x1</span> <span class="o">=</span> <span class="mi">6</span>
@@ -1394,7 +1396,7 @@ False
 </section>
 </section>
 <section id="membership-operators">
-<h2>2. Membership operators<a class="headerlink" href="#membership-operators" title="Permalink to this heading">#</a></h2>
+<h2>2. Membership operators<a class="headerlink" href="#membership-operators" title="Link to this heading">#</a></h2>
 <p><strong><code class="docutils literal notranslate"><span class="pre">in</span></code></strong> and <strong><code class="docutils literal notranslate"><span class="pre">not</span> <span class="pre">in</span></code></strong> are the membership operators in Python. They are used to test whether a value or variable is found in a <strong>sequence</strong> (<strong>string</strong>, <strong>list</strong>, <strong>tuple</strong>, <strong>set</strong> and <strong>dictionary</strong>).</p>
 <p>In a dictionary we can only test for presence of <strong>key, not the value</strong>.</p>
 <table class="table">
@@ -1416,7 +1418,7 @@ False
 </tbody>
 </table>
 <section id="example-membership-operators-in-python">
-<h3>Example : Membership operators in Python<a class="headerlink" href="#example-membership-operators-in-python" title="Permalink to this heading">#</a></h3>
+<h3>Example : Membership operators in Python<a class="headerlink" href="#example-membership-operators-in-python" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;Hello world&#39;</span>
@@ -1448,8 +1450,8 @@ False
 <p><strong>Explanation:</strong></p>
 <p>Here, <strong>‘<code class="docutils literal notranslate"><span class="pre">H</span></code>’</strong> is in <strong><code class="docutils literal notranslate"><span class="pre">x</span></code></strong> but <strong>‘<code class="docutils literal notranslate"><span class="pre">hello</span></code>’</strong> is not present in <strong><code class="docutils literal notranslate"><span class="pre">x</span></code></strong> (remember, Python is case sensitive). Similary, <strong><code class="docutils literal notranslate"><span class="pre">1</span></code></strong> is key and <strong>‘<code class="docutils literal notranslate"><span class="pre">a</span></code>’</strong> is the value in dictionary y. Hence, <strong><code class="docutils literal notranslate"><span class="pre">'a'in</span> <span class="pre">y</span></code></strong> returns <strong><code class="docutils literal notranslate"><span class="pre">False</span></code></strong>.</p>
 </section>
-<section id="exercises-span-class-label-label-default-operators-span">
-<h3>💻 Exercises ➞ <span class='label label-default'>Operators</span><a class="headerlink" href="#exercises-span-class-label-label-default-operators-span" title="Permalink to this heading">#</a></h3>
+<section id="exercises-operators">
+<h3>💻 Exercises ➞ <span class='label label-default'>Operators</span><a class="headerlink" href="#exercises-operators" title="Link to this heading">#</a></h3>
 <ol class="arabic simple">
 <li><p>Declare your age as integer variable</p></li>
 <li><p>Declare your height as a float variable</p></li>
@@ -1571,6 +1573,7 @@ False
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
+
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> Contents
@@ -1600,7 +1603,7 @@ False
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#membership-operators">2. Membership operators</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-membership-operators-in-python">Example : Membership operators in Python</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-span-class-label-label-default-operators-span">💻 Exercises ➞ <span class="label label-default">Operators</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-operators">💻 Exercises ➞ <span class="label label-default">Operators</span></a></li>
 </ul>
 </li>
 </ul>
@@ -1651,8 +1654,8 @@ By Anukool Chaturvedi
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
-<script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+  <script src="../../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
   <footer class="bd-footer">
   </footer>

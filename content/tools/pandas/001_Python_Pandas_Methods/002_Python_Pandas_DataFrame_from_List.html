@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" >
+<html lang="en" data-content_root="../../../../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Create Pandas DataFrame from Python List &#8212; Anukool&#39;s almanac</title>
   
@@ -19,53 +18,49 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="../../../../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link href="../../../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
   
-  <link href="../../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../../../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
-<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
-  <script src="../../../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
-    <script src="../../../../_static/jquery.js"></script>
-    <script src="../../../../_static/underscore.js"></script>
-    <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../../../../_static/doctools.js"></script>
-    <script src="../../../../_static/clipboard.min.js"></script>
-    <script src="../../../../_static/copybutton.js"></script>
-    <script src="../../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../../../_static/togglebutton.js"></script>
+    <script src="../../../../_static/togglebutton.js?v=4a39c7ea"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../../../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../../../../_static/sphinx-thebe.js"></script>
+    <script src="../../../../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'content/tools/pandas/001_Python_Pandas_Methods/002_Python_Pandas_DataFrame_from_List';</script>
     <link rel="canonical" href="https://anukchat.github.io/content/tools/pandas/001_Python_Pandas_Methods/002_Python_Pandas_DataFrame_from_List.html" />
-    <link rel="shortcut icon" href="../../../../_static/mesh-smallest.png"/>
+    <link rel="icon" href="../../../../_static/mesh-smallest.png"/>
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
     <link rel="next" title="Pandas DataFrame head, tail, at, iat" href="003_Python_Pandas_DataFrame_head_and_tail.html" />
@@ -79,10 +74,9 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
   
   <div id="pst-scroll-pixel-helper"></div>
-
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
     <i class="fa-solid fa-arrow-up"></i>
@@ -123,11 +117,14 @@ const thebe_selector_output = ".output, .cell_output"
 </form></div>
   </div>
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -155,7 +152,18 @@ const thebe_selector_output = ".output, .cell_output"
     <p class="title logo__title">Anukool's almanac</p>
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Essentials</span></p>
 <ul class="nav bd-sidenav">
@@ -220,13 +228,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../../essentials/python/files/files_toc.html">Files</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../../essentials/python/files/001_Python_File_Input_Output.html">Python File I/O</a></li>
-
-
-
-
-
-
+<li class="toctree-l3"><a class="reference internal" href="../../../essentials/python/files/001_Python_File_Input_Output.html">File I/O</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../essentials/python/files/002_Python_File_Directory.html">File directory</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../essentials/python/files/003_Python_File_Exception.html">File exception</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../essentials/python/files/004_Python_Exceptions_Handling.html">Exceptions handling</a></li>
@@ -526,15 +528,15 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="create-pandas-dataframe-from-python-list">
-<h1>Create Pandas DataFrame from Python List<a class="headerlink" href="#create-pandas-dataframe-from-python-list" title="Permalink to this heading">#</a></h1>
-<p>In this class, you will learn how to convert Python <strong><a class="reference internal" href="../../../essentials/python/datatypes/003_Python_List.html"><span class="doc std std-doc">List</span></a></strong> to a <strong><a class="reference internal" href="../001_Python_Pandas_DataFrame.html"><span class="doc std std-doc">Pandas DataFrame</span></a></strong>. It covers creating DataFrame from different types of a list like single list, multiple lists, nested lists. It creates DataFame from a list where a list can be added as a row or a column.</p>
+<h1>Create Pandas DataFrame from Python List<a class="headerlink" href="#create-pandas-dataframe-from-python-list" title="Link to this heading">#</a></h1>
+<p>In this class, you will learn how to convert Python <strong><a class="reference internal" href="../../../essentials/python/datatypes/003_Python_List.html"><span class="std std-doc">List</span></a></strong> to a <strong><a class="reference internal" href="../001_Python_Pandas_DataFrame.html"><span class="std std-doc">Pandas DataFrame</span></a></strong>. It covers creating DataFrame from different types of a list like single list, multiple lists, nested lists. It creates DataFame from a list where a list can be added as a row or a column.</p>
 <p>The List is a simple data structure in Python that stores the values as a List. The List can have heterogeneous elements, i.e., it can have values of different types. To analyze such a List, we can convert it into the pandas DataFrame. By converting the List into a 2-dimensional structure makes it efficient to process.</p>
 <p>DataFrame can be created from List using DataFrame constructor. In this class, we will discusses all the cases of it in detail.</p>
 <section id="create-dataframe-from-list-using-constructor">
-<h2>Create DataFrame from list using constructor<a class="headerlink" href="#create-dataframe-from-list-using-constructor" title="Permalink to this heading">#</a></h2>
+<h2>Create DataFrame from list using constructor<a class="headerlink" href="#create-dataframe-from-list-using-constructor" title="Link to this heading">#</a></h2>
 <p><strong>DataFrame constructor</strong> can create DataFrame from different data structures in python like <strong><code class="docutils literal notranslate"><span class="pre">dict</span></code></strong>, list, set, tuple, and <strong><code class="docutils literal notranslate"><span class="pre">ndarray</span></code></strong>.</p>
 <p><strong>Example:</strong></p>
 <p>Here we create a DataFrame object using a list of heterogeneous data. By default, all list elements are added as a row in the DataFrame. And row index is the range of numbers(starting at 0).</p>
@@ -565,7 +567,7 @@ document.write(`
 </div>
 </section>
 <section id="create-dataframe-from-list-with-a-customized-column-name">
-<h2>Create DataFrame from list with a customized column name<a class="headerlink" href="#create-dataframe-from-list-with-a-customized-column-name" title="Permalink to this heading">#</a></h2>
+<h2>Create DataFrame from list with a customized column name<a class="headerlink" href="#create-dataframe-from-list-with-a-customized-column-name" title="Link to this heading">#</a></h2>
 <p>While creating a DataFrame from the list, we can give a customized column label in the resultant DataFrame. By default, it provides a range of integers as column labels, i.e., 0, 1, 2…n.</p>
 <p>We can specify column labels into the <strong><code class="docutils literal notranslate"><span class="pre">columns=[col_labels]</span></code></strong> parameter in the DataFrame constructor.</p>
 <p><strong>Example:</strong></p>
@@ -597,7 +599,7 @@ document.write(`
 </div>
 </section>
 <section id="create-dataframe-from-list-with-a-customized-index">
-<h2>Create DataFrame from list with a customized index<a class="headerlink" href="#create-dataframe-from-list-with-a-customized-index" title="Permalink to this heading">#</a></h2>
+<h2>Create DataFrame from list with a customized index<a class="headerlink" href="#create-dataframe-from-list-with-a-customized-index" title="Link to this heading">#</a></h2>
 <p>As we just discussed the changing column label, we can even customize the row index as well. We can give a meaningful row index to identify each row uniquely. It becomes easier to access the rows using the index label.</p>
 <p>We can specify row index into the <strong><code class="docutils literal notranslate"><span class="pre">index=[row_index1,</span> <span class="pre">row_index2]</span></code></strong> parameter in the DataFrame constructor. By default, it gives a range of integers as row index i.e. 0, 1, 2…n.</p>
 <p><strong>Example:</strong></p>
@@ -629,7 +631,7 @@ Fruit4   Mango
 </div>
 </section>
 <section id="create-dataframe-from-list-by-changing-data-type">
-<h2>Create DataFrame from list by changing data type<a class="headerlink" href="#create-dataframe-from-list-by-changing-data-type" title="Permalink to this heading">#</a></h2>
+<h2>Create DataFrame from list by changing data type<a class="headerlink" href="#create-dataframe-from-list-by-changing-data-type" title="Link to this heading">#</a></h2>
 <p>While converting a Python List to the DataFrame, we may need to change the values’ data type.</p>
 <p>We can change the data type of the list elements using the <strong><code class="docutils literal notranslate"><span class="pre">dtype</span></code></strong> parameter of the DataFrame constructor.</p>
 <p><strong>Example:</strong></p>
@@ -670,7 +672,7 @@ dtype: object
 </div>
 </section>
 <section id="create-dataframe-from-hierarchical-lists-as-rows">
-<h2>Create DataFrame from hierarchical lists as rows<a class="headerlink" href="#create-dataframe-from-hierarchical-lists-as-rows" title="Permalink to this heading">#</a></h2>
+<h2>Create DataFrame from hierarchical lists as rows<a class="headerlink" href="#create-dataframe-from-hierarchical-lists-as-rows" title="Link to this heading">#</a></h2>
 <p>It may be possible to have data scattered into multiple lists or in the list of lists, also called a <strong>multi-dimensional list</strong>. In such a case, We can pass such a list to the DataFrame constructor to convert it into the DataFrame. By default, it adds each list as a row in the resultant DataFrame.</p>
 <p><strong>Example:</strong></p>
 <p>In the below example, we have a list that has lists of fruit names and their prices. DataFrame constructor will add both the lists as a separate row in the resulting DataFrame.</p>
@@ -699,7 +701,7 @@ dtype: object
 </div>
 </section>
 <section id="create-dataframe-from-hierarchical-lists-as-columns">
-<h2>Create DataFrame from Hierarchical lists as columns<a class="headerlink" href="#create-dataframe-from-hierarchical-lists-as-columns" title="Permalink to this heading">#</a></h2>
+<h2>Create DataFrame from Hierarchical lists as columns<a class="headerlink" href="#create-dataframe-from-hierarchical-lists-as-columns" title="Link to this heading">#</a></h2>
 <p>As discussed in the above section, we have a multi-dimensional list, but we do not want them to add to the DataFrame as a row. Instead, we want to add each list as a separate column in the DataFrame. For that, we need to use the <strong><code class="docutils literal notranslate"><span class="pre">transpose()</span></code></strong> function.</p>
 <p><strong>Example:</strong></p>
 <p>Here we have a list of two lists, fruit names and another for the fruits’ price. And we want to add both the list as a separate column in the DataFrame.</p>
@@ -730,7 +732,7 @@ dtype: object
 </div>
 </section>
 <section id="create-dataframe-from-multiple-lists">
-<h2>Create DataFrame from multiple lists<a class="headerlink" href="#create-dataframe-from-multiple-lists" title="Permalink to this heading">#</a></h2>
+<h2>Create DataFrame from multiple lists<a class="headerlink" href="#create-dataframe-from-multiple-lists" title="Link to this heading">#</a></h2>
 <p>It is the most common use case in the industry where you have multiple separate lists, and you need to add them as different columns in the DataFrame. This case can be resolved by using following two ways:</p>
 <ol class="arabic simple">
 <li><p><strong><code class="docutils literal notranslate"><span class="pre">zip(list1,</span> <span class="pre">list2...)</span></code></strong></p></li>
@@ -853,6 +855,7 @@ dtype: object
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
+
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> Contents
@@ -914,8 +917,8 @@ By Anukool Chaturvedi
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
-<script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+  <script src="../../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
   <footer class="bd-footer">
   </footer>

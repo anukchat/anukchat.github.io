@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" >
+<html lang="en" data-content_root="../../../../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Python datetime &#8212; Anukool&#39;s almanac</title>
   
@@ -19,53 +18,49 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="../../../../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link href="../../../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
   
-  <link href="../../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../../../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
-<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
-  <script src="../../../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
-    <script src="../../../../_static/jquery.js"></script>
-    <script src="../../../../_static/underscore.js"></script>
-    <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../../../../_static/doctools.js"></script>
-    <script src="../../../../_static/clipboard.min.js"></script>
-    <script src="../../../../_static/copybutton.js"></script>
-    <script src="../../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../../../_static/togglebutton.js"></script>
+    <script src="../../../../_static/togglebutton.js?v=4a39c7ea"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../../../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../../../../_static/sphinx-thebe.js"></script>
+    <script src="../../../../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'content/essentials/python/datetime/001_Python_datetime_Module';</script>
     <link rel="canonical" href="https://anukchat.github.io/content/essentials/python/datetime/001_Python_datetime_Module.html" />
-    <link rel="shortcut icon" href="../../../../_static/mesh-smallest.png"/>
+    <link rel="icon" href="../../../../_static/mesh-smallest.png"/>
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
     <link rel="next" title="Python strftime()" href="002_Python_strftime.html" />
@@ -79,10 +74,9 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
   
   <div id="pst-scroll-pixel-helper"></div>
-
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
     <i class="fa-solid fa-arrow-up"></i>
@@ -123,11 +117,14 @@ const thebe_selector_output = ".output, .cell_output"
 </form></div>
   </div>
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -155,7 +152,18 @@ const thebe_selector_output = ".output, .cell_output"
     <p class="title logo__title">Anukool's almanac</p>
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Essentials</span></p>
 <ul class="current nav bd-sidenav">
@@ -220,13 +228,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../files/files_toc.html">Files</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../files/001_Python_File_Input_Output.html">Python File I/O</a></li>
-
-
-
-
-
-
+<li class="toctree-l3"><a class="reference internal" href="../files/001_Python_File_Input_Output.html">File I/O</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../files/002_Python_File_Directory.html">File directory</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../files/003_Python_File_Exception.html">File exception</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../files/004_Python_Exceptions_Handling.html">Exceptions handling</a></li>
@@ -556,14 +558,14 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="python-datetime">
-<h1>Python datetime<a class="headerlink" href="#python-datetime" title="Permalink to this heading">#</a></h1>
+<h1>Python datetime<a class="headerlink" href="#python-datetime" title="Link to this heading">#</a></h1>
 <p>In this class, you will learn to manipulate date and time in Python with the help of examples.</p>
 <p>Python has a module named <strong>datetime</strong> to work with dates and times. Let’s create a few simple programs related to date and time before we dig deeper.</p>
 <section id="example-1-get-current-date-and-time">
-<h2>Example 1: Get Current Date and Time<a class="headerlink" href="#example-1-get-current-date-and-time" title="Permalink to this heading">#</a></h2>
+<h2>Example 1: Get Current Date and Time<a class="headerlink" href="#example-1-get-current-date-and-time" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example 1: Get Current Date and Time</span>
@@ -589,7 +591,7 @@ document.write(`
 <p>One of the classes defined in the <strong><code class="docutils literal notranslate"><span class="pre">datetime</span></code></strong> module is <strong><code class="docutils literal notranslate"><span class="pre">datetime</span></code></strong> class. We then used <strong><code class="docutils literal notranslate"><span class="pre">now()</span></code></strong> method to create a <strong><code class="docutils literal notranslate"><span class="pre">datetime</span></code></strong> object containing the current local date and time.</p>
 </section>
 <section id="example-2-get-current-date">
-<h2>Example 2: Get Current Date<a class="headerlink" href="#example-2-get-current-date" title="Permalink to this heading">#</a></h2>
+<h2>Example 2: Get Current Date<a class="headerlink" href="#example-2-get-current-date" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example 2: Get Current Date</span>
@@ -613,7 +615,7 @@ document.write(`
 <div><p><strong>Note:</strong> In this program, we have used <strong><code class="docutils literal notranslate"><span class="pre">today()</span></code></strong> method defined in the <strong><code class="docutils literal notranslate"><span class="pre">date</span></code></strong> class to get a <strong><code class="docutils literal notranslate"><span class="pre">date</span></code></strong> object containing the current local date.</p>
 </div></blockquote>
 <section id="whats-inside-datetime">
-<h3>What’s inside <strong><code class="docutils literal notranslate"><span class="pre">datetime</span></code></strong>?<a class="headerlink" href="#whats-inside-datetime" title="Permalink to this heading">#</a></h3>
+<h3>What’s inside <strong><code class="docutils literal notranslate"><span class="pre">datetime</span></code></strong>?<a class="headerlink" href="#whats-inside-datetime" title="Link to this heading">#</a></h3>
 <p>We can use <strong>dir()</strong> function to get a list containing all attributes of a module.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -641,10 +643,10 @@ document.write(`
 </section>
 </section>
 <section id="datetime-date-class">
-<h2><code class="docutils literal notranslate"><span class="pre">datetime.date</span></code> Class<a class="headerlink" href="#datetime-date-class" title="Permalink to this heading">#</a></h2>
+<h2><code class="docutils literal notranslate"><span class="pre">datetime.date</span></code> Class<a class="headerlink" href="#datetime-date-class" title="Link to this heading">#</a></h2>
 <p>You can instantiate date objects from the <strong><code class="docutils literal notranslate"><span class="pre">date</span></code></strong> class. A <strong><code class="docutils literal notranslate"><span class="pre">date</span></code></strong> object represents a date (year, month and day).</p>
 <section id="example-3-date-object-to-represent-a-date">
-<h3>Example 3: Date object to represent a date<a class="headerlink" href="#example-3-date-object-to-represent-a-date" title="Permalink to this heading">#</a></h3>
+<h3>Example 3: Date object to represent a date<a class="headerlink" href="#example-3-date-object-to-represent-a-date" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example 3: Date object to represent a date</span>
@@ -684,7 +686,7 @@ document.write(`
 </div>
 </section>
 <section id="example-4-get-current-date">
-<h3>Example 4: Get current date<a class="headerlink" href="#example-4-get-current-date" title="Permalink to this heading">#</a></h3>
+<h3>Example 4: Get current date<a class="headerlink" href="#example-4-get-current-date" title="Link to this heading">#</a></h3>
 <p>You can create a <strong><code class="docutils literal notranslate"><span class="pre">date</span></code></strong> object containing the current date by using a classmethod named <strong><code class="docutils literal notranslate"><span class="pre">today()</span></code></strong>. Here’s how:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -707,7 +709,7 @@ document.write(`
 <p>We can also create <strong><code class="docutils literal notranslate"><span class="pre">date</span></code></strong> objects from a timestamp. A Unix timestamp is the number of seconds between a particular date and January 1, 1970 at UTC. You can convert a timestamp to date using <strong><code class="docutils literal notranslate"><span class="pre">fromtimestamp()</span></code></strong> method.</p>
 </section>
 <section id="example-5-get-date-from-a-timestamp">
-<h3>Example 5: Get date from a timestamp<a class="headerlink" href="#example-5-get-date-from-a-timestamp" title="Permalink to this heading">#</a></h3>
+<h3>Example 5: Get date from a timestamp<a class="headerlink" href="#example-5-get-date-from-a-timestamp" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example 5: Get date from a timestamp</span>
@@ -729,7 +731,7 @@ document.write(`
 </div>
 </section>
 <section id="example-6-print-todays-year-month-and-day">
-<h3>Example 6: Print today’s year, month and day<a class="headerlink" href="#example-6-print-todays-year-month-and-day" title="Permalink to this heading">#</a></h3>
+<h3>Example 6: Print today’s year, month and day<a class="headerlink" href="#example-6-print-todays-year-month-and-day" title="Link to this heading">#</a></h3>
 <p>We can get year, month, day, day of the week etc. from the date object easily. Here’s how:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -757,10 +759,10 @@ Current day: 22
 </section>
 </section>
 <section id="datetime-time">
-<h2><code class="docutils literal notranslate"><span class="pre">datetime.time</span></code><a class="headerlink" href="#datetime-time" title="Permalink to this heading">#</a></h2>
+<h2><code class="docutils literal notranslate"><span class="pre">datetime.time</span></code><a class="headerlink" href="#datetime-time" title="Link to this heading">#</a></h2>
 <p>A time object instantiated from the <strong><code class="docutils literal notranslate"><span class="pre">time</span></code></strong> class represents the local time.</p>
 <section id="example-7-time-object-to-represent-time">
-<h3>Example 7: Time object to represent time<a class="headerlink" href="#example-7-time-object-to-represent-time" title="Permalink to this heading">#</a></h3>
+<h3>Example 7: Time object to represent time<a class="headerlink" href="#example-7-time-object-to-represent-time" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example 7: Time object to represent time</span>
@@ -798,7 +800,7 @@ d = 11:34:56.234566
 </div>
 </section>
 <section id="example-8-print-hour-minute-second-and-microsecond">
-<h3>Example 8: Print hour, minute, second and microsecond<a class="headerlink" href="#example-8-print-hour-minute-second-and-microsecond" title="Permalink to this heading">#</a></h3>
+<h3>Example 8: Print hour, minute, second and microsecond<a class="headerlink" href="#example-8-print-hour-minute-second-and-microsecond" title="Link to this heading">#</a></h3>
 <p>Once you create a <strong><code class="docutils literal notranslate"><span class="pre">time</span></code></strong> object, you can easily print its attributes such as <strong><code class="docutils literal notranslate"><span class="pre">hour</span></code></strong>, <strong><code class="docutils literal notranslate"><span class="pre">minute</span></code></strong> etc.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -832,10 +834,10 @@ microsecond = 0
 </section>
 </section>
 <section id="datetime-datetime">
-<h2><code class="docutils literal notranslate"><span class="pre">datetime.datetime</span></code><a class="headerlink" href="#datetime-datetime" title="Permalink to this heading">#</a></h2>
+<h2><code class="docutils literal notranslate"><span class="pre">datetime.datetime</span></code><a class="headerlink" href="#datetime-datetime" title="Link to this heading">#</a></h2>
 <p>The <strong><code class="docutils literal notranslate"><span class="pre">datetime</span></code></strong> module has a class named <strong><code class="docutils literal notranslate"><span class="pre">dateclass</span></code></strong> that can contain information from both <strong>date</strong> and <strong>time</strong> objects.</p>
 <section id="example-9-python-datetime-object">
-<h3>Example 9: Python datetime object<a class="headerlink" href="#example-9-python-datetime-object" title="Permalink to this heading">#</a></h3>
+<h3>Example 9: Python datetime object<a class="headerlink" href="#example-9-python-datetime-object" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example 9: Python datetime object</span>
@@ -866,7 +868,7 @@ microsecond = 0
 </div></blockquote>
 </section>
 <section id="example-10-print-year-month-hour-minute-and-timestamp">
-<h3>Example 10: Print year, month, hour, minute and timestamp<a class="headerlink" href="#example-10-print-year-month-hour-minute-and-timestamp" title="Permalink to this heading">#</a></h3>
+<h3>Example 10: Print year, month, hour, minute and timestamp<a class="headerlink" href="#example-10-print-year-month-hour-minute-and-timestamp" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example 10: Print year, month, hour, minute and timestamp</span>
@@ -897,10 +899,10 @@ timestamp = 1511893559.34238
 </section>
 </section>
 <section id="datetime-timedelta">
-<h2><code class="docutils literal notranslate"><span class="pre">datetime.timedelta</span></code><a class="headerlink" href="#datetime-timedelta" title="Permalink to this heading">#</a></h2>
+<h2><code class="docutils literal notranslate"><span class="pre">datetime.timedelta</span></code><a class="headerlink" href="#datetime-timedelta" title="Link to this heading">#</a></h2>
 <p>A <strong><code class="docutils literal notranslate"><span class="pre">timedelta</span></code></strong> object represents the difference between two dates or times.</p>
 <section id="example-11-difference-between-two-dates-and-times">
-<h3>Example 11: Difference between two dates and times<a class="headerlink" href="#example-11-difference-between-two-dates-and-times" title="Permalink to this heading">#</a></h3>
+<h3>Example 11: Difference between two dates and times<a class="headerlink" href="#example-11-difference-between-two-dates-and-times" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example 11: Difference between two dates and times</span>
@@ -938,7 +940,7 @@ type of t6 = &lt;class &#39;datetime.timedelta&#39;&gt;
 </div></blockquote>
 </section>
 <section id="example-12-difference-between-two-timedelta-objects">
-<h3>Example 12: Difference between two timedelta objects<a class="headerlink" href="#example-12-difference-between-two-timedelta-objects" title="Permalink to this heading">#</a></h3>
+<h3>Example 12: Difference between two timedelta objects<a class="headerlink" href="#example-12-difference-between-two-timedelta-objects" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example 12: Difference between two timedelta objects</span>
@@ -966,7 +968,7 @@ type of t6 = &lt;class &#39;datetime.timedelta&#39;&gt;
 </div></blockquote>
 </section>
 <section id="example-13-printing-negative-timedelta-object">
-<h3>Example 13: Printing negative timedelta object<a class="headerlink" href="#example-13-printing-negative-timedelta-object" title="Permalink to this heading">#</a></h3>
+<h3>Example 13: Printing negative timedelta object<a class="headerlink" href="#example-13-printing-negative-timedelta-object" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example 13: Printing negative timedelta object</span>
@@ -993,7 +995,7 @@ t3 = 0:00:21
 </div>
 </section>
 <section id="example-14-time-duration-in-seconds">
-<h3>Example 14: Time duration in seconds<a class="headerlink" href="#example-14-time-duration-in-seconds" title="Permalink to this heading">#</a></h3>
+<h3>Example 14: Time duration in seconds<a class="headerlink" href="#example-14-time-duration-in-seconds" title="Link to this heading">#</a></h3>
 <p>You can get the total number of seconds in a <strong><code class="docutils literal notranslate"><span class="pre">timedelta</span></code></strong> object using <strong><code class="docutils literal notranslate"><span class="pre">total_seconds()</span></code></strong> method.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1018,15 +1020,15 @@ t3 = 0:00:21
 </section>
 </section>
 <section id="python-format-datetime">
-<h2>Python format datetime<a class="headerlink" href="#python-format-datetime" title="Permalink to this heading">#</a></h2>
+<h2>Python format datetime<a class="headerlink" href="#python-format-datetime" title="Link to this heading">#</a></h2>
 <p>The way date and time is represented may be different in different places, organizations etc. It’s more common to use <strong><code class="docutils literal notranslate"><span class="pre">mm/dd/yyyy</span></code></strong> in the US, whereas <strong><code class="docutils literal notranslate"><span class="pre">dd/mm/yyyy</span></code></strong> is more common in the UK.</p>
 <p>Python has <strong><code class="docutils literal notranslate"><span class="pre">strftime()</span></code></strong> and <strong><code class="docutils literal notranslate"><span class="pre">strptime()</span></code></strong> methods to handle this.</p>
 <section id="python-strftime-datetime-object-to-string">
-<h3>Python <code class="docutils literal notranslate"><span class="pre">strftime()</span></code> - datetime object to string<a class="headerlink" href="#python-strftime-datetime-object-to-string" title="Permalink to this heading">#</a></h3>
+<h3>Python <code class="docutils literal notranslate"><span class="pre">strftime()</span></code> - datetime object to string<a class="headerlink" href="#python-strftime-datetime-object-to-string" title="Link to this heading">#</a></h3>
 <p>The <strong><code class="docutils literal notranslate"><span class="pre">strftime()</span></code></strong> method is defined under classes <strong><code class="docutils literal notranslate"><span class="pre">date</span></code></strong>, <strong><code class="docutils literal notranslate"><span class="pre">datetime</span></code></strong> and <strong><code class="docutils literal notranslate"><span class="pre">time</span></code></strong>. The method creates a formatted string from a given <strong><code class="docutils literal notranslate"><span class="pre">date</span></code></strong>, <strong><code class="docutils literal notranslate"><span class="pre">datetime</span></code></strong> or <strong><code class="docutils literal notranslate"><span class="pre">time</span></code></strong> object.</p>
 </section>
 <section id="example-15-format-date-using-strftime">
-<h3>Example 15: Format date using <code class="docutils literal notranslate"><span class="pre">strftime()</span></code><a class="headerlink" href="#example-15-format-date-using-strftime" title="Permalink to this heading">#</a></h3>
+<h3>Example 15: Format date using <code class="docutils literal notranslate"><span class="pre">strftime()</span></code><a class="headerlink" href="#example-15-format-date-using-strftime" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example 15: Format date using strftime()</span>
@@ -1095,14 +1097,14 @@ s2: 22/06/2021, 18:12:42
 </tr>
 </tbody>
 </table>
-<p>To learn more about <strong><code class="docutils literal notranslate"><span class="pre">strftime()</span></code></strong> and format codes, visit: <strong><a class="reference internal" href="002_Python_strftime.html"><span class="doc std std-doc">Python strftime()</span></a></strong>.</p>
+<p>To learn more about <strong><code class="docutils literal notranslate"><span class="pre">strftime()</span></code></strong> and format codes, visit: <strong><a class="reference internal" href="002_Python_strftime.html"><span class="std std-doc">Python strftime()</span></a></strong>.</p>
 </section>
 <section id="python-strptime-string-to-datetime">
-<h3>Python <code class="docutils literal notranslate"><span class="pre">strptime()</span></code> - string to datetime<a class="headerlink" href="#python-strptime-string-to-datetime" title="Permalink to this heading">#</a></h3>
+<h3>Python <code class="docutils literal notranslate"><span class="pre">strptime()</span></code> - string to datetime<a class="headerlink" href="#python-strptime-string-to-datetime" title="Link to this heading">#</a></h3>
 <p>The <strong><code class="docutils literal notranslate"><span class="pre">strptime()</span></code></strong> method creates a <strong><code class="docutils literal notranslate"><span class="pre">datetime</span></code></strong> object from a given string (representing date and time).</p>
 </section>
 <section id="example-16-strptime">
-<h3>Example 16: <code class="docutils literal notranslate"><span class="pre">strptime()</span></code><a class="headerlink" href="#example-16-strptime" title="Permalink to this heading">#</a></h3>
+<h3>Example 16: <code class="docutils literal notranslate"><span class="pre">strptime()</span></code><a class="headerlink" href="#example-16-strptime" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example 16: strptime()</span>
@@ -1133,11 +1135,11 @@ date_object = 2018-06-21 00:00:00
 <li><p>format code equivalent to the first argument</p></li>
 </ol>
 <p>By the way, <strong><code class="docutils literal notranslate"><span class="pre">%d</span></code></strong>, <strong><code class="docutils literal notranslate"><span class="pre">%B</span></code></strong> and <strong><code class="docutils literal notranslate"><span class="pre">%Y</span></code></strong> format codes are used for <strong><code class="docutils literal notranslate"><span class="pre">day</span></code></strong>, <strong><code class="docutils literal notranslate"><span class="pre">month</span></code></strong>(full name) and <strong><code class="docutils literal notranslate"><span class="pre">year</span></code></strong> respectively.</p>
-<p>Visit <strong><a class="reference internal" href="003_Python_strptime.html"><span class="doc std std-doc">Python strptime()</span></a></strong> to learn more.</p>
+<p>Visit <strong><a class="reference internal" href="003_Python_strptime.html"><span class="std std-doc">Python strptime()</span></a></strong> to learn more.</p>
 </section>
 </section>
 <section id="handling-timezone-in-python">
-<h2>Handling timezone in Python<a class="headerlink" href="#handling-timezone-in-python" title="Permalink to this heading">#</a></h2>
+<h2>Handling timezone in Python<a class="headerlink" href="#handling-timezone-in-python" title="Link to this heading">#</a></h2>
 <p>Suppose, you are working on a project and need to display date and time based on their timezone.</p>
 <p>Rather than trying to handle timezone yourself, we suggest you to use a third-party <strong><a class="reference external" href="http://pytz.sourceforge.net/">pytZ module</a></strong></p>
 <div class="cell docutils container">
@@ -1232,6 +1234,7 @@ London: 06/22/2021, 13:42:48
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
+
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> Contents
@@ -1323,8 +1326,8 @@ By Anukool Chaturvedi
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
-<script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+  <script src="../../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
   <footer class="bd-footer">
   </footer>

@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" >
+<html lang="en" data-content_root="../../../../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Control Statements in Python &#8212; Anukool&#39;s almanac</title>
   
@@ -19,53 +18,49 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="../../../../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link href="../../../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
   
-  <link href="../../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../../../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
-<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
-  <script src="../../../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
-    <script src="../../../../_static/jquery.js"></script>
-    <script src="../../../../_static/underscore.js"></script>
-    <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../../../../_static/doctools.js"></script>
-    <script src="../../../../_static/clipboard.min.js"></script>
-    <script src="../../../../_static/copybutton.js"></script>
-    <script src="../../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../../../_static/togglebutton.js"></script>
+    <script src="../../../../_static/togglebutton.js?v=4a39c7ea"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../../../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../../../../_static/sphinx-thebe.js"></script>
+    <script src="../../../../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'content/essentials/python/controlflow/007_Python_break_continue_pass_statements';</script>
     <link rel="canonical" href="https://anukchat.github.io/content/essentials/python/controlflow/007_Python_break_continue_pass_statements.html" />
-    <link rel="shortcut icon" href="../../../../_static/mesh-smallest.png"/>
+    <link rel="icon" href="../../../../_static/mesh-smallest.png"/>
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
     <link rel="next" title="Python Functions" href="../functions/functions_toc.html" />
@@ -79,10 +74,9 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
   
   <div id="pst-scroll-pixel-helper"></div>
-
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
     <i class="fa-solid fa-arrow-up"></i>
@@ -123,11 +117,14 @@ const thebe_selector_output = ".output, .cell_output"
 </form></div>
   </div>
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -155,7 +152,18 @@ const thebe_selector_output = ".output, .cell_output"
     <p class="title logo__title">Anukool's almanac</p>
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Essentials</span></p>
 <ul class="current nav bd-sidenav">
@@ -220,13 +228,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../files/files_toc.html">Files</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../files/001_Python_File_Input_Output.html">Python File I/O</a></li>
-
-
-
-
-
-
+<li class="toctree-l3"><a class="reference internal" href="../files/001_Python_File_Input_Output.html">File I/O</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../files/002_Python_File_Directory.html">File directory</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../files/003_Python_File_Exception.html">File exception</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../files/004_Python_Exceptions_Handling.html">Exceptions handling</a></li>
@@ -545,10 +547,10 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="control-statements-in-python">
-<h1>Control Statements in Python<a class="headerlink" href="#control-statements-in-python" title="Permalink to this heading">#</a></h1>
+<h1>Control Statements in Python<a class="headerlink" href="#control-statements-in-python" title="Link to this heading">#</a></h1>
 <p>As you may know, loops in Python are used to iterate repeatedly over a block of code. But at times, you might want to <strong>shift the control once a particular condition is satisfied</strong>. This is where control statements in Python come into the picture.</p>
 <p>Control statements in python are <strong>used to control the flow of execution of the program based on the specified conditions</strong>. Python supports <strong>3 types of control statements</strong>:</p>
 <table class="table">
@@ -579,10 +581,10 @@ document.write(`
 <img src="/content/essentials/python/controlflow/img/ctrl1.png" width="200"/>
 </div></section>
 <section class="tex2jax_ignore mathjax_ignore" id="python-break-statement">
-<h1>1. Python <code class="docutils literal notranslate"><span class="pre">break</span></code> statement<a class="headerlink" href="#python-break-statement" title="Permalink to this heading">#</a></h1>
+<h1>1. Python <code class="docutils literal notranslate"><span class="pre">break</span></code> statement<a class="headerlink" href="#python-break-statement" title="Link to this heading">#</a></h1>
 <p>In Python, the <strong><code class="docutils literal notranslate"><span class="pre">break</span></code></strong> statement provides you with the opportunity to <strong>exit out</strong> of a loop when an external condition is <strong>triggered</strong>, and the program control transfer to the next statement following the loop.</p>
 <p>If the <strong><code class="docutils literal notranslate"><span class="pre">break</span></code></strong> statement is inside a nested loop (loop inside another loop), the <strong><code class="docutils literal notranslate"><span class="pre">break</span></code></strong> statement will terminate the innermost loop.</p>
-<p>You’ll put the <strong><code class="docutils literal notranslate"><span class="pre">break</span></code></strong> statement within the block of code under your loop statement, usually after a conditional <strong><a class="reference internal" href="001_Python_if_statement.html"><span class="doc std std-doc">if statement</span></a></strong>. This statement can only be used in <strong><a class="reference internal" href="005_Python_for_Loop.html"><span class="doc std std-doc">for loop</span></a></strong> and <strong><a class="reference internal" href="006_Python_while_Loop.html"><span class="doc std std-doc">while loop</span></a></strong>.</p>
+<p>You’ll put the <strong><code class="docutils literal notranslate"><span class="pre">break</span></code></strong> statement within the block of code under your loop statement, usually after a conditional <strong><a class="reference internal" href="001_Python_if_statement.html"><span class="std std-doc">if statement</span></a></strong>. This statement can only be used in <strong><a class="reference internal" href="005_Python_for_Loop.html"><span class="std std-doc">for loop</span></a></strong> and <strong><a class="reference internal" href="006_Python_while_Loop.html"><span class="std std-doc">while loop</span></a></strong>.</p>
 <div>
 <img src="/content/essentials/python/controlflow/img/b1.png" width="300"/>
 </div>
@@ -642,9 +644,9 @@ Out of loop
 </ol>
 <p>This shows that once the integer number is evaluated as equivalent to <strong><code class="docutils literal notranslate"><span class="pre">5</span></code></strong>, the loop breaks, as the program is told to do so with the <strong><code class="docutils literal notranslate"><span class="pre">break</span></code></strong> statement.</p>
 <section id="nested-break-loops">
-<h2>Nested <code class="docutils literal notranslate"><span class="pre">break</span></code> loops<a class="headerlink" href="#nested-break-loops" title="Permalink to this heading">#</a></h2>
+<h2>Nested <code class="docutils literal notranslate"><span class="pre">break</span></code> loops<a class="headerlink" href="#nested-break-loops" title="Link to this heading">#</a></h2>
 <section id="break-statement-in-nested-loop">
-<h3>1. <code class="docutils literal notranslate"><span class="pre">break</span></code> Statement in Nested Loop<a class="headerlink" href="#break-statement-in-nested-loop" title="Permalink to this heading">#</a></h3>
+<h3>1. <code class="docutils literal notranslate"><span class="pre">break</span></code> Statement in Nested Loop<a class="headerlink" href="#break-statement-in-nested-loop" title="Link to this heading">#</a></h3>
 <p>To terminate the nested loop, use a <strong><code class="docutils literal notranslate"><span class="pre">break</span></code></strong> statement inside the inner loop. For example:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -808,7 +810,7 @@ Multiplication table of 10
 <p>But if the current number of both the outer loop and the inner loop is greater than 5 then terminate the inner loop using the <strong><code class="docutils literal notranslate"><span class="pre">break</span></code></strong> statement.</p>
 </section>
 <section id="break-statement-in-outer-loop">
-<h3>2. <code class="docutils literal notranslate"><span class="pre">break</span></code> Statement in Outer Loop<a class="headerlink" href="#break-statement-in-outer-loop" title="Permalink to this heading">#</a></h3>
+<h3>2. <code class="docutils literal notranslate"><span class="pre">break</span></code> Statement in Outer Loop<a class="headerlink" href="#break-statement-in-outer-loop" title="Link to this heading">#</a></h3>
 <p>To terminate the outside loop, use a <strong><code class="docutils literal notranslate"><span class="pre">break</span></code></strong> statement inside the outer loop. For example:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -985,8 +987,8 @@ The End
 </section>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="python-continue-statement">
-<h1>2. Python <code class="docutils literal notranslate"><span class="pre">continue</span></code> statement<a class="headerlink" href="#python-continue-statement" title="Permalink to this heading">#</a></h1>
-<p>In Python, the <strong><code class="docutils literal notranslate"><span class="pre">continue</span></code></strong> statement is a <strong>jump statement</strong> which is used to skip execution of current iteration. After <strong>skipping</strong>, loop <strong><code class="docutils literal notranslate"><span class="pre">continue</span></code></strong> with next iteration. We can use <strong><code class="docutils literal notranslate"><span class="pre">continue</span></code></strong> statement <strong>only</strong> with <strong><a class="reference internal" href="005_Python_for_Loop.html"><span class="doc std std-doc">for loop</span></a></strong> as well as <strong><a class="reference internal" href="006_Python_while_Loop.html"><span class="doc std std-doc">while loop</span></a></strong> in Python. It is typically <strong>only</strong> used within an <strong><a class="reference internal" href="001_Python_if_statement.html"><span class="doc std std-doc">if statement</span></a></strong> (otherwise the remainder of the loop would never be executed).</p>
+<h1>2. Python <code class="docutils literal notranslate"><span class="pre">continue</span></code> statement<a class="headerlink" href="#python-continue-statement" title="Link to this heading">#</a></h1>
+<p>In Python, the <strong><code class="docutils literal notranslate"><span class="pre">continue</span></code></strong> statement is a <strong>jump statement</strong> which is used to skip execution of current iteration. After <strong>skipping</strong>, loop <strong><code class="docutils literal notranslate"><span class="pre">continue</span></code></strong> with next iteration. We can use <strong><code class="docutils literal notranslate"><span class="pre">continue</span></code></strong> statement <strong>only</strong> with <strong><a class="reference internal" href="005_Python_for_Loop.html"><span class="std std-doc">for loop</span></a></strong> as well as <strong><a class="reference internal" href="006_Python_while_Loop.html"><span class="std std-doc">while loop</span></a></strong> in Python. It is typically <strong>only</strong> used within an <strong><a class="reference internal" href="001_Python_if_statement.html"><span class="std std-doc">if statement</span></a></strong> (otherwise the remainder of the loop would never be executed).</p>
 <div>
 <img src="/content/essentials/python/controlflow/img/con1.png" width="300"/>
 </div>
@@ -994,9 +996,9 @@ The End
 <div>
 <img src="/content/essentials/python/controlflow/img/con2.png" width="700"/>
 </div><section id="continue-statement-in-while-loop">
-<h2><code class="docutils literal notranslate"><span class="pre">continue</span></code> statement in <code class="docutils literal notranslate"><span class="pre">while</span></code> loop<a class="headerlink" href="#continue-statement-in-while-loop" title="Permalink to this heading">#</a></h2>
+<h2><code class="docutils literal notranslate"><span class="pre">continue</span></code> statement in <code class="docutils literal notranslate"><span class="pre">while</span></code> loop<a class="headerlink" href="#continue-statement-in-while-loop" title="Link to this heading">#</a></h2>
 <p>We can also use the <strong><code class="docutils literal notranslate"><span class="pre">continue</span></code></strong> statement inside a <strong><code class="docutils literal notranslate"><span class="pre">while</span></code></strong> loop. For example:</p>
-<p>Write a <strong><a class="reference internal" href="006_Python_while_Loop.html"><span class="doc std std-doc">while loop</span></a></strong> to display each character from a string and if a character is a space, then don’t display it and move to the next character.</p>
+<p>Write a <strong><a class="reference internal" href="006_Python_while_Loop.html"><span class="std std-doc">while loop</span></a></strong> to display each character from a string and if a character is a space, then don’t display it and move to the next character.</p>
 <p>Use the if condition with the <strong><code class="docutils literal notranslate"><span class="pre">continue</span></code></strong> statement to jump to the next iteration. If the current character is space, then the condition evaluates to true, then the <strong><code class="docutils literal notranslate"><span class="pre">continue</span></code></strong> statement will execute, and the loop will move to the next iteration by skipping the remeaning body.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1025,7 +1027,7 @@ The End
 </div>
 </section>
 <section id="continue-statement-with-else-statements">
-<h2><code class="docutils literal notranslate"><span class="pre">continue</span></code> statement with <code class="docutils literal notranslate"><span class="pre">else</span></code> statements<a class="headerlink" href="#continue-statement-with-else-statements" title="Permalink to this heading">#</a></h2>
+<h2><code class="docutils literal notranslate"><span class="pre">continue</span></code> statement with <code class="docutils literal notranslate"><span class="pre">else</span></code> statements<a class="headerlink" href="#continue-statement-with-else-statements" title="Link to this heading">#</a></h2>
 <p>Sometimes we want to know if a loop exited ‘normally’ or via a <strong><code class="docutils literal notranslate"><span class="pre">break</span></code></strong> statement. This can be achieved with an <strong><code class="docutils literal notranslate"><span class="pre">else:</span></code></strong> statement in a loop which only executes if there was no <strong><code class="docutils literal notranslate"><span class="pre">break</span></code></strong> statement.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1102,9 +1104,9 @@ Normal exit with 12
 </div>
 </section>
 <section id="nested-continue-loops">
-<h2>Nested <code class="docutils literal notranslate"><span class="pre">continue</span></code> loops<a class="headerlink" href="#nested-continue-loops" title="Permalink to this heading">#</a></h2>
+<h2>Nested <code class="docutils literal notranslate"><span class="pre">continue</span></code> loops<a class="headerlink" href="#nested-continue-loops" title="Link to this heading">#</a></h2>
 <section id="continue-statement-in-nested-loop">
-<h3>1. <code class="docutils literal notranslate"><span class="pre">continue</span></code> Statement in Nested Loop<a class="headerlink" href="#continue-statement-in-nested-loop" title="Permalink to this heading">#</a></h3>
+<h3>1. <code class="docutils literal notranslate"><span class="pre">continue</span></code> Statement in Nested Loop<a class="headerlink" href="#continue-statement-in-nested-loop" title="Link to this heading">#</a></h3>
 <p>To skip the current iteration of the nested loop, use the <strong><code class="docutils literal notranslate"><span class="pre">continue</span></code></strong> statement inside the body of the inner loop. For example:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1151,7 +1153,7 @@ Multiplication table of 10
 <p>But if the current number of the inner loop is equal to 5, then skip the current iteration and move to the next iteration of the inner loop using the <strong><code class="docutils literal notranslate"><span class="pre">continue</span></code></strong> statement.</p>
 </section>
 <section id="continue-statement-in-outer-loop">
-<h3>2. <code class="docutils literal notranslate"><span class="pre">continue</span></code> Statement in Outer Loop<a class="headerlink" href="#continue-statement-in-outer-loop" title="Permalink to this heading">#</a></h3>
+<h3>2. <code class="docutils literal notranslate"><span class="pre">continue</span></code> Statement in Outer Loop<a class="headerlink" href="#continue-statement-in-outer-loop" title="Link to this heading">#</a></h3>
 <p>To skip the current iteration of an outside loop, use the <strong><code class="docutils literal notranslate"><span class="pre">continue</span></code></strong> statement inside the outer loop. For example:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1193,7 +1195,7 @@ Multiplication table of 9
 </section>
 </section>
 <section id="catching-exceptions-with-continue-statement">
-<h2>Catching exceptions with <code class="docutils literal notranslate"><span class="pre">continue</span></code> statement<a class="headerlink" href="#catching-exceptions-with-continue-statement" title="Permalink to this heading">#</a></h2>
+<h2>Catching exceptions with <code class="docutils literal notranslate"><span class="pre">continue</span></code> statement<a class="headerlink" href="#catching-exceptions-with-continue-statement" title="Link to this heading">#</a></h2>
 <p>Sometimes it is desirable to deal with errors without stopping the whole program. This can be achieved using a <strong>try</strong> statement. Appart from dealing with with system errors, it also alows aborting from somewhere deep down in nested execution. It is possible to attach multiple error handlers depending on the type of the exception</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
     <span class="n">code</span>
@@ -1258,12 +1260,12 @@ All done
 </section>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="python-pass-statement">
-<h1>3. Python <code class="docutils literal notranslate"><span class="pre">pass</span></code> statement<a class="headerlink" href="#python-pass-statement" title="Permalink to this heading">#</a></h1>
+<h1>3. Python <code class="docutils literal notranslate"><span class="pre">pass</span></code> statement<a class="headerlink" href="#python-pass-statement" title="Link to this heading">#</a></h1>
 <p>In Python, <strong><code class="docutils literal notranslate"><span class="pre">pass</span></code></strong> keyword is used to execute <strong>nothing</strong>; it means, when we don’t want to execute code, the pass can be used to execute empty. It is same as the name refers to. It just makes the control to pass by without executing any code. If we want to bypass any code pass statement can be used.</p>
 <p>It is used as a placeholder for future implementation of functions, loops, etc.</p>
 <p>Suppose we have a loop or a function that is not implemented yet, but we want to implement it in the future. They cannot have an empty body. The interpreter would give an error. So, we use the <strong><code class="docutils literal notranslate"><span class="pre">pass</span></code></strong> statement to construct a body that does nothing.</p>
 <section id="example">
-<h2>Example:<a class="headerlink" href="#example" title="Permalink to this heading">#</a></h2>
+<h2>Example:<a class="headerlink" href="#example" title="Link to this heading">#</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="sd">&#39;&#39;&#39;pass is just a placeholder for</span>
 <span class="sd">functionality to be added later.&#39;&#39;&#39;</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">sequence</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;p&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;s&#39;</span><span class="p">,</span> <span class="s1">&#39;s&#39;</span><span class="p">}</span>
@@ -1333,7 +1335,7 @@ Out of loop
 <p>By using the <strong><code class="docutils literal notranslate"><span class="pre">pass</span></code></strong> statement in this program, we notice that the program runs exactly as it would if there were no conditional statement in the program. The <strong><code class="docutils literal notranslate"><span class="pre">pass</span></code></strong> statement tells the program to <strong>disregard that condition</strong> and <strong>continue to run</strong> the program as usual.</p>
 </section>
 <section id="control-statements-in-python-faqs">
-<h2>Control Statements in Python FAQs<a class="headerlink" href="#control-statements-in-python-faqs" title="Permalink to this heading">#</a></h2>
+<h2>Control Statements in Python FAQs<a class="headerlink" href="#control-statements-in-python-faqs" title="Link to this heading">#</a></h2>
 <ol class="arabic simple">
 <li><p>How many control statements are present in Python?</p></li>
 </ol>
@@ -1424,6 +1426,7 @@ Out of loop
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
+
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> Contents
@@ -1504,8 +1507,8 @@ By Anukool Chaturvedi
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
-<script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+  <script src="../../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
   <footer class="bd-footer">
   </footer>
