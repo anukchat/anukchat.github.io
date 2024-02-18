@@ -39,14 +39,14 @@ jobs:
         cp -r "./content/essentials/python/advanced/img" "_build/html/content/essentials/python/advanced/img"
         cp -r "./content/essentials/python/datetime/img" "_build/html/content/essentials/python/datetime/img"
         cp -r "./content/tools/numpy/img" "_build/html/content/tools/numpy/img"
-        cp  "./content/tools/numpy/*.txt" "_build/html/content/tools/numpy/"
-        cp  "./content/tools/numpy/*.pdf" "_build/html/content/tools/numpy/"
+        cp  ./content/tools/numpy/*.txt "_build/html/content/tools/numpy/"
+        cp  ./content/tools/numpy/*.pdf "_build/html/content/tools/numpy/"
         cp -r "./content/tools/numpy/Data_Analysis_with_NumPy" "_build/html/content/tools/numpy/Data_Analysis_with_NumPy"
         cp -r "./content/tools/pandas/img" "_build/html/content/tools/pandas/img"
         cp -r "./content/tools/numpy/001_Python_Pandas_Methods/img" "_build/html/content/tools/numpy/001_Python_Pandas_Methods/img"
-        cp "./content/tools/pandas/.*.pdf" "_build/html/content/tools/pandas/"
-        cp "./content/tools/pandas/.*.csv" "_build/html/content/tools/pandas/"
-        cp "./content/tools/numpy/001_Python_Pandas_Methods/.*.csv" "_build/html/content/tools/numpy/001_Python_Pandas_Methods/"
+        cp ./content/tools/pandas/*.pdf "_build/html/content/tools/pandas/"
+        cp ./content/tools/pandas/*.csv "_build/html/content/tools/pandas/"
+        cp ./content/tools/numpy/001_Python_Pandas_Methods/*.csv "_build/html/content/tools/numpy/001_Python_Pandas_Methods/"
 
 
 
