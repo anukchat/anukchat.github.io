@@ -225,7 +225,7 @@ parts:
               title: Matplotlib 1
             - file: content/tools/matplotlib/003_Python_Matplotlib_Exercise_2
               title: Matplotlib 2
-        - file: content/tools/matplotlib/seaborn_toc
+        - file: content/tools/seaborn/seaborn_toc
           title: Seaborn
           sections:
             - file: /content/tools/seaborn/001_Seaborn_Loading_Dataset
