@@ -289,11 +289,19 @@ parts:
           title: HuggingFace introduction and setup
   - caption: Concepts
     chapters:
-    - file: content/concepts/mymarkdown
+    - file: content/concepts/concepts
       title: Concepts at glance
       sections:
-        - file: content/concepts/markdown-notebooks
-          title: Sample machine learning
+        - file: content/concepts/linear-regression
+          title: Linear regression
+        - file: content/concepts/logistic-regression
+          title: Logistic regression
+        - file: content/concepts/k-means
+          title: K-means
+        - file: content/concepts/anomaly-detection
+          title: Anomaly detection
+        - file: content/concepts/neural-networks
+          title: Neural networks
   - caption: Core engineering
     chapters:
       - file: content/core/markdown
