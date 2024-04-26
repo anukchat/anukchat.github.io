@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Here’s my sample title &#8212; Anukool&#39;s almanac</title>
+    <title>K-Means Algorithm &#8212; Anukool&#39;s almanac</title>
   
   
   
@@ -58,13 +58,13 @@
     <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'content/concepts/mymarkdown';</script>
-    <link rel="canonical" href="https://anukchat.github.io/content/concepts/mymarkdown.html" />
+    <script>DOCUMENTATION_OPTIONS.pagename = 'content/concepts/k-means';</script>
+    <link rel="canonical" href="https://anukchat.github.io/content/concepts/k-means.html" />
     <link rel="icon" href="../../_static/mesh-smallest.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Notebooks with MyST Markdown" href="markdown-notebooks.html" />
-    <link rel="prev" title="Introduction to HuggingFace" href="../tools/hf/intro.html" />
+    <link rel="next" title="Anomaly Detection Using Gaussian Distribution" href="anomaly-detection.html" />
+    <link rel="prev" title="Logistic Regression" href="logistic-regression.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -343,8 +343,12 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Concepts</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Concepts at glance</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-19"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="markdown-notebooks.html">Sample machine learning</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="concepts.html">Concepts at glance</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-19"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="linear-regression.html">Linear regression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="logistic-regression.html">Logistic regression</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">K-means</a></li>
+<li class="toctree-l2"><a class="reference internal" href="anomaly-detection.html">Anomaly detection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="neural-networks.html">Neural networks</a></li>
 </ul>
 </li>
 </ul>
@@ -415,7 +419,7 @@
       
       
       
-      <li><a href="../../_sources/content/concepts/mymarkdown.md" target="_blank"
+      <li><a href="../../_sources/content/concepts/k-means.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -499,7 +503,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Here’s my sample title</h1>
+    <h1>K-Means Algorithm</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -509,7 +513,12 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#heres-my-first-section">Here’s my first section</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jupyter-demos">Jupyter Demos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definition">Definition</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#description">Description</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cost-function-distortion">Cost Function (Distortion)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-algorithm">The Algorithm</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
 </ul>
             </nav>
         </div>
@@ -521,16 +530,56 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="heres-my-sample-title">
-<h1>Here’s my sample title<a class="headerlink" href="#heres-my-sample-title" title="Link to this heading">#</a></h1>
-<p>This is some sample text.</p>
-<p>(section-label)</p>
-<section id="heres-my-first-section">
-<h2>Here’s my first section<a class="headerlink" href="#heres-my-first-section" title="Link to this heading">#</a></h2>
-<p>Here is a <a class="reference internal" href="#intro.md"><span class="xref myst">reference to the intro</span></a>. Here is a reference to <a class="reference internal" href="#section-label"><code class="xref myst docutils literal notranslate"><span class="pre">section-label</span></code></a>. Jupyter Book also lets you write text-based notebooks using MyST Markdown. See the Notebooks with MyST Markdown documentation for more detailed instructions.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="k-means-algorithm">
+<h1>K-Means Algorithm<a class="headerlink" href="#k-means-algorithm" title="Link to this heading">#</a></h1>
+<section id="jupyter-demos">
+<h2>Jupyter Demos<a class="headerlink" href="#jupyter-demos" title="Link to this heading">#</a></h2>
+<p>▶️ <a class="reference external" href="https://nbviewer.jupyter.org/github/trekhleb/homemade-machine-learning/blob/master/notebooks/k_means/k_means_demo.ipynb">Demo | K-means Algorithm</a> - split Iris flowers into clusters based on <code class="docutils literal notranslate"><span class="pre">petal_length</span></code> and <code class="docutils literal notranslate"><span class="pre">petal_width</span></code></p>
 </section>
-<div class="toctree-wrapper compound">
-</div>
+<section id="definition">
+<h2>Definition<a class="headerlink" href="#definition" title="Link to this heading">#</a></h2>
+<p><strong>K-means clustering</strong> aims to partition n observations into <em>K</em> clusters in which each observation belongs to the cluster with the nearest mean, serving as a prototype of the cluster.</p>
+<p>The result of a cluster analysis shown below as the coloring of the squares into three clusters.</p>
+<p><img alt="Clustering" src="https://upload.wikimedia.org/wikipedia/commons/c/c8/Cluster-2.svg" /></p>
+</section>
+<section id="description">
+<h2>Description<a class="headerlink" href="#description" title="Link to this heading">#</a></h2>
+<p>Given a training set of observations:</p>
+<p><img alt="Training set" src="../../_images/training-set1.svg" /></p>
+<p><img alt="x-i" src="../../_images/x-i1.svg" /></p>
+<p>Where each observation is a <em>d</em>-dimensional real vector, k-means clustering aims to partition the <em>m</em> observations into <em>K</em> (<em>≤ m</em>) clusters:</p>
+<p><img alt="Clusters" src="../../_images/clasters.svg" /></p>
+<p>… so as to minimize the within-cluster sum of squares (i.e. variance).</p>
+<p>Below you may find an example of 4 random cluster centroids initialization and further clusters convergence:</p>
+<p><img alt="Clustering" src="http://shabal.in/visuals/kmeans/random.gif" /></p>
+<p><a class="reference external" href="http://shabal.in/visuals/kmeans/6.html">Picture Source</a></p>
+<p>Another illustration of k-means convergence:</p>
+<p><img alt="Clustering" src="https://upload.wikimedia.org/wikipedia/commons/e/ea/K-means_convergence.gif" /></p>
+</section>
+<section id="cost-function-distortion">
+<h2>Cost Function (Distortion)<a class="headerlink" href="#cost-function-distortion" title="Link to this heading">#</a></h2>
+<p><img alt="c-i" src="../../_images/c-i.svg" /> - index of cluster <em>(1, 2, …, K)</em> to which example <em>x<sup>(i)</sup></em> is currently assigned.</p>
+<p><img alt="mu-k" src="../../_images/mu-k.svg" /> - cluster centroid <em>k</em> (<img alt="mu-k-2" src="../../_images/mu-k-2.svg" />) and <img alt="k" src="../../_images/k.svg" />.</p>
+<p><img alt="mu-c-i" src="../../_images/mu-c-i.svg" /> - cluster centroid of a cluster to which the example <em>x<sup>(i)</sup></em> has been assigned.</p>
+<p>For example:</p>
+<p><img alt="Cluster example" src="../../_images/cluster-example.svg" /></p>
+<p>In this case optimization objective will look like the following:</p>
+<p><img alt="Cost Function" src="../../_images/cost-function.svg" /></p>
+<p><img alt="Clustering" src="https://upload.wikimedia.org/wikipedia/commons/d/d1/KMeans-density-data.svg" /></p>
+</section>
+<section id="the-algorithm">
+<h2>The Algorithm<a class="headerlink" href="#the-algorithm" title="Link to this heading">#</a></h2>
+<p>Randomly initialize <em>K</em> cluster centroids (randomly pick <em>K</em> training examples and set <em>K</em> cluster centroids to that examples).</p>
+<p><img alt="Centroids" src="../../_images/centroids.svg" /></p>
+<p><img alt="k-means-algorithm" src="../../_images/k-means-algorithm.svg" /></p>
+</section>
+<section id="references">
+<h2>References<a class="headerlink" href="#references" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.coursera.org/learn/machine-learning">Machine Learning on Coursera</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/K-means_clustering">K-means on Wikipedia</a></p></li>
+</ul>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -564,20 +613,20 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../tools/hf/intro.html"
+       href="logistic-regression.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Introduction to HuggingFace</p>
+        <p class="prev-next-title">Logistic Regression</p>
       </div>
     </a>
     <a class="right-next"
-       href="markdown-notebooks.html"
+       href="anomaly-detection.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Notebooks with MyST Markdown</p>
+        <p class="prev-next-title">Anomaly Detection Using Gaussian Distribution</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -597,7 +646,12 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#heres-my-first-section">Here’s my first section</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jupyter-demos">Jupyter Demos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definition">Definition</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#description">Description</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cost-function-distortion">Cost Function (Distortion)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-algorithm">The Algorithm</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
 </ul>
   </nav></div>
 
