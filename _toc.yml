@@ -292,6 +292,8 @@ parts:
     - file: content/concepts/concepts
       title: Concepts at glance
       sections:
+        - file: content/concepts/introduction_to_ml
+          title: Introduction to ML
         - file: content/concepts/linear-regression
           title: Linear regression
         - file: content/concepts/logistic-regression
