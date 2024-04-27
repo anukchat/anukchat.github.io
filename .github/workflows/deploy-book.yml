@@ -47,7 +47,7 @@ jobs:
         cp ./content/tools/pandas/*.pdf "_build/html/content/tools/pandas/"
         cp ./content/tools/pandas/*.csv "_build/html/content/tools/pandas/"
         cp ./content/tools/pandas/001_Python_Pandas_Methods/*.csv "_build/html/content/tools/pandas/001_Python_Pandas_Methods/"
-
+        cp -r "./content/concepts/notebooks/utils" content/concepts/notebooks/
 
 
         
