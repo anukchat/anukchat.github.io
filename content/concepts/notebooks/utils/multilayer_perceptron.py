@@ -1,8 +1,8 @@
 """Neural Network Module"""
 
 import numpy as np
-from ..utils.features import prepare_for_training
-from ..utils.hypothesis import sigmoid, sigmoid_gradient
+from utils.features import prepare_for_training
+from utils.hypothesis import sigmoid, sigmoid_gradient
 
 
 class MultilayerPerceptron:
