@@ -4,7 +4,15 @@ This section is dedicated to all the inner functioning of various Machine Learni
 
 ## Beginner
 
+✅ **[Introduction to ML](/content/concepts/Introduction_to_ml.md)**
+
 ✅ **[Linear regression](/content/concepts/linear-regression.md)**
+
+- **[Univariate linear regression demo](/content/concepts/notebooks/linear_regression/univariate_linear_regression_demo.ipynb)**
+
+- **[Multivariate linear regression demo](/content/concepts/notebooks/linear_regression/multivariate_linear_regression_demo.ipynb)**
+
+- **[Non linear regression demo](/content/concepts/notebooks/linear_regression/non_linear_regression_demo.ipynb)**
 
 ✅ **[Logistic regression](/content/concepts/logistic-regression.md)**
 
