@@ -159,11 +159,16 @@ parts:
               title: Time module
             - file: content/essentials/python/datetime/008_Python_sleep
               title: Sleep
-    - file: content/essentials/intro_mathematics
+    - file: content/essentials/mathematics/mathematics_toc
       title: Mathematics
       sections:
-        - file: content/essentials/mathematics/1_linear_algebra
-          title: Linear algebra
+        - file: content/essentials/mathematics/linear-algebra_vectors
+          title: Vectors
+        - file: content/essentials/mathematics/linear-algebra_matrices
+          title: Matrices
+        - file: content/essentials/mathematics/dissimilarity_measures
+          title: Similarity measure
+        
     - file: content/essentials/intro_statistics
       title: Statistics
       sections:
