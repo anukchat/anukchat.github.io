@@ -271,8 +271,32 @@ parts:
               title: Heat map
             - file: content/tools/seaborn/019_Seaborn_Cluster_Map
               title: Cluster map  
-        - file: content/tools/tools-for-nn
-          title: Tools for designing neural networks
+    - file: content/tools/tools-for-nn
+      title: Tools for designing neural networks
+      sections:
+        - file: content/tools/pytorch/pytorch_toc
+          title: Pytorch
+          sections:
+            - file: content/tools/pytorch/00_pytorch_fundamentals
+              title: Fundamentals
+            - file: content/tools/pytorch/01_pytorch_workflow
+              title: Workflows
+            - file: content/tools/pytorch/02_pytorch_classification
+              title: Classification
+            - file: content/tools/pytorch/03_pytorch_computer_vision
+              title: Computer vision
+            - file: content/tools/pytorch/04_pytorch_custom_datasets
+              title: Custom datasets
+            - file: content/tools/pytorch/05_pytorch_going_modular
+              title: Going Modular
+            - file: content/tools/pytorch/06_pytorch_transfer_learning
+              title: Transfer learning
+            - file: content/tools/pytorch/07_pytorch_experiment_tracking
+              title: Experiment tracking
+            - file: content/tools/pytorch/08_pytorch_paper_replicating
+              title: Replicating papers
+            - file: content/tools/pytorch/09_pytorch_model_deployment
+              title: Model deployment
         
     - file: content/tools/tools-for-llms
       title: Tools for LLMs and multimodels
