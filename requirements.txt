@@ -5,3 +5,5 @@ sphinx-book-theme
 numpy
 pandas
 matplotlib
+scipy
+pytorch
