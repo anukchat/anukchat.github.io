@@ -307,8 +307,8 @@ parts:
               title: Langchain Fundamentals
             - file: content/tools/langchain/LangChain Cookbook Part 2 - Use Cases
               title: Langchain use cases
-            - file: content/tools/langchain/projects/project_toc
-              title: Projects gallery
+            # - file: content/tools/langchain/projects/project_toc
+            #   title: Projects gallery
             - file: content/tools/langchain/langsmith
               title: LangSmith
             - file: content/tools/langchain/langgraph
