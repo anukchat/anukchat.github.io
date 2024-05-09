@@ -8,3 +8,4 @@ matplotlib
 scipy
 torch
 langchain
+jupyter-repo2docker
