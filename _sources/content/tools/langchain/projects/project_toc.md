@@ -5,7 +5,7 @@
 
 🖼️ **[Agents with ZapierToolkit](/content/tools/langchain/projects/agents/Agents%20+%20ZapierToolkit.ipynb)**
 
-🖼️ **[Twitter reply bot](/content/tools/langchain/projects/agents/Agents%20+%20ZapierToolkit.ipynb)**
+🖼️ **[Twitter reply bot](/content/tools/langchain/projects/bots/Twitter_Reply_Bot/Twitter%20Reply%20Bot%20Notebook.ipynb)**
 
 🖼️ **[Extraction from call or video transcripts](/content/tools/langchain/projects/data_generation/Working%20With%20Call%20or%20Video%20Transcripts.ipynb)**
 
