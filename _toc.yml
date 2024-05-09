@@ -303,9 +303,9 @@ parts:
         - file: content/tools/langchain/langchain_toc
           title: Langchain
           sections:
-            - file: content/tools/langchain/LangChain%20Cookbook%20Part%201%20-%20Fundamentals
+            - file: content/tools/langchain/LangChain Cookbook Part 1 - Fundamentals
               title: Langchain Fundamentals
-            - file: content/tools/langchain/LangChain%20Cookbook%20Part%202%20-%20Use%20Cases.ipynb
+            - file: content/tools/langchain/LangChain Cookbook Part 2 - Use Cases
               title: Langchain use cases
             - file: content/tools/langchain/projects/project_toc
               title: Projects gallery
