@@ -1,7 +1,7 @@
-# jupyter-book
-# myst-parser
-# jupytext
-# sphinx-book-theme
+jupyter-book
+myst-parser
+jupytext
+sphinx-book-theme
 # numpy
 # pandas
 # matplotlib
