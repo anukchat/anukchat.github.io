@@ -9,3 +9,4 @@ scipy
 torch
 langchain
 jupyter-repo2docker
+python-dotenv
