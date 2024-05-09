@@ -4,8 +4,8 @@ pandas
 matplotlib
 scipy
 torch
-# langchain
-# python-dotenv
+langchain
+python-dotenv
 
 
 
