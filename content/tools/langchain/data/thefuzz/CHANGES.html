@@ -1,0 +1,1226 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Changelog &#8212; Anukool&#39;s almanac</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../../../../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../../../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../../../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../../../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../../../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'content/tools/langchain/data/thefuzz/CHANGES';</script>
+    <link rel="canonical" href="https://anukchat.github.io/content/tools/langchain/data/thefuzz/CHANGES.html" />
+    <link rel="icon" href="../../../../../_static/mesh-smallest.png"/>
+    <link rel="index" title="Index" href="../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../../../../intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Anukool's almanac</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Essentials</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../essentials/intro_python.html">Python</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../../essentials/python/introduction/intro_toc.html">Introduction</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../essentials/python/introduction/002_Hello_World.html">Hello World</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../essentials/python/introduction/003_Python_Keywords_and_Identifiers.html">Keywords and identifiers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../essentials/python/introduction/004_Python_Statement_Indentation_Comments.html">Statement indentation &amp; comments</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../essentials/python/introduction/005_Python_Variables_%26_Constants.html">Variables &amp; constants</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../essentials/python/introduction/006_Python_Literals.html">Literals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../essentials/python/introduction/007_Python_Data_Types.html">Datatypes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../essentials/python/introduction/008_Python_Type_Conversion.html">Type conversion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../essentials/python/introduction/009_Python_Input_Output_Import.html">I/O &amp; imports</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../essentials/python/introduction/010_Python_Operators.html">Operators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../essentials/python/introduction/011_Python_Namespace_and_Scope.html">Namespace &amp; scope</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../essentials/python/introduction/Interpreter_Vs_Compiler.html">Interpreter vs compiler</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../../essentials/python/datatypes/datatypes_toc.html">Datatypes</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../essentials/python/datatypes/001_Python_Numbers.html">Numbers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../essentials/python/datatypes/002_Python_String.html">String</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../essentials/python/datatypes/003_Python_List.html">List</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../essentials/python/datatypes/004_Python_Tuple.html">Tuple</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../essentials/python/datatypes/005_Python_Dictionary.html">Dictionary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../essentials/python/datatypes/006_Python_Sets.html">Sets</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../essentials/python/datatypes/Python_List_Comprehension.html">List comprehension</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../../essentials/python/controlflow/controlflow_toc.html">Control flows</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../essentials/python/controlflow/000_Python_Flow_Control_statement.html">Flow control statement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../essentials/python/controlflow/001_Python_if_statement.html">If</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../essentials/python/controlflow/002_Python_if_else_statement.html">If else</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../essentials/python/controlflow/003_Python_if_elif_else_statement.html">If elif else</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../essentials/python/controlflow/004_Python_Nested_if_statement.html">Nested if</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../essentials/python/controlflow/005_Python_for_Loop.html">Loops in Python</a></li>
+
+<li class="toctree-l3"><a class="reference internal" href="../../../../essentials/python/controlflow/006_Python_while_Loop.html">Loops in Python</a></li>
+
+<li class="toctree-l3"><a class="reference internal" href="../../../../essentials/python/controlflow/007_Python_break_continue_pass_statements.html">Control Statements in Python</a></li>
+
+
+
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../../essentials/python/functions/functions_toc.html">Functions</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../essentials/python/functions/001_Python_Functions.html">Python Functions</a></li>
+
+<li class="toctree-l3"><a class="reference internal" href="../../../../essentials/python/functions/002_Python_Function_Global_Local_Nonlocal.html">Global, local and nonlocal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../essentials/python/functions/003_Python_Function_global_Keywords.html">Python <code class="docutils literal notranslate"><span class="pre">global</span></code> Keyword</a></li>
+
+<li class="toctree-l3"><a class="reference internal" href="../../../../essentials/python/functions/004_Python_Function_Arguments.html">Function Argument and Parameter</a></li>
+
+<li class="toctree-l3"><a class="reference internal" href="../../../../essentials/python/functions/005_Python_Function_Recursion.html">Python Recursion</a></li>
+
+<li class="toctree-l3"><a class="reference internal" href="../../../../essentials/python/functions/006_Python_Function_Anonymous.html">Anonymous</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../essentials/python/functions/007_Python_Function_Module.html">Module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../essentials/python/functions/008_Python_Function_random_Module.html">Random module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../essentials/python/functions/009_Python_Function_math_Module.html">Math module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../essentials/python/functions/010_Python_Function_Package.html">Package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../essentials/python/functions/Python_Docstrings.html">Docstrings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../essentials/python/functions/Python_User_defined_Functions.html">User defined functions</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../../essentials/python/files/files_toc.html">Files</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../essentials/python/files/001_Python_File_Input_Output.html">File I/O</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../essentials/python/files/002_Python_File_Directory.html">File directory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../essentials/python/files/003_Python_File_Exception.html">File exception</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../essentials/python/files/004_Python_Exceptions_Handling.html">Exceptions handling</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../essentials/python/files/005_Python_User_defined_Exceptions.html">User defined exceptions</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../../essentials/python/objects/objects_toc.html">Objects &amp; classes</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../essentials/python/objects/001_Python_OOPs_Concepts.html">Python OOPs Concepts</a></li>
+
+<li class="toctree-l3"><a class="reference internal" href="../../../../essentials/python/objects/002_Python_Classes_and_Objects.html">Python  Classes and Objects</a></li>
+
+<li class="toctree-l3"><a class="reference internal" href="../../../../essentials/python/objects/003_Python_Inheritance.html">Inheritance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../essentials/python/objects/004_Python_Operator_Overloading.html">Operator overloading</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../essentials/python/objects/self_in_Python_Demystified.html">self demystified</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../../essentials/python/advanced/advanced_toc.html">Advanced</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../essentials/python/advanced/001_Python_Iterators.html">Iterators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../essentials/python/advanced/002_Python_Generators.html">Generators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../essentials/python/advanced/003_Python_Closure.html">Closure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../essentials/python/advanced/004_Python_Decorators.html">Decorators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../essentials/python/advanced/005_Python_Property.html">Property</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../essentials/python/advanced/006_Python_RegEx.html">RegEx</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../essentials/python/advanced/Python_args_and_kwargs.html">args and kwargs</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../../essentials/python/datetime/datetime_toc.html">Date time module</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../essentials/python/datetime/001_Python_datetime_Module.html">Datetime</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../essentials/python/datetime/002_Python_strftime.html">strftime</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../essentials/python/datetime/003_Python_strptime.html">strptime</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../essentials/python/datetime/004_Python_current_date_and_time.html">Current date &amp; time</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../essentials/python/datetime/005_Python_get_current_time.html">Current time</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../essentials/python/datetime/006_Python_timestamp_to_datetime.html">Timestamp to datetime</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../essentials/python/datetime/007_Python_time_Module.html">Time module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../essentials/python/datetime/008_Python_sleep.html">Sleep</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../essentials/mathematics/mathematics_toc.html">Mathematics</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../essentials/mathematics/linear-algebra_vectors.html">Vectors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../essentials/mathematics/linear-algebra_matrices.html">Matrices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../essentials/mathematics/dissimilarity_measures.html">Similarity measure</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../essentials/intro_statistics.html">Statistics</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../essentials/statistics/statistics.html">Content with notebooks</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Tools</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../intro_tools.html">Data analytics</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../numpy/numpy_toc.html">NumPy</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-13"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../numpy/001_Python_NumPy.html">Python NumPy</a></li>
+
+<li class="toctree-l3"><a class="reference internal" href="../../../numpy/002_Python_NumPy_Array_Part1.html">Arrays Part 1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../numpy/003_Python_NumPy_Array_Part2.html">Arrays Part 2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../numpy/004_Python_NumPy_Array_Part3.html">Arrays Part 3</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../numpy/005_Python_NumPy_Array_Part4.html">Arrays Part 4</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../numpy/Python_Numpy_Exercises_with_hints.html">Exercises</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../pandas/pandas_toc.html">Pandas</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-14"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../pandas/001_Python_Pandas_DataFrame.html">Python Pandas</a></li>
+
+<li class="toctree-l3"><a class="reference internal" href="../../../pandas/002_Python_Pandas_Exercise_1.html">Exercise 1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../pandas/003_Python_Pandas_Exercise_2.html">Exercise 2</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../matplotlib/matplotlib_toc.html">Matplotlib</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-15"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../matplotlib/002_Python_Matplotlib_Exercise_1.html">Matplotlib</a></li>
+
+<li class="toctree-l3"><a class="reference internal" href="../../../matplotlib/003_Python_Matplotlib_Exercise_2.html">Matplotlib 2</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../seaborn/seaborn_toc.html">Seaborn</a><input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-16"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../seaborn/001_Seaborn_Loading_Dataset.html">Loading Dataset</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../seaborn/002_Seaborn_Controlling_Aesthetics.html">Controlling aesthetics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../seaborn/003_Matplotlib_vs_Seaborn.html">Matplotlib vs seaborn</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../seaborn/004_Seaborn_Color_Palettes.html">Color palettes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../seaborn/005_Seaborn_LM_Plot_and_Reg_Plot.html">LM and regerssion plots</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../seaborn/006_Seaborn_Scatter_Plot_and_Joint_Plot.html">Scatter and join plots</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../seaborn/007_Seaborn_Additional_Regression_Plots.html">Regerssion plots</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../seaborn/008_Seaborn_Distribution_Plots.html">Seaborn distribution plot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../seaborn/009_Seaborn_Categorical_Swarm_Plot.html">Categorical swarn plot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../seaborn/010_Seaborn_Categorical_Strip_Plot.html">Categorical strip plot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../seaborn/011_Seaborn_Categorical_Box_Plot.html">Categorical box plot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../seaborn/012_Seaborn_Categorical_Violin_Plot.html">Categorical violin plot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../seaborn/013_Seaborn_Categorical_Bar_Plot_Point_Plot_and_Count_Plot.html">Categorical bar, point &amp; count plot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../seaborn/014_Seaborn_Categorical_Factor_Plot.html">Categorical factor plot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../seaborn/015_Seaborn_TimeSeries_and_LetterValue_Plot.html">Timeseries and letter value plot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../seaborn/016_Seaborn_PairGrid_Plot.html">Pair grid Pplot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../seaborn/017_Seaborn_FacetGrid_Plot.html">Facet grid plot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../seaborn/018_Seaborn_Heat_Map.html">Heat map</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../seaborn/019_Seaborn_Cluster_Map.html">Cluster map</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../tools-for-nn.html">Neural networks</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-17"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../pytorch/pytorch_toc.html">Pytorch</a><input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-18"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../pytorch/00_pytorch_fundamentals.html">Fundamentals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../pytorch/01_pytorch_workflow.html">Workflows</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../pytorch/02_pytorch_classification.html">Classification</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../pytorch/03_pytorch_computer_vision.html">Computer vision</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../pytorch/04_pytorch_custom_datasets.html">Custom datasets</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../pytorch/05_pytorch_going_modular.html">Going Modular</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../pytorch/06_pytorch_transfer_learning.html">Transfer learning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../pytorch/07_pytorch_experiment_tracking.html">Experiment tracking</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../pytorch/08_pytorch_paper_replicating.html">Replicating papers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../pytorch/09_pytorch_model_deployment.html">Model deployment</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../tools-for-llms.html">LLMs</a><input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-19"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../langchain_toc.html">Langchain</a><input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-20"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../projects/project_toc.html">Projects gallery</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../langsmith.html">LangSmith</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../langgraph.html">LangGraph</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../hf/intro.html">HuggingFace introduction and setup</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Concepts</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../concepts/concepts.html">Concepts at glance</a><input class="toctree-checkbox" id="toctree-checkbox-21" name="toctree-checkbox-21" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-21"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../concepts/linear-regression.html">Linear regression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../concepts/logistic-regression.html">Logistic regression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../concepts/k-means.html">K-means</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../concepts/anomaly-detection.html">Anomaly detection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../concepts/neural-networks.html">Neural networks</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Real world use cases</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../real-world/markdown.html">Understand how real world ML works</a><input class="toctree-checkbox" id="toctree-checkbox-22" name="toctree-checkbox-22" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-22"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../real-world/mymarkdown.html">Real world examples</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../../../_sources/content/tools/langchain/data/thefuzz/CHANGES.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Changelog</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">0.17.0 (2018-08-20)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">0.16.0 (2017-12-18)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">0.15.1 (2017-07-19)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">0.15.0 (2017-02-20)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">0.14.0 (2016-11-04)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">0.13.0 (2016-11-01)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">0.12.0 (2016-09-14)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">0.11.1 (2016-07-27)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">0.11.0 (2016-06-30)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">0.10.0 (2016-03-14)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">0.9.0 (2016-03-07)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">0.8.2 (2016-02-26)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">0.8.1 (2016-01-25)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">0.8.0 (2015-11-16)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">0.7.0 (2015-10-02)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">0.6.2 (2015-09-03)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">0.6.1 (2015-08-07)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">0.6.0 (2015-07-20)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">0.5.0 (2015-02-04)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">0.4.0 (2014-10-31)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">0.3.3 (2014-10-22)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id22">0.3.2 (2014-09-12)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id23">0.3.0 (2014-08-24)</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="changelog">
+<h1>Changelog<a class="headerlink" href="#changelog" title="Link to this heading">#</a></h1>
+<section id="id1">
+<h2>0.17.0 (2018-08-20)<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<ul>
+<li><p>Make benchmarks script Py3 compatible. [Stefan Behnel]</p></li>
+<li><p>Add Go lang port. [iddober]</p></li>
+<li><p>Add reference to C# port. [ericcoleman]</p></li>
+<li><p>Chore: remove license header from files. [Jose Diaz-Gonzalez]</p>
+<p>The files should all inherit the projects license.</p>
+</li>
+<li><p>Fix README title style. [Thomas Grainger]</p></li>
+<li><p>Add readme check. [Thomas Grainger]</p>
+<p>install docutils and Pygments</p>
+</li>
+<li><p>Cache pip. [Thomas Grainger]</p></li>
+<li><p>Upgrade pip/setuptools for hypothesis. [Thomas Grainger]</p></li>
+<li><p>Feat: drop py26 and py33 support from tox. [Jose Diaz-Gonzalez]</p></li>
+<li><p>Feat: drop support for 2.6 in test_thefuzz.py. [Jose Diaz-Gonzalez]</p></li>
+<li><p>Feat: drop reference to 2.4 from readme. [Jose Diaz-Gonzalez]</p></li>
+<li><p>Feat: drop py2.6 and py3.3 classifiers. [Jose Diaz-Gonzalez]</p></li>
+<li><p>Feat: drop 2.6 and 3.3 support. [Jose Diaz-Gonzalez]</p>
+<p>These are no longer supported. Please upgrade your python version if you are using either version.</p>
+</li>
+<li><p>Fuzz: _token_sort: check for equivalence. [Ralf Ramsauer]</p>
+<p>If we don’t have to full_process the strings, we can safely assume to
+return 100 in case both candidates equal.</p>
+<p>Signed-off-by: Ralf Ramsauer &lt;<a class="reference external" href="mailto:ralf&#46;ramsauer&#37;&#52;&#48;oth-regensburg&#46;de">ralf<span>&#46;</span>ramsauer<span>&#64;</span>oth-regensburg<span>&#46;</span>de</a>&gt;</p>
+</li>
+<li><p>Test: add more test cases. [Ralf Ramsauer]</p>
+<p>Signed-off-by: Ralf Ramsauer &lt;<a class="reference external" href="mailto:ralf&#46;ramsauer&#37;&#52;&#48;oth-regensburg&#46;de">ralf<span>&#46;</span>ramsauer<span>&#64;</span>oth-regensburg<span>&#46;</span>de</a>&gt;</p>
+</li>
+<li><p>Utils: add and use check_for_equivalence decorator. [Ralf Ramsauer]</p>
+<p>And decorate basic scoring functions.</p>
+<p>The check_for_equivalence decorator MUST be used after the
+check_for_none decorator, as otherwise ratio(None, None) will get a
+score of 100.</p>
+<p>This fixes the first part of the recently introduced changes in the test
+set.</p>
+<p>Signed-off-by: Ralf Ramsauer &lt;<a class="reference external" href="mailto:ralf&#46;ramsauer&#37;&#52;&#48;oth-regensburg&#46;de">ralf<span>&#46;</span>ramsauer<span>&#64;</span>oth-regensburg<span>&#46;</span>de</a>&gt;</p>
+</li>
+<li><p>Tests: add some corner cases. [Ralf Ramsauer]</p>
+<p>‘’ and ‘’ are equal, so are ‘{’ and ‘{’. Test if thefuzz gives them a
+score of 100.</p>
+<p>For the moment, this patch breaks tests, fixes in thefuzz follow.</p>
+<p>Signed-off-by: Ralf Ramsauer &lt;<a class="reference external" href="mailto:ralf&#46;ramsauer&#37;&#52;&#48;oth-regensburg&#46;de">ralf<span>&#46;</span>ramsauer<span>&#64;</span>oth-regensburg<span>&#46;</span>de</a>&gt;</p>
+</li>
+<li><p>Utils: remove superfluous check. [Ralf Ramsauer]</p>
+<p>Decorators make sure that only non None-values are passed. We can safely
+assume that None will never get here.</p>
+<p>Other than that, None’s shouldn’t simply be ignored and erroneously
+changed to empty strings. Better let users fail.</p>
+<p>This commit doesn’t break any tests.</p>
+<p>Signed-off-by: Ralf Ramsauer &lt;<a class="reference external" href="mailto:ralf&#46;ramsauer&#37;&#52;&#48;oth-regensburg&#46;de">ralf<span>&#46;</span>ramsauer<span>&#64;</span>oth-regensburg<span>&#46;</span>de</a>&gt;</p>
+</li>
+<li><p>README: add missing requirements. [Ralf Ramsauer]</p>
+<p>pycodestyle and hypothesis are required for automatic testing. Add them
+to README’s requirement section.</p>
+<p>Signed-off-by: Ralf Ramsauer &lt;<a class="reference external" href="mailto:ralf&#46;ramsauer&#37;&#52;&#48;oth-regensburg&#46;de">ralf<span>&#46;</span>ramsauer<span>&#64;</span>oth-regensburg<span>&#46;</span>de</a>&gt;</p>
+</li>
+<li><p>Remove empty document. [Ralf Ramsauer]</p>
+<p>Signed-off-by: Ralf Ramsauer &lt;<a class="reference external" href="mailto:ralf&#46;ramsauer&#37;&#52;&#48;oth-regensburg&#46;de">ralf<span>&#46;</span>ramsauer<span>&#64;</span>oth-regensburg<span>&#46;</span>de</a>&gt;</p>
+</li>
+</ul>
+</section>
+<section id="id2">
+<h2>0.16.0 (2017-12-18)<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<ul>
+<li><p>Add punctuation characters back in so process does something.
+[davidcellis]</p></li>
+<li><p>Simpler alphabet and even fewer examples. [davidcellis]</p></li>
+<li><p>Fewer examples and larger deadlines for Hypothesis. [davidcellis]</p></li>
+<li><p>Slightly more examples. [davidcellis]</p></li>
+<li><p>Attempt to fix the failing 2.7 and 3.6 python tests. [davidcellis]</p></li>
+<li><p>Readme: add link to C++ port. [Lizard]</p></li>
+<li><p>Fix tests on Python 3.3. [Jon Banafato]</p>
+<p>Modify tox.ini and .travis.yml to install enum34 when running with
+Python 3.3 to allow hypothesis tests to pass.</p>
+</li>
+<li><p>Normalize Python versions. [Jon Banafato]</p>
+<ul class="simple">
+<li><p>Enable Travis-CI tests for Python 3.6</p></li>
+<li><p>Enable tests for all supported Python versions in tox.ini</p></li>
+<li><p>Add Trove classifiers for Python 3.4 - 3.6 to setup.py</p></li>
+</ul>
+<p>—</p>
+<p>Note: Python 2.6 and 3.3 are no longer supported by the Python core
+team. Support for these can likely be dropped, but that’s out of scope
+for this change set.</p>
+</li>
+<li><p>Fix typos. [Sven-Hendrik Haase]</p></li>
+</ul>
+</section>
+<section id="id3">
+<h2>0.15.1 (2017-07-19)<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Fix setup.py (addresses #155) [Paul O’Leary McCann]</p></li>
+<li><p>Merge remote-tracking branch ‘upstream/master’ into
+extract_optimizations. [nolan]</p></li>
+<li><p>Seed random before generating benchmark strings. [nolan]</p></li>
+<li><p>Cleaner implementation of same idea without new param, but adding
+existing full_process param to Q,W,UQ,UW. [nolan]</p></li>
+<li><p>Fix benchmark only generate list once. [nolan]</p></li>
+<li><p>Only run util.full_process once on query when using extract functions,
+add new benchmarks. [nolan]</p></li>
+</ul>
+</section>
+<section id="id4">
+<h2>0.15.0 (2017-02-20)<a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
+<ul>
+<li><p>Add extras require to install python-levenshtein optionally. [Rolando
+Espinoza]</p>
+<p>This allows to install python-levenshtein as dependency.</p>
+</li>
+<li><p>Fix link formatting in the README. [Alex Chan]</p></li>
+<li><p>Add fuzzball.js JavaScript port link. [nolan]</p></li>
+<li><p>Added Rust Port link. [Logan Collins]</p></li>
+<li><p>Validate_string docstring. [davidcellis]</p></li>
+<li><p>For full comparisons test that ONLY exact matches (after processing)
+are added. [davidcellis]</p></li>
+<li><p>Add detailed docstrings to WRatio and QRatio comparisons.
+[davidcellis]</p></li>
+</ul>
+</section>
+<section id="id5">
+<h2>0.14.0 (2016-11-04)<a class="headerlink" href="#id5" title="Link to this heading">#</a></h2>
+<ul>
+<li><p>Possible PEP-8 fix + make pep-8 warnings appear in test. [davidcellis]</p></li>
+<li><p>Possible PEP-8 fix. [davidcellis]</p></li>
+<li><p>Possible PEP-8 fix. [davidcellis]</p></li>
+<li><p>Test for stderr log instead of warning. [davidcellis]</p></li>
+<li><p>Convert warning.warn to logging.warning. [davidcellis]</p></li>
+<li><p>Additional details for empty string warning from process.
+[davidcellis]</p>
+<p>String formatting fix for python 2.6</p>
+</li>
+<li><p>Enclose warnings.simplefilter() inside a with statement. [samkennerly]</p></li>
+</ul>
+</section>
+<section id="id6">
+<h2>0.13.0 (2016-11-01)<a class="headerlink" href="#id6" title="Link to this heading">#</a></h2>
+<ul>
+<li><p>Support alternate git status output. [Jose Diaz-Gonzalez]</p></li>
+<li><p>Split warning test into new test file, added to travis execution on
+2.6 / pypy3. [davidcellis]</p></li>
+<li><p>Remove hypothesis examples database from gitignore. [davidcellis]</p></li>
+<li><p>Add check for warning to tests. [davidcellis]</p>
+<p>Reordered test imports</p>
+</li>
+<li><p>Check processor and warn before scorer may remove processor.
+[davidcellis]</p></li>
+<li><p>Renamed test - tidied docstring. [davidcellis]</p></li>
+<li><p>Add token ratios to the list of scorers that skip running full_process
+as a processor. [davidcellis]</p></li>
+<li><p>Added tokex_sort, token_set to test. [davidcellis]</p></li>
+<li><p>Test docstrings/comments. [davidcellis]</p>
+<p>Removed redundant check from test.</p>
+</li>
+<li><p>Added py.test .cache/ removed duplicated build from gitignore.
+[davidcellis]</p></li>
+<li><p>Added default_scorer, default_processor parameters to make it easier
+to change in the future. [davidcellis]</p>
+<p>Added warning if the processor reduces the input query to an empty string.</p>
+</li>
+<li><p>Rewrote extracts to explicitly use default values for processor and
+scorer. [davidcellis]</p></li>
+<li><p>Changed Hypothesis tests to use pytest parameters. [davidcellis]</p></li>
+<li><p>Added Hypothesis based tests for identical strings. [Ducksual]</p>
+<p>Added support for hypothesis to travis config.
+Hypothesis based tests are skipped on Python 2.6 and pypy3.</p>
+<p>Added .hypothesis/ folder to gitignore</p>
+</li>
+<li><p>Added test for simple ‘a, b’ string on process.extractOne. [Ducksual]</p></li>
+<li><p>Process the query in process.extractWithoutOrder when using a scorer
+which does not do so. [Ducksual]</p>
+<p>Closes 139</p>
+</li>
+<li><p>Mention that difflib and levenshtein results may differ. [Jose Diaz-
+Gonzalez]</p>
+<p>Closes #128</p>
+</li>
+</ul>
+</section>
+<section id="id7">
+<h2>0.12.0 (2016-09-14)<a class="headerlink" href="#id7" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Declare support for universal wheels. [Thomas Grainger]</p></li>
+<li><p>Clarify that license is GPLv2. [Gareth Tan]</p></li>
+</ul>
+</section>
+<section id="id8">
+<h2>0.11.1 (2016-07-27)<a class="headerlink" href="#id8" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Add editorconfig. [Jose Diaz-Gonzalez]</p></li>
+<li><p>Added tox.ini cofig file for easy local multi-environment testing
+changed travis config to use py.test like tox updated use of pep8
+module to pycodestyle. [Pedro Rodrigues]</p></li>
+</ul>
+</section>
+<section id="id9">
+<h2>0.11.0 (2016-06-30)<a class="headerlink" href="#id9" title="Link to this heading">#</a></h2>
+<ul>
+<li><p>Clean-up. [desmaisons_david]</p></li>
+<li><p>Improving performance. [desmaisons_david]</p></li>
+<li><p>Performance Improvement. [desmaisons_david]</p></li>
+<li><p>Fix link to Levenshtein. [Brian J. McGuirk]</p></li>
+<li><p>Fix readme links. [Brian J. McGuirk]</p></li>
+<li><p>Add license to StringMatcher.py. [Jose Diaz-Gonzalez]</p>
+<p>Closes #113</p>
+</li>
+</ul>
+</section>
+<section id="id10">
+<h2>0.10.0 (2016-03-14)<a class="headerlink" href="#id10" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Handle None inputs same as empty string (Issue #94) [Nick Miller]</p></li>
+</ul>
+</section>
+<section id="id11">
+<h2>0.9.0 (2016-03-07)<a class="headerlink" href="#id11" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Pull down all keys when updating local copy. [Jose Diaz-Gonzalez]</p></li>
+</ul>
+</section>
+<section id="id12">
+<h2>0.8.2 (2016-02-26)<a class="headerlink" href="#id12" title="Link to this heading">#</a></h2>
+<ul>
+<li><p>Remove the warning for “slow” sequence matcher on PyPy. [Julian
+Berman]</p>
+<p>where it’s preferable to use the pure-python implementation.</p>
+</li>
+</ul>
+</section>
+<section id="id13">
+<h2>0.8.1 (2016-01-25)<a class="headerlink" href="#id13" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Minor release changes. [Jose Diaz-Gonzalez]</p></li>
+<li><p>Clean up wiki link in readme. [Ewan Oglethorpe]</p></li>
+</ul>
+</section>
+<section id="id14">
+<h2>0.8.0 (2015-11-16)<a class="headerlink" href="#id14" title="Link to this heading">#</a></h2>
+<ul>
+<li><p>Refer to Levenshtein distance in readme. Closes #88. [Jose Diaz-
+Gonzalez]</p></li>
+<li><p>Added install step for travis to have pep8 available. [Pedro
+Rodrigues]</p></li>
+<li><p>Added a pep8 test. The way I add the error 501 to the ignore tuple is
+probably wrong but from the docs and source code of pep8 I could not
+find any other way. [Pedro Rodrigues]</p>
+<p>I also went ahead and removed the pep8 call from the release file.</p>
+</li>
+<li><p>Added python 3.5, pypy, and ypyp3 to the travis config file. [Pedro
+Rodrigues]</p></li>
+<li><p>Added another step to the release file to run the tests before
+releasing. [Pedro Rodrigues]</p></li>
+<li><p>Fixed a few pep8 errors Added a verification step in the release
+automation file. This step should probably be somewhere at git level.
+[Pedro Rodrigues]</p></li>
+<li><p>Pep8. [Pedro Rodrigues]</p></li>
+<li><p>Leaving TODOs in the code was never a good idea. [Pedro Rodrigues]</p></li>
+<li><p>Changed return values to be rounded integers. [Pedro Rodrigues]</p></li>
+<li><p>Added a test with the recovered data file. [Pedro Rodrigues]</p></li>
+<li><p>Recovered titledata.csv. [Pedro Rodrigues]</p></li>
+<li><p>Move extract test methods into the process test. [Shale Craig]</p>
+<p>Somehow, they ended up in the <cite>RatioTest</cite>, despite asserting that the
+<cite>ProcessTest</cite> works.</p>
+</li>
+</ul>
+</section>
+<section id="id15">
+<h2>0.7.0 (2015-10-02)<a class="headerlink" href="#id15" title="Link to this heading">#</a></h2>
+<ul>
+<li><p>Use portable syntax for catching exception on tests. [Luis Madrigal]</p></li>
+<li><p>[Fix] test against correct variable. [Luis Madrigal]</p></li>
+<li><p>Add unit tests for validator decorators. [Luis Madrigal]</p></li>
+<li><p>Move validators to decorator functions. [Luis Madrigal]</p>
+<p>This allows easier composition and IMO makes the functions more readable</p>
+</li>
+<li><p>Fix typo: dictionery -&gt; dictionary. [shale]</p></li>
+<li><p>FizzyWuzzy -&gt; TheFuzz typo correction. [shale]</p></li>
+<li><p>Add check for gitchangelog. [Jose Diaz-Gonzalez]</p></li>
+</ul>
+</section>
+<section id="id16">
+<h2>0.6.2 (2015-09-03)<a class="headerlink" href="#id16" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Ensure the rst-lint binary is available. [Jose Diaz-Gonzalez]</p></li>
+</ul>
+</section>
+<section id="id17">
+<h2>0.6.1 (2015-08-07)<a class="headerlink" href="#id17" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Minor whitespace changes for PEP8. [Jose Diaz-Gonzalez]</p></li>
+</ul>
+</section>
+<section id="id18">
+<h2>0.6.0 (2015-07-20)<a class="headerlink" href="#id18" title="Link to this heading">#</a></h2>
+<ul>
+<li><p>Added link to a java port. [Andriy Burkov]</p></li>
+<li><p>Patched “name ‘unicode’ is not defined” python3. [Carlos Garay]</p>
+<p><a class="github reference external" href="https://github.com/seatgeek/thefuzz/issues/80">seatgeek/thefuzz#80</a></p>
+</li>
+<li><p>Make process.extract accept {dict, list}-like choices. [Nathan
+Typanski]</p>
+<p>Previously, process.extract expected lists or dictionaries, and tested
+this with isinstance() calls. In keeping with the spirit of Python (duck
+typing and all that), this change enables one to use extract() on any
+dict-like object for dict-like results, or any list-like object for
+list-like results.</p>
+<p>So now we can (and, indeed, I’ve added tests for these uses) call
+extract() on things like:</p>
+<ul class="simple">
+<li><p>a generator of strings (“any iterable”)</p></li>
+<li><p>a UserDict</p></li>
+<li><p>custom user-made classes that “look like” dicts
+(or, really, anything with a .items() method that behaves like a dict)</p></li>
+<li><p>plain old lists and dicts</p></li>
+</ul>
+<p>The behavior is exactly the same for previous use cases of
+lists-and-dicts.</p>
+<p>This change goes along nicely with PR #68, since those docs suggest
+dict-like behavior is valid, and this change makes that true.</p>
+</li>
+<li><p>Merge conflict. [Adam Cohen]</p></li>
+<li><p>Improve docs for thefuzz.process. [Nathan Typanski]</p>
+<p>The documentation for this module was dated and sometimes inaccurate.
+This overhauls the docs to accurately describe the current module,
+including detailing optional arguments that were not previously
+explained - e.g., limit argument to extract().</p>
+<p>This change follows the Google Python Style Guide, which may be found
+at:</p>
+<p>&lt;<a class="reference external" href="https://google-styleguide.googlecode.com/svn/trunk/pyguide.html?showone=Comments#Comments">https://google-styleguide.googlecode.com/svn/trunk/pyguide.html?showone=Comments#Comments</a>&gt;</p>
+</li>
+</ul>
+</section>
+<section id="id19">
+<h2>0.5.0 (2015-02-04)<a class="headerlink" href="#id19" title="Link to this heading">#</a></h2>
+<ul>
+<li><p>FIX: 0.4.0 is released, no need to specify 0.3.1 in README. [Josh
+Warner (Mac)]</p></li>
+<li><p>Fixed a small typo. [Rostislav Semenov]</p></li>
+<li><p>Reset <cite>processor</cite> and <cite>scorer</cite> defaults to None with argument
+checking. [foxxyz]</p></li>
+<li><p>Catch generators without lengths. [Jeremiah Lowin]</p></li>
+<li><p>Fixed python3 issue and deprecated assertion method. [foxxyz]</p></li>
+<li><p>Fixed some docstrings, typos, python3 string method compatibility,
+some errors that crept in during rebase. [foxxyz]</p></li>
+<li><p>[mod] The lamdba in extract is not needed. [Olivier Le Thanh Duong]</p>
+<p>[mod] Pass directly the defaults functions in the args</p>
+<p>[mod] itertools.takewhile() can handle empty list just fine no need to test for it</p>
+<p>[mod] Shorten extractOne by removing double if</p>
+<p>[mod] Use a list comprehention in extract()</p>
+<p>[mod] Autopep8 on process.py</p>
+<p>[doc] Document make_type_consistent</p>
+<p>[mod] bad_chars shortened</p>
+<p>[enh] Move regex compilation outside the method, otherwise we don’t get the benefit from it</p>
+<p>[mod] Don’t need all the blah just to redefine method from string module</p>
+<p>[mod] Remove unused import</p>
+<p>[mod] Autopep8 on string_processing.py</p>
+<p>[mod] Rewrote asciidammit without recursion to make it more readable</p>
+<p>[mod] Autopep8 on utils.py</p>
+<p>[mod] Remove unused import</p>
+<p>[doc] Add some doc to fuzz.py</p>
+<p>[mod] Move the code to sort string in a separate function</p>
+<p>[doc] Docstrings for WRatio, UWRatio</p>
+</li>
+<li><p>Add note on which package to install. Closes #67. [Jose Diaz-Gonzalez]</p></li>
+</ul>
+</section>
+<section id="id20">
+<h2>0.4.0 (2014-10-31)<a class="headerlink" href="#id20" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>In extarctBests() and extractOne() use ‘&gt;=’ instead of ‘&gt;’ [Юрий
+Пайков]</p></li>
+<li><p>Fixed python3 issue with SequenceMatcher import. [Юрий Пайков]</p></li>
+</ul>
+</section>
+<section id="id21">
+<h2>0.3.3 (2014-10-22)<a class="headerlink" href="#id21" title="Link to this heading">#</a></h2>
+<ul>
+<li><p>Fixed issue #59 - “partial” parameter for <cite>_token_set()</cite> is now
+honored. [Юрий Пайков]</p></li>
+<li><p>Catch generators without lengths. [Jeremiah Lowin]</p></li>
+<li><p>Remove explicit check for lists. [Jeremiah Lowin]</p>
+<p>The logic in <cite>process.extract()</cite> should support any Python sequence/iterable. The explicit check for lists is unnecessary and limiting (for example, it forces conversion of generators and other iterable classes to lists).</p>
+</li>
+</ul>
+</section>
+<section id="id22">
+<h2>0.3.2 (2014-09-12)<a class="headerlink" href="#id22" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Make release command an executable. [Jose Diaz-Gonzalez]</p></li>
+<li><p>Simplify MANIFEST.in. [Jose Diaz-Gonzalez]</p></li>
+<li><p>Add a release script. [Jose Diaz-Gonzalez]</p></li>
+<li><p>Fix readme codeblock. [Jose Diaz-Gonzalez]</p></li>
+<li><p>Minor formatting. [Jose Diaz-Gonzalez]</p></li>
+<li><p>Use __version__ from thefuzz package. [Jose Diaz-Gonzalez]</p></li>
+<li><p>Set __version__ constant in __init__.py. [Jose Diaz-Gonzalez]</p></li>
+<li><p>Rename LICENSE to LICENSE.txt. [Jose Diaz-Gonzalez]</p></li>
+</ul>
+</section>
+<section id="id23">
+<h2>0.3.0 (2014-08-24)<a class="headerlink" href="#id23" title="Link to this heading">#</a></h2>
+<ul>
+<li><p>Test dict input to extractOne() [jamesnunn]</p></li>
+<li><p>Remove whitespace. [jamesnunn]</p></li>
+<li><p>Choices parameter for extract() accepts both dict and list objects.
+[jamesnunn]</p></li>
+<li><p>Enable automated testing with Python 3.4. [Corey Farwell]</p></li>
+<li><p>Fixed typo: lettters -&gt; letters. [Tal Einat]</p></li>
+<li><p>Fixing LICENSE and README’s license info. [Dallas Gutauckis]</p></li>
+<li><p>Proper ordered list. [Jeff Paine]</p></li>
+<li><p>Convert README to rst. [Jeff Paine]</p></li>
+<li><p>Add requirements.txt per discussion in #44. [Jeff Paine]</p></li>
+<li><p>Add LICENSE TO MANIFEST.in. [Jeff Paine]</p></li>
+<li><p>Rename tests.py to more common test_thefuzz.py. [Jeff Paine]</p></li>
+<li><p>Add proper MANIFEST template. [Jeff Paine]</p></li>
+<li><p>Remove MANIFEST file Not meant to be kept in version control. [Jeff
+Paine]</p></li>
+<li><p>Remove unused file. [Jeff Paine]</p></li>
+<li><p>Pep8. [Jeff Paine]</p></li>
+<li><p>Pep8 formatting. [Jeff Paine]</p></li>
+<li><p>Pep8 formatting. [Jeff Paine]</p></li>
+<li><p>Pep8 indentations. [Jeff Paine]</p></li>
+<li><p>Pep8 cleanup. [Jeff Paine]</p></li>
+<li><p>Pep8. [Jeff Paine]</p></li>
+<li><p>Pep8 cleanup. [Jeff Paine]</p></li>
+<li><p>Pep8 cleanup. [Jeff Paine]</p></li>
+<li><p>Pep8 import style. [Jeff Paine]</p></li>
+<li><p>Pep8 import ordering. [Jeff Paine]</p></li>
+<li><p>Pep8 import ordering. [Jeff Paine]</p></li>
+<li><p>Remove unused module. [Jeff Paine]</p></li>
+<li><p>Pep8 import ordering. [Jeff Paine]</p></li>
+<li><p>Remove unused module. [Jeff Paine]</p></li>
+<li><p>Pep8 import ordering. [Jeff Paine]</p></li>
+<li><p>Remove unused imports. [Jeff Paine]</p></li>
+<li><p>Remove unused module. [Jeff Paine]</p></li>
+<li><p>Remove import * where present. [Jeff Paine]</p></li>
+<li><p>Avoid import * [Jeff Paine]</p></li>
+<li><p>Add Travis CI badge. [Jeff Paine]</p></li>
+<li><p>Remove python 2.4, 2.5 from Travis (not supported) [Jeff Paine]</p></li>
+<li><p>Add python 2.4 and 2.5 to Travis. [Jeff Paine]</p></li>
+<li><p>Add all supported python versions to travis. [Jeff Paine]</p></li>
+<li><p>Bump minor version number. [Jeff Paine]</p></li>
+<li><p>Add classifiers for python versions. [Jeff Paine]</p></li>
+<li><p>Added note about python-Levenshtein speedup. Closes #34. [Jose Diaz-
+Gonzalez]</p></li>
+<li><p>Fixed tests on 2.6. [Grigi]</p></li>
+<li><p>Fixed py2.6. [Grigi]</p></li>
+<li><p>Force bad_chars to ascii. [Grigi]</p></li>
+<li><p>Since importing unicode_literals, u decorator not required on strings
+from py2.6 and up. [Grigi]</p></li>
+<li><p>Py3 support without 2to3. [Grigi]</p></li>
+<li><p>Created: Added .travis.yml. [futoase]</p></li>
+<li><p>[enh] Add docstrings to process.py. [Olivier Le Thanh Duong]</p>
+<p>Turn the existings comments into docstrings so they can be seen via introspection</p>
+</li>
+<li><p>Don’t condense multiple punctuation characters to a single whitespace.
+this is a behavioral change. [Adam Cohen]</p></li>
+<li><p>UQRatio and UWRatio shorthands. [Adam Cohen]</p></li>
+<li><p>Version 0.2. [Adam Cohen]</p></li>
+<li><p>Unicode/string comparison bug. [Adam Cohen]</p></li>
+<li><p>To maintain backwards compatibility, default is to force_ascii as
+before. [Adam Cohen]</p></li>
+<li><p>Fix merge conflict. [Adam Cohen]</p></li>
+<li><p>New process function: extractBests. [Flávio Juvenal]</p></li>
+<li><p>More readable reverse sorting. [Flávio Juvenal]</p></li>
+<li><p>Further honoring of force_ascii. [Adam Cohen]</p></li>
+<li><p>Indentation fix. [Adam Cohen]</p></li>
+<li><p>Handle force_ascii in fuzz methods. [Adam Cohen]</p></li>
+<li><p>Add back relevant tests. [Adam Cohen]</p></li>
+<li><p>Utility method to make things consistent. [Adam Cohen]</p></li>
+<li><p>Re-commit asciidammit and add a parameter to full_process to determine
+behavior. [Adam Cohen]</p></li>
+<li><p>Added a test for non letters/digits replacements. [Tristan Launay]</p></li>
+<li><p>ENG-741 fixed benchmark line length. [Laurent Erignoux]</p></li>
+<li><p>Fixed Unicode flag for tests. [Tristan Launay]</p></li>
+<li><p>ENG-741 commented code removed not erased for review from creator.
+[Laurent Erignoux]</p></li>
+<li><p>ENG-741 cut long lines in fuzzy wizzy benchmark. [Laurent Erignoux]</p></li>
+<li><p>Re-upped the limit on benchmark, now that performance is not an issue
+anymore. [Tristan Launay]</p></li>
+<li><p>Fixed comment. [Tristan Launay]</p></li>
+<li><p>Simplified processing of strings with built-in regex code in python.
+Also fixed empty string detection in token_sort_ratio. [Tristan
+Launay]</p></li>
+<li><p>Proper benchmark display. Introduce methods to explicitly do all the
+unicode preprocessing <em>before</em> using fuzz lib. [Tristan Launay]</p></li>
+<li><p>ENG-741: having a true benchmark, to see when we improve stuff.
+[Benjamin Combourieu]</p></li>
+<li><p>Unicode support in benchmark.py. [Benjamin Combourieu]</p></li>
+<li><p>Added file for processing strings. [Tristan Launay]</p></li>
+<li><p>Uniform treatment of strings in Unicode. Non-ASCII chars are now
+considered in strings, which allows for matches in Cyrillic, Chinese,
+Greek, etc. [Tristan Launay]</p></li>
+<li><p>Fixed bug in _token_set. [Michael Edward]</p></li>
+<li><p>Removed reference to PR. [Jose Diaz-Gonzalez]</p></li>
+<li><p>Sadist build and virtualenv dirs are not part of the project. [Pedro
+Rodrigues]</p></li>
+<li><p>Fixes <a class="github reference external" href="https://github.com/seatgeek/thefuzz/issues/10">seatgeek/thefuzz#10</a> and correctly
+points to README.textile. [Pedro Rodrigues]</p></li>
+<li><p>Info on the pull request. [Pedro Rodrigues]</p></li>
+<li><p>Pullstat.us button. [Pedro Rodrigues]</p></li>
+<li><p>Fuzzywuzzy really needs better benchmarks. [Pedro Rodrigues]</p></li>
+<li><p>Moved tests and benchmarks out of the package. [Pedro Rodrigues]</p></li>
+<li><p>Report better ratio()s redundant import try. [Pedro Rodrigues]</p></li>
+<li><p>AssertGreater did not exist in python 2.4. [Pedro Rodrigues]</p></li>
+<li><p>Remove debug output. [Adam Cohen]</p></li>
+<li><p>Looks for python-Levenshtein package, and if present, uses that
+instead of difflib. 10x speedup if present. add benchmarks. [Adam
+Cohen]</p></li>
+<li><p>Add gitignore. [Adam Cohen]</p></li>
+<li><p>Fix a bug in WRatio, as well as an issue in full_process, which was
+failing on strings with all unicode characters. [Adam Cohen]</p></li>
+<li><p>Error in partial_ratio. closes #7. [Adam Cohen]</p></li>
+<li><p>Adding some real-life event data for benchmarking. [Adam Cohen]</p></li>
+<li><p>Cleaned up utils.py. [Pedro Rodrigues]</p></li>
+<li><p>Optimized speed for full_process() [Pedro Rodrigues]</p></li>
+<li><p>Speed improvements to asciidammit. [Pedro Rodrigues]</p></li>
+<li><p>Removed old versions of validate_string() and remove_ponctuation()
+kept from previous commits. [Pedro Rodrigues]</p></li>
+<li><p>Issue #6 from github updated license headers to match MIT license.
+[Pedro Rodrigues]</p></li>
+<li><p>Clean up. [Pedro Rodrigues]</p></li>
+<li><p>Changes to utils.validate_string() and benchmarks. [Pedro Rodrigues]</p></li>
+<li><p>Some benchmarks to test the changes made to remove_punctuation. [Pedro
+Rodrigues]</p></li>
+<li><p>Faster remove_punctuation. [Pedro Rodrigues]</p></li>
+<li><p>AssertIsNone did not exist in Python 2.4. [Pedro Rodrigues]</p></li>
+<li><p>Just adding some simple install instructions for pip. [Chris Dary]</p></li>
+<li><p>Check for null/empty strings in QRatio and WRatio. Add tests. Closes
+#3. [Adam Cohen]</p></li>
+<li><p>More README. [Adam Cohen]</p></li>
+<li><p>README. [Adam Cohen]</p></li>
+<li><p>README. [Adam Cohen]</p></li>
+<li><p>Slight change to README. [Adam Cohen]</p></li>
+<li><p>Some readme. [Adam Cohen]</p></li>
+<li><p>Distutils. [Adam Cohen]</p></li>
+<li><p>Change directory structure. [Adam Cohen]</p></li>
+<li><p>Initial commit. [Adam Cohen]</p></li>
+</ul>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "anukchat/anukchat.github.io",
+            ref: "main",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./content/tools/langchain/data/thefuzz"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">0.17.0 (2018-08-20)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">0.16.0 (2017-12-18)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">0.15.1 (2017-07-19)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">0.15.0 (2017-02-20)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">0.14.0 (2016-11-04)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">0.13.0 (2016-11-01)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">0.12.0 (2016-09-14)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">0.11.1 (2016-07-27)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">0.11.0 (2016-06-30)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">0.10.0 (2016-03-14)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">0.9.0 (2016-03-07)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">0.8.2 (2016-02-26)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">0.8.1 (2016-01-25)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">0.8.0 (2015-11-16)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">0.7.0 (2015-10-02)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">0.6.2 (2015-09-03)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">0.6.1 (2015-08-07)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">0.6.0 (2015-07-20)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">0.5.0 (2015-02-04)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">0.4.0 (2014-10-31)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">0.3.3 (2014-10-22)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id22">0.3.2 (2014-09-12)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id23">0.3.0 (2014-08-24)</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Anukool Chaturvedi
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
