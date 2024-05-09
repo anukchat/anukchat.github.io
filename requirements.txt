@@ -5,7 +5,7 @@ matplotlib
 scipy
 torch
 # langchain
-python-dotenv
+# python-dotenv
 
 
 
