@@ -691,9 +691,18 @@ document.write(`
 <p>You’ll need an OpenAI api key to follow this tutorial. You can have it as an environement variable, in an .env file where this jupyter notebook lives, or insert it below where ‘YourAPIKey’ is. Have if you have questions on this, put these instructions into <a class="reference external" href="https://chat.openai.com/">ChatGPT</a>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span><span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>langchain
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Unzip data folder</span>
 
-<span class="kn">from</span> <span class="nn">dotenv</span> <span class="kn">import</span> <span class="n">load_dotenv</span>
+<span class="kn">import</span> <span class="nn">zipfile</span>
+<span class="k">with</span> <span class="n">zipfile</span><span class="o">.</span><span class="n">ZipFile</span><span class="p">(</span><span class="s1">&#39;data.zip&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">zip_ref</span><span class="p">:</span>
+    <span class="n">zip_ref</span><span class="o">.</span><span class="n">extractall</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">dotenv</span> <span class="kn">import</span> <span class="n">load_dotenv</span>
 <span class="kn">import</span> <span class="nn">os</span>
 
 <span class="n">load_dotenv</span><span class="p">()</span>
@@ -2094,7 +2103,7 @@ Thought:<span class=" -Color -Color-Bold -Color-Bold-Green"> I now know the fina
 </div>
 </div>
 </div>
-<p><img alt="Wild Belle" src="../../../_images/WildBelle1.png" /></p>
+<p><img alt="Wild Belle" src="content/tools/langchain/data/WildBelle1.png" /></p>
 <p>🎵Enjoy🎵
 <a class="reference external" href="https://open.spotify.com/track/1eREJIBdqeCcqNCB1pbz7w?si=c014293b63c7478c">https://open.spotify.com/track/1eREJIBdqeCcqNCB1pbz7w?si=c014293b63c7478c</a></p>
 </section>

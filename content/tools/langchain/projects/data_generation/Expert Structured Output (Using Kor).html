@@ -625,6 +625,17 @@ LLMs are great at text output, but they need extra help outputing information in
 <p>Spoiler: Jump down to the bottom to see a bonefied business idea that you can start and manage today.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Unzip data folder</span>
+
+<span class="kn">import</span> <span class="nn">zipfile</span>
+<span class="k">with</span> <span class="n">zipfile</span><span class="o">.</span><span class="n">ZipFile</span><span class="p">(</span><span class="s1">&#39;../../data.zip&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">zip_ref</span><span class="p">:</span>
+    <span class="n">zip_ref</span><span class="o">.</span><span class="n">extractall</span><span class="p">(</span><span class="s1">&#39;..&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Kor!</span>
 <span class="kn">from</span> <span class="nn">kor.extraction</span> <span class="kn">import</span> <span class="n">create_extraction_chain</span>
 <span class="kn">from</span> <span class="nn">kor.nodes</span> <span class="kn">import</span> <span class="n">Object</span><span class="p">,</span> <span class="n">Text</span><span class="p">,</span> <span class="n">Number</span>

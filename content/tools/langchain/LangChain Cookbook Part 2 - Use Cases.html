@@ -686,11 +686,21 @@ document.write(`
 <li><p>This cookbook will not cover all aspects of LangChain. It’s contents have been curated to get you to building &amp; impact as quick as possible. For more, please check out <a class="reference external" href="https://python.langchain.com/en/latest/index.html">LangChain Technical Documentation</a></p></li>
 </ul>
 <p>Let’s get started</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Unzip data folder</span>
+
+<span class="kn">import</span> <span class="nn">zipfile</span>
+<span class="k">with</span> <span class="n">zipfile</span><span class="o">.</span><span class="n">ZipFile</span><span class="p">(</span><span class="s1">&#39;data.zip&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">zip_ref</span><span class="p">:</span>
+    <span class="n">zip_ref</span><span class="o">.</span><span class="n">extractall</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
 <p>Throughout this tutorial we will use OpenAI’s various <a class="reference external" href="https://platform.openai.com/docs/models/overview">models</a>. LangChain makes it easy to <a class="reference external" href="https://langchain.com/integrations.html#:~:text=integrations%20LangChain%20provides.-,LLMs,-LLM%20Provider">subsistute LLMs</a> so you can BYO-LLM if you want</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span><span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>langchain
-<span class="kn">from</span> <span class="nn">dotenv</span> <span class="kn">import</span> <span class="n">load_dotenv</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">dotenv</span> <span class="kn">import</span> <span class="n">load_dotenv</span>
 <span class="kn">import</span> <span class="nn">os</span>
 
 <span class="n">load_dotenv</span><span class="p">()</span>
