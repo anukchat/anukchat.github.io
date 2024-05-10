@@ -1,3 +1,6 @@
 _build/
 *.pyc
-*.DS_Store
+.DS_Store
+._data
+__MACOSX
+._*
