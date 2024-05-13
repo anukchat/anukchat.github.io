@@ -5,11 +5,11 @@
 
 #######################################################################################
 # Book settings
-title                       : Anukool's almanac # The title of the book. Will be placed in the left navbar.
+title                       : Anukool Chaturvedi # The title of the book. Will be placed in the left navbar.
 author                      : Anukool Chaturvedi
 email                       : anukool@intelloom.com  # The author of the book
 copyright                   : "2024"  # Copyright year to be placed in the footer
-# logo                        : # A path to the book logo
+logo                        : "anukool.png"
 # Patterns to skip when building the book. Can be glob-style (e.g. "*skip.ipynb")
 exclude_patterns            : [_build, Thumbs.db, .DS_Store, "**.ipynb_checkpoints"]
 # Auto-exclude files not in the toc
@@ -58,7 +58,7 @@ html:
   baseurl                   : "https://anukchat.github.io/"  # The base URL where your book will be hosted. Used for creating image previews and social links. e.g.: https://mypage.com/mybook/
 
   comments:
-    hypothesis              : true
+    hypothesis              : false
     utterances              : false
   announcement              : "" # A banner announcement at the top of the site.
 
@@ -87,9 +87,23 @@ repository:
 
 sphinx:
   config:
+    extra_extensions:
+      - sphinxemoji
     latex_elements.papersize: a4paper
     latex_elements.pointsize: 12pt
     html_theme: sphinx_book_theme
+    html_sidebars:
+      authors:
+        - name: Anukool Chaturvedi
+          url: http://www.intelloom.com/
+      header_organisation_url: https://intelloom.com
+      header_organisation: Intelloom
+      repository_url: https://github.com/intelloom/ai-notes
+      twitter: chaturanukool
+      twitter_logo_url: https://intelloom.com/wp-content/uploads/2023/08/cropped-9021326_circle_notch_bold_icon-300x300.png
+      og_logo_url: https://intelloom.com/wp-content/uploads/2023/08/cropped-9021326_circle_notch_bold_icon-300x300.png
+      description: This website presents a set of notes on AI ML and data science
+      keywords: Python, LLM, Deep Learning, AI, ML, Data Science
 
 #   config:
 #     html_extra_path: ["img",content/essentials/python/introduction/img]
