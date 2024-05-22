@@ -1,6 +1,11 @@
-```{contents}
-:local:
-```
+# Welcome
+
+<style>
+  h1 {
+    display: none;
+  }
+</style>
+
 ````{div} full-width
 ```{raw} html
 <div style="height: 100vh;">
