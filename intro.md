@@ -1,9 +1,22 @@
 
-<div style="border-radius: 10px; align: top">
-    <h1 style="color: #007acc; text-align: center;">About this website</h2>
-    <p style="color: #333; font-size: 16px;">ML Guide contains curated notes on a wide range of technical topics, including Python, Data Science, AI/ML (Generative AI), and much more. This platform aims to provide you with the best resources to help in your ML learning journey. You will also have access to articles on latest techniques & strategies along with important research papers related to AI and related topics. I have also curated some awesome books, articles and courses from best of teh best industry experts !</p>
-    <p style="color: #333; font-size: 16px;">All our course notes are executable Jupyter notebooks, which means you can run them directly on this website by clicking the 🚀 icon. This feature allows you to experiment and learn interactively.</p>
+<div style="border-radius: 10px; align: top; padding: 20px;">
+    <h1 style="color: #007acc; text-align: center;">About this Website 🌐</h1>
+    <p style="color: #333; font-size: 16px;">
+        This website contains curated notes on a wide range of technical topics, including 
+        <strong style="color: #00509e;">Python</strong>, 
+        <strong style="color: #00509e;">Data Science</strong>, 
+        <strong style="color: #00509e;">AI/ML (Generative AI)</strong>, and much more. <br/><br/>
+        This platform aims to provide you with the best resources to help in your 
+        <strong style="color: #00509e;">ML learning journey</strong>. You will also have access to articles on 
+        <strong style="color: #00509e;">latest techniques & strategies</strong> along with important research papers related to AI and related topics. <br/><br/>
+        I have also curated some awesome  <strong style="color: #00509e;"> books, articles, and courses </strong> from the best of the best industry experts! 📚
+    </p>
+    <p style="color: #333; font-size: 16px;">
+        All the course notes are executable Jupyter notebooks, which means you can run them directly on this website by clicking the <strong style="color: #00509e;">🚀</strong> icon. This feature allows you to experiment and learn interactively. 🧑‍💻
+    </p>
 </div>
+
+
 
 <h2 style="color: #007acc; text-align: center; padding:10px">Learning modules</h3>
 
@@ -111,7 +124,7 @@
 
 Not sure where to start? Depending on your career stream, we have curated various learning paths to start from.
 
-<h4 style="color: #007acc; text-align: center;">Data analytics</h3>
+<h3 style="color: #007acc; text-align: center;">Data analytics</h3>
 Explore the data analytics learning path to master the skills required to analyze and interpret data effectively.
 
 <div style="text-align: center; margin-top: 20px;">
