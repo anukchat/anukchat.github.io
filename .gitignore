@@ -4,3 +4,6 @@ _build/
 ._data
 __MACOSX
 ._*
+.env
+logs/
+__pycache__/

@@ -331,10 +331,14 @@ parts:
         title: Anomaly detection
       - file: content/concepts/neural-networks
         title: Neural networks
-  - caption: Real world use cases
+  - caption: Blogs & resources
     chapters:
     - file: content/real-world/markdown
       title: Understand how real world ML works
       sections:
       - file: content/real-world/mymarkdown
         title: Real world examples
+  - caption: About me
+    chapters:
+    - file: intro_me
+      title: About me
