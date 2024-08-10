@@ -2,7 +2,7 @@
 # Learn more at https://jupyterbook.org/customize/toc.html
 
 format: jb-book
-root: intro
+root: intro_v2
 parts:
   - caption: Essentials
     chapters:
@@ -333,11 +333,15 @@ parts:
         title: Neural networks
   - caption: Blogs & resources
     chapters:
-    - file: content/real-world/markdown
-      title: Understand how real world ML works
-      sections:
-      - file: content/real-world/mymarkdown
-        title: Real world examples
+    - file: content/resources/blogs/blogs_toc
+      title: Blogs
+    - file: content/resources/papers/papers_toc
+      title: Research papers
+    - file: content/resources/books/books_toc
+      title: E-Books
+    - file: content/resources/courses/courses_toc
+      title: Courses
+      
   - caption: About me
     chapters:
     - file: intro_me
