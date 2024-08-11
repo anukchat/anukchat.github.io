@@ -17,3 +17,9 @@ footer {
 .sidebar-secondary-item {
     border-left: none;
 }
+
+.logo {
+    padding: 20px;
+    height: 220px;
+    display: flex;
+}

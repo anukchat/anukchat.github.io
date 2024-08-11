@@ -4,12 +4,17 @@
   h1 {
     display: none;
   }
+  .header-article__inner .header-article-items__end {
+      display: none;
+  }
+  footer {
+    display: none;
+  }
 </style>
 
-````{div} full-width
 ```{raw} html
+:class: full-width
 <div style="height: 100vh;">
-  <iframe src="_static/intro_new.html" width="100%" height="100%"></iframe>
+  <iframe src="_static/about_me.html" style="border:none;height: 100%;width: 100%;"></iframe>
 </div>
 ```
-````

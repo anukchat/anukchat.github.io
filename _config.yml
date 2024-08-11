@@ -7,9 +7,9 @@
 # Book settings
 title                       : Anukool Chaturvedi # The title of the book. Will be placed in the left navbar.
 author                      : Anukool Chaturvedi
-email                       : anukool@intelloom.com  # The author of the book
+email                       : chaturvedianukool@gmail.com # The author of the book
 copyright                   : "2024"  # Copyright year to be placed in the footer
-logo                        : "anukool.png"
+logo                        : "MLGuide_logo_nb.png"
 # Patterns to skip when building the book. Can be glob-style (e.g. "*skip.ipynb")
 exclude_patterns            : [_build, Thumbs.db, .DS_Store, "**.ipynb_checkpoints"]
 # Auto-exclude files not in the toc
