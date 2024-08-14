@@ -103,8 +103,8 @@
          class="form-control"
          name="q"
          id="search-input"
-         placeholder="Search..."
-         aria-label="Search..."
+         placeholder="Search this book..."
+         aria-label="Search this book..."
          autocomplete="off"
          autocorrect="off"
          autocapitalize="off"
@@ -442,6 +442,73 @@
 
 
 
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/anukchat/anukchat.github.io/main?urlpath=lab/tree/content/tools/pandas/001_Python_Pandas_Methods/004_Python_Pandas_DataFrame_drop_columns.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Binder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Binder logo" src="../../../../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/anukchat/anukchat.github.io/blob/main/content/tools/pandas/001_Python_Pandas_Methods/004_Python_Pandas_DataFrame_drop_columns.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="../../../../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
 <div class="dropdown dropdown-download-buttons">
   <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
     <i class="fas fa-download"></i>
@@ -577,7 +644,7 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="drop-columns-in-pandas-dataframe">
+  <section class="tex2jax_ignore mathjax_ignore" id="drop-columns-in-pandas-dataframe">
 <h1>Drop columns in pandas DataFrame<a class="headerlink" href="#drop-columns-in-pandas-dataframe" title="Link to this heading">#</a></h1>
 <p>Datasets could be in any shape and form. To optimize the data analysis, we need to remove some data that is redundant or not required. This article aims to discuss all the cases of dropping single or multiple columns from a <strong><a class="reference internal" href="../001_Python_Pandas_DataFrame.html"><span class="std std-doc">Pandas DataFrame</span></a></strong>.</p>
 <p>The following functions are discussed in this article in detail:</p>
@@ -690,7 +757,7 @@ document.write(`
 <h3>Using drop with <code class="docutils literal notranslate"><span class="pre">axis='columns'</span></code> or <code class="docutils literal notranslate"><span class="pre">axis=1</span></code><a class="headerlink" href="#using-drop-with-axis-columns-or-axis-1" title="Link to this heading">#</a></h3>
 <p>Let’s see how to drop using the axis-style convention. This is a new approach. (This approach makes this method match the rest of the pandas API) .</p>
 <p>Use the axis parameter of a <strong><code class="docutils literal notranslate"><span class="pre">DataFrame.drop()</span></code></strong> to delete columns. The axis can be a row or column. The column axis represented as 1 or ‘columns’.</p>
-<p>Set <strong><code class="docutils literal notranslate"><span class="pre">axis=1</span></code></strong> or <strong><code class="docutils literal notranslate"><span class="pre">axis='columns'</span></code></strong> and pass the list of column names you want to remove..</p>
+<p>Set <strong><code class="docutils literal notranslate"><span class="pre">axis=1</span></code></strong> or <strong><code class="docutils literal notranslate"><span class="pre">axis='columns'</span></code></strong> and pass the list of column names you want to remove…</p>
 <p><strong>Example</strong></p>
 <p>Let’s see how to drop <strong><code class="docutils literal notranslate"><span class="pre">age</span></code></strong> and <strong><code class="docutils literal notranslate"><span class="pre">marks</span></code></strong> columns.</p>
 <div class="cell docutils container">
@@ -1153,8 +1220,8 @@ After dropping column:
     {
         requestKernel: true,
         binderOptions: {
-            repo: "binder-examples/jupyter-stacks-datascience",
-            ref: "master",
+            repo: "anukchat/anukchat.github.io",
+            ref: "main",
         },
         codeMirrorConfig: {
             theme: "abcdef",

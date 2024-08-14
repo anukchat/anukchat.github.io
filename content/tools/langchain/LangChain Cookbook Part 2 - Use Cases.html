@@ -103,8 +103,8 @@
          class="form-control"
          name="q"
          id="search-input"
-         placeholder="Search..."
-         aria-label="Search..."
+         placeholder="Search this book..."
+         aria-label="Search this book..."
          autocomplete="off"
          autocorrect="off"
          autocapitalize="off"
@@ -442,6 +442,73 @@
 
 
 
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/anukchat/anukchat.github.io/main?urlpath=lab/tree/content/tools/langchain/LangChain Cookbook Part 2 - Use Cases.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Binder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Binder logo" src="../../../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/anukchat/anukchat.github.io/blob/main/content/tools/langchain/LangChain Cookbook Part 2 - Use Cases.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="../../../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
 <div class="dropdown dropdown-download-buttons">
   <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
     <i class="fas fa-download"></i>
@@ -563,7 +630,7 @@ document.write(`
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#extraction">Extraction</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vanilla-extraction">Vanilla Extraction</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-langchain-s-response-schema">Using LangChain’s Response Schema</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-langchains-response-schema">Using LangChain’s Response Schema</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#evaluation">Evaluation</a></li>
@@ -586,7 +653,7 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="langchain-cookbook-part-2-use-cases">
+  <section class="tex2jax_ignore mathjax_ignore" id="langchain-cookbook-part-2-use-cases">
 <h1>LangChain Cookbook Part 2: Use Cases👨‍🍳👩‍🍳<a class="headerlink" href="#langchain-cookbook-part-2-use-cases" title="Link to this heading">#</a></h1>
 <p><em>This cookbook is based on the <a class="reference external" href="https://docs.langchain.com/docs/">LangChain Conceptual Documentation</a></em></p>
 <p><strong>LangChain Links:</strong></p>
@@ -675,7 +742,7 @@ document.write(`
 </div>
 </section>
 </section>
-<section id="langchain-use-cases">
+<section class="tex2jax_ignore mathjax_ignore" id="langchain-use-cases">
 <h1>LangChain Use Cases<a class="headerlink" href="#langchain-use-cases" title="Link to this heading">#</a></h1>
 <section id="summarization">
 <h2>Summarization<a class="headerlink" href="#summarization" title="Link to this heading">#</a></h2>
@@ -1113,8 +1180,8 @@ You have 74663 characters in that document
 </div>
 <p>While this worked this time, it’s not a long term reliable method for more advanced use cases</p>
 </section>
-<section id="using-langchain-s-response-schema">
-<h3>Using LangChain’s Response Schema<a class="headerlink" href="#using-langchain-s-response-schema" title="Link to this heading">#</a></h3>
+<section id="using-langchains-response-schema">
+<h3>Using LangChain’s Response Schema<a class="headerlink" href="#using-langchains-response-schema" title="Link to this heading">#</a></h3>
 <p>LangChain’s response schema will does two things for us:</p>
 <ol class="arabic simple">
 <li><p>Autogenerate the a prompt with bonafide format instructions. This is great because I don’t need to worry about the prompt engineering side, I’ll leave that up to LangChain!</p></li>
@@ -1985,8 +2052,8 @@ Thought:<span class=" -Color -Color-Bold -Color-Bold-Green"> I now know the comm
     {
         requestKernel: true,
         binderOptions: {
-            repo: "binder-examples/jupyter-stacks-datascience",
-            ref: "master",
+            repo: "anukchat/anukchat.github.io",
+            ref: "main",
         },
         codeMirrorConfig: {
             theme: "abcdef",
@@ -2064,7 +2131,7 @@ Thought:<span class=" -Color -Color-Bold -Color-Bold-Green"> I now know the comm
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#extraction">Extraction</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vanilla-extraction">Vanilla Extraction</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-langchain-s-response-schema">Using LangChain’s Response Schema</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-langchains-response-schema">Using LangChain’s Response Schema</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#evaluation">Evaluation</a></li>

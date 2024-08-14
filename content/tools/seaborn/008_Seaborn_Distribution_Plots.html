@@ -103,8 +103,8 @@
          class="form-control"
          name="q"
          id="search-input"
-         placeholder="Search..."
-         aria-label="Search..."
+         placeholder="Search this book..."
+         aria-label="Search this book..."
          autocomplete="off"
          autocorrect="off"
          autocapitalize="off"
@@ -442,6 +442,73 @@
 
 
 
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/anukchat/anukchat.github.io/main?urlpath=lab/tree/content/tools/seaborn/008_Seaborn_Distribution_Plots.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Binder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Binder logo" src="../../../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/anukchat/anukchat.github.io/blob/main/content/tools/seaborn/008_Seaborn_Distribution_Plots.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="../../../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
 <div class="dropdown dropdown-download-buttons">
   <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
     <i class="fas fa-download"></i>
@@ -544,9 +611,9 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#let-s-discuss-some-plots-that-allow-us-to-visualize-the-distribution-of-a-dataset-these-plots-are">Let’s discuss some plots that allow us to visualize the distribution of a dataset. These plots are:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lets-discuss-some-plots-that-allow-us-to-visualize-the-distribution-of-a-dataset-these-plots-are">Let’s discuss some plots that allow us to visualize the distribution of a dataset. These plots are:</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plot-the-distribution-on-the-vertical-axis">Plot the distribution on the vertical axis:</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#let-s-implement-with-dataset">Let’s implement with dataset</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lets-implement-with-dataset">Let’s implement with dataset</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data">Data</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#distplot">1 <code class="docutils literal notranslate"><span class="pre">distplot()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#jointplot">2 <code class="docutils literal notranslate"><span class="pre">jointplot()</span></code></a></li>
@@ -566,14 +633,14 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="what-is-distribution-plots">
+  <section class="tex2jax_ignore mathjax_ignore" id="what-is-distribution-plots">
 <h1>What is Distribution Plots?<a class="headerlink" href="#what-is-distribution-plots" title="Link to this heading">#</a></h1>
 <ul class="simple">
 <li><p>Flexibly plot a univariate distribution of observations.</p></li>
 <li><p>This function combines the matplotlib hist function (with automatic calculation of a good default bin size) with the seaborn <strong><code class="docutils literal notranslate"><span class="pre">kdeplot()</span></code></strong> and <strong><code class="docutils literal notranslate"><span class="pre">rugplot()</span></code></strong> functions. It can also fit scipy.stats distributions and plot the estimated PDF over the data.</p></li>
 </ul>
-<section id="let-s-discuss-some-plots-that-allow-us-to-visualize-the-distribution-of-a-dataset-these-plots-are">
-<h2>Let’s discuss some plots that allow us to visualize the distribution of a dataset. These plots are:<a class="headerlink" href="#let-s-discuss-some-plots-that-allow-us-to-visualize-the-distribution-of-a-dataset-these-plots-are" title="Link to this heading">#</a></h2>
+<section id="lets-discuss-some-plots-that-allow-us-to-visualize-the-distribution-of-a-dataset-these-plots-are">
+<h2>Let’s discuss some plots that allow us to visualize the distribution of a dataset. These plots are:<a class="headerlink" href="#lets-discuss-some-plots-that-allow-us-to-visualize-the-distribution-of-a-dataset-these-plots-are" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p><strong><code class="docutils literal notranslate"><span class="pre">distplot()</span></code></strong></p></li>
 <li><p><strong><code class="docutils literal notranslate"><span class="pre">jointplot()</span></code></strong></p></li>
@@ -711,8 +778,8 @@ C:\ProgramData\Anaconda3\lib\site-packages\seaborn\distributions.py:1647: Future
 </div>
 </div>
 </section>
-<section id="let-s-implement-with-dataset">
-<h2>Let’s implement with dataset<a class="headerlink" href="#let-s-implement-with-dataset" title="Link to this heading">#</a></h2>
+<section id="lets-implement-with-dataset">
+<h2>Let’s implement with dataset<a class="headerlink" href="#lets-implement-with-dataset" title="Link to this heading">#</a></h2>
 <section id="data">
 <h3>Data<a class="headerlink" href="#data" title="Link to this heading">#</a></h3>
 <p>Seaborn comes with built-in data sets!</p>
@@ -1076,8 +1143,8 @@ C:\ProgramData\Anaconda3\lib\site-packages\seaborn\distributions.py:1647: Future
     {
         requestKernel: true,
         binderOptions: {
-            repo: "binder-examples/jupyter-stacks-datascience",
-            ref: "master",
+            repo: "anukchat/anukchat.github.io",
+            ref: "main",
         },
         codeMirrorConfig: {
             theme: "abcdef",
@@ -1136,9 +1203,9 @@ C:\ProgramData\Anaconda3\lib\site-packages\seaborn\distributions.py:1647: Future
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#let-s-discuss-some-plots-that-allow-us-to-visualize-the-distribution-of-a-dataset-these-plots-are">Let’s discuss some plots that allow us to visualize the distribution of a dataset. These plots are:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lets-discuss-some-plots-that-allow-us-to-visualize-the-distribution-of-a-dataset-these-plots-are">Let’s discuss some plots that allow us to visualize the distribution of a dataset. These plots are:</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plot-the-distribution-on-the-vertical-axis">Plot the distribution on the vertical axis:</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#let-s-implement-with-dataset">Let’s implement with dataset</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lets-implement-with-dataset">Let’s implement with dataset</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data">Data</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#distplot">1 <code class="docutils literal notranslate"><span class="pre">distplot()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#jointplot">2 <code class="docutils literal notranslate"><span class="pre">jointplot()</span></code></a></li>

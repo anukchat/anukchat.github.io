@@ -58,6 +58,8 @@
     <script async="async" src="../../../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'content/essentials/mathematics/calculus_fourier-series';</script>
     <link rel="canonical" href="https://anukchat.github.io/content/essentials/mathematics/calculus_fourier-series.html" />
     <link rel="icon" href="../../../_static/mesh-smallest.png"/>
@@ -101,8 +103,8 @@
          class="form-control"
          name="q"
          id="search-input"
-         placeholder="Search..."
-         aria-label="Search..."
+         placeholder="Search this book..."
+         aria-label="Search this book..."
          autocomplete="off"
          autocorrect="off"
          autocapitalize="off"
@@ -442,6 +444,73 @@
 
 
 
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/anukchat/anukchat.github.io/main?urlpath=lab/tree/content/essentials/mathematics/calculus_fourier-series.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Binder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Binder logo" src="../../../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/anukchat/anukchat.github.io/blob/main/content/essentials/mathematics/calculus_fourier-series.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="../../../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
 <div class="dropdown dropdown-download-buttons">
   <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
     <i class="fas fa-download"></i>
@@ -557,7 +626,7 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="calculus-fourier-series">
+  <section class="tex2jax_ignore mathjax_ignore" id="calculus-fourier-series">
 <h1>Calculus - Fourier Series<a class="headerlink" href="#calculus-fourier-series" title="Link to this heading">#</a></h1>
 <p>Brief overview of <em>Fourier series</em>.</p>
 <div class="cell docutils container">
@@ -578,10 +647,11 @@ document.write(`
 </div>
 </div>
 </div>
-<p>Given an arbitrary function defined in the interval $[-\pi, \pi]$:</p>
-<p>$$ \large
+<p>Given an arbitrary function defined in the interval <span class="math notranslate nohighlight">\([-\pi, \pi]\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[ \large
 f(t)=\frac{t}{\pi}, \quad \text{for} -\pi \leq t \leq \pi
-$$</p>
+\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Function f(t)</span>
@@ -593,22 +663,25 @@ $$</p>
 </div>
 </div>
 </div>
-<p>The periodic fourier serie (in sine-cosine form) of the function $f(t)$ is:</p>
-<p>$$ \large
+<p>The periodic fourier serie (in sine-cosine form) of the function <span class="math notranslate nohighlight">\(f(t)\)</span> is:</p>
+<div class="math notranslate nohighlight">
+\[ \large
 s(t)=\frac{a_0}{2} + \sum_{n=1}^{\infty}a_n\cos(nt) + \sum_{n=1}^{\infty}b_n\sin(nt)
-$$</p>
-<p>Where the coeficients $a_0$, $a_n$ and $b_n$ are calculated by:</p>
-<p>$$ \large
+\]</div>
+<p>Where the coeficients <span class="math notranslate nohighlight">\(a_0\)</span>, <span class="math notranslate nohighlight">\(a_n\)</span> and <span class="math notranslate nohighlight">\(b_n\)</span> are calculated by:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \large
 \begin{aligned}
-a_0 &amp;= \frac{1}{\pi} \int_{-\pi}^{\pi} f(t) dt \
-a_n &amp;= \frac{1}{\pi} \int_{-\pi}^{\pi} f(t) \cos(nt) dt \
+a_0 &amp;= \frac{1}{\pi} \int_{-\pi}^{\pi} f(t) dt \\
+a_n &amp;= \frac{1}{\pi} \int_{-\pi}^{\pi} f(t) \cos(nt) dt \\
 b_n &amp;= \frac{1}{\pi} \int_{-\pi}^{\pi} f(t) \sin(nt) dt
 \end{aligned}
-$$</p>
+\end{split}\]</div>
 <p>The resulting serie is a periodic and infinity function. Even if it has jump discontinuity (it happens only in the infinity), its values are always finites, so that:</p>
-<p>$$ \large
+<div class="math notranslate nohighlight">
+\[ \large
 s(t_i)=\frac{\displaystyle \lim_{t_i\rightarrow t^+}f(t) + \lim_{t_i\rightarrow t^-}f(t)}{2}
-$$</p>
+\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Visualize periodic function</span>
@@ -617,50 +690,52 @@ $$</p>
 </div>
 </div>
 </div>
-<p>The first step is to calculate $a_0$:</p>
-<p>$$ \large
+<p>The first step is to calculate <span class="math notranslate nohighlight">\(a_0\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \large
 \begin{aligned}
-a_0 &amp;= \frac{1}{\pi} \int_{-\pi}^{\pi} \frac{t}{\pi} dt  \
-&amp;= \frac{1}{\pi} \frac{t^2}{2\pi} \biggr\rvert_{-\pi}^{\pi} \
+a_0 &amp;= \frac{1}{\pi} \int_{-\pi}^{\pi} \frac{t}{\pi} dt  \\
+    &amp;= \frac{1}{\pi} \frac{t^2}{2\pi} \biggr\rvert_{-\pi}^{\pi} \\
 a_0 &amp;= 0
 \end{aligned}
-$$</p>
-<p>Fourier series has a very strong behaviour where <em>odd functions</em> has the $\large a$’s ($a_0$ and $a_n$) coefficients equal to zero and <em>even functions</em> has the $\large b_n$ coefficient equal to zero. When the functions is neither even nor odd, the function will be decomposed into all coefficients. So, as we can expect (given our $f(t)$ is an odd function), the coefficient $a_n$ is going to be equal to zero.</p>
-<p>$$ \large
+\end{split}\]</div>
+<p>Fourier series has a very strong behaviour where <em>odd functions</em> has the <span class="math notranslate nohighlight">\(\large a\)</span>’s (<span class="math notranslate nohighlight">\(a_0\)</span> and <span class="math notranslate nohighlight">\(a_n\)</span>) coefficients equal to zero and <em>even functions</em> has the <span class="math notranslate nohighlight">\(\large b_n\)</span> coefficient equal to zero. When the functions is neither even nor odd, the function will be decomposed into all coefficients. So, as we can expect (given our <span class="math notranslate nohighlight">\(f(t)\)</span> is an odd function), the coefficient <span class="math notranslate nohighlight">\(a_n\)</span> is going to be equal to zero.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \large
 \begin{aligned}
-a_n &amp;= \frac{1}{\pi} \int_{-\pi}^{\pi} \frac{t}{\pi} \cos(nt) dt \
-&amp;= \frac{1}{\pi^2} \left. \left[ \frac{t \sin(nt)}{n} \right|<em>{-\pi}^{\pi} -\int</em>{-\pi}^{\pi} \frac{\sin(nt)}{n} dt \right] \
-&amp;= \frac{1}{\pi^2} \left[ 0 - \left. \left( - \frac{cos(nt)}{n^2} \right) \right|_{-\pi}^{\pi} \right] \
-&amp;= \frac{1}{\pi} \left[ \frac{cos(n\pi)}{n^2} - \frac{cos(-n\pi)}{n^2} \right] \
-&amp;= \frac{1}{\pi} \cdot 0 \quad , \quad \text{due} \cos(n\pi) =  \cos(-n\pi) \
+a_n &amp;= \frac{1}{\pi} \int_{-\pi}^{\pi} \frac{t}{\pi} \cos(nt) dt \\
+    &amp;= \frac{1}{\pi^2} \left. \left[ \frac{t \sin(nt)}{n} \right|_{-\pi}^{\pi} -\int_{-\pi}^{\pi} \frac{\sin(nt)}{n} dt \right] \\
+    &amp;= \frac{1}{\pi^2} \left[ 0 - \left. \left( - \frac{cos(nt)}{n^2} \right) \right|_{-\pi}^{\pi} \right] \\
+    &amp;= \frac{1}{\pi} \left[ \frac{cos(n\pi)}{n^2} - \frac{cos(-n\pi)}{n^2} \right] \\
+    &amp;= \frac{1}{\pi} \cdot 0 \quad , \quad \text{due} \cos(n\pi) =  \cos(-n\pi) \\
 a_n &amp;= 0
 \end{aligned}
-$$</p>
-<p>The $b_n$ coefficient must be calculated. To do that we have to keep in mind 2 things:</p>
+\end{split}\]</div>
+<p>The <span class="math notranslate nohighlight">\(b_n\)</span> coefficient must be calculated. To do that we have to keep in mind 2 things:</p>
 <ul class="simple">
-<li><p>The cosine function is even so $cos(nt) = cos(-nt)$</p></li>
-<li><p>The cosine function is an alternator for harmonics of $\pi$ what it means that when $n$ is <em>even</em> the result is $1$ and when it is <em>odd</em> the result is $-1$.</p></li>
+<li><p>The cosine function is even so <span class="math notranslate nohighlight">\(cos(nt) = cos(-nt)\)</span></p></li>
+<li><p>The cosine function is an alternator for harmonics of <span class="math notranslate nohighlight">\(\pi\)</span> what it means that when <span class="math notranslate nohighlight">\(n\)</span> is <em>even</em> the result is <span class="math notranslate nohighlight">\(1\)</span> and when it is <em>odd</em> the result is <span class="math notranslate nohighlight">\(-1\)</span>.</p></li>
 </ul>
-<p>$$ \large
+<div class="math notranslate nohighlight">
+\[\begin{split} \large
 \begin{aligned}
-b_n &amp;= \frac{1}{\pi} \int_{-\pi}^{\pi} \frac{t}{\pi} \sin(nt) dt \
-&amp;= \frac{1}{\pi^2} \left. \left[ - \frac{t \cos(nt)}{n} \right|<em>{-\pi}^{\pi} -\int</em>{-\pi}^{\pi} - \frac{\cos(nt)}{n} dt \right] \
-&amp;= \frac{1}{\pi^2} \left[ - \left[ \frac{\pi \cos(n\pi)}{n} - \frac{(-\pi) \cos(-n\pi)}{n} \right] + \left. \frac{t\sin(nt)}{n^2} \right|_{-\pi}^{\pi} \right] \
-&amp;= \frac{1}{\pi^2} \left[ - \frac{2\pi cos(n\pi)}{n} + 0 \right] \quad , \quad \text{due} \cos(n\pi) =  \cos(-n\pi) \
-&amp;= - \frac{2\cos(n\pi)}{n\pi} \
-&amp;= \begin{cases}</p>
-<ul class="simple">
-<li><p>\frac{2}{n\pi} &amp;, \text{n is even} \
+b_n &amp;= \frac{1}{\pi} \int_{-\pi}^{\pi} \frac{t}{\pi} \sin(nt) dt \\
+    &amp;= \frac{1}{\pi^2} \left. \left[ - \frac{t \cos(nt)}{n} \right|_{-\pi}^{\pi} -\int_{-\pi}^{\pi} - \frac{\cos(nt)}{n} dt \right] \\
+    &amp;= \frac{1}{\pi^2} \left[ - \left[ \frac{\pi \cos(n\pi)}{n} - \frac{(-\pi) \cos(-n\pi)}{n} \right] + \left. \frac{t\sin(nt)}{n^2} \right|_{-\pi}^{\pi} \right] \\
+    &amp;= \frac{1}{\pi^2} \left[ - \frac{2\pi cos(n\pi)}{n} + 0 \right] \quad , \quad \text{due} \cos(n\pi) =  \cos(-n\pi) \\
+    &amp;= - \frac{2\cos(n\pi)}{n\pi} \\
+    &amp;= \begin{cases}
+- \frac{2}{n\pi} &amp;, \text{n is even} \\
 \frac{2}{n\pi} &amp;, \text{n is odd}
-\end{cases} \
+\end{cases} \\
 b_n &amp;= \frac{2}{\pi}\frac{(-1)^{n+1}}{n} \quad , \quad n \geq 1
 \end{aligned}
-$$</p></li>
-</ul>
-<p>Notice that we transposed the cosine function into a serie alternator given the behavior of the result depending on the value of $n$. Having that, our fourier serie of $f(t)$ is defined by:</p>
-<p>$$ \large
+\end{split}\]</div>
+<p>Notice that we transposed the cosine function into a serie alternator given the behavior of the result depending on the value of <span class="math notranslate nohighlight">\(n\)</span>. Having that, our fourier serie of <span class="math notranslate nohighlight">\(f(t)\)</span> is defined by:</p>
+<div class="math notranslate nohighlight">
+\[ \large
 s(t) = \frac{2}{\pi} \sum_{n=1}^{\infty} \frac{(-1)^{n+1}}{n} \sin(nt)
-$$</p>
+\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Number of serie elements.</span>
@@ -682,10 +757,11 @@ $$</p>
 <section id="example-1-even-function">
 <h2>Example 1. Even function<a class="headerlink" href="#example-1-even-function" title="Link to this heading">#</a></h2>
 <hr class="docutils" />
-<p>Given de even function in the interval $[-\pi, \pi]$:</p>
-<p>$$ \large
+<p>Given de even function in the interval <span class="math notranslate nohighlight">\([-\pi, \pi]\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[ \large
 f(t) = t^2, \quad \text{for} -\pi \leq t \leq \pi
-$$</p>
+\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Function f(t)</span>
@@ -706,21 +782,23 @@ $$</p>
 </div>
 </div>
 </div>
-<p>The final result of the coefficients $a_0$, $b_0$ and $b_n$ are:</p>
-<p>$$ \large
+<p>The final result of the coefficients <span class="math notranslate nohighlight">\(a_0\)</span>, <span class="math notranslate nohighlight">\(b_0\)</span> and <span class="math notranslate nohighlight">\(b_n\)</span> are:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \large
 \begin{aligned}
-a_0 &amp;= \frac{2\pi^2}{3} \
-a_n &amp;= \frac{4}{n^2} \cos(n\pi) = (-1)^n \frac{4}{n^2} \
+a_0 &amp;= \frac{2\pi^2}{3} \\
+a_n &amp;= \frac{4}{n^2} \cos(n\pi) = (-1)^n \frac{4}{n^2} \\
 b_n &amp;= 0
 \end{aligned}
-$$</p>
-<p>The coefficient $b_n$ is null due the function $f(t)$ being even. Thus, the fourier serie is defined as:</p>
-<p>$$ \large
+\end{split}\]</div>
+<p>The coefficient <span class="math notranslate nohighlight">\(b_n\)</span> is null due the function <span class="math notranslate nohighlight">\(f(t)\)</span> being even. Thus, the fourier serie is defined as:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \large
 \begin{aligned}
-s(t) &amp;= \frac{a_0}{2} + \sum_{n=1}^{\infty}a_n\cos(nt) + \sum_{n=1}^{\infty}b_n\sin(nt) \
+s(t) &amp;= \frac{a_0}{2} + \sum_{n=1}^{\infty}a_n\cos(nt) + \sum_{n=1}^{\infty}b_n\sin(nt) \\
 s(t) &amp;= \frac{\pi^2}{3} + \sum_{n=1}^{\infty} (-1)^n \frac{4}{n^2} \cos(nt)
 \end{aligned}
-$$</p>
+\end{split}\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Number of serie elements.</span>
@@ -743,18 +821,20 @@ $$</p>
 <section id="general-form">
 <h2>General form<a class="headerlink" href="#general-form" title="Link to this heading">#</a></h2>
 <hr class="docutils" />
-<p>As we can notice, the functions $f(t)$ were defined in the interval $[-\pi, \pi]$. It happened because the base period $L$ of a periodic function is usually $2\pi$ but we can define the fourier serie of a function in any interval. Considering $L=2P$, the general form can be understood as:</p>
-<p>$$ \large
+<p>As we can notice, the functions <span class="math notranslate nohighlight">\(f(t)\)</span> were defined in the interval <span class="math notranslate nohighlight">\([-\pi, \pi]\)</span>. It happened because the base period <span class="math notranslate nohighlight">\(L\)</span> of a periodic function is usually <span class="math notranslate nohighlight">\(2\pi\)</span> but we can define the fourier serie of a function in any interval. Considering <span class="math notranslate nohighlight">\(L=2P\)</span>, the general form can be understood as:</p>
+<div class="math notranslate nohighlight">
+\[ \large
 s(t)=\frac{a_0}{2} + \sum_{n=1}^{\infty}a_n\cos \left(\frac{\pi nt}{P}\right) + \sum_{n=1}^{\infty}b_n\sin \left(\frac{\pi nt}{P}\right)
-$$</p>
-<p>Now, the interval is going to be $[-P, P]$ if it steel centered in 0. If it has a phase offset, we can undestand the interval as $[\theta - P, \theta + P]$.</p>
-<p>$$ \large
+\]</div>
+<p>Now, the interval is going to be <span class="math notranslate nohighlight">\([-P, P]\)</span> if it steel centered in 0. If it has a phase offset, we can undestand the interval as <span class="math notranslate nohighlight">\([\theta - P, \theta + P]\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \large
 \begin{aligned}
-a_0 &amp;= \frac{1}{P} \int_{\theta - P}^{\theta + P} f(t) dt \
-a_n &amp;= \frac{1}{P} \int_{\theta - P}^{\theta + P} f(t) \cos \left(\frac{\pi nt}{P}\right) dt \
+a_0 &amp;= \frac{1}{P} \int_{\theta - P}^{\theta + P} f(t) dt \\
+a_n &amp;= \frac{1}{P} \int_{\theta - P}^{\theta + P} f(t) \cos \left(\frac{\pi nt}{P}\right) dt \\
 b_n &amp;= \frac{1}{P} \int_{\theta - P}^{\theta + P} f(t) \sin \left(\frac{\pi nt}{P}\right) dt
 \end{aligned}
-$$</p>
+\end{split}\]</div>
 </section>
 </section>
 
@@ -762,8 +842,8 @@ $$</p>
     {
         requestKernel: true,
         binderOptions: {
-            repo: "binder-examples/jupyter-stacks-datascience",
-            ref: "master",
+            repo: "anukchat/anukchat.github.io",
+            ref: "main",
         },
         codeMirrorConfig: {
             theme: "abcdef",

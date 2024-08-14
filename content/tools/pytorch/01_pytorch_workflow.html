@@ -103,8 +103,8 @@
          class="form-control"
          name="q"
          id="search-input"
-         placeholder="Search..."
-         aria-label="Search..."
+         placeholder="Search this book..."
+         aria-label="Search this book..."
          autocomplete="off"
          autocorrect="off"
          autocapitalize="off"
@@ -442,6 +442,73 @@
 
 
 
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/anukchat/anukchat.github.io/main?urlpath=lab/tree/content/tools/pytorch/01_pytorch_workflow.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Binder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Binder logo" src="../../../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/anukchat/anukchat.github.io/blob/main/content/tools/pytorch/01_pytorch_workflow.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="../../../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
 <div class="dropdown dropdown-download-buttons">
   <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
     <i class="fas fa-download"></i>
@@ -544,7 +611,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-we-re-going-to-cover">What we’re going to cover</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-were-going-to-cover">What we’re going to cover</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-preparing-and-loading">Data (preparing and loading)</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#split-data-into-training-and-test-sets">Split data into training and test sets</a></li>
 </ul>
@@ -564,8 +631,8 @@ document.write(`
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#making-predictions-with-a-trained-pytorch-model-inference">Making predictions with a trained PyTorch model (inference)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#saving-and-loading-a-pytorch-model">Saving and loading a PyTorch model</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#saving-a-pytorch-model-s-state-dict">Saving a PyTorch model’s <code class="docutils literal notranslate"><span class="pre">state_dict()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#loading-a-saved-pytorch-model-s-state-dict">Loading a saved PyTorch model’s <code class="docutils literal notranslate"><span class="pre">state_dict()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#saving-a-pytorch-models-state-dict">Saving a PyTorch model’s <code class="docutils literal notranslate"><span class="pre">state_dict()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#loading-a-saved-pytorch-models-state-dict">Loading a saved PyTorch model’s <code class="docutils literal notranslate"><span class="pre">state_dict()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#putting-it-all-together">Putting it all together</a><ul class="nav section-nav flex-column">
@@ -588,17 +655,17 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="pytorch-workflow-fundamentals">
+  <section class="tex2jax_ignore mathjax_ignore" id="pytorch-workflow-fundamentals">
 <h1>PyTorch Workflow Fundamentals<a class="headerlink" href="#pytorch-workflow-fundamentals" title="Link to this heading">#</a></h1>
 <p>The essence of machine learning and deep learning is to take some data from the past, build an algorithm (like a neural network) to discover patterns in it and use the discoverd patterns to predict the future.</p>
 <p>There are many ways to do this and many new ways are being discovered all the time.</p>
 <p>But let’s start small.</p>
 <p>How about we start with a straight line?</p>
 <p>And we see if we can build a PyTorch model that learns the pattern of the straight line and matches it.</p>
-<section id="what-we-re-going-to-cover">
-<h2>What we’re going to cover<a class="headerlink" href="#what-we-re-going-to-cover" title="Link to this heading">#</a></h2>
+<section id="what-were-going-to-cover">
+<h2>What we’re going to cover<a class="headerlink" href="#what-were-going-to-cover" title="Link to this heading">#</a></h2>
 <p>A standard PyTorch workflow</p>
-<img src="images/01_a_pytorch_workflow.png" width=900 alt="a pytorch workflow flowchat"/>
+<a class="reference internal image-reference" href="../../../_images/01_a_pytorch_workflow.png"><img alt="a pytorch workflow flowchat" src="../../../_images/01_a_pytorch_workflow.png" style="width: 900px;" /></a>
 <p>We’ll use this workflow to predict a simple straight line but the workflow steps can be repeated and changed depending on the problem you’re working on.</p>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
@@ -1371,8 +1438,8 @@ weights: 0.7, bias: 0.3
 <blockquote>
 <div><p><strong>Note:</strong> As stated in <a class="reference external" href="https://docs.python.org/3/library/pickle.html">Python’s <code class="docutils literal notranslate"><span class="pre">pickle</span></code> documentation</a>, the <code class="docutils literal notranslate"><span class="pre">pickle</span></code> module <strong>is not secure</strong>. That means you should only ever unpickle (load) data you trust. That goes for loading PyTorch models as well. Only ever use saved PyTorch models from sources you trust.</p>
 </div></blockquote>
-<section id="saving-a-pytorch-model-s-state-dict">
-<h3>Saving a PyTorch model’s <code class="docutils literal notranslate"><span class="pre">state_dict()</span></code><a class="headerlink" href="#saving-a-pytorch-model-s-state-dict" title="Link to this heading">#</a></h3>
+<section id="saving-a-pytorch-models-state-dict">
+<h3>Saving a PyTorch model’s <code class="docutils literal notranslate"><span class="pre">state_dict()</span></code><a class="headerlink" href="#saving-a-pytorch-models-state-dict" title="Link to this heading">#</a></h3>
 <p>The <a class="reference external" href="https://pytorch.org/tutorials/beginner/saving_loading_models.html#saving-loading-model-for-inference">recommended way</a> for saving and loading a model for inference (making predictions) is by saving and loading a model’s <code class="docutils literal notranslate"><span class="pre">state_dict()</span></code>.</p>
 <p>Let’s see how we can do that in a few steps:</p>
 <ol class="arabic simple">
@@ -1422,8 +1489,8 @@ weights: 0.7, bias: 0.3
 </div>
 </div>
 </section>
-<section id="loading-a-saved-pytorch-model-s-state-dict">
-<h3>Loading a saved PyTorch model’s <code class="docutils literal notranslate"><span class="pre">state_dict()</span></code><a class="headerlink" href="#loading-a-saved-pytorch-model-s-state-dict" title="Link to this heading">#</a></h3>
+<section id="loading-a-saved-pytorch-models-state-dict">
+<h3>Loading a saved PyTorch model’s <code class="docutils literal notranslate"><span class="pre">state_dict()</span></code><a class="headerlink" href="#loading-a-saved-pytorch-models-state-dict" title="Link to this heading">#</a></h3>
 <p>Since we’ve now got a saved model <code class="docutils literal notranslate"><span class="pre">state_dict()</span></code> at <code class="docutils literal notranslate"><span class="pre">models/01_pytorch_workflow_model_0.pth</span></code> we can now load it in using <code class="docutils literal notranslate"><span class="pre">torch.nn.Module.load_state_dict(torch.load(f))</span></code> where <code class="docutils literal notranslate"><span class="pre">f</span></code> is the filepath of our saved model <code class="docutils literal notranslate"><span class="pre">state_dict()</span></code>.</p>
 <p>Why call <code class="docutils literal notranslate"><span class="pre">torch.load()</span></code> inside <code class="docutils literal notranslate"><span class="pre">torch.nn.Module.load_state_dict()</span></code>?</p>
 <p>Because we only saved the model’s <code class="docutils literal notranslate"><span class="pre">state_dict()</span></code> which is a dictionary of learned parameters and not the <em>entire</em> model, we first have to load the <code class="docutils literal notranslate"><span class="pre">state_dict()</span></code> with <code class="docutils literal notranslate"><span class="pre">torch.load()</span></code> and then pass that <code class="docutils literal notranslate"><span class="pre">state_dict()</span></code> to a new instance of our model (which is a subclass of <code class="docutils literal notranslate"><span class="pre">nn.Module</span></code>).</p>
@@ -2008,8 +2075,8 @@ cuda:0
     {
         requestKernel: true,
         binderOptions: {
-            repo: "binder-examples/jupyter-stacks-datascience",
-            ref: "master",
+            repo: "anukchat/anukchat.github.io",
+            ref: "main",
         },
         codeMirrorConfig: {
             theme: "abcdef",
@@ -2068,7 +2135,7 @@ cuda:0
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-we-re-going-to-cover">What we’re going to cover</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-were-going-to-cover">What we’re going to cover</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-preparing-and-loading">Data (preparing and loading)</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#split-data-into-training-and-test-sets">Split data into training and test sets</a></li>
 </ul>
@@ -2088,8 +2155,8 @@ cuda:0
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#making-predictions-with-a-trained-pytorch-model-inference">Making predictions with a trained PyTorch model (inference)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#saving-and-loading-a-pytorch-model">Saving and loading a PyTorch model</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#saving-a-pytorch-model-s-state-dict">Saving a PyTorch model’s <code class="docutils literal notranslate"><span class="pre">state_dict()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#loading-a-saved-pytorch-model-s-state-dict">Loading a saved PyTorch model’s <code class="docutils literal notranslate"><span class="pre">state_dict()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#saving-a-pytorch-models-state-dict">Saving a PyTorch model’s <code class="docutils literal notranslate"><span class="pre">state_dict()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#loading-a-saved-pytorch-models-state-dict">Loading a saved PyTorch model’s <code class="docutils literal notranslate"><span class="pre">state_dict()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#putting-it-all-together">Putting it all together</a><ul class="nav section-nav flex-column">

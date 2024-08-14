@@ -101,8 +101,8 @@
          class="form-control"
          name="q"
          id="search-input"
-         placeholder="Search..."
-         aria-label="Search..."
+         placeholder="Search this book..."
+         aria-label="Search this book..."
          autocomplete="off"
          autocorrect="off"
          autocapitalize="off"
@@ -442,6 +442,73 @@
 
 
 
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/anukchat/anukchat.github.io/main?urlpath=lab/tree/content/tools/langchain/projects/data_generation/Working With Call or Video Transcripts.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Binder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Binder logo" src="../../../../../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/anukchat/anukchat.github.io/blob/main/content/tools/langchain/projects/data_generation/Working With Call or Video Transcripts.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="../../../../../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
 <div class="dropdown dropdown-download-buttons">
   <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
     <i class="fas fa-download"></i>
@@ -563,7 +630,7 @@ document.write(`
 <h1>Extract Data From Calls &amp; Video Transcripts/Interviews<a class="headerlink" href="#extract-data-from-calls-video-transcripts-interviews" title="Link to this heading">#</a></h1>
 <p>There is a lot of spoke word out there. Podcasts, interviews, sales calls, phone calls.</p>
 <p>It is extremely useful to be able to extract this information and create value with it. We’re going to run through an example focusing on the B2B sales use case.</p>
-<p><strong>Small plug:</strong> This is a mini-preview on how I built <a class="reference external" href="https://thimbleai.com/">Thimble</a> which helps Account Executives pull information from their sales calls. Sign up at https://thimbleai.com/ if you want to check it out or here’s the <a class="reference external" href="https://youtu.be/DIw4rbpI9ic">demo video</a> or see more information on <a class="reference external" href="https://twitter.com/GregKamradt">Twitter</a></p>
+<p><strong>Small plug:</strong> This is a mini-preview on how I built <a class="reference external" href="https://thimbleai.com/">Thimble</a> which helps Account Executives pull information from their sales calls. Sign up at <a class="reference external" href="https://thimbleai.com/">https://thimbleai.com/</a> if you want to check it out or here’s the <a class="reference external" href="https://youtu.be/DIw4rbpI9ic">demo video</a> or see more information on <a class="reference external" href="https://twitter.com/GregKamradt">Twitter</a></p>
 <p>Plug over, Let’s learn! 😈</p>
 <p>Through building Thimble I’ve learned a few tricks to make working with transcripts easier:</p>
 <ol class="arabic simple">
@@ -1256,15 +1323,15 @@ Prompt after formatting:
 </div>
 <p>Awesome! Now we have a bullet point format without needing to have the user specify any additional information.</p>
 <p>If you wanted to productionize this you would need to add additional prompts to extract other information from the calls that may be helpful to a sales person. Example: Key Points + Next Steps from the call. You should also parallelize the map calls if you do the map reduce method.</p>
-<p>Have other ideas about how something like this could be used? Send me a tweet or DM on <a class="reference external" href="https://twitter.com/GregKamradt">Twitter</a> or contact&#64;dataindependent.com</p>
+<p>Have other ideas about how something like this could be used? Send me a tweet or DM on <a class="reference external" href="https://twitter.com/GregKamradt">Twitter</a> or <a class="reference external" href="mailto:contact&#37;&#52;&#48;dataindependent&#46;com">contact<span>&#64;</span>dataindependent<span>&#46;</span>com</a></p>
 </section>
 
     <script type="text/x-thebe-config">
     {
         requestKernel: true,
         binderOptions: {
-            repo: "binder-examples/jupyter-stacks-datascience",
-            ref: "master",
+            repo: "anukchat/anukchat.github.io",
+            ref: "main",
         },
         codeMirrorConfig: {
             theme: "abcdef",

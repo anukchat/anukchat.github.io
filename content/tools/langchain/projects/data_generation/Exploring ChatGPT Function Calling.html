@@ -101,8 +101,8 @@
          class="form-control"
          name="q"
          id="search-input"
-         placeholder="Search..."
-         aria-label="Search..."
+         placeholder="Search this book..."
+         aria-label="Search this book..."
          autocomplete="off"
          autocorrect="off"
          autocapitalize="off"
@@ -442,6 +442,73 @@
 
 
 
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/anukchat/anukchat.github.io/main?urlpath=lab/tree/content/tools/langchain/projects/data_generation/Exploring ChatGPT Function Calling.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Binder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Binder logo" src="../../../../../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/anukchat/anukchat.github.io/blob/main/content/tools/langchain/projects/data_generation/Exploring ChatGPT Function Calling.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="../../../../../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
 <div class="dropdown dropdown-download-buttons">
   <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
     <i class="fas fa-download"></i>
@@ -560,8 +627,8 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="function-calling-with-openai-s-gpt-models-an-interactive-tutorial">
-<h1>Function Calling with OpenAI’s GPT Models: An Interactive Tutorial<a class="headerlink" href="#function-calling-with-openai-s-gpt-models-an-interactive-tutorial" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="function-calling-with-openais-gpt-models-an-interactive-tutorial">
+<h1>Function Calling with OpenAI’s GPT Models: An Interactive Tutorial<a class="headerlink" href="#function-calling-with-openais-gpt-models-an-interactive-tutorial" title="Link to this heading">#</a></h1>
 <p>In this notebook, we’ll dive deep into a powerful feature offered by the latest versions of OpenAI’s GPT models (like gpt-3.5-turbo-0613 and gpt-4-0613): function calling.</p>
 <p>Let’s imagine you’re talking to a ChatGPT model and you want to have it use a tool. Traditionally you’d have to do some clever prompting to have it return the format you’d like.</p>
 <p>Now you can tell it about certain actions, or <strong>“functions”</strong>, it can take</p>
@@ -1090,8 +1157,8 @@ Amount: 40
     {
         requestKernel: true,
         binderOptions: {
-            repo: "binder-examples/jupyter-stacks-datascience",
-            ref: "master",
+            repo: "anukchat/anukchat.github.io",
+            ref: "main",
         },
         codeMirrorConfig: {
             theme: "abcdef",

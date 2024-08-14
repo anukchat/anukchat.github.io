@@ -103,8 +103,8 @@
          class="form-control"
          name="q"
          id="search-input"
-         placeholder="Search..."
-         aria-label="Search..."
+         placeholder="Search this book..."
+         aria-label="Search this book..."
          autocomplete="off"
          autocorrect="off"
          autocapitalize="off"
@@ -442,6 +442,73 @@
 
 
 
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/anukchat/anukchat.github.io/main?urlpath=lab/tree/content/essentials/python/advanced/Python_args_and_kwargs.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Binder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Binder logo" src="../../../../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/anukchat/anukchat.github.io/blob/main/content/essentials/python/advanced/Python_args_and_kwargs.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="../../../../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
 <div class="dropdown dropdown-download-buttons">
   <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
     <i class="fas fa-download"></i>
@@ -559,7 +626,7 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="python-args-and-kwargs">
+  <section class="tex2jax_ignore mathjax_ignore" id="python-args-and-kwargs">
 <h1>Python <strong><code class="docutils literal notranslate"><span class="pre">*args</span></code></strong> and <strong><code class="docutils literal notranslate"><span class="pre">**kwargs</span></code></strong><a class="headerlink" href="#python-args-and-kwargs" title="Link to this heading">#</a></h1>
 <p>Learn about Python <strong><code class="docutils literal notranslate"><span class="pre">*args</span></code></strong> and <strong><code class="docutils literal notranslate"><span class="pre">**kwargs</span></code></strong> ,their uses and functions with examples.</p>
 <p>In programming, we define a function to make a reusable code that performs similar operation. To perform that operation, we call a function with the specific value, this value is called a function argument in Python.</p>
@@ -689,7 +756,7 @@ Phone is 9976563219
 </div>
 </div>
 <p><strong>Explanation:</strong></p>
-<p>In the above program, we have a function <strong><code class="docutils literal notranslate"><span class="pre">intro()</span></code></strong> with <strong><code class="docutils literal notranslate"><span class="pre">**data</span></code></strong> as a parameter. We passed two dictionaries with variable argument length to the <strong><code class="docutils literal notranslate"><span class="pre">intro()</span></code></strong> function. We have for loop inside <strong><code class="docutils literal notranslate"><span class="pre">intro()</span></code></strong> function which works on the data of passed dictionary and prints the value of the dictionary..</p>
+<p>In the above program, we have a function <strong><code class="docutils literal notranslate"><span class="pre">intro()</span></code></strong> with <strong><code class="docutils literal notranslate"><span class="pre">**data</span></code></strong> as a parameter. We passed two dictionaries with variable argument length to the <strong><code class="docutils literal notranslate"><span class="pre">intro()</span></code></strong> function. We have for loop inside <strong><code class="docutils literal notranslate"><span class="pre">intro()</span></code></strong> function which works on the data of passed dictionary and prints the value of the dictionary…</p>
 </section>
 <section id="things-to-remember">
 <h2>Things to Remember:<a class="headerlink" href="#things-to-remember" title="Link to this heading">#</a></h2>
@@ -706,8 +773,8 @@ Phone is 9976563219
     {
         requestKernel: true,
         binderOptions: {
-            repo: "binder-examples/jupyter-stacks-datascience",
-            ref: "master",
+            repo: "anukchat/anukchat.github.io",
+            ref: "main",
         },
         codeMirrorConfig: {
             theme: "abcdef",

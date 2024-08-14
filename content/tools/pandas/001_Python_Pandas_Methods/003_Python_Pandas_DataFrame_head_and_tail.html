@@ -103,8 +103,8 @@
          class="form-control"
          name="q"
          id="search-input"
-         placeholder="Search..."
-         aria-label="Search..."
+         placeholder="Search this book..."
+         aria-label="Search this book..."
          autocomplete="off"
          autocorrect="off"
          autocapitalize="off"
@@ -442,6 +442,73 @@
 
 
 
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/anukchat/anukchat.github.io/main?urlpath=lab/tree/content/tools/pandas/001_Python_Pandas_Methods/003_Python_Pandas_DataFrame_head_and_tail.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Binder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Binder logo" src="../../../../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/anukchat/anukchat.github.io/blob/main/content/tools/pandas/001_Python_Pandas_Methods/003_Python_Pandas_DataFrame_head_and_tail.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="../../../../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
 <div class="dropdown dropdown-download-buttons">
   <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
     <i class="fas fa-download"></i>
@@ -567,7 +634,7 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="pandas-dataframe-head-tail-at-iat">
+  <section class="tex2jax_ignore mathjax_ignore" id="pandas-dataframe-head-tail-at-iat">
 <h1>Pandas DataFrame head, tail, at, iat<a class="headerlink" href="#pandas-dataframe-head-tail-at-iat" title="Link to this heading">#</a></h1>
 <p>In this class, we learn how to use <strong><code class="docutils literal notranslate"><span class="pre">DataFrame.head()</span></code></strong> and <strong><code class="docutils literal notranslate"><span class="pre">DataFrame.tail()</span></code></strong> functions to select top and bottom rows of the <strong><a class="reference internal" href="../001_Python_Pandas_DataFrame.html"><span class="std std-doc">Pandas DataFrame</span></a></strong> respectively. Also, learn <strong><code class="docutils literal notranslate"><span class="pre">DataFrame.at()</span></code></strong> and <strong><code class="docutils literal notranslate"><span class="pre">DataFrame.iat()</span></code></strong> functions to access a specific value in the DataFrame.</p>
 <section id="how-to-use-dataframe-head-function">
@@ -886,7 +953,7 @@ Standard 3 Class A    Jill      72.00
 </section>
 <section id="set-specific-value-in-pandas-dataframe">
 <h2>Set specific value in pandas DataFrame<a class="headerlink" href="#set-specific-value-in-pandas-dataframe" title="Link to this heading">#</a></h2>
-<p>When we want to update the value of the particular element from DataFrame based on its column label and row index, we can use DataFrame.at property.</p>
+<p>When we want to update the value of the particular element from DataFrame based on its column label and row index, we can use <a class="reference external" href="http://DataFrame.at">DataFrame.at</a> property.</p>
 <p><strong>Example:</strong></p>
 <p>In the below example, after we have applied <strong><code class="docutils literal notranslate"><span class="pre">DataFrame.at[2,&quot;Age&quot;]=50</span></code></strong> on our DataFrame, the value at that position changed from 19 to 50.</p>
 <div class="cell docutils container">
@@ -982,8 +1049,8 @@ Standard 3 Class A    Jill      72.00
     {
         requestKernel: true,
         binderOptions: {
-            repo: "binder-examples/jupyter-stacks-datascience",
-            ref: "master",
+            repo: "anukchat/anukchat.github.io",
+            ref: "main",
         },
         codeMirrorConfig: {
             theme: "abcdef",

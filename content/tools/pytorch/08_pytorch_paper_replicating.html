@@ -58,6 +58,8 @@
     <script async="async" src="../../../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'content/tools/pytorch/08_pytorch_paper_replicating';</script>
     <link rel="canonical" href="https://anukchat.github.io/content/tools/pytorch/08_pytorch_paper_replicating.html" />
     <link rel="icon" href="../../../_static/mesh-smallest.png"/>
@@ -103,8 +105,8 @@
          class="form-control"
          name="q"
          id="search-input"
-         placeholder="Search..."
-         aria-label="Search..."
+         placeholder="Search this book..."
+         aria-label="Search this book..."
          autocomplete="off"
          autocorrect="off"
          autocapitalize="off"
@@ -442,6 +444,73 @@
 
 
 
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/anukchat/anukchat.github.io/main?urlpath=lab/tree/content/tools/pytorch/08_pytorch_paper_replicating.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Binder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Binder logo" src="../../../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/anukchat/anukchat.github.io/blob/main/content/tools/pytorch/08_pytorch_paper_replicating.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="../../../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
 <div class="dropdown dropdown-download-buttons">
   <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
     <i class="fas fa-download"></i>
@@ -548,19 +617,19 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-a-machine-learning-research-paper">What is a machine learning research paper?</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-replicate-a-machine-learning-research-paper">Why replicate a machine learning research paper?</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#where-can-you-find-code-examples-for-machine-learning-research-papers">Where can you find code examples for machine learning research papers?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-we-re-going-to-cover">What we’re going to cover</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-were-going-to-cover">What we’re going to cover</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#terminology">Terminology</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-setup">Getting setup</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#get-data">Get Data</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-datasets-and-dataloaders">Create Datasets and DataLoaders</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prepare-transforms-for-images">Prepare transforms for images</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#turn-images-into-dataloader-s">Turn images into <code class="docutils literal notranslate"><span class="pre">DataLoader</span></code>’s</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#turn-images-into-dataloaders">Turn images into <code class="docutils literal notranslate"><span class="pre">DataLoader</span></code>’s</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#visualize-a-single-image">Visualize a single image</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#replicating-the-vit-paper-an-overview">Replicating the ViT paper: an overview</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inputs-and-outputs-layers-and-blocks">Inputs and outputs, layers and blocks</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-specific-what-s-vit-made-of">Getting specific: What’s ViT made of?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-specific-whats-vit-made-of">Getting specific: What’s ViT made of?</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#exploring-figure-1">Exploring Figure 1</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#exploring-the-four-equations">3.2.2 Exploring the Four Equations</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#equation-1-overview">Equation 1 overview</a></li>
@@ -597,7 +666,7 @@ document.write(`
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-the-transformer-encoder">Create the Transformer Encoder</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-transformer-encoder-by-combining-our-custom-made-layers">Creating a Transformer Encoder by combining our custom made layers</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-transformer-encoder-with-pytorch-s-transformer-layers">Creating a Transformer Encoder with PyTorch’s Transformer layers</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-transformer-encoder-with-pytorchs-transformer-layers">Creating a Transformer Encoder with PyTorch’s Transformer layers</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#putting-it-all-together-to-create-vit">Putting it all together to create ViT</a><ul class="nav section-nav flex-column">
@@ -635,11 +704,11 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="pytorch-paper-replicating">
+  <section class="tex2jax_ignore mathjax_ignore" id="pytorch-paper-replicating">
 <h1>PyTorch Paper Replicating<a class="headerlink" href="#pytorch-paper-replicating" title="Link to this heading">#</a></h1>
 <p>In this project, we’re going to be <strong>replicating a machine learning research paper</strong> and creating a Vision Transformer (ViT) from scratch using PyTorch.</p>
 <p>We’ll then see how ViT, a state-of-the-art computer vision architecture, performs on our FoodVision Mini problem.</p>
-<img src="images/08-vit-paper-applying-vit-to-food-vision-mini.png" alt="appyling the vision transformer architecture to FoodVision mini" width=900/>
+<img alt="appyling the vision transformer architecture to FoodVision mini" src="../../../_images/08-vit-paper-applying-vit-to-food-vision-mini.png" />
 <p><em>For Milestone Project 2 we’re going to focus on recreating the Vision Transformer (ViT) computer vision architecture and applying it to our FoodVision Mini problem to classify different images of pizza, steak and sushi.</em></p>
 <section id="what-is-paper-replicating">
 <h2>What is paper replicating?<a class="headerlink" href="#what-is-paper-replicating" title="Link to this heading">#</a></h2>
@@ -647,7 +716,7 @@ document.write(`
 <p>Many of these advances get published in machine learning research papers.</p>
 <p>And the goal of <strong>paper replicating</strong> is to replicate these advances with code so you can use the techniques for your own problem.</p>
 <p>For example, let’s say a new model architecture gets released that performs better than any other architecture before on various benchmarks, wouldn’t it be nice to try that architecture on your own problems?</p>
-<img src="images/08-vit-paper-what-is-paper-replicating-images-math-text-to-code.png" alt="paper replicating involves turning a machine learning reserch paper comprised of images/diagrams, text and math into usable code" width=1000/>
+<img alt="paper replicating involves turning a machine learning reserch paper comprised of images/diagrams, text and math into usable code" src="../../../_images/08-vit-paper-what-is-paper-replicating-images-math-text-to-code.png" />
 <p><em>Machine learning paper replicating involves turning a machine learning paper comprised of images/diagrams, math and text into usable code and in our case, usable PyTorch code. Diagram, math equations and text from the <a class="reference external" href="https://arxiv.org/abs/2010.11929">ViT paper</a>.</em></p>
 </section>
 <section id="what-is-a-machine-learning-research-paper">
@@ -691,7 +760,7 @@ document.write(`
 <p>A machine learning research paper is often a presentation of months of work and experiments done by some of the best machine learning teams in the world condensed into a few pages of text.</p>
 <p>And if these experiments lead to better results in an area related to the problem you’re working on, it’d be nice to check them out.</p>
 <p>Also, replicating the work of others is a fantastic way to practice your skills.</p>
-<img src="images/08-george-hotz-quote.png" width=600 alt="george hotz quote saying to get better at being a machine learning engineer, download a paper, implement it and keep going until you have skills"/>
+<a class="reference internal image-reference" href="../../../_images/08-george-hotz-quote.png"><img alt="george hotz quote saying to get better at being a machine learning engineer, download a paper, implement it and keep going until you have skills" src="../../../_images/08-george-hotz-quote.png" style="width: 600px;" /></a>
 <p><em>George Hotz is founder of <a class="reference external" href="https://comma.ai/">comma.ai</a>, a self-driving car company and livestreams machine learning coding on <a class="reference external" href="https://www.twitch.tv/georgehotz">Twitch</a> and those videos get posted in full to <a class="reference external" href="https://www.youtube.com/c/georgehotzarchive">YouTube</a>. I pulled this quote from one of his livestreams. The “٭” is to note that machine learning engineering often involves the extra step(s) of preprocessing data and making your models available for others to use (deployment).</em></p>
 <p>When you first start trying to replicate research papers, you’ll likely be overwhelmed.</p>
 <p>That’s normal.</p>
@@ -730,8 +799,8 @@ document.write(`
 <div><p><strong>Note:</strong> This list is far from exhaustive. I only list a few places, the ones I use most frequently personally. So beware the bias. However, I’ve noticed that even this short list often sully satisfies my needs for knowing what’s going on in the field. Any more and I might go crazy.</p>
 </div></blockquote>
 </section>
-<section id="what-we-re-going-to-cover">
-<h2>What we’re going to cover<a class="headerlink" href="#what-we-re-going-to-cover" title="Link to this heading">#</a></h2>
+<section id="what-were-going-to-cover">
+<h2>What we’re going to cover<a class="headerlink" href="#what-were-going-to-cover" title="Link to this heading">#</a></h2>
 <p>Rather than talk about replicating a paper, we’re going to get hands-on and <em>actually</em> replicate a paper.</p>
 <p>The process for replicating all papers will be slightly different but by seeing what it’s like to do one, we’ll get the momentum to do more.</p>
 <p>More specifically, we’re going to be replicating the machine learning research paper <a class="reference external" href="https://arxiv.org/abs/2010.11929"><em>An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale</em></a>  (ViT paper) with PyTorch.</p>
@@ -954,7 +1023,7 @@ Updating files: 100% (248/248), done.
 <p>First, we’ll create a transform to prepare our images.</p>
 <p>This where one of the first references to the ViT paper will come in.</p>
 <p>In Table 3, the training resolution is mentioned as being 224 (height=224, width=224).</p>
-<img src="images/08-vit-paper-image-size-and-batch-size.png" width=900 alt="Table 3 from the Vision Transformer paper showing the image size and batch size"/>
+<a class="reference internal image-reference" href="../../../_images/08-vit-paper-image-size-and-batch-size.png"><img alt="Table 3 from the Vision Transformer paper showing the image size and batch size" src="../../../_images/08-vit-paper-image-size-and-batch-size.png" style="width: 900px;" /></a>
 <p><em>You can often find various hyperparameter settings listed in a table. In this case we’re still preparing our data, so we’re mainly concerned with things like image size and batch size. Source: Table 3 in <a class="reference external" href="https://arxiv.org/abs/2010.11929">ViT paper</a>.</em></p>
 <p>So we’ll make sure our transform resizes our images appropriately.</p>
 <p>And since we’ll be training our model from scratch (no transfer learning to begin with), we won’t provide a <code class="docutils literal notranslate"><span class="pre">normalize</span></code> transform like we did in <a class="reference internal" href="06_pytorch_transfer_learning.html#21-creating-a-transform-for-torchvisionmodels-manual-creation"><span class="std std-ref">PyTorch Transfer Learning section 2.1</span></a>.</p>
@@ -984,8 +1053,8 @@ Updating files: 100% (248/248), done.
 </div>
 </div>
 </section>
-<section id="turn-images-into-dataloader-s">
-<h3>Turn images into <code class="docutils literal notranslate"><span class="pre">DataLoader</span></code>’s<a class="headerlink" href="#turn-images-into-dataloader-s" title="Link to this heading">#</a></h3>
+<section id="turn-images-into-dataloaders">
+<h3>Turn images into <code class="docutils literal notranslate"><span class="pre">DataLoader</span></code>’s<a class="headerlink" href="#turn-images-into-dataloaders" title="Link to this heading">#</a></h3>
 <p>Transforms created!</p>
 <p>Let’s now create our <code class="docutils literal notranslate"><span class="pre">DataLoader</span></code>’s.</p>
 <p>The ViT paper states the use of a batch size of 4096 which is 128x the size of the batch size we’ve been using (32).</p>
@@ -1094,11 +1163,11 @@ Updating files: 100% (248/248), done.
 <p>We’re going to take it layer by layer, block by block, function by function putting the pieces of the puzzle together like Lego to get our desired overall architecture.</p>
 <p>The reason we do this is because looking at a whole research paper can be intimidating.</p>
 <p>So for a better understanding, we’ll break it down, starting with the inputs and outputs of single layer and working up to the inputs and outputs of the whole model.</p>
-<img src="images/08-vit-paper-intputs-outputs-layers-and-blocks.png" alt="inputs and outputs, layers and blocks of a model" width=900/>
+<img alt="inputs and outputs, layers and blocks of a model" src="../../../_images/08-vit-paper-intputs-outputs-layers-and-blocks.png" />
 <p><em>A modern deep learning architecture is usually collection of layers and blocks. Where layers take an input (data as a numerical representation) and manipulate it using some kind of function (for example, the self-attention formula pictured above, however, this function could be almost anything) and then output it. Blocks are generally stacks of layers on top of each other doing a similar thing to a single layer but multiple times.</em></p>
 </section>
-<section id="getting-specific-what-s-vit-made-of">
-<h3>Getting specific: What’s ViT made of?<a class="headerlink" href="#getting-specific-what-s-vit-made-of" title="Link to this heading">#</a></h3>
+<section id="getting-specific-whats-vit-made-of">
+<h3>Getting specific: What’s ViT made of?<a class="headerlink" href="#getting-specific-whats-vit-made-of" title="Link to this heading">#</a></h3>
 <p>There are many little details about the ViT model sprinkled throughout the paper.</p>
 <p>Finding them all is like one big treasure hunt!</p>
 <p>Remember, a research paper is often months of work compressed into a few pages so it’s understandable for it to take of practice to replicate.</p>
@@ -1116,7 +1185,7 @@ Updating files: 100% (248/248), done.
 <li><p><strong>Layers</strong> - takes an <strong>input</strong>, performs an operation or function on the input, produces an <strong>output</strong>.</p></li>
 <li><p><strong>Blocks</strong> - a collection of layers, which in turn also takes an <strong>input</strong> and produces an <strong>output</strong>.</p></li>
 </ol>
-<img src="images/08-vit-paper-figure-1-inputs-and-outputs.png" width=900 alt="figure 1 from the original vision transformer paper"/>
+<a class="reference internal image-reference" href="../../../_images/08-vit-paper-figure-1-inputs-and-outputs.png"><img alt="figure 1 from the original vision transformer paper" src="../../../_images/08-vit-paper-figure-1-inputs-and-outputs.png" style="width: 900px;" /></a>
 <p><em>Figure 1 from the ViT Paper showcasing the different inputs, outputs, layers and blocks that create the architecture. Our goal will be to replicate each of these using PyTorch code.</em></p>
 <p>The ViT architecture is comprised of several stages:</p>
 <ul class="simple">
@@ -1138,13 +1207,13 @@ Updating files: 100% (248/248), done.
 <div><p><strong>Note:</strong> We’re going to be focused on writing PyTorch code to create these layers. For the background on what each of these layers does, I’d suggest reading the ViT Paper in full or reading the linked resources for each layer.</p>
 </div></blockquote>
 <p>Let’s take Figure 1 and adapt it to our FoodVision Mini problem of classifying images of food into pizza, steak or sushi.</p>
-<img src="images/08-vit-paper-figure-1-inputs-and-outputs-food-mini.png" width=900 alt="figure 1 from the original vision transformer paper adapted to work with food images, an image of pizza goes in and gets classified as 'pizza'"/>
+<a class="reference internal image-reference" href="../../../_images/08-vit-paper-figure-1-inputs-and-outputs-food-mini.png"><img alt="figure 1 from the original vision transformer paper adapted to work with food images, an image of pizza goes in and gets classified as 'pizza'" src="../../../_images/08-vit-paper-figure-1-inputs-and-outputs-food-mini.png" style="width: 900px;" /></a>
 <p><em>Figure 1 from the ViT Paper adapted for use with FoodVision Mini. An image of food goes in (pizza), the image gets turned into patches and then projected to an embedding. The embedding then travels through the various layers and blocks and (hopefully) the class “pizza” is returned.</em></p>
 </section>
 <section id="exploring-the-four-equations">
 <h4>3.2.2 Exploring the Four Equations<a class="headerlink" href="#exploring-the-four-equations" title="Link to this heading">#</a></h4>
 <p>The next main part(s) of the ViT paper we’re going to look at are the four equations in section 3.1.</p>
-<img src="images/08-vit-paper-four-equations.png" width=650 alt="four mathematical equations from the vision transformer machine learning paper"/>
+<a class="reference internal image-reference" href="../../../_images/08-vit-paper-four-equations.png"><img alt="four mathematical equations from the vision transformer machine learning paper" src="../../../_images/08-vit-paper-four-equations.png" style="width: 650px;" /></a>
 <p><em>These four equations represent the math behind the four major parts of the ViT architecture.</em></p>
 <p>Section 3.1 describes each of these (some of the text has been omitted for brevity, bolded text is mine):</p>
 <div class="pst-scrollable-table-container"><table class="table">
@@ -1155,7 +1224,7 @@ Updating files: 100% (248/248), done.
 </thead>
 <tbody>
 <tr class="row-even"><td><p>1</p></td>
-<td><p>…The Transformer uses constant latent vector size $D$ through all of its layers, so we flatten the patches and map to $D$ dimensions with a <strong>trainable linear projection</strong> (Eq. 1). We refer to the output of this projection as the <strong>patch embeddings</strong>… <strong>Position embeddings</strong> are added to the patch embeddings to retain positional information. We use standard <strong>learnable 1D position embeddings</strong>…</p></td>
+<td><p>…The Transformer uses constant latent vector size <span class="math notranslate nohighlight">\(D\)</span> through all of its layers, so we flatten the patches and map to <span class="math notranslate nohighlight">\(D\)</span> dimensions with a <strong>trainable linear projection</strong> (Eq. 1). We refer to the output of this projection as the <strong>patch embeddings</strong>… <strong>Position embeddings</strong> are added to the patch embeddings to retain positional information. We use standard <strong>learnable 1D position embeddings</strong>…</p></td>
 </tr>
 <tr class="row-odd"><td><p>2</p></td>
 <td><p>The Transformer encoder (Vaswani et al., 2017) consists of alternating layers of multiheaded selfattention (MSA, see Appendix A) and MLP blocks (Eq. 2, 3). <strong>Layernorm (LN) is applied before every block</strong>, and <strong>residual connections after every block</strong> (Wang et al., 2019; Baevski &amp; Auli, 2019).</p></td>
@@ -1164,32 +1233,33 @@ Updating files: 100% (248/248), done.
 <td><p>Same as equation 2.</p></td>
 </tr>
 <tr class="row-odd"><td><p>4</p></td>
-<td><p>Similar to BERT’s [ class ] token, we <strong>prepend a learnable embedding to the sequence of embedded patches</strong> $\left(\mathbf{z}<em>{0}^{0}=\mathbf{x}</em>{\text {class }}\right)$, whose state at the output of the Transformer encoder $\left(\mathbf{z}_{L}^{0}\right)$ serves as the image representation $\mathbf{y}$ (Eq. 4)…</p></td>
+<td><p>Similar to BERT’s [ class ] token, we <strong>prepend a learnable embedding to the sequence of embedded patches</strong> <span class="math notranslate nohighlight">\(\left(\mathbf{z}_{0}^{0}=\mathbf{x}_{\text {class }}\right)\)</span>, whose state at the output of the Transformer encoder <span class="math notranslate nohighlight">\(\left(\mathbf{z}_{L}^{0}\right)\)</span> serves as the image representation <span class="math notranslate nohighlight">\(\mathbf{y}\)</span> (Eq. 4)…</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 <p>Let’s map these descriptions to the ViT architecture in Figure 1.</p>
-<img src="images/08-vit-paper-mapping-the-four-equations-to-figure-1.png" width=1000 alt="mapping the vision transformer paper figure 1 to the four equations listed in the paper"/>
+<a class="reference internal image-reference" href="../../../_images/08-vit-paper-mapping-the-four-equations-to-figure-1.png"><img alt="mapping the vision transformer paper figure 1 to the four equations listed in the paper" src="../../../_images/08-vit-paper-mapping-the-four-equations-to-figure-1.png" style="width: 1000px;" /></a>
 <p><em>Connecting Figure 1 from the ViT paper to the four equations from section 3.1 describing the math behind each of the layers/blocks.</em></p>
 <p>There’s a lot happening in the image above but following the coloured lines and arrows reveals the main concepts of the ViT architecture.</p>
 <p>How about we break down each equation further (it will be our goal to recreate these with code)?</p>
-<p>In all equations (except equation 4), “$\mathbf{z}$” is the raw output of a particular layer:</p>
+<p>In all equations (except equation 4), “<span class="math notranslate nohighlight">\(\mathbf{z}\)</span>” is the raw output of a particular layer:</p>
 <ol class="arabic simple">
-<li><p>$\mathbf{z}_{0}$ is “z zero” (this is the output of the initial patch embedding layer).</p></li>
-<li><p>$\mathbf{z}_{\ell}^{\prime}$ is “z of a particular layer <em>prime</em>” (or an intermediary value of z).</p></li>
-<li><p>$\mathbf{z}_{\ell}$ is “z of a particular layer”.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\mathbf{z}_{0}\)</span> is “z zero” (this is the output of the initial patch embedding layer).</p></li>
+<li><p><span class="math notranslate nohighlight">\(\mathbf{z}_{\ell}^{\prime}\)</span> is “z of a particular layer <em>prime</em>” (or an intermediary value of z).</p></li>
+<li><p><span class="math notranslate nohighlight">\(\mathbf{z}_{\ell}\)</span> is “z of a particular layer”.</p></li>
 </ol>
-<p>And $\mathbf{y}$ is the overall output of the architecture.</p>
+<p>And <span class="math notranslate nohighlight">\(\mathbf{y}\)</span> is the overall output of the architecture.</p>
 </section>
 <section id="equation-1-overview">
 <h4>Equation 1 overview<a class="headerlink" href="#equation-1-overview" title="Link to this heading">#</a></h4>
-<p>$$
+<div class="math notranslate nohighlight">
+\[
 \begin{aligned}
-\mathbf{z}<em>{0} &amp;=\left[\mathbf{x}</em>{\text {class }} ; \mathbf{x}<em>{p}^{1} \mathbf{E} ; \mathbf{x}</em>{p}^{2} \mathbf{E} ; \cdots ; \mathbf{x}<em>{p}^{N} \mathbf{E}\right]+\mathbf{E}</em>{\text {pos }}, &amp; &amp; \mathbf{E} \in \mathbb{R}^{\left(P^{2} \cdot C\right) \times D}, \mathbf{E}_{\text {pos }} \in \mathbb{R}^{(N+1) \times D}
+\mathbf{z}_{0} &amp;=\left[\mathbf{x}_{\text {class }} ; \mathbf{x}_{p}^{1} \mathbf{E} ; \mathbf{x}_{p}^{2} \mathbf{E} ; \cdots ; \mathbf{x}_{p}^{N} \mathbf{E}\right]+\mathbf{E}_{\text {pos }}, &amp; &amp; \mathbf{E} \in \mathbb{R}^{\left(P^{2} \cdot C\right) \times D}, \mathbf{E}_{\text {pos }} \in \mathbb{R}^{(N+1) \times D}
 \end{aligned}
-$$</p>
-<p>This equation deals with the class token, patch embedding and position embedding ($\mathbf{E}$ is for embedding) of the input image.</p>
+\]</div>
+<p>This equation deals with the class token, patch embedding and position embedding (<span class="math notranslate nohighlight">\(\mathbf{E}\)</span> is for embedding) of the input image.</p>
 <p>In vector form, the embedding might look something like:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x_input</span> <span class="o">=</span> <span class="p">[</span><span class="n">class_token</span><span class="p">,</span> <span class="n">image_patch_1</span><span class="p">,</span> <span class="n">image_patch_2</span><span class="p">,</span> <span class="n">image_patch_3</span><span class="o">...</span><span class="p">]</span> <span class="o">+</span> <span class="p">[</span><span class="n">class_token_position</span><span class="p">,</span> <span class="n">image_patch_1_position</span><span class="p">,</span> <span class="n">image_patch_2_position</span><span class="p">,</span> <span class="n">image_patch_3_position</span><span class="o">...</span><span class="p">]</span>
 </pre></div>
@@ -1198,12 +1268,13 @@ $$</p>
 </section>
 <section id="equation-2-overview">
 <h4>Equation 2 overview<a class="headerlink" href="#equation-2-overview" title="Link to this heading">#</a></h4>
-<p>$$
+<div class="math notranslate nohighlight">
+\[
 \begin{aligned}
-\mathbf{z}<em>{\ell}^{\prime} &amp;=\operatorname{MSA}\left(\operatorname{LN}\left(\mathbf{z}</em>{\ell-1}\right)\right)+\mathbf{z}_{\ell-1}, &amp; &amp; \ell=1 \ldots L
+\mathbf{z}_{\ell}^{\prime} &amp;=\operatorname{MSA}\left(\operatorname{LN}\left(\mathbf{z}_{\ell-1}\right)\right)+\mathbf{z}_{\ell-1}, &amp; &amp; \ell=1 \ldots L
 \end{aligned}
-$$</p>
-<p>This says that for every layer from $1$ through to $L$ (the total number of layers), there’s a Multi-Head Attention layer (MSA) wrapping a LayerNorm layer (LN).</p>
+\]</div>
+<p>This says that for every layer from <span class="math notranslate nohighlight">\(1\)</span> through to <span class="math notranslate nohighlight">\(L\)</span> (the total number of layers), there’s a Multi-Head Attention layer (MSA) wrapping a LayerNorm layer (LN).</p>
 <p>The addition on the end is the equivalent of adding the input to the output and forming a <a class="reference external" href="https://paperswithcode.com/method/residual-connection">skip/residual connection</a>.</p>
 <p>We’ll call this layer the “MSA block”.</p>
 <p>In pseudocode, this might look like:</p>
@@ -1214,12 +1285,13 @@ $$</p>
 </section>
 <section id="equation-3-overview">
 <h4>Equation 3 overview<a class="headerlink" href="#equation-3-overview" title="Link to this heading">#</a></h4>
-<p>$$
+<div class="math notranslate nohighlight">
+\[\begin{split}
 \begin{aligned}
-\mathbf{z}<em>{\ell} &amp;=\operatorname{MLP}\left(\operatorname{LN}\left(\mathbf{z}</em>{\ell}^{\prime}\right)\right)+\mathbf{z}_{\ell}^{\prime}, &amp; &amp; \ell=1 \ldots L \
+\mathbf{z}_{\ell} &amp;=\operatorname{MLP}\left(\operatorname{LN}\left(\mathbf{z}_{\ell}^{\prime}\right)\right)+\mathbf{z}_{\ell}^{\prime}, &amp; &amp; \ell=1 \ldots L \\
 \end{aligned}
-$$</p>
-<p>This says that for every layer from $1$ through to $L$ (the total number of layers), there’s also a Multilayer Perceptron layer (MLP) wrapping a LayerNorm layer (LN).</p>
+\end{split}\]</div>
+<p>This says that for every layer from <span class="math notranslate nohighlight">\(1\)</span> through to <span class="math notranslate nohighlight">\(L\)</span> (the total number of layers), there’s also a Multilayer Perceptron layer (MLP) wrapping a LayerNorm layer (LN).</p>
 <p>The addition on the end is showing the presence of a skip/residual connection.</p>
 <p>We’ll call this layer the “MLP block”.</p>
 <p>In pseudocode, this might look like:</p>
@@ -1230,12 +1302,13 @@ $$</p>
 </section>
 <section id="equation-4-overview">
 <h4>Equation 4 overview<a class="headerlink" href="#equation-4-overview" title="Link to this heading">#</a></h4>
-<p>$$
+<div class="math notranslate nohighlight">
+\[
 \begin{aligned}
 \mathbf{y} &amp;=\operatorname{LN}\left(\mathbf{z}_{L}^{0}\right) &amp; &amp;
 \end{aligned}
-$$</p>
-<p>This says for the last layer $L$, the output $y$ is the 0 index token of $z$ wrapped in a LayerNorm layer (LN).</p>
+\]</div>
+<p>This says for the last layer <span class="math notranslate nohighlight">\(L\)</span>, the output <span class="math notranslate nohighlight">\(y\)</span> is the 0 index token of <span class="math notranslate nohighlight">\(z\)</span> wrapped in a LayerNorm layer (LN).</p>
 <p>Or in our case, the 0 index of <code class="docutils literal notranslate"><span class="pre">x_output_MLP_block</span></code>:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">y</span> <span class="o">=</span> <span class="n">Linear_layer</span><span class="p">(</span><span class="n">LN_layer</span><span class="p">(</span><span class="n">x_output_MLP_block</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
 </pre></div>
@@ -1252,7 +1325,7 @@ $$</p>
 <thead>
 <tr class="row-odd"><th class="head text-left"><p>Model</p></th>
 <th class="head text-center"><p>Layers</p></th>
-<th class="head text-center"><p>Hidden size $D$</p></th>
+<th class="head text-center"><p>Hidden size <span class="math notranslate nohighlight">\(D\)</span></p></th>
 <th class="head text-center"><p>MLP size</p></th>
 <th class="head text-center"><p>Heads</p></th>
 <th class="head text-center"><p>Params</p></th>
@@ -1264,21 +1337,21 @@ $$</p>
 <td class="text-center"><p>768</p></td>
 <td class="text-center"><p>3072</p></td>
 <td class="text-center"><p>12</p></td>
-<td class="text-center"><p>$86M$</p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(86M\)</span></p></td>
 </tr>
 <tr class="row-odd"><td class="text-left"><p>ViT-Large</p></td>
 <td class="text-center"><p>24</p></td>
 <td class="text-center"><p>1024</p></td>
 <td class="text-center"><p>4096</p></td>
 <td class="text-center"><p>16</p></td>
-<td class="text-center"><p>$307M$</p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(307M\)</span></p></td>
 </tr>
 <tr class="row-even"><td class="text-left"><p>ViT-Huge</p></td>
 <td class="text-center"><p>32</p></td>
 <td class="text-center"><p>1280</p></td>
 <td class="text-center"><p>5120</p></td>
 <td class="text-center"><p>16</p></td>
-<td class="text-center"><p>$632M$</p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(632M\)</span></p></td>
 </tr>
 </tbody>
 </table>
@@ -1293,7 +1366,7 @@ $$</p>
 <p>Breaking the hyperparameters down:</p>
 <ul class="simple">
 <li><p><strong>Layers</strong> - How many Transformer Encoder blocks are there? (each of these will contain a MSA block and MLP block)</p></li>
-<li><p><strong>Hidden size $D$</strong> - This is the embedding dimension throughout the architecture, this will be the size of the vector that our image gets turned into when it gets patched and embedded. Generally, the larger the embedding dimension, the more information can be captured, the better results. However, a larger embedding comes at the cost of more compute.</p></li>
+<li><p><strong>Hidden size <span class="math notranslate nohighlight">\(D\)</span></strong> - This is the embedding dimension throughout the architecture, this will be the size of the vector that our image gets turned into when it gets patched and embedded. Generally, the larger the embedding dimension, the more information can be captured, the better results. However, a larger embedding comes at the cost of more compute.</p></li>
 <li><p><strong>MLP size</strong> - What are the number of hidden units in the MLP layers?</p></li>
 <li><p><strong>Heads</strong> - How many heads are there in the Multi-Head Attention layers?</p></li>
 <li><p><strong>Params</strong> - What are the total number of parameters of the model? Generally, more parameters leads to better performance but at the cost of more compute. You’ll notice even ViT-Base has far more parameters than any other model we’ve used so far.</p></li>
@@ -1312,7 +1385,7 @@ $$</p>
 <li><p>Replicate the simplest version of the model possible.</p></li>
 <li><p>If I get stuck, look up other examples.</p></li>
 </ol>
-<img src="images/08-vit-paper-mathpix-demo.gif" width=900 alt="using mathpix.com to turn text from a machine learning research paper (PDF) into editable LaTeX"/>
+<a class="reference internal image-reference" href="../../../_images/08-vit-paper-mathpix-demo.gif"><img alt="using mathpix.com to turn text from a machine learning research paper (PDF) into editable LaTeX" src="../../../_images/08-vit-paper-mathpix-demo.gif" style="width: 900px;" /></a>
 <p><em>Turning the four equations from the ViT paper into editable LaTeX/markdown using <a class="reference external" href="https://mathpix.com/">mathpix.com</a>.</em></p>
 <p>We’ve already gone through the first few steps above (and if you haven’t read the full paper yet, I’d encourage you to give it a go) but what we’ll be focusing on next is step 5: replicating the simplest version of the model possible.</p>
 <p>This is why we’re starting with ViT-Base.</p>
@@ -1333,7 +1406,7 @@ $$</p>
 <p>The term learnable is important because this means the numerical representation of an input image (that the model sees) can be improved over time.</p>
 <p>We’ll begin by following the opening paragraph of section 3.1 of the ViT paper (bold mine):</p>
 <blockquote>
-<div><p>The standard Transformer receives as input a 1D sequence of token embeddings. To handle 2D images, we reshape the image $\mathbf{x} \in \mathbb{R}^{H \times W \times C}$ into a sequence of flattened 2D patches $\mathbf{x}_{p} \in \mathbb{R}^{N \times\left(P^{2} \cdot C\right)}$, where $(H, W)$ is the resolution of the original image, $C$ is the number of channels, $(P, P)$ is the resolution of each image patch, and $N=H W / P^{2}$ is the resulting number of patches, which also serves as the effective input sequence length for the Transformer. The Transformer uses constant latent vector size $D$ through all of its layers, so we flatten the patches and map to $D$ dimensions with a trainable linear projection (Eq. 1). We refer to the output of this projection as the <strong>patch embeddings</strong>.</p>
+<div><p>The standard Transformer receives as input a 1D sequence of token embeddings. To handle 2D images, we reshape the image <span class="math notranslate nohighlight">\(\mathbf{x} \in \mathbb{R}^{H \times W \times C}\)</span> into a sequence of flattened 2D patches <span class="math notranslate nohighlight">\(\mathbf{x}_{p} \in \mathbb{R}^{N \times\left(P^{2} \cdot C\right)}\)</span>, where <span class="math notranslate nohighlight">\((H, W)\)</span> is the resolution of the original image, <span class="math notranslate nohighlight">\(C\)</span> is the number of channels, <span class="math notranslate nohighlight">\((P, P)\)</span> is the resolution of each image patch, and <span class="math notranslate nohighlight">\(N=H W / P^{2}\)</span> is the resulting number of patches, which also serves as the effective input sequence length for the Transformer. The Transformer uses constant latent vector size <span class="math notranslate nohighlight">\(D\)</span> through all of its layers, so we flatten the patches and map to <span class="math notranslate nohighlight">\(D\)</span> dimensions with a trainable linear projection (Eq. 1). We refer to the output of this projection as the <strong>patch embeddings</strong>.</p>
 </div></blockquote>
 <p>And size we’re dealing with image shapes, let’s keep in mind the line from Table 3 of the ViT paper:</p>
 <blockquote>
@@ -1341,27 +1414,27 @@ $$</p>
 </div></blockquote>
 <p>Let’s break down the text above.</p>
 <ul class="simple">
-<li><p>$D$ is the size of the <strong>patch embeddings</strong>, different values for $D$ for various sized ViT models can be found in Table 1.</p></li>
-<li><p>The image starts as 2D with size ${H \times W \times C}$.</p>
+<li><p><span class="math notranslate nohighlight">\(D\)</span> is the size of the <strong>patch embeddings</strong>, different values for <span class="math notranslate nohighlight">\(D\)</span> for various sized ViT models can be found in Table 1.</p></li>
+<li><p>The image starts as 2D with size <span class="math notranslate nohighlight">\({H \times W \times C}\)</span>.</p>
 <ul>
-<li><p>$(H, W)$ is the resolution of the original image (height, width).</p></li>
-<li><p>$C$ is the number of channels.</p></li>
+<li><p><span class="math notranslate nohighlight">\((H, W)\)</span> is the resolution of the original image (height, width).</p></li>
+<li><p><span class="math notranslate nohighlight">\(C\)</span> is the number of channels.</p></li>
 </ul>
 </li>
-<li><p>The image gets converted to a sequence of flattened 2D patches with size ${N \times\left(P^{2} \cdot C\right)}$.</p>
+<li><p>The image gets converted to a sequence of flattened 2D patches with size <span class="math notranslate nohighlight">\({N \times\left(P^{2} \cdot C\right)}\)</span>.</p>
 <ul>
-<li><p>$(P, P)$ is the resolution of each image patch (<strong>patch size</strong>).</p></li>
-<li><p>$N=H W / P^{2}$ is the resulting number of patches, which also serves as the input sequence length for the Transformer.</p></li>
+<li><p><span class="math notranslate nohighlight">\((P, P)\)</span> is the resolution of each image patch (<strong>patch size</strong>).</p></li>
+<li><p><span class="math notranslate nohighlight">\(N=H W / P^{2}\)</span> is the resulting number of patches, which also serves as the input sequence length for the Transformer.</p></li>
 </ul>
 </li>
 </ul>
-<img src="images/08-vit-paper-equation-1-annotated.png" width=900 alt="mapping the vit architecture diagram positional and patch embeddings portion to the relative mathematical equation describing what's going on"/>
+<a class="reference internal image-reference" href="../../../_images/08-vit-paper-equation-1-annotated.png"><img alt="mapping the vit architecture diagram positional and patch embeddings portion to the relative mathematical equation describing what's going on" src="../../../_images/08-vit-paper-equation-1-annotated.png" style="width: 900px;" /></a>
 <p><em>Mapping the patch and position embedding portion of the ViT architecture from Figure 1 to Equation 1. The opening paragraph of section 3.1 describes the different input and output shapes of the patch embedding layer.</em></p>
 <section id="calculating-patch-embedding-input-and-output-shapes-by-hand">
 <h3>Calculating patch embedding input and output shapes by hand<a class="headerlink" href="#calculating-patch-embedding-input-and-output-shapes-by-hand" title="Link to this heading">#</a></h3>
 <p>How about we start by calculating these input and output shape values by hand?</p>
-<p>To do so, let’s create some variables to mimic each of the terms (such as $H$, $W$ etc) above.</p>
-<p>We’ll use a patch size ($P$) of 16 since it’s the best performing version of ViT-Base uses (see column “ViT-B/16” of Table 5 in the ViT paper for more).</p>
+<p>To do so, let’s create some variables to mimic each of the terms (such as <span class="math notranslate nohighlight">\(H\)</span>, <span class="math notranslate nohighlight">\(W\)</span> etc) above.</p>
+<p>We’ll use a patch size (<span class="math notranslate nohighlight">\(P\)</span>) of 16 since it’s the best performing version of ViT-Base uses (see column “ViT-B/16” of Table 5 in the ViT paper for more).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create example values</span>
@@ -1386,8 +1459,8 @@ $$</p>
 <p>Better yet, let’s replicate the input and output shapes of the patch embedding layer.</p>
 <p>Recall:</p>
 <ul class="simple">
-<li><p><strong>Input:</strong> The image starts as 2D with size ${H \times W \times C}$.</p></li>
-<li><p><strong>Output:</strong> The image gets converted to a sequence of flattened 2D patches with size ${N \times\left(P^{2} \cdot C\right)}$.</p></li>
+<li><p><strong>Input:</strong> The image starts as 2D with size <span class="math notranslate nohighlight">\({H \times W \times C}\)</span>.</p></li>
+<li><p><strong>Output:</strong> The image gets converted to a sequence of flattened 2D patches with size <span class="math notranslate nohighlight">\({N \times\left(P^{2} \cdot C\right)}\)</span>.</p></li>
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1554,15 +1627,15 @@ Patch size: 16 pixels x 16 pixels
 <p>This operation is very similar to the convolutional operation we saw in <a class="reference internal" href="03_pytorch_computer_vision.html#71-stepping-through-nnconv2d"><span class="std std-ref">PyTorch Computer Vision section 7.1: Stepping through <code class="docutils literal notranslate"><span class="pre">nn.Conv2d()</span></code></span></a>.</p>
 <p>In fact, the authors of the ViT paper mention in section 3.1 that the patch embedding is achievable with a convolutional neural network (CNN):</p>
 <blockquote>
-<div><p><strong>Hybrid Architecture.</strong> As an alternative to raw image patches, the input sequence can be formed from feature maps of a CNN (LeCun et al., 1989). In this hybrid model, the patch embedding projection $\mathbf{E}$ (Eq. 1) is applied to patches extracted from a <strong>CNN feature map</strong>. As a special case, the patches can have spatial size $1 \times 1$, which means that the <strong>input sequence is obtained by simply flattening the spatial dimensions of the feature map and projecting to the Transformer dimension</strong>. The classification input embedding and position embeddings are added as described above.</p>
+<div><p><strong>Hybrid Architecture.</strong> As an alternative to raw image patches, the input sequence can be formed from feature maps of a CNN (LeCun et al., 1989). In this hybrid model, the patch embedding projection <span class="math notranslate nohighlight">\(\mathbf{E}\)</span> (Eq. 1) is applied to patches extracted from a <strong>CNN feature map</strong>. As a special case, the patches can have spatial size <span class="math notranslate nohighlight">\(1 \times 1\)</span>, which means that the <strong>input sequence is obtained by simply flattening the spatial dimensions of the feature map and projecting to the Transformer dimension</strong>. The classification input embedding and position embeddings are added as described above.</p>
 </div></blockquote>
 <p>The “<strong>feature map</strong>” they’re refering to are the weights/activations produced by a convolutional layer passing over a given image.</p>
-<img src="images/08-vit-paper-patch-embedding-animation.gif" width=900 alt="example of creating a patch embedding by passing a convolutional layer over a single image"/>
+<a class="reference internal image-reference" href="../../../_images/08-vit-paper-patch-embedding-animation.gif"><img alt="example of creating a patch embedding by passing a convolutional layer over a single image" src="../../../_images/08-vit-paper-patch-embedding-animation.gif" style="width: 900px;" /></a>
 <p><em>By setting the <code class="docutils literal notranslate"><span class="pre">kernel_size</span></code> and <code class="docutils literal notranslate"><span class="pre">stride</span></code> parameters of a <a class="reference external" href="https://pytorch.org/docs/stable/generated/torch.nn.Conv2d.html"><code class="docutils literal notranslate"><span class="pre">torch.nn.Conv2d()</span></code></a> layer equal to the <code class="docutils literal notranslate"><span class="pre">patch_size</span></code>, we can effectively get a layer that splits our image into patches and creates a learnable embedding (referred to as a “Linear Projection” in the ViT paper) of each patch.</em></p>
 <p>Remember our ideal input and output shapes for the patch embedding layer?</p>
 <ul class="simple">
-<li><p><strong>Input:</strong> The image starts as 2D with size ${H \times W \times C}$.</p></li>
-<li><p><strong>Output:</strong> The image gets converted to a 1D sequence of flattened 2D patches with size ${N \times\left(P^{2} \cdot C\right)}$.</p></li>
+<li><p><strong>Input:</strong> The image starts as 2D with size <span class="math notranslate nohighlight">\({H \times W \times C}\)</span>.</p></li>
+<li><p><strong>Output:</strong> The image gets converted to a 1D sequence of flattened 2D patches with size <span class="math notranslate nohighlight">\({N \times\left(P^{2} \cdot C\right)}\)</span>.</p></li>
 </ul>
 <p>Or for an image size of 224 and patch size of 16:</p>
 <ul class="simple">
@@ -1578,7 +1651,7 @@ Patch size: 16 pixels x 16 pixels
 <p>We can replicate the creation of patches by setting the <code class="docutils literal notranslate"><span class="pre">kernel_size</span></code> and <code class="docutils literal notranslate"><span class="pre">stride</span></code> equal to <code class="docutils literal notranslate"><span class="pre">patch_size</span></code>.</p>
 <p>This means each convolutional kernel will be of size <code class="docutils literal notranslate"><span class="pre">(patch_size</span> <span class="pre">x</span> <span class="pre">patch_size)</span></code> or if <code class="docutils literal notranslate"><span class="pre">patch_size=16</span></code>, <code class="docutils literal notranslate"><span class="pre">(16</span> <span class="pre">x</span> <span class="pre">16)</span></code> (the equivalent of one whole patch).</p>
 <p>And each step or <code class="docutils literal notranslate"><span class="pre">stride</span></code> of the convolutional kernel will be <code class="docutils literal notranslate"><span class="pre">patch_size</span></code> pixels long or <code class="docutils literal notranslate"><span class="pre">16</span></code> pixels long (equivalent of stepping to the next patch).</p>
-<p>We’ll set <code class="docutils literal notranslate"><span class="pre">in_channels=3</span></code> for the number of color channels in our image and we’ll set <code class="docutils literal notranslate"><span class="pre">out_channels=768</span></code>, the same as the $D$ value in Table 1 for ViT-Base (this is the embedding dimension, each image will be embedded into a learnable vector of size 768).</p>
+<p>We’ll set <code class="docutils literal notranslate"><span class="pre">in_channels=3</span></code> for the number of color channels in our image and we’ll set <code class="docutils literal notranslate"><span class="pre">out_channels=768</span></code>, the same as the <span class="math notranslate nohighlight">\(D\)</span> value in Table 1 for ViT-Base (this is the embedding dimension, each image will be embedded into a learnable vector of size 768).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">torch</span> <span class="kn">import</span> <span class="n">nn</span>
@@ -1624,7 +1697,7 @@ Patch size: 16 pixels x 16 pixels
 </div>
 </div>
 </div>
-<p>Passing our image through the convolutional layer turns it into a series of 768 (this is the embedding size or $D$) feature/activation maps.</p>
+<p>Passing our image through the convolutional layer turns it into a series of 768 (this is the embedding size or <span class="math notranslate nohighlight">\(D\)</span>) feature/activation maps.</p>
 <p>So its output shape can be read as:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">torch</span><span class="o">.</span><span class="n">Size</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">768</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">14</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="n">batch_size</span><span class="p">,</span> <span class="n">embedding_dim</span><span class="p">,</span> <span class="n">feature_map_height</span><span class="p">,</span> <span class="n">feature_map_width</span><span class="p">]</span>
 </pre></div>
@@ -1709,7 +1782,7 @@ Patch size: 16 pixels x 16 pixels
 <p>We’ve turned our image into patch embeddings but they’re still in 2D format.</p>
 <p>How do we get them into the desired output shape of the patch embedding layer of the ViT model?</p>
 <ul class="simple">
-<li><p><strong>Desired output (1D sequence of flattened 2D patches):</strong> (196, 768) -&gt; (number of patches, embedding dimension) -&gt; ${N \times\left(P^{2} \cdot C\right)}$</p></li>
+<li><p><strong>Desired output (1D sequence of flattened 2D patches):</strong> (196, 768) -&gt; (number of patches, embedding dimension) -&gt; <span class="math notranslate nohighlight">\({N \times\left(P^{2} \cdot C\right)}\)</span></p></li>
 </ul>
 <p>Let’s check the current shape.</p>
 <div class="cell docutils container">
@@ -1725,10 +1798,10 @@ Patch size: 16 pixels x 16 pixels
 </div>
 </div>
 </div>
-<p>Well we’ve got the 768 part ( $(P^{2} \cdot C)$ ) but we still need the number of patches ($N$).</p>
+<p>Well we’ve got the 768 part ( <span class="math notranslate nohighlight">\((P^{2} \cdot C)\)</span> ) but we still need the number of patches (<span class="math notranslate nohighlight">\(N\)</span>).</p>
 <p>Reading back through section 3.1 of the ViT paper it says (bold mine):</p>
 <blockquote>
-<div><p>As a special case, the patches can have spatial size $1 \times 1$, which means that the <strong>input sequence is obtained by simply <em>flattening</em> the spatial dimensions of the feature map and projecting to the Transformer dimension</strong>.</p>
+<div><p>As a special case, the patches can have spatial size <span class="math notranslate nohighlight">\(1 \times 1\)</span>, which means that the <strong>input sequence is obtained by simply <em>flattening</em> the spatial dimensions of the feature map and projecting to the Transformer dimension</strong>.</p>
 </div></blockquote>
 <p>Flattening the spatial dimensions of the feature map hey?</p>
 <p>What layer do we have in PyTorch that can flatten?</p>
@@ -1781,7 +1854,7 @@ Flattened image feature map shape: torch.Size([1, 768, 196])
 </div>
 <p>Woohoo! It looks like our <code class="docutils literal notranslate"><span class="pre">image_out_of_conv_flattened</span></code> shape is very close to our desired output shape:</p>
 <ul class="simple">
-<li><p><strong>Desired output (flattened 2D patches):</strong> (196, 768) -&gt; ${N \times\left(P^{2} \cdot C\right)}$</p></li>
+<li><p><strong>Desired output (flattened 2D patches):</strong> (196, 768) -&gt; <span class="math notranslate nohighlight">\({N \times\left(P^{2} \cdot C\right)}\)</span></p></li>
 <li><p><strong>Current shape:</strong> (1, 768, 196)</p></li>
 </ul>
 <p>The only difference is our current shape has a batch size and the dimensions are in a different order to the desired output.</p>
@@ -1877,11 +1950,11 @@ Flattened image feature map shape: torch.Size([1, 768, 196])
 <p>Specifically we’ll:</p>
 <ol class="arabic simple">
 <li><p>Create a class called <code class="docutils literal notranslate"><span class="pre">PatchEmbedding</span></code> which subclasses <code class="docutils literal notranslate"><span class="pre">nn.Module</span></code> (so it can be used a PyTorch layer).</p></li>
-<li><p>Initialize the class with the parameters <code class="docutils literal notranslate"><span class="pre">in_channels=3</span></code>, <code class="docutils literal notranslate"><span class="pre">patch_size=16</span></code> (for ViT-Base) and <code class="docutils literal notranslate"><span class="pre">embedding_dim=768</span></code> (this is $D$ for ViT-Base from Table 1).</p></li>
+<li><p>Initialize the class with the parameters <code class="docutils literal notranslate"><span class="pre">in_channels=3</span></code>, <code class="docutils literal notranslate"><span class="pre">patch_size=16</span></code> (for ViT-Base) and <code class="docutils literal notranslate"><span class="pre">embedding_dim=768</span></code> (this is <span class="math notranslate nohighlight">\(D\)</span> for ViT-Base from Table 1).</p></li>
 <li><p>Create a layer to turn an image into patches using <code class="docutils literal notranslate"><span class="pre">nn.Conv2d()</span></code> (just like in 4.3 above).</p></li>
 <li><p>Create a layer to flatten the patch feature maps into a single dimension (just like in 4.4 above).</p></li>
 <li><p>Define a <code class="docutils literal notranslate"><span class="pre">forward()</span></code> method to take an input and pass it through the layers created in 3 and 4.</p></li>
-<li><p>Make sure the output shape reflects the required output shape of the ViT architecture (${N \times\left(P^{2} \cdot C\right)}$).</p></li>
+<li><p>Make sure the output shape reflects the required output shape of the ViT architecture (<span class="math notranslate nohighlight">\({N \times\left(P^{2} \cdot C\right)}\)</span>).</p></li>
 </ol>
 <p>Let’s do it!</p>
 <div class="cell docutils container">
@@ -1956,19 +2029,19 @@ Output patch embedding shape: torch.Size([1, 196, 768])
 <p>Beautiful!</p>
 <p>The output shape matches the ideal input and output shapes we’d like to see from the patch embedding layer:</p>
 <ul class="simple">
-<li><p><strong>Input:</strong> The image starts as 2D with size ${H \times W \times C}$.</p></li>
-<li><p><strong>Output:</strong> The image gets converted to a 1D sequence of flattened 2D patches with size ${N \times\left(P^{2} \cdot C\right)}$.</p></li>
+<li><p><strong>Input:</strong> The image starts as 2D with size <span class="math notranslate nohighlight">\({H \times W \times C}\)</span>.</p></li>
+<li><p><strong>Output:</strong> The image gets converted to a 1D sequence of flattened 2D patches with size <span class="math notranslate nohighlight">\({N \times\left(P^{2} \cdot C\right)}\)</span>.</p></li>
 </ul>
 <p>Where:</p>
 <ul class="simple">
-<li><p>$(H, W)$ is the resolution of the original image.</p></li>
-<li><p>$C$ is the number of channels.</p></li>
-<li><p>$(P, P)$ is the resolution of each image patch (<strong>patch size</strong>).</p></li>
-<li><p>$N=H W / P^{2}$ is the resulting number of patches, which also serves as the effective input sequence length for the Transformer.</p></li>
+<li><p><span class="math notranslate nohighlight">\((H, W)\)</span> is the resolution of the original image.</p></li>
+<li><p><span class="math notranslate nohighlight">\(C\)</span> is the number of channels.</p></li>
+<li><p><span class="math notranslate nohighlight">\((P, P)\)</span> is the resolution of each image patch (<strong>patch size</strong>).</p></li>
+<li><p><span class="math notranslate nohighlight">\(N=H W / P^{2}\)</span> is the resulting number of patches, which also serves as the effective input sequence length for the Transformer.</p></li>
 </ul>
 <p>We’ve now replicated the patch embedding for equation 1 but not the class token/position embedding.</p>
 <p>We’ll get to these later on.</p>
-<img src="images/08-vit-paper-replicating-the-patch-embedding-layer.png" width=900 alt="replicating the vision transformer architecture patch embedding layer"/>
+<a class="reference internal image-reference" href="../../../_images/08-vit-paper-replicating-the-patch-embedding-layer.png"><img alt="replicating the vision transformer architecture patch embedding layer" src="../../../_images/08-vit-paper-replicating-the-patch-embedding-layer.png" style="width: 900px;" /></a>
 <p><em>Our <code class="docutils literal notranslate"><span class="pre">PatchEmbedding</span></code> class (right) replicates the patch embedding of the ViT architecture from Figure 1 and Equation 1 from the ViT paper (left). However, the learnable class embedding and position embeddings haven’t been created yet. These will come soon.</em></p>
 <p>Let’s now get a summary of our <code class="docutils literal notranslate"><span class="pre">PatchEmbedding</span></code> layer.</p>
 <div class="cell docutils container">
@@ -1987,16 +2060,17 @@ Output patch embedding shape: torch.Size([1, 196, 768])
 </div>
 </div>
 </div>
-<img src="images/08-vit-paper-summary-output-patchembedding.png" alt="summary output of patchembedding layer for vision transformer with input and output shapes" width=900/></section>
+<img alt="summary output of patchembedding layer for vision transformer with input and output shapes" src="../../../_images/08-vit-paper-summary-output-patchembedding.png" />
+</section>
 <section id="creating-the-class-token-embedding">
 <h3>Creating the class token embedding<a class="headerlink" href="#creating-the-class-token-embedding" title="Link to this heading">#</a></h3>
 <p>Okay we’ve made the image patch embedding, time to get to work on the class token embedding.</p>
-<p>Or $\mathbf{x}_\text {class }$ from equation 1.</p>
-<img src="images/08-vit-paper-equation-1-the-class-token.png" width=900 alt="class token embedding highlight from the vision transformer paper figure 1 and section 3.1"/>
+<p>Or <span class="math notranslate nohighlight">\(\mathbf{x}_\text {class }\)</span> from equation 1.</p>
+<a class="reference internal image-reference" href="../../../_images/08-vit-paper-equation-1-the-class-token.png"><img alt="class token embedding highlight from the vision transformer paper figure 1 and section 3.1" src="../../../_images/08-vit-paper-equation-1-the-class-token.png" style="width: 900px;" /></a>
 <p><em>Left: Figure 1 from the ViT paper with the “classification token” or <code class="docutils literal notranslate"><span class="pre">[class]</span></code> embedding token we’re going to recreate highlighted. Right: Equation 1 and section 3.1 of the ViT paper that relate to the learnable class embedding token.</em></p>
 <p>Reading the second paragraph of section 3.1 from the ViT paper, we see the following description:</p>
 <blockquote>
-<div><p>Similar to BERT’s <code class="docutils literal notranslate"><span class="pre">[</span> <span class="pre">class</span> <span class="pre">]</span></code> token, we prepend a learnable embedding to the sequence of embedded patches $\left(\mathbf{z}<em>{0}^{0}=\mathbf{x}</em>{\text {class }}\right)$, whose state at the output of the Transformer encoder $\left(\mathbf{z}_{L}^{0}\right)$ serves as the image representation $\mathbf{y}$ (Eq. 4).</p>
+<div><p>Similar to BERT’s <code class="docutils literal notranslate"><span class="pre">[</span> <span class="pre">class</span> <span class="pre">]</span></code> token, we prepend a learnable embedding to the sequence of embedded patches <span class="math notranslate nohighlight">\(\left(\mathbf{z}_{0}^{0}=\mathbf{x}_{\text {class }}\right)\)</span>, whose state at the output of the Transformer encoder <span class="math notranslate nohighlight">\(\left(\mathbf{z}_{L}^{0}\right)\)</span> serves as the image representation <span class="math notranslate nohighlight">\(\mathbf{y}\)</span> (Eq. 4).</p>
 </div></blockquote>
 <blockquote>
 <div><p><strong>Note:</strong> <a class="reference external" href="https://arxiv.org/abs/1810.04805">BERT</a> (Bidirectional Encoder Representations from Transformers) is one of the original machine learning research papers to use the Transformer architecture to achieve outstanding results on natural language processing (NLP) tasks and is where the idea of having a <code class="docutils literal notranslate"><span class="pre">[</span> <span class="pre">class</span> <span class="pre">]</span></code> token at the start of a sequence originated, class being a description for the “classification” class the sequence belonged to.</p>
@@ -2025,7 +2099,7 @@ Patch embedding shape: torch.Size([1, 196, 768]) -&gt; [batch_size, number_of_pa
 </div>
 </div>
 </div>
-<p>To “prepend a learnable embedding to the sequence of embedded patches” we need to create a learnable embedding in the shape of the <code class="docutils literal notranslate"><span class="pre">embedding_dimension</span></code> ($D$) and then add it to the <code class="docutils literal notranslate"><span class="pre">number_of_patches</span></code> dimension.</p>
+<p>To “prepend a learnable embedding to the sequence of embedded patches” we need to create a learnable embedding in the shape of the <code class="docutils literal notranslate"><span class="pre">embedding_dimension</span></code> (<span class="math notranslate nohighlight">\(D\)</span>) and then add it to the <code class="docutils literal notranslate"><span class="pre">number_of_patches</span></code> dimension.</p>
 <p>Or in pseudocode:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">patch_embedding</span> <span class="o">=</span> <span class="p">[</span><span class="n">image_patch_1</span><span class="p">,</span> <span class="n">image_patch_2</span><span class="p">,</span> <span class="n">image_patch_3</span><span class="o">...</span><span class="p">]</span>
 <span class="n">class_token</span> <span class="o">=</span> <span class="n">learnable_embedding</span>
@@ -2094,14 +2168,14 @@ Sequence of patch embeddings with class token prepended shape: torch.Size([1, 19
 </div>
 </div>
 <p>Nice! Learnable class token prepended!</p>
-<img src="images/08-vit-paper-equation-1-prepending-the-learnable-class-token.png" width=900 alt="going from a sequence of patch embeddings, creating a learnable class token and then prepending it to the patch embeddings"/>
+<a class="reference internal image-reference" href="../../../_images/08-vit-paper-equation-1-prepending-the-learnable-class-token.png"><img alt="going from a sequence of patch embeddings, creating a learnable class token and then prepending it to the patch embeddings" src="../../../_images/08-vit-paper-equation-1-prepending-the-learnable-class-token.png" style="width: 900px;" /></a>
 <p><em>Reviewing what we’ve done to create the learnable class token, we start with a sequence of image patch embeddings created by <code class="docutils literal notranslate"><span class="pre">PatchEmbedding()</span></code> on single image, we then created a learnable class token with one value for each of the embedding dimensions and then prepended it to the original sequence of patch embeddings. <strong>Note:</strong> Using <code class="docutils literal notranslate"><span class="pre">torch.ones()</span></code> to create the learnable class token is mostly for demonstration purposes only, in practice, you’d likely create it with <code class="docutils literal notranslate"><span class="pre">torch.randn()</span></code>.</em></p>
 </section>
 <section id="creating-the-position-embedding">
 <h3>Creating the position embedding<a class="headerlink" href="#creating-the-position-embedding" title="Link to this heading">#</a></h3>
 <p>Well, we’ve got the class token embedding and the patch embedding, now how might we create the position embedding?</p>
-<p>Or $\mathbf{E}_{\text {pos }}$ from equation 1 where $E$ stands for “embedding”.</p>
-<img src="images/08-vit-paper-equation-1-the-position-embeddings.png" width=900 alt="extracting the position embeddings from the vision transformer architecture and comparing them to other sections of the vision transformer paper"/>
+<p>Or <span class="math notranslate nohighlight">\(\mathbf{E}_{\text {pos }}\)</span> from equation 1 where <span class="math notranslate nohighlight">\(E\)</span> stands for “embedding”.</p>
+<a class="reference internal image-reference" href="../../../_images/08-vit-paper-equation-1-the-position-embeddings.png"><img alt="extracting the position embeddings from the vision transformer architecture and comparing them to other sections of the vision transformer paper" src="../../../_images/08-vit-paper-equation-1-the-position-embeddings.png" style="width: 900px;" /></a>
 <p><em>Left: Figure 1 from the ViT paper with the position embedding we’re going to recreate highlighted. Right: Equation 1 and section 3.1 of the ViT paper that relate to the position embedding.</em></p>
 <p>Let’s find out more by reading section 3.1 of the ViT paper (bold mine):</p>
 <blockquote>
@@ -2131,15 +2205,16 @@ Sequence of patch embeddings with class token prepended shape: torch.Size([1, 19
 </div>
 </div>
 </div>
-<p>Equation 1 states that the position embeddings ($\mathbf{E}_{\text {pos }}$) should have the shape $(N + 1) \times D$:</p>
-<p>$$\mathbf{E}_{\text {pos }} \in \mathbb{R}^{(N+1) \times D}$$</p>
+<p>Equation 1 states that the position embeddings (<span class="math notranslate nohighlight">\(\mathbf{E}_{\text {pos }}\)</span>) should have the shape <span class="math notranslate nohighlight">\((N + 1) \times D\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{E}_{\text {pos }} \in \mathbb{R}^{(N+1) \times D}\]</div>
 <p>Where:</p>
 <ul class="simple">
-<li><p>$N=H W / P^{2}$ is the resulting number of patches, which also serves as the effective input sequence length for the Transformer (number of patches).</p></li>
-<li><p>$D$ is the size of the <strong>patch embeddings</strong>, different values for $D$ can be found in Table 1 (embedding dimension).</p></li>
+<li><p><span class="math notranslate nohighlight">\(N=H W / P^{2}\)</span> is the resulting number of patches, which also serves as the effective input sequence length for the Transformer (number of patches).</p></li>
+<li><p><span class="math notranslate nohighlight">\(D\)</span> is the size of the <strong>patch embeddings</strong>, different values for <span class="math notranslate nohighlight">\(D\)</span> can be found in Table 1 (embedding dimension).</p></li>
 </ul>
 <p>Luckily we’ve got both of these values already.</p>
-<p>So let’s make a learnable 1D embedding with <code class="docutils literal notranslate"><span class="pre">torch.ones()</span></code> to create $\mathbf{E}_{\text {pos }}$.</p>
+<p>So let’s make a learnable 1D embedding with <code class="docutils literal notranslate"><span class="pre">torch.ones()</span></code> to create <span class="math notranslate nohighlight">\(\mathbf{E}_{\text {pos }}\)</span>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Calculate N (number of patches)</span>
@@ -2208,18 +2283,19 @@ Patch embeddings, class token prepended and positional embeddings added shape: t
 <blockquote>
 <div><p><strong>Note:</strong> We could put both the class token embedding and position embedding into their own layer if we wanted to. But we’ll see later on in section 8 how they can be incorporated into the overall ViT architecture’s <code class="docutils literal notranslate"><span class="pre">forward()</span></code> method.</p>
 </div></blockquote>
-<img src="images/08-vit-paper-equation-1-patch-embeddings-with-learnable-class-token-and-position-embeddings.png" width=900 alt="patch embeddings with learnable class token and position embeddings"/>
+<a class="reference internal image-reference" href="../../../_images/08-vit-paper-equation-1-patch-embeddings-with-learnable-class-token-and-position-embeddings.png"><img alt="patch embeddings with learnable class token and position embeddings" src="../../../_images/08-vit-paper-equation-1-patch-embeddings-with-learnable-class-token-and-position-embeddings.png" style="width: 900px;" /></a>
 <p><em>The workflow we’ve used for adding the position embeddings to the sequence of patch embeddings and class token. <strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">torch.ones()</span></code> only used to create embeddings for illustration purposes, in practice, you’d likely use <code class="docutils literal notranslate"><span class="pre">torch.randn()</span></code> to start with a random number.</em></p>
 </section>
 <section id="putting-it-all-together-from-image-to-embedding">
 <h3>Putting it all together: from image to embedding<a class="headerlink" href="#putting-it-all-together-from-image-to-embedding" title="Link to this heading">#</a></h3>
 <p>Alright, we’ve come a long way in terms of turning our input images into an embedding and replicating equation 1 from section 3.1 of the ViT paper:</p>
-<p>$$
+<div class="math notranslate nohighlight">
+\[
 \begin{aligned}
-\mathbf{z}<em>{0} &amp;=\left[\mathbf{x}</em>{\text {class }} ; \mathbf{x}<em>{p}^{1} \mathbf{E} ; \mathbf{x}</em>{p}^{2} \mathbf{E} ; \cdots ; \mathbf{x}<em>{p}^{N} \mathbf{E}\right]+\mathbf{E}</em>{\text {pos }}, &amp; &amp; \mathbf{E} \in \mathbb{R}^{\left(P^{2} \cdot C\right) \times D}, \mathbf{E}_{\text {pos }} \in \mathbb{R}^{(N+1) \times D}
+\mathbf{z}_{0} &amp;=\left[\mathbf{x}_{\text {class }} ; \mathbf{x}_{p}^{1} \mathbf{E} ; \mathbf{x}_{p}^{2} \mathbf{E} ; \cdots ; \mathbf{x}_{p}^{N} \mathbf{E}\right]+\mathbf{E}_{\text {pos }}, &amp; &amp; \mathbf{E} \in \mathbb{R}^{\left(P^{2} \cdot C\right) \times D}, \mathbf{E}_{\text {pos }} \in \mathbb{R}^{(N+1) \times D}
 \end{aligned}
-$$</p>
-<p>Let’s now put everything together in a single code cell and go from input image ($\mathbf{x}$) to output embedding ($\mathbf{z}_0$).</p>
+\]</div>
+<p>Let’s now put everything together in a single code cell and go from input image (<span class="math notranslate nohighlight">\(\mathbf{x}\)</span>) to output embedding (<span class="math notranslate nohighlight">\(\mathbf{z}_0\)</span>).</p>
 <p>We can do so by:</p>
 <ol class="arabic simple">
 <li><p>Setting the patch size (we’ll use <code class="docutils literal notranslate"><span class="pre">16</span></code> as it’s widely used throughout the paper and for ViT-Base).</p></li>
@@ -2292,10 +2368,10 @@ Patch and position embedding shape: torch.Size([1, 197, 768])
 </div>
 <p>Woohoo!</p>
 <p>From a single image to patch and position embeddings in a single cell of code.</p>
-<img src="images/08-vit-paper-equation-1-putting-it-all-together.png" width=900 alt="mapping equation 1 from the vision transformer paper to pytorch code"/>
+<a class="reference internal image-reference" href="../../../_images/08-vit-paper-equation-1-putting-it-all-together.png"><img alt="mapping equation 1 from the vision transformer paper to pytorch code" src="../../../_images/08-vit-paper-equation-1-putting-it-all-together.png" style="width: 900px;" /></a>
 <p><em>Mapping equation 1 from the ViT paper to our PyTorch code. This is the essence of paper replicating, taking a research paper and turning it into usable code.</em></p>
 <p>Now we’ve got a way to encode our images and pass them to the Transformer Encoder in Figure 1 of the ViT paper.</p>
-<img src=".gif" alt="Vision transformer architecture animation, going from a single image and passing it through a patch embedidng layer and then passing it through the transformer encoder." width=900/>
+<img alt="Vision transformer architecture animation, going from a single image and passing it through a patch embedidng layer and then passing it through the transformer encoder." src="content/tools/pytorch/.gif" />
 <p><em>Animating the entire ViT workflow: from patch embeddings to transformer encoder to MLP head.</em></p>
 <p>From a code perspective, creating the patch embedding is probably the largest section of replicating the ViT paper.</p>
 <p>Many of the other parts of the ViT paper such as the Multi-Head Attention and Norm layers can be created using existing PyTorch layers.</p>
@@ -2308,14 +2384,15 @@ Patch and position embedding shape: torch.Size([1, 197, 768])
 <p>To start, we’ll break down the Transformer Encoder section into two parts (start small and increase when necessary).</p>
 <p>The first being equation 2 and the second being equation 3.</p>
 <p>Recall equation 2 states:</p>
-<p>$$
+<div class="math notranslate nohighlight">
+\[
 \begin{aligned}
-\mathbf{z}<em>{\ell}^{\prime} &amp;=\operatorname{MSA}\left(\operatorname{LN}\left(\mathbf{z}</em>{\ell-1}\right)\right)+\mathbf{z}_{\ell-1}, &amp; &amp; \ell=1 \ldots L
+\mathbf{z}_{\ell}^{\prime} &amp;=\operatorname{MSA}\left(\operatorname{LN}\left(\mathbf{z}_{\ell-1}\right)\right)+\mathbf{z}_{\ell-1}, &amp; &amp; \ell=1 \ldots L
 \end{aligned}
-$$</p>
+\]</div>
 <p>This indicates a Multi-Head Attention (MSA) layer wrapped in a LayerNorm (LN) layer with a residual connection (the input to the layer gets added to the output of the layer).</p>
 <p>We’ll refer to equation 2 as the “MSA block”.</p>
-<img src="images/08-vit-paper-equation-2-msa-block-mapped-to-equation.png" alt="mapping equation 2 from the ViT paper to the ViT architecture diagram in figure 1" width=900/>
+<img alt="mapping equation 2 from the ViT paper to the ViT architecture diagram in figure 1" src="../../../_images/08-vit-paper-equation-2-msa-block-mapped-to-equation.png" />
 <p><em><strong>Left:</strong> Figure 1 from the ViT paper with Multi-Head Attention and Norm layers as well as the residual connection (+) highlighted within the Transformer Encoder block. <strong>Right:</strong> Mapping the Multi-Head Self Attention (MSA) layer, Norm layer and residual connection to their respective parts of equation 2 in the ViT paper.</em></p>
 <p>Many layers you find in research papers are already implemented in modern deep learning frameworks such as PyTorch.</p>
 <p>In saying this, to replicate these layers and residual connection with PyTorch code we can use:</p>
@@ -2328,7 +2405,7 @@ $$</p>
 <h3>The LayerNorm (LN) layer<a class="headerlink" href="#the-layernorm-ln-layer" title="Link to this heading">#</a></h3>
 <p><a class="reference external" href="https://paperswithcode.com/method/layer-normalization">Layer Normalization</a> (<code class="docutils literal notranslate"><span class="pre">torch.nn.LayerNorm()</span></code> or Norm or LayerNorm or LN) normalizes an input over the last dimension.</p>
 <p>You can find the formal definition of <code class="docutils literal notranslate"><span class="pre">torch.nn.LayerNorm()</span></code> in the <a class="reference external" href="https://pytorch.org/docs/stable/generated/torch.nn.LayerNorm.html">PyTorch documentation</a>.</p>
-<p>PyTorch’s <code class="docutils literal notranslate"><span class="pre">torch.nn.LayerNorm()</span></code>’s main parameter is <code class="docutils literal notranslate"><span class="pre">normalized_shape</span></code> which we can set to be equal to the dimension size we’d like to noramlize over (in our case it’ll be $D$ or <code class="docutils literal notranslate"><span class="pre">768</span></code> for ViT-Base).</p>
+<p>PyTorch’s <code class="docutils literal notranslate"><span class="pre">torch.nn.LayerNorm()</span></code>’s main parameter is <code class="docutils literal notranslate"><span class="pre">normalized_shape</span></code> which we can set to be equal to the dimension size we’d like to noramlize over (in our case it’ll be <span class="math notranslate nohighlight">\(D\)</span> or <code class="docutils literal notranslate"><span class="pre">768</span></code> for ViT-Base).</p>
 <p>What does it do?</p>
 <p>Layer Normalization helps improve training time and model generalization (ability to adapt to unseen data).</p>
 <p>I like to think of any kind of normalization as “getting the data into a similar format” or “getting data samples into a similar distribution”.</p>
@@ -2350,7 +2427,7 @@ $$</p>
 <p>There are many resources online to learn more about the Transformer architeture and attention mechanism online such as Jay Alammar’s wonderful <a class="reference external" href="https://jalammar.github.io/illustrated-transformer/">Illustrated Transformer post</a> and <a class="reference external" href="https://jalammar.github.io/visualizing-neural-machine-translation-mechanics-of-seq2seq-models-with-attention/">Illustrated Attention post</a>.</p>
 <p>We’re going to focus more on coding an existing PyTorch MSA implementation than creating our own.</p>
 <p>However, you can find the formal defintion of the ViT paper’s MSA implementation is defined in Appendix A:</p>
-<img src="images/08-vit-paper-equation-2-appendix-A.png" alt="vision transformer paper figure 1 highlighted with equation 2 and appendix A" width=900/>
+<img alt="vision transformer paper figure 1 highlighted with equation 2 and appendix A" src="../../../_images/08-vit-paper-equation-2-appendix-A.png" />
 <p><em><strong>Left:</strong> Vision Transformer architecture overview from Figure 1 of the ViT paper. <strong>Right:</strong> Definitions of equation 2, section 3.1 and Appendix A of the ViT paper highlighted to reflect their respective parts in Figure 1.</em></p>
 <p>The image above highlights the triple embedding input to the MSA layer.</p>
 <p>This is known as <strong>query, key, value</strong> input or <strong>qkv</strong> for short which is fundamental to the self-attention mechanism.</p>
@@ -2358,7 +2435,7 @@ $$</p>
 <p>Or three versions of our layer-normalized image patch and position embeddings created in section 4.8.</p>
 <p>We can implement the MSA layer in PyTorch with <code class="docutils literal notranslate"><span class="pre">torch.nn.MultiheadAttention()</span></code> with the parameters:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">embed_dim</span></code> - the embedding dimension from Table 1 (Hidden size $D$).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">embed_dim</span></code> - the embedding dimension from Table 1 (Hidden size <span class="math notranslate nohighlight">\(D\)</span>).</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">num_heads</span></code> - how many attention heads to use (this is where the term “multihead” comes from), this value is also in Table 1 (Heads).</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">dropout</span></code> - whether or not to apply dropout to the attention layer (according to Appendix B.1, dropout isn’t used after the qkv-projections).</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">batch_first</span></code> - does our batch dimension come first? (yes it does)</p></li>
@@ -2371,7 +2448,7 @@ $$</p>
 <ol class="arabic simple">
 <li><p>Create a class called <code class="docutils literal notranslate"><span class="pre">MultiheadSelfAttentionBlock</span></code> that inherits from <code class="docutils literal notranslate"><span class="pre">torch.nn.Module</span></code>.</p></li>
 <li><p>Initialize the class with hyperparameters from Table 1 of the ViT paper for the ViT-Base model.</p></li>
-<li><p>Create a layer normalization (LN) layer with <code class="docutils literal notranslate"><span class="pre">torch.nn.LayerNorm()</span></code> with the <code class="docutils literal notranslate"><span class="pre">normalized_shape</span></code> parameter the same as our embedding dimension ($D$ from Table 1).</p></li>
+<li><p>Create a layer normalization (LN) layer with <code class="docutils literal notranslate"><span class="pre">torch.nn.LayerNorm()</span></code> with the <code class="docutils literal notranslate"><span class="pre">normalized_shape</span></code> parameter the same as our embedding dimension (<span class="math notranslate nohighlight">\(D\)</span> from Table 1).</p></li>
 <li><p>Create a multi-head attention (MSA) layer with the appropriate <code class="docutils literal notranslate"><span class="pre">embed_dim</span></code>, <code class="docutils literal notranslate"><span class="pre">num_heads</span></code>, <code class="docutils literal notranslate"><span class="pre">dropout</span></code> and <code class="docutils literal notranslate"><span class="pre">batch_first</span></code> parameters.</p></li>
 <li><p>Create a <code class="docutils literal notranslate"><span class="pre">forward()</span></code> method for our class passing the in the inputs through the LN layer and MSA layer.</p></li>
 </ol>
@@ -2410,7 +2487,7 @@ $$</p>
 </div>
 </div>
 <blockquote>
-<div><p><strong>Note:</strong> Unlike Figure 1, our <code class="docutils literal notranslate"><span class="pre">MultiheadSelfAttentionBlock</span></code> doesn’t include a skip or residual connection (“$+\mathbf{z}_{\ell-1}$” in equation 2), we’ll include this when we create the entire Transformer Encoder later on in section 7.1.</p>
+<div><p><strong>Note:</strong> Unlike Figure 1, our <code class="docutils literal notranslate"><span class="pre">MultiheadSelfAttentionBlock</span></code> doesn’t include a skip or residual connection (“<span class="math notranslate nohighlight">\(+\mathbf{z}_{\ell-1}\)</span>” in equation 2), we’ll include this when we create the entire Transformer Encoder later on in section 7.1.</p>
 </div></blockquote>
 <p>MSABlock created!</p>
 <p>Let’s try it out by create an instance of our <code class="docutils literal notranslate"><span class="pre">MultiheadSelfAttentionBlock</span></code> and passing through the <code class="docutils literal notranslate"><span class="pre">patch_and_position_embedding</span></code> variable we created in section 4.8.</p>
@@ -2437,7 +2514,7 @@ Output shape MSA block: torch.Size([1, 197, 768])
 <p>Notice how the input and output shape of our data stays the same when it goes through the MSA block.</p>
 <p>This doesn’t mean the data doesn’t change as it goes through.</p>
 <p>You could try printing the input and output tensor to see how it changes (though this change will be across <code class="docutils literal notranslate"><span class="pre">1</span> <span class="pre">*</span> <span class="pre">197</span> <span class="pre">*</span> <span class="pre">768</span></code> values and could be hard to visualize).</p>
-<img src="images/08-vit-paper-equation-2-in-code.png" width=900 alt="vision transformer paper with equation 2 of figure 1 highlighted and equation 2 turned into code"/>
+<a class="reference internal image-reference" href="../../../_images/08-vit-paper-equation-2-in-code.png"><img alt="vision transformer paper with equation 2 of figure 1 highlighted and equation 2 turned into code" src="../../../_images/08-vit-paper-equation-2-in-code.png" style="width: 900px;" /></a>
 <p><em><strong>Left:</strong> Vision Transformer architecture from Figure 1 with Multi-Head Attention and LayerNorm layers highlighted, these layers make up equation 2 from section 3.1 of the paper. <strong>Right:</strong> Replicating equation 2 (without the skip connection on the end) using PyTorch layers.</em></p>
 <p>We’ve now officially replicated equation 2 (except for the residual connection on the end but we’ll get to this in section 7.1)!</p>
 <p>Onto the next!</p>
@@ -2447,15 +2524,16 @@ Output shape MSA block: torch.Size([1, 197, 768])
 <h2>Equation 3: Multilayer Perceptron (MLP)<a class="headerlink" href="#equation-3-multilayer-perceptron-mlp" title="Link to this heading">#</a></h2>
 <p>We’re on a roll here!</p>
 <p>Let’s keep it going and replicate equation 3:</p>
-<p>$$
+<div class="math notranslate nohighlight">
+\[
 \begin{aligned}
-\mathbf{z}<em>{\ell} &amp;=\operatorname{MLP}\left(\operatorname{LN}\left(\mathbf{z}</em>{\ell}^{\prime}\right)\right)+\mathbf{z}_{\ell}^{\prime}, &amp; &amp; \ell=1 \ldots L
+\mathbf{z}_{\ell} &amp;=\operatorname{MLP}\left(\operatorname{LN}\left(\mathbf{z}_{\ell}^{\prime}\right)\right)+\mathbf{z}_{\ell}^{\prime}, &amp; &amp; \ell=1 \ldots L
 \end{aligned}
-$$</p>
+\]</div>
 <p>Here MLP stands for “multilayer perceptron” and LN stands for “layer normalization” (as discussed above).</p>
 <p>And the addition on the end is the skip/residual connection.</p>
 <p>We’ll refer to equation 3 as the “MLP block” of the Transformer encoder (notice how we’re continuing the trend of breaking down the architecture into smaller chunks).</p>
-<img src="images/08-vit-paper-equation-3-annotated.png" alt="mapping equation 3 from the ViT paper to the ViT architecture diagram in figure 1" width=900/>
+<img alt="mapping equation 3 from the ViT paper to the ViT architecture diagram in figure 1" src="../../../_images/08-vit-paper-equation-3-annotated.png" />
 <p><em><strong>Left:</strong> Figure 1 from the ViT paper with MLP and Norm layers as well as the residual connection (+) highlighted within the Transformer Encoder block. <strong>Right:</strong> Mapping the multilayer perceptron (MLP) layer, Norm layer (LN) and residual connection to their respective parts of equation 3 in the ViT paper.</em></p>
 <section id="the-mlp-layer-s">
 <h3>The MLP layer(s)<a class="headerlink" href="#the-mlp-layer-s" title="Link to this heading">#</a></h3>
@@ -2478,7 +2556,7 @@ $$</p>
 <p>The value of which can be found in Table 3 of the ViT paper (for ViT-Base, <code class="docutils literal notranslate"><span class="pre">dropout=0.1</span></code>).</p>
 <p>Knowing this, the structure of our MLP block will be:</p>
 <p><code class="docutils literal notranslate"><span class="pre">layer</span> <span class="pre">norm</span> <span class="pre">-&gt;</span> <span class="pre">linear</span> <span class="pre">layer</span> <span class="pre">-&gt;</span> <span class="pre">non-linear</span> <span class="pre">layer</span> <span class="pre">-&gt;</span> <span class="pre">dropout</span> <span class="pre">-&gt;</span> <span class="pre">linear</span> <span class="pre">layer</span> <span class="pre">-&gt;</span> <span class="pre">dropout</span></code></p>
-<p>With hyperparameter values for the linear layers available from Table 1 (MLP size is the number of hidden units between the linear layers and hidden size $D$ is the output size of the MLP block).</p>
+<p>With hyperparameter values for the linear layers available from Table 1 (MLP size is the number of hidden units between the linear layers and hidden size <span class="math notranslate nohighlight">\(D\)</span> is the output size of the MLP block).</p>
 </section>
 <section id="replicating-equation-3-with-pytorch-layers">
 <h3>Replicating Equation 3 with PyTorch layers<a class="headerlink" href="#replicating-equation-3-with-pytorch-layers" title="Link to this heading">#</a></h3>
@@ -2487,7 +2565,7 @@ $$</p>
 <ol class="arabic simple">
 <li><p>Create a class called <code class="docutils literal notranslate"><span class="pre">MLPBlock</span></code> that inherits from <code class="docutils literal notranslate"><span class="pre">torch.nn.Module</span></code>.</p></li>
 <li><p>Initialize the class with hyperparameters from Table 1 and Table 3 of the ViT paper for the ViT-Base model.</p></li>
-<li><p>Create a layer normalization (LN) layer with <code class="docutils literal notranslate"><span class="pre">torch.nn.LayerNorm()</span></code> with the <code class="docutils literal notranslate"><span class="pre">normalized_shape</span></code> parameter the same as our embedding dimension ($D$ from Table 1).</p></li>
+<li><p>Create a layer normalization (LN) layer with <code class="docutils literal notranslate"><span class="pre">torch.nn.LayerNorm()</span></code> with the <code class="docutils literal notranslate"><span class="pre">normalized_shape</span></code> parameter the same as our embedding dimension (<span class="math notranslate nohighlight">\(D\)</span> from Table 1).</p></li>
 <li><p>Create a sequential series of MLP layers(s) using <code class="docutils literal notranslate"><span class="pre">torch.nn.Linear()</span></code>, <code class="docutils literal notranslate"><span class="pre">torch.nn.Dropout()</span></code> and <code class="docutils literal notranslate"><span class="pre">torch.nn.GELU()</span></code> with appropriate hyperparameter values from Table 1 and Table 3.</p></li>
 <li><p>Create a <code class="docutils literal notranslate"><span class="pre">forward()</span></code> method for our class passing the in the inputs through the LN layer and MLP layer(s).</p></li>
 </ol>
@@ -2527,7 +2605,7 @@ $$</p>
 </div>
 </div>
 <blockquote>
-<div><p><strong>Note:</strong> Unlike Figure 1, our <code class="docutils literal notranslate"><span class="pre">MLPBlock()</span></code> doesn’t include a skip or residual connection (“$+\mathbf{z}_{\ell}^{\prime}$” in equation 3), we’ll include this when we create the entire Transformer encoder later on.</p>
+<div><p><strong>Note:</strong> Unlike Figure 1, our <code class="docutils literal notranslate"><span class="pre">MLPBlock()</span></code> doesn’t include a skip or residual connection (“<span class="math notranslate nohighlight">\(+\mathbf{z}_{\ell}^{\prime}\)</span>” in equation 3), we’ll include this when we create the entire Transformer encoder later on.</p>
 </div></blockquote>
 <p>MLPBlock class created!</p>
 <p>Let’s try it out by create an instance of our <code class="docutils literal notranslate"><span class="pre">MLPBlock</span></code> and passing through the <code class="docutils literal notranslate"><span class="pre">patched_image_through_msa_block</span></code> variable we created in section 5.3.</p>
@@ -2553,8 +2631,8 @@ Output shape MLP block: torch.Size([1, 197, 768])
 </div>
 </div>
 <p>Notice how the input and output shape of our data again stays the same when it goes in and out of the MLP block.</p>
-<p>However, the shape does change when the data gets passed through the <code class="docutils literal notranslate"><span class="pre">nn.Linear()</span></code> layers within the MLP block (expanded to MLP size from Table 1 and then compressed back to Hidden size $D$ from Table 1).</p>
-<img src="images/08-vit-paper-equation-3-mapped-to-code.png" width=900 alt="vision transformer paper with equation 3 of figure 1 highlighted and equation 3 turned into code"/>
+<p>However, the shape does change when the data gets passed through the <code class="docutils literal notranslate"><span class="pre">nn.Linear()</span></code> layers within the MLP block (expanded to MLP size from Table 1 and then compressed back to Hidden size <span class="math notranslate nohighlight">\(D\)</span> from Table 1).</p>
+<a class="reference internal image-reference" href="../../../_images/08-vit-paper-equation-3-mapped-to-code.png"><img alt="vision transformer paper with equation 3 of figure 1 highlighted and equation 3 turned into code" src="../../../_images/08-vit-paper-equation-3-mapped-to-code.png" style="width: 900px;" /></a>
 <p><em>Left: Vision Transformer architecture from Figure 1 with MLP and Norm layers highlighted, these layers make up equation 3 from section 3.1 of the paper. Right: Replicating equation 3 (without the skip connection on the end) using PyTorch layers.</em></p>
 <p>Ho ho!</p>
 <p>Equation 3 replicated (except for the residual connection on the end but we’ll get to this in section 7.1)!</p>
@@ -2633,10 +2711,10 @@ Output shape MLP block: torch.Size([1, 197, 768])
 </div>
 </div>
 <p>Transformer Encoder block created!</p>
-<img src="images/08-vit-paper-transformer-encoder-highlighted.png" width=900 alt="vision transformer architecture with transformer encoder blocks highlighted"/>
+<a class="reference internal image-reference" href="../../../_images/08-vit-paper-transformer-encoder-highlighted.png"><img alt="vision transformer architecture with transformer encoder blocks highlighted" src="../../../_images/08-vit-paper-transformer-encoder-highlighted.png" style="width: 900px;" /></a>
 <p><em><strong>Left:</strong> Figure 1 from the ViT paper with the Transformer Encoder of the ViT architecture highlighted. <strong>Right:</strong> Transformer Encoder mapped to equation 2 and 3 of the ViT paper, the Transformer Encoder is comprised of alternating blocks of equation 2 (Multi-Head Attention) and equation 3 (Multilayer perceptron).</em></p>
 <p>See how we’re starting to piece together the overall architecture like legos, coding one brick (or equation) at a time.</p>
-<img src="images/08-vit-paper-transformer-encoder-mapped-to-code.png" width=900 alt="vision transformer architecture transformer encoder block mapped to code"/>
+<a class="reference internal image-reference" href="../../../_images/08-vit-paper-transformer-encoder-mapped-to-code.png"><img alt="vision transformer architecture transformer encoder block mapped to code" src="../../../_images/08-vit-paper-transformer-encoder-mapped-to-code.png" style="width: 900px;" /></a>
 <p><em>Mapping the ViT Transformer Encoder to code.</em></p>
 <p>You might’ve noticed that Table 1 from the ViT paper has a Layers column. This refers to the number of Transformer Encoder blocks in the specific ViT architecure.</p>
 <p>In our case, for ViT-Base, we’ll be stacking together 12 of these Transformer Encoder blocks to form the backbone of our architecture (we’ll get to this in section 8).</p>
@@ -2656,15 +2734,15 @@ Output shape MLP block: torch.Size([1, 197, 768])
 </div>
 </div>
 </div>
-<img src="images/08-vit-paper-summary-output-transformer-encoder.png" alt="summary output of a Transformer Encoder layer in PyTorch" width=900/>
+<img alt="summary output of a Transformer Encoder layer in PyTorch" src="../../../_images/08-vit-paper-summary-output-transformer-encoder.png" />
 <p>Woah! Check out all those parameters!</p>
 <p>You can see our input changing shape as it moves through all of the various layers in the MSA block and MLP block of the Transformer Encoder block before finally returning to its original shape at the very end.</p>
 <blockquote>
 <div><p><strong>Note:</strong> Just because our input to the Transformer Encoder block has the same shape at the output of the block doesn’t mean the values weren’t manipulated, the whole goal of the Transformer Encoder block (and stacking them together) is to learn a deep representation of the input using the various layers in between.</p>
 </div></blockquote>
 </section>
-<section id="creating-a-transformer-encoder-with-pytorch-s-transformer-layers">
-<h3>Creating a Transformer Encoder with PyTorch’s Transformer layers<a class="headerlink" href="#creating-a-transformer-encoder-with-pytorch-s-transformer-layers" title="Link to this heading">#</a></h3>
+<section id="creating-a-transformer-encoder-with-pytorchs-transformer-layers">
+<h3>Creating a Transformer Encoder with PyTorch’s Transformer layers<a class="headerlink" href="#creating-a-transformer-encoder-with-pytorchs-transformer-layers" title="Link to this heading">#</a></h3>
 <p>So far we’ve built the components of and the Transformer Encoder layer itself ourselves.</p>
 <p>But because of their rise in popularity and effectiveness, PyTorch now has in-built <a class="reference external" href="https://pytorch.org/docs/stable/nn.html#transformer-layers">Transformer layers as part of <code class="docutils literal notranslate"><span class="pre">torch.nn</span></code></a>.</p>
 <p>For example, we can recreate the <code class="docutils literal notranslate"><span class="pre">TransformerEncoderBlock</span></code> we just created using <a class="reference external" href="https://pytorch.org/docs/stable/generated/torch.nn.TransformerEncoderLayer.html#torch.nn.TransformerEncoderLayer"><code class="docutils literal notranslate"><span class="pre">torch.nn.TransformerEncoderLayer()</span></code></a> and setting the same hyperparameters as above.</p>
@@ -2713,7 +2791,7 @@ Output shape MLP block: torch.Size([1, 197, 768])
 </div>
 </div>
 </div>
-<img src="images/08-vit-paper-summary-output-pytorch-transformer-encoder.png" alt="output summary of PyTorch's implementation of the Transformer Encoder layer" width=900/>
+<img alt="output summary of PyTorch's implementation of the Transformer Encoder layer" src="../../../_images/08-vit-paper-summary-output-pytorch-transformer-encoder.png" />
 <p>The output of the summary is slightly different to ours due to how <code class="docutils literal notranslate"><span class="pre">torch.nn.TransformerEncoderLayer()</span></code> constructs its layer.</p>
 <p>But the layers it uses, number of parameters and input and output shapes are the same.</p>
 <p>You might be thinking, “if we could create the Transformer Encoder so quickly with PyTorch layers, why did we bother reproducing equation 2 and 3?”</p>
@@ -2738,13 +2816,14 @@ Output shape MLP block: torch.Size([1, 197, 768])
 <p>We’re going to combine all of the blocks we’ve created to replicate the full ViT architecture.</p>
 <p>From the patch and positional embedding to the Transformer Encoder(s) to the MLP Head.</p>
 <p>But wait, we haven’t created equation 4 yet…</p>
-<p>$$
+<div class="math notranslate nohighlight">
+\[
 \begin{aligned}
 \mathbf{y} &amp;=\operatorname{LN}\left(\mathbf{z}_{L}^{0}\right) &amp; &amp;
 \end{aligned}
-$$</p>
+\]</div>
 <p>Don’t worry, we can put equation 4 into our overall ViT architecture class.</p>
-<p>All we need is a <code class="docutils literal notranslate"><span class="pre">torch.nn.LayerNorm()</span></code> layer and a <code class="docutils literal notranslate"><span class="pre">torch.nn.Linear()</span></code> layer to convert the 0th index ($\mathbf{z}_{L}^{0}$) of the Transformer Encoder logit outputs to the target number of classes we have.</p>
+<p>All we need is a <code class="docutils literal notranslate"><span class="pre">torch.nn.LayerNorm()</span></code> layer and a <code class="docutils literal notranslate"><span class="pre">torch.nn.Linear()</span></code> layer to convert the 0th index (<span class="math notranslate nohighlight">\(\mathbf{z}_{L}^{0}\)</span>) of the Transformer Encoder logit outputs to the target number of classes we have.</p>
 <p>To create the full architecture, we’ll also need to stack a number of our <code class="docutils literal notranslate"><span class="pre">TransformerEncoderBlock</span></code>s on top of each other, we can do this by passing a list of them to <code class="docutils literal notranslate"><span class="pre">torch.nn.Sequential()</span></code> (this will make a sequential range of <code class="docutils literal notranslate"><span class="pre">TransformerEncoderBlock</span></code>s).</p>
 <p>We’ll focus on the ViT-Base hyperparameters from Table 1 but our code should be adaptable to other ViT variants.</p>
 <p>Creating ViT will be our biggest code block yet but we can do it!</p>
@@ -2753,7 +2832,7 @@ $$</p>
 <li><p>Create a class called <code class="docutils literal notranslate"><span class="pre">ViT</span></code> that inherits from <code class="docutils literal notranslate"><span class="pre">torch.nn.Module</span></code>.</p></li>
 <li><p>Initialize the class with hyperparameters from Table 1 and Table 3 of the ViT paper for the ViT-Base model.</p></li>
 <li><p>Make sure the image size is divisible by the patch size (the image should be split into even patches).</p></li>
-<li><p>Calculate the number of patches using the formula $N=H W / P^{2}$, where $H$ is the image height, $W$ is the image width and $P$ is the patch size.</p></li>
+<li><p>Calculate the number of patches using the formula <span class="math notranslate nohighlight">\(N=H W / P^{2}\)</span>, where <span class="math notranslate nohighlight">\(H\)</span> is the image height, <span class="math notranslate nohighlight">\(W\)</span> is the image width and <span class="math notranslate nohighlight">\(P\)</span> is the patch size.</p></li>
 <li><p>Create a learnable class embedding token (equation 1) as done above in section 4.6.</p></li>
 <li><p>Create a learnable position embedding vector (equation 1) as done above in section 4.7.</p></li>
 <li><p>Setup the embedding dropout layer as discussed in Appendix B.1 of the ViT paper.</p></li>
@@ -2937,7 +3016,7 @@ Shape of class token embedding expanded: torch.Size([32, 1, 768])
 </div>
 </div>
 </div>
-<img src="images/08-vit-paper-summary-output-custom-vit-model.png" alt="input and output summary of our custom made ViT model" width=900/>
+<img alt="input and output summary of our custom made ViT model" src="../../../_images/08-vit-paper-summary-output-custom-vit-model.png" />
 <p>Now those are some nice looking layers!</p>
 <p>Checkout the total number of parameters too, 85,800,963, our biggest model yet!</p>
 <p>The number is very close to PyTorch’s pretrained ViT-Base with patch size 16 at <a class="reference external" href="https://pytorch.org/vision/main/models/generated/torchvision.models.vit_b_16.html#torchvision.models.vit_b_16"><code class="docutils literal notranslate"><span class="pre">torch.vision.models.vit_b_16()</span></code></a> with 86,567,656 total parameters (though this number of parameters is for the 1000 classes in ImageNet).</p>
@@ -2958,10 +3037,10 @@ Shape of class token embedding expanded: torch.Size([32, 1, 768])
 <h3>Creating an optimizer<a class="headerlink" href="#creating-an-optimizer" title="Link to this heading">#</a></h3>
 <p>Searching the ViT paper for “optimizer”, section 4.1 on Training &amp; Fine-tuning states:</p>
 <blockquote>
-<div><p><strong>Training &amp; Fine-tuning.</strong> We train all models, including ResNets, using Adam (Kingma &amp; Ba, 2015 ) with $\beta_{1}=0.9, \beta_{2}=0.999$, a batch size of 4096 and apply a high weight decay of $0.1$, which we found to be useful for transfer of all models (Appendix D.1 shows that, in contrast to common practices, Adam works slightly better than SGD for ResNets in our setting).</p>
+<div><p><strong>Training &amp; Fine-tuning.</strong> We train all models, including ResNets, using Adam (Kingma &amp; Ba, 2015 ) with <span class="math notranslate nohighlight">\(\beta_{1}=0.9, \beta_{2}=0.999\)</span>, a batch size of 4096 and apply a high weight decay of <span class="math notranslate nohighlight">\(0.1\)</span>, which we found to be useful for transfer of all models (Appendix D.1 shows that, in contrast to common practices, Adam works slightly better than SGD for ResNets in our setting).</p>
 </div></blockquote>
 <p>So we can see they chose to use the “Adam” optimizer (<a class="reference external" href="https://pytorch.org/docs/stable/generated/torch.optim.Adam.html#torch.optim.Adam"><code class="docutils literal notranslate"><span class="pre">torch.optim.Adam()</span></code></a>) rather than SGD (stochastic gradient descent, <a class="reference external" href="https://pytorch.org/docs/stable/generated/torch.optim.SGD.html#torch.optim.SGD"><code class="docutils literal notranslate"><span class="pre">torch.optim.SGD()</span></code></a>).</p>
-<p>The authors set Adam’s $\beta$ (beta) values to $\beta_{1}=0.9, \beta_{2}=0.999$, these are the default values for the <code class="docutils literal notranslate"><span class="pre">betas</span></code> parameter in <code class="docutils literal notranslate"><span class="pre">torch.optim.Adam(betas=(0.9,</span> <span class="pre">0.999))</span></code>.</p>
+<p>The authors set Adam’s <span class="math notranslate nohighlight">\(\beta\)</span> (beta) values to <span class="math notranslate nohighlight">\(\beta_{1}=0.9, \beta_{2}=0.999\)</span>, these are the default values for the <code class="docutils literal notranslate"><span class="pre">betas</span></code> parameter in <code class="docutils literal notranslate"><span class="pre">torch.optim.Adam(betas=(0.9,</span> <span class="pre">0.999))</span></code>.</p>
 <p>They also state the use of <a class="reference external" href="https://paperswithcode.com/method/weight-decay">weight decay</a> (slowly reducing the values of the weights during optimization to prevent overfitting), we can set this with the <code class="docutils literal notranslate"><span class="pre">weight_decay</span></code> parameter in <code class="docutils literal notranslate"><span class="pre">torch.optim.Adam(weight_decay=0.3)</span></code> (according to the setting of ViT-* trained on ImageNet-1k).</p>
 <p>We’ll set the learning rate of the optimizer to 0.003 as per Table 3 (according to the setting of ViT-* trained on ImageNet-1k).</p>
 <p>And as discussed previously, we’re going to use a lower batch size than 4096 due to hardware limitations (if you have a large GPU, feel free to increase this).</p>
@@ -3197,7 +3276,7 @@ Epoch: 10 | train_loss: 1.4658 | train_acc: 0.4023 | test_loss: 1.2389 | test_ac
 </div>
 </div>
 </div>
-<img src="images/08-vit-paper-summary-output-pytorch-vit.png" alt="output of pytorch pretrained ViT model summary" width=900 />
+<a class="reference internal image-reference" href="../../../_images/08-vit-paper-summary-output-pytorch-vit.png"><img alt="output of pytorch pretrained ViT model summary" src="../../../_images/08-vit-paper-summary-output-pytorch-vit.png" style="width: 900px;" /></a>
 <p>Woohoo!</p>
 <p>Notice how only the output layer is trainable, where as, all of the rest of the layers are untrainable (frozen).</p>
 <p>And the total number of parameters, 85,800,963, is the same as our custom made ViT model above.</p>
@@ -3513,8 +3592,8 @@ Epoch: 10 | train_loss: 0.0650 | train_acc: 0.9883 | test_loss: 0.1804 | test_ac
     {
         requestKernel: true,
         binderOptions: {
-            repo: "binder-examples/jupyter-stacks-datascience",
-            ref: "master",
+            repo: "anukchat/anukchat.github.io",
+            ref: "main",
         },
         codeMirrorConfig: {
             theme: "abcdef",
@@ -3577,19 +3656,19 @@ Epoch: 10 | train_loss: 0.0650 | train_acc: 0.9883 | test_loss: 0.1804 | test_ac
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-a-machine-learning-research-paper">What is a machine learning research paper?</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-replicate-a-machine-learning-research-paper">Why replicate a machine learning research paper?</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#where-can-you-find-code-examples-for-machine-learning-research-papers">Where can you find code examples for machine learning research papers?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-we-re-going-to-cover">What we’re going to cover</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-were-going-to-cover">What we’re going to cover</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#terminology">Terminology</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-setup">Getting setup</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#get-data">Get Data</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-datasets-and-dataloaders">Create Datasets and DataLoaders</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prepare-transforms-for-images">Prepare transforms for images</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#turn-images-into-dataloader-s">Turn images into <code class="docutils literal notranslate"><span class="pre">DataLoader</span></code>’s</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#turn-images-into-dataloaders">Turn images into <code class="docutils literal notranslate"><span class="pre">DataLoader</span></code>’s</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#visualize-a-single-image">Visualize a single image</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#replicating-the-vit-paper-an-overview">Replicating the ViT paper: an overview</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inputs-and-outputs-layers-and-blocks">Inputs and outputs, layers and blocks</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-specific-what-s-vit-made-of">Getting specific: What’s ViT made of?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-specific-whats-vit-made-of">Getting specific: What’s ViT made of?</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#exploring-figure-1">Exploring Figure 1</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#exploring-the-four-equations">3.2.2 Exploring the Four Equations</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#equation-1-overview">Equation 1 overview</a></li>
@@ -3626,7 +3705,7 @@ Epoch: 10 | train_loss: 0.0650 | train_acc: 0.9883 | test_loss: 0.1804 | test_ac
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-the-transformer-encoder">Create the Transformer Encoder</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-transformer-encoder-by-combining-our-custom-made-layers">Creating a Transformer Encoder by combining our custom made layers</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-transformer-encoder-with-pytorch-s-transformer-layers">Creating a Transformer Encoder with PyTorch’s Transformer layers</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-transformer-encoder-with-pytorchs-transformer-layers">Creating a Transformer Encoder with PyTorch’s Transformer layers</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#putting-it-all-together-to-create-vit">Putting it all together to create ViT</a><ul class="nav section-nav flex-column">

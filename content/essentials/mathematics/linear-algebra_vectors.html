@@ -58,6 +58,8 @@
     <script async="async" src="../../../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'content/essentials/mathematics/linear-algebra_vectors';</script>
     <link rel="canonical" href="https://anukchat.github.io/content/essentials/mathematics/linear-algebra_vectors.html" />
     <link rel="icon" href="../../../_static/mesh-smallest.png"/>
@@ -103,8 +105,8 @@
          class="form-control"
          name="q"
          id="search-input"
-         placeholder="Search..."
-         aria-label="Search..."
+         placeholder="Search this book..."
+         aria-label="Search this book..."
          autocomplete="off"
          autocorrect="off"
          autocapitalize="off"
@@ -442,6 +444,73 @@
 
 
 
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/anukchat/anukchat.github.io/main?urlpath=lab/tree/content/essentials/mathematics/linear-algebra_vectors.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Binder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Binder logo" src="../../../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/anukchat/anukchat.github.io/blob/main/content/essentials/mathematics/linear-algebra_vectors.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="../../../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
 <div class="dropdown dropdown-download-buttons">
   <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
     <i class="fas fa-download"></i>
@@ -568,7 +637,7 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="linear-algebra-vectors">
+  <section class="tex2jax_ignore mathjax_ignore" id="linear-algebra-vectors">
 <h1>Linear Algebra - Vectors<a class="headerlink" href="#linear-algebra-vectors" title="Link to this heading">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -580,51 +649,54 @@ document.write(`
 <section id="what-is-a-vector">
 <h2>What is a vector?<a class="headerlink" href="#what-is-a-vector" title="Link to this heading">#</a></h2>
 <hr class="docutils" />
-<p>A vector $\large \vec{v}$ is a mathematical entity which has <em>magnitude</em> and <em>direction</em>.
+<p>A vector <span class="math notranslate nohighlight">\(\large \vec{v}\)</span> is a mathematical entity which has <em>magnitude</em> and <em>direction</em>.
 <img alt="vectors" src="../../../_images/linear-algebra_vectors.jpg" /></p>
 </section>
 <section id="vector-operations">
 <h2>Vector operations<a class="headerlink" href="#vector-operations" title="Link to this heading">#</a></h2>
 <hr class="docutils" />
-<p>All the following operations are applicable to any vector in $\large \mathbb{R}^n$.</p>
+<p>All the following operations are applicable to any vector in <span class="math notranslate nohighlight">\(\large \mathbb{R}^n\)</span>.</p>
 <section id="vector-addition">
 <h3>Vector addition<a class="headerlink" href="#vector-addition" title="Link to this heading">#</a></h3>
 <hr class="docutils" />
-<p>The addition of two vectors $\large \vec{u}$ and $\large \vec{v}$ is done by the sum of their correspondent components, resulting in another vector.</p>
-<p>$$ \large
-\vec{u}+\vec{v} =
+<p>The addition of two vectors <span class="math notranslate nohighlight">\(\large \vec{u}\)</span> and <span class="math notranslate nohighlight">\(\large \vec{v}\)</span> is done by the sum of their correspondent components, resulting in another vector.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \large
+\vec{u}+\vec{v} = 
 \begin{bmatrix}
-u_1 \ u_2 \ \vdots \ u_n
+u_1 \\ u_2 \\ \vdots \\ u_n
 \end{bmatrix} +
 \begin{bmatrix}
-v_1 \ v_2 \ \vdots \ v_n
+v_1 \\ v_2 \\ \vdots \\ v_n
 \end{bmatrix} =
 \begin{bmatrix}
-v_1 + u_1 \ v_2 + u_2 \ \vdots \ v_n + u_n
+v_1 + u_1 \\ v_2 + u_2 \\ \vdots \\ v_n + u_n
 \end{bmatrix}
-$$</p>
+\end{split}\]</div>
 <p><img alt="vectors" src="../../../_images/linear-algebra_vectors_addition.jpg" /></p>
 <p>For example:</p>
-<p>$$ \large
+<div class="math notranslate nohighlight">
+\[\begin{split} \large
 \vec{u} =
 \begin{bmatrix}
-3 \ 7
+3 \\ 7
 \end{bmatrix}
 \quad , \quad
 \vec{v} =
 \begin{bmatrix}
-2 \ 5
+2 \\ 5
 \end{bmatrix}
-$$</p>
-<p>$$ \large
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split} \large
 \vec{u} + \vec{v} =
 \begin{bmatrix}
-3 + 2 \ 7 + 5
+3 + 2 \\ 7 + 5
 \end{bmatrix} =
 \begin{bmatrix}
-5 \ 12
+5 \\ 12
 \end{bmatrix}
-$$</p>
+\end{split}\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">u</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">]])</span>
@@ -640,41 +712,44 @@ $$</p>
 <section id="vector-subtraction">
 <h3>Vector subtraction<a class="headerlink" href="#vector-subtraction" title="Link to this heading">#</a></h3>
 <hr class="docutils" />
-<p>Similarly to addition, the subtraction of two vectors $\large \vec{u}$ and $\large \vec{v}$ is done by the subtraction of their correspondent components, resulting in another vector.</p>
-<p>$$ \large
-\vec{u}-\vec{v} =
+<p>Similarly to addition, the subtraction of two vectors <span class="math notranslate nohighlight">\(\large \vec{u}\)</span> and <span class="math notranslate nohighlight">\(\large \vec{v}\)</span> is done by the subtraction of their correspondent components, resulting in another vector.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \large
+\vec{u}-\vec{v} = 
 \begin{bmatrix}
-u_1 \ u_2 \ \vdots \ u_n
+u_1 \\ u_2 \\ \vdots \\ u_n
 \end{bmatrix} -
 \begin{bmatrix}
-v_1 \ v_2 \ \vdots \ v_n
+v_1 \\ v_2 \\ \vdots \\ v_n
 \end{bmatrix} =
 \begin{bmatrix}
-v_1 - u_1 \ v_2 - u_2 \ \vdots \ v_n - u_n
+v_1 - u_1 \\ v_2 - u_2 \\ \vdots \\ v_n - u_n
 \end{bmatrix}
-$$</p>
+\end{split}\]</div>
 <p><img alt="vectors" src="../../../_images/linear-algebra_vectors_subtraction.jpg" /></p>
 <p>For example:</p>
-<p>$$ \large
+<div class="math notranslate nohighlight">
+\[\begin{split} \large
 \vec{u} =
 \begin{bmatrix}
-3 \ 7
+3 \\ 7
 \end{bmatrix}
 \quad , \quad
 \vec{v} =
 \begin{bmatrix}
-2 \ 5
+2 \\ 5
 \end{bmatrix}
-$$</p>
-<p>$$ \large
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split} \large
 \vec{u} - \vec{v} =
 \begin{bmatrix}
-3 - 2 \ 7 - 5
+3 - 2 \\ 7 - 5
 \end{bmatrix} =
 \begin{bmatrix}
-1 \ 2
+1 \\ 2
 \end{bmatrix}
-$$</p>
+\end{split}\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">u</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">]])</span>
@@ -690,36 +765,39 @@ $$</p>
 <section id="scalar-multiplication">
 <h3>Scalar multiplication<a class="headerlink" href="#scalar-multiplication" title="Link to this heading">#</a></h3>
 <hr class="docutils" />
-<p>The scalar multiplication is the elementwise multiplication by a scalar number $\large \alpha$. The same rule can be applied to divisions.</p>
-<p>$$ \large
-\alpha\vec{u} =
+<p>The scalar multiplication is the elementwise multiplication by a scalar number <span class="math notranslate nohighlight">\(\large \alpha\)</span>. The same rule can be applied to divisions.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \large
+\alpha\vec{u} = 
 \alpha  \cdot
 \begin{bmatrix}
-u_1 \ u_2 \ \vdots \ u_n
+u_1 \\ u_2 \\ \vdots \\ u_n
 \end{bmatrix} =
 \begin{bmatrix}
-\alpha\cdot u_1 \ \alpha\cdot u_2 \ \vdots \ \alpha\cdot u_n
+\alpha\cdot u_1 \\ \alpha\cdot u_2 \\ \vdots \\ \alpha\cdot u_n
 \end{bmatrix}
-$$</p>
+\end{split}\]</div>
 <p><img alt="vectors" src="../../../_images/linear-algebra_vectors_scalar_multiplication.jpg" /></p>
 <p>For example:</p>
-<p>$$ \large
+<div class="math notranslate nohighlight">
+\[\begin{split} \large
 \alpha = 2
 \quad , \quad
 \vec{u} =
 \begin{bmatrix}
-3 \ 7
+3 \\ 7
 \end{bmatrix}
-$$</p>
-<p>$$ \large
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split} \large
 \alpha\cdot\vec{u} =
 \begin{bmatrix}
-2 \cdot 3 \ 2 \cdot 7
+2 \cdot 3 \\ 2 \cdot 7
 \end{bmatrix} =
 \begin{bmatrix}
-6 \ 14
+6 \\ 14
 \end{bmatrix}
-$$</p>
+\end{split}\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">2</span>
@@ -737,39 +815,43 @@ $$</p>
 <h2>Dot product<a class="headerlink" href="#dot-product" title="Link to this heading">#</a></h2>
 <hr class="docutils" />
 <p>Dot product is an algebraic operation, which has a huge number of applications. As a result, we have a scalar value.</p>
-<p>$$ \large
-\vec{u} \cdot \vec{v} =
+<div class="math notranslate nohighlight">
+\[\begin{split} \large
+\vec{u} \cdot \vec{v} = 
 \begin{bmatrix}
-u_1 \ u_2 \ \vdots \ u_n
+u_1 \\ u_2 \\ \vdots \\ u_n
 \end{bmatrix} \cdot
 \begin{bmatrix}
-v_1 \ v_2 \ \vdots \ v_n
+v_1 \\ v_2 \\ \vdots \\ v_n
 \end{bmatrix} =
 \sum_i^n u_i \cdot v_i
-$$</p>
-<p>$$ \large
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[ \large
 \sum_i^n u_i \cdot v_i =
-u_1 \cdot v_1 + u_2 \cdot v_2 + … + u_n \cdot v_n
-$$</p>
+u_1 \cdot v_1 + u_2 \cdot v_2 + ... + u_n \cdot v_n
+\]</div>
 <p>For example:</p>
-<p>$$ \large
+<div class="math notranslate nohighlight">
+\[\begin{split} \large
 \vec{u} =
 \begin{bmatrix}
-3 \ 7
+3 \\ 7
 \end{bmatrix}
 \quad , \quad
 \vec{v} =
 \begin{bmatrix}
-2 \ 5
+2 \\ 5
 \end{bmatrix}
-$$</p>
-<p>$$ \large
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split} \large
 \begin{aligned}
-\vec{u} \cdot \vec{v} &amp;= 3 \cdot 2 + 7 \cdot 5 \
-&amp;= 6 + 35 \
+\vec{u} \cdot \vec{v} &amp;= 3 \cdot 2 + 7 \cdot 5 \\
+&amp;= 6 + 35 \\
 &amp;= 41
 \end{aligned}
-$$</p>
+\end{split}\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">u</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">])</span>
@@ -785,31 +867,36 @@ $$</p>
 <h3>Unit vector<a class="headerlink" href="#unit-vector" title="Link to this heading">#</a></h3>
 <hr class="docutils" />
 <p>Unit vector (or versor) is a vector which has the magnitude equal to 1. The magnitude of a vector is based on the <em>euclidean norm</em> and can be found by:</p>
-<p>$$ \large
-|\vec{u}|_2 =
-\left[ \sum_i^n u_i^2 \right]^{\frac{1}{2}}=\sqrt{u_1^2+u_2^2+…+u_n^2}
-$$</p>
+<div class="math notranslate nohighlight">
+\[ \large
+\|\vec{u}\|_2 =
+\left[ \sum_i^n u_i^2 \right]^{\frac{1}{2}}=\sqrt{u_1^2+u_2^2+...+u_n^2}
+\]</div>
 <p>Basically, a unit vector is a normalized vector, like:</p>
-<p>$$ \large
-\hat{u}=\frac{\vec{u}}{|\vec{u}|}
-$$</p>
+<div class="math notranslate nohighlight">
+\[ \large
+\hat{u}=\frac{\vec{u}}{\|\vec{u}\|}
+\]</div>
 <p><img alt="vectors" src="../../../_images/linear-algebra_vectors_unit_vector.jpg" /></p>
 <p>For example:</p>
-<p>$$ \large
+<div class="math notranslate nohighlight">
+\[ \large
 \vec{u} = [3 \quad 4]
-$$</p>
-<p>$$ \large
+\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split} \large
 \begin{aligned}
-|\vec{u}| &amp;= \sqrt{3^2+4^2} \
-&amp;= \sqrt{9+16} \
+\|\vec{u}\| &amp;= \sqrt{3^2+4^2} \\
+&amp;= \sqrt{9+16} \\
 &amp;= 5
 \end{aligned}
-$$</p>
-<p>$$ \large
-\frac{\vec{u}}{|\vec{u}|} =
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[ \large
+\frac{\vec{u}}{\|\vec{u}\|} =
 \left[ \frac{3}{5} \quad \frac{4}{5} \right] =
 [0.6 \quad 0.8]
-$$</p>
+\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">u</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
@@ -826,34 +913,38 @@ $$</p>
 <h3>Angle between vectors<a class="headerlink" href="#angle-between-vectors" title="Link to this heading">#</a></h3>
 <hr class="docutils" />
 <p>Given the geometric definition of <em>dot product</em>:</p>
-<p>$$ \large
-\vec{u} \cdot \vec{v} = |\vec{u}| |\vec{v}| \cos{\theta}
-$$</p>
+<div class="math notranslate nohighlight">
+\[ \large
+\vec{u} \cdot \vec{v} = \|\vec{u}\| \|\vec{v}\| \cos{\theta}
+\]</div>
 <p>so,</p>
-<p>$$ \large
-\theta=\cos^{-1} \frac{\vec{u} \cdot \vec{v}}{|\vec{u}| |\vec{v}|}
-$$</p>
+<div class="math notranslate nohighlight">
+\[ \large
+\theta=\cos^{-1} \frac{\vec{u} \cdot \vec{v}}{\|\vec{u}\| \|\vec{v}\|}
+\]</div>
 <p><img alt="vectors" src="../../../_images/linear-algebra_vectors_angle.jpg" /></p>
 <p>For example:</p>
-<p>$$ \large
+<div class="math notranslate nohighlight">
+\[\begin{split} \large
 \vec{u} =
 \begin{bmatrix}
-2 \ 1
+2 \\ 1
 \end{bmatrix}
 \quad , \quad
 \vec{v} =
 \begin{bmatrix}
-3 \ 3
+3 \\ 3
 \end{bmatrix}
-$$</p>
-<p>$$ \large
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split} \large
 \begin{aligned}
 \angle (\vec{u}, \vec{v}) = \theta
-&amp;= \arccos \frac{2 \cdot 3 + 1 \cdot 3}{\sqrt{2^2+1^2} \sqrt{3^2+3^2}} \
-&amp;= \arccos \frac{9}{\sqrt{5} \sqrt{18}} \
+&amp;= \arccos \frac{2 \cdot 3 + 1 \cdot 3}{\sqrt{2^2+1^2} \sqrt{3^2+3^2}} \\
+&amp;= \arccos \frac{9}{\sqrt{5} \sqrt{18}} \\
 &amp;\approx 0.32 \text{rad} \quad \approx 18.43°
 \end{aligned}
-$$</p>
+\end{split}\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">u</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
@@ -873,31 +964,35 @@ $$</p>
 <section id="orthogonality-and-parallelism">
 <h3>Orthogonality and Parallelism<a class="headerlink" href="#orthogonality-and-parallelism" title="Link to this heading">#</a></h3>
 <hr class="docutils" />
-<p>Two vectors are <strong>parallel</strong> or $\large \vec{u} // \vec{v}$ when there is a number $k$ which generalizes the relationship:</p>
-<p>$$ \large
+<p>Two vectors are <strong>parallel</strong> or <span class="math notranslate nohighlight">\(\large \vec{u} // \vec{v}\)</span> when there is a number <span class="math notranslate nohighlight">\(k\)</span> which generalizes the relationship:</p>
+<div class="math notranslate nohighlight">
+\[ \large
 \vec{u} = k\vec{v}
-$$</p>
+\]</div>
 <p>What it means that:</p>
-<p>$$ \large
-\frac{u_1}{v_1} = \frac{u_2}{v_2} = … = \frac{u_n}{v_n} = k
-$$</p>
+<div class="math notranslate nohighlight">
+\[ \large
+\frac{u_1}{v_1} = \frac{u_2}{v_2} = ... = \frac{u_n}{v_n} = k
+\]</div>
 <p>In other words, two vectors are parallel when their components are proportional.</p>
 <p><img alt="vectors" src="../../../_images/linear-algebra_vectors_parallel.jpg" /></p>
 <p>For example:</p>
-<p>$$ \large
+<div class="math notranslate nohighlight">
+\[\begin{split} \large
 \vec{u} =
 \begin{bmatrix}
-2 \ 3
+2 \\ 3
 \end{bmatrix}
 \quad , \quad
 \vec{v} =
 \begin{bmatrix}
-6 \ 9
+6 \\ 9
 \end{bmatrix}
-$$</p>
-<p>$$ \large
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[ \large
 \frac{2}{6} = \frac{3}{9} = \frac{1}{3}
-$$</p>
+\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">u</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
@@ -909,36 +1004,40 @@ $$</p>
 </div>
 </div>
 </div>
-<p>Two vectors are <strong>orthogonal</strong> or $\large \vec{u} \bot \vec{v}$ when the angle $\theta$ between of them are 90° or their dot product is equal to 0.</p>
-<p>$$ \large
+<p>Two vectors are <strong>orthogonal</strong> or <span class="math notranslate nohighlight">\(\large \vec{u} \bot \vec{v}\)</span> when the angle <span class="math notranslate nohighlight">\(\theta\)</span> between of them are 90° or their dot product is equal to 0.</p>
+<div class="math notranslate nohighlight">
+\[ \large
 \vec{u} \bot \vec{v} \Rightarrow \vec{u} \cdot \vec{v} = 0
-$$</p>
+\]</div>
 <p><img alt="vectors" src="../../../_images/linear-algebra_vectors_orthogonal.jpg" /></p>
 <p>For example:</p>
-<p>$$ \large
+<div class="math notranslate nohighlight">
+\[\begin{split} \large
 \vec{u} =
 \begin{bmatrix}
-2 \ 1
+2 \\ 1
 \end{bmatrix}
 \quad , \quad
 \vec{v} =
 \begin{bmatrix}
--2 \ 4
+-2 \\ 4
 \end{bmatrix}
-$$</p>
+\end{split}\]</div>
 <p>We can find it by calculating the dot product:</p>
-<p>$$ \large
+<div class="math notranslate nohighlight">
+\[ \large
 \vec{u} \cdot \vec{v} = 2 \cdot (-2) + 1 \cdot 4 = 0
-$$</p>
-<p>or by finding $\theta$:</p>
-<p>$$ \large
+\]</div>
+<p>or by finding <span class="math notranslate nohighlight">\(\theta\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \large
 \begin{aligned}
 \angle (\vec{u}, \vec{v}) = \theta
-&amp;= \arccos \frac{2 \cdot (-2) + 1 \cdot 4}{\sqrt{2^2+1^2} \sqrt{(-2)^2+4^2}} \
-&amp;= \arccos \frac{0}{\sqrt{5} \sqrt{20}} \
+&amp;= \arccos \frac{2 \cdot (-2) + 1 \cdot 4}{\sqrt{2^2+1^2} \sqrt{(-2)^2+4^2}} \\
+&amp;= \arccos \frac{0}{\sqrt{5} \sqrt{20}} \\
 &amp;\approx 1.57 \text{rad} \quad = 90°
 \end{aligned}
-$$</p>
+\end{split}\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">u</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
@@ -963,8 +1062,8 @@ $$</p>
     {
         requestKernel: true,
         binderOptions: {
-            repo: "binder-examples/jupyter-stacks-datascience",
-            ref: "master",
+            repo: "anukchat/anukchat.github.io",
+            ref: "main",
         },
         codeMirrorConfig: {
             theme: "abcdef",

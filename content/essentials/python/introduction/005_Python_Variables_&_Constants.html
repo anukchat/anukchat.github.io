@@ -103,8 +103,8 @@
          class="form-control"
          name="q"
          id="search-input"
-         placeholder="Search..."
-         aria-label="Search..."
+         placeholder="Search this book..."
+         aria-label="Search this book..."
          autocomplete="off"
          autocorrect="off"
          autocapitalize="off"
@@ -442,6 +442,73 @@
 
 
 
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/anukchat/anukchat.github.io/main?urlpath=lab/tree/content/essentials/python/introduction/005_Python_Variables_&_Constants.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Binder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Binder logo" src="../../../../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/anukchat/anukchat.github.io/blob/main/content/essentials/python/introduction/005_Python_Variables_&_Constants.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="../../../../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
 <div class="dropdown dropdown-download-buttons">
   <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
     <i class="fas fa-download"></i>
@@ -573,7 +640,7 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="python-variables-and-constants">
+  <section class="tex2jax_ignore mathjax_ignore" id="python-variables-and-constants">
 <h1>Python Variables and Constants<a class="headerlink" href="#python-variables-and-constants" title="Link to this heading">#</a></h1>
 <p>In this class, you will learn about Python variables, constants, literals and their use cases.</p>
 <section id="python-variables">
@@ -903,12 +970,12 @@ baidu.com
 <p>Inside the module, constants are written in all capital letters and underscores separating the words.</p>
 <section id="example-1-declaring-and-assigning-value-to-a-constant">
 <h4>Example 1: Declaring and assigning value to a constant<a class="headerlink" href="#example-1-declaring-and-assigning-value-to-a-constant" title="Link to this heading">#</a></h4>
-<p>Create a <strong>constant.py</strong>:</p>
+<p>Create a <strong><a class="reference external" href="http://constant.py">constant.py</a></strong>:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="go">&gt;&gt;&gt;PI = 3.14</span>
 <span class="go">&gt;&gt;&gt;GRAVITY = 9.8</span>
 </pre></div>
 </div>
-<p>Create a <strong>main.py</strong>:</p>
+<p>Create a <strong><a class="reference external" href="http://main.py">main.py</a></strong>:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="go">&gt;&gt;&gt;import constant</span>
 <span class="go">&gt;&gt;&gt;print(constant.PI)</span>
 <span class="go">&gt;&gt;&gt;print(constant.GRAVITY)</span>
@@ -917,7 +984,7 @@ baidu.com
 <span class="go">9.8</span>
 </pre></div>
 </div>
-<p>In the above program, we create a <strong>constant.py</strong> module file. Then, we assign the constant value to <strong><code class="docutils literal notranslate"><span class="pre">PI</span></code></strong> and <strong><code class="docutils literal notranslate"><span class="pre">GRAVITY</span></code></strong>. After that, we create a <strong>main.py</strong> file and import the <strong><code class="docutils literal notranslate"><span class="pre">constant</span></code></strong> module. Finally, we print the constant value.</p>
+<p>In the above program, we create a <strong><a class="reference external" href="http://constant.py">constant.py</a></strong> module file. Then, we assign the constant value to <strong><code class="docutils literal notranslate"><span class="pre">PI</span></code></strong> and <strong><code class="docutils literal notranslate"><span class="pre">GRAVITY</span></code></strong>. After that, we create a <strong><a class="reference external" href="http://main.py">main.py</a></strong> file and import the <strong><code class="docutils literal notranslate"><span class="pre">constant</span></code></strong> module. Finally, we print the constant value.</p>
 <blockquote>
 <div><p><strong>Note</strong>: In reality, we don’t use constants in Python. Naming them in all capital letters is a convention to separate them from variables, however, it does not actually prevent reassignment.</p>
 </div></blockquote>
@@ -1033,8 +1100,8 @@ baidu.com
     {
         requestKernel: true,
         binderOptions: {
-            repo: "binder-examples/jupyter-stacks-datascience",
-            ref: "master",
+            repo: "anukchat/anukchat.github.io",
+            ref: "main",
         },
         codeMirrorConfig: {
             theme: "abcdef",

@@ -103,8 +103,8 @@
          class="form-control"
          name="q"
          id="search-input"
-         placeholder="Search..."
-         aria-label="Search..."
+         placeholder="Search this book..."
+         aria-label="Search this book..."
          autocomplete="off"
          autocorrect="off"
          autocapitalize="off"
@@ -442,6 +442,73 @@
 
 
 
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/anukchat/anukchat.github.io/main?urlpath=lab/tree/content/tools/seaborn/015_Seaborn_TimeSeries_and_LetterValue_Plot.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Binder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Binder logo" src="../../../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/anukchat/anukchat.github.io/blob/main/content/tools/seaborn/015_Seaborn_TimeSeries_and_LetterValue_Plot.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="../../../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
 <div class="dropdown dropdown-download-buttons">
   <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
     <i class="fas fa-download"></i>
@@ -557,11 +624,11 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="time-series-lv-plot">
+  <section class="tex2jax_ignore mathjax_ignore" id="time-series-lv-plot">
 <h1>Time Series &amp; LV Plot<a class="headerlink" href="#time-series-lv-plot" title="Link to this heading">#</a></h1>
 <p>Welcome back to another lecture on <em>Data Visualization with Seaborn</em>. We have already consumed a heavy chunk of required information to draft a plot for any kind of data that comes our way. We have rigorously gone through every possible <em>Regression plot</em> as well as <em>plot for Categorical variables</em>. Time and again, we have looked into the <em>statistical inference</em> that can be drawn from our graphs; and tried to achieve more &amp; more by <em>customizing it using underlying Matplotlib</em> code and style.</p>
-<p>Overall if at this stage, someone asks us to draw a plot just based off Matplotlib, I am sure you guys will be able to do that as well, though ofcourse that isn’t our agenda in this course. Though I promised in the last lecture to cover <strong><span style="color:red">”Time Series Plot”</span></strong> this time, but I have planned to share something more than that. So, we will be covering <strong>Time-Series plot</strong>, but additionally, we shall be looking into <em>one more handy way of handling Regression</em> using Seaborn.</p>
-<p>As we already have previously done, extensive detailing for Regression, we shall in fact start this lecture today with this additional topic. This particular plot for Regression that we’re going to cover is known as <strong><span style="color:red">”Letter Value Plot”</span></strong>, also commonly known as <strong>LV Plot</strong>.</p>
+<p>Overall if at this stage, someone asks us to draw a plot just based off Matplotlib, I am sure you guys will be able to do that as well, though ofcourse that isn’t our agenda in this course. Though I promised in the last lecture to cover <strong><span style="color:red">“Time Series Plot”</span></strong> this time, but I have planned to share something more than that. So, we will be covering <strong>Time-Series plot</strong>, but additionally, we shall be looking into <em>one more handy way of handling Regression</em> using Seaborn.</p>
+<p>As we already have previously done, extensive detailing for Regression, we shall in fact start this lecture today with this additional topic. This particular plot for Regression that we’re going to cover is known as <strong><span style="color:red">“Letter Value Plot”</span></strong>, also commonly known as <strong>LV Plot</strong>.</p>
 <section id="letter-value-lv-plot">
 <h2>Letter Value (LV) Plot<a class="headerlink" href="#letter-value-lv-plot" title="Link to this heading">#</a></h2>
 <p>As always, let us begin by understanding what this plot is and how can it be helpful for us; before we dig deeper into plotting these with some data. So, <strong>Letter value (LV) plots</strong> are <strong>non-parametric estimates</strong> of the <em>distribution of a dataset</em>, quite similar to <strong>Box Plot</strong>. <em>LV plots</em> are also pretty similar to <strong>Violin plots</strong> but excluding the need to fit a <strong>Kernel Density estimate</strong>. Thus, LV plots are fast to generate, directly interpretable in terms of the distribution of data, and easy to understand.</p>
@@ -728,7 +795,7 @@ displayed for large data sets, and make letter-value plots extremely useful over
 </section>
 <section id="time-series-plot">
 <h2>Time-Series Plot<a class="headerlink" href="#time-series-plot" title="Link to this heading">#</a></h2>
-<p>Please do remember that <strong>Letter Value plot</strong> takes all the data into consideration while plotting, so in general use if you don’t want that, it is better to stick with <strong>LM Plot</strong> or <strong>Reg Plot</strong>, that we discussed in previous section. Or else, if you want to take a custom track, you would have to reinvent the wheel by creating Custom <strong>PatchCollection</strong> yourself. Moving on, finally we have our topic of interest, i.e. <strong><span style="color:red">”Time-Series Plot”</span></strong>.</p>
+<p>Please do remember that <strong>Letter Value plot</strong> takes all the data into consideration while plotting, so in general use if you don’t want that, it is better to stick with <strong>LM Plot</strong> or <strong>Reg Plot</strong>, that we discussed in previous section. Or else, if you want to take a custom track, you would have to reinvent the wheel by creating Custom <strong>PatchCollection</strong> yourself. Moving on, finally we have our topic of interest, i.e. <strong><span style="color:red">“Time-Series Plot”</span></strong>.</p>
 <p>So, a <strong>Time series</strong> is a <em>series of data points</em> that are <em>indexed</em> (or even <em>listed</em> or <em>graphed</em>) in order of time intervals. Most commonly, a time series is a sequence, taken at successive, equally spaced intervals in time. Thus, it is observed to be a sequence of <em>discrete-time</em> data. Very often, Time series data is plotted via <strong>Line Charts</strong>, and is commonly used in statistical domain, along with any other domain of <em>Applied science and engineering</em> which involves <a class="reference external" href="https://en.wikipedia.org/wiki/Temporal_resolution">Temporal measurements</a>.</p>
 <p>In case you unaware, <strong>Temporal measurements</strong>, that are also commonly known as <strong>Chronometry</strong> takes 2 distinct period forms for computation:</p>
 <ul class="simple">
@@ -1100,7 +1167,7 @@ displayed for large data sets, and make letter-value plots extremely useful over
 <code class="docutils literal notranslate"><span class="pre">sns.tsplot(df,</span> <span class="pre">time=&quot;day&quot;,</span> <span class="pre">unit=&quot;person&quot;,</span> <span class="pre">condition=&quot;diet&quot;,</span> <span class="pre">value=&quot;blood_pressure&quot;)</span></code></p>
 <p>But for large groups of people on different diets, and each day randomly sampling few people from segregated groups and measuring their blood pressure, <strong>TS Plot</strong> won’t be a great choice. In such scenarios, you would either require other ways mentioned earlier to plot using customizable options of <em>Matplotlib</em>.</p>
 <p>And with that, we shall conclude our discussion on <strong>Time-Series</strong> and <strong>Letter-Value Plot</strong>. Ou next topic is going to be more specifically on <strong>Grids</strong>. Meanwhile today I am going to assign you a homework that you need to complete on your own. This assignment would majorly focus on the skills that you gained in today’s lecture.</p>
-<p>I shall attach a dataset named <strong><span style="color:red">”nyc_taxi.csv”</span></strong>, that is going to be in your <strong>Resources folder</strong>. This dataset is based on the <a class="reference external" href="https://cloud.google.com/bigquery/public-data/nyc-tlc-trips">2016 NYC Yellow Cab trip record data</a>, made available in <em>Big Query</em> on <em>Google Cloud Platform</em>. It was originally published by the NYC Taxi and Limousine Commission (TLC) and it’s cleansed form has been attached for you to work upon. At the end of this <em>Lecture notebook</em>, you shall find description of all the fields in this dataset. Also a link to original <em>Google Big Query dataset</em> has been also attached, just in case you wish to check.</p>
+<p>I shall attach a dataset named <strong><span style="color:red">“nyc_taxi.csv”</span></strong>, that is going to be in your <strong>Resources folder</strong>. This dataset is based on the <a class="reference external" href="https://cloud.google.com/bigquery/public-data/nyc-tlc-trips">2016 NYC Yellow Cab trip record data</a>, made available in <em>Big Query</em> on <em>Google Cloud Platform</em>. It was originally published by the NYC Taxi and Limousine Commission (TLC) and it’s cleansed form has been attached for you to work upon. At the end of this <em>Lecture notebook</em>, you shall find description of all the fields in this dataset. Also a link to original <em>Google Big Query dataset</em> has been also attached, just in case you wish to check.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> - a unique identifier for each trip</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">vendor_id</span></code> - a code indicating the provider associated with the trip record</p></li>
@@ -1125,8 +1192,8 @@ displayed for large data sets, and make letter-value plots extremely useful over
     {
         requestKernel: true,
         binderOptions: {
-            repo: "binder-examples/jupyter-stacks-datascience",
-            ref: "master",
+            repo: "anukchat/anukchat.github.io",
+            ref: "main",
         },
         codeMirrorConfig: {
             theme: "abcdef",

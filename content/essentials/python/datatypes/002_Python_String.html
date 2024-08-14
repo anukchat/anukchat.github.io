@@ -58,6 +58,8 @@
     <script async="async" src="../../../../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'content/essentials/python/datatypes/002_Python_String';</script>
     <link rel="canonical" href="https://anukchat.github.io/content/essentials/python/datatypes/002_Python_String.html" />
     <link rel="icon" href="../../../../_static/mesh-smallest.png"/>
@@ -103,8 +105,8 @@
          class="form-control"
          name="q"
          id="search-input"
-         placeholder="Search..."
-         aria-label="Search..."
+         placeholder="Search this book..."
+         aria-label="Search this book..."
          autocomplete="off"
          autocorrect="off"
          autocapitalize="off"
@@ -442,6 +444,73 @@
 
 
 
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/anukchat/anukchat.github.io/main?urlpath=lab/tree/content/essentials/python/datatypes/002_Python_String.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Binder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Binder logo" src="../../../../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/anukchat/anukchat.github.io/blob/main/content/essentials/python/datatypes/002_Python_String.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="../../../../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
 <div class="dropdown dropdown-download-buttons">
   <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
     <i class="fas fa-download"></i>
@@ -589,7 +658,7 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="python-strings">
+  <section class="tex2jax_ignore mathjax_ignore" id="python-strings">
 <h1>Python Strings<a class="headerlink" href="#python-strings" title="Link to this heading">#</a></h1>
 <p>Learn to create, format, modify and delete strings in Python. Also, you will be introduced to various string operations and functions.</p>
 <section id="what-is-string-in-python">
@@ -615,7 +684,7 @@ document.write(`
 <p>A character is simply a symbol. For example, the English language has 26 characters.</p>
 <p>Computers do not deal with characters, they deal with numbers (binary). Even though you may see characters on your screen, internally it is stored and manipulated as a combination of 0s and 1s.</p>
 <p>This conversion of character to a number is called encoding, and the reverse process is decoding. ASCII and Unicode are some of the popular encodings used.</p>
-<p>In Python, a string is a sequence of Unicode characters. Unicode was introduced to include every character in all languages and bring uniformity in encoding. These Unicodes range from <strong>$0_{hex}$</strong> to <strong>$10FFFF_{hex}$</strong>. Normally, a Unicode is referred to by writing <strong>“U+”</strong> followed by its <strong>hexadecimal</strong> number. Thus strings in Python are a sequence of Unicode values. You can learn about Unicode from <strong><a class="reference external" href="https://docs.python.org/3.3/howto/unicode.html">Python Unicode</a></strong>.</p>
+<p>In Python, a string is a sequence of Unicode characters. Unicode was introduced to include every character in all languages and bring uniformity in encoding. These Unicodes range from <strong><span class="math notranslate nohighlight">\(0_{hex}\)</span></strong> to <strong><span class="math notranslate nohighlight">\(10FFFF_{hex}\)</span></strong>. Normally, a Unicode is referred to by writing <strong>“U+”</strong> followed by its <strong>hexadecimal</strong> number. Thus strings in Python are a sequence of Unicode values. You can learn about Unicode from <strong><a class="reference external" href="https://docs.python.org/3.3/howto/unicode.html">Python Unicode</a></strong>.</p>
 </section>
 </section>
 <section id="how-to-create-a-string-in-python">
@@ -952,7 +1021,7 @@ Last character of 123456789 is 9
 </div>
 </div>
 </div>
-<p>Finally a substring (range of characters) an be specified as using $a:b$ to specify the characters at index $a,a+1,\ldots,b-1$. Note that the last charcter is <em>not</em> included.</p>
+<p>Finally a substring (range of characters) an be specified as using <span class="math notranslate nohighlight">\(a:b\)</span> to specify the characters at index <span class="math notranslate nohighlight">\(a,a+1,\ldots,b-1\)</span>. Note that the last charcter is <em>not</em> included.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;First three characters&quot;</span><span class="p">,</span><span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">])</span>
@@ -2410,8 +2479,8 @@ There are 3 &#39;l&#39;s but only 1 World in Hello World
     {
         requestKernel: true,
         binderOptions: {
-            repo: "binder-examples/jupyter-stacks-datascience",
-            ref: "master",
+            repo: "anukchat/anukchat.github.io",
+            ref: "main",
         },
         codeMirrorConfig: {
             theme: "abcdef",

@@ -58,6 +58,8 @@
     <script async="async" src="../../../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'content/essentials/mathematics/dissimilarity_measures';</script>
     <link rel="canonical" href="https://anukchat.github.io/content/essentials/mathematics/dissimilarity_measures.html" />
     <link rel="icon" href="../../../_static/mesh-smallest.png"/>
@@ -103,8 +105,8 @@
          class="form-control"
          name="q"
          id="search-input"
-         placeholder="Search..."
-         aria-label="Search..."
+         placeholder="Search this book..."
+         aria-label="Search this book..."
          autocomplete="off"
          autocorrect="off"
          autocapitalize="off"
@@ -442,6 +444,73 @@
 
 
 
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/anukchat/anukchat.github.io/main?urlpath=lab/tree/content/essentials/mathematics/dissimilarity_measures.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Binder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Binder logo" src="../../../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/anukchat/anukchat.github.io/blob/main/content/essentials/mathematics/dissimilarity_measures.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="../../../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
 <div class="dropdown dropdown-download-buttons">
   <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
     <i class="fas fa-download"></i>
@@ -562,7 +631,7 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="dissimilarity-measure">
+  <section class="tex2jax_ignore mathjax_ignore" id="dissimilarity-measure">
 <h1>Dissimilarity Measure<a class="headerlink" href="#dissimilarity-measure" title="Link to this heading">#</a></h1>
 <p>Overview about dissimilarity and distance measure.</p>
 <div class="cell docutils container">
@@ -583,9 +652,10 @@ document.write(`
 <section id="euclidian-distance">
 <h2>Euclidian Distance<a class="headerlink" href="#euclidian-distance" title="Link to this heading">#</a></h2>
 <hr class="docutils" />
-<p>$$ \large \displaystyle
-d(x,y) \mapsto |x-y|<em>2 = \left[\sum</em>{i}^{n}(x_i-y_i)^2\right]^\frac{1}{2} = \sqrt{\sum_{i}^{n}(x_i-y_i)^2}
-$$</p>
+<div class="math notranslate nohighlight">
+\[ \large \displaystyle
+    d(x,y) \mapsto \|x-y\|_2 = \left[\sum_{i}^{n}(x_i-y_i)^2\right]^\frac{1}{2} = \sqrt{\sum_{i}^{n}(x_i-y_i)^2}
+\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">eucl</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">((</span><span class="n">x</span> <span class="o">-</span> <span class="n">y</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">**</span><span class="mf">0.5</span>
@@ -614,9 +684,10 @@ $$</p>
 <section id="manhattan-distance">
 <h2>Manhattan Distance<a class="headerlink" href="#manhattan-distance" title="Link to this heading">#</a></h2>
 <hr class="docutils" />
-<p>$$ \large \displaystyle
-d(x,y) \mapsto |x-y|<em>1 = \sum</em>{i}^{n}|x_i-y_i|
-$$</p>
+<div class="math notranslate nohighlight">
+\[ \large \displaystyle
+    d(x,y) \mapsto \|x-y\|_1 = \sum_{i}^{n}|x_i-y_i|
+\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">manh</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">absolute</span><span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">y</span><span class="p">),</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
@@ -645,9 +716,10 @@ $$</p>
 <section id="chebyshev-distance">
 <h2>Chebyshev Distance<a class="headerlink" href="#chebyshev-distance" title="Link to this heading">#</a></h2>
 <hr class="docutils" />
-<p>$$ \large \displaystyle
-d(x,y) \mapsto |x-y|<em>\infty = \lim</em>{p\to\infty} \left(\sum_{i}^{n}|x_i-y_i|^p\right)^\frac{1}{p} = \overset{n}{\underset{i}{\max}}|x_i-y_i|
-$$</p>
+<div class="math notranslate nohighlight">
+\[ \large \displaystyle
+    d(x,y) \mapsto \|x-y\|_\infty = \lim_{p\to\infty} \left(\sum_{i}^{n}|x_i-y_i|^p\right)^\frac{1}{p} = \overset{n}{\underset{i}{\max}}|x_i-y_i|
+\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cheb</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">absolute</span><span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">y</span><span class="p">),</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
@@ -676,9 +748,10 @@ $$</p>
 <section id="minkowski-distance">
 <h2>Minkowski Distance<a class="headerlink" href="#minkowski-distance" title="Link to this heading">#</a></h2>
 <hr class="docutils" />
-<p>$$ \large \displaystyle
-d(x,y) \mapsto |x-y|<em>p = \left(\sum</em>{i}^{n}|x_i-y_i|^p\right)^\frac{1}{p}
-$$</p>
+<div class="math notranslate nohighlight">
+\[ \large \displaystyle
+    d(x,y) \mapsto \|x-y\|_p = \left(\sum_{i}^{n}|x_i-y_i|^p\right)^\frac{1}{p}
+\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mink</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">p</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">absolute</span><span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">y</span><span class="p">)</span><span class="o">**</span><span class="n">p</span><span class="p">,</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span><span class="o">**</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">p</span><span class="p">)</span>
@@ -729,9 +802,10 @@ $$</p>
 <section id="canberra-distance">
 <h2>Canberra Distance<a class="headerlink" href="#canberra-distance" title="Link to this heading">#</a></h2>
 <hr class="docutils" />
-<p>$$ \large \displaystyle
-d(x,y) = \sum_{i}^{n}\frac{|x_i-y_i|}{|x_i|+|y_i|}
-$$</p>
+<div class="math notranslate nohighlight">
+\[ \large \displaystyle
+    d(x,y) = \sum_{i}^{n}\frac{|x_i-y_i|}{|x_i|+|y_i|}
+\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">canb</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
@@ -763,9 +837,10 @@ $$</p>
 <section id="cosine-distance">
 <h2>Cosine Distance<a class="headerlink" href="#cosine-distance" title="Link to this heading">#</a></h2>
 <hr class="docutils" />
-<p>$$ \large \displaystyle
-d(x,y) \mapsto 1 - \frac{x \cdotp y}{|x|<em>2|y|<em>2} = 1 - \frac{\sum</em>{i}^{n}x_i y_i}{\sqrt{\sum</em>{i}^{n}x_i^2}\sqrt{\sum_{i}^{n}y_i^2}}
-$$</p>
+<div class="math notranslate nohighlight">
+\[ \large \displaystyle
+    d(x,y) \mapsto 1 - \frac{x \cdotp y}{\|x\|_2\|y\|_2} = 1 - \frac{\sum_{i}^{n}x_i y_i}{\sqrt{\sum_{i}^{n}x_i^2}\sqrt{\sum_{i}^{n}y_i^2}}
+\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">coss</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
@@ -800,9 +875,10 @@ $$</p>
 <section id="hamming-distance">
 <h2>Hamming Distance<a class="headerlink" href="#hamming-distance" title="Link to this heading">#</a></h2>
 <hr class="docutils" />
-<p>$$ \large \displaystyle
-d(x,y) = \sum_{i}^{n}w_i[x_i \neq y_i]
-$$</p>
+<div class="math notranslate nohighlight">
+\[ \large \displaystyle
+    d(x,y) = \sum_{i}^{n}w_i[x_i \neq y_i]
+\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">hamm</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
@@ -862,8 +938,8 @@ $$</p>
     {
         requestKernel: true,
         binderOptions: {
-            repo: "binder-examples/jupyter-stacks-datascience",
-            ref: "master",
+            repo: "anukchat/anukchat.github.io",
+            ref: "main",
         },
         codeMirrorConfig: {
             theme: "abcdef",

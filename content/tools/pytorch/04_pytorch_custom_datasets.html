@@ -103,8 +103,8 @@
          class="form-control"
          name="q"
          id="search-input"
-         placeholder="Search..."
-         aria-label="Search..."
+         placeholder="Search this book..."
+         aria-label="Search this book..."
          autocomplete="off"
          autocorrect="off"
          autocapitalize="off"
@@ -442,6 +442,73 @@
 
 
 
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/anukchat/anukchat.github.io/main?urlpath=lab/tree/content/tools/pytorch/04_pytorch_custom_datasets.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Binder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Binder logo" src="../../../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/anukchat/anukchat.github.io/blob/main/content/tools/pytorch/04_pytorch_custom_datasets.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="../../../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
 <div class="dropdown dropdown-download-buttons">
   <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
     <i class="fas fa-download"></i>
@@ -545,7 +612,7 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-a-custom-dataset">What is a custom dataset?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-we-re-going-to-cover">What we’re going to cover</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-were-going-to-cover">What we’re going to cover</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#importing-pytorch-and-setting-up-device-agnostic-code">Importing PyTorch and setting up device-agnostic code</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#get-data">Get data</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#become-one-with-the-data-data-preparation">Become one with the data (data preparation)</a><ul class="nav section-nav flex-column">
@@ -557,14 +624,14 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#option-1-loading-image-data-using-imagefolder">Option 1: Loading Image Data Using <code class="docutils literal notranslate"><span class="pre">ImageFolder</span></code></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#turn-loaded-images-into-dataloader-s">Turn loaded images into <code class="docutils literal notranslate"><span class="pre">DataLoader</span></code>’s</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#turn-loaded-images-into-dataloaders">Turn loaded images into <code class="docutils literal notranslate"><span class="pre">DataLoader</span></code>’s</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#option-2-loading-image-data-with-a-custom-dataset">Option 2: Loading Image Data with a Custom <code class="docutils literal notranslate"><span class="pre">Dataset</span></code></a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-helper-function-to-get-class-names">Creating a helper function to get class names</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-custom-dataset-to-replicate-imagefolder">Create a custom <code class="docutils literal notranslate"><span class="pre">Dataset</span></code> to replicate <code class="docutils literal notranslate"><span class="pre">ImageFolder</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-function-to-display-random-images">Create a function to display random images</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#turn-custom-loaded-images-into-dataloader-s">Turn custom loaded images into <code class="docutils literal notranslate"><span class="pre">DataLoader</span></code>’s</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#turn-custom-loaded-images-into-dataloaders">Turn custom loaded images into <code class="docutils literal notranslate"><span class="pre">DataLoader</span></code>’s</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#other-forms-of-transforms-data-augmentation">Other forms of transforms (data augmentation)</a></li>
@@ -587,7 +654,7 @@ document.write(`
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#model-1-tinyvgg-with-data-augmentation">Model 1: TinyVGG with Data Augmentation</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#create-transform-with-data-augmentation">9.1 Create transform with data augmentation</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#create-train-and-test-dataset-s-and-dataloader-s">Create train and test <code class="docutils literal notranslate"><span class="pre">Dataset</span></code>’s and <code class="docutils literal notranslate"><span class="pre">DataLoader</span></code>’s</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#create-train-and-test-datasets-and-dataloaders">Create train and test <code class="docutils literal notranslate"><span class="pre">Dataset</span></code>’s and <code class="docutils literal notranslate"><span class="pre">DataLoader</span></code>’s</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#construct-and-train-model-1">Construct and train Model 1</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#plot-the-loss-curves-of-model-1">Plot the loss curves of Model 1</a></li>
 </ul>
@@ -612,7 +679,7 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="pytorch-custom-datasets">
+  <section class="tex2jax_ignore mathjax_ignore" id="pytorch-custom-datasets">
 <h1>PyTorch Custom Datasets<a class="headerlink" href="#pytorch-custom-datasets" title="Link to this heading">#</a></h1>
 <p>In the last notebook, <a class="reference internal" href="03_pytorch_computer_vision.html"><span class="std std-doc">notebook 03</span></a>, we looked at how to build computer vision models on an in-built dataset in PyTorch (FashionMNIST).</p>
 <p>The steps we took are similar across many different problems in machine learning.</p>
@@ -626,17 +693,17 @@ document.write(`
 <p>Or if we were trying to build a model to classify whether or not a text-based review on a website was positive or negative, our custom dataset might be examples of existing customer reviews and their ratings.</p>
 <p>Or if we were trying to build a sound classification app, our custom dataset might be sound samples alongside their sample labels.</p>
 <p>Or if we were trying to build a recommendation system for customers purchasing things on our website, our custom dataset might be examples of products other people have bought.</p>
-<img src="images/04-pytorch-domain-libraries.png" alt="different pytorch domain libraries can be used for specific PyTorch problems" width=1000/>
+<img alt="different pytorch domain libraries can be used for specific PyTorch problems" src="../../../_images/04-pytorch-domain-libraries.png" />
 <p><em>PyTorch includes many existing functions to load in various custom datasets in the <a class="reference external" href="https://pytorch.org/vision/stable/index.html"><code class="docutils literal notranslate"><span class="pre">TorchVision</span></code></a>, <a class="reference external" href="https://pytorch.org/text/stable/index.html"><code class="docutils literal notranslate"><span class="pre">TorchText</span></code></a>, <a class="reference external" href="https://pytorch.org/audio/stable/index.html"><code class="docutils literal notranslate"><span class="pre">TorchAudio</span></code></a> and <a class="reference external" href="https://pytorch.org/torchrec/"><code class="docutils literal notranslate"><span class="pre">TorchRec</span></code></a> domain libraries.</em></p>
 <p>But sometimes these existing functions may not be enough.</p>
 <p>In that case, we can always subclass <code class="docutils literal notranslate"><span class="pre">torch.utils.data.Dataset</span></code> and customize it to our liking.</p>
 </section>
-<section id="what-we-re-going-to-cover">
-<h2>What we’re going to cover<a class="headerlink" href="#what-we-re-going-to-cover" title="Link to this heading">#</a></h2>
+<section id="what-were-going-to-cover">
+<h2>What we’re going to cover<a class="headerlink" href="#what-were-going-to-cover" title="Link to this heading">#</a></h2>
 <p>We’re going to be applying the PyTorch Workflow we covered in <a class="reference internal" href="01_pytorch_workflow.html"><span class="std std-doc">notebook 01</span></a> and <a class="reference internal" href="02_pytorch_classification.html"><span class="std std-doc">notebook 02</span></a> to a computer vision problem.</p>
 <p>But instead of using an in-built PyTorch dataset, we’re going to be using our own dataset of pizza, steak and sushi images.</p>
 <p>The goal will be to load these images and then build a model to train and predict on them.</p>
-<img src="images/04-pytorch-food-vision-layout.png" alt="building a pipeline to load in food images and then building a pytorch model to classify those food images" width=800 />
+<a class="reference internal image-reference" href="../../../_images/04-pytorch-food-vision-layout.png"><img alt="building a pipeline to load in food images and then building a pytorch model to classify those food images" src="../../../_images/04-pytorch-food-vision-layout.png" style="width: 800px;" /></a>
 <p><em>What we’re going to build. We’ll use <code class="docutils literal notranslate"><span class="pre">torchvision.datasets</span></code> as well as our own custom <code class="docutils literal notranslate"><span class="pre">Dataset</span></code> class to load in images of food and then we’ll build a PyTorch computer vision model to hopefully be able to classify them.</em></p>
 <p>Specifically, we’re going to cover:</p>
 <div class="pst-scrollable-table-container"><table class="table">
@@ -793,7 +860,7 @@ document.write(`
 <p>Time to become one with it.</p>
 <p>This is another important step before building a model.</p>
 <p>As Abraham Lossfunction said…</p>
-<img src="images/04-abraham-lossfunction.png" alt="tweet by mrdbourke, if I had eight hours to build a machine learning model, I'd spend the first 6 hours preparing my dataset" width=800/>
+<img alt="tweet by mrdbourke, if I had eight hours to build a machine learning model, I'd spend the first 6 hours preparing my dataset" src="../../../_images/04-abraham-lossfunction.png" />
 <p><em>Data preparation is paramount. Before building a model, become one with the data. Ask: What am I trying to do here? Source: <a class="reference external" href="https://twitter.com/mrdbourke">&#64;mrdbourke Twitter</a>.</em></p>
 <p>What’s inspecting the data and becoming one with it?</p>
 <p>Before starting a project or building any kind of model, it’s important to know what data you’re working with.</p>
@@ -1267,8 +1334,8 @@ Image permute shape: torch.Size([64, 64, 3]) -&gt; [height, width, color_channel
 <p>Notice the image is now more pixelated (less quality).</p>
 <p>This is due to it being resized from <code class="docutils literal notranslate"><span class="pre">512x512</span></code> to <code class="docutils literal notranslate"><span class="pre">64x64</span></code> pixels.</p>
 <p>The intuition here is that if you think the image is harder to recognize what’s going on, chances are a model will find it harder to understand too.</p>
-<section id="turn-loaded-images-into-dataloader-s">
-<h3>Turn loaded images into <code class="docutils literal notranslate"><span class="pre">DataLoader</span></code>’s<a class="headerlink" href="#turn-loaded-images-into-dataloader-s" title="Link to this heading">#</a></h3>
+<section id="turn-loaded-images-into-dataloaders">
+<h3>Turn loaded images into <code class="docutils literal notranslate"><span class="pre">DataLoader</span></code>’s<a class="headerlink" href="#turn-loaded-images-into-dataloaders" title="Link to this heading">#</a></h3>
 <p>We’ve got our images as PyTorch <code class="docutils literal notranslate"><span class="pre">Dataset</span></code>’s but now let’s turn them into <code class="docutils literal notranslate"><span class="pre">DataLoader</span></code>’s.</p>
 <p>We’ll do so using <a class="reference external" href="https://pytorch.org/docs/stable/data.html#torch.utils.data.DataLoader"><code class="docutils literal notranslate"><span class="pre">torch.utils.data.DataLoader</span></code></a>.</p>
 <p>Turning our <code class="docutils literal notranslate"><span class="pre">Dataset</span></code>’s into <code class="docutils literal notranslate"><span class="pre">DataLoader</span></code>’s makes them iterable so a model can go through learn the relationships between samples and targets (features and labels).</p>
@@ -1731,8 +1798,8 @@ True
 </div>
 <p>Looks like our <code class="docutils literal notranslate"><span class="pre">ImageFolderCustom</span></code> is working just as we’d like it to.</p>
 </section>
-<section id="turn-custom-loaded-images-into-dataloader-s">
-<h3>Turn custom loaded images into <code class="docutils literal notranslate"><span class="pre">DataLoader</span></code>’s<a class="headerlink" href="#turn-custom-loaded-images-into-dataloader-s" title="Link to this heading">#</a></h3>
+<section id="turn-custom-loaded-images-into-dataloaders">
+<h3>Turn custom loaded images into <code class="docutils literal notranslate"><span class="pre">DataLoader</span></code>’s<a class="headerlink" href="#turn-custom-loaded-images-into-dataloaders" title="Link to this heading">#</a></h3>
 <p>We’ve got a way to turn our raw images into <code class="docutils literal notranslate"><span class="pre">Dataset</span></code>’s (features mapped to labels or <code class="docutils literal notranslate"><span class="pre">X</span></code>’s mapped to <code class="docutils literal notranslate"><span class="pre">y</span></code>’s) through our <code class="docutils literal notranslate"><span class="pre">ImageFolderCustom</span></code> class.</p>
 <p>Now how could we turn our custom <code class="docutils literal notranslate"><span class="pre">Dataset</span></code>’s into <code class="docutils literal notranslate"><span class="pre">DataLoader</span></code>’s?</p>
 <p>If you guessed by using <code class="docutils literal notranslate"><span class="pre">torch.utils.data.DataLoader()</span></code>, you’d be right!</p>
@@ -2465,7 +2532,7 @@ Total training time: 4.935 seconds
 <p>As in, it’s learning the patterns in the training too well and those patterns aren’t generalizing to the test data.</p>
 <p>The other side is when your training and test loss are not as low as you’d like, this is considered <strong>underfitting</strong>.</p>
 <p>The ideal position for a training and test loss curve is for them to line up closely with each other.</p>
-<img src="images/04-loss-curves-overfitting-underfitting-ideal.jpg" alt="different training and test loss curves illustrating overfitting, underfitting and the ideal loss curves" width="800"/>
+<a class="reference internal image-reference" href="../../../_images/04-loss-curves-overfitting-underfitting-ideal.jpg"><img alt="different training and test loss curves illustrating overfitting, underfitting and the ideal loss curves" src="../../../_images/04-loss-curves-overfitting-underfitting-ideal.jpg" style="width: 800px;" /></a>
 <p><em>Left: If your training and test loss curves aren’t as low as you’d like, this is considered <strong>underfitting</strong>. <em>Middle:</em> When your test/validation loss is higher than your training loss this is considered <strong>overfitting</strong>. <em>Right:</em> The ideal scenario is when your training and test loss curves line up over time. This means your model is generalizing well. There are more combinations and different things loss curves can do, for more on these, see Google’s <a class="reference external" href="https://developers.google.com/machine-learning/testing-debugging/metrics/interpretic">Interpreting Loss Curves guide</a>.</em></p>
 <section id="how-to-deal-with-overfitting">
 <h3>How to deal with overfitting<a class="headerlink" href="#how-to-deal-with-overfitting" title="Link to this heading">#</a></h3>
@@ -2580,8 +2647,8 @@ Total training time: 4.935 seconds
 </div>
 <p>Now let’s turn our images into <code class="docutils literal notranslate"><span class="pre">Dataset</span></code>’s using <code class="docutils literal notranslate"><span class="pre">torchvision.datasets.ImageFolder()</span></code> and then into <code class="docutils literal notranslate"><span class="pre">DataLoader</span></code>’s with <code class="docutils literal notranslate"><span class="pre">torch.utils.data.DataLoader()</span></code>.</p>
 </section>
-<section id="create-train-and-test-dataset-s-and-dataloader-s">
-<h3>Create train and test <code class="docutils literal notranslate"><span class="pre">Dataset</span></code>’s and <code class="docutils literal notranslate"><span class="pre">DataLoader</span></code>’s<a class="headerlink" href="#create-train-and-test-dataset-s-and-dataloader-s" title="Link to this heading">#</a></h3>
+<section id="create-train-and-test-datasets-and-dataloaders">
+<h3>Create train and test <code class="docutils literal notranslate"><span class="pre">Dataset</span></code>’s and <code class="docutils literal notranslate"><span class="pre">DataLoader</span></code>’s<a class="headerlink" href="#create-train-and-test-datasets-and-dataloaders" title="Link to this heading">#</a></h3>
 <p>We’ll make sure the train <code class="docutils literal notranslate"><span class="pre">Dataset</span></code> uses the <code class="docutils literal notranslate"><span class="pre">train_transform_trivial_augment</span></code> and the test <code class="docutils literal notranslate"><span class="pre">Dataset</span></code> uses the <code class="docutils literal notranslate"><span class="pre">test_transform</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -3569,8 +3636,8 @@ Prediction label: tensor([0], device=&#39;cuda:0&#39;)
     {
         requestKernel: true,
         binderOptions: {
-            repo: "binder-examples/jupyter-stacks-datascience",
-            ref: "master",
+            repo: "anukchat/anukchat.github.io",
+            ref: "main",
         },
         codeMirrorConfig: {
             theme: "abcdef",
@@ -3630,7 +3697,7 @@ Prediction label: tensor([0], device=&#39;cuda:0&#39;)
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-a-custom-dataset">What is a custom dataset?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-we-re-going-to-cover">What we’re going to cover</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-were-going-to-cover">What we’re going to cover</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#importing-pytorch-and-setting-up-device-agnostic-code">Importing PyTorch and setting up device-agnostic code</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#get-data">Get data</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#become-one-with-the-data-data-preparation">Become one with the data (data preparation)</a><ul class="nav section-nav flex-column">
@@ -3642,14 +3709,14 @@ Prediction label: tensor([0], device=&#39;cuda:0&#39;)
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#option-1-loading-image-data-using-imagefolder">Option 1: Loading Image Data Using <code class="docutils literal notranslate"><span class="pre">ImageFolder</span></code></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#turn-loaded-images-into-dataloader-s">Turn loaded images into <code class="docutils literal notranslate"><span class="pre">DataLoader</span></code>’s</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#turn-loaded-images-into-dataloaders">Turn loaded images into <code class="docutils literal notranslate"><span class="pre">DataLoader</span></code>’s</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#option-2-loading-image-data-with-a-custom-dataset">Option 2: Loading Image Data with a Custom <code class="docutils literal notranslate"><span class="pre">Dataset</span></code></a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-helper-function-to-get-class-names">Creating a helper function to get class names</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-custom-dataset-to-replicate-imagefolder">Create a custom <code class="docutils literal notranslate"><span class="pre">Dataset</span></code> to replicate <code class="docutils literal notranslate"><span class="pre">ImageFolder</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-function-to-display-random-images">Create a function to display random images</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#turn-custom-loaded-images-into-dataloader-s">Turn custom loaded images into <code class="docutils literal notranslate"><span class="pre">DataLoader</span></code>’s</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#turn-custom-loaded-images-into-dataloaders">Turn custom loaded images into <code class="docutils literal notranslate"><span class="pre">DataLoader</span></code>’s</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#other-forms-of-transforms-data-augmentation">Other forms of transforms (data augmentation)</a></li>
@@ -3672,7 +3739,7 @@ Prediction label: tensor([0], device=&#39;cuda:0&#39;)
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#model-1-tinyvgg-with-data-augmentation">Model 1: TinyVGG with Data Augmentation</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#create-transform-with-data-augmentation">9.1 Create transform with data augmentation</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#create-train-and-test-dataset-s-and-dataloader-s">Create train and test <code class="docutils literal notranslate"><span class="pre">Dataset</span></code>’s and <code class="docutils literal notranslate"><span class="pre">DataLoader</span></code>’s</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#create-train-and-test-datasets-and-dataloaders">Create train and test <code class="docutils literal notranslate"><span class="pre">Dataset</span></code>’s and <code class="docutils literal notranslate"><span class="pre">DataLoader</span></code>’s</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#construct-and-train-model-1">Construct and train Model 1</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#plot-the-loss-curves-of-model-1">Plot the loss curves of Model 1</a></li>
 </ul>

@@ -103,8 +103,8 @@
          class="form-control"
          name="q"
          id="search-input"
-         placeholder="Search..."
-         aria-label="Search..."
+         placeholder="Search this book..."
+         aria-label="Search this book..."
          autocomplete="off"
          autocorrect="off"
          autocapitalize="off"
@@ -442,6 +442,73 @@
 
 
 
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/anukchat/anukchat.github.io/main?urlpath=lab/tree/content/essentials/python/functions/007_Python_Function_Module.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Binder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Binder logo" src="../../../../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/anukchat/anukchat.github.io/blob/main/content/essentials/python/functions/007_Python_Function_Module.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="../../../../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
 <div class="dropdown dropdown-download-buttons">
   <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
     <i class="fas fa-download"></i>
@@ -589,7 +656,7 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="python-modules">
+  <section class="tex2jax_ignore mathjax_ignore" id="python-modules">
 <h1>Python Modules<a class="headerlink" href="#python-modules" title="Link to this heading">#</a></h1>
 <p>Learn to create and import custom modules in Python. Also, you will find different techniques to import and use custom and built-in modules in Python.</p>
 <section id="what-are-modules-in-python">
@@ -649,26 +716,26 @@ document.write(`
 <p>Standard modules can be imported the same way as we import our user-defined modules.</p>
 <p>There are various ways to import modules. They are listed below:</p>
 <p>** # Example 2:**</p>
-<p>The Python code for a module named a name normally resides in a file <strong>main.py</strong>. But first create a function in <strong>test.py</strong>. Here is an example of a simple module,</p>
-<p><strong>test.py</strong> -</p>
+<p>The Python code for a module named a name normally resides in a file <strong><a class="reference external" href="http://main.py">main.py</a></strong>. But first create a function in <strong><a class="reference external" href="http://test.py">test.py</a></strong>. Here is an example of a simple module,</p>
+<p><strong><a class="reference external" href="http://test.py">test.py</a></strong> -</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">fun</span><span class="p">():</span>
 <span class="gp">&gt;&gt;&gt; </span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;something here inside fun()&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p><strong>main.py</strong> −</p>
+<p><strong><a class="reference external" href="http://main.py">main.py</a></strong> −</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">test</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">test</span> <span class="kn">import</span> <span class="n">fun</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">fun</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>Output of above example: Run <strong>main.py</strong></p>
+<p>Output of above example: Run <strong><a class="reference external" href="http://main.py">main.py</a></strong></p>
 <p><code class="docutils literal notranslate"><span class="pre">something</span> <span class="pre">here</span> <span class="pre">inside</span> <span class="pre">fun()</span></code></p>
 <hr class="docutils" />
 <p>For <strong>test.ipynb</strong> or <strong>test1.ipynb</strong> and <strong>main.ipynb</strong></p>
 <p>Open anaconda prompt and type <strong><code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">import-ipynb</span></code></strong></p>
 <p>see:
 Downloading import-ipynb-0.1.3.tar.gz (4.0 kB)</p>
-<p><strong>test.py</strong> or <strong>test1.ipynb</strong> -</p>
+<p><strong><a class="reference external" href="http://test.py">test.py</a></strong> or <strong>test1.ipynb</strong> -</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">fun</span><span class="p">():</span>
 <span class="gp">&gt;&gt;&gt; </span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;something here inside fun()&quot;</span><span class="p">)</span>
 </pre></div>
@@ -684,7 +751,7 @@ Downloading import-ipynb-0.1.3.tar.gz (4.0 kB)</p>
 <p>Output of above example: Run <strong>main.ipynb</strong></p>
 <p><code class="docutils literal notranslate"><span class="pre">something</span> <span class="pre">here</span> <span class="pre">inside</span> <span class="pre">fun()</span></code></p>
 <p><strong># Example 3:</strong></p>
-<p><strong>fibo.py</strong> -</p>
+<p><strong><a class="reference external" href="http://fibo.py">fibo.py</a></strong> -</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Fibonacci numbers module</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="k">def</span> <span class="nf">fib</span><span class="p">(</span><span class="n">n</span><span class="p">):</span> <span class="c1"># return Fibonacci series up to n</span>
 <span class="o">&gt;&gt;&gt;</span>     <span class="n">result</span> <span class="o">=</span> <span class="p">[]</span>
@@ -695,20 +762,20 @@ Downloading import-ipynb-0.1.3.tar.gz (4.0 kB)</p>
 <span class="o">&gt;&gt;&gt;</span>     <span class="k">return</span> <span class="n">result</span>
 </pre></div>
 </div>
-<p><strong>main.py</strong> −</p>
+<p><strong><a class="reference external" href="http://main.py">main.py</a></strong> −</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">fibo</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">fibo</span> <span class="kn">import</span> <span class="n">fib</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">fib</span><span class="p">(</span><span class="mi">100</span><span class="p">))</span>
 </pre></div>
 </div>
-<p>Output of above example: Run <strong>main.py</strong></p>
+<p>Output of above example: Run <strong><a class="reference external" href="http://main.py">main.py</a></strong></p>
 <p><code class="docutils literal notranslate"><span class="pre">[1,</span> <span class="pre">1,</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">5,</span> <span class="pre">8,</span> <span class="pre">13,</span> <span class="pre">21,</span> <span class="pre">34,</span> <span class="pre">55,</span> <span class="pre">89]</span></code></p>
 <hr class="docutils" />
 <p>For <strong>test.ipynb</strong> or <strong>test1.ipynb</strong> and <strong>main.ipynb</strong></p>
 <p>Open anaconda prompt and type <strong><code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">import-ipynb</span></code></strong></p>
 <p>see:
 Downloading import-ipynb-0.1.3.tar.gz (4.0 kB)</p>
-<p><strong>fibo1.ipynb</strong> or <strong>fibo.py</strong> -</p>
+<p><strong>fibo1.ipynb</strong> or <strong><a class="reference external" href="http://fibo.py">fibo.py</a></strong> -</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Fibonacci numbers module</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="k">def</span> <span class="nf">fib</span><span class="p">(</span><span class="n">n</span><span class="p">):</span> <span class="c1"># return Fibonacci series up to n</span>
 <span class="o">&gt;&gt;&gt;</span>     <span class="n">result</span> <span class="o">=</span> <span class="p">[]</span>
@@ -730,20 +797,20 @@ Downloading import-ipynb-0.1.3.tar.gz (4.0 kB)</p>
 <p>Output of above example: Run <strong>main.ipynb</strong></p>
 <p><code class="docutils literal notranslate"><span class="pre">[1,</span> <span class="pre">1,</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">5,</span> <span class="pre">8,</span> <span class="pre">13,</span> <span class="pre">21,</span> <span class="pre">34,</span> <span class="pre">55,</span> <span class="pre">89]</span></code></p>
 <p><strong># Example 4:</strong></p>
-<p><strong>equal.py</strong> -</p>
+<p><strong><a class="reference external" href="http://equal.py">equal.py</a></strong> -</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#function definition</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="k">def</span> <span class="nf">equal</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
 <span class="o">&gt;&gt;&gt;</span>     <span class="k">if</span><span class="p">(</span><span class="n">a</span> <span class="o">==</span> <span class="n">b</span><span class="p">):</span>
 <span class="o">&gt;&gt;&gt;</span>         <span class="k">return</span> <span class="kc">True</span>
 </pre></div>
 </div>
-<p><strong>main.py</strong> −</p>
+<p><strong><a class="reference external" href="http://main.py">main.py</a></strong> −</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">equal</span> <span class="kn">import</span> <span class="o">*</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">10</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">equal</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">))</span>
 </pre></div>
 </div>
-<p>Output of above example: Run <strong>main.py</strong></p>
+<p>Output of above example: Run <strong><a class="reference external" href="http://main.py">main.py</a></strong></p>
 <p><code class="docutils literal notranslate"><span class="pre">True</span></code></p>
 <hr class="docutils" />
 <p>For <strong>equal.ipynb</strong> or <strong>equal1.ipynb</strong> and <strong>main.ipynb</strong></p>
@@ -1108,7 +1175,7 @@ and write the below code in that file.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Welcome to Dr Parmar&#39;s Python4DataScience class&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Now, create a Python file with the name, <strong>main.py</strong> and write the below code in it and import the module test_module.py. See the following code.</p>
+<p>Now, create a Python file with the name, <strong><a class="reference external" href="http://main.py">main.py</a></strong> and write the below code in it and import the module test_module.py. See the following code.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">import_ipynb</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">time</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">importlib</span> <span class="kn">import</span> <span class="n">reload</span>
@@ -1125,7 +1192,7 @@ and write the below code in that file.</p>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;This is test file..&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Output of above example: Run <strong>main.py</strong></p>
+<p>Output of above example: Run <strong><a class="reference external" href="http://main.py">main.py</a></strong></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">Welcome</span> <span class="n">to</span> <span class="n">Dr</span> <span class="n">Parmar</span><span class="s1">&#39;s Python4DataScience class</span>
 <span class="n">Welcome</span> <span class="n">to</span> <span class="n">Dr</span> <span class="n">Parmar</span><span class="s1">&#39;s Python4DataScience class</span>
 <span class="n">Welcome</span> <span class="n">to</span> <span class="n">Dr</span> <span class="n">Parmar</span><span class="s1">&#39;s Python4DataScience class</span>
@@ -1686,8 +1753,8 @@ math.e :  2.718281828459045
     {
         requestKernel: true,
         binderOptions: {
-            repo: "binder-examples/jupyter-stacks-datascience",
-            ref: "master",
+            repo: "anukchat/anukchat.github.io",
+            ref: "main",
         },
         codeMirrorConfig: {
             theme: "abcdef",

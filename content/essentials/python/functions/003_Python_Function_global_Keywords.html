@@ -103,8 +103,8 @@
          class="form-control"
          name="q"
          id="search-input"
-         placeholder="Search..."
-         aria-label="Search..."
+         placeholder="Search this book..."
+         aria-label="Search this book..."
          autocomplete="off"
          autocorrect="off"
          autocapitalize="off"
@@ -442,6 +442,73 @@
 
 
 
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/anukchat/anukchat.github.io/main?urlpath=lab/tree/content/essentials/python/functions/003_Python_Function_global_Keywords.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Binder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Binder logo" src="../../../../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/anukchat/anukchat.github.io/blob/main/content/essentials/python/functions/003_Python_Function_global_Keywords.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="../../../../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
 <div class="dropdown dropdown-download-buttons">
   <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
     <i class="fas fa-download"></i>
@@ -567,12 +634,12 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="python-global-keyword">
+  <section class="tex2jax_ignore mathjax_ignore" id="python-global-keyword">
 <h1>Python <code class="docutils literal notranslate"><span class="pre">global</span></code> Keyword<a class="headerlink" href="#python-global-keyword" title="Link to this heading">#</a></h1>
 <p>Learn about the <strong><code class="docutils literal notranslate"><span class="pre">global</span></code></strong> keyword, global variable and when to use <strong><code class="docutils literal notranslate"><span class="pre">global</span></code></strong> keyword.</p>
 <p>Before reading this article, make sure you have got some basics of <strong><a class="reference internal" href="002_Python_Function_Global_Local_Nonlocal.html"><span class="std std-doc">Python Global, Local and Nonlocal Variables</span></a></strong>.</p>
 </section>
-<section id="what-is-global-keyword">
+<section class="tex2jax_ignore mathjax_ignore" id="what-is-global-keyword">
 <h1>What is <code class="docutils literal notranslate"><span class="pre">global</span></code> keyword?<a class="headerlink" href="#what-is-global-keyword" title="Link to this heading">#</a></h1>
 <p>In Python, <strong><code class="docutils literal notranslate"><span class="pre">global</span></code></strong> keyword allows you to modify the variable outside of the current scope. It is used to create a global variable and make changes to the variable in a local context.</p>
 <section id="rules-of-global-keyword">
@@ -744,23 +811,23 @@ Value in 3rd function: 999
 </section>
 <section id="global-variables-across-python-modules">
 <h2>Global Variables Across Python Modules<a class="headerlink" href="#global-variables-across-python-modules" title="Link to this heading">#</a></h2>
-<p>In Python, we create a single module <strong>config.py</strong> to hold global variables and share information across Python modules within the same program.</p>
+<p>In Python, we create a single module <strong><a class="reference external" href="http://config.py">config.py</a></strong> to hold global variables and share information across Python modules within the same program.</p>
 <p>Here is how we can share global variables across the python modules.</p>
 <section id="example-share-a-global-variable-across-python-modules">
 <h3>Example : Share a global Variable Across Python Modules<a class="headerlink" href="#example-share-a-global-variable-across-python-modules" title="Link to this heading">#</a></h3>
-<p>Create a <strong>config.py</strong> file, to store global variables</p>
+<p>Create a <strong><a class="reference external" href="http://config.py">config.py</a></strong> file, to store global variables</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">b</span> <span class="o">=</span> <span class="s2">&quot;empty&quot;</span>
 </pre></div>
 </div>
-<p>Create a <strong>update.py</strong> file, to change global variables</p>
+<p>Create a <strong><a class="reference external" href="http://update.py">update.py</a></strong> file, to change global variables</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">config</span>  <span class="c1"># import config.py here</span>
 
 <span class="gp">&gt;&gt;&gt; </span><span class="n">config</span><span class="o">.</span><span class="n">a</span> <span class="o">=</span> <span class="mi">10</span>  <span class="c1"># change the value of &#39;a&#39; from 0 to 10</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">config</span><span class="o">.</span><span class="n">b</span> <span class="o">=</span> <span class="s2">&quot;alphabet&quot;</span>  <span class="c1"># change the value of &#39;b&#39; from &quot;empty&quot; to &quot;alphabet&quot;</span>
 </pre></div>
 </div>
-<p>Create a <strong>main1.py</strong> file, to test changes in value</p>
+<p>Create a <strong><a class="reference external" href="http://main1.py">main1.py</a></strong> file, to test changes in value</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">config</span>  <span class="c1"># import config.py here</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">update</span>  <span class="c1"># import update.py here</span>
 
@@ -768,10 +835,10 @@ Value in 3rd function: 999
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">config</span><span class="o">.</span><span class="n">b</span><span class="p">)</span>  <span class="c1"># print the updated value of &#39;b&#39;</span>
 </pre></div>
 </div>
-<p>When we run the <strong>main.py</strong> file, the output will be</p>
+<p>When we run the <strong><a class="reference external" href="http://main.py">main.py</a></strong> file, the output will be</p>
 <p><code class="docutils literal notranslate"><span class="pre">10</span> <span class="pre">alphabet</span></code></p>
-<p>In the above, we have created three files: <strong>config.py</strong>, <strong>update.py</strong>, and <strong>main.py</strong>.</p>
-<p>The module <strong>config.py</strong> stores global variables of <strong><code class="docutils literal notranslate"><span class="pre">a</span></code></strong> and <strong><code class="docutils literal notranslate"><span class="pre">b</span></code></strong>. In the <strong>update.py</strong> file, we import the <strong>config.py</strong> module and modify the values of <strong><code class="docutils literal notranslate"><span class="pre">a</span></code></strong> and <strong><code class="docutils literal notranslate"><span class="pre">b</span></code></strong>. Similarly, in the <strong>main.py</strong> file, we import both <strong>config.py</strong> and <strong>update.py</strong> module. Finally, we print and test the values of global variables whether they are changed or not.</p>
+<p>In the above, we have created three files: <strong><a class="reference external" href="http://config.py">config.py</a></strong>, <strong><a class="reference external" href="http://update.py">update.py</a></strong>, and <strong><a class="reference external" href="http://main.py">main.py</a></strong>.</p>
+<p>The module <strong><a class="reference external" href="http://config.py">config.py</a></strong> stores global variables of <strong><code class="docutils literal notranslate"><span class="pre">a</span></code></strong> and <strong><code class="docutils literal notranslate"><span class="pre">b</span></code></strong>. In the <strong><a class="reference external" href="http://update.py">update.py</a></strong> file, we import the <strong><a class="reference external" href="http://config.py">config.py</a></strong> module and modify the values of <strong><code class="docutils literal notranslate"><span class="pre">a</span></code></strong> and <strong><code class="docutils literal notranslate"><span class="pre">b</span></code></strong>. Similarly, in the <strong><a class="reference external" href="http://main.py">main.py</a></strong> file, we import both <strong><a class="reference external" href="http://config.py">config.py</a></strong> and <strong><a class="reference external" href="http://update.py">update.py</a></strong> module. Finally, we print and test the values of global variables whether they are changed or not.</p>
 </section>
 </section>
 <section id="global-in-nested-functions">
@@ -818,8 +885,8 @@ x in main function: 66
     {
         requestKernel: true,
         binderOptions: {
-            repo: "binder-examples/jupyter-stacks-datascience",
-            ref: "master",
+            repo: "anukchat/anukchat.github.io",
+            ref: "main",
         },
         codeMirrorConfig: {
             theme: "abcdef",

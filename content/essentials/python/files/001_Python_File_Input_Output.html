@@ -103,8 +103,8 @@
          class="form-control"
          name="q"
          id="search-input"
-         placeholder="Search..."
-         aria-label="Search..."
+         placeholder="Search this book..."
+         aria-label="Search this book..."
          autocomplete="off"
          autocorrect="off"
          autocapitalize="off"
@@ -442,6 +442,73 @@
 
 
 
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/anukchat/anukchat.github.io/main?urlpath=lab/tree/content/essentials/python/files/001_Python_File_Input_Output.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Binder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Binder logo" src="../../../../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/anukchat/anukchat.github.io/blob/main/content/essentials/python/files/001_Python_File_Input_Output.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="../../../../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
 <div class="dropdown dropdown-download-buttons">
   <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
     <i class="fas fa-download"></i>
@@ -577,7 +644,7 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="python-file-i-o">
+  <section class="tex2jax_ignore mathjax_ignore" id="python-file-i-o">
 <h1>Python File I/O<a class="headerlink" href="#python-file-i-o" title="Link to this heading">#</a></h1>
 <p>Learn about Python file operations. More specifically, opening a file, reading from it, writing into it, closing it, and various file methods that you should be aware of.</p>
 <section id="files">
@@ -745,7 +812,7 @@ document.write(`
 <ul class="simple">
 <li><p><strong>file.closed</strong> - Returns true if file is closed, false otherwise.</p></li>
 <li><p><strong>file.mode</strong> - Returns access mode with which file was opened.</p></li>
-<li><p><strong>file.name</strong> - Returns name of the file.</p></li>
+<li><p><strong><a class="reference external" href="http://file.name">file.name</a></strong> - Returns name of the file.</p></li>
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1127,16 +1194,16 @@ position after reading file :  26
 <td class="text-left"><p>Returns the current file location.</p></td>
 </tr>
 <tr class="row-even"><td class="text-left"><p><strong><code class="docutils literal notranslate"><span class="pre">truncate(size=None)</span></code></strong></p></td>
-<td class="text-left"><p>Resizes the file stream to <strong><code class="docutils literal notranslate"><span class="pre">size</span></code></strong> bytes. If <strong><code class="docutils literal notranslate"><span class="pre">size</span></code></strong> is not specified, resizes to current location..</p></td>
+<td class="text-left"><p>Resizes the file stream to <strong><code class="docutils literal notranslate"><span class="pre">size</span></code></strong> bytes. If <strong><code class="docutils literal notranslate"><span class="pre">size</span></code></strong> is not specified, resizes to current location…</p></td>
 </tr>
 <tr class="row-odd"><td class="text-left"><p><strong><code class="docutils literal notranslate"><span class="pre">writable()</span></code></strong></p></td>
 <td class="text-left"><p>Returns <strong><code class="docutils literal notranslate"><span class="pre">True</span></code></strong> if the file stream can be written to.</p></td>
 </tr>
 <tr class="row-even"><td class="text-left"><p><strong><code class="docutils literal notranslate"><span class="pre">write(s)</span></code></strong></p></td>
-<td class="text-left"><p>Writes the string <strong><code class="docutils literal notranslate"><span class="pre">s</span></code></strong> to the file and returns the number of characters written..</p></td>
+<td class="text-left"><p>Writes the string <strong><code class="docutils literal notranslate"><span class="pre">s</span></code></strong> to the file and returns the number of characters written…</p></td>
 </tr>
 <tr class="row-odd"><td class="text-left"><p><strong><code class="docutils literal notranslate"><span class="pre">writelines(lines)</span></code></strong></p></td>
-<td class="text-left"><p>Writes a list of <strong><code class="docutils literal notranslate"><span class="pre">lines</span></code></strong> to the file..</p></td>
+<td class="text-left"><p>Writes a list of <strong><code class="docutils literal notranslate"><span class="pre">lines</span></code></strong> to the file…</p></td>
 </tr>
 </tbody>
 </table>
@@ -1399,8 +1466,8 @@ field:  skills
     {
         requestKernel: true,
         binderOptions: {
-            repo: "binder-examples/jupyter-stacks-datascience",
-            ref: "master",
+            repo: "anukchat/anukchat.github.io",
+            ref: "main",
         },
         codeMirrorConfig: {
             theme: "abcdef",

@@ -103,8 +103,8 @@
          class="form-control"
          name="q"
          id="search-input"
-         placeholder="Search..."
-         aria-label="Search..."
+         placeholder="Search this book..."
+         aria-label="Search this book..."
          autocomplete="off"
          autocorrect="off"
          autocapitalize="off"
@@ -442,6 +442,73 @@
 
 
 
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/anukchat/anukchat.github.io/main?urlpath=lab/tree/content/tools/pytorch/07_pytorch_experiment_tracking.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Binder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Binder logo" src="../../../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/anukchat/anukchat.github.io/blob/main/content/tools/pytorch/07_pytorch_experiment_tracking.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="../../../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
 <div class="dropdown dropdown-download-buttons">
   <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
     <i class="fas fa-download"></i>
@@ -547,7 +614,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-experiment-tracking">What is experiment tracking?</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-track-experiments">Why track experiments?</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#different-ways-to-track-machine-learning-experiments">Different ways to track machine learning experiments</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-we-re-going-to-cover">What we’re going to cover</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-were-going-to-cover">What we’re going to cover</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-setup">Getting setup</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-helper-function-to-set-seeds">Create a helper function to set seeds</a></li>
 </ul>
@@ -563,7 +630,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#adjust-train-function-to-track-results-with-summarywriter">Adjust <code class="docutils literal notranslate"><span class="pre">train()</span></code> function to track results with <code class="docutils literal notranslate"><span class="pre">SummaryWriter()</span></code></a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#view-our-model-s-results-in-tensorboard">View our model’s results in TensorBoard</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#view-our-models-results-in-tensorboard">View our model’s results in TensorBoard</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-helper-function-to-build-summarywriter-instances">Create a helper function to build <code class="docutils literal notranslate"><span class="pre">SummaryWriter()</span></code> instances</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#update-the-train-function-to-include-a-writer-parameter">Update the <code class="docutils literal notranslate"><span class="pre">train()</span></code> function to include a <code class="docutils literal notranslate"><span class="pre">writer</span></code> parameter</a></li>
 </ul>
@@ -595,7 +662,7 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="pytorch-experiment-tracking">
+  <section class="tex2jax_ignore mathjax_ignore" id="pytorch-experiment-tracking">
 <h1>PyTorch Experiment Tracking<a class="headerlink" href="#pytorch-experiment-tracking" title="Link to this heading">#</a></h1>
 <blockquote>
 <div><p><strong>Note:</strong> This notebook uses <code class="docutils literal notranslate"><span class="pre">torchvision</span></code>’s new <a class="reference external" href="https://pytorch.org/blog/introducing-torchvision-new-multi-weight-support-api/">multi-weight support API (available in <code class="docutils literal notranslate"><span class="pre">torchvision</span></code> v0.13+)</a>.</p>
@@ -623,7 +690,7 @@ document.write(`
 <p>If you’re only running a handful of models (like we’ve done so far), it might be okay just to track their results in print outs and a few dictionaries.</p>
 <p>However, as the number of experiments you run starts to increase, this naive way of tracking could get out of hand.</p>
 <p>So if you’re following the machine learning practitioner’s motto of <em>experiment, experiment, experiment!</em>, you’ll want a way to track them.</p>
-<img src="images/07-experiment-tracking-can-get-out-of-hand.png" alt="experiment tracking can get out of hand, many different experiments with different names" width=900/>
+<img alt="experiment tracking can get out of hand, many different experiments with different names" src="../../../_images/07-experiment-tracking-can-get-out-of-hand.png" />
 <p><em>After building a few models and tracking their results, you’ll start to notice how quickly it can get out of hand.</em></p>
 </section>
 <section id="different-ways-to-track-machine-learning-experiments">
@@ -667,11 +734,11 @@ document.write(`
 </tbody>
 </table>
 </div>
-<img src="images/07-different-places-to-track-experiments.png" alt="various places to track machine learning experiments" width=900/>
+<img alt="various places to track machine learning experiments" src="../../../_images/07-different-places-to-track-experiments.png" />
 <p><em>Various places and techniques you can use to track your machine learning experiments. <strong>Note:</strong> There are various other options similar to Weights &amp; Biases and open-source options similar to MLflow but I’ve left them out for brevity. You can find more by searching “machine learning experiment tracking”.</em></p>
 </section>
-<section id="what-we-re-going-to-cover">
-<h2>What we’re going to cover<a class="headerlink" href="#what-we-re-going-to-cover" title="Link to this heading">#</a></h2>
+<section id="what-were-going-to-cover">
+<h2>What we’re going to cover<a class="headerlink" href="#what-were-going-to-cover" title="Link to this heading">#</a></h2>
 <p>We’re going to be running several different modelling experiments with various levels of data, model size and training time to try and improve on FoodVision Mini.</p>
 <p>And due to its tight integration with PyTorch and widespread use, this notebook focuses on using TensorBoard to track our experiments.</p>
 <p>However, the principles we’re going to cover are similar across all of the other tools for experiment tracking.</p>
@@ -1091,7 +1158,7 @@ torchvision version: 0.14.0.dev20220620+cu113
 </div>
 </div>
 </div>
-<img src="images/07-output-of-torchinfo-summary.png" alt="output of torchinfo.summary() when passed our model when base layers are frozen and classifier head is updated" width=900/>
+<img alt="output of torchinfo.summary() when passed our model when base layers are frozen and classifier head is updated" src="../../../_images/07-output-of-torchinfo-summary.png" />
 <p><em>Output of <code class="docutils literal notranslate"><span class="pre">torchinfo.summary()</span></code> with our feature extractor EffNetB0 model, notice how the base layers are frozen (not trainable) and the output layers are customized to our own problem.</em></p>
 </section>
 <section id="train-model-and-track-results">
@@ -1335,8 +1402,8 @@ Epoch: 5 | train_loss: 0.7065 | train_acc: 0.7188 | test_loss: 0.6746 | test_acc
 <p>There has to be a better way…</p>
 </section>
 </section>
-<section id="view-our-model-s-results-in-tensorboard">
-<h2>View our model’s results in TensorBoard<a class="headerlink" href="#view-our-model-s-results-in-tensorboard" title="Link to this heading">#</a></h2>
+<section id="view-our-models-results-in-tensorboard">
+<h2>View our model’s results in TensorBoard<a class="headerlink" href="#view-our-models-results-in-tensorboard" title="Link to this heading">#</a></h2>
 <p>The <code class="docutils literal notranslate"><span class="pre">SummaryWriter()</span></code> class stores our model’s results in a directory called <code class="docutils literal notranslate"><span class="pre">runs/</span></code> in TensorBoard format by default.</p>
 <p>TensorBoard is a visualization program created by the TensorFlow team to view and inspect information about models and data.</p>
 <p>You know what that means?</p>
@@ -1377,7 +1444,7 @@ Epoch: 5 | train_loss: 0.7065 | train_acc: 0.7188 | test_loss: 0.6746 | test_acc
 </div>
 </div>
 <p>If all went correctly, you should see something like the following:</p>
-<img src="images/07-tensorboard-single-experiment.png" alt="output of viewing a single experiment in tensorboard" width=900/>
+<img alt="output of viewing a single experiment in tensorboard" src="../../../_images/07-tensorboard-single-experiment.png" />
 <p><em>Viewing a single modelling experiment’s results for accuracy and loss in TensorBoard.</em></p>
 <blockquote>
 <div><p><strong>Note:</strong> For more information on running TensorBoard in notebooks or in other locations, see the following:</p>
@@ -1871,7 +1938,7 @@ Number of classes: 3, class names: [&#39;pizza&#39;, &#39;steak&#39;, &#39;sushi
 </div>
 </div>
 </div>
-<img src="images/07-effnetb2-unfrozen-summary-output.png" alt="output of torchinfo.summary() when passed our effnetb2 model with all layers trainable and default classifier head" width=900/>
+<img alt="output of torchinfo.summary() when passed our effnetb2 model with all layers trainable and default classifier head" src="../../../_images/07-effnetb2-unfrozen-summary-output.png" />
 <p><em>Model summary of EffNetB2 feature extractor model with all layers unfrozen (trainable) and default classifier head from ImageNet pretraining.</em></p>
 <p>Now we know the required number of <code class="docutils literal notranslate"><span class="pre">in_features</span></code> for the EffNetB2 model, let’s create a couple of helper functions to setup our EffNetB0 and EffNetB2 feature extractor models.</p>
 <p>We want these functions to:</p>
@@ -1964,7 +2031,7 @@ Number of classes: 3, class names: [&#39;pizza&#39;, &#39;steak&#39;, &#39;sushi
 </div>
 </div>
 </div>
-<img src="images/07-effnetb0-frozen-summary-output.png" alt="output of torchinfo.summary() when passed our effnetb0 model with base layers are frozen and classifier head is updated" width=900/>
+<img alt="output of torchinfo.summary() when passed our effnetb0 model with base layers are frozen and classifier head is updated" src="../../../_images/07-effnetb0-frozen-summary-output.png" />
 <p><em>Model summary of EffNetB0 model with base layers frozen (untrainable) and updated classifier head (suited for pizza, steak, sushi image classification).</em></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1987,7 +2054,7 @@ Number of classes: 3, class names: [&#39;pizza&#39;, &#39;steak&#39;, &#39;sushi
 </div>
 </div>
 </div>
-<img src="images/07-effnetb2-frozen-summary-output.png" alt="output of torchinfo.summary() when passed our effnetb2 model with base layers are frozen and classifier head is updated" width=900/>
+<img alt="output of torchinfo.summary() when passed our effnetb2 model with base layers are frozen and classifier head is updated" src="../../../_images/07-effnetb2-frozen-summary-output.png" />
 <p><em>Model summary of EffNetB2 model with base layers frozen (untrainable) and updated classifier head (suited for pizza, steak, sushi image classification).</em></p>
 <p>Looking at the outputs of the summaries, it seems the EffNetB2 backbone has nearly double the amount of parameters as EffNetB0.</p>
 <div class="pst-scrollable-table-container"><table class="table">
@@ -2298,7 +2365,7 @@ Wall time: 2min 33s
 <blockquote>
 <div><p><strong>Note:</strong> Depending on the random seeds you used/hardware you used there’s a chance your numbers aren’t exactly the same as what’s here. This is okay. It’s due to the inheret randomness of deep learning. What matters most is the trend. Where your numbers are heading. If they’re off by a large amount, perhaps there’s something wrong and best to go back and check the code. But if they’re off by a small amount (say a couple of decimal places or so), that’s okay.</p>
 </div></blockquote>
-<img src="images/07-tensorboard-lowest-test-loss.png" alt="various modelling experiments visualized on tensorboard with model that has the lowest test loss highlighted" width=900/>
+<img alt="various modelling experiments visualized on tensorboard with model that has the lowest test loss highlighted" src="../../../_images/07-tensorboard-lowest-test-loss.png" />
 <p><em>Visualizing the test loss values for the different modelling experiments in TensorBoard, you can see that the EffNetB0 model trained for 10 epochs and with 20% of the data achieves the lowest loss. This sticks with the overall trend of the experiments that: more data, larger model and longer training time is generally better.</em></p>
 <p>You can also upload your TensorBoard experiment results to <a class="reference external" href="https://tensorboard.dev">tensorboard.dev</a> to host them publically for free.</p>
 <p>For example, running code similiar to the following:</p>
@@ -2312,7 +2379,7 @@ Wall time: 2min 33s
 </div>
 </div>
 </div>
-<p>Running the cell above results in the experiments from this notebook being publically viewable at: https://tensorboard.dev/experiment/VySxUYY7Rje0xREYvCvZXA/</p>
+<p>Running the cell above results in the experiments from this notebook being publically viewable at: <a class="reference external" href="https://tensorboard.dev/experiment/VySxUYY7Rje0xREYvCvZXA/">https://tensorboard.dev/experiment/VySxUYY7Rje0xREYvCvZXA/</a></p>
 <blockquote>
 <div><p><strong>Note:</strong> Beware that anything you upload to tensorboard.dev is publically available for anyone to see. So if you do upload your experiments, be careful they don’t contain sensitive information.</p>
 </div></blockquote>
@@ -2458,7 +2525,7 @@ Wall time: 2min 33s
 <section id="main-takeaways">
 <h2>Main takeaways<a class="headerlink" href="#main-takeaways" title="Link to this heading">#</a></h2>
 <p>We’ve now gone full circle on the PyTorch workflow introduced in <a class="reference external" href="https://www.learnpytorch.io/01_pytorch_workflow/">PyTorch Workflow Fundamentals</a>, we’ve gotten data ready, we’ve built and picked a pretrained model, we’ve used our various helper functions to train and evaluate the model and in this notebook we’ve improved our FoodVision Mini model by running and tracking a series of experiments.</p>
-<img src="images/01_a_pytorch_workflow.png" width=900 alt="a pytorch workflow flowchat"/>
+<a class="reference internal image-reference" href="../../../_images/01_a_pytorch_workflow.png"><img alt="a pytorch workflow flowchat" src="../../../_images/01_a_pytorch_workflow.png" style="width: 900px;" /></a>
 <p>You should be proud of yourself, this is no small feat!</p>
 <p>The main ideas you should take away from this Milestone Project 1 are:</p>
 <ul class="simple">
@@ -2490,8 +2557,8 @@ Wall time: 2min 33s
     {
         requestKernel: true,
         binderOptions: {
-            repo: "binder-examples/jupyter-stacks-datascience",
-            ref: "master",
+            repo: "anukchat/anukchat.github.io",
+            ref: "main",
         },
         codeMirrorConfig: {
             theme: "abcdef",
@@ -2553,7 +2620,7 @@ Wall time: 2min 33s
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-experiment-tracking">What is experiment tracking?</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-track-experiments">Why track experiments?</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#different-ways-to-track-machine-learning-experiments">Different ways to track machine learning experiments</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-we-re-going-to-cover">What we’re going to cover</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-were-going-to-cover">What we’re going to cover</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-setup">Getting setup</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-helper-function-to-set-seeds">Create a helper function to set seeds</a></li>
 </ul>
@@ -2569,7 +2636,7 @@ Wall time: 2min 33s
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#adjust-train-function-to-track-results-with-summarywriter">Adjust <code class="docutils literal notranslate"><span class="pre">train()</span></code> function to track results with <code class="docutils literal notranslate"><span class="pre">SummaryWriter()</span></code></a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#view-our-model-s-results-in-tensorboard">View our model’s results in TensorBoard</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#view-our-models-results-in-tensorboard">View our model’s results in TensorBoard</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-helper-function-to-build-summarywriter-instances">Create a helper function to build <code class="docutils literal notranslate"><span class="pre">SummaryWriter()</span></code> instances</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#update-the-train-function-to-include-a-writer-parameter">Update the <code class="docutils literal notranslate"><span class="pre">train()</span></code> function to include a <code class="docutils literal notranslate"><span class="pre">writer</span></code> parameter</a></li>
 </ul>

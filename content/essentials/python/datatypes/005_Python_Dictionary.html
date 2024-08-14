@@ -103,8 +103,8 @@
          class="form-control"
          name="q"
          id="search-input"
-         placeholder="Search..."
-         aria-label="Search..."
+         placeholder="Search this book..."
+         aria-label="Search this book..."
          autocomplete="off"
          autocorrect="off"
          autocapitalize="off"
@@ -442,6 +442,73 @@
 
 
 
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/anukchat/anukchat.github.io/main?urlpath=lab/tree/content/essentials/python/datatypes/005_Python_Dictionary.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Binder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Binder logo" src="../../../../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/anukchat/anukchat.github.io/blob/main/content/essentials/python/datatypes/005_Python_Dictionary.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="../../../../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
 <div class="dropdown dropdown-download-buttons">
   <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
     <i class="fas fa-download"></i>
@@ -564,11 +631,11 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-dictionary-methods">Python Dictionary Methods</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#clear-the-method-clear-removes-all-items-from-the-dictionary"><strong><code class="docutils literal notranslate"><span class="pre">clear()</span></code></strong> - The method <code class="docutils literal notranslate"><span class="pre">clear()</span></code> removes all items from the dictionary.</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#copy-the-method-copy-returns-a-shallow-copy-of-the-dictionary"><strong><code class="docutils literal notranslate"><span class="pre">copy()</span></code></strong> - The method <code class="docutils literal notranslate"><span class="pre">copy()</span></code> returns a shallow copy of the dictionary.</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#itmes-the-method-items-returns-a-list-of-dict-s-key-value-tuple-pairs"><strong><code class="docutils literal notranslate"><span class="pre">itmes()</span></code></strong> - The method <code class="docutils literal notranslate"><span class="pre">items()</span></code> returns a list of dict’s (key, value) tuple pairs.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#itmes-the-method-items-returns-a-list-of-dicts-key-value-tuple-pairs"><strong><code class="docutils literal notranslate"><span class="pre">itmes()</span></code></strong> - The method <code class="docutils literal notranslate"><span class="pre">items()</span></code> returns a list of dict’s (key, value) tuple pairs.</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#keys-the-method-keys-returns-a-list-of-all-the-available-keys-in-the-dictionary"><strong><code class="docutils literal notranslate"><span class="pre">keys()</span></code></strong> - The method <code class="docutils literal notranslate"><span class="pre">keys()</span></code> returns a list of all the available keys in the dictionary.</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fromkeys-the-method-fromkeys-creates-a-new-dictionary-with-keys-from-seq-and-values-set-to-value"><strong><code class="docutils literal notranslate"><span class="pre">fromkeys()</span></code></strong> - The method <code class="docutils literal notranslate"><span class="pre">fromkeys()</span></code> creates a new dictionary with keys from seq and values set to value.</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#setdefault-the-method-setdefault-is-similar-to-get-but-will-set-dict-key-default-if-key-is-not-already-in-dict"><strong><code class="docutils literal notranslate"><span class="pre">setdefault()</span></code></strong> - The method <code class="docutils literal notranslate"><span class="pre">setdefault()</span></code> is similar to <code class="docutils literal notranslate"><span class="pre">get</span></code> but will set <code class="docutils literal notranslate"><span class="pre">dict[key]</span> <span class="pre">=</span> <span class="pre">default</span></code> if key is not already in dict.</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#update-the-method-update-adds-dictionary-dict2-s-key-values-pairs-in-to-dict-this-function-does-not-return-anything"><strong><code class="docutils literal notranslate"><span class="pre">update()</span></code></strong> - The method <code class="docutils literal notranslate"><span class="pre">update()</span></code> adds dictionary dict2’s key-values pairs in to dict. This function does not return anything.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#update-the-method-update-adds-dictionary-dict2s-key-values-pairs-in-to-dict-this-function-does-not-return-anything"><strong><code class="docutils literal notranslate"><span class="pre">update()</span></code></strong> - The method <code class="docutils literal notranslate"><span class="pre">update()</span></code> adds dictionary dict2’s key-values pairs in to dict. This function does not return anything.</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#value-the-method-values-returns-a-list-of-all-the-values-available-in-a-given-dictionary"><strong><code class="docutils literal notranslate"><span class="pre">value()</span></code></strong> - The method <code class="docutils literal notranslate"><span class="pre">values()</span></code> returns a list of all the values available in a given dictionary.</a></li>
 </ul>
 </li>
@@ -589,7 +656,7 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="python-dictionary">
+  <section class="tex2jax_ignore mathjax_ignore" id="python-dictionary">
 <h1>Python Dictionary<a class="headerlink" href="#python-dictionary" title="Link to this heading">#</a></h1>
 <p>Learn everything about Python dictionaries; how they are created, accessing, adding, removing elements from them and various built-in methods.</p>
 <section id="what-is-dictionary-in-python">
@@ -1207,8 +1274,8 @@ True
 </div>
 </div>
 </section>
-<section id="itmes-the-method-items-returns-a-list-of-dict-s-key-value-tuple-pairs">
-<h3><strong><code class="docutils literal notranslate"><span class="pre">itmes()</span></code></strong> - The method <code class="docutils literal notranslate"><span class="pre">items()</span></code> returns a list of dict’s (key, value) tuple pairs.<a class="headerlink" href="#itmes-the-method-items-returns-a-list-of-dict-s-key-value-tuple-pairs" title="Link to this heading">#</a></h3>
+<section id="itmes-the-method-items-returns-a-list-of-dicts-key-value-tuple-pairs">
+<h3><strong><code class="docutils literal notranslate"><span class="pre">itmes()</span></code></strong> - The method <code class="docutils literal notranslate"><span class="pre">items()</span></code> returns a list of dict’s (key, value) tuple pairs.<a class="headerlink" href="#itmes-the-method-items-returns-a-list-of-dicts-key-value-tuple-pairs" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example:</span>
@@ -1300,8 +1367,8 @@ JLUFE
 </div>
 </div>
 </section>
-<section id="update-the-method-update-adds-dictionary-dict2-s-key-values-pairs-in-to-dict-this-function-does-not-return-anything">
-<h3><strong><code class="docutils literal notranslate"><span class="pre">update()</span></code></strong> - The method <code class="docutils literal notranslate"><span class="pre">update()</span></code> adds dictionary dict2’s key-values pairs in to dict. This function does not return anything.<a class="headerlink" href="#update-the-method-update-adds-dictionary-dict2-s-key-values-pairs-in-to-dict-this-function-does-not-return-anything" title="Link to this heading">#</a></h3>
+<section id="update-the-method-update-adds-dictionary-dict2s-key-values-pairs-in-to-dict-this-function-does-not-return-anything">
+<h3><strong><code class="docutils literal notranslate"><span class="pre">update()</span></code></strong> - The method <code class="docutils literal notranslate"><span class="pre">update()</span></code> adds dictionary dict2’s key-values pairs in to dict. This function does not return anything.<a class="headerlink" href="#update-the-method-update-adds-dictionary-dict2s-key-values-pairs-in-to-dict-this-function-does-not-return-anything" title="Link to this heading">#</a></h3>
 <p><strong>Syntax:</strong></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">dict</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">dict2</span><span class="p">)</span>
 </pre></div>
@@ -1461,8 +1528,8 @@ False
     {
         requestKernel: true,
         binderOptions: {
-            repo: "binder-examples/jupyter-stacks-datascience",
-            ref: "master",
+            repo: "anukchat/anukchat.github.io",
+            ref: "main",
         },
         codeMirrorConfig: {
             theme: "abcdef",
@@ -1541,11 +1608,11 @@ False
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-dictionary-methods">Python Dictionary Methods</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#clear-the-method-clear-removes-all-items-from-the-dictionary"><strong><code class="docutils literal notranslate"><span class="pre">clear()</span></code></strong> - The method <code class="docutils literal notranslate"><span class="pre">clear()</span></code> removes all items from the dictionary.</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#copy-the-method-copy-returns-a-shallow-copy-of-the-dictionary"><strong><code class="docutils literal notranslate"><span class="pre">copy()</span></code></strong> - The method <code class="docutils literal notranslate"><span class="pre">copy()</span></code> returns a shallow copy of the dictionary.</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#itmes-the-method-items-returns-a-list-of-dict-s-key-value-tuple-pairs"><strong><code class="docutils literal notranslate"><span class="pre">itmes()</span></code></strong> - The method <code class="docutils literal notranslate"><span class="pre">items()</span></code> returns a list of dict’s (key, value) tuple pairs.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#itmes-the-method-items-returns-a-list-of-dicts-key-value-tuple-pairs"><strong><code class="docutils literal notranslate"><span class="pre">itmes()</span></code></strong> - The method <code class="docutils literal notranslate"><span class="pre">items()</span></code> returns a list of dict’s (key, value) tuple pairs.</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#keys-the-method-keys-returns-a-list-of-all-the-available-keys-in-the-dictionary"><strong><code class="docutils literal notranslate"><span class="pre">keys()</span></code></strong> - The method <code class="docutils literal notranslate"><span class="pre">keys()</span></code> returns a list of all the available keys in the dictionary.</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fromkeys-the-method-fromkeys-creates-a-new-dictionary-with-keys-from-seq-and-values-set-to-value"><strong><code class="docutils literal notranslate"><span class="pre">fromkeys()</span></code></strong> - The method <code class="docutils literal notranslate"><span class="pre">fromkeys()</span></code> creates a new dictionary with keys from seq and values set to value.</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#setdefault-the-method-setdefault-is-similar-to-get-but-will-set-dict-key-default-if-key-is-not-already-in-dict"><strong><code class="docutils literal notranslate"><span class="pre">setdefault()</span></code></strong> - The method <code class="docutils literal notranslate"><span class="pre">setdefault()</span></code> is similar to <code class="docutils literal notranslate"><span class="pre">get</span></code> but will set <code class="docutils literal notranslate"><span class="pre">dict[key]</span> <span class="pre">=</span> <span class="pre">default</span></code> if key is not already in dict.</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#update-the-method-update-adds-dictionary-dict2-s-key-values-pairs-in-to-dict-this-function-does-not-return-anything"><strong><code class="docutils literal notranslate"><span class="pre">update()</span></code></strong> - The method <code class="docutils literal notranslate"><span class="pre">update()</span></code> adds dictionary dict2’s key-values pairs in to dict. This function does not return anything.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#update-the-method-update-adds-dictionary-dict2s-key-values-pairs-in-to-dict-this-function-does-not-return-anything"><strong><code class="docutils literal notranslate"><span class="pre">update()</span></code></strong> - The method <code class="docutils literal notranslate"><span class="pre">update()</span></code> adds dictionary dict2’s key-values pairs in to dict. This function does not return anything.</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#value-the-method-values-returns-a-list-of-all-the-values-available-in-a-given-dictionary"><strong><code class="docutils literal notranslate"><span class="pre">value()</span></code></strong> - The method <code class="docutils literal notranslate"><span class="pre">values()</span></code> returns a list of all the values available in a given dictionary.</a></li>
 </ul>
 </li>

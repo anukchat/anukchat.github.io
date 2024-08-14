@@ -58,6 +58,8 @@
     <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'content/essentials/intro_python';</script>
     <link rel="canonical" href="https://anukchat.github.io/content/essentials/intro_python.html" />
     <link rel="icon" href="../../_static/mesh-smallest.png"/>
@@ -103,8 +105,8 @@
          class="form-control"
          name="q"
          id="search-input"
-         placeholder="Search..."
-         aria-label="Search..."
+         placeholder="Search this book..."
+         aria-label="Search this book..."
          autocomplete="off"
          autocorrect="off"
          autocapitalize="off"
@@ -442,6 +444,73 @@
 
 
 
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/anukchat/anukchat.github.io/main?urlpath=lab/tree/content/essentials/intro_python.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Binder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Binder logo" src="../../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/anukchat/anukchat.github.io/blob/main/content/essentials/intro_python.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="../../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
 <div class="dropdown dropdown-download-buttons">
   <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
     <i class="fas fa-download"></i>
@@ -572,7 +641,7 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="getting-started-with-python">
+  <section class="tex2jax_ignore mathjax_ignore" id="getting-started-with-python">
 <h1>Getting Started with Python<a class="headerlink" href="#getting-started-with-python" title="Link to this heading">#</a></h1>
 <p>With Python you can do pretty much anything, you can automate every task. Its simpler to learn and use than any other language.</p>
 <p>Python also offers much more error checking than C, and, being a very-high-level language, it has high-level data types built in, such as flexible arrays and dictionaries. Because of its more general data types Python is applicable to a much larger problem domain than Awk or even Perl, yet many things are at least as easy in Python as in those languages.</p>
@@ -648,7 +717,7 @@ Python is an interpreted language, which can save you considerable time during p
 </section>
 <section id="python-installation">
 <h2>Python Installation<a class="headerlink" href="#python-installation" title="Link to this heading">#</a></h2>
-<p>To install python, go to the website: https://www.python.org/downloads/ and install latest version, depending on your OS.</p>
+<p>To install python, go to the website: <a class="reference external" href="https://www.python.org/downloads/">https://www.python.org/downloads/</a> and install latest version, depending on your OS.</p>
 <p>** Make sure during installation, to check the checkbox to add the Python reference in Environment variable Path</p>
 <p>Once installation is done, you can check the Python version by running command to check installation is successfull</p>
 <blockquote>
@@ -664,12 +733,12 @@ Python is an interpreted language, which can save you considerable time during p
 </div></blockquote>
 <section id="using-a-code-editor-of-your-choice">
 <h3>Using a code editor of your choice<a class="headerlink" href="#using-a-code-editor-of-your-choice" title="Link to this heading">#</a></h3>
-<p>To write Python code or any code, you could use PyCharm or VSCode, in this tutorial I will use VSCode which has simple and intiuitive UI , you can download from https://code.visualstudio.com/</p>
+<p>To write Python code or any code, you could use PyCharm or VSCode, in this tutorial I will use VSCode which has simple and intiuitive UI , you can download from <a class="reference external" href="https://code.visualstudio.com/">https://code.visualstudio.com/</a></p>
 <p>VSCode offers many features, you can also install many extensions including extensions required to run Jupyter notebooks</p>
 </section>
 <section id="using-python-in-a-jupyter-notebook">
 <h3>Using python in a jupyter notebook<a class="headerlink" href="#using-python-in-a-jupyter-notebook" title="Link to this heading">#</a></h3>
-<p>Jupyter notebook is an interactive way to write your code for experimentation purposes, This tutorial is also written in Jupyter Notebook. (Learn more about it https://jupyter.org/)</p>
+<p>Jupyter notebook is an interactive way to write your code for experimentation purposes, This tutorial is also written in Jupyter Notebook. (Learn more about it <a class="reference external" href="https://jupyter.org/">https://jupyter.org/</a>)</p>
 <ul class="simple">
 <li><p>Jupyter notebook has file extension .ipynb (interactive python notebook)</p></li>
 <li><p>You can write markdown content as well as write and execute Python code</p></li>
@@ -678,7 +747,7 @@ Python is an interpreted language, which can save you considerable time during p
 <section id="package-manager-and-virtual-environment">
 <h3>Package manager and virtual environment<a class="headerlink" href="#package-manager-and-virtual-environment" title="Link to this heading">#</a></h3>
 <ul class="simple">
-<li><p>To install third party python modules/packages, you can use <strong>pip</strong> as package manager, there are other ways to install python packages like poetry, conda etc..</p></li>
+<li><p>To install third party python modules/packages, you can use <strong>pip</strong> as package manager, there are other ways to install python packages like poetry, conda etc…</p></li>
 </ul>
 <p>Example:</p>
 <blockquote>
@@ -932,8 +1001,8 @@ repr(obj, /)
     {
         requestKernel: true,
         binderOptions: {
-            repo: "binder-examples/jupyter-stacks-datascience",
-            ref: "master",
+            repo: "anukchat/anukchat.github.io",
+            ref: "main",
         },
         codeMirrorConfig: {
             theme: "abcdef",

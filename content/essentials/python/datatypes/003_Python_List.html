@@ -103,8 +103,8 @@
          class="form-control"
          name="q"
          id="search-input"
-         placeholder="Search..."
-         aria-label="Search..."
+         placeholder="Search this book..."
+         aria-label="Search this book..."
          autocomplete="off"
          autocorrect="off"
          autocapitalize="off"
@@ -442,6 +442,73 @@
 
 
 
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/anukchat/anukchat.github.io/main?urlpath=lab/tree/content/essentials/python/datatypes/003_Python_List.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Binder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Binder logo" src="../../../../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/anukchat/anukchat.github.io/blob/main/content/essentials/python/datatypes/003_Python_List.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="../../../../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
 <div class="dropdown dropdown-download-buttons">
   <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
     <i class="fas fa-download"></i>
@@ -564,7 +631,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#all-list-the-method-all-method-returns-true-when-all-elements-in-the-given-iterable-are-true-if-not-it-returns-false"><strong><code class="docutils literal notranslate"><span class="pre">all(list)</span></code></strong> - The method all() method returns True when all elements in the given iterable are true. If not, it returns False.</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#any-list-any-function-returns-true-if-any-element-of-an-iterable-is-true-if-not-any-returns-false"><strong><code class="docutils literal notranslate"><span class="pre">any(list)</span></code></strong> - any() function returns True if any element of an iterable is True. If not, any() returns False.</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sorted-dict-the-sorted-function-sorts-the-elements-of-a-given-iterable-in-a-specific-order-either-ascending-or-descending-and-returns-the-sorted-iterable-as-a-list"><strong><code class="docutils literal notranslate"><span class="pre">sorted(dict)</span></code></strong> - The sorted() function sorts the elements of a given iterable in a specific order (either <strong>ascending</strong> or <strong>descending</strong>) and returns the sorted iterable as a list.</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#min-list-this-method-is-used-to-get-min-value-from-the-list-in-python3-lists-element-s-type-should-be-same-otherwise-compiler-throw-type-error"><strong><code class="docutils literal notranslate"><span class="pre">min(list)</span></code></strong> - this method is used to get min value from the list. In Python3 lists element’s type should be same otherwise compiler throw type Error.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#min-list-this-method-is-used-to-get-min-value-from-the-list-in-python3-lists-elements-type-should-be-same-otherwise-compiler-throw-type-error"><strong><code class="docutils literal notranslate"><span class="pre">min(list)</span></code></strong> - this method is used to get min value from the list. In Python3 lists element’s type should be same otherwise compiler throw type Error.</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#max-list-the-max-method-returns-the-elements-from-the-list-with-maximum-value"><strong><code class="docutils literal notranslate"><span class="pre">max(list)</span></code></strong> - The max() method returns the elements from the list with maximum value.</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#len-list-the-len-method-returns-the-number-of-elements-in-the-list"><strong><code class="docutils literal notranslate"><span class="pre">len(list)</span></code></strong> - The len() method returns the number of elements in the list.</a></li>
 </ul>
@@ -601,12 +668,12 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="python-list">
+  <section class="tex2jax_ignore mathjax_ignore" id="python-list">
 <h1>Python List<a class="headerlink" href="#python-list" title="Link to this heading">#</a></h1>
 <p>Learn everything about Python lists, how they are created, slicing of a list, adding or removing elements from them and so on.</p>
 <section id="what-is-list-in-python">
 <h2>What is List in Python?<a class="headerlink" href="#what-is-list-in-python" title="Link to this heading">#</a></h2>
-<p>Python list is a <strong>data structure</strong> which is used to store various types of data.In Python, lists are <strong>mutable</strong> i.e., Python will not create a new list if we modify an element of the list.</p>
+<p>Python list is a <strong>data structure</strong> which is used to store various types of <a class="reference external" href="http://data.In">data.In</a> Python, lists are <strong>mutable</strong> i.e., Python will not create a new list if we modify an element of the list.</p>
 <p>It works as a container that holds other objects in a given order. We can perform various operations like insertion and deletion on list. A list can be composed by storing a <strong>sequence</strong> of different type of values <strong>separated by commas</strong>.</p>
 <section id="summary">
 <h3>Summary<a class="headerlink" href="#summary" title="Link to this heading">#</a></h3>
@@ -1274,8 +1341,8 @@ False
 </div>
 </div>
 </section>
-<section id="min-list-this-method-is-used-to-get-min-value-from-the-list-in-python3-lists-element-s-type-should-be-same-otherwise-compiler-throw-type-error">
-<h3><strong><code class="docutils literal notranslate"><span class="pre">min(list)</span></code></strong> - this method is used to get min value from the list. In Python3 lists element’s type should be same otherwise compiler throw type Error.<a class="headerlink" href="#min-list-this-method-is-used-to-get-min-value-from-the-list-in-python3-lists-element-s-type-should-be-same-otherwise-compiler-throw-type-error" title="Link to this heading">#</a></h3>
+<section id="min-list-this-method-is-used-to-get-min-value-from-the-list-in-python3-lists-elements-type-should-be-same-otherwise-compiler-throw-type-error">
+<h3><strong><code class="docutils literal notranslate"><span class="pre">min(list)</span></code></strong> - this method is used to get min value from the list. In Python3 lists element’s type should be same otherwise compiler throw type Error.<a class="headerlink" href="#min-list-this-method-is-used-to-get-min-value-from-the-list-in-python3-lists-elements-type-should-be-same-otherwise-compiler-throw-type-error" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example:</span>
@@ -1838,8 +1905,8 @@ I like mango
     {
         requestKernel: true,
         binderOptions: {
-            repo: "binder-examples/jupyter-stacks-datascience",
-            ref: "master",
+            repo: "anukchat/anukchat.github.io",
+            ref: "main",
         },
         codeMirrorConfig: {
             theme: "abcdef",
@@ -1918,7 +1985,7 @@ I like mango
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#all-list-the-method-all-method-returns-true-when-all-elements-in-the-given-iterable-are-true-if-not-it-returns-false"><strong><code class="docutils literal notranslate"><span class="pre">all(list)</span></code></strong> - The method all() method returns True when all elements in the given iterable are true. If not, it returns False.</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#any-list-any-function-returns-true-if-any-element-of-an-iterable-is-true-if-not-any-returns-false"><strong><code class="docutils literal notranslate"><span class="pre">any(list)</span></code></strong> - any() function returns True if any element of an iterable is True. If not, any() returns False.</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sorted-dict-the-sorted-function-sorts-the-elements-of-a-given-iterable-in-a-specific-order-either-ascending-or-descending-and-returns-the-sorted-iterable-as-a-list"><strong><code class="docutils literal notranslate"><span class="pre">sorted(dict)</span></code></strong> - The sorted() function sorts the elements of a given iterable in a specific order (either <strong>ascending</strong> or <strong>descending</strong>) and returns the sorted iterable as a list.</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#min-list-this-method-is-used-to-get-min-value-from-the-list-in-python3-lists-element-s-type-should-be-same-otherwise-compiler-throw-type-error"><strong><code class="docutils literal notranslate"><span class="pre">min(list)</span></code></strong> - this method is used to get min value from the list. In Python3 lists element’s type should be same otherwise compiler throw type Error.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#min-list-this-method-is-used-to-get-min-value-from-the-list-in-python3-lists-elements-type-should-be-same-otherwise-compiler-throw-type-error"><strong><code class="docutils literal notranslate"><span class="pre">min(list)</span></code></strong> - this method is used to get min value from the list. In Python3 lists element’s type should be same otherwise compiler throw type Error.</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#max-list-the-max-method-returns-the-elements-from-the-list-with-maximum-value"><strong><code class="docutils literal notranslate"><span class="pre">max(list)</span></code></strong> - The max() method returns the elements from the list with maximum value.</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#len-list-the-len-method-returns-the-number-of-elements-in-the-list"><strong><code class="docutils literal notranslate"><span class="pre">len(list)</span></code></strong> - The len() method returns the number of elements in the list.</a></li>
 </ul>

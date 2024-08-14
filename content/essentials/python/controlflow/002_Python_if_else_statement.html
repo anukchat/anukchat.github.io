@@ -103,8 +103,8 @@
          class="form-control"
          name="q"
          id="search-input"
-         placeholder="Search..."
-         aria-label="Search..."
+         placeholder="Search this book..."
+         aria-label="Search this book..."
          autocomplete="off"
          autocorrect="off"
          autocapitalize="off"
@@ -442,6 +442,73 @@
 
 
 
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/anukchat/anukchat.github.io/main?urlpath=lab/tree/content/essentials/python/controlflow/002_Python_if_else_statement.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Binder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Binder logo" src="../../../../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/anukchat/anukchat.github.io/blob/main/content/essentials/python/controlflow/002_Python_if_else_statement.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="../../../../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
 <div class="dropdown dropdown-download-buttons">
   <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
     <i class="fas fa-download"></i>
@@ -546,7 +613,7 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#syntax">Syntax :</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#shortcut-of-if-else-short-hand-if-else-or-one-line-if-else">Shortcut of <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">else</span></code> (Short Hand if … else or One line <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">else</span></code>)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-difference">The difference….</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-difference">The difference…</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-list">💻 Exercises  ➞ <span class="label label-default">List</span></a></li>
 </ul>
             </nav>
@@ -559,7 +626,7 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="python-if-else-statement">
+  <section class="tex2jax_ignore mathjax_ignore" id="python-if-else-statement">
 <h1>Python <code class="docutils literal notranslate"><span class="pre">if-else</span></code> statement<a class="headerlink" href="#python-if-else-statement" title="Link to this heading">#</a></h1>
 <p>It is likely that we will want the program to do something even when an <strong><a class="reference internal" href="001_Python_if_statement.html"><span class="std std-doc">if statement</span></a></strong> <strong>evaluates to false</strong>. In our grade example of previous tutorial, we will want output whether the grade is passing or failing.</p>
 <div class="cell docutils container">
@@ -815,7 +882,7 @@ Incorrect Password
 </div>
 </section>
 <section id="the-difference">
-<h2>The difference….<a class="headerlink" href="#the-difference" title="Link to this heading">#</a></h2>
+<h2>The difference…<a class="headerlink" href="#the-difference" title="Link to this heading">#</a></h2>
 <p>Now, let us try to execute the same above discussed code with different input values.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -880,8 +947,8 @@ Incorrect Password
     {
         requestKernel: true,
         binderOptions: {
-            repo: "binder-examples/jupyter-stacks-datascience",
-            ref: "master",
+            repo: "anukchat/anukchat.github.io",
+            ref: "main",
         },
         codeMirrorConfig: {
             theme: "abcdef",
@@ -942,7 +1009,7 @@ Incorrect Password
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#syntax">Syntax :</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#shortcut-of-if-else-short-hand-if-else-or-one-line-if-else">Shortcut of <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">else</span></code> (Short Hand if … else or One line <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">else</span></code>)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-difference">The difference….</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-difference">The difference…</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-list">💻 Exercises  ➞ <span class="label label-default">List</span></a></li>
 </ul>
   </nav></div>

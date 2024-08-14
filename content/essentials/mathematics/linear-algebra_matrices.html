@@ -58,6 +58,8 @@
     <script async="async" src="../../../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'content/essentials/mathematics/linear-algebra_matrices';</script>
     <link rel="canonical" href="https://anukchat.github.io/content/essentials/mathematics/linear-algebra_matrices.html" />
     <link rel="icon" href="../../../_static/mesh-smallest.png"/>
@@ -103,8 +105,8 @@
          class="form-control"
          name="q"
          id="search-input"
-         placeholder="Search..."
-         aria-label="Search..."
+         placeholder="Search this book..."
+         aria-label="Search this book..."
          autocomplete="off"
          autocorrect="off"
          autocapitalize="off"
@@ -442,6 +444,73 @@
 
 
 
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/anukchat/anukchat.github.io/main?urlpath=lab/tree/content/essentials/mathematics/linear-algebra_matrices.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Binder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Binder logo" src="../../../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/anukchat/anukchat.github.io/blob/main/content/essentials/mathematics/linear-algebra_matrices.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="../../../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
 <div class="dropdown dropdown-download-buttons">
   <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
     <i class="fas fa-download"></i>
@@ -588,7 +657,7 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="linear-algebra-matrices">
+  <section class="tex2jax_ignore mathjax_ignore" id="linear-algebra-matrices">
 <h1>Linear Algebra - Matrices<a class="headerlink" href="#linear-algebra-matrices" title="Link to this heading">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -600,74 +669,78 @@ document.write(`
 <section id="what-is-a-matrix">
 <h2>What is a matrix?<a class="headerlink" href="#what-is-a-matrix" title="Link to this heading">#</a></h2>
 <hr class="docutils" />
-<p>A matrix $ A$ is a <em>ractangular array</em> of elements arranged in <em>rows</em> $m$ and <em>columns</em> $n$.</p>
-<p>$$ \large
-A =
+<p>A matrix <span class="math notranslate nohighlight">\( A\)</span> is a <em>ractangular array</em> of elements arranged in <em>rows</em> <span class="math notranslate nohighlight">\(m\)</span> and <em>columns</em> <span class="math notranslate nohighlight">\(n\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \large
+A = 
 \begin{bmatrix}
-a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1n} \
-a_{21} &amp; a_{22} &amp; \cdots &amp; a_{2n} \
-a_{31} &amp; a_{32} &amp; \cdots &amp; a_{3n} \
-\vdots &amp; \vdots &amp; \ddots &amp; \vdots \
-a_{m1} &amp; a_{m2} &amp; \cdots &amp; a_{mn} \
+a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1n} \\
+a_{21} &amp; a_{22} &amp; \cdots &amp; a_{2n} \\
+a_{31} &amp; a_{32} &amp; \cdots &amp; a_{3n} \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+a_{m1} &amp; a_{m2} &amp; \cdots &amp; a_{mn} \\
 \end{bmatrix}
-$$</p>
+\end{split}\]</div>
 <p>A <em>square matrix</em> is when the number of <em>rows</em> is the same of the number of <em>columns</em>.</p>
 </section>
 <section id="matrix-operations">
 <h2>Matrix operations<a class="headerlink" href="#matrix-operations" title="Link to this heading">#</a></h2>
 <hr class="docutils" />
-<p>All the following operations are applicable to any vector in $\large \mathbb{R}^{m \times n}$.</p>
+<p>All the following operations are applicable to any vector in <span class="math notranslate nohighlight">\(\large \mathbb{R}^{m \times n}\)</span>.</p>
 <section id="matrix-addition">
 <h3>Matrix addition<a class="headerlink" href="#matrix-addition" title="Link to this heading">#</a></h3>
 <hr class="docutils" />
-<p>The addition of two matrices $\large M_{3\times2}$ and $\large N_{3\times2}$ is done by the sum of their correspondent components, resulting in another matrix.</p>
-<p>$$ \large
-M+N =
+<p>The addition of two matrices <span class="math notranslate nohighlight">\(\large M_{3\times2}\)</span> and <span class="math notranslate nohighlight">\(\large N_{3\times2}\)</span> is done by the sum of their correspondent components, resulting in another matrix.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \large
+M+N = 
 \begin{bmatrix}
-m_{11} &amp; m_{12} \
-m_{21} &amp; m_{22} \
-m_{31} &amp; m_{32} \
+m_{11} &amp; m_{12} \\
+m_{21} &amp; m_{22} \\
+m_{31} &amp; m_{32} \\
 \end{bmatrix} +
 \begin{bmatrix}
-n_{11} &amp; n_{12} \
-n_{21} &amp; n_{22} \
-n_{31} &amp; n_{32} \
+n_{11} &amp; n_{12} \\
+n_{21} &amp; n_{22} \\
+n_{31} &amp; n_{32} \\
 \end{bmatrix} =
 \begin{bmatrix}
-m_{11}+n_{11} &amp; m_{12}+n_{12} \
-m_{21}+n_{21} &amp; m_{22}+n_{22} \
-m_{31}+n_{31} &amp; m_{32}+n_{32} \
+m_{11}+n_{11} &amp; m_{12}+n_{12} \\
+m_{21}+n_{21} &amp; m_{22}+n_{22} \\
+m_{31}+n_{31} &amp; m_{32}+n_{32} \\
 \end{bmatrix}
-$$</p>
+\end{split}\]</div>
 <p>For example:</p>
-<p>$$ \large
+<div class="math notranslate nohighlight">
+\[\begin{split} \large
 M =
 \begin{bmatrix}
-2 &amp; 5 \
-3 &amp; 7 \
+2 &amp; 5 \\
+3 &amp; 7 \\
 8 &amp; 6
 \end{bmatrix}
 \quad , \quad
 N =
 \begin{bmatrix}
-1 &amp; 7 \
-5 &amp; 6 \
+1 &amp; 7 \\
+5 &amp; 6 \\
 2 &amp; 9
 \end{bmatrix}
-$$</p>
-<p>$$ \large
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split} \large
 M + N =
 \begin{bmatrix}
-2+1 &amp; 5+7 \
-3+5 &amp; 7+6 \
+2+1 &amp; 5+7 \\
+3+5 &amp; 7+6 \\
 8+2 &amp; 6+9
 \end{bmatrix} =
 \begin{bmatrix}
-3 &amp; 12 \
-8 &amp; 13 \
+3 &amp; 12 \\
+8 &amp; 13 \\
 10 &amp; 15
 \end{bmatrix}
-$$</p>
+\end{split}\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">M</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span>
@@ -691,63 +764,66 @@ $$</p>
 <h4>Properties of matrix addition<a class="headerlink" href="#properties-of-matrix-addition" title="Link to this heading">#</a></h4>
 <hr class="docutils" />
 <ol class="arabic simple">
-<li><p>$M + (N + P) = (M + N) + P$</p></li>
-<li><p>$M + 0 = 0 + M = M$</p></li>
-<li><p>$M + N = N + M$</p></li>
+<li><p><span class="math notranslate nohighlight">\(M + (N + P) = (M + N) + P\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(M + 0 = 0 + M = M\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(M + N = N + M\)</span></p></li>
 </ol>
 </section>
 </section>
 <section id="matrix-subtraction">
 <h3>Matrix subtraction<a class="headerlink" href="#matrix-subtraction" title="Link to this heading">#</a></h3>
 <hr class="docutils" />
-<p>Similarly to addition, the subtraction of two matrices $\large M$ and $\large N$ is done by the subtraction of their correspondent components, resulting in another matrix.</p>
-<p>$$ \large
-M-N =
+<p>Similarly to addition, the subtraction of two matrices <span class="math notranslate nohighlight">\(\large M\)</span> and <span class="math notranslate nohighlight">\(\large N\)</span> is done by the subtraction of their correspondent components, resulting in another matrix.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \large
+M-N = 
 \begin{bmatrix}
-m_{11} &amp; m_{12} \
-m_{21} &amp; m_{22} \
-m_{31} &amp; m_{32} \
+m_{11} &amp; m_{12} \\
+m_{21} &amp; m_{22} \\
+m_{31} &amp; m_{32} \\
 \end{bmatrix} -
 \begin{bmatrix}
-n_{11} &amp; n_{12} \
-n_{21} &amp; n_{22} \
-n_{31} &amp; n_{32} \
+n_{11} &amp; n_{12} \\
+n_{21} &amp; n_{22} \\
+n_{31} &amp; n_{32} \\
 \end{bmatrix} =
 \begin{bmatrix}
-m_{11}-n_{11} &amp; m_{12}-n_{12} \
-m_{21}-n_{21} &amp; m_{22}-n_{22} \
-m_{31}-n_{31} &amp; m_{32}-n_{32} \
+m_{11}-n_{11} &amp; m_{12}-n_{12} \\
+m_{21}-n_{21} &amp; m_{22}-n_{22} \\
+m_{31}-n_{31} &amp; m_{32}-n_{32} \\
 \end{bmatrix}
-$$</p>
+\end{split}\]</div>
 <p>For example:</p>
-<p>$$ \large
+<div class="math notranslate nohighlight">
+\[\begin{split} \large
 M =
 \begin{bmatrix}
-2 &amp; 5 \
-3 &amp; 7 \
+2 &amp; 5 \\
+3 &amp; 7 \\
 8 &amp; 6
 \end{bmatrix}
 \quad , \quad
 N =
 \begin{bmatrix}
-1 &amp; 7 \
-5 &amp; 6 \
+1 &amp; 7 \\
+5 &amp; 6 \\
 2 &amp; 9
 \end{bmatrix}
-$$</p>
-<p>$$ \large
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split} \large
 M - N =
 \begin{bmatrix}
-2-1 &amp; 5-7 \
-3-5 &amp; 7-6 \
+2-1 &amp; 5-7 \\
+3-5 &amp; 7-6 \\
 8-2 &amp; 6-9
 \end{bmatrix} =
 \begin{bmatrix}
-1 &amp; -2 \
--2 &amp; 1 \
+1 &amp; -2 \\
+-2 &amp; 1 \\
 6 &amp; -3
 \end{bmatrix}
-$$</p>
+\end{split}\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">M</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span>
@@ -771,58 +847,61 @@ $$</p>
 <h4>Properties of matrix subtraction<a class="headerlink" href="#properties-of-matrix-subtraction" title="Link to this heading">#</a></h4>
 <hr class="docutils" />
 <ol class="arabic simple">
-<li><p>$-(-M) = M$</p></li>
-<li><p>$-M + M = M - M = 0$</p></li>
-<li><p>$M - N \neq N - M$</p></li>
+<li><p><span class="math notranslate nohighlight">\(-(-M) = M\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(-M + M = M - M = 0\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(M - N \neq N - M\)</span></p></li>
 </ol>
 </section>
 </section>
 <section id="scalar-multiplication">
 <h3>Scalar multiplication<a class="headerlink" href="#scalar-multiplication" title="Link to this heading">#</a></h3>
 <hr class="docutils" />
-<p>The scalar multiplication is the elementwise multiplication by a scalar number $\large \alpha$. The same rule can be applied to divisions.</p>
-<p>$$ \large
-\alpha M =
+<p>The scalar multiplication is the elementwise multiplication by a scalar number <span class="math notranslate nohighlight">\(\large \alpha\)</span>. The same rule can be applied to divisions.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \large
+\alpha M = 
 \alpha \cdot
 \begin{bmatrix}
-m_{11} &amp; m_{12} &amp; \cdots &amp; m_{1n} \
-m_{21} &amp; m_{22} &amp; \cdots &amp; m_{2n} \
-m_{31} &amp; m_{32} &amp; \cdots &amp; m_{3n} \
-\vdots &amp; \vdots &amp; \ddots &amp; \vdots \
+m_{11} &amp; m_{12} &amp; \cdots &amp; m_{1n} \\
+m_{21} &amp; m_{22} &amp; \cdots &amp; m_{2n} \\
+m_{31} &amp; m_{32} &amp; \cdots &amp; m_{3n} \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
 m_{m1} &amp; m_{m2} &amp; \cdots &amp; m_{mn}
 \end{bmatrix} =
 \begin{bmatrix}
-\alpha \cdot m_{11} &amp; \alpha \cdot m_{12} &amp; \cdots &amp; \alpha \cdot m_{1n} \
-\alpha \cdot m_{21} &amp; \alpha \cdot m_{22} &amp; \cdots &amp; \alpha \cdot m_{2n} \
-\alpha \cdot m_{31} &amp; \alpha \cdot m_{32} &amp; \cdots &amp; \alpha \cdot m_{3n} \
-\vdots &amp; \vdots &amp; \ddots &amp; \vdots \
+\alpha \cdot m_{11} &amp; \alpha \cdot m_{12} &amp; \cdots &amp; \alpha \cdot m_{1n} \\
+\alpha \cdot m_{21} &amp; \alpha \cdot m_{22} &amp; \cdots &amp; \alpha \cdot m_{2n} \\
+\alpha \cdot m_{31} &amp; \alpha \cdot m_{32} &amp; \cdots &amp; \alpha \cdot m_{3n} \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
 \alpha \cdot m_{m1} &amp; \alpha \cdot m_{m2} &amp; \cdots &amp; \alpha \cdot m_{mn}
 \end{bmatrix}
-$$</p>
+\end{split}\]</div>
 <p>For example:</p>
-<p>$$ \large
+<div class="math notranslate nohighlight">
+\[\begin{split} \large
 \alpha = 2
 \quad , \quad
 M =
 \begin{bmatrix}
-2 &amp; 5 \
-3 &amp; 7 \
+2 &amp; 5 \\
+3 &amp; 7 \\
 8 &amp; 6
 \end{bmatrix}
-$$</p>
-<p>$$ \large
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split} \large
 \alpha \cdot M =
 \begin{bmatrix}
-2 \cdot 2 &amp; 2 \cdot 5 \
-2 \cdot 3 &amp; 2 \cdot 7 \
+2 \cdot 2 &amp; 2 \cdot 5 \\
+2 \cdot 3 &amp; 2 \cdot 7 \\
 2 \cdot 8 &amp; 2 \cdot 6
 \end{bmatrix} =
 \begin{bmatrix}
-4 &amp; 10 \
-6 &amp; 14 \
+4 &amp; 10 \\
+6 &amp; 14 \\
 16 &amp; 12
 \end{bmatrix}
-$$</p>
+\end{split}\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">2</span>
@@ -842,46 +921,49 @@ $$</p>
 <h4>Properties of scalar multiplication<a class="headerlink" href="#properties-of-scalar-multiplication" title="Link to this heading">#</a></h4>
 <hr class="docutils" />
 <ol class="arabic simple">
-<li><p>$(\alpha \beta) M = \alpha (\beta M)$</p></li>
-<li><p>$(\alpha + \beta) M = \alpha M + \beta M$</p></li>
-<li><p>$\alpha(M + N) = \alpha M + \alpha N$</p></li>
-<li><p>$1M = M$</p></li>
+<li><p><span class="math notranslate nohighlight">\((\alpha \beta) M = \alpha (\beta M)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\((\alpha + \beta) M = \alpha M + \beta M\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\alpha(M + N) = \alpha M + \alpha N\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(1M = M\)</span></p></li>
 </ol>
 </section>
 </section>
 <section id="matrix-multiplication">
 <h3>Matrix multiplication<a class="headerlink" href="#matrix-multiplication" title="Link to this heading">#</a></h3>
 <hr class="docutils" />
-<p>The multiplication of two matrices $\large M_{m \times n}$ and $\large N_{n \times p}$ is defined under the rule that the number of columns of the <em>first matrix</em> (${m \times n}$) must be equal to the number of rows of the <em>second matrix</em> (${n \times p}$), resulting in another matrix (${m \times p}$).</p>
-<p>$$ \large
-[MN]<em>{ij}=m</em>{i1} \cdot n_{1j}+m_{i2} \cdot n_{2j}+ \cdots + m_{in} \cdot n_{nj}=\sum_1^n m_{in} \cdot m_{nj}
-$$</p>
+<p>The multiplication of two matrices <span class="math notranslate nohighlight">\(\large M_{m \times n}\)</span> and <span class="math notranslate nohighlight">\(\large N_{n \times p}\)</span> is defined under the rule that the number of columns of the <em>first matrix</em> (<span class="math notranslate nohighlight">\({m \times n}\)</span>) must be equal to the number of rows of the <em>second matrix</em> (<span class="math notranslate nohighlight">\({n \times p}\)</span>), resulting in another matrix (<span class="math notranslate nohighlight">\({m \times p}\)</span>).</p>
+<div class="math notranslate nohighlight">
+\[ \large
+[MN]_{ij}=m_{i1} \cdot n_{1j}+m_{i2} \cdot n_{2j}+ \cdots + m_{in} \cdot n_{nj}=\sum_1^n m_{in} \cdot m_{nj}
+\]</div>
 <p>For example:</p>
-<p>$$ \large
+<div class="math notranslate nohighlight">
+\[\begin{split} \large
 M =
 \begin{bmatrix}
-2 &amp; 3 &amp; 8 \
+2 &amp; 3 &amp; 8 \\
 5 &amp; 7 &amp; 6
 \end{bmatrix}
 \quad , \quad
 N =
 \begin{bmatrix}
-1 &amp; 7 \
-5 &amp; 6 \
+1 &amp; 7 \\
+5 &amp; 6 \\
 2 &amp; 9
 \end{bmatrix}
-$$</p>
-<p>$$ \large
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split} \large
 M \times N =
 \begin{bmatrix}
-2 \cdot 1 + 3 \cdot 5 + 8 \cdot 2 &amp; 2 \cdot 7 + 3 \cdot 6 + 8 \cdot 9 \
+2 \cdot 1 + 3 \cdot 5 + 8 \cdot 2 &amp; 2 \cdot 7 + 3 \cdot 6 + 8 \cdot 9 \\
 5 \cdot 1 + 7 \cdot 5 + 6 \cdot 2 &amp; 5 \cdot 7 + 7 \cdot 6 + 6 \cdot 9
 \end{bmatrix} =
 \begin{bmatrix}
-33 &amp; 104 \
+33 &amp; 104 \\
 52 &amp; 131
 \end{bmatrix}
-$$</p>
+\end{split}\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">M</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span>
@@ -904,11 +986,11 @@ $$</p>
 <h4>Properties of matrix multiplication<a class="headerlink" href="#properties-of-matrix-multiplication" title="Link to this heading">#</a></h4>
 <hr class="docutils" />
 <ol class="arabic simple">
-<li><p>$M_{m \times n} N_{n \times m} \neq N_{n \times m} M_{m \times n}$</p></li>
-<li><p>$(M_{m \times n} N_{n \times p}) P_{p \times q} = M_{m \times n}(N_{n \times p} P_{p \times q})$</p></li>
-<li><p>$(M_{m \times n} + N_{m \times n}) P_{n \times p} = M_{m \times n}P_{n \times p} + N_{m \times n}P_{n \times p}$</p></li>
-<li><p>$P_{m \times n} (M_{n \times p} + N_{n \times p}) = P_{m \times n} M_{n \times p} + P_{m \times n} N_{n \times p}$</p></li>
-<li><p>$(\alpha M_{m \times n}) N_{n \times p} = M_{m \times n} (\alpha N_{n \times p}) = \alpha (M_{m \times n} N_{n \times p})$</p></li>
+<li><p><span class="math notranslate nohighlight">\(M_{m \times n} N_{n \times m} \neq N_{n \times m} M_{m \times n}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\((M_{m \times n} N_{n \times p}) P_{p \times q} = M_{m \times n}(N_{n \times p} P_{p \times q})\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\((M_{m \times n} + N_{m \times n}) P_{n \times p} = M_{m \times n}P_{n \times p} + N_{m \times n}P_{n \times p}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(P_{m \times n} (M_{n \times p} + N_{n \times p}) = P_{m \times n} M_{n \times p} + P_{m \times n} N_{n \times p}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\((\alpha M_{m \times n}) N_{n \times p} = M_{m \times n} (\alpha N_{n \times p}) = \alpha (M_{m \times n} N_{n \times p})\)</span></p></li>
 </ol>
 </section>
 </section>
@@ -916,19 +998,20 @@ $$</p>
 <section id="matrix-transpose">
 <h2>Matrix transpose<a class="headerlink" href="#matrix-transpose" title="Link to this heading">#</a></h2>
 <hr class="docutils" />
-<p>The <em>transposition</em> of a matrix is the operation which converts rows into columns and vice versa, so $M_{m \times n}^T = M_{n \times m}$.</p>
+<p>The <em>transposition</em> of a matrix is the operation which converts rows into columns and vice versa, so <span class="math notranslate nohighlight">\(M_{m \times n}^T = M_{n \times m}\)</span>.</p>
 <p>For example:</p>
-<p>$$ \large
+<div class="math notranslate nohighlight">
+\[\begin{split} \large
 \begin{bmatrix}
-1 &amp; 7 \
-5 &amp; 6 \
+1 &amp; 7 \\
+5 &amp; 6 \\
 2 &amp; 9
 \end{bmatrix}^T =
 \begin{bmatrix}
-1 &amp; 5 &amp; 2 \
+1 &amp; 5 &amp; 2 \\
 7 &amp; 6 &amp; 9
 \end{bmatrix}
-$$</p>
+\end{split}\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">M</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span>
@@ -946,117 +1029,107 @@ $$</p>
 <h3>Properties of matrix transpose<a class="headerlink" href="#properties-of-matrix-transpose" title="Link to this heading">#</a></h3>
 <hr class="docutils" />
 <ol class="arabic simple">
-<li><p>$(M + N)^T = M^T + N^T$</p></li>
-<li><p>$(\alpha M)^T = \alpha M^T$</p></li>
-<li><p>$(M^T)^T = M$</p></li>
-<li><p>$(M_{m \times n} N_{n \times p})^T = N_{n \times p}^T M_{m \times n}^T$</p></li>
+<li><p><span class="math notranslate nohighlight">\((M + N)^T = M^T + N^T\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\((\alpha M)^T = \alpha M^T\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\((M^T)^T = M\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\((M_{m \times n} N_{n \times p})^T = N_{n \times p}^T M_{m \times n}^T\)</span></p></li>
 </ol>
 </section>
 </section>
 <section id="matrix-determinant">
 <h2>Matrix determinant<a class="headerlink" href="#matrix-determinant" title="Link to this heading">#</a></h2>
 <hr class="docutils" />
-<p>The determinant of a <em>square matrix</em> ($\det(M)$ or $|M|$) is an operation which encodes certain properties of the linear transformation described by the matrix, resulting in a <em>real number</em>.</p>
-<p>$$ \large
+<p>The determinant of a <em>square matrix</em> (<span class="math notranslate nohighlight">\(\det(M)\)</span> or <span class="math notranslate nohighlight">\(|M|\)</span>) is an operation which encodes certain properties of the linear transformation described by the matrix, resulting in a <em>real number</em>.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \large
 \det (M_{2 \times 2}) =
 \det \begin{bmatrix}
-m_{11} &amp; m_{12} \
+m_{11} &amp; m_{12} \\
 m_{21} &amp; m_{22}
 \end{bmatrix} =
 m_{11} m_{22} - m_{12} m_{21}
-$$</p>
-<p>The standard method for a $3 \times 3$ matrix (or more) is based in a recursive process that gets the first row elements and multiply by the determinant of the $2 \times 2$ matrix (or more) that is not in the elements’s row or column. Another pattern is the alternance of the operators $+ -$.</p>
-<p>$$ \large
+\end{split}\]</div>
+<p>The standard method for a <span class="math notranslate nohighlight">\(3 \times 3\)</span> matrix (or more) is based in a recursive process that gets the first row elements and multiply by the determinant of the <span class="math notranslate nohighlight">\(2 \times 2\)</span> matrix (or more) that is not in the elements’s row or column. Another pattern is the alternance of the operators <span class="math notranslate nohighlight">\(+ -\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \large
 \begin{aligned}
 |M_{3 \times 3}| &amp; =
 \det \begin{bmatrix}
-m_{11} &amp; m_{12} &amp; m_{13} \
-m_{21} &amp; m_{22} &amp; m_{23} \
+m_{11} &amp; m_{12} &amp; m_{13} \\
+m_{21} &amp; m_{22} &amp; m_{23} \\
 m_{31} &amp; m_{32} &amp; m_{33}
-\end{bmatrix} \
-|M_{3 \times 3}| &amp; =</p>
-<ul class="simple">
-<li><p>m_{11} \cdot
+\end{bmatrix} \\
+|M_{3 \times 3}| &amp; = 
++ m_{11} \cdot
 \det \begin{bmatrix}
-m_{22} &amp; m_{23} \
+m_{22} &amp; m_{23} \\
 m_{32} &amp; m_{33}
-\end{bmatrix}</p></li>
-</ul>
-<ul class="simple">
-<li><p>m_{12} \cdot
+\end{bmatrix}
+- m_{12} \cdot
 \det \begin{bmatrix}
-m_{21} &amp; m_{23} \
+m_{21} &amp; m_{23} \\
 m_{31} &amp; m_{33}
-\end{bmatrix}</p></li>
-</ul>
-<ul class="simple">
-<li><p>m_{13} \cdot
+\end{bmatrix}
++ m_{13} \cdot
 \det \begin{bmatrix}
-m_{21} &amp; m_{22} \
+m_{21} &amp; m_{22} \\
 m_{31} &amp; m_{32}
-\end{bmatrix} \
-|M_{3 \times 3}| &amp; =
-m_{11} \cdot (m_{22} \cdot m_{33} - m_{23} \cdot m_{32})</p></li>
-</ul>
-<ul class="simple">
-<li><p>m_{12} \cdot (m_{21} \cdot m_{33} - m_{23} \cdot m_{31})</p></li>
-</ul>
-<ul class="simple">
-<li><p>m_{13} \cdot (m_{21} \cdot m_{32} - m_{22} \cdot m_{31}) \
+\end{bmatrix} \\
+|M_{3 \times 3}| &amp; = 
+m_{11} \cdot (m_{22} \cdot m_{33} - m_{23} \cdot m_{32})
+- m_{12} \cdot (m_{21} \cdot m_{33} - m_{23} \cdot m_{31})
++ m_{13} \cdot (m_{21} \cdot m_{32} - m_{22} \cdot m_{31}) \\
 |M_{3 \times 3}| &amp; =
 (m_{11} m_{22} m_{33} + m_{12} m_{23} m_{31} + m_{13} m_{21} m_{32}) - (m_{13} m_{22} m_{31} + m_{12} m_{21} m_{33} + m_{11} m_{23} m_{32})
 \end{aligned}
-$$</p></li>
-</ul>
+\end{split}\]</div>
 <p>For example:</p>
-<p>$$ \large
+<div class="math notranslate nohighlight">
+\[\begin{split} \large
 \begin{aligned}
 M &amp; =
 \begin{bmatrix}
-1 &amp; 7 &amp; 3 \
-5 &amp; 6 &amp; 8 \
+1 &amp; 7 &amp; 3 \\
+5 &amp; 6 &amp; 8 \\
 2 &amp; 9 &amp; 4
-\end{bmatrix} \
+\end{bmatrix} \\
 |M| &amp; =
 1 \cdot \det \begin{bmatrix}
-6 &amp; 8 \
+6 &amp; 8 \\
 9 &amp; 4
-\end{bmatrix}</p>
-<ul class="simple">
-<li><p>7 \cdot \det \begin{bmatrix}
-5 &amp; 8 \
+\end{bmatrix}
+- 7 \cdot \det \begin{bmatrix}
+5 &amp; 8 \\
 2 &amp; 4
-\end{bmatrix}</p></li>
-</ul>
-<ul class="simple">
-<li><p>3 \cdot \det \begin{bmatrix}
-5 &amp; 6 \
+\end{bmatrix}
++ 3 \cdot \det \begin{bmatrix}
+5 &amp; 6 \\
 2 &amp; 9
-\end{bmatrix} \
-|M| &amp; = 1 \cdot (6 \cdot 4 - 8 \cdot 9) - 7 \cdot (5 \cdot 4 - 8 \cdot 2) + 3 \cdot (5 \cdot 9 - 6 \cdot 2) \
-|M| &amp; = - 48 - 28 + 99 \
+\end{bmatrix} \\
+|M| &amp; = 1 \cdot (6 \cdot 4 - 8 \cdot 9) - 7 \cdot (5 \cdot 4 - 8 \cdot 2) + 3 \cdot (5 \cdot 9 - 6 \cdot 2) \\
+|M| &amp; = - 48 - 28 + 99 \\
 |M| &amp; = 23
 \end{aligned}
-$$</p></li>
-</ul>
-<p>There is a shortcut method that facilitates the computation and consists of expanding the elements horizontally and multiply the diagonals like in the matrix $2 \times 2$:</p>
-<p>$$ \large
+\end{split}\]</div>
+<p>There is a shortcut method that facilitates the computation and consists of expanding the elements horizontally and multiply the diagonals like in the matrix <span class="math notranslate nohighlight">\(2 \times 2\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \large
 \begin{aligned}
 |M_{3 \times 3}| &amp; =
 \det \begin{bmatrix}
-m_{11} &amp; m_{12} &amp; m_{13} \
-m_{21} &amp; m_{22} &amp; m_{23} \
+m_{11} &amp; m_{12} &amp; m_{13} \\
+m_{21} &amp; m_{22} &amp; m_{23} \\
 m_{31} &amp; m_{32} &amp; m_{33}
 \end{bmatrix}
 \begin{matrix}
-m_{11} &amp; m_{12} \
-m_{21} &amp; m_{22} \
+m_{11} &amp; m_{12} \\
+m_{21} &amp; m_{22} \\
 m_{31} &amp; m_{32}
-\end{matrix} \
+\end{matrix} \\
 |M_{3 \times 3}| &amp; =
 (m_{11} m_{22} m_{33} + m_{12} m_{23} m_{31} + m_{13} m_{21} m_{32}) - (m_{13} m_{22} m_{31} + m_{12} m_{21} m_{33} + m_{11} m_{23} m_{32})
 \end{aligned}
-$$</p>
+\end{split}\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">M</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span>
@@ -1074,42 +1147,43 @@ $$</p>
 <h3>Properties of matrix determinant<a class="headerlink" href="#properties-of-matrix-determinant" title="Link to this heading">#</a></h3>
 <hr class="docutils" />
 <ol class="arabic simple">
-<li><p>$|M^T| = |M|$</p></li>
-<li><p>$|MN| = |M| |N|$</p></li>
+<li><p><span class="math notranslate nohighlight">\(|M^T| = |M|\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(|MN| = |M| |N|\)</span></p></li>
 </ol>
 </section>
 </section>
 <section id="identity-matrix">
 <h2>Identity matrix<a class="headerlink" href="#identity-matrix" title="Link to this heading">#</a></h2>
 <hr class="docutils" />
-<p>The <em>identity matrix</em> $I_n$ is a <em>square matrix</em> which the elements of the <em>main diagonal</em> is equal to 1 and all other elements is equal to 0.</p>
-<p>$$ \large
-I_1 =
+<p>The <em>identity matrix</em> <span class="math notranslate nohighlight">\(I_n\)</span> is a <em>square matrix</em> which the elements of the <em>main diagonal</em> is equal to 1 and all other elements is equal to 0.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \large
+I_1 = 
 \begin{bmatrix}
 1
 \end{bmatrix}
 \quad , \quad
-I_2 =
+I_2 = 
 \begin{bmatrix}
-1 &amp; 0 \
+1 &amp; 0 \\
 0 &amp; 1
 \end{bmatrix}
 \quad , \quad
-I_3 =
+I_3 = 
 \begin{bmatrix}
-1 &amp; 0 &amp; 0 \
-0 &amp; 1 &amp; 0 \
+1 &amp; 0 &amp; 0 \\
+0 &amp; 1 &amp; 0 \\
 0 &amp; 0 &amp; 1
 \end{bmatrix}
 \quad , \quad
-I_n =
+I_n = 
 \begin{bmatrix}
-1 &amp; 0 &amp; \cdots &amp; 0 \
-0 &amp; 1 &amp; \cdots &amp; 0 \
-\vdots &amp; \vdots &amp; \ddots &amp; \vdots \
+1 &amp; 0 &amp; \cdots &amp; 0 \\
+0 &amp; 1 &amp; \cdots &amp; 0 \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
 0 &amp; 0 &amp; \cdots &amp; 1
 \end{bmatrix}
-$$</p>
+\end{split}\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">I2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
@@ -1124,73 +1198,75 @@ $$</p>
 <h3>Properties of identity matrix<a class="headerlink" href="#properties-of-identity-matrix" title="Link to this heading">#</a></h3>
 <hr class="docutils" />
 <ol class="arabic simple">
-<li><p>$M_{m \times n} I_n = I_m M_{m \times n} = M$</p></li>
-<li><p>$I_n^T = I_n$</p></li>
+<li><p><span class="math notranslate nohighlight">\(M_{m \times n} I_n = I_m M_{m \times n} = M\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(I_n^T = I_n\)</span></p></li>
 </ol>
 </section>
 </section>
 <section id="matrix-inverse">
 <h2>Matrix inverse<a class="headerlink" href="#matrix-inverse" title="Link to this heading">#</a></h2>
 <hr class="docutils" />
-<p>A <em>square matrix</em> $M$ is invertible if it is <em>non-singular</em> and exists another square matrix $N$ which satisfies the following conditions:</p>
+<p>A <em>square matrix</em> <span class="math notranslate nohighlight">\(M\)</span> is invertible if it is <em>non-singular</em> and exists another square matrix <span class="math notranslate nohighlight">\(N\)</span> which satisfies the following conditions:</p>
 <ol class="arabic simple">
-<li><p>$MN = NM = I$</p></li>
-<li><p>Non-singular matrix is when $|M| \neq 0$</p></li>
+<li><p><span class="math notranslate nohighlight">\(MN = NM = I\)</span></p></li>
+<li><p>Non-singular matrix is when <span class="math notranslate nohighlight">\(|M| \neq 0\)</span></p></li>
 </ol>
-<p>$N$ is inverse the inverse of $M$ and is represented by $M^{-1}$, what it means that $M M^{-1} = I$.</p>
+<p><span class="math notranslate nohighlight">\(N\)</span> is inverse the inverse of <span class="math notranslate nohighlight">\(M\)</span> and is represented by <span class="math notranslate nohighlight">\(M^{-1}\)</span>, what it means that <span class="math notranslate nohighlight">\(M M^{-1} = I\)</span>.</p>
 <p>For example:</p>
 <p>if:</p>
-<p>$$ \large
+<div class="math notranslate nohighlight">
+\[\begin{split} \large
 M =
 \begin{bmatrix}
-2 &amp; 1 &amp; 0 \
-0 &amp; 1 &amp; 0 \
+2 &amp; 1 &amp; 0 \\
+0 &amp; 1 &amp; 0 \\
 1 &amp; 2 &amp; 1
-\end{bmatrix}
-$$</p>
+\end{bmatrix} 
+\end{split}\]</div>
 <p>so:</p>
-<p>$$ \large
+<div class="math notranslate nohighlight">
+\[\begin{split} \large
 M M^{-1} = I_3
 \quad \Rightarrow \quad
 \begin{bmatrix}
-2 &amp; 1 &amp; 0 \
-0 &amp; 1 &amp; 0 \
+2 &amp; 1 &amp; 0 \\
+0 &amp; 1 &amp; 0 \\
 1 &amp; 2 &amp; 1
 \end{bmatrix}
 \begin{bmatrix}
-m_{11} &amp; m_{12} &amp; m_{13} \
-m_{21} &amp; m_{22} &amp; m_{23} \
+m_{11} &amp; m_{12} &amp; m_{13} \\
+m_{21} &amp; m_{22} &amp; m_{23} \\
 m_{31} &amp; m_{32} &amp; m_{33}
 \end{bmatrix} =
 \begin{bmatrix}
-1 &amp; 0 &amp; 0 \
-0 &amp; 1 &amp; 0 \
+1 &amp; 0 &amp; 0 \\
+0 &amp; 1 &amp; 0 \\
 0 &amp; 0 &amp; 1
 \end{bmatrix}
-$$</p>
-<p>$$ \large
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split} \large
 \begin{bmatrix}
-2 m_{11} + m_{21} &amp; 2 m_{12} + m_{22} &amp; 2 m_{13} + m_{23} \
-m_{21} &amp; m_{22} &amp; m_{23} \
+2 m_{11} + m_{21} &amp; 2 m_{12} + m_{22} &amp; 2 m_{13} + m_{23} \\
+m_{21} &amp; m_{22} &amp; m_{23} \\
 m_{11} + 2 m_{21} + m_{31} &amp; m_{12} + 2 m_{22} + m_{32} &amp; m_{13} + 2 m_{23} + m_{33}
-\end{bmatrix} =
+\end{bmatrix} = 
 \begin{bmatrix}
-1 &amp; 0 &amp; 0 \
-0 &amp; 1 &amp; 0 \
+1 &amp; 0 &amp; 0 \\
+0 &amp; 1 &amp; 0 \\
 0 &amp; 0 &amp; 1
 \end{bmatrix}
-$$</p>
+\end{split}\]</div>
 <p>After solving this system of equations (we can solve this by using Cramer’s rule, for example), we have:</p>
-<p>$$ \large
-M^{-1} =
+<div class="math notranslate nohighlight">
+\[\begin{split} \large
+M^{-1} = 
 \begin{bmatrix}
-\frac{1}{2} &amp; - \frac{1}{2} &amp; 0 \
-0 &amp; 1 &amp; 0 \</p>
-<ul class="simple">
-<li><p>\frac{1}{2} &amp; - \frac{3}{2} &amp; 1
+\frac{1}{2} &amp; - \frac{1}{2} &amp; 0 \\
+0 &amp; 1 &amp; 0 \\
+- \frac{1}{2} &amp; - \frac{3}{2} &amp; 1
 \end{bmatrix}
-$$</p></li>
-</ul>
+\end{split}\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">M</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span>
@@ -1211,8 +1287,8 @@ $$</p></li>
     {
         requestKernel: true,
         binderOptions: {
-            repo: "binder-examples/jupyter-stacks-datascience",
-            ref: "master",
+            repo: "anukchat/anukchat.github.io",
+            ref: "main",
         },
         codeMirrorConfig: {
             theme: "abcdef",

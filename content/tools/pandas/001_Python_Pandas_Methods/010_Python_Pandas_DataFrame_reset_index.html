@@ -103,8 +103,8 @@
          class="form-control"
          name="q"
          id="search-input"
-         placeholder="Search..."
-         aria-label="Search..."
+         placeholder="Search this book..."
+         aria-label="Search this book..."
          autocomplete="off"
          autocorrect="off"
          autocapitalize="off"
@@ -442,6 +442,73 @@
 
 
 
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/anukchat/anukchat.github.io/main?urlpath=lab/tree/content/tools/pandas/001_Python_Pandas_Methods/010_Python_Pandas_DataFrame_reset_index.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Binder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Binder logo" src="../../../../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/anukchat/anukchat.github.io/blob/main/content/tools/pandas/001_Python_Pandas_Methods/010_Python_Pandas_DataFrame_reset_index.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="../../../../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
 <div class="dropdown dropdown-download-buttons">
   <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
     <i class="fas fa-download"></i>
@@ -568,7 +635,7 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="reset-index-in-pandas-dataframe">
+  <section class="tex2jax_ignore mathjax_ignore" id="reset-index-in-pandas-dataframe">
 <h1>Reset index in pandas DataFrame<a class="headerlink" href="#reset-index-in-pandas-dataframe" title="Link to this heading">#</a></h1>
 <p>In this class, we learn how to reset the index of the <strong><a class="reference internal" href="../001_Python_Pandas_DataFrame.html"><span class="std std-doc">Pandas DataFrame</span></a></strong> We discuss all the cases of resetting the row index of a simple and multi-level DataFrame.</p>
 <p>DataFrame is the tabular structure in the Python pandas library. It represents each row and column by the label. Row label is called an <strong>index</strong>, whereas column label is called column index/header.</p>
@@ -634,7 +701,7 @@ document.write(`
 <img src="img/dfri.png" width="600"/>
 </div>
 <p><strong>Example:</strong></p>
-<p>We have a student DataFrame with a row index ‘s1’, ‘s2’.. likewise. It contains a row with missing values that we want to remove. After we removed it using <strong><code class="docutils literal notranslate"><span class="pre">DataFrame.dropna()</span></code></strong> function, its row index is still the same. But now, the index is not in the sequence.</p>
+<p>We have a student DataFrame with a row index ‘s1’, ‘s2’… likewise. It contains a row with missing values that we want to remove. After we removed it using <strong><code class="docutils literal notranslate"><span class="pre">DataFrame.dropna()</span></code></strong> function, its row index is still the same. But now, the index is not in the sequence.</p>
 <p>In such a case, let’s see how to reset the index to the sequence of numbers using <strong><code class="docutils literal notranslate"><span class="pre">DataFrame.reset_index()</span></code></strong>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1062,8 +1129,8 @@ Class B  Standard 2     Sam      65.48
     {
         requestKernel: true,
         binderOptions: {
-            repo: "binder-examples/jupyter-stacks-datascience",
-            ref: "master",
+            repo: "anukchat/anukchat.github.io",
+            ref: "main",
         },
         codeMirrorConfig: {
             theme: "abcdef",

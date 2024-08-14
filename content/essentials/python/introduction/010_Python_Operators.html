@@ -58,6 +58,8 @@
     <script async="async" src="../../../../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'content/essentials/python/introduction/010_Python_Operators';</script>
     <link rel="canonical" href="https://anukchat.github.io/content/essentials/python/introduction/010_Python_Operators.html" />
     <link rel="icon" href="../../../../_static/mesh-smallest.png"/>
@@ -103,8 +105,8 @@
          class="form-control"
          name="q"
          id="search-input"
-         placeholder="Search..."
-         aria-label="Search..."
+         placeholder="Search this book..."
+         aria-label="Search this book..."
          autocomplete="off"
          autocorrect="off"
          autocapitalize="off"
@@ -442,6 +444,73 @@
 
 
 
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/anukchat/anukchat.github.io/main?urlpath=lab/tree/content/essentials/python/introduction/010_Python_Operators.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Binder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Binder logo" src="../../../../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/anukchat/anukchat.github.io/blob/main/content/essentials/python/introduction/010_Python_Operators.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="../../../../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
 <div class="dropdown dropdown-download-buttons">
   <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
     <i class="fas fa-download"></i>
@@ -580,7 +649,7 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="python-operators">
+  <section class="tex2jax_ignore mathjax_ignore" id="python-operators">
 <h1>Python Operators<a class="headerlink" href="#python-operators" title="Link to this heading">#</a></h1>
 <p>Python can be used like a calculator. Simply type in expressions to get them evaluated.</p>
 <p><strong>What are operators in python?</strong></p>
@@ -758,7 +827,7 @@ x // y = 5
 </div>
 </div>
 </div>
-<p>In many languages (and older versions of python) $\frac{1}{2}=0$ (truncated division). In Python 3 this behaviour is captured by a separate operator that rounds down: (i.e., <strong>a // b$=\lfloor \frac{a}{b}\rfloor$</strong>)</p>
+<p>In many languages (and older versions of python) <span class="math notranslate nohighlight">\(\frac{1}{2}=0\)</span> (truncated division). In Python 3 this behaviour is captured by a separate operator that rounds down: (i.e., <strong>a // b<span class="math notranslate nohighlight">\(=\lfloor \frac{a}{b}\rfloor\)</span></strong>)</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">5</span><span class="o">//</span><span class="mf">6.0</span>
@@ -1155,7 +1224,7 @@ not x is False
 </tr>
 <tr class="row-odd"><td class="text-center"><p><strong><code class="docutils literal notranslate"><span class="pre">or</span></code></strong></p></td>
 <td class="text-center"><p>Logical or</p></td>
-<td class="text-center"><p><strong>$\mid$</strong></p></td>
+<td class="text-center"><p><strong><span class="math notranslate nohighlight">\(\mid\)</span></strong></p></td>
 <td class="text-center"><p>Bitwise OR</p></td>
 <td class="text-center"><p><strong>x | y</strong> = 14 (<strong><code class="docutils literal notranslate"><span class="pre">0000</span> <span class="pre">1110</span></code></strong>)</p></td>
 </tr>
@@ -1492,8 +1561,8 @@ False
     {
         requestKernel: true,
         binderOptions: {
-            repo: "binder-examples/jupyter-stacks-datascience",
-            ref: "master",
+            repo: "anukchat/anukchat.github.io",
+            ref: "main",
         },
         codeMirrorConfig: {
             theme: "abcdef",

@@ -103,8 +103,8 @@
          class="form-control"
          name="q"
          id="search-input"
-         placeholder="Search..."
-         aria-label="Search..."
+         placeholder="Search this book..."
+         aria-label="Search this book..."
          autocomplete="off"
          autocorrect="off"
          autocapitalize="off"
@@ -442,6 +442,73 @@
 
 
 
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/anukchat/anukchat.github.io/main?urlpath=lab/tree/content/tools/pytorch/09_pytorch_model_deployment.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Binder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Binder logo" src="../../../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/anukchat/anukchat.github.io/blob/main/content/tools/pytorch/09_pytorch_model_deployment.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="../../../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
 <div class="dropdown dropdown-download-buttons">
   <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
     <i class="fas fa-download"></i>
@@ -547,12 +614,12 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-machine-learning-model-deployment">What is machine learning model deployment?</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-deploy-a-machine-learning-model">Why deploy a machine learning model?</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#different-types-of-machine-learning-model-deployment">Different types of machine learning model deployment</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#where-s-it-going-to-go">Where’s it going to go?</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-s-it-going-to-function">How’s it going to function?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#wheres-it-going-to-go">Where’s it going to go?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hows-it-going-to-function">How’s it going to function?</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ways-to-deploy-a-machine-learning-model">Ways to deploy a machine learning model</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-we-re-going-to-cover">What we’re going to cover</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-were-going-to-cover">What we’re going to cover</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-setup">Getting setup</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-data">Getting data</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#foodvision-mini-model-deployment-experiment-outline">FoodVision Mini model deployment experiment outline</a></li>
@@ -643,14 +710,14 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="pytorch-model-deployment">
+  <section class="tex2jax_ignore mathjax_ignore" id="pytorch-model-deployment">
 <h1>PyTorch Model Deployment<a class="headerlink" href="#pytorch-model-deployment" title="Link to this heading">#</a></h1>
 <p>Welcome to Milestone Project 3: PyTorch Model Deployment!</p>
 <p>We’ve come a long way with our FoodVision Mini project.</p>
 <p>But so far our PyTorch models have only been accessible to us.</p>
 <p>How about we bring FoodVision Mini to life and make it publically accessible?</p>
 <p>In other words, <strong>we’re going to deploy our FoodVision Mini model to the internet as a usable app!</strong></p>
-<img src="images/09-model-deployment-what-were-doing-demo-trimmed-cropped-small.gif" alt="demo of foodvision mini computer vision model being used on a mobile device to predict on an image of sushi and getting it right" width=900/>
+<img alt="demo of foodvision mini computer vision model being used on a mobile device to predict on an image of sushi and getting it right" src="../../../_images/09-model-deployment-what-were-doing-demo-trimmed-cropped-small.gif" />
 <p><em>Trying out the <a class="reference external" href="https://huggingface.co/spaces/mrdbourke/foodvision_mini">deployed version of FoodVision Mini</a> (what we’re going to build) on my lunch. The model got it right too 🍣!</em></p>
 <section id="what-is-machine-learning-model-deployment">
 <h2>What is machine learning model deployment?<a class="headerlink" href="#what-is-machine-learning-model-deployment" title="Link to this heading">#</a></h2>
@@ -662,7 +729,7 @@ document.write(`
 <p>Or an operating system may lower its resource consumption based on a machine learning model making predictions on how much power someone generally uses at specific times of day.</p>
 <p>These use cases can be mixed and matched as well.</p>
 <p>For example, a Tesla car’s computer vision system will interact with the car’s route planning program (something else) and then the route planning program will get inputs and feedback from the driver (someone else).</p>
-<img src="images/09-what-is-model-deployment-someone-or-something-else.png" width=900 alt="two use cases for model deployment, making your model available to someone else, for example, someone using it in an app, or making it available to something else such as another program or model"/> 
+<a class="reference internal image-reference" href="../../../_images/09-what-is-model-deployment-someone-or-something-else.png"><img alt="two use cases for model deployment, making your model available to someone else, for example, someone using it in an app, or making it available to something else such as another program or model" src="../../../_images/09-what-is-model-deployment-someone-or-something-else.png" style="width: 900px;" /></a>
 <p><em>Machine learning model deployment involves making your model available to someone or something else. For example, someone might use your model as part of a food recognition app (such as FoodVision Mini or <a class="reference external" href="https://nutrify.app">Nutrify</a>). And something else might be another model or program using your model such as a banking system using a machine learning model to detect if a transaction is fraud or not.</em></p>
 </section>
 <section id="why-deploy-a-machine-learning-model">
@@ -682,7 +749,7 @@ document.write(`
 <p>What happens then?</p>
 <p>You can see how these questions could keep going.</p>
 <p>Thus this highlights the importance of model deployment: it helps you figure out errors in your model that aren’t obvious during training/testing.</p>
-<img src="images/09-pytorch-workflow-with-deployment.png" alt="A PyTorch workflow with added model deployment and monitoring step" width=900/>
+<img alt="A PyTorch workflow with added model deployment and monitoring step" src="../../../_images/09-pytorch-workflow-with-deployment.png" />
 <p>*We covered a PyTorch workflow back in <a class="reference internal" href="01_pytorch_workflow.html"><span class="std std-doc">PyTorch Workflow</span></a>. But once you’ve got a good model, deployment is a good next step. Monitoring involves seeing how your model goes on the most important data split: data from the real world.</p>
 </section>
 <section id="different-types-of-machine-learning-model-deployment">
@@ -712,10 +779,10 @@ document.write(`
 <li><p><strong>Where’s it going to go?</strong> - As in, where is it going to be stored?</p></li>
 <li><p><strong>How’s it going to function?</strong> - As in, does it return predictions immediately? Or do they come later?</p></li>
 </ol>
-<img src="images/09-deployment-questions-to-ask.png" alt="some questions to ask when starting to deploy machine learning models, what's the model ideal use case, then work backwards and ask where's my model going to go and how's my model going to function" width=900/>
+<img alt="some questions to ask when starting to deploy machine learning models, what's the model ideal use case, then work backwards and ask where's my model going to go and how's my model going to function" src="../../../_images/09-deployment-questions-to-ask.png" />
 <p><em>When starting to deploy machine learning models, it’s helpful to start by asking what’s the most ideal use case and then work backwards from there, asking where the model’s going to go and then how it’s going to function.</em></p>
-<section id="where-s-it-going-to-go">
-<h3>Where’s it going to go?<a class="headerlink" href="#where-s-it-going-to-go" title="Link to this heading">#</a></h3>
+<section id="wheres-it-going-to-go">
+<h3>Where’s it going to go?<a class="headerlink" href="#wheres-it-going-to-go" title="Link to this heading">#</a></h3>
 <p>When you deploy your machine learning model, where does it live?</p>
 <p>The main debate here is usually on-device (also called edge/in the browser) or on the cloud (a computer/server that isn’t the <em>actual</em> device someone/something calls the model from).</p>
 <p>Both have their pros and cons.</p>
@@ -770,14 +837,14 @@ document.write(`
 <p>Option 1 could potentially be a smaller less performant model that runs fast because its able to fit on a mobile device.</p>
 <p>Option 2 could potentially a larger more performant model that requires more compute and storage but it takes a bit longer to run because we have to send data off the device and get it back (so even though the actual prediction might be fast, the network time and data transfer has to factored in).</p>
 <p>For FoodVision Mini, we’d likely prefer option 1, because the small hit in performance is far outweighed by the faster inference speed.</p>
-<img src="images/09-model-deployment-on-device-vs-cloud.png" width=900 alt="tesla computer vision system on device vs on the cloud"/>
+<a class="reference internal image-reference" href="../../../_images/09-model-deployment-on-device-vs-cloud.png"><img alt="tesla computer vision system on device vs on the cloud" src="../../../_images/09-model-deployment-on-device-vs-cloud.png" style="width: 900px;" /></a>
 <p><em>In the case of a Tesla car’s computer vision system, which would be better? A smaller model that performs well on device (model is on the car) or a larger model that performs better that’s on the cloud? In this case, you’d much prefer the model being on the car. The extra network time it would take for data to go from the car to the cloud and then back to the car just wouldn’t be worth it (or potentially even impossible with poor signal areas).</em></p>
 <blockquote>
 <div><p><strong>Note:</strong> For a full example of seeing what it’s like to deploy a PyTorch model to an edge device, see the <a class="reference external" href="https://pytorch.org/tutorials/intermediate/realtime_rpi.html">PyTorch tutorial on achieving real-time inference (30fps+)</a> with a computer vision model on a Raspberry Pi.</p>
 </div></blockquote>
 </section>
-<section id="how-s-it-going-to-function">
-<h3>How’s it going to function?<a class="headerlink" href="#how-s-it-going-to-function" title="Link to this heading">#</a></h3>
+<section id="hows-it-going-to-function">
+<h3>How’s it going to function?<a class="headerlink" href="#hows-it-going-to-function" title="Link to this heading">#</a></h3>
 <p>Back to the ideal use case, when you deploy your machine learning model, how should it work?</p>
 <p>As in, would you like predictions returned immediately?</p>
 <p>Or is it okay for them to happen later?</p>
@@ -847,12 +914,12 @@ document.write(`
 <p>So best to start small and keep it simple.</p>
 <p>And one of the best ways to do so is by turning your machine learning model into a demo app with <a class="reference external" href="https://gradio.app">Gradio</a> and then deploying it on Hugging Face Spaces.</p>
 <p>We’ll be doing just that with FoodVision Mini later on.</p>
-<img src="images/09-tools-and-places-to-deploy-ml-models.png" alt="tools and places to deploy machine learning models" width=900/>
+<img alt="tools and places to deploy machine learning models" src="../../../_images/09-tools-and-places-to-deploy-ml-models.png" />
 <p><em>A handful of places and tools to host and deploy machine learning models. There are plenty I’ve missed so if you’d like to add more, please leave a <a class="reference external" href="https://github.com/mrdbourke/pytorch-deep-learning/discussions">discussion on GitHub</a>.</em></p>
 </section>
 </section>
-<section id="what-we-re-going-to-cover">
-<h2>What we’re going to cover<a class="headerlink" href="#what-we-re-going-to-cover" title="Link to this heading">#</a></h2>
+<section id="what-were-going-to-cover">
+<h2>What we’re going to cover<a class="headerlink" href="#what-were-going-to-cover" title="Link to this heading">#</a></h2>
 <p>Enough talking about deploying a machine learning model.</p>
 <p>Let’s become machine learning engineers and actually deploy one.</p>
 <p>Our goal is to deploy our FoodVision Model via a demo Gradio app with the following metrics:</p>
@@ -1065,7 +1132,7 @@ torchvision version: 0.14.0.dev20220824+cu113
 <li><p><strong>Performance</strong> - A model that performs at 95%+ accuracy.</p></li>
 <li><p><strong>Speed</strong> - A model that can classify an image at ~30FPS (0.03 seconds inference time per image, also known as latency).</p></li>
 </ol>
-<img src="images/09-model-deployments-speed-vs-inference.png" alt="foodvision mini goals in terms of performance and inference time." width=750/>
+<img alt="foodvision mini goals in terms of performance and inference time." src="../../../_images/09-model-deployments-speed-vs-inference.png" />
 <p><em>FoodVision Mini deployment goals. We’d like a fast predicting well-performing model (because a slow app is boring).</em></p>
 <p>We’ll put an emphasis on speed, meaning, we’d prefer a model performing at 90%+ accuracy at ~30FPS than a model performing 95%+ accuracy at 10FPS.</p>
 <p>To try and achieve these results, let’s bring in our best performing models from the previous sections:</p>
@@ -1077,7 +1144,7 @@ torchvision version: 0.14.0.dev20220824+cu113
 </ul>
 </li>
 </ol>
-<img src="images/09-model-deployment-two-experiments.png" width=750 />
+<a class="reference internal image-reference" href="../../../_images/09-model-deployment-two-experiments.png"><img alt="../../../_images/09-model-deployment-two-experiments.png" src="../../../_images/09-model-deployment-two-experiments.png" style="width: 750px;" /></a>
 <blockquote>
 <div><p><strong>Note:</strong> A “feature extractor model” often starts with a model that has been pretrained on a dataset similar to your own problem. The pretrained model’s base layers are often left frozen (the pretrained patterns/weights stay the same) whilst some of the top (or classifier/classification head) layers get customized to your own problem by training on your own data. We covered the concept of a feature extractor model in <a class="reference internal" href="06_pytorch_transfer_learning.html#34-freezing-the-base-model-and-changing-the-output-layer-to-suit-our-needs"><span class="std std-ref">PyTorch Transfer Learning section 3.4</span></a>.</p>
 </div></blockquote>
@@ -1211,7 +1278,7 @@ torchvision version: 0.14.0.dev20220824+cu113
 </div>
 </div>
 </div>
-<img src="images/09-effnetb2-feature-extractor.png" alt="effnetb2 feature extractor model summary" width=900/>
+<img alt="effnetb2 feature extractor model summary" src="../../../_images/09-effnetb2-feature-extractor.png" />
 <p>Base layers frozen, top layers trainable and customized!</p>
 </section>
 <section id="creating-dataloaders-for-effnetb2">
@@ -1477,7 +1544,7 @@ Epoch: 10 | train_loss: 0.3757 | train_acc: 0.8604 | test_loss: 0.2813 | test_ac
 </div>
 </div>
 </div>
-<img src="images/09-vit-feature-extractor-3-classes.png" width=900 alt="vit feature extractor with 3 output classes"/>
+<a class="reference internal image-reference" href="../../../_images/09-vit-feature-extractor-3-classes.png"><img alt="vit feature extractor with 3 output classes" src="../../../_images/09-vit-feature-extractor-3-classes.png" style="width: 900px;" /></a>
 <p>Just like our EffNetB2 feature extractor model, our ViT model’s base layers are frozen and the output layer is customized to our needs!</p>
 <p>Do you notice the big difference though?</p>
 <p>Our ViT model has <em>far</em> more parameters than our EffNetB2 model. Perhaps this will come into play when we compare our models across speed and performance later on.</p>
@@ -1970,7 +2037,7 @@ Name: correct, dtype: int64
 </div>
 <p>Hmm, how does that average prediction time live up to our criteria of our model performing at real-time (~30FPS or 0.03 seconds per prediction)?</p>
 <blockquote>
-<div><p><strong>Note:</strong> Prediction times will be different across different hardware types (e.g. a local Intel i9 vs Google Colab CPU). The better and faster the hardware, generally, the faster the prediction. For example, on my local deep learning PC with an Intel i9 chip, my average prediction time with EffNetB2 is around 0.031 seconds (just under real-time). However, on Google Colab (I’m not sure what CPU hardware Colab uses but it looks like it might be an <a class="reference external" href="https://stackoverflow.com/questions/47805170/whats-the-hardware-spec-for-google-colaboratory">Intel(R) Xeon(R)</a>), my average prediction time with EffNetB2 is about 0.1396 seconds (3-4x slower).</p>
+<div><p><strong>Note:</strong> Prediction times will be different across different hardware types (e.g. a local Intel i9 vs Google Colab CPU). The better and faster the hardware, generally, the faster the prediction. For example, on my local deep learning PC with an Intel i9 chip, my average prediction time with EffNetB2 is around 0.031 seconds (just under real-time). However, on Google Colab (I’m not sure what CPU hardware Colab uses but it looks like it might be an <a class="reference external" href="https://stackoverflow.com/questions/47805170/whats-the-hardware-spec-for-google-colaboratory">Intel® Xeon®</a>), my average prediction time with EffNetB2 is about 0.1396 seconds (3-4x slower).</p>
 </div></blockquote>
 <p>Let’s add our EffNetB2 average time per prediction to our <code class="docutils literal notranslate"><span class="pre">effnetb2_stats</span></code> dictionary.</p>
 <div class="cell docutils container">
@@ -2451,7 +2518,7 @@ Name: correct, dtype: int64
 </pre></div>
 </div>
 <p>Where, <code class="docutils literal notranslate"><span class="pre">fn</span></code> is a Python function to map the <code class="docutils literal notranslate"><span class="pre">inputs</span></code> to the <code class="docutils literal notranslate"><span class="pre">outputs</span></code>.</p>
-<img src="images/09-gradio-workflow.png" alt="gradio workflow of inputs flowing into some kind of model or function and then producing outputs" width=900/>
+<img alt="gradio workflow of inputs flowing into some kind of model or function and then producing outputs" src="../../../_images/09-gradio-workflow.png" />
 <p><em>Gradio provides a very helpful <code class="docutils literal notranslate"><span class="pre">Interface</span></code> class to easily create an inputs -&gt; model/function -&gt; outputs workflow where the inputs and outputs could be almost anything you want. For example, you might input Tweets (text) to see if they’re about machine learning or not or <a class="reference external" href="https://huggingface.co/blog/stable_diffusion">input a text prompt to generate images</a>.</em></p>
 <blockquote>
 <div><p><strong>Note:</strong> Gradio has a vast number of possible <code class="docutils literal notranslate"><span class="pre">inputs</span></code> and <code class="docutils literal notranslate"><span class="pre">outputs</span></code> options known as “Components” from images to text to numbers to audio to videos and more. You can see all of these in the <a class="reference external" href="https://gradio.app/docs/#components">Gradio Components documentation</a>.</p>
@@ -2647,7 +2714,7 @@ This share link expires in 72 hours. For free permanent hosting, check out Space
 </div>
 </div>
 </div>
-<img src="images/09-gradio-running-in-google-colab-and-in-browser.gif" alt="Gradio demo running in Google Colab and on the web" width=750/>
+<img alt="Gradio demo running in Google Colab and on the web" src="../../../_images/09-gradio-running-in-google-colab-and-in-browser.gif" />
 <p><em>FoodVision Mini Gradio demo running in Google Colab and in the browser (the link when running from Google Colab only lasts for 72 hours). You can see the <a class="reference external" href="https://huggingface.co/spaces/mrdbourke/foodvision_mini">permanent live demo on Hugging Face Spaces</a>.</em></p>
 <p>Woohoo!!! What an epic demo!!!</p>
 <p>FoodVision Mini has officially come to life in an interface someone could use and try out.</p>
@@ -3159,7 +3226,7 @@ Not running in Google Colab, can&#39;t use google.colab.files.download(), please
 <li><p><strong>Note:</strong> A Space in Hugging Face is also known as a “code repository” (a place to store your code/files) or “repo” for short.</p></li>
 </ul>
 </li>
-<li><p>Give the Space a name, for example, mine is called <code class="docutils literal notranslate"><span class="pre">mrdbourke/foodvision_mini</span></code>, you can see it here: https://huggingface.co/spaces/mrdbourke/foodvision_mini</p></li>
+<li><p>Give the Space a name, for example, mine is called <code class="docutils literal notranslate"><span class="pre">mrdbourke/foodvision_mini</span></code>, you can see it here: <a class="reference external" href="https://huggingface.co/spaces/mrdbourke/foodvision_mini">https://huggingface.co/spaces/mrdbourke/foodvision_mini</a></p></li>
 <li><p>Select a license (I used <a class="reference external" href="https://opensource.org/licenses/MIT">MIT</a>).</p></li>
 <li><p>Select Gradio as the Space SDK (software development kit).</p>
 <ul class="simple">
@@ -3199,7 +3266,7 @@ Not running in Google Colab, can&#39;t use google.colab.files.download(), please
 </li>
 <li><p>Wait 3-5 minutes for the build to happen (future builds are faster) and your app to become live!</p></li>
 </ol>
-<p>If everything worked, you should see a live running example of our FoodVision Mini Gradio demo like the one here: https://huggingface.co/spaces/mrdbourke/foodvision_mini</p>
+<p>If everything worked, you should see a live running example of our FoodVision Mini Gradio demo like the one here: <a class="reference external" href="https://huggingface.co/spaces/mrdbourke/foodvision_mini">https://huggingface.co/spaces/mrdbourke/foodvision_mini</a></p>
 <p>And we can even embed our FoodVision Mini Gradio demo into our notebook as an <a class="reference external" href="https://gradio.app/sharing_your_app/#embedding-with-iframes">iframe</a> with <a class="reference external" href="https://ipython.readthedocs.io/en/stable/api/generated/IPython.display.html#IPython.display.IFrame"><code class="docutils literal notranslate"><span class="pre">IPython.display.IFrame</span></code></a> and a link to our space in the format <code class="docutils literal notranslate"><span class="pre">https://hf.space/embed/[YOUR_USERNAME]/[YOUR_SPACE_NAME]/+</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -3237,7 +3304,7 @@ Not running in Google Colab, can&#39;t use google.colab.files.download(), please
 <p>How?</p>
 <p>Well, we’ve got all the steps in place, all we have to do is alter our EffNetB2 model slightly as well as prepare a different dataset.</p>
 <p>To finish Milestone Project 3, let’s recreate a Gradio demo similar to FoodVision Mini (three classes) but for FoodVision Big (101 classes).</p>
-<img src="foodvision mini model on three classes: pizza, steak, sushi and foodvision big on all of the 101 classes in the food101 dataset" width=900/>
+<img alt="content/tools/pytorch/foodvisionminimodelonthreeclasses:pizza,steak,sushiandfoodvisionbigonallofthe101classesinthefood101dataset" src="content/tools/pytorch/foodvisionminimodelonthreeclasses:pizza,steak,sushiandfoodvisionbigonallofthe101classesinthefood101dataset" />
 <p><em>FoodVision Mini works with three food classes: pizza, steak and sushi. And FoodVision Big steps it up a notch to work across 101 food classes: all of the <a class="reference external" href="https://github.com/mrdbourke/pytorch-deep-learning/blob/main/extras/food101_class_names.txt">classes in the Food101 dataset</a>.</em></p>
 <section id="creating-a-model-and-transforms-for-foodvision-big">
 <h3>Creating a model and transforms for FoodVision Big<a class="headerlink" href="#creating-a-model-and-transforms-for-foodvision-big" title="Link to this heading">#</a></h3>
@@ -3268,7 +3335,7 @@ Not running in Google Colab, can&#39;t use google.colab.files.download(), please
 </div>
 </div>
 </div>
-<img src="images/09-effnetb2-feature-extractor-101-classes.png" width=900 alt="effnetb2 feature extractor with 100 output classes model summary"/>
+<a class="reference internal image-reference" href="../../../_images/09-effnetb2-feature-extractor-101-classes.png"><img alt="effnetb2 feature extractor with 100 output classes model summary" src="../../../_images/09-effnetb2-feature-extractor-101-classes.png" style="width: 900px;" /></a>
 <p>Nice!</p>
 <p>See how just like our EffNetB2 model for FoodVision Mini the base layers are frozen (these are pretrained on ImageNet) and the outer layers (the <code class="docutils literal notranslate"><span class="pre">classifier</span></code> layers) are trainble with an ouput shape of <code class="docutils literal notranslate"><span class="pre">[batch_size,</span> <span class="pre">101]</span></code> (<code class="docutils literal notranslate"><span class="pre">101</span></code> for 101 classes in Food101).</p>
 <p>Now since we’re going to be dealing with a fair bit more data than usual, how about we add a little data augmentation to our transforms (<code class="docutils literal notranslate"><span class="pre">effnetb2_transforms</span></code>) to augment the training data.</p>
@@ -3588,7 +3655,7 @@ Epoch: 5 | train_loss: 2.5006 | train_acc: 0.5239 | test_loss: 2.2805 | test_acc
 </div>
 </div>
 </div>
-<p>Woohoo!!!!</p>
+<p>Woohoo!!!</p>
 <p>Looks like we beat the original Food101 paper’s results of 56.4% accuracy with only 20% of the training data (though we only evaluated on 20% of the testing data too, to fully replicate the results, we could evaluate on 100% of the testing data).</p>
 <p>That’s the power of transfer learning!</p>
 </section>
@@ -4083,7 +4150,7 @@ Not running in Google Colab, can&#39;t use google.colab.files.download()
 <li><p><strong>Note:</strong> A Space in Hugging Face is also known as a “code repository” (a place to store your code/files) or “repo” for short.</p></li>
 </ul>
 </li>
-<li><p>Give the Space a name, for example, mine is called <code class="docutils literal notranslate"><span class="pre">mrdbourke/foodvision_big</span></code>, you can see it here: https://huggingface.co/spaces/mrdbourke/foodvision_big</p></li>
+<li><p>Give the Space a name, for example, mine is called <code class="docutils literal notranslate"><span class="pre">mrdbourke/foodvision_big</span></code>, you can see it here: <a class="reference external" href="https://huggingface.co/spaces/mrdbourke/foodvision_big">https://huggingface.co/spaces/mrdbourke/foodvision_big</a></p></li>
 <li><p>Select a license (I used <a class="reference external" href="https://opensource.org/licenses/MIT">MIT</a>).</p></li>
 <li><p>Select Gradio as the Space SDK (software development kit).</p>
 <ul class="simple">
@@ -4125,7 +4192,7 @@ Not running in Google Colab, can&#39;t use google.colab.files.download()
 <li><p>Wait 3-5 minutes for the build to happen (future builds are faster) and your app to become live!</p></li>
 </ol>
 <p>If everything worked correctly, our FoodVision Big Gradio demo should be ready to classify!</p>
-<p>You can see my version here: https://huggingface.co/spaces/mrdbourke/foodvision_big/</p>
+<p>You can see my version here: <a class="reference external" href="https://huggingface.co/spaces/mrdbourke/foodvision_big/">https://huggingface.co/spaces/mrdbourke/foodvision_big/</a></p>
 <p>Or we can even embed our FoodVision Big Gradio demo right within our notebook as an <a class="reference external" href="https://gradio.app/sharing_your_app/#embedding-with-iframes">iframe</a> with <a class="reference external" href="https://ipython.readthedocs.io/en/stable/api/generated/IPython.display.html#IPython.display.IFrame"><code class="docutils literal notranslate"><span class="pre">IPython.display.IFrame</span></code></a> and a link to our space in the format <code class="docutils literal notranslate"><span class="pre">https://hf.space/embed/[YOUR_USERNAME]/[YOUR_SPACE_NAME]/+</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -4206,8 +4273,8 @@ Not running in Google Colab, can&#39;t use google.colab.files.download()
     {
         requestKernel: true,
         binderOptions: {
-            repo: "binder-examples/jupyter-stacks-datascience",
-            ref: "master",
+            repo: "anukchat/anukchat.github.io",
+            ref: "main",
         },
         codeMirrorConfig: {
             theme: "abcdef",
@@ -4269,12 +4336,12 @@ Not running in Google Colab, can&#39;t use google.colab.files.download()
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-machine-learning-model-deployment">What is machine learning model deployment?</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-deploy-a-machine-learning-model">Why deploy a machine learning model?</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#different-types-of-machine-learning-model-deployment">Different types of machine learning model deployment</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#where-s-it-going-to-go">Where’s it going to go?</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-s-it-going-to-function">How’s it going to function?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#wheres-it-going-to-go">Where’s it going to go?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hows-it-going-to-function">How’s it going to function?</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ways-to-deploy-a-machine-learning-model">Ways to deploy a machine learning model</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-we-re-going-to-cover">What we’re going to cover</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-were-going-to-cover">What we’re going to cover</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-setup">Getting setup</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-data">Getting data</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#foodvision-mini-model-deployment-experiment-outline">FoodVision Mini model deployment experiment outline</a></li>

@@ -58,6 +58,8 @@
     <script async="async" src="../../../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'content/tools/pytorch/02_pytorch_classification';</script>
     <link rel="canonical" href="https://anukchat.github.io/content/tools/pytorch/02_pytorch_classification.html" />
     <link rel="icon" href="../../../_static/mesh-smallest.png"/>
@@ -103,8 +105,8 @@
          class="form-control"
          name="q"
          id="search-input"
-         placeholder="Search..."
-         aria-label="Search..."
+         placeholder="Search this book..."
+         aria-label="Search this book..."
          autocomplete="off"
          autocorrect="off"
          autocapitalize="off"
@@ -442,6 +444,73 @@
 
 
 
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/anukchat/anukchat.github.io/main?urlpath=lab/tree/content/tools/pytorch/02_pytorch_classification.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Binder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Binder logo" src="../../../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/anukchat/anukchat.github.io/blob/main/content/tools/pytorch/02_pytorch_classification.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="../../../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
 <div class="dropdown dropdown-download-buttons">
   <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
     <i class="fas fa-download"></i>
@@ -545,7 +614,7 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-a-classification-problem">What is a classification problem?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-we-re-going-to-cover">What we’re going to cover</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-were-going-to-cover">What we’re going to cover</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#architecture-of-a-classification-neural-network">Architecture of a classification neural network</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#make-classification-data-and-get-it-ready">Make classification data and get it ready</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#input-and-output-shapes">Input and output shapes</a></li>
@@ -597,7 +666,7 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="pytorch-neural-network-classification">
+  <section class="tex2jax_ignore mathjax_ignore" id="pytorch-neural-network-classification">
 <h1>PyTorch Neural Network Classification<a class="headerlink" href="#pytorch-neural-network-classification" title="Link to this heading">#</a></h1>
 <section id="what-is-a-classification-problem">
 <h2>What is a classification problem?<a class="headerlink" href="#what-is-a-classification-problem" title="Link to this heading">#</a></h2>
@@ -633,10 +702,10 @@ document.write(`
 <p>In this notebook, we’re going to work through a couple of different classification problems with PyTorch.</p>
 <p>In other words, taking a set of inputs and predicting what class those set of inputs belong to.</p>
 </section>
-<section id="what-we-re-going-to-cover">
-<h2>What we’re going to cover<a class="headerlink" href="#what-we-re-going-to-cover" title="Link to this heading">#</a></h2>
+<section id="what-were-going-to-cover">
+<h2>What we’re going to cover<a class="headerlink" href="#what-were-going-to-cover" title="Link to this heading">#</a></h2>
 <p>In this notebook we’re going to reiterate over the PyTorch workflow we coverd in <a class="reference external" href="https://www.learnpytorch.io/02_pytorch_classification/">PyTorch Workflow</a>.</p>
-<img src="images/01_a_pytorch_workflow.png" alt="a pytorch workflow flowchart" width=900/>
+<img alt="a pytorch workflow flowchart" src="../../../_images/01_a_pytorch_workflow.png" />
 <p>Except instead of trying to predict a straight line (predicting a number, also called a regression problem), we’ll be working on a <strong>classification problem</strong>.</p>
 <p>Specifically, we’re going to cover:</p>
 <div class="pst-scrollable-table-container"><table class="table">
@@ -1314,11 +1383,12 @@ tensor([1., 0., 1., 0., 1., 1., 0., 0., 1., 0.])
 <p>But <em>what</em> are they?</p>
 <p>They’re the output of our <code class="docutils literal notranslate"><span class="pre">forward()</span></code> method.</p>
 <p>Which implements two layers of <code class="docutils literal notranslate"><span class="pre">nn.Linear()</span></code> which internally calls the following equation:</p>
-<p>$$
+<div class="math notranslate nohighlight">
+\[
 \mathbf{y} = x \cdot \mathbf{Weights}^T  + \mathbf{bias}
-$$</p>
-<p>The <em>raw outputs</em> (unmodified) of this equation ($\mathbf{y}$) and in turn, the raw outputs of our model are often referred to as <a class="reference external" href="https://datascience.stackexchange.com/a/31045"><strong>logits</strong></a>.</p>
-<p>That’s what our model is outputing above when it takes in the input data ($x$ in the equation or <code class="docutils literal notranslate"><span class="pre">X_test</span></code> in the code), logits.</p>
+\]</div>
+<p>The <em>raw outputs</em> (unmodified) of this equation (<span class="math notranslate nohighlight">\(\mathbf{y}\)</span>) and in turn, the raw outputs of our model are often referred to as <a class="reference external" href="https://datascience.stackexchange.com/a/31045"><strong>logits</strong></a>.</p>
+<p>That’s what our model is outputing above when it takes in the input data (<span class="math notranslate nohighlight">\(x\)</span> in the equation or <code class="docutils literal notranslate"><span class="pre">X_test</span></code> in the code), logits.</p>
 <p>However, these numbers are hard to interpret.</p>
 <p>We’d like some numbers that are comparable to our truth labels.</p>
 <p>To get our model’s raw outputs (logits) into such a form, we can use the <a class="reference external" href="https://pytorch.org/docs/stable/generated/torch.sigmoid.html">sigmoid activation function</a>.</p>
@@ -1984,7 +2054,7 @@ Epoch: 900 | Train loss: 0.05571, Test loss: 0.00603
 <p>Let’s see what happens when we introduce the capability for our model to use <strong>non-linear actviation functions</strong>?</p>
 <p>Well let’s see.</p>
 <p>PyTorch has a bunch of <a class="reference external" href="https://pytorch.org/docs/stable/nn.html#non-linear-activations-weighted-sum-nonlinearity">ready-made non-linear activation functions</a> that do similiar but different things.</p>
-<p>One of the most common and best performing is [ReLU](https://en.wikipedia.org/wiki/Rectifier_(neural_networks) (rectified linear-unit, <a class="reference external" href="https://pytorch.org/docs/stable/generated/torch.nn.ReLU.html"><code class="docutils literal notranslate"><span class="pre">torch.nn.ReLU()</span></code></a>).</p>
+<p>One of the most common and best performing is [ReLU](<a class="reference external" href="https://en.wikipedia.org/wiki/Rectifier_(neural_networks)">https://en.wikipedia.org/wiki/Rectifier_(neural_networks)</a> (rectified linear-unit, <a class="reference external" href="https://pytorch.org/docs/stable/generated/torch.nn.ReLU.html"><code class="docutils literal notranslate"><span class="pre">torch.nn.ReLU()</span></code></a>).</p>
 <p>Rather than talk about it, let’s put it in our neural network between the hidden layers in the forward pass and see what happens.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2218,10 +2288,12 @@ Epoch: 900 | Loss: 0.62362, Accuracy: 74.00% | Test Loss: 0.62145, Test Accuracy
 <p>That looks exactly like the shape of the ReLU function on the <a class="reference external" href="https://en.wikipedia.org/wiki/Rectifier_(neural_networks)">Wikipedia page for ReLU</a>.</p>
 <p>How about we try the <a class="reference external" href="https://en.wikipedia.org/wiki/Sigmoid_function">sigmoid function</a> we’ve been using?</p>
 <p>The sigmoid function formula goes like so:</p>
-<p>$$ out_i = \frac{1}{1+e^{-input_i}} $$</p>
-<p>Or using $x$ as input:</p>
-<p>$$ S(x) = \frac{1}{1+e^{-x_i}} $$</p>
-<p>Where $S$ stands for sigmoid, $e$ stands for <a class="reference external" href="https://en.wikipedia.org/wiki/Exponential_function">exponential</a> (<a class="reference external" href="https://pytorch.org/docs/stable/generated/torch.exp.html"><code class="docutils literal notranslate"><span class="pre">torch.exp()</span></code></a>) and $i$ stands for a particular element in a tensor.</p>
+<div class="math notranslate nohighlight">
+\[ out_i = \frac{1}{1+e^{-input_i}} \]</div>
+<p>Or using <span class="math notranslate nohighlight">\(x\)</span> as input:</p>
+<div class="math notranslate nohighlight">
+\[ S(x) = \frac{1}{1+e^{-x_i}} \]</div>
+<p>Where <span class="math notranslate nohighlight">\(S\)</span> stands for sigmoid, <span class="math notranslate nohighlight">\(e\)</span> stands for <a class="reference external" href="https://en.wikipedia.org/wiki/Exponential_function">exponential</a> (<a class="reference external" href="https://pytorch.org/docs/stable/generated/torch.exp.html"><code class="docutils literal notranslate"><span class="pre">torch.exp()</span></code></a>) and <span class="math notranslate nohighlight">\(i\)</span> stands for a particular element in a tensor.</p>
 <p>Let’s build a function to replicate the sigmoid function with PyTorch.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2778,8 +2850,8 @@ Test accuracy: 99.5%
     {
         requestKernel: true,
         binderOptions: {
-            repo: "binder-examples/jupyter-stacks-datascience",
-            ref: "master",
+            repo: "anukchat/anukchat.github.io",
+            ref: "main",
         },
         codeMirrorConfig: {
             theme: "abcdef",
@@ -2839,7 +2911,7 @@ Test accuracy: 99.5%
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-a-classification-problem">What is a classification problem?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-we-re-going-to-cover">What we’re going to cover</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-were-going-to-cover">What we’re going to cover</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#architecture-of-a-classification-neural-network">Architecture of a classification neural network</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#make-classification-data-and-get-it-ready">Make classification data and get it ready</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#input-and-output-shapes">Input and output shapes</a></li>

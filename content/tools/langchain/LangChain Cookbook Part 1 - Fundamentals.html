@@ -103,8 +103,8 @@
          class="form-control"
          name="q"
          id="search-input"
-         placeholder="Search..."
-         aria-label="Search..."
+         placeholder="Search this book..."
+         aria-label="Search this book..."
          autocomplete="off"
          autocorrect="off"
          autocapitalize="off"
@@ -442,6 +442,73 @@
 
 
 
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/anukchat/anukchat.github.io/main?urlpath=lab/tree/content/tools/langchain/LangChain Cookbook Part 1 - Fundamentals.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Binder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Binder logo" src="../../../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/anukchat/anukchat.github.io/blob/main/content/tools/langchain/LangChain Cookbook Part 1 - Fundamentals.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="../../../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
 <div class="dropdown dropdown-download-buttons">
   <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
     <i class="fas fa-download"></i>
@@ -607,7 +674,7 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="langchain-cookbook">
+  <section class="tex2jax_ignore mathjax_ignore" id="langchain-cookbook">
 <h1>LangChain Cookbook 👨‍🍳👩‍🍳<a class="headerlink" href="#langchain-cookbook" title="Link to this heading">#</a></h1>
 <p><em>This cookbook is based off the <a class="reference external" href="https://docs.langchain.com/docs/">LangChain Conceptual Documentation</a></em></p>
 <p><strong>Links:</strong></p>
@@ -666,7 +733,7 @@ document.write(`
 </div>
 </section>
 </section>
-<section id="langchain-components">
+<section class="tex2jax_ignore mathjax_ignore" id="langchain-components">
 <h1>LangChain Components<a class="headerlink" href="#langchain-components" title="Link to this heading">#</a></h1>
 <section id="schema-nuts-and-bolts-of-working-with-large-language-models-llms">
 <h2>Schema - Nuts and Bolts of working with Large Language Models (LLMs)<a class="headerlink" href="#schema-nuts-and-bolts-of-working-with-large-language-models-llms" title="Link to this heading">#</a></h2>
@@ -980,7 +1047,7 @@ Your embedding is length 1536
 <h3><strong>Prompt Template</strong><a class="headerlink" href="#prompt-template" title="Link to this heading">#</a></h3>
 <p>An object that helps create prompts based on a combination of user input, other non-static information and a fixed template string.</p>
 <p>Think of it as an <a class="reference external" href="https://realpython.com/python-f-strings/">f-string</a> in python but for prompts</p>
-<p><em>Advanced: Check out LangSmithHub(https://smith.langchain.com/hub) for many more communit prompt templates</em></p>
+<p><em>Advanced: Check out LangSmithHub(<a class="reference external" href="https://smith.langchain.com/hub">https://smith.langchain.com/hub</a>) for many more communit prompt templates</em></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">langchain.llms</span> <span class="kn">import</span> <span class="n">OpenAI</span>
@@ -2058,7 +2125,7 @@ Thought:<span class=" -Color -Color-Bold -Color-Bold-Green"> I now know the fina
 </div>
 <p><img alt="Wild Belle" src="content/tools/langchain/data/WildBelle1.png" /></p>
 <p>🎵Enjoy🎵
-https://open.spotify.com/track/1eREJIBdqeCcqNCB1pbz7w?si=c014293b63c7478c</p>
+<a class="reference external" href="https://open.spotify.com/track/1eREJIBdqeCcqNCB1pbz7w?si=c014293b63c7478c">https://open.spotify.com/track/1eREJIBdqeCcqNCB1pbz7w?si=c014293b63c7478c</a></p>
 </section>
 </section>
 </section>
@@ -2067,8 +2134,8 @@ https://open.spotify.com/track/1eREJIBdqeCcqNCB1pbz7w?si=c014293b63c7478c</p>
     {
         requestKernel: true,
         binderOptions: {
-            repo: "binder-examples/jupyter-stacks-datascience",
-            ref: "master",
+            repo: "anukchat/anukchat.github.io",
+            ref: "main",
         },
         codeMirrorConfig: {
             theme: "abcdef",

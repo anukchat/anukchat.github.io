@@ -103,8 +103,8 @@
          class="form-control"
          name="q"
          id="search-input"
-         placeholder="Search..."
-         aria-label="Search..."
+         placeholder="Search this book..."
+         aria-label="Search this book..."
          autocomplete="off"
          autocorrect="off"
          autocapitalize="off"
@@ -442,6 +442,73 @@
 
 
 
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/anukchat/anukchat.github.io/main?urlpath=lab/tree/content/tools/numpy/Python_Numpy_Exercises_with_hints.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Binder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Binder logo" src="../../../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/anukchat/anukchat.github.io/blob/main/content/tools/numpy/Python_Numpy_Exercises_with_hints.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="../../../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
 <div class="dropdown dropdown-download-buttons">
   <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
     <i class="fas fa-download"></i>
@@ -563,7 +630,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-9x9-array-with-random-values-and-find-the-minimum-and-maximum-values">13. Create a 9x9 array with random values and find the minimum and maximum values (★☆☆)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-random-vector-of-size-20-and-find-the-mean-value">6# 6# 14. Create a random vector of size 20 and find the mean value (★☆☆)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-2d-array-with-1-on-the-border-and-0-inside">15. Create a 2d array with 1 on the border and 0 inside (★☆☆)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-add-a-border-filled-with-0-s-around-an-existing-array">16. How to add a border (filled with 0’s) around an existing array? (★☆☆)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-add-a-border-filled-with-0s-around-an-existing-array">16. How to add a border (filled with 0’s) around an existing array? (★☆☆)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-the-result-of-the-following-expression">17. What is the result of the following expression? (★☆☆)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-6x6-matrix-with-values-1-2-3-4-just-below-the-diagonal">18. Create a 6x6 matrix with values 1,2,3,4 just below the diagonal (★☆☆)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-6x6-matrix-and-fill-it-with-a-checkerboard-pattern">19. Create a 6x6 matrix and fill it with a checkerboard pattern (★☆☆)</a></li>
@@ -659,7 +726,7 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="python-numpy-exercises">
+  <section class="tex2jax_ignore mathjax_ignore" id="python-numpy-exercises">
 <h1>Python NumPy Exercises<a class="headerlink" href="#python-numpy-exercises" title="Link to this heading">#</a></h1>
 <p>This is a collection of exercises that have been collected in the numpy mailing list, on stack overflow
 and in the numpy documentation. The goal of this collection is to offer a quick reference for both old
@@ -724,8 +791,8 @@ and new users but also to provide a set of exercises for those who teach.</p>
 <h2>15. Create a 2d array with 1 on the border and 0 inside (★☆☆)<a class="headerlink" href="#create-a-2d-array-with-1-on-the-border-and-0-inside" title="Link to this heading">#</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">💡hint:</span> <span class="pre">array[1:-1,</span> <span class="pre">1:-1]</span></code></p>
 </section>
-<section id="how-to-add-a-border-filled-with-0-s-around-an-existing-array">
-<h2>16. How to add a border (filled with 0’s) around an existing array? (★☆☆)<a class="headerlink" href="#how-to-add-a-border-filled-with-0-s-around-an-existing-array" title="Link to this heading">#</a></h2>
+<section id="how-to-add-a-border-filled-with-0s-around-an-existing-array">
+<h2>16. How to add a border (filled with 0’s) around an existing array? (★☆☆)<a class="headerlink" href="#how-to-add-a-border-filled-with-0s-around-an-existing-array" title="Link to this heading">#</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">💡hint:</span> <span class="pre">np.pad</span></code></p>
 </section>
 <section id="what-is-the-result-of-the-following-expression">
@@ -1110,8 +1177,8 @@ and new users but also to provide a set of exercises for those who teach.</p>
     {
         requestKernel: true,
         binderOptions: {
-            repo: "binder-examples/jupyter-stacks-datascience",
-            ref: "master",
+            repo: "anukchat/anukchat.github.io",
+            ref: "main",
         },
         codeMirrorConfig: {
             theme: "abcdef",
@@ -1189,7 +1256,7 @@ and new users but also to provide a set of exercises for those who teach.</p>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-9x9-array-with-random-values-and-find-the-minimum-and-maximum-values">13. Create a 9x9 array with random values and find the minimum and maximum values (★☆☆)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-random-vector-of-size-20-and-find-the-mean-value">6# 6# 14. Create a random vector of size 20 and find the mean value (★☆☆)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-2d-array-with-1-on-the-border-and-0-inside">15. Create a 2d array with 1 on the border and 0 inside (★☆☆)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-add-a-border-filled-with-0-s-around-an-existing-array">16. How to add a border (filled with 0’s) around an existing array? (★☆☆)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-add-a-border-filled-with-0s-around-an-existing-array">16. How to add a border (filled with 0’s) around an existing array? (★☆☆)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-the-result-of-the-following-expression">17. What is the result of the following expression? (★☆☆)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-6x6-matrix-with-values-1-2-3-4-just-below-the-diagonal">18. Create a 6x6 matrix with values 1,2,3,4 just below the diagonal (★☆☆)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-6x6-matrix-and-fill-it-with-a-checkerboard-pattern">19. Create a 6x6 matrix and fill it with a checkerboard pattern (★☆☆)</a></li>

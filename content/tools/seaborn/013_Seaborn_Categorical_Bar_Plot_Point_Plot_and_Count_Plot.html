@@ -103,8 +103,8 @@
          class="form-control"
          name="q"
          id="search-input"
-         placeholder="Search..."
-         aria-label="Search..."
+         placeholder="Search this book..."
+         aria-label="Search this book..."
          autocomplete="off"
          autocorrect="off"
          autocapitalize="off"
@@ -442,6 +442,73 @@
 
 
 
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/anukchat/anukchat.github.io/main?urlpath=lab/tree/content/tools/seaborn/013_Seaborn_Categorical_Bar_Plot_Point_Plot_and_Count_Plot.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Binder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Binder logo" src="../../../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/anukchat/anukchat.github.io/blob/main/content/tools/seaborn/013_Seaborn_Categorical_Bar_Plot_Point_Plot_and_Count_Plot.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="../../../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
 <div class="dropdown dropdown-download-buttons">
   <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
     <i class="fas fa-download"></i>
@@ -565,7 +632,7 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="bar-plot-point-plot-and-count-plot">
+  <section class="tex2jax_ignore mathjax_ignore" id="bar-plot-point-plot-and-count-plot">
 <h1>Bar Plot, Point Plot and Count plot<a class="headerlink" href="#bar-plot-point-plot-and-count-plot" title="Link to this heading">#</a></h1>
 <section id="bar-plot">
 <h2>1. Bar Plot<a class="headerlink" href="#bar-plot" title="Link to this heading">#</a></h2>
@@ -756,7 +823,7 @@ document.write(`
 </div>
 <p><em>So now I am going to quickly grab a cup of coffee and you guys need to utilize this time in guessing the type of Bar Plot this is. Keep thinking and I will be right back!</em></p>
 <p>And, I a am back! I’m sure by now you would have guessed the type of Bar plot we have in front of us; and you are RIGHT! Indeed, this is a <strong>Simple Bar plot</strong>; or we may even call it a <strong>Line Plot</strong>. On <em>X-axis</em>, our plot has the <em>Class of passengers</em> travelling on Titanic and on <em>Y-axis</em>, we have corresponding <em>Ticket fare</em>.</p>
-<p>There is another type of plot with Seaborn which is very much identical to Bar Plot, and that is a <strong><span style="color:red">”Count Plot”</span></strong>, so we shall quickly have a look at it as well:</p>
+<p>There is another type of plot with Seaborn which is very much identical to Bar Plot, and that is a <strong><span style="color:red">“Count Plot”</span></strong>, so we shall quickly have a look at it as well:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">countplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;class&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">titanic</span><span class="p">,</span> <span class="n">palette</span><span class="o">=</span><span class="s2">&quot;Set1&quot;</span><span class="p">)</span>
@@ -1582,8 +1649,8 @@ In case the concept still isn’t clear, then I hope you understand that I can�
     {
         requestKernel: true,
         binderOptions: {
-            repo: "binder-examples/jupyter-stacks-datascience",
-            ref: "master",
+            repo: "anukchat/anukchat.github.io",
+            ref: "main",
         },
         codeMirrorConfig: {
             theme: "abcdef",

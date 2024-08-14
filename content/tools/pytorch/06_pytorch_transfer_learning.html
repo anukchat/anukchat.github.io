@@ -103,8 +103,8 @@
          class="form-control"
          name="q"
          id="search-input"
-         placeholder="Search..."
-         aria-label="Search..."
+         placeholder="Search this book..."
+         aria-label="Search this book..."
          autocomplete="off"
          autocorrect="off"
          autocapitalize="off"
@@ -442,6 +442,73 @@
 
 
 
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/anukchat/anukchat.github.io/main?urlpath=lab/tree/content/tools/pytorch/06_pytorch_transfer_learning.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Binder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Binder logo" src="../../../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/anukchat/anukchat.github.io/blob/main/content/tools/pytorch/06_pytorch_transfer_learning.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="../../../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
 <div class="dropdown dropdown-download-buttons">
   <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
     <i class="fas fa-download"></i>
@@ -547,7 +614,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-transfer-learning">What is transfer learning?</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-use-transfer-learning">Why use transfer learning?</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#where-to-find-pretrained-models">Where to find pretrained models</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-we-re-going-to-cover">What we’re going to cover</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-were-going-to-cover">What we’re going to cover</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#where-can-you-get-help">Where can you get help?</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-setup">Getting setup</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#get-data">Get data</a></li>
@@ -582,7 +649,7 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="pytorch-transfer-learning">
+  <section class="tex2jax_ignore mathjax_ignore" id="pytorch-transfer-learning">
 <h1>PyTorch Transfer Learning<a class="headerlink" href="#pytorch-transfer-learning" title="Link to this heading">#</a></h1>
 <blockquote>
 <div><p><strong>Note:</strong> This notebook uses <code class="docutils literal notranslate"><span class="pre">torchvision</span></code>’s new <a class="reference external" href="https://pytorch.org/blog/introducing-torchvision-new-multi-weight-support-api/">multi-weight support API (available in <code class="docutils literal notranslate"><span class="pre">torchvision</span></code> v0.13+)</a>.</p>
@@ -598,7 +665,7 @@ document.write(`
 <p>For example, we can take the patterns a computer vision model has learned from datasets such as <a class="reference external" href="https://www.image-net.org/">ImageNet</a> (millions of images of different objects) and use them to power our FoodVision Mini model.</p>
 <p>Or we could take the patterns from a <a class="reference external" href="https://developers.google.com/machine-learning/glossary#masked-language-model">language model</a> (a model that’s been through large amounts of text to learn a representation of language) and use them as the basis of a model to classify different text samples.</p>
 <p>The premise remains: find a well-performing existing model and apply it to your own problem.</p>
-<img src="images/06-transfer-learning-example-overview.png" alt="transfer learning overview on different problems" width=900/>
+<img alt="transfer learning overview on different problems" src="../../../_images/06-transfer-learning-example-overview.png" />
 <p><em>Example of transfer learning being applied to computer vision and natural language processing (NLP). In the case of computer vision, a computer vision model might learn patterns on millions of images in ImageNet and then use those patterns to infer on another problem. And for NLP, a language model may learn the structure of language by reading all of Wikipedia (and perhaps more) and then apply that knowledge to a different problem.</em></p>
 </section>
 <section id="why-use-transfer-learning">
@@ -608,11 +675,11 @@ document.write(`
 <li><p>Can leverage an existing model (usually a neural network architecture) proven to work on problems similar to our own.</p></li>
 <li><p>Can leverage a working model which has <strong>already learned</strong> patterns on similar data to our own. This often results in achieving <strong>great results with less custom data</strong>.</p></li>
 </ol>
-<img src="images/06-transfer-learning-for-foodvision-mini%20.png" alt="transfer learning applied to FoodVision Mini" width=900/>
+<img alt="transfer learning applied to FoodVision Mini" src="content/tools/pytorch/images/06-transfer-learning-for-foodvision-mini%20.png" />
 <p><em>We’ll be putting these to the test for our FoodVision Mini problem, we’ll take a computer vision model pretrained on ImageNet and try to leverage its underlying learned representations for classifying images of pizza, steak and sushi.</em></p>
 <p>Both research and practice support the use of transfer learning too.</p>
 <p>A finding from a recent machine learning research paper recommended practioner’s use transfer learning wherever possible.</p>
-<img src="images/06-how-to-train-your-vit-section-6-transfer-learning-highlight.png" width=900 alt="how to train your vision transformer paper section 6, advising to use transfer learning if you can"/>
+<a class="reference internal image-reference" href="../../../_images/06-how-to-train-your-vit-section-6-transfer-learning-highlight.png"><img alt="how to train your vision transformer paper section 6, advising to use transfer learning if you can" src="../../../_images/06-how-to-train-your-vit-section-6-transfer-learning-highlight.png" style="width: 900px;" /></a>
 <p><em>A study into the effects of whether training from scratch or using transfer learning was better from a practioner’s point of view, found transfer learning to be far more beneficial in terms of cost and time. <strong>Source:</strong> <a class="reference external" href="https://arxiv.org/abs/2106.10270">How to train your ViT? Data, Augmentation, and Regularization in Vision Transformers</a> paper section 6 (conclusion).</em></p>
 <p>And Jeremy Howard (founder of <a class="reference external" href="https://www.fast.ai/">fastai</a>) is a big proponent of transfer learning.</p>
 <blockquote>
@@ -639,27 +706,27 @@ document.write(`
 </tr>
 <tr class="row-odd"><td><p><strong>HuggingFace Hub</strong></p></td>
 <td><p>A series of pretrained models on many different domains (vision, text, audio and more) from organizations around the world. There’s plenty of different datasets too.</p></td>
-<td><p>https://huggingface.co/models, https://huggingface.co/datasets</p></td>
+<td><p><a class="reference external" href="https://huggingface.co/models">https://huggingface.co/models</a>, <a class="reference external" href="https://huggingface.co/datasets">https://huggingface.co/datasets</a></p></td>
 </tr>
 <tr class="row-even"><td><p><strong><code class="docutils literal notranslate"><span class="pre">timm</span></code> (PyTorch Image Models) library</strong></p></td>
 <td><p>Almost all of the latest and greatest computer vision models in PyTorch code as well as plenty of other helpful computer vision features.</p></td>
-<td><p>https://github.com/rwightman/pytorch-image-models</p></td>
+<td><p><a class="github reference external" href="https://github.com/rwightman/pytorch-image-models">rwightman/pytorch-image-models</a></p></td>
 </tr>
 <tr class="row-odd"><td><p><strong>Paperswithcode</strong></p></td>
 <td><p>A collection of the latest state-of-the-art machine learning papers with code implementations attached. You can also find benchmarks here of model performance on different tasks.</p></td>
-<td><p>https://paperswithcode.com/</p></td>
+<td><p><a class="reference external" href="https://paperswithcode.com/">https://paperswithcode.com/</a></p></td>
 </tr>
 </tbody>
 </table>
 </div>
-<img src="images/06-transfer-learning-where-to-find-pretrained-models.png" alt="different locations to find pretrained neural network models" width=900/>
+<img alt="different locations to find pretrained neural network models" src="../../../_images/06-transfer-learning-where-to-find-pretrained-models.png" />
 <p><em>With access to such high-quality resources as above, it should be common practice at the start of every deep learning problem you take on to ask, “Does a pretrained model exist for my problem?”</em></p>
 <blockquote>
 <div><p><strong>Exercise:</strong> Spend 5-minutes going through <a class="reference external" href="https://pytorch.org/vision/stable/models.html"><code class="docutils literal notranslate"><span class="pre">torchvision.models</span></code></a> as well as the <a class="reference external" href="https://huggingface.co/models">HuggingFace Hub Models page</a>, what do you find? (there’s no right answers here, it’s just to practice exploring)</p>
 </div></blockquote>
 </section>
-<section id="what-we-re-going-to-cover">
-<h2>What we’re going to cover<a class="headerlink" href="#what-we-re-going-to-cover" title="Link to this heading">#</a></h2>
+<section id="what-were-going-to-cover">
+<h2>What we’re going to cover<a class="headerlink" href="#what-were-going-to-cover" title="Link to this heading">#</a></h2>
 <p>We’re going to take a pretrained model from <code class="docutils literal notranslate"><span class="pre">torchvision.models</span></code> and customise it to work on (and hopefully improve) our FoodVision Mini problem.</p>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
@@ -1079,7 +1146,7 @@ torchvision version: 0.14.0.dev20220620+cu113
 <h3>Setting up a pretrained model<a class="headerlink" href="#setting-up-a-pretrained-model" title="Link to this heading">#</a></h3>
 <p>The pretrained model we’re going to be using is <a class="reference external" href="https://pytorch.org/vision/main/models/generated/torchvision.models.efficientnet_b0.html"><code class="docutils literal notranslate"><span class="pre">torchvision.models.efficientnet_b0()</span></code></a>.</p>
 <p>The architecture is from the paper <em><a class="reference external" href="https://arxiv.org/abs/1905.11946">EfficientNet: Rethinking Model Scaling for Convolutional Neural Networks</a></em>.</p>
-<img src="images/06-effnet-b0-feature-extractor.png" alt="efficienet_b0 from PyTorch torchvision feature extraction model" width=900/>
+<img alt="efficienet_b0 from PyTorch torchvision feature extraction model" src="../../../_images/06-effnet-b0-feature-extractor.png" />
 <p><em>Example of what we’re going to create, a pretrained <a class="reference external" href="https://ai.googleblog.com/2019/05/efficientnet-improving-accuracy-and.html"><code class="docutils literal notranslate"><span class="pre">EfficientNet_B0</span></code> model</a> from <code class="docutils literal notranslate"><span class="pre">torchvision.models</span></code> with the output layer adjusted for our use case of classifying pizza, steak and sushi images.</em></p>
 <p>We can setup the <code class="docutils literal notranslate"><span class="pre">EfficientNet_B0</span></code> pretrained ImageNet weights using the same code as we used to create the transforms.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">weights</span> <span class="o">=</span> <span class="n">torchvision</span><span class="o">.</span><span class="n">models</span><span class="o">.</span><span class="n">EfficientNet_B0_Weights</span><span class="o">.</span><span class="n">DEFAULT</span> <span class="c1"># .DEFAULT = best available weights for ImageNet</span>
@@ -1111,7 +1178,7 @@ torchvision version: 0.14.0.dev20220620+cu113
 <p><code class="docutils literal notranslate"><span class="pre">UserWarning:</span> <span class="pre">Arguments</span> <span class="pre">other</span> <span class="pre">than</span> <span class="pre">a</span> <span class="pre">weight</span> <span class="pre">enum</span> <span class="pre">or</span> <span class="pre">None</span> <span class="pre">for</span> <span class="pre">weights</span> <span class="pre">are</span> <span class="pre">deprecated</span> <span class="pre">since</span> <span class="pre">0.13</span> <span class="pre">and</span> <span class="pre">will</span> <span class="pre">be</span> <span class="pre">removed</span> <span class="pre">in</span> <span class="pre">0.15.</span> <span class="pre">The</span> <span class="pre">current</span> <span class="pre">behavior</span> <span class="pre">is</span> <span class="pre">equivalent</span> <span class="pre">to</span> <span class="pre">passing</span> <span class="pre">weights=EfficientNet_B0_Weights.IMAGENET1K_V1.</span> <span class="pre">You</span> <span class="pre">can</span> <span class="pre">also</span> <span class="pre">use</span> <span class="pre">weights=EfficientNet_B0_Weights.DEFAULT</span> <span class="pre">to</span> <span class="pre">get</span> <span class="pre">the</span> <span class="pre">most</span> <span class="pre">up-to-date</span> <span class="pre">weights.</span></code></p>
 </div></blockquote>
 <p>If we print the model, we get something similar to the following:</p>
-<img src="images/06-v2-effnetb0-model-print-out.png" alt="output of printing the efficientnet_b0 model from torchvision.models" width=900/>
+<img alt="output of printing the efficientnet_b0 model from torchvision.models" src="../../../_images/06-v2-effnetb0-model-print-out.png" />
 <p>Lots and lots and lots of layers.</p>
 <p>This is one of the benefits of transfer learning, taking an existing model, that’s been crafted by some of the best engineers in the world and applying to your own problem.</p>
 <p>Our <code class="docutils literal notranslate"><span class="pre">efficientnet_b0</span></code> comes in three main parts:</p>
@@ -1205,7 +1272,7 @@ Estimated Total Size (MB): 3492.77
 </div>
 </div>
 </div>
-<img src="images/06-torchinfo-summary-unfrozen-layers.png" alt="output of torchinfo.summary() when passed our model with all layers as trainable" width=900/>
+<img alt="output of torchinfo.summary() when passed our model with all layers as trainable" src="../../../_images/06-torchinfo-summary-unfrozen-layers.png" />
 <p>Woah!</p>
 <p>Now that’s a big model!</p>
 <p>From the output of the summary, we can see all of the various input and output shape changes as our image data goes through the model.</p>
@@ -1216,7 +1283,7 @@ Estimated Total Size (MB): 3492.77
 <section id="freezing-the-base-model-and-changing-the-output-layer-to-suit-our-needs">
 <h3>Freezing the base model and changing the output layer to suit our needs<a class="headerlink" href="#freezing-the-base-model-and-changing-the-output-layer-to-suit-our-needs" title="Link to this heading">#</a></h3>
 <p>The process of transfer learning usually goes: freeze some base layers of a pretrained model (typically the <code class="docutils literal notranslate"><span class="pre">features</span></code> section) and then adjust the output layers (also called head/classifier layers) to suit your needs.</p>
-<img src="images/06-v2-effnet-changing-the-classifier-head.png" alt="changing the efficientnet classifier head to a custom number of outputs" width=900/>
+<img alt="changing the efficientnet classifier head to a custom number of outputs" src="../../../_images/06-v2-effnet-changing-the-classifier-head.png" />
 <p><em>You can customise the outputs of a pretrained model by changing the output layer(s) to suit your problem. The original <code class="docutils literal notranslate"><span class="pre">torchvision.models.efficientnet_b0()</span></code> comes with <code class="docutils literal notranslate"><span class="pre">out_features=1000</span></code> because there are 1000 classes in ImageNet, the dataset it was trained on. However, for our problem, classifying images of pizza, steak and sushi we only need <code class="docutils literal notranslate"><span class="pre">out_features=3</span></code>.</em></p>
 <p>Let’s freeze all of the layers/parameters in the <code class="docutils literal notranslate"><span class="pre">features</span></code> section of our <code class="docutils literal notranslate"><span class="pre">efficientnet_b0</span></code> model.</p>
 <blockquote>
@@ -1340,7 +1407,7 @@ Estimated Total Size (MB): 3487.41
 </div>
 </div>
 </div>
-<img src="images/06-torchinfo-summary-frozen-layers.png" alt="output of torchinfo.summary() after freezing multiple layers in our model and changing the classifier head" width=900/>
+<img alt="output of torchinfo.summary() after freezing multiple layers in our model and changing the classifier head" src="../../../_images/06-torchinfo-summary-frozen-layers.png" />
 <p>Ho, ho! There’s a fair few changes here!</p>
 <p>Let’s go through them:</p>
 <ul class="simple">
@@ -1642,8 +1709,8 @@ Epoch: 5 | train_loss: 0.6254 | train_acc: 0.7852 | test_loss: 0.6260 | test_acc
     {
         requestKernel: true,
         binderOptions: {
-            repo: "binder-examples/jupyter-stacks-datascience",
-            ref: "master",
+            repo: "anukchat/anukchat.github.io",
+            ref: "main",
         },
         codeMirrorConfig: {
             theme: "abcdef",
@@ -1705,7 +1772,7 @@ Epoch: 5 | train_loss: 0.6254 | train_acc: 0.7852 | test_loss: 0.6260 | test_acc
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-transfer-learning">What is transfer learning?</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-use-transfer-learning">Why use transfer learning?</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#where-to-find-pretrained-models">Where to find pretrained models</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-we-re-going-to-cover">What we’re going to cover</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-were-going-to-cover">What we’re going to cover</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#where-can-you-get-help">Where can you get help?</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-setup">Getting setup</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#get-data">Get data</a></li>

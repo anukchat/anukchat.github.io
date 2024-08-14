@@ -101,8 +101,8 @@
          class="form-control"
          name="q"
          id="search-input"
-         placeholder="Search..."
-         aria-label="Search..."
+         placeholder="Search this book..."
+         aria-label="Search this book..."
          autocomplete="off"
          autocorrect="off"
          autocapitalize="off"
@@ -442,6 +442,73 @@
 
 
 
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/anukchat/anukchat.github.io/main?urlpath=lab/tree/content/tools/pytorch/going_modular/05_pytorch_going_modular_script_mode.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Binder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Binder logo" src="../../../../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/anukchat/anukchat.github.io/blob/main/content/tools/pytorch/going_modular/05_pytorch_going_modular_script_mode.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="../../../../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
 <div class="dropdown dropdown-download-buttons">
   <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
     <i class="fas fa-download"></i>
@@ -549,8 +616,8 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pytorch-in-the-wild">PyTorch in the wild</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-s-the-difference-between-this-notebook-part-2-and-the-cell-mode-notebook-part-1">What’s the difference between this notebook (Part 2) and the cell mode notebook (Part 1)?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-we-re-going-to-cover">What we’re going to cover</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#whats-the-difference-between-this-notebook-part-2-and-the-cell-mode-notebook-part-1">What’s the difference between this notebook (Part 2) and the cell mode notebook (Part 1)?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-were-going-to-cover">What we’re going to cover</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-folder-for-storing-python-scripts">Creating a folder for storing Python scripts</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#get-data">Get data</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-datasets-and-dataloaders">Create Datasets and DataLoaders</a><ul class="nav section-nav flex-column">
@@ -584,7 +651,7 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="going-modular-part-2-script-mode">
+  <section class="tex2jax_ignore mathjax_ignore" id="going-modular-part-2-script-mode">
 <h1>Going Modular: Part 2 (script mode)<a class="headerlink" href="#going-modular-part-2-script-mode" title="Link to this heading">#</a></h1>
 <p>This notebook is part 2/2 of section <a class="reference internal" href="../05_pytorch_going_modular.html"><span class="doc std std-doc">05. Going Modular</span></a>.</p>
 <p>For reference, the two parts are:</p>
@@ -655,14 +722,14 @@ document.write(`
 </div></blockquote>
 </section>
 </section>
-<section id="what-s-the-difference-between-this-notebook-part-2-and-the-cell-mode-notebook-part-1">
-<h2>What’s the difference between this notebook (Part 2) and the cell mode notebook (Part 1)?<a class="headerlink" href="#what-s-the-difference-between-this-notebook-part-2-and-the-cell-mode-notebook-part-1" title="Link to this heading">#</a></h2>
+<section id="whats-the-difference-between-this-notebook-part-2-and-the-cell-mode-notebook-part-1">
+<h2>What’s the difference between this notebook (Part 2) and the cell mode notebook (Part 1)?<a class="headerlink" href="#whats-the-difference-between-this-notebook-part-2-and-the-cell-mode-notebook-part-1" title="Link to this heading">#</a></h2>
 <p>This notebook, 05 Going Modular: Part 2 (script mode), creates Python scripts out of the cells created in part 1.</p>
 <p>Running this notebook end-to-end will result in having a directory structure very similar to the <code class="docutils literal notranslate"><span class="pre">pytorch_project</span></code> structure above.</p>
 <p>You’ll notice each section in Part 2 (script mode) has an extra subsection (e.g. 2.1, 3.1, 4.1) for turning cell code into script code.</p>
 </section>
-<section id="what-we-re-going-to-cover">
-<h2>What we’re going to cover<a class="headerlink" href="#what-we-re-going-to-cover" title="Link to this heading">#</a></h2>
+<section id="what-were-going-to-cover">
+<h2>What we’re going to cover<a class="headerlink" href="#what-were-going-to-cover" title="Link to this heading">#</a></h2>
 <p>By the end of this notebook you should finish with a directory structure of:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>going_modular/
 ├── going_modular/
@@ -2040,8 +2107,8 @@ Epoch: 5 | train_loss: 0.8652 | train_acc: 0.6267 | test_loss: 1.0010 | test_acc
     {
         requestKernel: true,
         binderOptions: {
-            repo: "binder-examples/jupyter-stacks-datascience",
-            ref: "master",
+            repo: "anukchat/anukchat.github.io",
+            ref: "main",
         },
         codeMirrorConfig: {
             theme: "abcdef",
@@ -2087,8 +2154,8 @@ Epoch: 5 | train_loss: 0.8652 | train_acc: 0.6267 | test_loss: 1.0010 | test_acc
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pytorch-in-the-wild">PyTorch in the wild</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-s-the-difference-between-this-notebook-part-2-and-the-cell-mode-notebook-part-1">What’s the difference between this notebook (Part 2) and the cell mode notebook (Part 1)?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-we-re-going-to-cover">What we’re going to cover</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#whats-the-difference-between-this-notebook-part-2-and-the-cell-mode-notebook-part-1">What’s the difference between this notebook (Part 2) and the cell mode notebook (Part 1)?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-were-going-to-cover">What we’re going to cover</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-folder-for-storing-python-scripts">Creating a folder for storing Python scripts</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#get-data">Get data</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-datasets-and-dataloaders">Create Datasets and DataLoaders</a><ul class="nav section-nav flex-column">

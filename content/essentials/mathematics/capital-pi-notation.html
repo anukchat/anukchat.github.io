@@ -58,6 +58,8 @@
     <script async="async" src="../../../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'content/essentials/mathematics/capital-pi-notation';</script>
     <link rel="canonical" href="https://anukchat.github.io/content/essentials/mathematics/capital-pi-notation.html" />
     <link rel="icon" href="../../../_static/mesh-smallest.png"/>
@@ -101,8 +103,8 @@
          class="form-control"
          name="q"
          id="search-input"
-         placeholder="Search..."
-         aria-label="Search..."
+         placeholder="Search this book..."
+         aria-label="Search this book..."
          autocomplete="off"
          autocorrect="off"
          autocapitalize="off"
@@ -442,6 +444,73 @@
 
 
 
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/anukchat/anukchat.github.io/main?urlpath=lab/tree/content/essentials/mathematics/capital-pi-notation.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Binder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Binder logo" src="../../../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/anukchat/anukchat.github.io/blob/main/content/essentials/mathematics/capital-pi-notation.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="../../../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
 <div class="dropdown dropdown-download-buttons">
   <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
     <i class="fas fa-download"></i>
@@ -561,7 +630,7 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="capital-pi-notation">
+  <section class="tex2jax_ignore mathjax_ignore" id="capital-pi-notation">
 <h1>Capital-pi notation<a class="headerlink" href="#capital-pi-notation" title="Link to this heading">#</a></h1>
 <p>Brief notes and practical examples with the <em>product</em> operator.</p>
 <div class="cell docutils container">
@@ -574,25 +643,27 @@ document.write(`
 <section id="product-notation">
 <h2>Product notation<a class="headerlink" href="#product-notation" title="Link to this heading">#</a></h2>
 <hr class="docutils" />
-<p>From the Greek alphabet, the capital Pi letter, represented by the symbol $\large \Pi$, is mathematical notation for <em>product</em>. This operator has as function the product or multiplication of multiples elements of a sequence. It is commonly associated to another mathematical symbol (greek capital Sigma, $\large \Sigma$), but its functionality is easily memorized by the sound of the word “product”: <strong>Ppp</strong>roduct = <strong>Ppp</strong>i.</p>
-<p>$$ \large
+<p>From the Greek alphabet, the capital Pi letter, represented by the symbol <span class="math notranslate nohighlight">\(\large \Pi\)</span>, is mathematical notation for <em>product</em>. This operator has as function the product or multiplication of multiples elements of a sequence. It is commonly associated to another mathematical symbol (greek capital Sigma, <span class="math notranslate nohighlight">\(\large \Sigma\)</span>), but its functionality is easily memorized by the sound of the word “product”: <strong>Ppp</strong>roduct = <strong>Ppp</strong>i.</p>
+<div class="math notranslate nohighlight">
+\[ \large
 \prod_{i=m}^n x_i = x_m \cdot x_{m+1} \cdot x_{m+2} \cdot \cdots \cdot x_{n-2} \cdot x_{n-1} \cdot x_{n}
-$$</p>
+\]</div>
 <p>where:</p>
 <ul class="simple">
-<li><p>$i$ is the index of product;</p></li>
-<li><p>$m$ is the <em>lower bound of product</em>;</p></li>
-<li><p>$n$ is the <em>upper bound of product</em>;</p></li>
-<li><p>$x_i$ is the indexed variable.</p></li>
+<li><p><span class="math notranslate nohighlight">\(i\)</span> is the index of product;</p></li>
+<li><p><span class="math notranslate nohighlight">\(m\)</span> is the <em>lower bound of product</em>;</p></li>
+<li><p><span class="math notranslate nohighlight">\(n\)</span> is the <em>upper bound of product</em>;</p></li>
+<li><p><span class="math notranslate nohighlight">\(x_i\)</span> is the indexed variable.</p></li>
 </ul>
 <p>For example, given the explicit sequence [1, 3, 7, 9, 13], the summation of all 5 elements is denoted as:</p>
-<p>$$ \large
+<div class="math notranslate nohighlight">
+\[\begin{split} \large
 \begin{aligned}
-\prod_{i=1}^5 x_i &amp;= x_1 + x_2 + x_3 + x_4 + x_5 \
-&amp;= 1 \cdot 3 \cdot 7 \cdot 9 \cdot 13 \
+\prod_{i=1}^5 x_i &amp;= x_1 + x_2 + x_3 + x_4 + x_5 \\
+&amp;= 1 \cdot 3 \cdot 7 \cdot 9 \cdot 13 \\
 &amp;= 2457
 \end{aligned}
-$$</p>
+\end{split}\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">seq</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">13</span><span class="p">]</span>
@@ -606,10 +677,11 @@ $$</p>
 </div>
 </div>
 </div>
-<p>Notice that in many algorithms the lower and the upper bounds are represented by the interval $[0,N-1]$, which denote the index bound of a digital array. Although, the main idea is still the same.</p>
-<p>$$ \large
+<p>Notice that in many algorithms the lower and the upper bounds are represented by the interval <span class="math notranslate nohighlight">\([0,N-1]\)</span>, which denote the index bound of a digital array. Although, the main idea is still the same.</p>
+<div class="math notranslate nohighlight">
+\[ \large
 \prod_{k=0}^{N-1} = \prod_{k}^N
-$$</p>
+\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">13</span><span class="p">]</span>
@@ -637,14 +709,15 @@ $$</p>
 <h3>Multidimensional<a class="headerlink" href="#multidimensional" title="Link to this heading">#</a></h3>
 <hr class="docutils" />
 <p>This operator can be nested:</p>
-<p>$$ \large
+<div class="math notranslate nohighlight">
+\[\begin{split} \large
 \begin{aligned}
-\prod_{i=2}^4 \prod_{j=5}^6 (i + j) &amp;= [(2 + 5) \cdot (2 + 6)] \cdot [(3 + 5) \cdot (3 + 6)] \cdot [(4 + 5) \cdot (4 + 6)] \
-&amp;= (7 \cdot 8) \cdot (8 \cdot 9) \cdot (9 \cdot 10) \
-&amp;= 56 \cdot 72 \cdot 90 \
+\prod_{i=2}^4 \prod_{j=5}^6 (i + j) &amp;= [(2 + 5) \cdot (2 + 6)] \cdot [(3 + 5) \cdot (3 + 6)] \cdot [(4 + 5) \cdot (4 + 6)] \\
+&amp;= (7 \cdot 8) \cdot (8 \cdot 9) \cdot (9 \cdot 10) \\
+&amp;= 56 \cdot 72 \cdot 90 \\
 &amp;= 362880
 \end{aligned}
-$$</p>
+\end{split}\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="mi">1</span>
@@ -658,21 +731,23 @@ $$</p>
 </div>
 </div>
 <p>Nested product are very commonly used to notate multidimensional isotropic or anisotropic objects. For example, given the matrix:</p>
-<p>$$ \large
-M =
+<div class="math notranslate nohighlight">
+\[\begin{split} \large
+M = 
 \begin{bmatrix}
-1 &amp; 2 \
-2 &amp; 3 \
+1 &amp; 2 \\
+2 &amp; 3 \\
 3 &amp; 4
 \end{bmatrix}
-$$</p>
+\end{split}\]</div>
 <p>The product of all elements can be expressed as:</p>
-<p>$$ \large
+<div class="math notranslate nohighlight">
+\[\begin{split} \large
 \begin{aligned}
-\prod_i^M \prod_j^N M_{ij} &amp;= 1 \cdot 2 \cdot 2 \cdot 3 \cdot 3 \cdot 4 \
+\prod_i^M \prod_j^N M_{ij} &amp;= 1 \cdot 2 \cdot 2 \cdot 3 \cdot 3 \cdot 4 \\
 &amp;= 144
 \end{aligned}
-$$</p>
+\end{split}\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">matrix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span>
@@ -703,9 +778,10 @@ $$</p>
 <ul class="simple">
 <li><p>If all elements are identical, the product is the same as <em>exponentiation</em>:</p></li>
 </ul>
-<p>$$ \large
-\prod_i^N x_i = \prod_i^N x = x \cdot x \cdot … \cdot x = x^N
-$$</p>
+<div class="math notranslate nohighlight">
+\[ \large
+\prod_i^N x_i = \prod_i^N x = x \cdot x \cdot ... \cdot x = x^N
+\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">10</span>
@@ -721,9 +797,10 @@ $$</p>
 <ul class="simple">
 <li><p>The <a class="reference external" href="https://en.wikipedia.org/wiki/Commutative_property">commutativity</a> and <a class="reference external" href="https://en.wikipedia.org/wiki/Associative_property">associative</a> properties are denoted as:</p></li>
 </ul>
-<p>$$ \large
+<div class="math notranslate nohighlight">
+\[ \large
 \prod_i^N x_i \cdot y_i = \left(\prod_i^N x_i\right) \cdot \left(\prod_i^N y_i\right)
-$$</p>
+\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">40</span><span class="p">])</span>
@@ -743,9 +820,10 @@ $$</p>
 <ul class="simple">
 <li><p><strong>Factorials</strong>: One of the most common application of the product operator is in <em>factorials</em>, where:</p></li>
 </ul>
-<p>$$ \large
+<div class="math notranslate nohighlight">
+\[ \large
 n! = \prod_{k=0}^{n-1}=n \cdot (n-1) \cdot (n-2) \cdot \dots \cdot 2 \cdot 1
-$$</p>
+\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">5</span>
@@ -757,9 +835,10 @@ $$</p>
 </div>
 </div>
 <p><strong>Infinity product</strong>: An infinite product is when the upper bound is infinity and its product result converges to a known theoretical number. For example, the <a class="reference external" href="https://en.wikipedia.org/wiki/Wallis_product">John Wallis product</a>:</p>
-<p>$$ \large
+<div class="math notranslate nohighlight">
+\[ \large
 \lim_{k \rightarrow \infty} \prod_{n=1}^k \frac{4n^2}{4n^2 - 1} = \frac{\pi}{2}
-$$</p>
+\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">N</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mf">1e6</span><span class="p">)</span> <span class="o">+</span> <span class="mf">1.</span>
@@ -778,8 +857,8 @@ $$</p>
     {
         requestKernel: true,
         binderOptions: {
-            repo: "binder-examples/jupyter-stacks-datascience",
-            ref: "master",
+            repo: "anukchat/anukchat.github.io",
+            ref: "main",
         },
         codeMirrorConfig: {
             theme: "abcdef",
